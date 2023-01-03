@@ -1,0 +1,438 @@
+@article{AS04,
+  author    = {Alexander A. Ageev and
+               Maxim Sviridenko},
+  title     = {Pipage Rounding: {A} New Method of Constructing Algorithms with Proven
+               Performance Guarantee},
+  journal   = {J. Comb. Optim.},
+  volume    = 8,
+  number    = 3,
+  pages     = {307--328},
+  year      = 2004,
+  url       = {https://doi.org/10.1023/B:JOCO.0000038913.96607.c2},
+  doi       = {10.1023/B:JOCO.0000038913.96607.c2},
+  timestamp = {Fri, 30 Nov 2018 13:29:01 +0100},
+  biburl    = {https://dblp.org/rec/journals/jco/AgeevS04.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{Barbour84,
+  title={On the rate of {P}oisson convergence},
+  author={Barbour, Andrew D and Hall, Peter},
+  journal={Mathematical Proceedings of the Cambridge Philosophical Society},
+  volume={95},
+  number={3},
+  pages={473--480},
+  year={1984},
+  publisher={Cambridge University Press},
+  url={https://doi.org/10.1017/S0305004100061806},
+  doi={10.1017/S0305004100061806}
+}
+@article{BF17,
+  author    = {Siddharth Barman and
+               Omar Fawzi},
+  title     = {Algorithmic Aspects of Optimal Channel Coding},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {64},
+  number    = {2},
+  pages     = {1038--1045},
+  year      = {2018},
+  url       = {https://doi.org/10.1109/TIT.2017.2696963},
+  doi       = {10.1109/TIT.2017.2696963},
+  timestamp = {Tue, 10 Mar 2020 10:44:43 +0100},
+  biburl    = {https://dblp.org/rec/journals/tit/BarmanF18.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{BFF20,
+  author    = {Siddharth Barman and
+               Omar Fawzi and
+               Paul Ferm{\'{e}}},
+  title     = {Tight Approximation Guarantees for Concave Coverage Problems},
+  journal   = {CoRR},
+  volume    = {abs/2010.00970},
+  year      = {2020},
+  archivePrefix = {arXiv},
+  eprint    = {2010.00970},
+  timestamp = {Mon, 12 Oct 2020 17:53:10 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2010-00970.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@inproceedings{BFGG20,
+  author    = {Siddharth Barman and
+               Omar Fawzi and
+               Suprovat Ghoshal and
+               Emirhan G{\"{u}}rpinar},
+  editor    = {Daniel Bienstock and
+               Giacomo Zambelli},
+  title     = {Tight Approximation Bounds for Maximum Multi-coverage},
+  booktitle = {Integer Programming and Combinatorial Optimization - 21st International
+               Conference, {IPCO} 2020, London, UK, June 8-10, 2020, Proceedings},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {12125},
+  pages     = {66--77},
+  publisher = {Springer},
+  year      = {2020},
+  url       = {https://doi.org/10.1007/978-3-030-45771-6\_6},
+  doi       = {10.1007/978-3-030-45771-6\_6},
+  timestamp = {Wed, 15 Apr 2020 17:56:16 +0200},
+  biburl    = {https://dblp.org/rec/conf/ipco/BarmanFGG20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@book{BCE16,
+  editor    = {Felix Brandt and
+               Vincent Conitzer and
+               Ulle Endriss and
+               J{\'{e}}r{\^{o}}me Lang and
+               Ariel D. Procaccia},
+  title     = {Handbook of Computational Social Choice},
+  publisher = {Cambridge University Press},
+  year      = {2016},
+  url       = {https://doi.org/10.1017/CBO9781107446984},
+  doi       = {10.1017/CBO9781107446984},
+  isbn      = {9781107446984},
+  timestamp = {Tue, 16 May 2017 14:01:54 +0200},
+  biburl    = {https://dblp.org/rec/reference/choice/2016.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@inproceedings{Brill2018,
+  author    = {Markus Brill and
+               Jean{-}Fran{\c{c}}ois Laslier and
+               Piotr Skowron},
+  editor    = {Satinder P. Singh and
+               Shaul Markovitch},
+  title     = {Multiwinner Approval Rules as Apportionment Methods},
+  booktitle = {Proceedings of the Thirty-First {AAAI} Conference on Artificial Intelligence,
+               February 4-9, 2017, San Francisco, California, {USA}},
+  pages     = {414--420},
+  publisher = {{AAAI} Press},
+  year      = {2017},
+  url       = {http://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14782},
+  timestamp = {Fri, 09 Oct 2020 09:47:00 +0200},
+  biburl    = {https://dblp.org/rec/conf/aaai/BrillLS17.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{CCPV11,
+  author    = {Gruia C{\u{a}}linescu and
+               Chandra Chekuri and
+               Martin P{\'{a}}l and
+               Jan Vondr{\'{a}}k},
+  title     = {Maximizing a Monotone Submodular Function Subject to a Matroid Constraint},
+  journal   = {{SIAM} J. Comput.},
+  volume    = {40},
+  number    = {6},
+  pages     = {1740--1766},
+  year      = {2011},
+  url       = {https://doi.org/10.1137/080733991},
+  doi       = {10.1137/080733991},
+  timestamp = {Sat, 27 May 2017 14:22:58 +0200},
+  biburl    = {https://dblp.org/rec/journals/siamcomp/CalinescuCPV11.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{PoissonBound,
+  title={A short note on {P}oisson tail bounds},
+  author={Canonne, Cl{\'e}ment L},
+  journal={Retrieved from the website: \url{http://www.cs.columbia.edu/~ccanonne}},
+  year={2017}
+}
+@inproceedings{CCKLMNT17,
+  author    = {Parinya Chalermsook and
+               Marek Cygan and
+               Guy Kortsarz and
+               Bundit Laekhanukit and
+               Pasin Manurangsi and
+               Danupon Nanongkai and
+               Luca Trevisan},
+  editor    = {Chris Umans},
+  title     = {From {Gap-ETH} to {FPT}-Inapproximability: Clique, Dominating Set, and
+               More},
+  booktitle = {58th {IEEE} Annual Symposium on Foundations of Computer Science, {FOCS}
+               2017, Berkeley, CA, USA, October 15-17, 2017},
+  pages     = {743--754},
+  publisher = {{IEEE} Computer Society},
+  year      = {2017},
+  url       = {https://doi.org/10.1109/FOCS.2017.74},
+  doi       = {10.1109/FOCS.2017.74},
+  timestamp = {Sat, 19 Oct 2019 20:06:24 +0200},
+  biburl    = {https://dblp.org/rec/conf/focs/ChalermsookCKLM17.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{CPM19,
+  author    = {Rahul Chandan and
+               Dario Paccagnan and
+               Jason R. Marden},
+  title     = {Optimal mechanisms for distributed resource-allocation},
+  journal   = {CoRR},
+  volume    = {abs/1911.07823},
+  year      = {2019},
+  archivePrefix = {arXiv},
+  eprint    = {1911.07823},
+  timestamp = {Mon, 02 Dec 2019 17:48:37 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1911-07823.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{CC84,
+  author    = {Michele Conforti and
+               G{\'{e}}rard Cornu{\'{e}}jols},
+  title     = {Submodular set functions, matroids and the greedy algorithm: Tight
+               worst-case bounds and some generalizations of the {R}ado-{E}dmonds theorem},
+  journal   = {Discret. Appl. Math.},
+  volume    = {7},
+  number    = {3},
+  pages     = {251--274},
+  year      = {1984},
+  url       = {https://doi.org/10.1016/0166-218X(84)90003-9},
+  doi       = {10.1016/0166-218X(84)90003-9},
+  timestamp = {Thu, 20 Feb 2020 15:47:41 +0100},
+  biburl    = {https://dblp.org/rec/journals/dam/ConfortiC84.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{CFN77,
+  title={Exceptional paper—Location of bank accounts to optimize float: An analytic study of exact and approximate algorithms},
+  author={Cornu{\'e}jols, G{\'e}rard and Fisher, Marshall L and Nemhauser, George L},
+  journal={Management science},
+  volume={23},
+  number={8},
+  pages={789--810},
+  year={1977},
+  publisher={INFORMS},
+  url = {https://doi.org/10.1287/mnsc.23.8.789},
+  doi = {10.1287/mnsc.23.8.789}
+}
+@article{DR98,
+  author    = {Devdatt P. Dubhashi and
+               Desh Ranjan},
+  title     = {Balls and bins: {A} study in negative dependence},
+  journal   = {Random Struct. Algorithms},
+  volume    = {13},
+  number    = {2},
+  pages     = {99--124},
+  year      = {1998},
+  url       = {https://doi.org/10.7146/brics.v3i25.20006},
+  doi       = {10.7146/brics.v3i25.20006},
+  timestamp = {Fri, 26 May 2017 22:50:39 +0200},
+  biburl    = {https://dblp.org/rec/journals/rsa/DubhashiR98.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@inproceedings{DMMS20,
+  author    = {Szymon Dudycz and
+               Pasin Manurangsi and
+               Jan Marcinkowski and
+               Krzysztof Sornat},
+  editor    = {Christian Bessiere},
+  title     = {Tight Approximation for Proportional Approval Voting},
+  booktitle = {Proceedings of the Twenty-Ninth International Joint Conference on
+               Artificial Intelligence, {IJCAI} 2020},
+  pages     = {276--282},
+  publisher = {ijcai.org},
+  year      = {2020},
+  url       = {https://doi.org/10.24963/ijcai.2020/39},
+  doi       = {10.24963/ijcai.2020/39},
+  timestamp = {Mon, 20 Jul 2020 12:38:52 +0200},
+  biburl    = {https://dblp.org/rec/conf/ijcai/DudyczMMS20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{DV15,
+  author    = {Shaddin Dughmi and
+               Jan Vondr{\'{a}}k},
+  title     = {Limitations of randomized mechanisms for combinatorial auctions},
+  journal   = {Games Econ. Behav.},
+  volume    = {92},
+  pages     = {370--400},
+  year      = {2015},
+  url       = {https://doi.org/10.1016/j.geb.2014.01.007},
+  doi       = {10.1016/j.geb.2014.01.007},
+  timestamp = {Sat, 22 Feb 2020 13:48:01 +0100},
+  biburl    = {https://dblp.org/rec/journals/geb/DughmiV15.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{Feige98,
+  author    = {Uriel Feige},
+  title     = {A Threshold of ln \emph{n} for Approximating Set Cover},
+  journal   = {J. {ACM}},
+  volume    = {45},
+  number    = {4},
+  pages     = {634--652},
+  year      = {1998},
+  url       = {https://doi.org/10.1145/285055.285059},
+  doi       = {10.1145/285055.285059},
+  timestamp = {Wed, 14 Nov 2018 10:35:25 +0100},
+  biburl    = {https://dblp.org/rec/journals/jacm/Feige98.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@inproceedings{FK14,
+  author    = {Vitaly Feldman and
+               Pravesh Kothari},
+  editor    = {Maria{-}Florina Balcan and
+               Vitaly Feldman and
+               Csaba Szepesv{\'{a}}ri},
+  title     = {Learning Coverage Functions and Private Release of Marginals},
+  booktitle = {Proceedings of The 27th Conference on Learning Theory, {COLT} 2014,
+               Barcelona, Spain, June 13-15, 2014},
+  series    = {{JMLR} Workshop and Conference Proceedings},
+  volume    = {35},
+  pages     = {679--702},
+  publisher = {JMLR.org},
+  year      = {2014},
+  url       = {http://proceedings.mlr.press/v35/feldman14a.html},
+  timestamp = {Wed, 29 May 2019 08:41:46 +0200},
+  biburl    = {https://dblp.org/rec/conf/colt/FeldmanK14.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{FW10,
+  title={Closed-form expression for the {P}oisson-binomial probability density function},
+  author={Fern{\'a}ndez, Manuel and Williams, Stuart},
+  journal={IEEE Transactions on Aerospace and Electronic Systems},
+  volume={46},
+  number={2},
+  pages={803--817},
+  year={2010},
+  publisher={IEEE},
+  url={https://doi.org/10.1109/TAES.2010.5461658},
+  doi={10.1109/TAES.2010.5461658}
+}
+@article{Hochbaum96,
+  author    = {Dorit S. Hochbaum},
+  title     = {Approximation Algorithms for {NP}-Hard Problems},
+  journal   = {{SIGACT} News},
+  volume    = {28},
+  number    = {2},
+  pages     = {40--52},
+  year      = {1997},
+  url       = {https://doi.org/10.1145/261342.571216},
+  doi       = {10.1145/261342.571216},
+  timestamp = {Tue, 06 Nov 2018 12:51:29 +0100},
+  biburl    = {https://dblp.org/rec/journals/sigact/Hochba97.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{JP83,
+  title={Negative association of random variables with applications},
+  author={Joag-Dev, Kumar and Proschan, Frank},
+  journal={The Annals of Statistics},
+  pages={286--295},
+  year={1983},
+  publisher={JSTOR},
+  url={https://doi.org/10.1214/aos/1176346079},
+  doi={10.1214/aos/1176346079}
+}
+@inproceedings{Manurangsi20,
+  author    = {Pasin Manurangsi},
+  editor    = {Shuchi Chawla},
+  title     = {Tight Running Time Lower Bounds for Strong Inapproximability of Maximum
+               \emph{k}-Coverage, Unique Set Cover and Related Problems (via \emph{t}-Wise
+               Agreement Testing Theorem)},
+  booktitle = {Proceedings of the 2020 {ACM-SIAM} Symposium on Discrete Algorithms,
+               {SODA} 2020, Salt Lake City, UT, USA, January 5-8, 2020},
+  pages     = {62--81},
+  publisher = {{SIAM}},
+  year      = {2020},
+  url       = {https://doi.org/10.1137/1.9781611975994.5},
+  doi       = {10.1137/1.9781611975994.5},
+  timestamp = {Fri, 31 Jan 2020 13:53:57 +0100},
+  biburl    = {https://dblp.org/rec/conf/soda/Manurangsi20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@inproceedings{marden2008distributed,
+  author    = {Jason R. Marden and
+               Adam Wierman},
+  title     = {Distributed welfare games with applications to sensor coverage},
+  booktitle = {Proceedings of the 47th {IEEE} Conference on Decision and Control,
+               {CDC} 2008, December 9-11, 2008, Canc{\'{u}}n, Mexico},
+  pages     = {1708--1713},
+  publisher = {{IEEE}},
+  year      = {2008},
+  url       = {https://doi.org/10.1109/CDC.2008.4738800},
+  doi       = {10.1109/CDC.2008.4738800},
+  timestamp = {Wed, 16 Oct 2019 14:14:56 +0200},
+  biburl    = {https://dblp.org/rec/conf/cdc/MardenW08.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@incollection{Murphey00,
+  title={Target-based weapon target assignment problems},
+  author={Murphey, Robert A},
+  booktitle={Nonlinear assignment problems},
+  pages={39--53},
+  year={2000},
+  publisher={Springer},
+  url = {https://doi.org/10.1007/978-1-4757-3155-2_3},
+  doi = {10.1007/978-1-4757-3155-2_3}
+}
+@book{AGT,
+  editor    = {Noam Nisan and
+               Tim Roughgarden and
+               {\'{E}}va Tardos and
+               Vijay V. Vazirani},
+  title     = {Algorithmic Game Theory},
+  publisher = {Cambridge University Press},
+  year      = {2007},
+  url       = {https://doi.org/10.1017/CBO9780511800481},
+  doi       = {10.1017/CBO9780511800481},
+  isbn      = {9780511800481},
+  timestamp = {Sun, 25 Oct 2020 22:32:03 +0100},
+  biburl    = {https://dblp.org/rec/books/cu/NRTV2007.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{PM19,
+  author    = {Paccagnan, Dario and
+               Marden, Jason R},
+  title     = {Utility Design for Distributed Resource Allocation--part {II}: Applications to Submodular, Covering, and Supermodular Problems},
+  journal   = {CoRR},
+  volume    = {abs/1807.01343},
+  year      = {2018},
+  archivePrefix = {arXiv},
+  eprint    = {1807.01343},
+}
+@book{StochasticOrders,
+  title={Stochastic orders},
+  author={Shaked, Moshe and Shanthikumar, J George},
+  year={2007},
+  publisher={Springer Science \& Business Media},
+  url={https://doi.org/10.1007/978-0-387-34675-5},
+  doi={10.1007/978-0-387-34675-5}
+}
+@article{Skowron2016,
+  author    = {Piotr Skowron and
+               Piotr Faliszewski and
+               J{\'{e}}r{\^{o}}me Lang},
+  title     = {Finding a collective set of items: From proportional multirepresentation
+               to group recommendation},
+  journal   = {Artif. Intell.},
+  volume    = {241},
+  pages     = {191--216},
+  year      = {2016},
+  url       = {https://doi.org/10.1016/j.artint.2016.09.003},
+  doi       = {10.1016/j.artint.2016.09.003},
+  timestamp = {Fri, 09 Oct 2020 09:46:58 +0200},
+  biburl    = {https://dblp.org/rec/journals/ai/SkowronFL16.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{SVW17,
+  author    = {Maxim Sviridenko and
+               Jan Vondr{\'{a}}k and
+               Justin Ward},
+  title     = {Optimal Approximation for Submodular and Supermodular Optimization
+               with Bounded Curvature},
+  journal   = {Math. Oper. Res.},
+  volume    = {42},
+  number    = {4},
+  pages     = {1197--1218},
+  year      = {2017},
+  url       = {https://doi.org/10.1287/moor.2016.0842},
+  doi       = {10.1287/moor.2016.0842},
+  timestamp = {Tue, 28 Aug 2018 17:23:49 +0200},
+  biburl    = {https://dblp.org/rec/journals/mor/SviridenkoVW17.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{TF19,
+  title={The {P}oisson binomial distribution--Old \& New},
+  author={Tang, Wenpin and Tang, Fengmin},
+  journal   = {CoRR},
+  volume    = {abs/1908.10024},
+  year      = {2019},
+  archivePrefix = {arXiv},
+  eprint    = {1908.10024},
+}
+@article{Vondrak07,
+  title={Submodularity in {C}ombinatorial {O}ptimization},
+  author={Vondr{\'a}k, Jan},
+  year={2007},
+  journal={Univerzita Karlova, Matematicko-{F}yzik{\'a}ln{\'\i} {F}akulta},
+  url={https://dspace.cuni.cz/bitstream/handle/20.500.11956/13738/140038775.pdf}
+}

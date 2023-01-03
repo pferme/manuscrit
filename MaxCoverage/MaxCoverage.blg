@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: MaxCoverage.aux
+The style file: plainurl.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: MaxCoverage.bib
+You've used 30 entries,
+            2882 wiz_defined-function locations,
+            897 strings with 12632 characters,
+and the built_in function-call counts, 15404 in all, are:
+= -- 1673
+> -- 549
+< -- 11
++ -- 193
+- -- 160
+* -- 967
+:= -- 2161
+add.period$ -- 127
+call.type$ -- 30
+change.case$ -- 162
+chr.to.int$ -- 0
+cite$ -- 30
+duplicate$ -- 438
+empty$ -- 1393
+format.name$ -- 160
+if$ -- 3951
+int.to.chr$ -- 0
+int.to.str$ -- 30
+missing$ -- 31
+newline$ -- 182
+num.names$ -- 74
+pop$ -- 257
+preamble$ -- 1
+purify$ -- 135
+quote$ -- 0
+skip$ -- 1087
+stack$ -- 0
+substring$ -- 759
+swap$ -- 172
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 114
+warning$ -- 0
+while$ -- 119
+width$ -- 32
+write$ -- 395

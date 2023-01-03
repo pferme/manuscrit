@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Approximation Algorithm for -MaxCoverage}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Generalization to Matroid Constraints}{section.2}% 3
+\BOOKMARK [1][-]{section.3}{Hardness of Approximation for -MaxCoverage}{}% 4
+\BOOKMARK [2][-]{subsection.3.1}{Partitioning System}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.2}{The Reduction}{section.3}% 6
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Completeness}{subsection.3.2}% 7
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Soundness}{subsection.3.2}% 8
+\BOOKMARK [2][-]{subsection.3.3}{Further hardness under Gap-ETH}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Applications}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{Multiwinner Elections}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Resource Allocation in Multiagent Systems}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.3}{Vehicle-Target Assignment}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.4}{Welfare Maximization for -Coverage}{section.4}% 14
+\BOOKMARK [1][-]{appendix.A}{General properties}{}% 15
+\BOOKMARK [1][-]{appendix.B}{Calculations of }{}% 16
+\BOOKMARK [1][-]{appendix.C}{NP-hardness of ,h-AryGapLabelCover}{}% 17
+\BOOKMARK [1][-]{appendix.D}{Proof of existence of partitioning systems}{}% 18
+\BOOKMARK [1][-]{appendix.E}{Proof of Theorem 6}{}% 19

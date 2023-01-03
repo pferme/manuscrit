@@ -1,0 +1,243 @@
+\begin{thebibliography}{10}
+
+\bibitem{AS04}
+Alexander~A. Ageev and Maxim Sviridenko.
+\newblock Pipage rounding: {A} new method of constructing algorithms with
+  proven performance guarantee.
+\newblock {\em J. Comb. Optim.}, 8(3):307--328, 2004.
+\newblock \href {https://doi.org/10.1023/B:JOCO.0000038913.96607.c2}
+  {\path{doi:10.1023/B:JOCO.0000038913.96607.c2}}.
+
+\bibitem{Barbour84}
+Andrew~D Barbour and Peter Hall.
+\newblock On the rate of {P}oisson convergence.
+\newblock {\em Mathematical Proceedings of the Cambridge Philosophical
+  Society}, 95(3):473--480, 1984.
+\newblock \href {https://doi.org/10.1017/S0305004100061806}
+  {\path{doi:10.1017/S0305004100061806}}.
+
+\bibitem{BF17}
+Siddharth Barman and Omar Fawzi.
+\newblock Algorithmic aspects of optimal channel coding.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 64(2):1038--1045, 2018.
+\newblock \href {https://doi.org/10.1109/TIT.2017.2696963}
+  {\path{doi:10.1109/TIT.2017.2696963}}.
+
+\bibitem{BFGG20}
+Siddharth Barman, Omar Fawzi, Suprovat Ghoshal, and Emirhan G{\"{u}}rpinar.
+\newblock Tight approximation bounds for maximum multi-coverage.
+\newblock In Daniel Bienstock and Giacomo Zambelli, editors, {\em Integer
+  Programming and Combinatorial Optimization - 21st International Conference,
+  {IPCO} 2020, London, UK, June 8-10, 2020, Proceedings}, volume 12125 of {\em
+  Lecture Notes in Computer Science}, pages 66--77. Springer, 2020.
+\newblock \href {https://doi.org/10.1007/978-3-030-45771-6\_6}
+  {\path{doi:10.1007/978-3-030-45771-6\_6}}.
+
+\bibitem{BCE16}
+Felix Brandt, Vincent Conitzer, Ulle Endriss, J{\'{e}}r{\^{o}}me Lang, and
+  Ariel~D. Procaccia, editors.
+\newblock {\em Handbook of Computational Social Choice}.
+\newblock Cambridge University Press, 2016.
+\newblock \href {https://doi.org/10.1017/CBO9781107446984}
+  {\path{doi:10.1017/CBO9781107446984}}.
+
+\bibitem{Brill2018}
+Markus Brill, Jean{-}Fran{\c{c}}ois Laslier, and Piotr Skowron.
+\newblock Multiwinner approval rules as apportionment methods.
+\newblock In Satinder~P. Singh and Shaul Markovitch, editors, {\em Proceedings
+  of the Thirty-First {AAAI} Conference on Artificial Intelligence, February
+  4-9, 2017, San Francisco, California, {USA}}, pages 414--420. {AAAI} Press,
+  2017.
+\newblock \href {https://doi.org/10.1177/0951629818775518}
+  {\path{doi:10.1177/0951629818775518}}.
+
+\bibitem{CCPV11}
+Gruia C{\u{a}}linescu, Chandra Chekuri, Martin P{\'{a}}l, and Jan
+  Vondr{\'{a}}k.
+\newblock Maximizing a monotone submodular function subject to a matroid
+  constraint.
+\newblock {\em {SIAM} J. Comput.}, 40(6):1740--1766, 2011.
+\newblock \href {https://doi.org/10.1137/080733991}
+  {\path{doi:10.1137/080733991}}.
+
+\bibitem{PoissonBound}
+Cl{\'e}ment~L Canonne.
+\newblock A short note on {P}oisson tail bounds.
+\newblock {\em Retrieved from the website:
+  \url{http://www.cs.columbia.edu/~ccanonne}}, 2017.
+
+\bibitem{CCKLMNT17}
+Parinya Chalermsook, Marek Cygan, Guy Kortsarz, Bundit Laekhanukit, Pasin
+  Manurangsi, Danupon Nanongkai, and Luca Trevisan.
+\newblock From {Gap-ETH} to {FPT}-inapproximability: Clique, dominating set,
+  and more.
+\newblock In Chris Umans, editor, {\em 58th {IEEE} Annual Symposium on
+  Foundations of Computer Science, {FOCS} 2017, Berkeley, CA, USA, October
+  15-17, 2017}, pages 743--754. {IEEE} Computer Society, 2017.
+\newblock \href {https://doi.org/10.1109/FOCS.2017.74}
+  {\path{doi:10.1109/FOCS.2017.74}}.
+
+\bibitem{CPM19}
+Rahul Chandan, Dario Paccagnan, and Jason~R. Marden.
+\newblock Optimal mechanisms for distributed resource-allocation.
+\newblock {\em CoRR}, abs/1911.07823, 2019.
+\newblock \href {http://arxiv.org/abs/1911.07823} {\path{arXiv:1911.07823}}.
+
+\bibitem{CC84}
+Michele Conforti and G{\'{e}}rard Cornu{\'{e}}jols.
+\newblock Submodular set functions, matroids and the greedy algorithm: Tight
+  worst-case bounds and some generalizations of the {R}ado-{E}dmonds theorem.
+\newblock {\em Discret. Appl. Math.}, 7(3):251--274, 1984.
+\newblock \href {https://doi.org/10.1016/0166-218X(84)90003-9}
+  {\path{doi:10.1016/0166-218X(84)90003-9}}.
+
+\bibitem{CFN77}
+G{\'e}rard Cornu{\'e}jols, Marshall~L Fisher, and George~L Nemhauser.
+\newblock Exceptional paper—location of bank accounts to optimize float: An
+  analytic study of exact and approximate algorithms.
+\newblock {\em Management science}, 23(8):789--810, 1977.
+\newblock \href {https://doi.org/10.1287/mnsc.23.8.789}
+  {\path{doi:10.1287/mnsc.23.8.789}}.
+
+\bibitem{DR98}
+Devdatt~P. Dubhashi and Desh Ranjan.
+\newblock Balls and bins: {A} study in negative dependence.
+\newblock {\em Random Struct. Algorithms}, 13(2):99--124, 1998.
+\newblock \href {https://doi.org/10.7146/brics.v3i25.20006}
+  {\path{doi:10.7146/brics.v3i25.20006}}.
+
+\bibitem{DMMS20}
+Szymon Dudycz, Pasin Manurangsi, Jan Marcinkowski, and Krzysztof Sornat.
+\newblock Tight approximation for proportional approval voting.
+\newblock In Christian Bessiere, editor, {\em Proceedings of the Twenty-Ninth
+  International Joint Conference on Artificial Intelligence, {IJCAI} 2020},
+  pages 276--282. ijcai.org, 2020.
+\newblock \href {https://doi.org/10.24963/ijcai.2020/39}
+  {\path{doi:10.24963/ijcai.2020/39}}.
+
+\bibitem{DV15}
+Shaddin Dughmi and Jan Vondr{\'{a}}k.
+\newblock Limitations of randomized mechanisms for combinatorial auctions.
+\newblock {\em Games Econ. Behav.}, 92:370--400, 2015.
+\newblock \href {https://doi.org/10.1016/j.geb.2014.01.007}
+  {\path{doi:10.1016/j.geb.2014.01.007}}.
+
+\bibitem{Feige98}
+Uriel Feige.
+\newblock A threshold of ln \emph{n} for approximating set cover.
+\newblock {\em J. {ACM}}, 45(4):634--652, 1998.
+\newblock \href {https://doi.org/10.1145/285055.285059}
+  {\path{doi:10.1145/285055.285059}}.
+
+\bibitem{FK14}
+Vitaly Feldman and Pravesh Kothari.
+\newblock Learning coverage functions and private release of marginals.
+\newblock In Maria{-}Florina Balcan, Vitaly Feldman, and Csaba
+  Szepesv{\'{a}}ri, editors, {\em Proceedings of The 27th Conference on
+  Learning Theory, {COLT} 2014, Barcelona, Spain, June 13-15, 2014}, volume~35
+  of {\em {JMLR} Workshop and Conference Proceedings}, pages 679--702.
+  JMLR.org, 2014.
+\newblock URL: \url{http://proceedings.mlr.press/v35/feldman14a.html}.
+
+\bibitem{FW10}
+Manuel Fern{\'a}ndez and Stuart Williams.
+\newblock Closed-form expression for the {P}oisson-binomial probability density
+  function.
+\newblock {\em IEEE Transactions on Aerospace and Electronic Systems},
+  46(2):803--817, 2010.
+\newblock \href {https://doi.org/10.1109/TAES.2010.5461658}
+  {\path{doi:10.1109/TAES.2010.5461658}}.
+
+\bibitem{Hochbaum96}
+Dorit~S. Hochbaum.
+\newblock Approximation algorithms for {NP}-hard problems.
+\newblock {\em {SIGACT} News}, 28(2):40--52, 1997.
+\newblock \href {https://doi.org/10.1145/261342.571216}
+  {\path{doi:10.1145/261342.571216}}.
+
+\bibitem{JP83}
+Kumar Joag-Dev and Frank Proschan.
+\newblock Negative association of random variables with applications.
+\newblock {\em The Annals of Statistics}, pages 286--295, 1983.
+\newblock \href {https://doi.org/10.1214/aos/1176346079}
+  {\path{doi:10.1214/aos/1176346079}}.
+
+\bibitem{Manurangsi20}
+Pasin Manurangsi.
+\newblock Tight running time lower bounds for strong inapproximability of
+  maximum \emph{k}-coverage, unique set cover and related problems (via
+  \emph{t}-wise agreement testing theorem).
+\newblock In Shuchi Chawla, editor, {\em Proceedings of the 2020 {ACM-SIAM}
+  Symposium on Discrete Algorithms, {SODA} 2020, Salt Lake City, UT, USA,
+  January 5-8, 2020}, pages 62--81. {SIAM}, 2020.
+\newblock \href {https://doi.org/10.1137/1.9781611975994.5}
+  {\path{doi:10.1137/1.9781611975994.5}}.
+
+\bibitem{marden2008distributed}
+Jason~R. Marden and Adam Wierman.
+\newblock Distributed welfare games with applications to sensor coverage.
+\newblock In {\em Proceedings of the 47th {IEEE} Conference on Decision and
+  Control, {CDC} 2008, December 9-11, 2008, Canc{\'{u}}n, Mexico}, pages
+  1708--1713. {IEEE}, 2008.
+\newblock \href {https://doi.org/10.1109/CDC.2008.4738800}
+  {\path{doi:10.1109/CDC.2008.4738800}}.
+
+\bibitem{Murphey00}
+Robert~A Murphey.
+\newblock Target-based weapon target assignment problems.
+\newblock In {\em Nonlinear assignment problems}, pages 39--53. Springer, 2000.
+\newblock \href {https://doi.org/10.1007/978-1-4757-3155-2_3}
+  {\path{doi:10.1007/978-1-4757-3155-2_3}}.
+
+\bibitem{AGT}
+Noam Nisan, Tim Roughgarden, {\'{E}}va Tardos, and Vijay~V. Vazirani, editors.
+\newblock {\em Algorithmic Game Theory}.
+\newblock Cambridge University Press, 2007.
+\newblock \href {https://doi.org/10.1017/CBO9780511800481}
+  {\path{doi:10.1017/CBO9780511800481}}.
+
+\bibitem{PM19}
+Dario Paccagnan and Jason~R Marden.
+\newblock Utility design for distributed resource allocation--part {II}:
+  Applications to submodular, covering, and supermodular problems.
+\newblock {\em CoRR}, abs/1807.01343, 2018.
+\newblock \href {http://arxiv.org/abs/1807.01343} {\path{arXiv:1807.01343}}.
+
+\bibitem{StochasticOrders}
+Moshe Shaked and J~George Shanthikumar.
+\newblock {\em Stochastic orders}.
+\newblock Springer Science \& Business Media, 2007.
+\newblock \href {https://doi.org/10.1007/978-0-387-34675-5}
+  {\path{doi:10.1007/978-0-387-34675-5}}.
+
+\bibitem{Skowron2016}
+Piotr Skowron, Piotr Faliszewski, and J{\'{e}}r{\^{o}}me Lang.
+\newblock Finding a collective set of items: From proportional
+  multirepresentation to group recommendation.
+\newblock {\em Artif. Intell.}, 241:191--216, 2016.
+\newblock \href {https://doi.org/10.1016/j.artint.2016.09.003}
+  {\path{doi:10.1016/j.artint.2016.09.003}}.
+
+\bibitem{SVW17}
+Maxim Sviridenko, Jan Vondr{\'{a}}k, and Justin Ward.
+\newblock Optimal approximation for submodular and supermodular optimization
+  with bounded curvature.
+\newblock {\em Math. Oper. Res.}, 42(4):1197--1218, 2017.
+\newblock \href {https://doi.org/10.1287/moor.2016.0842}
+  {\path{doi:10.1287/moor.2016.0842}}.
+
+\bibitem{TF19}
+Wenpin Tang and Fengmin Tang.
+\newblock The {P}oisson binomial distribution--old \& new.
+\newblock {\em CoRR}, abs/1908.10024, 2019.
+\newblock \href {http://arxiv.org/abs/1908.10024} {\path{arXiv:1908.10024}}.
+
+\bibitem{Vondrak07}
+Jan Vondr{\'a}k.
+\newblock Submodularity in {C}ombinatorial {O}ptimization.
+\newblock {\em Univerzita Karlova, Matematicko-{F}yzik{\'a}ln{\'\i} {F}akulta},
+  2007.
+\newblock URL:
+  \url{https://dspace.cuni.cz/bitstream/handle/20.500.11956/13738/140038775.pdf}.
+
+\end{thebibliography}
