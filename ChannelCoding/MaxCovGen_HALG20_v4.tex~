@@ -1,0 +1,850 @@
+%\documentclass[6pt]{article}
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{dsfont}
+\usepackage{bbm}
+\usepackage{xparse}
+\usepackage{physics}
+\usepackage{empheq}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[affil-it]{authblk}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{quotes,angles,calc}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\SetKwInput{KwInput}{Input}                % Set the Input
+\SetKwInput{KwOutput}{Output}              % set the Output
+
+\usepackage{pgfplots}
+\pgfplotsset{compat = newest}
+
+%\usepackage{wasysym}
+%\usepackage{listings}
+%\usepackage{moreverb}
+
+%\usepackage[top=3cm,bottom=2cm,right=1cm,left=1cm]{geometry}
+\usepackage[top=3cm,bottom=2cm,right=2cm,left=2cm]{geometry}
+
+\theoremstyle{definition}
+\newtheorem{theo}{Theorem}[section]
+\newtheorem{lem}[theo]{Lemma}
+\newtheorem{cor}[theo]{Corollary}
+\newtheorem{prop}[theo]{Property}
+\newtheorem{defi}[theo]{Definition}
+\newtheorem{conj}[theo]{Conjecture}
+
+\theoremstyle{remark}
+\newtheorem*{rk}{Remark}
+
+\DeclareMathOperator{\Poi}{\text{Poi}}
+\DeclareMathOperator{\Ber}{\text{Ber}}
+\DeclareMathOperator{\Bin}{\text{Bin}}
+\DeclareMathOperator{\maxi}{\text{maximize}}
+\DeclareMathOperator{\mini}{\text{minimize}}
+\DeclareMathOperator{\st}{\text{subject to}}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
+
+\newcommand{\OF}[1]{\textcolor{blue}{OF: #1}}
+
+\colorlet{darkgreen}{green!40!black}
+
+\title{\huge{Tight approximation gurantees \\ for concave coverage problems}}
+%\title{\huge{Tight Approximation Bounds for nondecreasing concave $\varphi$-\textsc{MaxCoverage}}}
+\author{Siddharth Barman\footnote{Indian Institute of Science. \href{mailto:barman@iisc.ac.in}{\texttt{barman@iisc.ac.in}}} \space\space\space\space\space Omar Fawzi\footnote{Univ Lyon, ENS Lyon, UCBL, CNRS, LIP, F-69342, Lyon Cedex 07, France. \href{mailto:omar.fawzi@ens-lyon.fr}{\texttt{omar.fawzi@ens-lyon.fr}}}\space\space\space\space\space Paul Fermé\footnote{ENS Lyon, LIP, France. \href{mailto:paul.ferme@ens-lyon.fr}{\texttt{paul.ferme@ens-lyon.fr}}}
+}
+\date{}
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  In the maximum coverage problem, we are given subsets $T_1, \ldots, T_m$ of a universe $[n]$ along with an integer $k$ and the objective is to find a subset $S \subseteq [m]$ of size $k$ that maximizes $C(S) := \abs{\bigcup_{i \in S} T_i}$. It is a classic result that the greedy algorithm for this problem achieves an approximation ratio of $(1-e^{-1})$ and there is a matching inapproximability result. We note that in the maximum coverage problem if an element $a \in [n]$ is covered by several sets, it still contributes only once. 
+ 
+%By contrast, if we change the problem and count each element $e$ as many times as it is covered, then we obtain a linear objective function, $C^{x \mapsto x}(S) = \sum_{i \in S} \abs{T_i}$, which can be easily maximized under a cardinality constraint.
+
+
+Here, we consider a generalization of this problem where an element $a$ can contribute by an amount that depends on the number of times it is covered. Given a function $\varphi$ that is concave and nondecreasing, we define $C^{\varphi}(S) :=\sum_{a \in [n]}w_a\varphi(\abs{S}_a)$, where $\abs{S}_a = \abs{\set{i \in S : a \in T_i}}$. For any such $\varphi$, we provide an approximation algorithm achieving the \emph{Poisson concavity ratio} of $\varphi$ defined by $\alpha_{\varphi} := \min_{x \in \mathbb{N}} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])}$. In addition, we provide a matching hardness when $\varphi$ is bounded based on the Unique Games Conjecture. As a special case, choosing $\varphi(x) = \min(x,\ell)$ for which $\alpha_{\varphi} = 1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$, we recover the result of \cite{BFGG20}.
+
+  As an application, the problem of Utility Design for Distributed Resource Allocation introduced by \cite{PM19}, and in particular the Vehicle-Target Assignment problem \cite{Murphey00}, can be seen as special cases of the maximization under matroid constraints of $C^{\varphi}$. In particular, we get an analytic expression of $\alpha_{\varphi}$ which slightly improves their numerical approximation ratio.
+\end{abstract}
+
+%\begin{multicols}{2}
+
+\section*{Introduction}
+Coverage problems lie at the core of combinatorial optimization and have been extensively studied in computer science. A quintessential example of such problems is the maximum coverage problem wherein we are given subsets $T_1, \ldots, T_m$ of a universe $[n]$ along with a positive integer $k$, and the objective is to find a size-$k$ set $S \subseteq [m]$ that maximizes the covering function $C(S) := \abs{\bigcup_{i \in S} T_i}$.
+
+It is well-known that a natural greedy algorithm achieves an approximation ratio of $1-e^{-1}$ for
+this problem (see, e.g., \cite{Hochbaum96}). Furthermore, the work of Feige \cite{Feige98} shows that this approximation factor is tight, under the assumption that P $\not=$ NP. Over the years, a large body of work has been directed towards extending these fundamental results and, more generally, coverage problem have been studied across multiple fields, such as operations research \cite{CFN77}, machine learning \cite{FK14}, and algorithmic game theory \cite{SV15}.
+
+Here, we consider a generalization of this problem where an element $a$ can contribute by an amount that depends on the number of times it is covered. Given a counting function $\varphi$, a universe $[n]$, positive weights $w_a$ on $[n]$ and cover sets $T_1,\ldots,T_m \subseteq [n]$, the $\varphi$-\textsc{MaxCoverage} problem consists in maximizing $C^{\varphi}(S) := \sum_{a \in [n]}w_a\varphi(\abs{S}_a)$, where $\abs{S}_a = \abs{\set{i \in S : a \in T_i}}$, over subsets of $[m]$ of cardinality at most $k$.
+
+In this article, we will furthermore ask that $\varphi$ is nondecreasing and concave (ie. $\varphi(k+2) - \varphi(k+1) \leq \varphi(k+1) - \varphi(k)$ for $k \in \mathbb{N}$), and we will identify $\varphi$ with its piecewise linear extension on $\mathbb{R}^+$. For normalization assumptions, we suppose also that $\varphi(0) = 0$ and $\varphi(1) = 1$. This leads to the definition of the \emph{Poisson concavity ratio} of $\varphi$ which we call $\alpha_{\varphi} := \min_{x \in \mathbb{N}} \alpha_{\varphi}(x)$ where $\alpha_{\varphi}(x) := \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])} = \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x)}$. We can now state the main result we prove in this article:
+
+\begin{theo}
+  There exists a polynomial-time algorithm to the $\varphi$-\textsc{MaxCoverage} problem with a approximation ratio equals to $\alpha_{\varphi}$. Furthermore, under the Unique Games Conjecture, it is NP-hard to approximate within a better approximation ratio the $\varphi$-\textsc{MaxCoverage} problem as soon as $\varphi$ is bounded.
+\end{theo}
+
+We show also that this theorem generalizes for general matroid constraints.
+
+\paragraph{Special cases}
+When $\varphi(j) = \min(j,1)$, we recover the standard \textsc{MaxCoverage} problem, and in that case we will have that $\alpha_{\varphi} = 1 - e^{-1}$. When $\varphi(j) = \min(j,\ell)$ for $\ell \in \mathbb{N}$, we recover the  $\ell$-\textsc{MultiCoverage} problem introduced by \cite{BFGG20} and we get back the tight approximation ratio $\alpha_{\varphi} = 1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$ (property \ref{proplCover}).
+
+Also, the problem of Utility Design for Distributed Resource Allocation introduced by \cite{PM19} can be seen as a special case of the maximization under matroid constraints of $C^{\varphi}$. In particular, the \textsc{Vehicle-Target Assignment} problem \cite{Murphey00} is the case where $\varphi^p(j) = \frac{1-(1-p)^j}{p}$ for some parameter $p \in ]0,1[$. We then get that $\alpha_{\varphi^p} = \frac{1 - e^{-p}}{p}$ (property \ref{propVTA}), which is slightly better that the numerical approximation ratio found in \cite{PM19}. Another case studied in \cite{PM19} is $\varphi(j) = j^d$, for a parameter $d \in ]0,1[$, which we call $d$-Power. We get then that $\alpha_{\varphi} = e^{-1}\sum_{k=1}^{+\infty}\frac{k^d}{k!}$ (property \ref{propdPower}) which seems to match the numerical approximation ratio found in \cite{PM19}. These results are summarized in figure \ref{figComp}.
+
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      $\varphi$-\textsc{MaxCoverage}  & $\varphi(j)$ & $\alpha_{\varphi}$ & Proof & Reference \\
+      \hline
+      \textsc{MaxCoverage} & $\min(j,1)$ & $1 - e^{-1}$ & \ref{proplCover} & e.g. \cite{Hochbaum96} \\
+      $\ell$-\textsc{MultiCoverage} & $\min(j,\ell)$ & $1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$ & \ref{proplCover} & \cite{BFGG20}\\
+      $p$-\textsc{Vehicle-Target Assignment} & $\frac{1-(1-p)^j}{p}$ & $\frac{1 - e^{-p}}{p}$ & \ref{propVTA} & \cite{Murphey00} \\
+      $d$-Power & $j^d$ & $e^{-1}\sum_{k=1}^{+\infty}\frac{k^d}{k!}$ & \ref{propdPower} & \cite{PM19} \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Our approximation ratios for particular choices of $\varphi$ in the $\varphi$-\textsc{MaxCoverage} problem. Our Unique Games hardness results apply to all of them except $d$-Power as it is unbounded.}
+  \label{figComp}
+\end{figure}
+
+\paragraph{Comments on the \emph{Poisson concavity ratio} $\alpha_{\varphi}$}
+By Jensen's inequality and the nonnegativity of $\varphi$, we have that $\alpha_{\varphi} \in [0,1]$. One can show for any $\varphi$ that is nondecreasing and concave, $C^{\varphi}$ is submodular. One can also compute its curvature (as defined in~\cite{} \OF{add reference}) $c = 1 - (\varphi(m) - \varphi(m-1))$ (property \ref{propSubCurv}). Thus, thanks to an algorithm by \cite{SVW17}, we have a general approximation ratio of $1 - c e^{-1}$ for the $\varphi$-\textsc{MaxCoverage}. The \emph{Poisson concavity ratio} $\alpha_{\varphi}$ is always greater or equal to this ratio (property \ref{propBetterRatio}), and for instance with the $\ell$-\textsc{MultiCoverage}, it is strictly better as soon as $\ell \geq 2$ as remarked in \cite{BFGG20}. \OF{Add another example, e.g., VTA that it is strictly better than curvature} Thus, it improves indeed this general algorithm in all cases of our setting.
+
+\begin{rk}
+  When we have an instance with $m$ sets, the approximation ratio we get is $\min_{x \in [m]} \alpha_{\varphi}(x)$, which can be much better in some cases.
+\end{rk}
+
+\section{Approximation Algorithm for the $\varphi$-\textsc{MaxCoverage} problem}
+We follow the same strategy as the one developed in \cite{BFGG20}. The algorithm we analyze is composed of two steps (relax and round): First, we solve the natural linear programming relaxation (see (\ref{relaxedProg}) obtaining a fractional, optimal solution $x^* \in [0,1]^m$  which satisfies $\sum_{i=1}^m x^*_i = k$. The second step is to use pipage rounding to find an integral vector $x^{\text{int}} \in \set{0,1}^m$ with the property that $\sum_{i=1}^m x^{\text{int}}_i = k$. This defines naturally a size $k$ set $S := \set{i \in [m] : x^{\text{int}}_i = 1}$, which we identify with $x^{\text{int}}$, and will be the set output by the algorithm. These two steps are detailed below.
+
+\paragraph{Step 1. Solve the LP relaxation:} Specifically, we consider the following linear programming relaxation of the $\varphi$-\textsc{MaxCoverage} problem under cardinality $k$ constraint.
+
+\begin{defi}[Relaxed Program]
+  \begin{equation}
+    \begin{aligned}
+      &\maxi&& \sum_{a \in [n]} w_ac_a \\
+      &\st&& c_a \leq \varphi\Big(\sum_{i \in [m] : a \in T_i} x_i\Big), \forall a \in [n]\\
+      &&& 0 \leq x_i \leq 1, \forall i \in [m]\\
+      &&& \sum_{i=1}^m x_i = k
+    \end{aligned}
+  \end{equation}
+  \label{relaxedProg}
+\end{defi}
+
+One can see that for an optimal integral solution, we have that $c_a = \varphi\Big(\sum_{i \in [m] : a \in T_i} x_i\Big) = \varphi(\abs{S}_a)$ since $w_a > 0$, with $S$ defined from $x \in \set{0,1}^m$ as before. Thus the overall value we get is $\sum_{a \in [n]}w_a\varphi(\abs{S}_a) = C^{\varphi}(S)$, and we maximize here over all sets $S$ of size $k$. So it is indeed the same problem when $x$ is an integral solution.
+
+This program is not yet a linear program as such since $\varphi$ is not a linear constraint. However, since $\varphi$ is piecewise linear on nonintegral values, we have that $\forall k \in [m], \exists p_k \text{ linear }, \forall x \in [k-1,k], \varphi(x) = p_k(x)$. Furthermore since $\varphi$ is concave, we have that $\forall k \in [m], \forall x \geq 0, \varphi(x) \leq p_k(x)$. Thus we can replace one constraint $c_a \leq \varphi(y)$ by the $m$ linear constraints $c_a \leq p_k(y), \forall k \in [m]$, so the program is indeed linear. Overall there are $n+m$ variables and $(n+1)m + 1$ linear constraints, and hence an optimal solution can be found in polynomial time.
+
+\paragraph{Step 2. Round the fractional, optimal solution:} We round the computed fractional solution $x^*$ by considering the \emph{multilinear extension} of the objective, and applying pipage rounding \cite{AS04, Vondrak07, CCPV11} on it. Formally, given any function $f : \set{0,1}^m \rightarrow \mathbb{R}$, one can define the multilinear extension $F : [0, 1]^m \rightarrow \mathbb{R}$ by $F(x_1,\ldots,x_m): = \mathbb{E}[f(X_1,\ldots,X_m)]$ where $X_i$ are independent random variables with $X_i \sim \Ber(x_i)$, ie. $X_i \in \set{0,1}$ with $\mathbb{P}(X_i = 1) = x_i$.
+
+For a submodular function $f$ , one can use pipage rounding to transform, in polynomial time, any fractional solution $x \in [0,1]^m$ satisfying $\sum_{i=1}^m x_i = k$ into an integral vector $x^{\text{int}} \in \set{0,1}^m$ such that $\sum_{i=1}^m x^{\text{int}}_i = k$ and $F(x^{\text{int}}) \geq F(x)$. We apply this strategy to $C^{\varphi}$ which was shown to be submodular in property \ref{propSubCurv}, and the solution $x^*$ of the LP relaxation \ref{relaxedProg}. We thus get the following lower bound on the value returned by our algorithm, with the notation $X = (X_1,\ldots,X_m)$ and $\Ber(x) = (\Ber(x_1),\ldots,\Ber(x_m))$:
+
+\[C^{\varphi}(x^{\text{int}}) = \mathbb{E}_{X \sim \Ber(x^{\text{int}})}[C^{\varphi}(X)] \geq \mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]\]
+
+Then it suffices to relate $\mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]$ to the value taken by the optimal LP relaxation, which is known to be bigger than the integral LP, since we maximize over a larger space.
+
+\begin{theo}
+  Let $x,c$ a feasible solution of the program \ref{relaxedProg} and $X \sim \Ber(x)$. Let us call $\alpha_{\varphi} = \min_{x \in [m]} \alpha_{\varphi}(x)$. Then:
+  \[\mathbb{E}_{X \sim \Ber(x)}[C^{\varphi}(X)] \geq \alpha_{\varphi} \sum_{a \in [n]} w_ac_a\]
+  In particular, this implies that the described polynomial time algorithm has an approximation ratio of $\alpha_{\varphi}$:
+  \[C^{\varphi}(x^{\text{int}}) \geq \alpha_{\varphi} \sum_{a \in [n]} w_ac^*_a \geq \alpha_{\varphi} \max_{S \subseteq [m] : \abs{S} = k} C^{\varphi}(S)\]
+  \label{theoAlgoCard}
+\end{theo}
+
+In order to prove this theorem, we need the following lemma:
+
+\begin{lem}
+    For $\varphi$ concave, and $p \in [0,1]^m$, we have:
+    \[\mathbb{E}\Big[\varphi\Big(\sum_{i=1}^m\Ber(p_i)\Big)\Big] \geq \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i=1}^m p_i\Big)\Big)\Big]\]
+  \label{lemConvexOrder}
+\end{lem}
+
+\begin{proof}
+  The notion of concave order discussed in \cite{StochasticOrders} allows us to prove this result. We say that $X \leq_{\text{cv}} Y \iff \mathbb{E}[\varphi(X)] \leq \mathbb{E}[\varphi(Y)]$ for any concave $\varphi$. Thanks to Theorem 3.A.12 of \cite{StochasticOrders}, this order is preserved through convolution, so we only need to show that for $p \in [0,1]$ we have:
+  \[\Ber(p) \geq_{\text{cv}} \Poi(p)\]
+  since $\sum_{i=1}^m \Poi(p_i) \sim \Poi\Big(\sum_{i=1}^m p_i\Big)$. This was done in Lemma 2.3 of \cite{BFGG20}.
+\end{proof}
+
+\begin{proof}[Proof of theorem \ref{theoAlgoCard}]
+  By linearity of expectation and the fact that the weights $w_a$ are positive, it is sufficient to show that for all $a \in [n]$:
+  \[ \mathbb{E}[C_a^{\varphi}(X)] \geq \alpha_{\varphi} c_a \]
+
+  where $C_a^{\varphi}(S) := \varphi(\abs{S}_a)$ and $\abs{S}_a = \abs{\set{i \in S : a \in T_i}}$. In particular, we have that $\abs{X}_a = \sum_{i \in A} X_i$ with $A = \set{i \in [m] : a \in T_i}$. Call $x_A = \sum_{i \in A} x_i \in [0,m]$. We have:
+  
+  \begin{equation}
+    \begin{aligned}
+      \mathbb{E}[C_a^{\varphi}(X)] &=&& \mathbb{E}\Big[\varphi\Big(\sum_{i \in A} X_i\Big)\Big] = \mathbb{E}\Big[\varphi\Big(\sum_{i \in A}\Ber(x_i) \Big)\Big]\\
+      &\geq&& \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i \in A} x_i\Big)\Big)\Big] \text{ thanks to lemma \ref{lemConvexOrder}}\\
+      &=&& \mathbb{E}[\varphi(\Poi(x_A))]
+    \end{aligned}
+  \end{equation}
+
+  Furthermore, since $x \mapsto \mathbb{E}[\varphi(\Poi(x))]$ is concave thanks to lemma \ref{lemPoiCon}, if we write $x_A = \lambda \lfloor x_A \rfloor + (1-\lambda) \lceil x_A \rceil$ for some $\lambda \in [0,1]$, we have that:
+  
+  \begin{equation}
+    \begin{aligned}
+      \mathbb{E}[\varphi(\Poi(x_A))] &\geq&& \lambda \mathbb{E}[\varphi(\Poi(\lfloor x_A \rfloor))] + (1-\lambda) \mathbb{E}[\varphi(\Poi(\lceil x_A \rceil))] \\
+      &=&& \lambda \alpha_{\varphi}(\lfloor x_A \rfloor)\varphi(\lfloor x_A \rfloor) + (1-\lambda) \alpha_{\varphi}(\lceil x_A \rceil)\varphi(\lceil x_A \rceil)\text{ by definition of } \alpha_{\varphi}(x)\\
+      &\geq&& \alpha_{\varphi} [\lambda \varphi(\lfloor x_A \rfloor) + (1-\lambda) \varphi(\lceil x_A \rceil)] \text{ since } \lfloor x_A \rfloor, \lceil x_A \rceil \in \mathbb{N} \text{ and } \lfloor x_A \rfloor \leq \lceil x_A \rceil \leq m\\
+      &=&& \alpha_{\varphi}\varphi(x_A) \text{ since $\varphi$ linear between integer points}\\
+      &\geq&& \alpha_{\varphi} c_a \text{  since $c_a \leq \varphi\Big(\sum_{i \in [m] : a \in T_i} x_i\Big) = \varphi(x_A)$}
+    \end{aligned}
+  \end{equation}
+\end{proof}
+
+\section{Generalization to matroid constraints}
+\subsection{Generalized result}
+We first note that in the proof of theorem \ref{theoAlgoCard}, we did not use the cardinality constraint $\sum_{i=1}^m x_i = k$. Thus, since the pipage rounding strategy generalizes to matroid constraints $\mathcal{M}$ (see for instance \cite{Vondrak07} (Lemma 3.4)), the strategy and the analysis of its efficiency generalize immediately when applied to the following linear program:
+
+\begin{defi}[Relaxed Matroid Program]
+  \begin{equation}
+    \begin{aligned}
+      &\maxi&& \sum_{a \in [n]} w_ac_a \\
+      &\st&& c_a \leq \varphi\Big(\sum_{i \in [m] : a \in T_i} x_i\Big), \forall a \in [n]\\
+      &&& 0 \leq x_i \leq 1, \forall i \in [m]\\
+      &&& x \in P(\mathcal{M}) \text{ the matroid polytope of } \mathcal{M}
+    \end{aligned}
+  \end{equation}
+  \label{relaxedMatProg}
+\end{defi}
+
+\begin{theo}
+  Let $x,c$ a feasible solution of the program \ref{relaxedMatProg} and $X \sim \Ber(x)$. Let us call $\alpha_{\varphi} = \min_{x \in [m]} \alpha_{\varphi}(x)$. Then:
+  \[\mathbb{E}_{X \sim \Ber(x)}[C^{\varphi}(X)] \geq \alpha_{\varphi} \sum_{a \in [n]} w_ac_a\]
+  In particular, this implies that the described polynomial time algorithm has an approximation ratio of $\alpha_{\varphi}$:
+  \[C^{\varphi}(x^{\text{int}}) \geq \alpha_{\varphi} \sum_{a \in [n]} w_ac^*_a \geq \alpha_{\varphi} \max_{S \in \mathcal{M}} C^{\varphi}(S)\]
+  \label{theoAlgoMat}
+\end{theo}
+
+\subsection{Multiple agents problem}
+Inspired by \cite{PM19}, we study a kind of generalization of this problem coming from game theory. We consider now $k$ agents, and each one of thoses chooses one cover set among his different possibilities $\mathcal{A}_i := \set{\mathcal{A}_i^1,\ldots,\mathcal{A}_i^{m_i}} \subseteq \mathcal{P}([n])$. As a remark, we should note that it is not exactly a generalization of the $\varphi$-\textsc{MaxCoverage} problem: when all agents have the same cover sets $\mathcal{A}_i =\set{T_1, \ldots, T_m}$, each cover set can be taken several times by different agents, whereas in our case we do not allow this.
+
+The value we want to maximize is called the global welfare, among possible allocations $A = (A_1,\ldots,A_k) \in \mathcal{A} := \mathcal{A}_1 \times \ldots \times \mathcal{A}_k$, which is given by the following formula:
+
+\[W^{\varphi}(A) := \sum_{e \in [n]} w_e\varphi(\abs{A}_e)\]
+
+where $\abs{A}_e :=  \abs{\set{i \in [k] : e \in A_i}}$.
+
+We show that this problem is equivalent to our problem under some specific matroid constraints. Given an instance of the multiple agents problem, consider the partition matroid $\mathcal{M}$ on $[\sum_{i \in[k]} m_i] := [m_1] + \ldots + [m_k]$ where $(B_i) := ([m_i])$ is a partition of our ground set and we take each degree $d_i=1$. Independent sets are then subsets $I \subseteq [\sum_{i \in[k]} m_i]$ such that $\forall i  \in [k], \abs{I \cap B_i} \leq d_i = 1$.
+Thus we have a bijection $f$ between allocations $A \in \mathcal{A}$ and maximal independent sets of $\mathcal{M}$ such that $W^{\varphi}(A) = C^{\varphi}(f(A))$. The maximization of the welfare of multiple agents is then solved with our algorithm, which implies in particular that it is $\alpha_{\varphi}$-approximable in polynomial time thanks to theorem \ref{theoAlgoMat}.
+
+\subsection{Application to the \textsc{Vehicle-Target Assignment} problem}
+In \cite{PM19}, they compute the \emph{Price of Anarchy}, ie. the ratio of the worst Nash Equilibrium on the best global welfare, of the game theory point of view of the multiple agents problem. In particular, since finding a Nash Equilibrium in a particular subset of instances can be found in polynomial time with the round-robin algorithm (see Part VI of \cite{PM19} for more details), the \emph{Price of Anarchy} is their approximation ratio of the multiple agents welfare problem. We have compared their numerical values with our ratio on the \textsc{Vehicle-Target Assignment} problem. For our concerns, we should only focus on the form of $\varphi^p$ which depends only on a parameter $p \in ]0,1[$ : $\varphi^p(j) = \frac{1-(1-p)^j}{p}$ for $j \in \mathbb{N}$. By property \ref{propVTA}, we have that $\alpha_{\varphi^p} = \frac{1 - e^{-p}}{p}$.
+
+    Also, since $\varphi^p$ is bounded by $\frac{1}{p}$, the hardness result proved afterwards will hold, so this approximation ratio is tight at least in the general matroid constraints case. When we compare the curve of $p \mapsto \alpha_{\varphi^p} = \frac{1 - e^{-p}}{p}$ to the numerical study of the Price of Anarchy by \cite{PM19}, it seems that we get a slightly better approximation ratio:
+
+    \begin{multicols}{2}
+      
+      \includegraphics[scale=0.20]{VTA_PoA_PM19.png}
+
+      \columnbreak
+
+      \begin{center}
+       \begin{tikzpicture}
+          \begin{axis}[
+            xmin = 0, xmax = 1,
+            ymin = 0.5, ymax = 1,
+            xtick distance = 0.2,
+            ytick distance = 0.1,
+            grid = both,
+            width = 0.52\textwidth,
+            height = 0.33\textwidth,
+            legend cell align = {left},
+            legend pos = north east,
+            xlabel=$p$,
+            ]
+            \addplot[
+              domain = 0:1,
+              samples = 21,
+              smooth,
+              black,
+              mark = x,
+            ] table[x=p,y=alpha,col sep=comma] {VTA.csv};
+            \addplot[
+              domain = 0.001:1,
+              samples = 21,
+              smooth,
+              red,
+              mark = diamond,
+            ] table[x=p,y=app,col sep=comma] {VTA.csv};
+            \legend{$\alpha_{\varphi^p} = \frac{1 - e^{-p}}{p}$,App}
+          \end{axis}
+       \end{tikzpicture}
+    \end{center}
+    \end{multicols}
+
+    For our concerns, in the figure on the left taken in \cite{PM19}, we only look at the black curve PoA$^{\text{opt}}$, which corresponds to the approximation ratio they have obtained, and the red curve App, which corresponds to the usual approximation ratio $1 - ce^{-1}$ with the curvature $c = 1-\varphi^p(m) + \varphi^p(m-1)$ with $m=10$ players in their simulation. On the right, the red curve is the same as on the left, whereas the black curve is $\alpha_{\varphi^p}$. We can see that it is slightly greater than the curve obtained by \cite{PM19}. In particular, for $p=0.2$, we have that $\alpha_{\varphi^{0.2}} \simeq 0.9063$ where their PoA$^{\text{opt}} \simeq 0.89 < \alpha_{\varphi^{0.2}}$.
+
+
+    \subsection{Application to $d$-Power}
+    As a comparison, we have also plotted the case studied in \cite{PM19} where $\varphi^d(j) = j^d$ for some $d \in ]0,1[$. We have then $\alpha_{\varphi^d} = e^{-1}\sum_{k=1}^{+\infty}\frac{k^d}{k!}$ thanks to property \ref{propdPower}. Once again, if we compare our result with those of \cite{PM19}, we get the following figure:
+
+
+
+    \begin{multicols}{2}
+      
+      \includegraphics[scale=0.20]{dPower_PoA_PM19.png}
+
+      \columnbreak
+
+      \begin{center}
+       \begin{tikzpicture}
+          \begin{axis}[
+            xmin = 0, xmax = 1,
+            ymin = 0.5, ymax = 1,
+            xtick distance = 0.2,
+            ytick distance = 0.1,
+            grid = both,
+            width = 0.52\textwidth,
+            height = 0.33\textwidth,
+            legend cell align = {left},
+            legend pos = north west,
+            xlabel=$d$,
+            ]
+            \addplot[
+              domain = 0:1,
+              samples = 21,
+              smooth,
+              black,
+              mark = x,
+            ] table[x=d,y=alpha,col sep=comma] {dPower.csv};
+            \addplot[domain = 0:1,
+              samples = 21,
+              smooth,
+              red,
+              mark = diamond,
+            ] table[x=d,y=app,col sep=comma] {dPower.csv};
+            \legend{$\alpha_{\varphi^d} = e^{-1}\sum_{k=1}^{+\infty}\frac{k^d}{k!}$,App}
+          \end{axis}
+       \end{tikzpicture}
+    \end{center}
+    \end{multicols}
+
+    However, here it seems that the black curves are exactly matching, ie. PoA$^{\text{opt}} = \alpha_{\varphi^d}$ here. The curve App is obtained as previously, but this time their simulation used $m=20$ players.
+    \section{Hardness of approximation of the $\varphi$-\textsc{MaxCoverage} problem} 
+In this section we establish an inapproximability bound for the $\varphi$-\textsc{MaxCoverage} problem with weights $1$ and under cardinality constraints. Throughout this section we use $\Gamma$ to denote the universe of elements and, hence, an instance of the $\varphi$-\textsc{MaxCoverage} problem consists of $\Gamma$, along with a collection of subsets $\mathcal{F} = \set{T_i \subseteq \Gamma}_{i=1}^m$  and an integer $k$. Recall that the objective of this problem is to find a size-$k$ subset $S \subseteq [m]$ that maximizes $C^{\varphi}(S) = \sum_{a \in \Gamma}\varphi(\abs{S}_a)$.
+
+We establish the following theorem in this section:
+
+\begin{theo}
+  Assuming the Unique Games Conjecture (UGC), it is NP-hard to approximate the $\varphi$-\textsc{MaxCoverage} problem for $\varphi$ bounded within a factor greater that $\alpha_{\varphi} + \epsilon$ for any $\epsilon > 0$.
+
+  More precisely, we get the inapproximability of ratio $\frac{\alpha_{\varphi} + \delta'}{1-\delta} \underset{\delta \rightarrow 0}{\rightarrow} \alpha_{\varphi}$ for some $\delta' = \Theta(\delta^{\frac{1}{5}})$ depending only on $\varphi$.
+  \label{theoHardness}
+\end{theo}
+
+Our reduction is based on a variant of the UGC, called $h$-\textsc{AryUGC}, which is basically an extension of UGC to $h$-uniform regular hypergraph and was shown to be equivalent to UGC in \cite{BFGG20}:
+
+\begin{defi}[$h$-\textsc{AryUniqueGames}]
+  An instance $\mathcal{G} = (V,E, \Sigma, \set{\pi_{e,v}}_{e \in E, v \in e})$ of $h$-\textsc{AryUniqueGames} is characterized by an $h$-uniform regular hypergraph $(V, E)$ and bijection constraints $\pi_{e,v} : \Sigma \rightarrow \Sigma$. Here, each $h$-uniform hyperedge represents a $h$-ary constraint. Additionally, for any labeling $\sigma : \Sigma \rightarrow \Sigma$, we have the following notions of strongly and weakly satisfied constraints:
+  \begin{itemize}
+  \item An edge $e = (v_1,\ldots,v_h) \in E$ is \emph{strongly satisfied} by $\sigma$ if:
+    \[ \forall x,y \in [h], \pi_{e,v_x}(v_x) = \pi_{e,v_y}(v_y) \]
+  \item An edge $e = (v_1,\ldots,v_h) \in E$ is \emph{weakly satisfied} by $\sigma$ if:
+    \[ \exists x\not=y \in [h], \pi_{e,v_x}(v_x) = \pi_{e,v_y}(v_y) \]
+  \end{itemize}
+\end{defi}
+
+\begin{conj}[$h$-\textsc{AryUGC}]
+  For any fixed integer $h \geq 2$ and fixed $\delta > 0$, there exists $\Sigma$ whose size depends only on $\delta$ and that can be taken as large as we want, such that for instances $\mathcal{G}$ of $h$-\textsc{AryUniqueGames} with alphabet $\Sigma$, it is NP-hard to distinguish between:
+  
+  \begin{itemize}
+  \item[\textbf{YES:}] There exists a labeling $\sigma$ that \emph{strongly satisfies} at least $1-\delta$ fraction of the edges.
+  \item[\textbf{NO:}] No labeling \emph{weakly satisfies} more than $\delta$ fraction of the edges.
+  \end{itemize}
+\end{conj}
+
+\begin{rk}
+The proof works for $\alpha_{\varphi}(x)$ for any integer $x$, but is most interesting when $x$ gives the minimum ratio.
+\end{rk}
+
+The key ingredient to prove theorem \ref{theoHardness} is a constant size combinatorial object called partitioning gadget, similar to the one introduced in \cite{BFGG20}, which we first prove the existence.
+
+\subsection{Partitioning Gadget}
+For any set $[n]$, $\mathcal{Q} \subseteq 2^{[n]}$, we overload the definition $C^{\varphi}(\mathcal{Q}) := \sum_{a \in [n]} \varphi(\abs{\mathcal{Q}}_a)$ with $\abs{\mathcal{Q}}_a:=\abs{\set{P \in \mathcal{Q} : a \in P}}$ and $C_a^{\varphi}(\mathcal{Q}) := \varphi(\abs{\mathcal{Q}}_a)$. Let us call $\varphi_{\max} = \lim_{n \rightarrow +\infty} \varphi(n)$ the best upper bound of $\varphi$, and let us take $x_{\varphi} \in \text{argmin}_{x \in \mathbb{N}} \alpha_{\varphi}(x)$, thus $\alpha_{\varphi} = \alpha_{\varphi}(x_{\varphi})$.
+
+We say that $\mathcal{Q}$ is an \emph{$x$-cover} of $x \in \mathbb{N}$ if every element of $[n]$ is covered $x$ times, so $C^{\varphi}(\mathcal{Q}) = n\varphi(x)$.
+
+\begin{defi}
+  Given $[n]$, an \emph{$([n],h,s,\varphi,\eta)$-partitioning system} consists of $s$-distinct collections of subsets of $[n]$, $\mathcal{P}_1,\ldots,\mathcal{P}_s \subseteq 2^{[n]}$, that satisfy:
+  \begin{enumerate}
+  \item For every $i \in [s], \mathcal{P}_i$ is a collection of $h$-subsets $P_{i,1}, \ldots, P_{i,h} \subseteq [n]$ each of size $x_{\varphi}n/h$ (thus we need that $h \geq x_{\varphi}$) which is an $x_{\varphi}$-cover.
+  \item For any $T \subseteq [s]$ and $\mathcal{Q} = \set{P_i : i \in T}$ such that $P_i \in \mathcal{P}_i$, we have $\abs{C^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} \leq \eta n$ where:
+    \[ \psi^{\varphi}_{\abs{T},h} = \mathbb{E}\Big[\varphi\Big(\Bin\Big(\abs{T},\frac{x_{\varphi}}{h}\Big)\Big)\Big]\]
+
+  \item Furthermore, there exists $M_{\varphi} > 0$ depending only on $\varphi$ such that $\forall \epsilon > 0$, if $h \geq  \frac{x_{\varphi}\varphi_{\max}}{\epsilon}, \abs{T} = h(1+\mu) \leq s$ and $0 \leq \mu \leq \frac{\epsilon}{2x_{\varphi}}$, then:
+    \[\abs{\psi^{\varphi}_{\abs{T},h} -\alpha_{\varphi}\varphi(x_{\varphi})} \leq \epsilon\]
+  \end{enumerate}
+  \label{defPartGadget}
+\end{defi}
+
+\begin{rk}
+  In particular, for any $\mathcal{Q} = \set{P_{i,j}}$ of size $k$, we have that $C^{\varphi}(\mathcal{Q}) \leq n\varphi(k\frac{x_{\varphi}}{h}) \leq n\varphi(k)$. Indeed $C^{\varphi}(\mathcal{Q}) = \sum_{a \in [n]} \varphi(\abs{\mathcal{Q}}_a)$ with $\sum_{a \in [n]} \abs{\mathcal{Q}}_a = \sum_{i \in [k]} \abs{\mathcal{Q}_i} = k \times \frac{x_{\varphi}n}{h}$. By concavity of $\varphi$ and Jensen inequality, this function is maximized when all $\abs{\mathcal{Q}}_a$ are equals, where we get $n\varphi(k\frac{x_{\varphi}}{h})$.
+\end{rk}
+  \begin{theo}
+    For every choice of $s,h \in \mathbb{N}$ with $h \geq x_{\varphi}$, $\eta > 0$,  $n \geq \eta^{-2}s\varphi(s)^2\log(20(h+1))$, there exists an $([n],h,s,\varphi,\eta)$-partitioning system, which can be found in time exp($sn$log$n).$poly$(h)$ (this will be constant time in the reduction).
+  \end{theo}
+
+  \begin{proof}
+    The existential proof is based on the probabilistic method. We take $\mathcal{P}_i$ an $h$-equi-sized uniform random $x_{\varphi}$-cover of $[n]$. Hence in the collection $\mathcal{P}_i=(P_{i,1},\ldots,P_{i,h})$, each of the $h$ subsets is of cardinality $x_{\varphi}n/h$. Write $\mathcal{P} = (\mathcal{P}_1,\ldots,\mathcal{P}_s)$. We have that for any $a \in [n], \mathbb{P}(a \in P_{i,j}) = x_{\varphi}/h$. We note that although for $i$ fixed those events are not independent, but for different $i$s, these events are independent.
+
+    By construction, the first condition is fulfilled. In order to prove the second condition, we prove some bound on a fixed $T$ and $\mathcal{Q}$ and with union bound we will go over all of them.
+
+    Let fix $T \subseteq [s]$ and $\mathcal{Q} := \set{P_i : i \in T}$ with $P_i :=P_{i, j(i)}$ for some function $j$.
+
+    We have that for some $a \in [n]$:
+    \[ \mathbb{E}[C_a^{\varphi}(\mathcal{Q})] =  \mathbb{E}[\varphi(\abs{\mathcal{Q}}_a)] = \mathbb{E}[\varphi(\abs{\set{i \in T: a \in P_i}})]\]
+
+    But the random variables $\set{X_i := \mathbbm{1}_{a \in P_i}}_{i \in T}$ are independent and follow the same Bernoulli law of parameter $x_{\varphi}/h$, so the variable $X =\abs{\set{i \in T: a \in P_i}} = \sum_{i \in T} X_i \sim \Bin(\abs{T},x_{\varphi}/h)$, and thus we have that
+    \[\mathbb{E}[C_e^{\varphi}(\mathcal{Q})] = \mathbb{E}[\varphi(\Bin(\abs{T},x_{\varphi}/h))] =\psi^{\varphi}_{\abs{T},h}\]
+
+    Now we have that $0 \leq C_a^{\varphi}(\mathcal{Q}) \leq \varphi(s)$ since $\abs{\mathcal{Q}}_a\leq \abs{\mathcal{Q}} \leq s$ and $\varphi$ nondecreasing. Thanks to Azuma-Hoeffding bound, we get that:
+
+    \[ \mathbb{P}\Big( \abs{C_a^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} > \eta n\Big) \leq 2 \text{exp}\Big(-\Big(\frac{\eta}{\varphi(s)}\Big)^2n\Big)\]
+
+    Now, since there are at most $(h+1)^s$ choices of $T$ and $\mathcal{Q}$, we apply a union bound to this:
+    \[ \mathbb{P}\Big(\exists C,\mathcal{Q} : \abs{C^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} > \eta n\Big) \leq 2(h+1)^s \text{exp}\Big(-\Big(\frac{\eta}{\varphi(s)}\Big)^2n\Big)\]
+
+    Thus w.p. at least $9/10$, we have that $\abs{C^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} \leq \eta n$, since we have taken $n \geq \eta^{-2}s\varphi(s)^2\log(20(h+1))$. So there must exists some choice of $\mathcal{P}$ that satisfies the first and second constraints of partitioning systems.
+
+    Now let us prove the third and last part of this theorem. $\psi^{\varphi}_{h(1+\mu),h} =  \mathbb{E}[\varphi(\Bin(h(1+\mu),\frac{x_{\varphi}}{h}))]$. Thanks to lemma \ref{lemBinPoi} applied on $\varphi$ and $x_{\varphi}$ (which only depends on $\varphi$) we get that:
+
+    \[\abs{\psi^{\varphi}_{h(1+\mu),h} - \mathbb{E}[\varphi(\Poi(x_{\varphi}(1+\mu))] } \leq \frac{x_{\varphi}\varphi_{\max}}{2h} \leq \frac{\epsilon}{2}\]
+
+    since he have supposed that $h \geq \frac{x_{\varphi}\varphi_{\max}}{\epsilon}$ and $\mu \geq 0$.
+    
+    Furthermore, with $g(x) := \mathbb{E}[\varphi(\Poi(x))]$ which is 1-Lipschitz continuous thanks to lemma \ref{lemPoiCon}:
+    \[\abs{g(x_{\varphi}(1+\mu)) - g(x_{\varphi})} \leq x_{\varphi}\mu \]
+
+    So we get that for $0 \leq \mu \leq \frac{\epsilon}{2x_{\varphi}}$:
+    \[\abs{\mathbb{E}[\varphi(\Poi(x_{\varphi}(1+\mu))] - \mathbb{E}[\varphi(\Poi(x_{\varphi}))]} \leq \frac{\epsilon}{2}\]
+
+    But $\mathbb{E}[\varphi(\Poi(x_{\varphi}))] = \alpha_{\varphi}(x_{\varphi})\varphi(x_{\varphi}) = \alpha_{\varphi}\varphi(x_{\varphi})$, so combining the two previous inequalities we get:
+
+    \[\abs{\psi^{\varphi}_{h(1+\mu),h} -\alpha_{\varphi}\varphi(x_{\varphi})} \leq \epsilon\]
+
+    Finally, since a random choice of $\mathcal{P} = (\mathcal{P}_1,\ldots,\mathcal{P}_s)$ satisfies the desired properties, we can enumerate over all choices of $\mathcal{P}$ in time exp($sn$log$n).$poly$(h)$ to find such a partitioning system.
+  \end{proof}
+  
+  \subsection{The Reduction}
+  \begin{proof}[Proof of theorem \ref{theoHardness}]
+Let us fix $\delta > 0$, and $\delta' = \Theta(\delta^{\frac{1}{5}})$ yet to be defined. We take $h = \lceil\frac{x_{\varphi}\varphi_{\max}}{\epsilon}\rceil$ with $\epsilon = \frac{\delta'\varphi(x_{\varphi})}{4}$, and we do the reduction from the $h$-\textsc{AryUGC}. Given an instance  $\mathcal{G} = (V,E, \Sigma, \set{\pi_{e,v}}_{e \in E, v \in e})$, we set first the parameters $k = \abs{V}, s = \abs{\Sigma}$ as in the previous paper, and we also ask that $s \geq h(1+\frac{\epsilon}{2x_{\varphi}})$.
+We set the constants: $\eta = \epsilon = \frac{\delta'\varphi(x_{\varphi})}{4},  f(\delta') := \frac{\delta'\varphi(x_{\varphi})}{8}\min(\frac{1}{\varphi_{\max}},\frac{1}{4x_{\varphi}})$, where $f(\delta')$ will be the fraction of \emph{nice} hyperedges in the soundness proof by contradiction.
+
+Then the reduction is the same as in \cite{BFGG20} but instead we take our $\varphi$-gadget.
+More precisely, for each hyperedge $e$ of our instance $\mathcal{G}$, we introduce a copy of set $[n]$ which we call $[n]_e$, and the ground set is $\Gamma = \bigcup_{e \in E} [n]_e$. For each of those copies, we fix a $([n],h,s,\varphi,\eta)$-partitioning gadget with the parameters we have previously introduced, and let us call $\mathcal{P}^e =\set{\mathcal{P}^e_1,\ldots,\mathcal{P}^e_s}$ the corresponding set of collections.
+
+Using these collections, we first define sets $T_{\beta}^{e,v}$ for each hyperedge $e \in E$, vertex $v \in e$ and alphabet $\beta \in \Sigma$ in the given instance $\mathcal{G}$.
+
+For each $i \in [s]$, we consider the $i$-th alphabet $\alpha_i$ of $\Sigma = \set{\alpha_1,\ldots,\alpha_i,\ldots,\alpha_s}$, and associate the $h$ sets in $\mathcal{P}^e_i$ with labels for $v_1,\ldots,v_h$ which map (under bijection $\pi_{e,v_j}$) to $\alpha_i$. This is done by renaming the subsets $\mathcal{P}^e_i = \set{P^e_{i,1},\ldots,P^e_{i,h}}$ to $T^{e,v_1}_{\pi_{e,v_1}^{-1}(\alpha_i)},\ldots,T^{e,v_h}_{\pi_{e,v_h}^{-1}(\alpha_i)}$ respectively. In other words, if $\beta \in \Sigma$ satisfies $\pi_{e,v_j}(\beta) = \alpha_i$, then we assign $T^{e,v_1}_{\beta} = P^e_{i,j}$. 
+
+For every vertex $v$ and alphabet $\beta \in \Sigma$, we define $\tilde{T}^v_{\beta} := \bigcup_{e \in E:v \in e} T^{e,v}_{\beta}$ which will be the cover sets of our instance: $\mathcal{F} := \set{\tilde{T}^v_{\beta}, v \in V, \beta \in \Sigma}$. Finally we set the cardinality constraint $k = \abs{V}$.
+
+Let us prove completeness and soundness properties. Precisely, if we are in a YES instance, we have that there exists $\mathcal{T}$ such that $C^{\varphi}(\mathcal{T}) \geq (1-\delta)\varphi(x_{\varphi})\abs{\Gamma}$. If we are in a NO instance, then we have that for all $\mathcal{T}$ of size $k = \abs{V}$, $C^{\varphi}(\mathcal{T}) \leq (\alpha_{\varphi} + \delta')\varphi(x_{\varphi})\abs{\Gamma}$. 
+
+Thus, if we could approximate within a strictly better ratio than $\frac{\alpha(x_{\varphi}) + \delta'}{1-\delta}$, we would be able to distinguish between those two instances, which is known to be NP-hard by the $h$-\textsc{AryUGC}. Indeed, if we had a YES instance, we would get that $C^{\varphi}(\mathcal{T}_{\text{approx}}) > \frac{\alpha(x_{\varphi}) + \delta'}{1-\delta}(1-\delta)\varphi(x_{\varphi})\abs{\Gamma} = (\alpha(x_{\varphi}) + \delta')\varphi(x_{\varphi})\abs{\Gamma}$, so it would tell us in particular that we are not in a NO instance. Thus we would be in a YES instance iff $C^{\varphi}(\mathcal{T}_{\text{approx}}) > (\alpha(x_{\varphi}) + \delta')\varphi(x_{\varphi})\abs{\Gamma}$. So finding such a $\mathcal{T}_{\text{approx}}$ is NP-hard.
+
+\subsubsection{Completeness}
+Suppose the given $h$-\textsc{AryUniqueGames} instance $\mathcal{G}$ is a YES instance. Then, there exists a labeling $\sigma : V \mapsto \Sigma$ which strongly satisfies $1-\delta$ fraction of edges. Consider the collection of $\abs{V}$ subsets $\mathcal{T} := \set{\tilde{T}_{\sigma(v)}^v : v \in V}$. Let $e = (v_1,\ldots,v_h)$ be a hyperedge which is strongly satisfied by $\sigma$, which means that there exists $\alpha_r \in \Sigma$ such that $\pi_{e,v_i}(\sigma(v_i)) = \alpha_r$ for all $i \in [h]$. So $P_{r,i}^e = T_{\sigma(v_i)}^{e,v_i} \subseteq \tilde{T}_{\sigma(v_i)}^{v_i}$. Thus since by construction, $(P_{r,i}^e)_{i \in [h]}$, which comes from the partitioning gadget, is an $x_{\varphi}$-cover of $[n]_e$, we have that $C^{\varphi}(\mathcal{T}) \geq (\text{\# strongly satisfied edges}) \times \varphi(x_{\varphi})n \geq (1-\delta)\abs{V}\varphi(x_{\varphi})n = (1-\delta)\varphi(x_{\varphi})\abs{\Gamma}$.
+
+\subsubsection{Soundness}
+Suppose the given $h$-\textsc{AryUniqueGames} instance $\mathcal{G}$ is a NO instance. Let us prove the contrapositive of the soundness: we suppose that there exists $\mathcal{T}$ of size $k = \abs{V}$ such that  $C^{\varphi}(\mathcal{T}) > (\alpha(x_{\varphi}) + \delta')\varphi(x_{\varphi})\abs{\Gamma}$. Let us find a contradiction.
+
+For every vertex $v \in V$, we define $L(v) := \set{\beta \in \Sigma : \tilde{T}_{\beta}^v \in \mathcal{T}}$ to be the candidate set of labels that can be associated with the vertex $v$. We extend this definition to hyperedges $e = (v_1,\ldots,v_h)$ where we define $L(e) := \bigcup_{x \in [h]} L(v_x)$ to be the \emph{multiset} of all labels associated with the edge.
+
+We say that $e = (v_1,\ldots,v_h) \in E$ is \emph{consistent} iff $\exists x \not= y \in [h], \pi_{e,v_x}(L(v_x)) \cap \pi_{e,v_y}(L(v_y)) \not= \emptyset$. We have the following lemma on inconsistent edges:
+
+\begin{lem}
+  $e = (v_1,\ldots,v_h) \in E$ be an inconsistent hyperedge with respect to $\mathcal{T}$. Then we have that $\abs{C_e^{\varphi}(\mathcal{T}) - \psi^{\varphi}_{\abs{L(e)},h}n } \leq \eta n$.
+\end{lem}
+
+\begin{proof}
+  Since $e$ is inconsistent, $\forall x \not= y \in [h], \pi_{e,v_x}(L(v_x)) \cap \pi_{e,v_y}(L(v_y)) = \emptyset$. Therefore, for every $\alpha_i \in \Sigma$, there is at most one $v \in e$ such that $\alpha_i \in \pi_{e,v}(L(v))$: for every $i \in [s]$, $\mathcal{T}$ intersects with $\mathcal{P}_i^e$ in at most one subset. This gives us a subset $T \subseteq [s]$ of size $\abs{L(e)}$ such that the restriction of $\mathcal{T}$ to $[n]_e$ is $\mathcal{Q} = \set{P^e_{i,j} : j \in T}$ (up to empty sets). So by the second condition of the partitioning gadget, we get the expected result.
+\end{proof}
+
+Since the overall value of $\mathcal{T}$ is large and inconsistent edges admit small value, we can show that there exists a large fraction of consistent edges. First we claim that for a significant fraction of the edges $e$, the associated label sets $L(e)$ cannot be too large. Specifically, we note that:
+
+\[ \mathbb{E}_{e \sim E}[\abs{L(e)}] \leq \frac{h}{\abs{V}} \sum_{v \in V} \abs{L(v)} = h\]
+
+since the hypergraph is regular, hence picking a hyperedge uniformly at random corresponds to selecting vertices with probability $\frac{h}{\abs{V}}$ each. For the last equality, this comes from the fact that $\sum_{v \in V} \abs{L(v)} = \abs{\mathcal{T}} = \abs{V}$.
+
+Therefore, via Markov’s inequality, the size of the label set $\abs{L(e)}$ is greater than $\frac{h}{f(\delta')}$ for at most $f(\delta')$ fraction of the hyperedges:
+
+\[\mathbb{P}\Big(\abs{L(e)} \geq \frac{h}{f(\delta')}\Big) \leq f(\delta')\]
+
+We say that a hyperedge $e \in E$ is \emph{nice} if $e$ is consistent and the associated label set $L(e)$ is of cardinality at most $\frac{h}{f(\delta')}$. Since inconsistent edges with small label sets must result in small value thanks to the previous lemma, it must be that a significant fraction of edges must be nice. This observation is formalized in the following lemma:
+
+\begin{lem}
+  At least $f(\delta')$ fraction of the hyperedges must be nice.
+  \label{lemNice}
+\end{lem}
+
+\begin{proof}
+  We prove this by contradiction. We suppose that $\mathbb{P}(e \text{ is nice}) < f(\delta')$. Then with union bound we get:
+
+  \[ \mathbb{P}(e \text{ is consistent}) \leq \mathbb{P}(e \text{ is nice}) + \mathbb{P}\Big(\abs{L(e)} \geq \frac{h}{f(\delta')}\Big) \leq 2f(\delta')\]
+
+  Therefore, the contribution of consistent edges to the value is at most $2 f(\delta')\abs{E} \times n\varphi_{\max} = 2 \varphi_{\max} f(\delta') \abs{\Gamma}$.
+
+  Thus since we have supposed $C^{\varphi}(\mathcal{T}) > (\alpha(x_{\varphi}) + \delta')\varphi(x_{\varphi})\abs{\Gamma}$, the value that comes from inconsistent edges is at least $(\alpha(x_{\varphi}) + \delta' - 2 \frac{\varphi_{\max}}{\varphi(x_{\varphi})} f(\delta'))\varphi(x_{\varphi})\abs{\Gamma} \geq (\alpha(x_{\varphi}) + \frac{3\delta'}{4})\varphi(x_{\varphi})\abs{\Gamma}$ since $f(\delta') \leq \frac{\delta'}{8}\frac{\varphi(x_{\varphi})}{\varphi_{\max}}$.
+
+  To obtain a contradiction, we now prove that the value that comes from inconsistent hyperedges cannot be this large. Write $E_{\text{inc}} \subseteq E$ to denote the set of inconsistent hyperedges. Since $\abs{E_{\text{inc}}} \geq (1-2f(\delta'))\abs{E}$, by averaging, it follows that:
+
+  \[ \mathbb{E}_{e \sim E_{\text{inc}}}[\abs{L(e)}] \leq \frac{h}{1 - 2f(\delta')} \leq (1 + 4f(\delta'))h\]
+
+  (we suppose $f(\delta')$ to be small, so in particular $2f(\delta') \leq 0.5$ which is the condition to have this inequality).
+
+  Applying lemma \ref{lemNice} on inconsistent edges with $\mu = 4 f(\delta')$ we get:
+
+  \begin{equation}
+    \begin{aligned}
+      \mathbb{E}_{e \sim E_{\text{inc}}}[C_e^{\varphi}(\mathcal{T})] &\leq&& \mathbb{E}_{e \sim E_{\text{inc}}}[\psi^{\varphi}_{\abs{L(e)},h} +\eta] \leq (\psi^{\varphi}_{\mathbb{E}_{e \sim E_{\text{inc}}}[\abs{L(e)}],h} +\eta)n\\
+      &\leq&& (\psi^{\varphi}_{h(1+\mu),h} +\eta)n \leq (\alpha(x_{\varphi})\varphi(x_{\varphi}) + 2\epsilon)n       \end{aligned} 
+  \end{equation}
+
+
+where we apply successively lemma \ref{lemNice}, Jensen inequality thanks to concavity and then the nondecreasing property of $x \mapsto \psi^{\varphi}_{x,h} = g_{x_{\varphi}/h}^{\varphi}$ thanks to lemma \ref{lemBinCon}, and finally the third property of the partitioning gadget. We can check indeed that $\eta = \epsilon$, $\mu = 4f(\delta') \leq \frac{\delta'\varphi(x_{\varphi})}{8x_{\varphi}} \leq \frac{\epsilon}{2x_{\varphi}}$, $h \geq \frac{x_{\varphi}\varphi_{\max}}{\epsilon}$ and $s \geq h(1+\mu)$ since $\mu \leq \frac{\epsilon}{2x_{\varphi}}$
+
+This implies that the total contribution of inconsistent edges $E_{\text{inc}}$ is at most $(\alpha(x_{\varphi})\varphi(x_{\varphi}) + 2\epsilon)\abs{\Gamma} = (\alpha(x_{\varphi})+ \frac{\delta'}{2})\varphi(x_{\varphi})\abs{\Gamma}$, but we have also seen that the contribution is at least $(\alpha(x_{\varphi}) + \frac{3\delta'}{4})\varphi(x_{\varphi})\abs{\Gamma}$, thus we have a contradiction and the lemma is proved.
+\end{proof}
+
+Finally, we construct a randomized labeling $ \sigma : V \mapsto \Sigma$ as follows: for $v \in V$, if $L(v) \not= \emptyset$, set $\sigma(v)$ uniformly form $L(v)$, otherwise set it arbitrarily. We claim that in expectation, this labeling must weakly satisfy $\delta = \Theta(\delta'^{5})$ fraction of the hyperedges.
+
+To see this, fix any nice hyperedge $e = (v_1,\ldots,v_h)$. Thus $\exists x \not= y \in [h], \pi_{e,v_x}(L(v_x)) \cap \pi_{e,v_y}(L(v_y)) \not= \emptyset$. Furthermore the niceness implies that $\abs{L(v_x)},\abs{L(v_y)} \leq \frac{h}{f(\delta')}$. Thus, we have that $\pi_{e,v_x}(L(v_x)) = \pi_{e,v_y}(L(v_y))$ with probability at least $\frac{1}{\abs{L(v_x)}\abs{L(v_y)}} \geq \Big(\frac{f(\delta')}{h}\Big)^2$.
+
+Therefore:
+
+\begin{equation}
+  \begin{aligned}
+    &&& \mathbb{E}_{\sigma}\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e]\\
+    &\geq&& f(\delta') \mathbb{E}_{\sigma}\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e | e \in E_{\text{nice}}]\\
+    &\geq&& \frac{f(\delta')^3}{h^2} = \frac{\Big(\frac{\delta'\varphi(x_{\varphi})}{8}\min(\frac{1}{\varphi_{\max}},\frac{1}{4x_{\varphi}})\Big)^3}{\Big(\frac{4x_{\varphi}\varphi_{\max}}{\delta'\varphi(x_{\varphi})}\Big)^2}> K_{\varphi} \delta'^5 = \delta
+  \end{aligned}
+\end{equation}
+
+with $K_{\varphi}$ some constant depending only on $\varphi$, and setting $\delta' := (\frac{\delta}{K_{\varphi}})^{\frac{1}{5}}$. Thus in particular there exists some labeling $\sigma$ such that $\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e] > \delta$ which is in contradiction with the fact that we had a NO instance, and thus the soundness is also proved.
+\end{proof}
+
+\section*{Conclusion}
+The standard coverage function $C(S)$ counts the number of elements $a \in [n]$ that are covered by at least one set $T_i$ with $i \in S$. Note that the contribution of an $a \in [n]$ to $C(S)$ is exactly the same whether $a$ appears in just one set $T_i$ or in all of them. It is very natural to consider settings wherein having more than one copy of $a$ is more valuable than just one copy of it. The $\varphi$-\textsc{MaxCoverage} problem we have introduced study exactly this: having $c$ copies of element $a$ gives a value $\varphi(c)$. We have shown that when $\varphi$ is concave nondecreasing, we can take advantage of this structure and obtain a better approximation guarantee given by the \emph{Poisson concavity ratio} $\alpha_{\varphi} := \min_{x \in \mathbb{N}} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])}$, which is a kind of measure of how much concave $\varphi$ is.
+
+It would be interesting to extend the hardness result for unbounded sublinear functions, and without relying on the Unique Games Conjecture. Another interesting question is whether there exists combinatorial algorithms that achieve this approximation ratio. As mentioned in \cite{BFGG20}, for the maximum $\ell$-multi-coverage with $\ell \geq 2$, which is the special case where $\varphi(x) = \min(x,\ell)$, the simple greedy algorithm only gives a $1 - e^{-1}$ approximation ratio, which is strictly less than the ratio $\alpha_{\varphi} = 1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$ in that case.
+  
+\bibliographystyle{plain}
+\bibliography{these.bib}
+
+\newpage
+\appendix
+
+\section{General properties on $C^{\varphi}$}
+\begin{prop}
+  $C^{\varphi}$ is submodular, its curvature is at most $c = 1 - (\varphi(m) - \varphi(m-1))$ and it cannot be improved for a general instance with $m$ cover sets.
+  \label{propSubCurv}
+\end{prop}
+
+\begin{proof}
+
+  We use the following lemma which is trivial to prove:
+
+  \begin{lem}[Properties of $\abs{S}_a = \abs{\set{i \in S : a \in T_i}}$.]
+    We have:
+  \begin{enumerate}
+  \item $\abs{S}_a \leq \abs{S}$
+  \item $\abs{S \cup S'}_a\leq \abs{S}_a + \abs{S'}_a$. In particular, if $S \subseteq T$ then $\abs{S}_a \leq \abs{T}_a$ and $\abs{S\cup\set{x}}_a \leq \abs{S}_a + 1$.
+  \item If $S \subseteq T$, $x \not\in T$ then $\abs{S}_a = \abs{T}_a \Rightarrow \abs{S\cup\set{x}}_a = \abs{T\cup\set{x}}_a$
+  \end{enumerate}
+  \label{lemke}
+\end{lem}
+  
+  Let us show first the submodularity of $C^{\varphi}$. Let $S \subseteq T \subseteq [m]$ and $x \not\in T$:
+  \begin{equation}
+    \begin{aligned}
+      &&& C^{\varphi}(S \cup \set{x}) - C^{\varphi}(S) - (C^{\varphi}(T \cup \set{x}) - C^{\varphi}(T))= \\
+      &=&& \sum_{a \in [n]} w_a[\varphi(\abs{S\cup\set{x}}_a) - \varphi(\abs{S}_a) - (\varphi(\abs{T\cup\set{x}}_a) - \varphi(\abs{T}_a))]\\
+    \end{aligned}
+  \end{equation}
+
+  Let us call $g(a) := \varphi(\abs{S\cup\set{x}}_a) - \varphi(\abs{S}_a) - (\varphi(\abs{T\cup\set{x}}_a) - \varphi(\abs{T}_a))$:
+  \begin{enumerate}
+  \item If $\abs{T}_a = \abs{S}_a$ then thanks to lemma \ref{lemke}, we have that $\abs{T\cup\set{x}}_a = \abs{S\cup\set{x}}_a$, so $g(a) = 0$
+  \item Else, we have that $\abs{T}_a > \abs{S}_a$:
+    \begin{enumerate}
+    \item If $\abs{S\cup\set{x}}_a = \abs{S}_a$, then we add elements of $T-S$ using lemma \ref{lemke} to get that $\abs{T\cup\set{x}}_a = \abs{T}_a$, so $g(a)=0$ in that case.
+    \item Else $\abs{S\cup\set{x}}_a \not= \abs{S}_a$. So with $\abs{S}_a = k$, we get that $\abs{S\cup\set{x}}_a = k+1$ and $\abs{T}_a > \abs{S}_a$ so $\abs{T}_a \geq k+1$.
+
+      \begin{enumerate}
+      \item If $\abs{T\cup\set{x}}_a = \abs{T}_a$, then $g(a) =  \varphi(k+1) - \varphi(k) \geq 0$ since $\varphi$ is nondecreasing.
+      \item Else $\abs{T\cup\set{x}}_a \not= \abs{T}_a$ so with $\abs{T}_a = \ell$ with $\ell \geq k+1$, we get that $\abs{T}_a = \ell+1$. So we have that:
+        \begin{equation}
+          \begin{aligned}
+            g(a) &=&& \varphi(k+1) - \varphi(k) - (\varphi(\ell+1) - \varphi(\ell))\\
+            &=&& \frac{\varphi(k+1) - \varphi(k)}{(k+1) - k} - \frac{\varphi(\ell+1) - \varphi(\ell)}{(\ell+1) - \ell} \geq 0
+          \end{aligned}
+        \end{equation}
+        by concavity of $\varphi$: its slopes are nonincreasing.
+      \end{enumerate}
+    \end{enumerate}
+  \end{enumerate}
+  So in all cases, we have $g(a) \geq 0$ so $ C^{\varphi}(S \cup \set{x}) - C^{\varphi}(S) - (C^{\varphi}(T \cup \set{x}) - C^{\varphi}(T)) \geq 0$: $C^{\varphi}$ is submodular.
+
+  Let us now compute its curvature:
+  \[c = 1 - \min_{i \in [m]} \frac{C^{\varphi}([m]) - C^{\varphi}([m]-\set{i})}{C^{\varphi}(\set{i}) - C^{\varphi}(\emptyset)}\]
+
+  Let $i \in [m]$ fixed:
+  \begin{equation}
+    \begin{aligned}
+      &&& \frac{C^{\varphi}([m]) - C^{\varphi}([m]-\set{i})}{C^{\varphi}(\set{i}) - C^{\varphi}(\emptyset)}\\
+      &=&& \frac{\sum_{a \in [n]} w_a[\varphi(\abs{[m]}_a) - \varphi(\abs{[m]-\set{i}}_a)]}{\sum_{a \in [n]}w_a[\varphi(\abs{\set{i}}_a) - \varphi(\abs{\emptyset}_a)]}\\
+      &=&& \frac{\sum_{a \in T_i} w_a[\varphi(\abs{[m]}_a) - \varphi(\abs{[m]-\set{i}}_a)]}{\sum_{a \in T_i} w_a}\\
+      &=&& \frac{\sum_{a \in T_i} w_a[\varphi(\abs{[m]}_a) - \varphi(\abs{[m]}_a-1)]}{\sum_{a \in T_i} w_a} \text{ since } a \in T_i\\
+    \end{aligned}
+  \end{equation}
+
+  But $\abs{[m]}_a \leq m$ and $\varphi$ concave, so $\varphi(\abs{[m]}_a)) - \varphi(\abs{[m]}_a-1) \geq \varphi(m) - \varphi(m-1)$ for all $a \in [n]$. As a consequence we have that:
+
+  \[\frac{C^{\varphi}([m]) - C^{\varphi}([m]-\set{i})}{C^{\varphi}(\set{i}) - C^{\varphi}(\emptyset)} \geq \varphi(m) - \varphi(m-1)\]
+  
+  and this lower bound is true for its minimum over $i$. Thus we get that $c \leq 1 - (\varphi(m) - \varphi(m-1))$.
+  Also one can find instances for all $m$ such that this bound is tight: take $T_1 =\set{a}$ and $\forall j \in [m], a \in T_j$ for instance.
+\end{proof}
+
+\begin{prop}
+  The approximation ratio $\alpha_{\varphi}$ is always better than the general ratio given in $\cite{SVW17}$: $\min_{x \in [m]} \alpha_{\varphi}(x) \geq 1 - ce^{-1}$ with $1-c = \varphi(m) - \varphi(m-1)$. Furthermore, we have always that $\alpha_{\varphi}(0) = 1$, so the minimum range in the definition of $\alpha_{\varphi}$ can be taken on positive integers only.
+  \label{propBetterRatio}
+\end{prop}
+
+\begin{proof}
+  We first suppose that $x \geq 1$. Also, we can ask that for all $j \geq m$, we have $\varphi(j+1) -\varphi(j) = \varphi(m) -\varphi(m-1)$, since these quantities are never achieved in a instance with $m$ cover sets. So we can suppose that for all $j$ we have $\varphi(j+1) -\varphi(j) \geq \varphi(m) -\varphi(m-1)$. Also for $k \geq 1$, one can write:
+
+  \[\varphi(k)= \sum_{j=0}^{k-1} \varphi(j+1) -\varphi(j) = 1 + \sum_{j=1}^{k-1} \varphi(j+1) -\varphi(j) \]
+  
+  Thus:
+  
+  \begin{equation}
+    \begin{aligned}
+      &&&\mathbb{E}[\varphi(\Poi(x))] = e^{-x}\sum_{k=1}^{+\infty}\varphi(k) \frac{x^k}{k!}\\
+      &=&& e^{-x}\sum_{k=1}^{+\infty}\Big(1 + \sum_{j=1}^{k-1} \varphi(j+1) -\varphi(j)\Big) \frac{x^k}{k!} \\
+      &=&& e^{-x}\Big[(e^x - 1) + \sum_{k=1}^{+\infty}\Big(\sum_{j=1}^{k-1} \varphi(j+1) -\varphi(j)\Big) \frac{x^k}{k!} \Big]\\
+      &\geq&& (1 - e^{-x}) + e^{-x}\sum_{k=1}^{+\infty}(k-1)[\varphi(m) -\varphi(m-1)] \frac{x^k}{k!}\\
+      &=&& (1 - e^{-x}) + [1-c]e^{-x}\Big(x\sum_{k=1}^{+\infty}\frac{x^{k-1}}{(k-1)!} - \sum_{k=1}^{+\infty}\frac{x^k}{k!}\Big)\\
+      &=&& (1 - e^{-x}) + [1-c]e^{-x}\Big(xe^x - (e^x-1)\Big)\\
+      &=&& 1 - e^{-x} + [1-c](x-1 + e^{-x}) =: f(x)
+    \end{aligned}
+  \end{equation}
+
+  But since $\varphi(x) \leq x$  and with $g(x) := \frac{f(x)}{x}$, we get that $g'(x) =\frac{c}{x^2}(x-1+e^{-x}) \geq 0$ for $x \geq 1$, thus $g(x) \geq g'(1)$ and then
+
+  \[\alpha_{\varphi}(x) \geq \frac{f(x)}{\varphi(x)} \geq g(x) \geq g(1) = f(1) \]
+
+  with $f(1) =  1 - e^{-1} + (\varphi(m) - \varphi(m-1)) e^{-1}$ the approximation ratio of the general algorithm.
+
+  Let us now suppose that $x \in [0,1]$. We have that $\varphi(x) = x$ on that interval since we have taken its piecewise linear extension and $\varphi(0) = 0$ and $\varphi(1) = 1$. Thus we have that
+  \[\alpha_{\varphi}(x) = \frac{\mathbb{E}[\varphi(\Poi(x))]}{x} = e^{-x}\sum_{k=1}^{+\infty}\frac{\varphi(k)}{k}\frac{x^{k-1}}{(k-1)!} \]
+
+  and we can then compute its value at $0$: $\alpha_{\varphi}(0) = e^{-0}\sum_{k=1}^{+\infty}\frac{\varphi(k)}{k}\frac{0^{k-1}}{(k-1)!} = \frac{\varphi(1)}{1}\frac{0^0}{0!} = 1$. Since $\alpha_{\varphi}(x) \leq 1$, we have that $\alpha_{\varphi} = \min_{x \in \mathbb{N}^*} \alpha_{\varphi}(x)$.
+\end{proof}
+
+
+\section{Proofs on calculus of $\alpha_{\varphi}$}
+\begin{prop}
+  For $\ell \in \mathbb{N}^*$ and $\varphi(j) = \min(j,\ell)$, we have that $\alpha_{\varphi}=1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$.
+  \label{proplCover}
+\end{prop}
+\begin{proof}
+  Thanks to property \ref{propBetterRatio}, we have that $\alpha_{\varphi} = \min_{x \in \mathbb{N}^*} \alpha_{\varphi}(x)$. Let us compute $\mathbb{E}[\varphi(\Poi(x))]$:
+
+  \begin{equation}
+    \begin{aligned}
+      \mathbb{E}[\varphi(\Poi(x))] &=&& e^{-x}\sum_{k=0}^{+\infty}\varphi(x)\frac{x^k}{k!}\\
+      &=&& e^{-x}\sum_{k=0}^{\ell}k\frac{x^k}{k!} + e^{-x}\sum_{k=\ell+1}^{+\infty}\ell\frac{x^k}{k!}\\
+      &=&& e^{-x}x \sum_{k=0}^{\ell-1}\frac{x^k}{k!} + \ell e^{-x}\sum_{k=\ell+1}^{+\infty}\frac{x^k}{k!}\\
+      &=&& e^{-x}\Big[(x-\ell)\sum_{k=0}^{\ell-1}\frac{x^k}{k!} - \ell\frac{x^{\ell}}{\ell!}\Big] + \ell e^{-x}\sum_{k=0}^{+\infty}\frac{x^k}{k!}\\
+      &=&& \ell - e^{-x}\Big[\frac{x^{\ell}}{(\ell-1)!} - (x-\ell)\sum_{k=0}^{\ell-1}\frac{x^k}{k!}\Big]
+    \end{aligned}
+  \end{equation}
+
+  Let us show that $\alpha_{\varphi}(x)$ takes its minimum in $\ell$, where we have indeed:
+  \[ \alpha_{\varphi}(\ell) = \frac{1}{\ell}\Big( \ell - e^{-\ell}\Big[\frac{\ell^{\ell}}{(\ell-1)!} - (\ell-\ell)\sum_{k=0}^{\ell-1}\frac{\ell^k}{k!}\Big]\Big) = 1 - e^{-\ell}\frac{\ell^{\ell}}{\ell!} \]
+
+  $\alpha_{\varphi}(x)$ is derivable: let us compute it from $\ell$ to $+\infty$ and then from $1$ to $\ell$:
+
+  \begin{equation}
+    \begin{aligned}
+      \alpha_{\varphi}'(x) &=&&  e^{-x}\Big[\frac{x^{\ell}}{\ell!} -  (x-\ell)\sum_{k=0}^{\ell-1}\frac{x^k}{\ell k!}\Big]\\ 
+      &-&& e^{-x}\Big[\frac{x^{\ell-1}}{(\ell-1)!} - \sum_{k=0}^{\ell-1}\frac{x^k}{\ell k!} - (x-\ell)\sum_{k=0}^{\ell-2}\frac{x^{k}}{\ell k!} \Big] \\
+      &=&& e^{-x}\Big[\frac{x^{\ell}}{\ell!} - \frac{x^{\ell-1}}{(\ell-1)!} -(x-\ell)\frac{x^{\ell-1}}{\ell!} + \sum_{k=0}^{\ell-1}\frac{x^k}{\ell k!} \Big]\\
+      &=&& e^{-x}\sum_{k=0}^{\ell-1}\frac{x^k}{\ell k!} \geq 0
+    \end{aligned}
+  \end{equation}
+  
+  So  $\alpha_{\varphi}(x)$ is nondecreasing from $\ell$ to $+\infty$. Let's compute it now between $1$ and $\ell$:
+  
+  \begin{equation}
+    \begin{aligned}
+      \alpha_{\varphi}'(x) &=&& -\frac{\ell}{x^2} + e^{-x}\Big[\frac{x^{\ell-1}}{(\ell-1)!} -  \sum_{k=0}^{\ell-1}\frac{x^k}{k!}  + \ell\sum_{k=0}^{\ell-2}\frac{x^k}{(k+1)!} + \frac{\ell}{x}\Big]\\ 
+      &-&& e^{-x}\Big[\frac{x^{\ell-2}}{(\ell-2)!} - \sum_{k=0}^{\ell-2}\frac{x^k}{k!} + \ell\sum_{k=0}^{\ell-3}\frac{x^k}{(k+2)k!} - \frac{\ell}{x^2}\Big]\\
+      &=&&  \frac{\ell}{x}\Big(e^{-x}\Big(1+\frac{1}{x}\Big) - \frac{1}{x}\Big)\\
+      &+&&  e^{-x}\Big[\Big(\frac{\ell}{\ell-1}-1\Big)\frac{x^{\ell-2}}{(\ell-2)!} + \ell\sum_{k=0}^{\ell-3}\Big(\frac{x^k}{(k+1)!} - \frac{x^k}{(k+2)k!} \Big) \Big]\\
+      &=&&  \frac{\ell}{x}\Big(e^{-x}\Big(1+\frac{1}{x}\Big) - \frac{1}{x}\Big)\\
+      &+&&  e^{-x}\Big[\frac{x^{\ell-2}}{(\ell-1)!} + \ell\sum_{k=0}^{\ell-3}\frac{x^k}{k!}\Big(\frac{1}{k+1} - \frac{1}{k+2} \Big) \Big]\\
+      &=&&  \frac{\ell}{x}\Big(e^{-x}\Big(1+\frac{1}{x} + \frac{x^{\ell-1}}{\ell!} + x\sum_{k=0}^{\ell-3}\frac{x^k}{k!}\frac{1}{(k+1)(k+2)}\Big) - \frac{1}{x}\Big)\\
+      &=&&  \frac{\ell e^{-x}}{x^2}\Big(\Big(1+x+ \frac{x^\ell}{\ell!} + \sum_{k=0}^{\ell-3}\frac{x^{k+2}}{(k+2)!}\Big) - e^x\Big)\\
+      &=&& \frac{\ell e^{-x}}{x^2}\Big(\sum_{k=0}^{\ell} \frac{x^k}{k!} -e^x\Big) \leq 0
+    \end{aligned}
+  \end{equation}
+
+  since the partial sum of the exponential series is bounded by its total sum. In order to make all this calculus correct, we need to ask that $\ell \geq 2$. In the case where $\ell=1$, we did not need to prove anything. Thus we have that $\alpha_{\varphi}(x)$ is nonincreasing from $1$ to $\ell$, and nondecreasing after, so it takes indeed its minimum in $\ell$ and the property is proved.
+\end{proof}
+
+\begin{prop}
+  For $p \in ]0,1[$ and $\varphi(j)=\frac{1-(1-p)^j}{p}$, we have that $\alpha_{\varphi} = \frac{1 - e^{-p}}{p}$.
+\label{propVTA}
+\end{prop}
+
+\begin{proof}
+    By definition:
+    
+    \begin{equation}
+      \begin{aligned}
+        \alpha_{\varphi^p}(x) &=&& \frac{\mathbb{E}[\varphi^p(\Poi(x))]}{\varphi^p(x)} = \frac{\sum_{k=0}^{+\infty}\varphi^p(k)e^{-x}\frac{x^k}{k!}}{\varphi^p(x)}\\
+        &=&& \frac{1-e^{-x}\sum_{k=0}^{+\infty}(1-p)^k\frac{x^k}{k!}}{p\varphi^p(x)}\\
+        &=&& \frac{1 - e^{-x}e^{(1-p)x}}{p\varphi^p(x)} = \frac{1 - e^{-px}}{p\varphi^p(x)}
+      \end{aligned}
+    \end{equation}
+
+    If $x \geq 1$, $\alpha_{\varphi^p}(x) = \frac{1 - e^{-px}}{1-(1-p)^x}$ and:
+
+    \[\alpha_{\varphi^p}'(x) = \frac{pe^{-px}(1-(1-p)^x) - \ln(1-p)(1-p)^x(1-e^{-px})}{(1-(1-p)^x)^2}\]
+    
+    But $1-(1-p)^x > 0, 1-e^{-px} > 0, \ln(1-p) < 0$ since $x > 0$ and $p \in ]0,1[$, so $\alpha_{\varphi^p}'(x) > 0$ for $x \geq 1$ and so $\alpha_{\varphi^p}(x)$ increases from $1$ to infinity. Thus it takes indeed its minimum in $1$:
+    
+    \[\alpha_{\varphi^p} = \alpha_{\varphi^p}(1) = \frac{1 - e^{-p}}{p}\]
+\end{proof}
+\begin{prop}
+  For $d \in ]0,1[$ and $\varphi(j)=j^d$, we have that $\alpha_{\varphi} = e^{-1}\sum_{k=1}^{+\infty}\frac{k^d}{k!}$
+    \label{propdPower}
+\end{prop}
+\begin{proof}
+  We have for $x \geq 1$:
+    \[\alpha_{\varphi}(x) = \frac{\mathbb{E}[\Poi(x)^d]}{\varphi(x)} = \frac{e^{-x}\sum_{k=0}^{+\infty}k^d\frac{x^k}{k!}}{\varphi(x)} = e^{-x}\sum_{k=0}^{+\infty}k^d\frac{x^{k-d}}{k!} \]
+
+   Then:
+        
+   \begin{equation}
+     \begin{aligned}
+       \alpha_{\varphi}'(x) &=&& -\alpha_{\varphi}(x)+ e^{-x}\sum_{k=1}^{+\infty}(k-d)k^d\frac{x^{k-d-1}}{k!} \\
+       &=&& -\alpha_{\varphi}(x)+ e^{-x}\sum_{k=0}^{+\infty}(k+1-d)(k+1)^d\frac{x^{k-d}}{(k+1)!}\\
+       &=&& -\alpha_{\varphi}(x)+ e^{-x}\Big((1-d)x^{-d} +  \sum_{k=1}^{+\infty}(k+1-d)(k+1)^{d-1}\frac{x^{k-d}}{k!}\Big)\\
+       &=&& e^{-x}x^{-d}\Big(1-d + \sum_{k=1}^{+\infty}(\frac{k+1-d}{k+1}(k+1)^d - k^d)\frac{x^k}{k!}\Big)\\
+     \end{aligned}
+   \end{equation}
+
+   But the function $f(k) = \frac{k+1-d}{k+1}(k+1)^d - k^d$ is positive on $\mathbb{R}_+^*$, so we get that $\alpha_{\varphi}'(x) > 0$ for $x \geq 1$, thus $\alpha_{\varphi}(x)$ is increasing from $1$ to $+\infty$, so $\alpha_{\varphi} = \alpha_{\varphi}(1) = e^{-1}\sum_{k=1}^{+\infty}\frac{k^d}{k!}$.
+\end{proof}
+
+\section{Lemmas used in the hardness theorem \ref{theoHardness} and their proofs}
+\begin{lem}
+    For any \textbf{bounded} function $0 \leq f \leq f_{\max}$, we have that:
+    \[ \abs{\mathbb{E}[f(\Bin(n,x/n))] - \mathbb{E}[f(\Poi(x))]} \leq \frac{x f_{\max}}{2n}\]
+
+    In particular if $\mu \geq 0$:
+
+    \[ \abs{\mathbb{E}[f(\Bin(h(1+\mu),x/h))] - \mathbb{E}[f(\Poi(x(1+\mu)))]} \leq \frac{x f_{\max}}{2h}\]
+    \label{lemBinPoi}
+  \end{lem}
+
+  \begin{proof}
+    Thanks to \cite{TF19,Barbour84}, we have that the total variation distance between $\Bin(n,x/n)$ and $\Poi(x)$ is bounded in the following way:
+    \[ \Delta(\Bin(n,x/n),\Poi(x)) \leq \frac{1 - e^{-x}}{2x} n* \Big(\frac{x}{n}\Big)^2 \leq \frac{x}{2n}\]
+    Thus with $B \sim \Bin(n,x/n)$ and $P \sim \Poi(x)$:
+    \begin{equation}
+      \begin{aligned}
+        \abs{\mathbb{E}[f(B)] - \mathbb{E}[f(P)]} &=&&  \abs{\sum_{k=0}^{+\infty}f(k)\mathbb{P}(B=k) - \sum_{k=0}^{+\infty}f(k)\mathbb{P}(P=k)}\\
+        &=&&  \abs{\sum_{k=0}^{+\infty}f(k)(\mathbb{P}(B=k) - \mathbb{P}(P=k))}\\
+        &\leq&& \sum_{k=0}^{+\infty}f(k)\abs{\mathbb{P}(B=k) - \mathbb{P}(P=k)}\\
+        &\leq&& f_{\max}\sum_{k=0}^{+\infty}\abs{\mathbb{P}(B=k) - \mathbb{P}(P=k)}\\
+        &=&& f_{\max}\Delta(\Bin(n,x/n),\Poi(x)) \leq \frac{x f_{\max}}{2n}
+      \end{aligned}
+    \end{equation}
+
+    Finally, taking $x(1+\mu)$ instead of $x$ and $h(1+\mu)$ instead of $n$, one obtains the second inequality (for $\mu \not= -1$).
+  \end{proof}
+
+\begin{lem}
+    For $\varphi$ nondecreasing concave with $\varphi(0)=0,\varphi(1)=1$, we have that the function $g : x \mapsto \mathbb{E}[\varphi(\Poi(x))]$ on $\mathbb{R}^+$ is $\mathcal{C}^{\infty}$ nondecreasing concave with $g'(0) = \varphi(1)-\varphi(0) = 1$ so in particular $1$-Lipschitz continuous.
+    \label{lemPoiCon}
+  \end{lem}
+
+  \begin{proof}
+    Since we have that $\varphi(k) \leq k$ for $k \in \mathbb{N}$, in particular $g(x) = e^{-x}\sum_{k=0}^{+\infty} \varphi(k)\frac{x^k}{k!}$ is $\mathcal{C}^{\infty}$. It is thus enough to compute its first and second derivatives:
+
+    \begin{equation}
+      \begin{aligned}
+        g'(x) &=&& -e^{-x}\sum_{k=0}^{+\infty}\varphi(k)\frac{x^k}{k!}+ e^{-x}\sum_{k=1}^{+\infty}\varphi(k)e^{-x}k\frac{x^{k-1}}{k!}\\
+        &=&& -e^{-x}\sum_{k=0}^{+\infty}\varphi(k)\frac{x^k}{k!}+ e^{-x}\sum_{k=0}^{+\infty}\varphi(k+1)e^{-x}\frac{x^{k}}{k!}\\
+        &=&& e^{-x}\sum_{k=0}^{+\infty}(\varphi(k+1) -\varphi(k))\frac{x^k}{k!}
+      \end{aligned}
+    \end{equation}
+
+    But $\varphi(k+1) -\varphi(k) \geq 0$ since $\varphi$ nondecreasing, so $g'(x) \geq 0$ and $g$ is nondecreasing.
+
+    The calculus of $g''$ is the same where we replace $\varphi$ by $\psi(k) := \varphi(k+1) -\varphi(k)$ which is a nonincreasing function by concavity of $\varphi$. Thus:
+
+    \[g''(x) = e^{-x}\sum_{k=0}^{+\infty}(\psi(k+1) -\psi(k))\frac{x^k}{k!} \leq 0\]
+
+    since $\psi(k+1) -\psi(k) \leq 0$, and so $g$ is concave.
+
+    Furthermore $g'$ is decreasing and $g'(0) = e^{-0}\sum_{k=0}^{+\infty}(\varphi(k+1) -\varphi(k))\frac{0^k}{k!} = 1 \times (\varphi(0+1) -\varphi(0))\frac{1}{0!} =  \varphi(1)-\varphi(0) = 1$. Thus $0 \leq g'(x) \leq 1$, and thus $g$ is 1-Lipschitz continuous.
+  \end{proof}
+  
+\begin{lem}
+  For $\varphi$ nondecreasing concave with $\varphi(0)=0,\varphi(1)=1$, we have that the function $g_q : n \mapsto \mathbb{E}[\varphi(\Bin(n,q))]$ on $\mathbb{N}$ nondecreasing concave. As a consequence, one can uses Jensen's inequality on the piecewise linear extension of $g_q$ which is also continuous.
+  \label{lemBinCon}
+\end{lem}
+
+\begin{proof}
+  $\Bin(n,q) \leq_{\text{st}} \Bin(n+1,q)$ and we have that $\varphi$ is nondecreasing, so $\mathbb{E}[\varphi(\Bin(n,q))] \leq \mathbb{E}[\varphi(\Bin(n+1,q))]$, ie $g_q(n+1) - g_q(n) \geq 0$: $g_q$ is nondecreasing.
+
+  We show then the concavity, ie. $g_q(n+2) - g_q(n+1) \leq g_q(n+1) - g_q(n)$. Call $\psi(x) = \varphi(x+1)-\varphi(x)$ which is nonincreasing since $\varphi$ concave. Let us take $X_{k,q} \sim \Bin(k,q)$. Then:
+
+  \begin{equation}
+    \begin{aligned}
+      g_q(n+1) &=&& \mathbb{E}[\varphi(X_{n+1,q})]\\
+      &=&& \sum_{i=0}^n \mathbb{E}[\varphi(X_{n,q}+X_{1,q})|X_{n,q}=i]\mathbb{P}(X_{n,q}=i)\\
+      &=&& \sum_{i=0}^n \mathbb{E}[\varphi(i+X_{1,q}) - \varphi(i)]\mathbb{P}(X_{n,q}=i)\\
+      &+&& \sum_{i=0}^n \varphi(i)\mathbb{P}(X_{n,q}=i)\\
+      &=&& \sum_{i=0}^n \mathbb{E}[\varphi(i+X_{1,q}) - \varphi(i)]\mathbb{P}(X_{n,q}=i) + g_q(n)
+    \end{aligned}
+  \end{equation}
+
+  Thus:
+
+  \begin{equation}
+    \begin{aligned}
+      g_q(n+1) -g_q(n) &=&& \sum_{i=0}^n \mathbb{E}[\varphi(i+X_{1,q}) - \varphi(i)]\mathbb{P}(X_{n,q}=i)\\
+      &=&& \sum_{i=0}^n q(\varphi(i+1) - \varphi(i))\mathbb{P}(X_{n,q}=i)\\
+      &=&& q \mathbb{E}[\psi(\Bin(n,q))]
+    \end{aligned}
+  \end{equation}
+
+  Then thanks to the fact that  $\Bin(n,q) \leq_{\text{st}} \Bin(n+1,q)$ and $\psi$ is nonincreasing, we have that $\mathbb{E}[\psi(\Bin(n,q))] \geq \mathbb{E}[\psi(\Bin(n+1,q))]$, ie. $g_q(n+2) - g_q(n+1) \leq g_q(n+1) - g_q(n)$.
+\end{proof}
+
+%\end{multicols}
+\end{document}

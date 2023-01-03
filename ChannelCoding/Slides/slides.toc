@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Channel Coding Function}{5}{0}{1}
+\beamer@sectionintoc {2}{Geometric Point of View}{11}{0}{2}
+\beamer@sectionintoc {3}{General Convex Problem: MECP}{21}{0}{3}
+\beamer@subsectionintoc {3}{1}{MECP general properties}{21}{0}{3}
+\beamer@subsectionintoc {3}{2}{Particular cases of MECP}{35}{0}{3}

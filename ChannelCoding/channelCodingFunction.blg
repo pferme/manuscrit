@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: channelCodingFunction.aux
+The style file: plain.bst
+Database file #1: these.bib.bib
+Warning--can't use both volume and number fields in Hunter04
+Warning--there's a number but no series in KC10
+You've used 23 entries,
+            2118 wiz_defined-function locations,
+            671 strings with 7672 characters,
+and the built_in function-call counts, 7907 in all, are:
+= -- 810
+> -- 292
+< -- 9
++ -- 118
+- -- 92
+* -- 527
+:= -- 1266
+add.period$ -- 74
+call.type$ -- 23
+change.case$ -- 114
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 326
+empty$ -- 663
+format.name$ -- 92
+if$ -- 1700
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 24
+newline$ -- 118
+num.names$ -- 46
+pop$ -- 112
+preamble$ -- 1
+purify$ -- 92
+quote$ -- 0
+skip$ -- 239
+stack$ -- 0
+substring$ -- 566
+swap$ -- 88
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 90
+warning$ -- 2
+while$ -- 83
+width$ -- 25
+write$ -- 258
+(There were 2 warnings)

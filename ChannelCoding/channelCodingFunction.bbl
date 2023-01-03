@@ -1,0 +1,137 @@
+\begin{thebibliography}{10}
+
+\bibitem{BDO12}
+Ashwinkumar Badanidiyuru, Shahar Dobzinski, and Sigal Oren.
+\newblock Optimization with demand oracles.
+\newblock In {\em Proceedings of the 13th ACM conference on electronic
+  commerce}, pages 110--127, 2012.
+
+\bibitem{BK03}
+Mihai Badoiu and Kenneth~L Clarkson.
+\newblock Smaller core-sets for balls.
+\newblock In {\em Proceedings of the fourteenth annual ACM-SIAM symposium on
+  Discrete algorithms}, pages 801--802. Society for Industrial and Applied
+  Mathematics, 2003.
+
+\bibitem{Bae13}
+Joonwoo Bae.
+\newblock Structure of minimum-error quantum state discrimination.
+\newblock {\em New Journal of Physics}, 15(7):073037, 2013.
+
+\bibitem{BKK16}
+Joonwoo Bae, Dai-Gyoung Kim, and Leong-Chuan Kwek.
+\newblock Structure of optimal state discrimination in generalized
+  probabilistic theories.
+\newblock {\em Entropy}, 18(2):39, 2016.
+
+\bibitem{BK15}
+Joonwoo Bae and Leong-Chuan Kwek.
+\newblock Quantum state discrimination and its applications.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  48(8):083001, 2015.
+
+\bibitem{BF17}
+Siddharth Barman and Omar Fawzi.
+\newblock Algorithmic aspects of optimal channel coding.
+\newblock {\em IEEE Transactions on Information Theory}, 64(2):1038--1045,
+  2017.
+
+\bibitem{Barrett07}
+Jonathan Barrett.
+\newblock Information processing in generalized probabilistic theories.
+\newblock {\em Physical Review A}, 75(3):032304, 2007.
+
+\bibitem{BBKT17}
+Andrew~An Bian, Joachim~M Buhmann, Andreas Krause, and Sebastian Tschiatschek.
+\newblock Guarantees for greedy maximization of non-submodular functions with
+  applications.
+\newblock In {\em Proceedings of the 34th International Conference on Machine
+  Learning-Volume 70}, pages 498--507. JMLR. org, 2017.
+
+\bibitem{BK13}
+Ren{\'e} Brandenberg and Stefan K{\"o}nig.
+\newblock No dimension-independent core-sets for containment under homothetics.
+\newblock {\em Discrete \& Computational Geometry}, 49(1):3--21, 2013.
+
+\bibitem{BR09}
+Ren{\'e} Brandenberg and Lucia Roth.
+\newblock Minimal containment under homothetics: a simple cutting plane
+  approach.
+\newblock {\em Computational Optimization and Applications}, 48(2):325--340,
+  2011.
+
+\bibitem{CMi09}
+Ali {\c{C}}ivril and Malik Magdon-Ismail.
+\newblock On selecting a maximum volume sub-matrix of a matrix and related
+  problems.
+\newblock {\em Theoretical Computer Science}, 410(47-49):4801--4811, 2009.
+
+\bibitem{DK11}
+Abhimanyu Das and David Kempe.
+\newblock Submodular meets spectral: Greedy algorithms for subset selection,
+  sparse approximation and dictionary selection.
+\newblock {\em arXiv preprint arXiv:1102.3975}, 2011.
+
+\bibitem{DT10}
+Matthieu~E Deconinck and Barbara~M Terhal.
+\newblock Qubit state discrimination.
+\newblock {\em Physical Review A}, 81(6):062304, 2010.
+
+\bibitem{FSS19}
+Omar Fawzi, Johanna Seif, and D{\'a}niel Szil{\'a}gyi.
+\newblock Approximation algorithms for classical-quantum channel coding.
+\newblock In {\em 2019 IEEE International Symposium on Information Theory
+  (ISIT)}, pages 2569--2573. IEEE, 2019.
+
+\bibitem{GJ79}
+Michael~R Garey and David~S Johnson.
+\newblock {\em Computers and intractability}, volume 174.
+\newblock freeman San Francisco, 1979.
+
+\bibitem{Hunter04}
+Kieran Hunter.
+\newblock Results in optimal discrimination.
+\newblock In {\em AIP Conference Proceedings}, volume 734, pages 83--86.
+  American Institute of Physics, 2004.
+
+\bibitem{KC10}
+Andreas Krause and Volkan Cevher.
+\newblock Submodular dictionary selection for sparse representation.
+\newblock In {\em International Conference on Machine Learning (ICML)}, number
+  CONF, 2010.
+
+\bibitem{KSC08}
+Andreas Krause, Ajit Singh, and Carlos Guestrin.
+\newblock Near-optimal sensor placements in gaussian processes: Theory,
+  efficient algorithms and empirical studies.
+\newblock {\em Journal of Machine Learning Research}, 9(Feb):235--284, 2008.
+
+\bibitem{Megiddo89}
+Nimrod Megiddo.
+\newblock On the ball spanned by balls.
+\newblock {\em Discrete \& Computational Geometry}, 4(6):605--610, 1989.
+
+\bibitem{NWF78}
+George~L Nemhauser, Laurence~A Wolsey, and Marshall~L Fisher.
+\newblock An analysis of approximations for maximizing submodular set
+  functions.
+\newblock {\em Mathematical programming}, 14:265--294, 1978.
+
+\bibitem{Shannon48}
+C~Shannon.
+\newblock A mathematical theory of communication, bell system technical journal
+  27: 379-423 and 623--659.
+\newblock {\em Mathematical Reviews (MathSciNet): MR10, 133e}, 1948.
+
+\bibitem{Sin10}
+Yaron Singer.
+\newblock Budget feasible mechanisms.
+\newblock In {\em 2010 IEEE 51st Annual Symposium on Foundations of Computer
+  Science}, pages 765--774. IEEE, 2010.
+
+\bibitem{Vondrak10}
+Jan Vondr{\'a}k.
+\newblock A note on concentration of submodular functions.
+\newblock {\em arXiv preprint arXiv:1005.2791}, 2010.
+
+\end{thebibliography}

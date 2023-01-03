@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+import math
+import numpy as np
+m=10
+
+def alphaopt(p): return (1-math.exp(-p))/p
+print(alphaopt(0.2))
+def phi(j,p): return (1-(1-p)**j)/p
+
+def regularapp(p): return 1-(1-(phi(m,p)-phi(m-1,p)))*math.exp(-1)
+
+t = np.arange(-0.001,1.001,0.05)
+opt = [alphaopt(x) for x in t]
+app = [regularapp(x) for x in t]
+
+plt.plot(t,opt,'kx-',label='alpha_phi')
+plt.plot(t,app,'ro-',label='App')
+plt.grid(True)
+plt.legend()
+plt.xlabel('p')
+plt.show()

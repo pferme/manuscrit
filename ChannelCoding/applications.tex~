@@ -1,0 +1,243 @@
+\section{Applications}
+\label{section:applications}
+This section shows that instantiations of $\varphi$-\textsc{MaxCoverage} encapsulate and generalize multiple problems from fields such as computation social choice and algorithmic game theory. 
+
+\subsection{Multiwinner Elections}
+\label{subsection:multiwinner-election} 
+ 
+As mentioned previously, multiwinner elections (with a utilitarian model for the voters) entail selection of $k$ (out of $m$) candidates that maximize the utility across $n$ voters. Here, the utility of each voter $a \in [n]$ increases with the number of approved (by $a$) selections. %This setup reduces to $\varphi$-\textsc{MaxCoverage}. 
+The work of Dudycz et al.~\cite{DDMS20} study the computational complexity of such elections and, in particular, address classic voting rules in which---for a specified sequence of nonnegative weights $(w_1, w_2, \ldots)$---voter $a$'s utility is equal to $\sum_{i=1}^j w_i$, when she approves of $j$ candidates among the selected ones. One can view this election exercise as a coverage problem by considering subset $T_i \subseteq [n]$ as the set of voters that approve of candidate $i \in [m]$ and $\varphi(j) = \sum_{i=1}^j w_i$. Indeed, for a subset of candidates $S \subseteq [m]$, the utility of a voter $a \in [n]$ is equal to $\varphi ( \abs{S}_a)$, with $\abs{S}_a = \abs{\set{i \in S : a \in T_i}}$. 
+
+Dudycz et al.~\cite{DDMS20} show that if the weights satisfy $w_1 \geq w_2 \geq \ldots$ (i.e., bear a  diminishing returns property) along with geometric dominance ($w_{i } \ w_{i+2} \geq w_{i+1}^2$ for all $i \in \mathbb{N}$) and $\lim_{i \rightarrow \infty} w_i = 0$, then a tight approximation guarantee can be obtained for the election problem at hand. Note that the diminishing returns property implies that $\varphi(j) = \sum_{i=1}^j w_i$ is concave and $\lim_{i \rightarrow \infty} w_i = 0$ ensures that $\varphi$ is sublinear (see Proposition \ref{prop:thieleEqLim}). Hence, Theorem \ref{theo:main} can be invoked to recover the result in \cite{DDMS20}. In fact, Theorem \ref{theo:main} does not require geometric dominance among the weights and, hence, applies to a broader class of voting rules. For instance, the geometric dominance property does not hold if one considers the voting weights induced by $\ell$-\textsc{MultiCoverage}, i.e., $w_i = 1$, for $1 \leq i \leq \ell$, and $w_j = 0$ for $j > \ell$.  However, using Theorem \ref{theo:main}, we get that for this voting rule we can approximate the optimal utility within a factor of $\alpha_\varphi = 1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$ (see Proposition~\ref{prop:lCover}). Another example of such a separation arises if one truncates the proportional approval voting. The standard proportional approval voting corresponds to $w_i = \frac{1}{i}$, for all $i \in \mathbb{N}$ (equivalently,  $\varphi(j) = \sum_{i=1}^j \frac{1}{i}$) and falls within the purview of \cite{DDMS20}. While the truncated version with $\varphi(j) = \sum_{i=1}^{\min\{j, \ell\}} \frac{1}{i}$, for a given threshold $\ell$, does not satisfy geometric dominance, 
+Theorem \ref{theo:main} continues to hold and provide a tight approximation ratio that can be computed easily (see Proposition~\ref{prop:phiCapped} and Table \ref{figComp} for examples).
+
+\subsection{Resource Allocation in Multiagent Systems}
+\label{subsection:welfare-maximization}
+A significant body of prior work in algorithmic game theory has addressed game-theoretic aspects of maximizing welfare among multiple (strategic) agents; see, e.g.,~\cite{PM19}. Complementing such results, this section shows that the optimization problem underlying multiple welfare-maximization games can be expressed in terms of $\varphi$-\textsc{MaxCoverage}. 
+
+Specifically, consider a setting with $n$ resources, $k$ agents, and a (counting) function $\varphi: \mathbb{N} \mapsto \mathbb{R}_+$. Every agent $i$ is endowed with a collection of resource subsets $\mathcal{A}_i = \set{T^i_1, \ldots, T^i_{m_i}}  \subseteq 2^{[n]}$ (i.e., each $T^i_j \subseteq [n]$). The objective is to select a subset $A_i \in \mathcal{A}_i$, for all $i \in [k]$, so as to maximize 
+%\begin{align*}
+$W^{\varphi}(A_1, A_2, \ldots, A_k)  \coloneqq \sum_{a \in [n]} w_a \ \varphi(\abs{A}_a)$.
+%\end{align*}
+Here, $w_a \in \mathbb{R}_+$ is a weight associated with $a \in [n]$ and $\abs{A}_a \coloneqq  \abs{\set{i \in [k] : a \in A_i}}$. We will refer to this problem as the $\varphi$-\textsc{Resource Allocation} problem.
+
+While $\varphi$-\textsc{Resource Allocation} does note directly reduce to $\varphi$-\textsc{MaxCoverage}, the next theorem shows that it corresponds to maximizing $\varphi$-coverage functions subject to a matroid constraint. Hence, invoking our result from Section~\ref{sec:matroid}, we obtain a tight $\alpha_\varphi$-approximation for $\varphi$-\textsc{Resource Allocation} (see Appendix \ref{app:HardnessMA} for the proof):
+
+
+%\OF{Needs more of an introduction, cite\cite{PM19}}
+
+%We study a variant of this problem coming from game theory. We consider now $k$ agents, and each one of those chooses one cover set among his different possibilities $\mathcal{A}_i := \set{\mathcal{A}_i^1,\ldots,\mathcal{A}_i^{m_i}} \subseteq \mathcal{P}([n])$. As a remark, we should note that it is not exactly a generalization of the $\varphi$-\textsc{MaxCoverage} problem: when all agents have the same cover sets $\mathcal{A}_i =\set{T_1, \ldots, T_m}$, each cover set can be taken several times by different agents, whereas in our case we do not allow this.
+
+%The value we want to maximize is called the global welfare, among possible allocations $A = (A_1,\ldots,A_k) \in \mathcal{A} := \mathcal{A}_1 \times \ldots \times \mathcal{A}_k$, which is given by the following formula:
+
+%\[W^{\varphi}(A) := \sum_{e \in [n]} w_e\varphi(\abs{A}_e)\]
+
+
+
+
+%\subsubsection{Algorithms}
+
+%We have then a similar result for this problem:
+
+\begin{theo*}
+For any normalized nondecreasing concave function $\varphi$, there exists a polynomial-time $\alpha_\varphi$-approximation algorithm for $\varphi$-\textsc{Resource Allocation}. Furthermore, for $\varphi(n) = o(n)$, it is {\rm NP}-hard to approximate $\varphi$-\textsc{Resource Allocation} within a factor better than $\alpha_\varphi + \varepsilon$, for any constant $\varepsilon >0$.
+  \label{theo:HardnessMA}
+\end{theo*}
+
+
+\subsection{Vehicle-Target Assignment}
+\label{subsection:vehicle-target}
+Vehicle-target assignment~\cite{Murphey00,PM19} is another problem which highlights the applicability of coverage problems, with a concave $\varphi$. In particular, vehicle-target assignment can be directly expressed as $\varphi$-\textsc{Resource Allocation}: the $[n]$ resources correspond to targets, the agents correspond to vehicles $i \in [k]$, each  with a collection of covering choices $\mathcal{A}_i \subseteq 2^{[n]}$, and $\varphi^p(j) = \frac{1-(1-p)^j}{p}$, for a given parameter $p \in (0,1)$. Since $\varphi^p(j)$ is concave, by Proposition \ref{prop:VTA} and Theorem \ref{theo:HardnessMA}, we obtain a novel tight approximation ratio of $\alpha_{\varphi^p} = \frac{1 - e^{-p}}{p}$ for this problem. Also, one can look at the capped version of this problem, $\varphi^p_{\ell}(j) := \varphi^p(\min(j,\ell))$. In particular, we recover the $\ell$-\textsc{MultiCoverage} function when $p=0$. In Figure \ref{fig:VTATrunc}, we have plotted several cases of the tight approximations $\alpha_{\varphi^p_{\ell}}$ in function of $\ell$ for several values of $\ell$:
+
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin = 0, xmax = 1,
+          ymin = 0.5, ymax = 1,
+          xtick distance = 0.2,
+          ytick distance = 0.1,
+          grid = both,
+          width = 0.52\textwidth,
+          height = 0.33\textwidth,
+          legend cell align = {left},
+          legend pos = north east,
+          xlabel=$p$,
+        ]
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          black,
+          mark = x,
+        ] table[x=p,y=alpha,col sep=comma] {VTATruncPlot.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          brown,
+          mark = triangle,
+        ] table[x=p,y=m1,col sep=comma] {VTATruncPlot.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          orange,
+          mark = o,
+        ] table[x=p,y=m2,col sep=comma] {VTATruncPlot.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          purple,
+          mark = diamond,
+        ] table[x=p,y=m3,col sep=comma] {VTATruncPlot.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          red,
+          mark = square,
+        ] table[x=p,y=m4,col sep=comma] {VTATruncPlot.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          blue,
+          mark = star,
+        ] table[x=p,y=m5,col sep=comma] {VTATruncPlot.csv};
+
+        \legend{$\alpha_{\varphi^p_{\infty}}$, $\alpha_{\varphi^p_{1}}$, $\alpha_{\varphi^p_{2}}$, $\alpha_{\varphi^p_{3}}$, $\alpha_{\varphi^p_{4}}$, $\alpha_{\varphi^p_{5}}$ }
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+  \caption{Tight approximation ratios $\alpha_{\varphi^p_{\ell}}$, where $\ell$ is the rank of the capped version of the $p$-\textsc{Vehicle-Target Assignment} problem. When $p=0$, we recover the $\ell$-coverage problem.}
+  \label{fig:VTATrunc}
+\end{figure}
+
+Paccagnan and Marden~\cite{PM19} study the game-theoretic aspects of vehicle-target assignment. A key goal in~\cite{PM19} is to bound the welfare loss incurred due to strategic selection by the $k$ vehicles, i.e., the selection of each $A_i \in \mathcal{A}_i$ by a self-interested vehicle/agent  $i \in [k]$. The loss is quantified in terms of the \emph{Price of Anarchy} (PoA). Formally, this performance metric is defined as ratio between the welfare of the worst-possible equilibria and the optimal welfare. Paccagnan and Marden~\cite{PM19} show that, for computationally tractable equilibrium concepts (in particular, for coarse correlated equilibria), tight price of anarchy bounds can be obtained via linear programs. 
+
+
+Note that our hardness result (Theorem~\ref{theo:main}) provides upper bounds on PoA of tractable equilibrium concepts--this follows from the observation that computing an equilibrium provides a specific method for finding a coverage solution. In \cite{CPM19} and in the particular case of the $\ell$-\textsc{MultiCoverage} problem, it is shown that this in fact an equality, i.e., PoA $=\alpha_{\varphi}$ if $\varphi(j) = \min\{j,\ell\}$ for all values of $\ell$. However, numerically comparing the approximation ratio for vehicle-target assignment, $\alpha_{\varphi^p} = \frac{1 - e^{-p}}{p}$, with the optimal PoA bound, we note that $\alpha_{\varphi^p}$ can in fact be strictly greater than the PoA guarantee; see Figure~\ref{fig:VTA}.
+
+Another form of the current problem, considered in \cite{PM19}, corresponds to $\varphi^d(j) = j^d$, for a given parameter $d \in (0,1)$. We refer to this instantiation as the $d$-Power function and for it obtain the approximation ratio $\alpha_{\varphi^d} = e^{-1}\sum_{k=1}^{+\infty}\frac{k^d}{k!}$ (Proposition \ref{prop:dPower}). In this case, the question whether the inequality PoA $\leq \alpha_{\varphi}$ is tight remains open; see Figure~\ref{fig:dPower}.
+
+%it seems that we get a slightly better approximation ratio as we can see on figure \ref{figVTA}:
+
+%OLD%--Here, we mention a specific allocation problem to highlight the relevance of studying $\varphi()$s beyond the standard coverage and $\ell$-coverage formulations: in the \textsc{Vehicle-Target Assignment} problem the resources are $n$ targets and covering a target $j$ times contributes $\varphi^p(j) = \frac{1-(1-p)^j}{p}$ to the welfare; here, $p \in (0,1)$ is a given parameter. Another allocation problems studied in \cite{PM19} corresponds to $\varphi$-\textsc{MaxCoverage} with $\varphi(j) = j^d$, for a given parameter $d \in (0,1)$. We refer to this instantiation as the $d$-power function. 
+
+%OLD$--\paragraph{Application to the \textsc{Vehicle-Target Assignment} problem}
+
+%\OF{This example shows that the inequality cannot be always tight}
+
+%OLD$---In \cite{PM19}, they compute the \emph{Price of Anarchy}, ie. the ratio of the worst Nash Equilibrium on the best global welfare, of the game theory point of view of the multiple agents problem. In particular, since finding a Nash Equilibrium in a particular subset of instances can be found in polynomial time with the round-robin algorithm (see Part VI of \cite{PM19} for more details), the \emph{Price of Anarchy} is their approximation ratio of the multiple agents welfare problem. 
+
+%OLD%---We have compared their numerical values with our ratio on the \textsc{Vehicle-Target Assignment} problem. For our concerns, we should only focus on the form of $\varphi^p$ which depends only on a parameter $p \in ]0,1[$ : $\varphi^p(j) = \frac{1-(1-p)^j}{p}$ for $j \in \mathbb{N}$. 
+
+%When we compare the curve of $p \mapsto \alpha_{\varphi^p} = \frac{1 - e^{-p}}{p}$ to the numerical study of the Price of Anarchy by \cite{PM19}, it seems that we get a slightly better approximation ratio as we can see on figure \ref{figVTA}:
+
+
+\begin{figure}[!h]
+      \begin{center}
+       \begin{tikzpicture}
+          \begin{axis}[
+            xmin = 0, xmax = 1,
+            ymin = 0.5, ymax = 1,
+            xtick distance = 0.2,
+            ytick distance = 0.1,
+            grid = both,
+            width = 0.52\textwidth,
+            height = 0.33\textwidth,
+            legend cell align = {left},
+            legend pos = north east,
+            xlabel=$p$,
+            ]
+            \addplot[
+              domain = 0:1,
+              samples = 21,
+              smooth,
+              black,
+              mark = x,
+            ] table[x=p,y=alpha,col sep=comma] {VTAPoA.csv};
+            \addplot[
+              domain = 0:1,
+              samples = 21,
+              smooth,
+              blue,
+              mark = o,
+            ] table[x=p,y=PoA,col sep=comma] {VTAPoA.csv};
+            \addplot[
+              domain = 0:1,
+              samples = 21,
+              smooth,
+              red,
+              mark = diamond,
+            ] table[x=p,y=App,col sep=comma] {VTAPoA.csv};
+            \legend{$\alpha_{\varphi^p} = \frac{1 - e^{-p}}{p}$, PoA$^{20}$,Curv $=1 - \frac{c}{e}$}
+          \end{axis}
+       \end{tikzpicture}
+    \end{center}
+    \caption{Comparison between the PoA and $\alpha_{\varphi}$ for the \textsc{Vehicle-Target Assignment} problem. Using the linear program found in \cite{PM19}, we were able to compute the blue curve PoA$^{20}$, the \emph{Price of Anarchy} of this problem for $m=20$ players. Since the PoA only decreases when the number of players grows, this means that PoA $< \alpha_{\varphi}$ in that case. As a comparison, the red curve Curv depicts the general approximation ratio (see \cite{SVW17}) obtained for submodular function with curvature $c$, with $c=1-\varphi^p(m) + \varphi^p(m-1)$ here.}
+    \label{fig:VTA}
+\end{figure}
+
+%    \paragraph{Application to $d$-Power}
+%\OF{It is open whether the inequality is tight or not}
+
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin = 0, xmax = 1,
+          ymin = 0.5, ymax = 1,
+          xtick distance = 0.2,
+          ytick distance = 0.1,
+          grid = both,
+          width = 0.52\textwidth,
+          height = 0.33\textwidth,
+          legend cell align = {left},
+          legend pos = north west,
+          xlabel=$d$,
+        ]
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          black,
+          mark = x,
+        ] table[x=d,y=alpha,col sep=comma] {dPowerPoA.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          blue,
+          mark = o,
+        ] table[x=d,y=PoA,col sep=comma] {dPowerPoA.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          red,
+          mark = diamond,
+        ] table[x=d,y=App,col sep=comma] {dPowerPoA.csv};
+        \legend{$\alpha_{\varphi^d} = \frac{1}{e}\sum_{k=1}^{+\infty}\frac{k^d}{k!}$, PoA$^{20}$, Curv $=1 - \frac{c}{e}$}
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+  \caption{Comparison between the PoA and $\alpha_{\varphi}$ for the $d$-Power problem. Using the linear program found in \cite{PM19}, we were able to compute the blue curve PoA$^{20}$, the \emph{Price of Anarchy} of this problem for $m=20$ players. Here, the question whether the inequality PoA $\leq \alpha_{\varphi}$ is tight remains open. As a comparison, the red curve Curv depicts the general approximation ratio (see \cite{SVW17}) obtained for submodular function with curvature $c$, with $c=1-\varphi^d(m) + \varphi^d(m-1)$ here.}
+  \label{fig:dPower}
+\end{figure}
+
+%\subsubsection{Equilibria}
+
+%\OF{Define notions of equilibria and PoA (keeping it simple). General statement about PoA <= $\alpha_{\varphi}$}
+
+
+\subsection{Welfare Maximization for $\varphi$-Coverage}
+Maximizing (social) welfare by partitioning items among agents is a key problem in algorithmic game theory; see, e.g., the extensive work on combinatorial auctions~\cite{AGT}. The goal here is to partition $t$ items among a set of $k$ agents such that the sum of values achieved by the agents---referred to as the social welfare---is maximized. That is, one needs to partition $[t]$ into $k$ pairwise disjoint subsets $A_1, A_2, \ldots, A_k$ with the objective of maximizing $\sum_{i=1}^k v_i(A_i)$. Here, $v_i(S)$ denotes the valuation that agent $i$ has for a subset of items $S \subseteq [t]$. 
+
+When each agent's valuation $v_i$ is submodular, a tight $(1- e^{-1})$-approximation ratio is known for social welfare maximization~\cite{Vondrak07}. This section shows that improved approximation guarantees can be achieved if, in particular, the agents' valuations are $\varphi$-coverage functions. Towards a stylized application of such valuations, consider a setting in which each ``item'' $b \in [t]$ represents a bundle (subset) of goods $T_b \subseteq [n]$ and the value of an agent increases with the number of copies of any good $a \in [n]$ that get accumulated. Indeed, if each agent's value for $j$ copies of a good is $\varphi(j)$, then we have a $\varphi$-coverage function and the overall optimization problem is find a $k$-partition, $A_1, A_2, \ldots, A_k$, of $[t]$ that maximizes $\sum_{i=1}^k  \left( \sum_{a \in [n]} \varphi \left(\abs{A_i}_a \right) \right)$, where $ \abs{A_i}_a \coloneqq \{ b \in A_i : a \in T_b \}$. 
+
+In the current setup, one can obtain an $\alpha_\varphi$ approximation ratio for social-welfare maximization by reducing this problem to $\varphi$-coverage with a matroid constraint, and applying the result from Section~\ref{sec:matroid}. Specifically, we can consider a partition matroid over the universe $[t] \times [k]$: for a bundle/item $b \in [t]$ and an agent $i \in [k]$, the element $(b,i)$ in the universe represents that bundle $b$ is assigned to agent $i$, i.e., $b \in A_i$. The partition-matroid constraint is imposed to ensure that each bundle $b$ is assigned to at most one agent. Furthermore, we can create $k$ copies of the underlying set of goods $[n]$ and set $T_{(b,i)} \coloneqq \{ (a, i) : a \in T_b \}$ to map the $\varphi$-coverage over the universe to the social-welfare objective. This, overall, gives us the desired  $\alpha_\varphi$ approximation guarantee.
+ 
+
