@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Broadcast.aux
+The style file: plainurl.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Broadcast.bib
+Warning--I didn't find a database entry for "TODO"
+You've used 4 entries,
+            2882 wiz_defined-function locations,
+            659 strings with 5889 characters,
+and the built_in function-call counts, 1890 in all, are:
+= -- 202
+> -- 50
+< -- 1
++ -- 17
+- -- 13
+* -- 108
+:= -- 284
+add.period$ -- 16
+call.type$ -- 4
+change.case$ -- 17
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 55
+empty$ -- 185
+format.name$ -- 13
+if$ -- 486
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 5
+newline$ -- 26
+num.names$ -- 10
+pop$ -- 34
+preamble$ -- 1
+purify$ -- 14
+quote$ -- 0
+skip$ -- 135
+stack$ -- 0
+substring$ -- 100
+swap$ -- 18
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 14
+warning$ -- 0
+while$ -- 16
+width$ -- 5
+write$ -- 52
+(There was 1 warning)

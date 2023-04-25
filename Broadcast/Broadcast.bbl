@@ -1,0 +1,34 @@
+\begin{thebibliography}{1}
+
+\bibitem{BF18}
+Siddharth Barman and Omar Fawzi.
+\newblock Algorithmic aspects of optimal channel coding.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 64(2):1038--1045, 2018.
+\newblock \href {https://doi.org/10.1109/TIT.2017.2696963}
+  {\path{doi:10.1109/TIT.2017.2696963}}.
+
+\bibitem{GJ79}
+M.~R. Garey and David~S. Johnson.
+\newblock {\em Computers and Intractability: {A} Guide to the Theory of
+  {NP}-Completeness}.
+\newblock W. H. Freeman, 1979.
+
+\bibitem{Meulen75}
+Edward~C. van~der Meulen.
+\newblock Random coding theorems for the general discrete memoryless broadcast
+  channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 21(2):180--190, 1975.
+\newblock \href {https://doi.org/10.1109/TIT.1975.1055347}
+  {\path{doi:10.1109/TIT.1975.1055347}}.
+
+\bibitem{Vondrak08}
+Jan Vondr{\'{a}}k.
+\newblock Optimal approximation for the submodular welfare problem in the value
+  oracle model.
+\newblock In Cynthia Dwork, editor, {\em Proceedings of the 40th Annual {ACM}
+  Symposium on Theory of Computing, Victoria, British Columbia, Canada, May
+  17-20, 2008}, pages 67--74. {ACM}, 2008.
+\newblock \href {https://doi.org/10.1145/1374376.1374389}
+  {\path{doi:10.1145/1374376.1374389}}.
+
+\end{thebibliography}
