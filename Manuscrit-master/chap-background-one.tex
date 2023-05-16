@@ -1,0 +1,372 @@
+Provable security is a subfield of cryptography where constructions are proven secure with respect to a security model.
+To illustrate this notion, let us take the example of public-key encryption schemes.
+This primitive consists in three algorithms:~\textit{key generation}, \textit{encryption} and \textit{decryption}.
+These algorithms acts according to their names.
+Naturally, the question of ``how to define the security of this set of algorithms'' arises.
+To answer this question, we have to define the power of the adversary, and its goal.
+In cryptography, many approaches have been used to define this (random oracle model, universal composability ($\UC$)~\cite{Can01}\ldots) which give rise to stronger security guarantees.
+If one aims at the strongest security for its construction, there are known impossibility results in strong models.
+For instance, in the $\UC$ model, it is impossible to realize two-party computation~\cite{Yao86} without trusted setup~\cite{CKL06}, while it is possible in the plain model~\cite{LP07}.
+
+In this chapter, we will focus on the computational complexity elements we need to define properly the security models we will use in this thesis.
+Then we will define these security models.
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Security Reductions %
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Security Reductions}
+\addcontentsline{tof}{section}{\protect\numberline{\thesection} Réductions de sécurité}
+
+Provable security provides constructions for which security is guaranteed by a security proof, or \emph{security reduction}.
+The name ``reduction'' comes from computational complexity.
+In this field of computer science, research focuses on defining equivalence classes for problems or hierarchical relations between them, based on the necessary amount of resources to solve them.
+In order to define lower bounds for the complexity of some problems, a classical approach is to provide a construction that goes from an instance of a problem $A$ to an instance of problem $B$ such that, if a solution of $B$ is found, then so is a solution of $A$.
+This amounts to saying that problem $B$ is at least as hard as problem $A$ up to the complexity of the transformation.
+For instance, Cook has shown that satisfiability of Boolean formulas is at least as hard as every problem in $\NP$~\cite{Coo71} up to a polynomial-time transformation.
+
+Let us now define more formally the notions of reduction and computability using the computational model of Turing machines.
+
+\begin{definition}[Turing Machine] \label{de:turing-machine} \index{Turing machine}
+  A $k$-tape Turing Machine (TM) is described by a triple $M = (\Gamma, Q, \delta)$ containing:
+  \begin{itemize}
+    \item A finite set $\Gamma$, called the \textit{tape alphabet}, which contains symbols that the TM uses in its tapes. In particular, $\Gamma$ contains a \textit{blank symbol} ``$\square$'', and ``$\triangleright$'' that denotes the beginning of a tape.
+    \item A finite set $Q$ called the \textit{states} of the TM. It contains special states $q_{start}$, $q_{halt}$, called respectively the \textit{initial state} and the \textit{halt state}.
+    \item A function $\delta: (Q \backslash \{q_{halt}\}) \times \Gamma^{k-1} \to Q \times \Gamma^{k-1} \times \{ \leftarrow, \downarrow, \rightarrow \}^k$, called the \textit{transition function}, that describes the behavior of the internal state of the machine and the TM heads.\\
+      \smallskip
+      Namely, $\delta(q, a_1, \ldots, a_{k-1}) = (r, b_2, \ldots, b_k, m_1, \ldots, m_k)$ means that upon reading symbols $(a_1, \ldots, a_{k-1})$ on tapes $1$ to $k-1$ (where the first tape is the input tape, and the $k$-th tape is the output tape) on state $q$, the TM will move to state $r$, write $b_2, \ldots, b_k$ on tapes $2$ to $k$ and move its heads as dictated by $m_1, \ldots, m_k$.
+  \end{itemize}
+
+  A TM $M$ is said to \emph{compute} a function $f: \Sigma^\star \to \Gamma^\star$ if, for any finite input $x \in \Sigma^\star$ on tape $T_1$, blank tapes $T_2, \ldots, T_k$ with a beginning symbol $\triangleright$ and initial state $q_{start}$, $M$ halts in a finite number of steps with $f(x)$ written on its output tape $T_k$.
+
+  A TM $M$ is said to \emph{recognize} a language $L \subseteq \Sigma^\star$ if, on a finite input $x \in \Sigma^\star$ written on its input tape $T_1$, blank tapes $T_2, \ldots, T_k$ with a beginning symbol $\triangleright$ and initial state $q_{start}$, the machine $M$ eventually ends on the state $q_{halt}$ with $1$ written on its output tape if and only if $x \in L$.
+
+  A TM $M$ is said to run in $T(n)$-time if, on any input $x$, it eventually stops within $T(|x|)$ steps.
+
+  A TM $M$ is said to run in $S(n)$-space if, on any input $x$, it eventually stops after having written at most $S(|x|)$ memory cells in its working tapes.
+\end{definition}
+
+Turing machines are a computational model that proved useful in complexity theory as it is convenient to evaluate the running time of a Turing machine, which amounts to bounding the number of steps the machine can take.
+Similarly, the working tapes works analogously to the memory of a program, and then counting the number of cells the machine uses is equivalent to evaluating the amount of memory the program requires.
+
+From these considerations, it is possible to describe the time and space complexity of a program from the definition of Turing machines.
+In our context, we will work with Turing machines that run in polynomial-time and space, as polynomials benefit from good stability properties (sum, product, composition, \ldots{}).
+
+\begin{definition}[\textsf{P}~\cite{Rab60}] \index{Complexity classes!P@\textsf{P}}
+  The class \textsf{P} describes the set of languages that can be recognized by a Turing machine running in time $T(n) = \bigO(\poly)$.
+\end{definition}
+
+In theoretical computer science, the class \textsf{P} is often considered as the set of ``easy'' problems.
+These problems are considered easy in the sense that the growth of the cost to solve them is asymptotically negligible in front of other functions such as exponential.
+In this context, it is reasonable to consider the computational power of an adversary as polynomial (or quasi-polynomial) in time and space.
+As cryptographic algorithms are not deterministic, we also have to consider the probabilistic version of the computation model.
+
+\begin{definition}[Probabilistic Turing machine] \label{de:probabilistic-tm} \index{Turing machine!Probabilistic Turing machine}
+  A \emph{probabilistic Turing machine} is a Turing machine with two different transition functions $\delta_0$ and $\delta_1$ where, at each step, a random coin is tossed to pick $\delta_0$ or $\delta_1$ with probability $1/2$ independently of all the previous choices.
+
+  The machine only outputs \texttt{accept} and \texttt{reject} depending on the content of the output tape at the end of the execution.
+  We denote by $M(x)$ the random variable corresponding to the value $M$ writes on its output tape at the end of its execution.
+\end{definition}
+
+\begin{definition}[\textsf{PP}~{\cite{Gil77}}] \index{Complexity classes!PP@\textsf{PP}}
+  The class \textsf{PP} describes the set of languages $L \subseteq \Sigma^\star$ that a Turing machine $M$ recognizes such that the TM $M$ stops in time $\poly[|x|]$ on every input $x$ and
+  \[ \begin{cases}
+      \Pr\left[ M(x) = 1 \mid x \in L \right] > \frac12\\
+      \Pr\left[ M(x) = 0 \mid x \notin L \right] \leq \frac12
+  \end{cases}. \]
+
+  In the following $\ppt$ stands for ``probabilistic polynomial time''.
+\end{definition}
+
+We defined complexity classes that corresponds to natural sets of programs that are of interest to us.
+In order to work with them, we will define the principle of polynomial time reduction.
+
+\begin{definition}[Polynomial time reduction] \label{de:pt-reduction} \index{Reduction!Polynomial time}
+  A language $A \subseteq \bit^\star$ is \emph{polynomial-time reducible to} a language $B \subseteq \bit^\star$, denoted by $A \redto B$, if there is a \emph{polynomial-time computable} function $f: \bit^\star \to \bit^\star$ such that for every $x \in \bit^\star$, $x \in A$ if and only if $f(x) \in B$.
+\end{definition}
+
+\begin{figure}
+  \centering
+  \input fig-poly-red
+  \caption[Illustration of a polynomial-time reduction from $A$ to $B$.]{Illustration of a polynomial-time reduction from $A$ to $B$~{\cite[Fig. 2.1]{AB09}}.} \label{fig:poly-reduction}
+\end{figure}
+
+In other words, a polynomial reduction from $A$ to $B$ is the description of a polynomial time algorithm (also called ``\emph{the reduction}''), that uses an algorithm for $B$ in a black-box manner to solve $A$.
+This is illustrated in Figure~\ref{fig:poly-reduction}.
+
+To write down that a TM has black-box access to a TM $M^O$ that computes function $O$, we sometimes use the \textit{oracle} terminology.
+
+\begin{definition}[Oracle machine] \index{Turing machine!Oracle machine}
+  A Turing Machine $M$ is said to have \textit{oracle access} to a function $O(\cdot)$ if it has access to the result of $O(x)$ for any input $x$ of its choice in constant time. We denote the output of $M$ on input $x$ with oracle $O$ by $M^O(x)$.
+\end{definition}
+
+We can notice that \textsf{P} and \textsf{PP} are both closed under polynomial-time reduction.
+Namely, if a problem is easier than another problem in \textsf{P} (resp. \textsf{PP}), then the former problem is also in \textsf{P} (resp. \textsf{PP}).
+
+Until know, we mainly focus on the running time of the algorithms.
+In cryptology, it is also important to consider the success probability of algorithms:
+an attack is successful if the probability that it succeeds is noticeable.
+
+\index{Landau notations}
+\begin{definition}[Landau notations]
+  Let $f,g$ be two functions from $\NN$ to $\RR$. Let us define the so-called \textit{Landau notations} to asymptotically compare functions.
+  \begin{description}
+    \item[$f$ is bounded by $g$:] $f(x) = \bigO(g(x))$ if there exists a constant $k>0$ such that $|f(n)| \leq k \cdot |g(n)|$ eventually.
+    \item[$f$ is not dominated by $g$:] $f(x) = \Omega(g(x))$ if there exists a constant $k>0$ such that $|f(n)| \geq k \cdot |g(n)|$ eventually.
+    \item[$f$ is bounded by $g$ from above and below:] $f(x) = \Theta(g(x))$ if $f(x) = \bigO(g(x))$ and $f(x) = \Omega(g(x))$.
+    \item[$g$ dominates $f$:] $f(x) = o(g(x))$ if for any $k > 0$, $f(n) \geq k \cdot |g(n)|$ eventually.
+    \item[$f$ dominates $g$:] $f(x) = \omega(g(x))$ if for any $k > 0$, $|f(n)| > k \cdot |g(n)|$ eventually.
+  \end{description}
+\end{definition}
+
+\begin{definition}[Negligible, noticeable, overwhelming probability] \label{de:negligible}
+  \index{Probability!Negligible} \index{Probability!Noticeable} \index{Probability!Overwhelming}
+  Let $f : \NN \to [0,1]$ be a function. The function $f$ is said to be \emph{negligible} if $f(n) = n^{-\omega(1)}_{}$, and this is written $f(n) = \negl[n]$.\\
+  Non-negligible functions are also called \emph{noticeable} functions.\\
+  Finally, if $f = 1 - \negl[n]$, $f$ is said to be \emph{overwhelming}.
+\end{definition}
+
+Now, we have to define two more notions to be able to work on security proofs.
+Namely, the \textit{security notions} and the \textit{hardness assumptions}.
+The former are the statements we need to prove, and the latter are the hypotheses on which we rely.
+\index{Hardness assumptions} \index{Security notions}
+
+The details of the hardness assumptions we use are given in \cref{ch:structures}.
+Nevertheless, some notions are common to these and are evoked here.
+
+The confidence one can put in a hardness assumption depends on many criteria.  
+First of all, a weaker assumption is preferred to a stronger one.
+To illustrate this, let us consider the two following assumptions:
+
+\begin{definition}[Discrete logarithm] \label{de:DLP}
+  \index{Discrete Logarithm!Assumption}
+  \index{Discrete Logarithm!Problem}
+  The \emph{discrete algorithm problem} is defined as follows. Let $(\GG, \cdot)$ be a cyclic group of order $p$.
+  Given $g,h \in \GG$, the goal is to find the integer $a \in \Zp^{}$ such that: $g^a_{} = h$.
+
+  The \textit{discrete logarithm assumption} is the intractability of this problem for any \ppt{} algorithm with noticeable probability.
+\end{definition}
+
+\begin{definition}[Indistinguishability] \label{de:indistinguishability}
+  \index{Indistiguishability}
+  Let $D_0$ and $D_1$ be two probabilistic distributions and $\param$ be public parameters. Let us define the following experiments $\Exp{\mathrm{Dist}}{\ddv, 0}$ and $\Exp{\mathrm{Dist}}{\ddv, 1}$ for any algorithm $\ddv$:
+  \begin{center}
+    \fbox{\procedure{$\Exp{\mathrm{Dist}}{\ddv, b}(\lambda)$}{%
+        x \sample D_b\\
+        b' \gets \ddv(1^\lambda, \param, x)\\
+        \pcreturn b'
+    }}
+  \end{center}
+  The advantage of an adversary $\ddv$ for this game is defined as
+  \[ \advantage{\mathrm{Dist}}{\ddv}(\lambda) \triangleq \left| \Pr\left[ \Exp{\mathrm{Dist}}{\ddv, 1}(\lambda) = 1\right] - \Pr\left[ \Exp{\mathrm{Dist}}{\ddv, 0}(\lambda) = 1 \right] \right|. \]
+
+  A $\ppt$ algorithm which has a noticeable advantage for the above experiments is called a \textit{distinguisher} between $D_0$ and $D_1$.
+
+  Two distributions $D_0$ and $D_1$ are \textit{computationally indistinguishable} if there does not exist any $\ppt$ distinguisher between those two distributions.
+\end{definition}
+
+\begin{restatable}[Decisional Diffie-Hellman]{definition}{defDDH}
+  \index{Discrete Logarithm!Decisional Diffie-Hellman} \label{de:DDH}
+  Let $\GG$ be a cyclic group of order $p$. The \emph{decisional Diffie-Hellman} ($\DDH$) distribution is
+  \[\mathsf{D}_{\DDH} \triangleq \{ (g, g^a, g^b, g^{ab}) \mid g \sample \U(\GG), a,b \sample \U(\ZZ_p) \}.\]
+
+  The \textit{\DDH assumption} states that the distributions $\mathsf{D}_{\DDH}$ and $\U(\GG^4)$ are computationally indistinguishable given the public parameter $\GG$ (the description of the group).
+\end{restatable}
+
+The discrete logarithm assumption is implied by the decisional Diffie-Hellman assumption for instance.
+This is why it is preferable to work with the discrete logarithm assumption when it is possible.
+For instance, there is no security proofs for the El Gamal encryption scheme from DLP.
+
+Another criterion to evaluate the security of an assumption is to look if the assumption is ``simple to state'' or not.
+This observation is buttressed by the statement of~\cite[p.25]{KL07}:~``\ldots\textit{there  is  a  general  preference  for  assumptions  that are simpler to state, since such assumptions are easier to study and to refute.}''.
+
+Indeed, it is complicated to evaluate the security of an assumption as $q$-Strong Diffie-Hellman assumptions defined as follows.
+\begin{definition}[$q$-Strong Diffie-Hellman assumption~\cite{BB04,BBS04}]
+  In a cyclic group $\GG$, the $q$\textit{-Strong Diffie-Hellman} ($\qSDH$) problem is, given $g, g^a_{}, g^{a^2}_{}, \ldots, g^{a^q}_{}$, compute the element $g^{a^{q+1}}$.
+\end{definition}
+The security of this assumption inherently depends on the parameter $q$ of the assumption.
+Cheon additionally showed that, for large values of $q$, this assumption is no more trustworthy~\cite{Che06}.
+These parameterized assumptions are called \emph{$q$-type assumptions}.
+There also exist other kinds of non-static assumptions, such as interactive assumptions.
+An example can be the ``\emph{$1$-more-\textsf{DL}}'' assumption.
+Given oracle access to $n$ discrete logarithm queries ($n$ is not known in advance), the $1$-more-\textsf{DL} problem is to solve a $n+1$-th discrete logarithm.
+These non-interactive assumptions are furthermore \textit{non-falsifiable} according to the definition of Naor~\cite{Nao03}.
+Non-interactive and constant-size assumptions are sometimes called ``\textit{standard}''.
+
+The next important aspect of a security proof is the model in which it takes place.
+This is the purpose of the next section.
+
+\section{Random-Oracle Model and Standard Model} \label{se:models}
+\addcontentsline{tof}{section}{\protect\numberline{\thesection} Modèle de l'oracle aléatoire et modèle standard}
+
+Security proofs should preferably stand in the \textit{standard model} of computation, where no idealization is assumed on behalf of the building blocks.
+In this model, no implicit assumptions are assumed.
+
+For instance, cryptographic hash functions enjoy several different associated security notions~\cite{KL07}.
+On of the weakest is the collision resistance, that states that it is intractable to find two strings that map to the same digest.
+A stronger notion is the second pre-image resistance, that states that given $x \in \bit^\star_{}$, it is not possible for a $\ppt$ algorithm to find an $\tilde{x} \in \bit^\star_{}$ such that $h(x) = h(\tilde{x})$.
+Similarly to what we saw in the previous section about $\DDH$ and $\DLP$, we can see that collision resistance implies second pre-image resistance.
+Indeed, if there is an attacker against second pre-image, then one can choose a string $x \in \bit^\star_{}$ and obtains from this attacker another string $\tilde{x} \neq x \in \bit^\star_{}$ such that $h(x) = h(\tilde{x})$. Hence, a hash function that is collision resistant is also second pre-image resistant.
+
+\index{Random Oracle Model}
+The \textit{random oracle model}~\cite{FS86,BR93}, or \ROM, is an idealized security model where hash functions are assumed to behave as a truly random function.
+This implies collision resistance (if the codomain of the hash function is large enough) and other security notions related to hash functions.
+In this model, hash functions are modeled as oracles in the view of the adversary.
+These oracles are controlled by the reduction, meaning that the reduction can program the hash function as it likes as long as the responses look random and independent.
+Moreover, the reduction has access to the conversation between the adversary and the random oracle. It thus eventually knows all inputs for which the adversary chose to evaluate the function.
+
+We can notice that this computation model is unrealistic~\cite{CGH98}. Let us construct a \emph{counter-example}.
+Let $\Sigma$ be a secure signature scheme, and let $\Sigma_y^{}$ be the scheme that returns $\Sigma(m)$ as a signature if and only if $h(0) \neq y$ and $0$ as a signature otherwise.
+In the \ROM $h$ behaves as a random function.
+Hence, the probability that $h(0) = y$ is negligible with respect to the security parameter for any fixed $y$.
+On the other hand, it appears that when $h$ is instantiated with a real-world hash function, then $\Sigma_{h(0)}$ is the null function, and therefore completely insecure as a signature scheme. \hfill $\square$
+
+In this context, one may wonder why is the \ROM still used in cryptographic proofs~\cite{LMPY16,LLM+16}.
+One reason is that some constructions are not known to exist yet from the standard model.
+For instance, non-interactive zero-knowledge (\NIZK) proofs for all $\NP$ languages is not known to follow solely from lattice assumptions~\cite{Ste96,Lyu08}.
+\NIZK proofs form an elementary building block for privacy-based cryptography. In the lattice setting, we do not have much better options that using random oracles~\cite{LLM+16}.
+Another reason to use the \ROM in cryptography, is because it enables much more efficient constructions and we have no example of a failure in the random oracle methodology for a natural cryptographic construction~\cite{BR93}.
+The example we built earlier is artificial, and in practice there is no known attacks against the \ROM for a natural scheme used in real-life applications.
+Thus, for practical purposes, constructions in the \ROM are usually more efficient.
+For instance, the scheme we present in \cref{ch:sigmasig} adapts the construction of dynamic group signature in the standard model from Libert, Peters and Yung~\cite{LPY15} to the \ROM.
+Doing this transform reduces the signature size from $32$ elements in $\GG$, $14$ elements in $\Gh$ and \textit{one} scalar in the standard model~\cite[App. J]{LPY15} down to $7$ elements in $\GG$ and $3$ scalars in the \ROM.
+
+We now have defined the context we are working on and the base tools that allows security proofs.
+The following section explains how to define the security of a cryptographic primitive.
+
+\section{Security Games and Simulation-Based Security} \label{se:games-sim}
+\addcontentsline{tof}{section}{\protect\numberline{\thesection} Preuves par jeux et preuves par simulation}
+
+%Up to now, we defined the structure on which security proofs works. Let us now define what we are proving.
+%An example of what we are proving has been shown in Section~\ref{se:models} with cryptographic hash functions.
+
+In order to define security properties, a common manner is to define security \emph{games} (or \emph{experiments})~\cite{GM82,Sho06}.
+
+Two examples of security game are given in Figure~\ref{fig:sec-game-examples}: to formalize the notions of \emph{indistinguishability under chosen-plaintext attacks} (\indcpa) for public-key encryption (\PKE) schemes and \emph{existential unforgeability under chosen message attacks} (EU-CMA) for signature schemes.
+
+\begin{figure}
+  \centering
+  \subfloat[\indcpa{} game for \PKE]{
+    \fbox{\procedure{$\Exp{\indcpa}{\adv, b}(\lambda)$}{%
+        (pk,sk) \gets \mathcal{E}.\mathsf{keygen}(1^\lambda)\\
+        (m_0, m_1) \gets \adv(pk, 1^\lambda)\\
+        \mathsf{ct} \gets \mathcal{E}.\mathsf{enc}(m_b)\\
+        b' \gets \adv(pk, 1^\lambda, \mathsf{ct})\\
+        \pcreturn b'
+    }}
+  } \hspace{1cm}
+  \subfloat[EU-CMA game for signatures]{
+    \fbox{
+      \procedure{$\Exp{\mathrm{EU-CMA}}{\adv}(\lambda)$}{
+        (vk,sk) \gets \Sigma.\mathsf{keygen}(1^\lambda)\\
+        \mathsf{st} \gets \emptyset; \ensemble{sign} = \emptyset\\
+        \pcwhile \adv(\texttt{query}, vk, \mathsf{st}, \oracle{sign}{sk,\cdot} ) \pcdo
+        ;\\
+        (m^\star, \sigma^\star) \gets \adv(\texttt{forge}, vk, \mathsf{st}) \\
+        \pcreturn (vk, \ensemble{sign},  m^\star, \sigma^\star)
+    }}
+  }
+  \caption{Some security games examples.} \label{fig:sec-game-examples}
+\end{figure}
+
+\index{Reduction!Advantage} \index{Encryption!IND-CPA}
+\indcpa{} security is modeled by an \emph{indistinguishability} game, meaning that the goal for the adversary $\adv$ against this game is to distinguish between two messages from different distributions.
+To model this, for any adversary $\adv$, we define a notion of \emph{advantage} for the $\indcpa$ game as
+\[
+  \advantage{\indcpa}{\adv}(\lambda)
+  \triangleq
+  \left| \Pr\left[ \Exp{\indcpa}{\adv,1}(\lambda) = 1 \right] - \Pr\left[ \Exp{\indcpa}{\adv, 0}(\lambda) = 1\right] \right|.
+\]
+
+We say that a $\PKE$ scheme is $\indcpa$ if, for any $\ppt$ $\adv$, the advantage of $\mathcal{A}$ in the $\indcpa$ game is negligible with respect to $\lambda$.
+
+This definition of advantages models that the adversary is unable to distinguish whether the ciphertext $\mathsf{ct}$ comes from the experiment $\Exp{\indcpa}{\adv, 0}$ or the experiment $\Exp{\indcpa}{\adv, 1}$.
+As a consequence, the adversary cannot get a single bit of information about the ciphertext.
+
+This kind of definition is also useful to model anonymity.
+For instance in \cref{sec:RGSdefsecAnon}, the definition of anonymity for group signatures is defined in a similar fashion (\cref{def:anon}).
+
+To handle indistinguishability between distributions, it is useful to quantify the distance between two distributions.
+In this context, we define the statistical distance as follows.
+
+\begin{definition}[Statistical Distance] \index{Probability!Statistical Distance}
+  Let $P$ and $Q$ be two distributions. The \textit{statistical distance} $\Delta(P, Q)$ between $P$ and $Q$ is defined as
+  \[ \Delta(P, Q) \triangleq \frac{1}{2} \sum_{x \in \Supp(P) \cup \Supp(Q)} | P(x) - Q(x)|. \]
+\end{definition}
+
+Two distributions are \textit{statistically close} if their statistical distance is negligible with respect to the security parameter.
+It is worth noticing that if two distributions are statistically close, then the advantage of an adversary in distinguishing between them is negligible.
+%Another property used in the so-called \textit{hybrid argument}\index{Hybrid argument} is the \textit{triangular equality} that follows from the fact that the statistical distance is a distance.
+
+\scbf{Notation.} $P \approx_s Q$ means that $P$ is \textit{statistically close} to $Q$.
+
+Another interesting metric, that will be used in the security proof of %TODO
+is the Rényi Divergence:
+
+\begin{restatable}[Rényi divergence]{definition}{defRenyi}
+  \label{def:renyi} \index{Probability!Rényi Divergence}
+  For any two discrete distributions $P$ and $Q$ such that $\Supp(P) \subseteq
+  \Supp(Q)$, and $a \in ]1, +\infty[$, we define the \emph{R\'enyi divergence} of order $a$ by:
+    \[ R_a(P||Q) = \left( \sum_{x \in \Supp(P)} \frac{P(x)^a}{Q(x)^{a-1}} \right)^{\frac{1}{a-1}}. \]
+
+    We define the R\'enyi divergences of orders $1$ and $+\infty$ as:
+
+    \[ R_1(P||Q) = \exp\left( \sum_{x \in \Supp(P)} P(x) \log \frac{P(x)}{Q(x)} \right) \mbox{ and } R_\infty (P||Q) = \max_{x \in \Supp(P)} \frac{P(x)}{Q(x)}. \]
+
+    The divergence $R_1$ is the (exponential) of the Kullback-Leibler divergence.
+\end{restatable}
+
+Bai, Langlois, Lepoint, Stehlé and Steinfeld~\cite{BLL+15} observed that the Rényi Divergence has a property similar to the \textit{triangular inequality} with respect to multiplication, and can be useful in the context of unforgeability game as we will explain it in the following paragraph. Prest further presented multiple uses of the Rényi Divergence in~\cite{Pre17}.
+
+We notice that security definitions for signature scheme are not indistinguishability-based experiments, but search experiments (i.e., the adversary has to output a string rather than distinguishing between two experiments by outputting a single bit).
+The goal of the adversary is not to distinguish between two distributions, but to forge a new signature from what it learns via signature queries.
+
+Those signature queries are handled by an oracle \oracle{sign}{sk,\cdot}, which on input $m$ returns the signature $\sigma = \Sigma.\mathsf{sign}(sk, m)$ and adds $\sigma$ to $\ensemble{sign}$. The initialization of these sets and the oracle's behavior may be omitted in the rest of this thesis for the sake of readability.
+
+\index{Signatures!EU-CMA}
+For EU-CMA, the advantage of an adversary $\adv$ is defined as
+\[
+  \advantage{\textrm{EU-CMA}}{\adv}(\lambda)
+  \triangleq
+  \Pr\left[ \Sigma.\mathsf{verif}(vk, m^\star, \sigma^\star) = \top~\land~ \sigma^\star \notin \ensemble{sign} \right].
+\]
+
+A signature scheme is considered unforgeable under chosen message attacks if, for any $\ppt$ adversary $\adv$, the advantage of $\adv$ is negligible with respect to $\lambda$.
+
+This means that, within reasonable expected time\footnote{Reasonable time may have multiple definitions, in the context of theoretical cryptography, we assume that quasi-polynomial time is the upper bound of reasonable.}, no adversary can create a new valid signature without the signing key ($sk$). This kind of definitions are often used in the case of authentication primitives.
+In our example of group signatures in Part~\ref{pa:gs-ac}, the \emph{security against misidentification attacks} (or \emph{traceability}) experiment follows the same structure.
+This security notion illustrates that
+no collusion between malicious users and the group authority can create valid signatures
+that open on an honest user, or do not open to a valid registered user.
+
+\begin{figure}
+  \centering
+  \input fig-uc
+  \caption{Simulation-based cryptography.} \label{fig:sim-crypto}
+\end{figure}
+
+The security definition of $\indcpa$ is defined via an indistinguishability experiment.
+The first security definition for $\PKE$ was nevertheless a simulation-based definition~\cite{GM82}.
+In this context, instead of distinguishing between two messages, the goal is to distinguish between two different environments.
+\index{Universal Composability}
+In the following, we will use the \emph{Real world}/\emph{Ideal world} paradigm~\cite{Can01} to describe those different environments.
+Namely, for $\PKE$, it means that, for any $\ppt$ adversary~$\widehat{\adv}$ --\,in the \emph{Real world}\,-- that, interacts with a challenger $\cdv$,
+there exists a $\ppt$ \emph{simulator} $\widehat{\adv}'$ --\,in the \emph{Ideal world}\,-- that interacts with the same challenger $\cdv'$ with the difference that the functionality $F$ is replaced by a trusted third party in the \emph{Ideal word}.
+
+In other words, it means that the information that $\widehat{\adv}$ obtains from its interaction with the challenger $\cdv$
+does not allow $\adv$ to lean any more information than it does via black-box access to the functionality.
+
+In the context of $\PKE$, the functionality is the access to the public key $pk$ as described in Line 2 of $\Exp{\indcpa}{\adv, b}(\lambda)$.
+Therefore, the existence of a simulator $\widehat{\adv}$ that does not use $pk$ shows that $\mathcal{A}$ does not learn anything from $pk$.
+
+For $\PKE$, the simulation-based definition for chosen-plaintext security is equivalent to the indistinguishability security~\cite[Se. 5.2.3]{Gol04}, even if the two security definitions are conceptually different.
+As indistinguishability-based model are often easier to work with, they are more commonly used to prove security of $\PKE$ schemes.
+For other primitives, such as Oblivious Transfer ($\OT$) described in \cref{ch:ac-ot}, the simulation-based definitions are strictly stronger than indistinguishability definitions~\cite{NP99}.
+Therefore, it is preferable to have security proofs of the strongest \emph{possible} definitions in theoretical cryptography.
+
+Even though, the question of which security model is the strongest remains a complex one, as it depends on many parameters:
+the answer mainly depends on the manner the scheme will be used as well as the adversarial model.
+%If some security models implies others, it's not necessary always the case.
+For example, we know from the work of Canetti and Fischlin~\cite{CF01} that it is impossible to construct a $\UC$-secure bit commitment scheme\footnote{The definition of a commitment scheme is given in~\cref{de:commitment}. To put it short, it is the digital equivalent of a safe.} in the plain model, while the design of such a primitive is possible assuming a \textit{trusted setup}.
+%Hence, the question of quantifying if a standard-model commitment scheme has a stronger security than an UC commitment scheme in the trusted setup setting under similar assumptions is not a trivial question.
+\index{Universal Composability!Common Reference String}
+In the \textit{trusted setup} model or \textit{common reference string} (\textsf{CRS}) model, all the participants are assumed to have access to a common string $\crs \in \{0,1\}^\star$ that is drawn from some specific distribution $D_\crs$.

@@ -1,0 +1,25 @@
+\medskip
+\begin{tikzpicture}
+                         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                         % Comment or uncomment crop %
+                         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \clip[use as bounding box]
+  %\draw[thick, black]
+  (2,3) rectangle (10,8);
+  \foreach \i in {0,1,...,20} {
+    \foreach \j in {0,1,..., 10} {
+      \draw[fill=black] (.2*\j + .5*\i, \j + .1*\i) circle (1pt) coordinate (v-\i-\j);
+    }
+  }
+  \draw[very thick, green!80!black, ->] (v-9-4) -- (v-8-4);
+  \draw[very thick, green!80!black, ->] (v-9-4) -- (v-9-5);
+  \draw[very thick, red!80!black, ->] (v-9-4)   -- (v-17-3);
+  \draw[very thick, red!80!black, ->] (v-9-4)   -- (v-18-3);
+  \foreach \i in {0,1,...,10} {
+    \draw[dotted, color=black!70] (v-0-\i) -- (v-20-\i);
+  }
+  \foreach \i in {0,1,...,20} {
+    \draw[dotted, color=black!70] (v-\i-0) -- (v-\i-10);
+  }
+\end{tikzpicture}
+\medskip

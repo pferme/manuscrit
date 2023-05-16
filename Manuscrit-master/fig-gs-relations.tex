@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+  \node[minimum size=1cm,businessman] (GM) {Group manager};
+  \node[right=2.5cm of GM,bob, minimum size=1cm, mirrored] (User) {};
+  \node[right=0cm of User] {User $i$};
+  \node[right=2.5cm of User, police, minimum size=1cm, mirrored] (OA) {};
+  \node[right=0cm of OA] {Opening authority};
+  \node[below=2.5cm of User] (M) {$\sigma$, M};
+  \node[right=2.5cm of M, maninblack, minimum size=1cm, mirrored] (Other) {};
+  \node[below=0cm of Other] {Anyone};
+  \node[above=2.5cm of User] (Setup) {Trusted Setup};
+
+  \draw[<->, thick] (GM) -- node[anchor=south] {\textsf{Join}} node[anchor=north] {$\crt_i$} (User);
+  \draw[->, thick] (User) -- node[anchor=north east] {$\Sign$} (M);
+  \draw[<-, thick] (Other) -- node[anchor=north] {$\Verify$} (M);
+  \draw[<-, thick] (OA) -- node[anchor=west, yshift=-5pt] {$\Open$} (M);
+  \draw[->, thick, dashed] (Setup) -- node[xshift=-0.7cm] {$\mathcal S_\GM$} (GM);
+  \draw[->, thick, dashed] (Setup) -- node[xshift=0.7cm] {$\mathcal S_\OA$} (OA);
+\end{tikzpicture}

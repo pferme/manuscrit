@@ -1,0 +1,134 @@
+\begin{comment}
+\section %hack for vim-latexsuite
+\end{comment}
+
+In this thesis, we presented new cryptographic schemes that rely on lattice or pairing assumptions.
+These contributions focus on the design and the analysis of new cryptographic schemes that target privacy-preserving applications.
+
+In pairing-based cryptography, we proposed a practical dynamic group signature scheme, whose security relies on well-understood assumptions in the random oracle.
+It relies on widely used assumptions with simple and constant-size descriptions which have been studied for more than ten years.
+This work is also supported by an implementation in \texttt{C}.
+
+The results in the lattice setting gave rise to three realizations of fundamental primitives that were missing in the landscape of lattice-based privacy-preserving cryptography.
+Even if these schemes suffer from a lack of efficiency due to their novelty, we do believe that they take one step towards a quantum-secure privacy-friendly world.
+
+On the road, improvements have been made in the state of the art of zero-knowledge proofs in the lattice setting by providing building blocks that, we believe, are of independent interest.
+For example, our signature with efficient protocols has already been used to design a privacy-preserving lattice-based e-cash system~\cite{LLNW17}.
+
+All these works are proven to satisfy strong security models under simple assumptions.
+This provides a breeding ground for new theoretical constructions.
+
+\section*{Open Problems}
+
+The path of providing new cryptographic primitives and proving them secure is full of pitfalls.
+The most obvious question that stems from this work is how to tackle the trade-offs we made in the design of those primitives. In particular, the specific question naturally arise:
+
+\begin{question}
+  Is it possible to build a fully-simulatable adaptive oblivious transfer (even without access control) secure under $\LWE$ with polynomially large modulus?
+\end{question}
+
+In other words, is it possible to avoid the use of noise flooding to guarantee receiver-security in the adaptive oblivious transfer scheme of~\cref{ch:ot-lwe}.
+In our current protocol, this issue arises from the use of Regev's encryption scheme, where we need to prevent the noise distribution from leaking the receiver's index.
+However, while a finer analysis of the noise in GSW ciphertexts~\cite{GSW13} seems promising to achieve this at reasonable cost~\cite{BDPMW16}, it is not sufficient in our setting because it would leak the norm of the noise vector of ciphertexts.
+Then, another difficulty is to have zero-knowledge proofs compatible with the access control and the encryption components.
+
+\begin{question}
+  Can we construct provably-secure adaptive oblivious transfer schemes in the universal composability model?
+\end{question}
+
+Our adaptive oblivious transfer scheme relies on zero-knowledge proofs to hedge against malicious adversaries.
+The security proofs take advantage of the fact that the proofs can be rewound to extract a witness (as described in~\cref{de:pok}).
+The Peikert-Vaikuntanathan-Waters~\cite{PVW08} construction, based on dual-mode encryption, achieves $1$-out-of-$2$ composable oblivious transfer (which can be generalized to $1$-out-of-$2^t$ OT), without relying on zero-knowledge proofs, but it does not imply OT with adaptive queries (i.e., where each index $\rho_i$ may depend on messages received in previous transfers).
+Actually, the use of $\ZK$ proofs is not ruled out in this setting, as shown by the pairing-based construction of Green and Hohenberger~\cite{GH08}.
+However, this protocol uses the trapdoor extractability of Groth-Sahai proofs~\cite{GS08} to achieve straight-line extraction. It is not known to be possible in the lattice setting.
+
+\begin{question}
+  Can we obtain a more efficient compact e-cash system from lattice assumptions?
+\end{question}
+
+Another privacy-preserving primitive is compact e-cash~\cite{Cha82,Cha83,CHL05a}. As explained in the introduction, it is the digital equivalent of real-life money.
+A body of research followed its introduction~\cite{CFN88,OO91,CP92,FY93,Oka95,Tsi97}, and the first compact realization was given by Camenisch, Hohenberger and Lysyanskaya~\cite{CHL05a} (here, ``compact'' means that the complexity of coin transfers is at most logarithmic in the value of withdrawn wallets).
+Before the work of Libert, Ling, Nguyen and Wang~\cite{LLNW17}, all compact constructions were based on traditional number-theoretic techniques.
+This construction still suffers from efficiency issues akin to the problem we met in this thesis.
+It is thus interesting to improve the efficiency of this scheme and obtain viable constructions of anonymous e-cash from post-quantum assumptions.
+
+\subsection*{Zero-Knowledge Proofs}
+
+\begin{question}
+  Can we provide NIZK proofs in the standard model for all $\NP$ languages while relying on the standard $\LWE$ assumption only?
+\end{question}
+
+Extending the work of Groth, Ostrovsky and Sahai~\cite{GOS06} to the lattice setting would be a breakthrough result for lattice-based cryptography in general.
+This question remains open for more than $10$ years~\cite{PV08}.
+A recent line of work makes steps forward in this direction~\cite{KW18,RSS18}, but they rely on primitives that do not exist yet~\cite{RSS18} ($\NIZK$ proofs for a variant of the bounded decoding distance problem) or assume pre-processing~\cite{KW18}.
+
+The Stern-like proof systems we studied in this thesis, despite being flexible enough to prove a large variety of statements, suffer from the stiffness of being combinatorial.
+The choice of permutations used to ensure the zero-knowledge property (and thus witness-indistinguishability) is quite strict, and forces the challenge space to be ternary.
+This turns out to be a real bottleneck in the efficiency of such proof systems.
+
+\begin{question}
+  %Is it possible to construct zero-knowledge protocols for average-case problems that take advantage of the geometry of lattices?
+  Can we get negligible soundness error in one shot for expressive statements in the post-quantum setting?
+\end{question}
+
+This question can be restated as ``can we combine the expressiveness of Stern-like proofs with the efficiency of Schnorr-like proof with rejection sampling?''.
+For Stern-like protocols, decreasing the soundness error from $2/3$ to $1/2$ would already be an interesting improvements with a direct impact on the efficiency of all lattice-based schemes presented in this thesis.
+Recall that the \textit{soundness error} is the probability that a cheating prover convinces an honest verifier of a false statement. As long as it is noticeably different from $1$, it is possible to make the soundness error negligible by repeating the protocol a sufficient number of times.
+Likewise, isogeny-based proof systems~\cite{JDF11,GPS17} suffer from similar issues as the challenge space is small (binary).
+The $2/3$ soundness error is also present in~\cite{IKOS07},
+which is a technique to obtain zero-knowledge proofs relying on secure multi-party computation.
+With this technique, however, the size of the proof is proportional to the size of the circuit describing the relation we want to prove (which is not the case with Stern-like protocols).
+Thus, the question of having efficient post-quantum zero-knowledge proofs for expressive statements is a difficult question and remains open as of today.
+
+%If these proof systems can be used after applying a transformation from average-case to worst-case problem, this methodology is highly inefficient and does not close the question.
+
+\subsection*{Cryptographic Constructions}
+
+\begin{question}
+  Can we construct more efficient lattice-based signature schemes compatible with zero-knowledge proofs?
+\end{question}
+
+In the general lattice setting, the most efficient signature schemes require at least as many matrices as the length $\ell$ of the random tag used in the signature (like the scheme in~\cref{se:gs-lwe-sigep}).
+This cost has direct impact on the efficiency and public-key size of schemes or protocols that use them: in our group signatures of~\cref{ch:gs-lwe}, for example, $\ell$ is logarithmic in the maximal number of members the group can accept $\Ngs$.
+In ideal lattices, it is possible to reduce this cost to a vector of size $\ell$~\cite{DM14}.
+In the group signature scheme of~\cite{LNWX18}, which is based on ideal lattice problems, they use this property to allow an exponential number of group members to join the group, and thus propose a ``constant-size'' group signature scheme.
+The method used to construct this group signature is essentially the same as in \cref{ch:gs-lwe}, where matrices are hidden in the ring structure of the ideal lattice~\cite{LS14}.
+In the construction of~\cite{LNWX18}, the dependency on $\log \Ngs$ is actually hidden in the dimension of the ring.
+As these signatures are a fundamental building block for privacy-preserving cryptography, any improvement on them has a direct impact on the primitives or protocols that use them as a building block.
+
+\begin{question}
+  Can we obtain more efficient lattice-based one-time signatures in general lattices?
+\end{question}
+
+In our group signature and group encryption schemes (in \cref{ch:gs-lwe} and \cref{ch:ge-lwe} respectively), signature and ciphertext contain a public key for a one-time signature scheme.
+One efficiency issue is that, in lattice-based one-time signatures~\cite{LM08,Moh11}, the public-key contains a full matrix, that is part of the signature/ciphertext.
+Therefore, this matrix significantly increase the size of the signature/ciphertext.
+As security requirements for one-time signature are weaker than those of full-fledged signatures (namely, the adversary has access to only one signature per public key), we can hope for more efficient constructions of one-time signatures based on general lattices where, the public-key is smaller that a full-matrix.
+
+As we explained in the introduction, advanced cryptography from lattices often suffers from the use of lattice trapdoors.
+Thus, a natural question may be:
+
+\begin{question}
+  Does an efficient trapdoor-free \textsf{(H)IBE} exist?
+\end{question}
+
+In the group encryption scheme of~\cref{ch:ge-lwe}, for instance, trapdoors are used for two distinct purposes.
+They are used to build a secure public-key encryption scheme under adaptive chosen-ciphertext attacks and a signature scheme.
+These primitives are both induced by identity-based encryption: the Canetti-Halevi-Katz transform generically turns an \textsf{IBE} into a \textsf{IND-CCA2} \PKE~\cite{CHK04}, and signatures are directly implied by \textsf{IND-CPA-}secure \textsf{IBE}~\cite{BF01,BLS01}.
+%Actually, even the question of having a trapdoorless \textsf{IND-CCA2} public key encryption scheme still remains an open question.
+Actually, a recent construction due to Brakerski, Lombardi, Segev and Vaikuntanathan~\cite{BLSV18} (inspired by~\cite{DG17a}) gives a candidate which relies on garbled circuits, and is fairly inefficient compared to \textsf{IBE} schemes with trapdoors.
+Even the question of a trapdoor-less \textsf{IND-CCA2} public key encryption still does not have a satisfactory solution. 
+The construction of Peikert and Waters~\cite{PW08} is trapdoor-free, but remains very expensive.
+
+\begin{comment}
+\begin{question}
+  Can we achieve better security proofs for cryptographic schemes?
+\end{question}
+
+Our work during this thesis also focuses on the security proofs of cryptographic schemes.
+As explained in~\cref{ch:proofs}, it is important to rely on simple assumptions to prove strong security notions.
+Given recent advances in cryptographic proofs~\cite{Hof16,KMP16,Hof17}, it is now possible to attain stronger security notions than what was claimed before~\cite{DSYC18}.
+Another line of work targets the quality of the reduction, aiming for \textit{tight security}~\cite{GHKW16,AHN+17,LJYP14,LPJY15,LSSS17}.
+This improves the understanding of the links between cryptographic schemes and hardness assumptions, leading to more reliable constructions.
+\end{comment}
+

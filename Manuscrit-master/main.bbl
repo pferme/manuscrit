@@ -1,0 +1,627 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{BdPMW16}
+
+\bibitem[AB09]{AB09}
+Sanjeev Arora and Boaz Barak.
+\newblock {\em Computational Complexity: A Modern Approach}.
+\newblock Cambridge University Press, 1st edition, 2009.
+
+\bibitem[ABB10]{ABB10}
+S.~Agrawal, D.~Boneh, and X.~Boyen.
+\newblock Efficient lattice {(H)IBE} in the standard model.
+\newblock In {\em {Eurocrypt}}, volume 6110 of {\em LNCS}, pages 553--572.
+  Springer, 2010.
+
+\bibitem[ACDN13]{ACDN13}
+Masayuki Abe, Jan Camenisch, Maria Dubovitskaya, and Ryo Nishimaki.
+\newblock Universally composable adaptive oblivious transfer (with access
+  control) from standard assumptions.
+\newblock In {\em ACM Workshop on Digital Identity Management}, pages 1--12,
+  2013.
+\newblock \href {https://doi.org/10.1145/2517881.2517883}
+  {\path{doi:10.1145/2517881.2517883}}.
+
+\bibitem[BB04]{BB04}
+D.~Boneh and X.~Boyen.
+\newblock Efficient selective-{ID} secure identity-based encryption without
+  random oracles.
+\newblock In {\em {E}urocrypt}, volume 3027 of {\em LNCS}, pages 223--238.
+  Springer, 2004.
+
+\bibitem[BBS04]{BBS04}
+Dan Boneh, Xavier Boyen, and Hovav Shacham.
+\newblock Short group signatures.
+\newblock In {\em {Crypto}}, volume 3152 of {\em LNCS}, pages 41--55. Springer,
+  2004.
+
+\bibitem[BCC{\etalchar{+}}09]{BCC+09}
+Mira Belenkiy, Jan Camenisch, Melissa Chase, Markulf Kohlweiss, Anna
+  Lysyanskaya, and Hovav Shacham.
+\newblock {Randomizable Proofs and Delegatable Anonymous Credentials}.
+\newblock In {\em {Crypto}}, volume 5677 of {\em LNCS}, pages 108--125.
+  Springer, 2009.
+
+\bibitem[BCKL08]{BCKL08}
+Mira Belenkiy, Melissa Chase, Markulf Kohlweiss, and Anna Lysyanskaya.
+\newblock {P-signatures and Noninteractive Anonymous Credentials}.
+\newblock In {\em {TCC}}, number 4948 in LNCS, pages 356--374. Springer, 2008.
+
+\bibitem[BCKL09]{BCKL09}
+Mira Belenkiy, Melissa Chase, Markulf Kohlweiss, and Anna Lysyanskaya.
+\newblock {Compact E-Cash and Simulatable VRFs Revisited}.
+\newblock In {\em {Pairing}}, volume 5671 of {\em LNCS}, pages 114--131.
+  Springer, 2009.
+
+\bibitem[BD18]{BD18}
+Razvan Barbulescu and Sylvain Duquesne.
+\newblock {Updating Key Size Estimations for Pairings}.
+\newblock {\em Journal of Cryptology}, pages 1--39, 2018.
+\newblock \href {https://doi.org/10.1007/s00145-018-9280-5}
+  {\path{doi:10.1007/s00145-018-9280-5}}.
+
+\bibitem[BdPMW16]{BDPMW16}
+F.~Bourse, R.~del Pino, M.~Minelli, and H~Wee.
+\newblock {FHE Circuit Privacy Almost for Free}.
+\newblock In {\em {Crypto}}, number 9815 in LNCS, pages 62--89, 2016.
+
+\bibitem[BF01]{BF01}
+Dan Boneh and Matt Franklin.
+\newblock Identity-based encryption from the weil pairing.
+\newblock In Joe Kilian, editor, {\em Crypto}, pages 213--229. Springer, 2001.
+
+\bibitem[BHJ{\etalchar{+}}15]{BHJ+15}
+Florian B{\"o}hl, Dennis Hofheinz, Tibor Jager, Jessica Koch, and Christoph
+  Striecks.
+\newblock {Confined guessing: New signatures from standard assumptions}.
+\newblock {\em Journal of Cryptology}, 28(1):176--208, 2015.
+
+\bibitem[BLL{\etalchar{+}}15]{BLL+15}
+Shi Bai, Adeline Langlois, Tancr\`ede Lepoint, Damien Stehl\'e, and Ron
+  Steinfeld.
+\newblock Improved security proofs in lattice-based cryptography: Using the
+  {R\'enyi} divergence rather than the statistical distance.
+\newblock In {\em {Asiacrypt}}, volume 9452 of {\em LNCS}. Springer, 2015.
+
+\bibitem[BLS01]{BLS01}
+Dan Boneh, B.~Lynn, and H.~Shacham.
+\newblock {Short signatures from the Weil pairing}.
+\newblock In {\em Asiacrypt}, LNCS, pages 514--532. Springer, 2001.
+
+\bibitem[BLSV18]{BLSV18}
+Zvika Brakerski, Alex Lombardi, Gil Segev, and Vinod Vaikuntanathan.
+\newblock {Anonymous IBE, Leakage Resilience and Circular Security from New
+  Assumptions}.
+\newblock In {\em {Eurocrypt}}, LNCS, pages 535--564. Springer, 2018.
+
+\bibitem[BN06]{BN06}
+Paulo S. L.~M. Barreto and Michael Naehrig.
+\newblock Pairing-friendly elliptic curves of prime order.
+\newblock In Bart Preneel and Stafford Tavares, editors, {\em Selected Areas in
+  Cryptography}, pages 319--331. Springer, 2006.
+
+\bibitem[Boy10]{Boy10}
+Xavier Boyen.
+\newblock Lattice mixing and vanishing trapdoors: A framework for fully secure
+  short signatures and more.
+\newblock In {\em {PKC}}, volume 6056 of {\em LNCS}, pages 499--517. Springer,
+  2010.
+
+\bibitem[BR93]{BR93}
+Mihir Bellare and Phillip Rogaway.
+\newblock {Random Oracles Are Practical: A Paradigm for Designing Efficient
+  Protocols}.
+\newblock In {\em CCS}. ACM, 1993.
+\newblock URL: \url{http://doi.acm.org/10.1145/168588.168596}, \href
+  {https://doi.org/10.1145/168588.168596} {\path{doi:10.1145/168588.168596}}.
+
+\bibitem[BV11]{BV11}
+Z.~Brakerski and V.~Vaikuntanathan.
+\newblock Efficient fully homomorphic encryption from (standard) {LWE}.
+\newblock In {\em {FOCS}}, pages 97--106, 2011.
+
+\bibitem[Can01]{Can01}
+R.~Canetti.
+\newblock Universally composable security: A new paradigm for cryptographic
+  protocols.
+\newblock In {\em {FOCS}}, pages 136--145, 2001.
+
+\bibitem[CDN09]{CDN09}
+J.~Camenisch, M.~Dubovitskaya, and G.~Neven.
+\newblock Oblivious transfer with access control.
+\newblock In {\em {ACM-CCS}}, pages 131--140, 2009.
+
+\bibitem[CDNZ11]{CDNZ11}
+J.~Camenisch, M.~Dubovitskaya, G.~Neven, and G.~Zaverucha.
+\newblock Oblivious transfer with hidden access control policies.
+\newblock In {\em {PKC}'11}, volume 6571 of {\em LNCS}, pages 192--209, 2011.
+
+\bibitem[CF01]{CF01}
+Ran Canetti and Marc Fischlin.
+\newblock Universally composable commitments.
+\newblock In {\em Crypto}, pages 19--40. Springer, 2001.
+
+\bibitem[CFN88]{CFN88}
+D.~Chaum, A.~Fiat, and M.~Naor.
+\newblock Untraceable electronic cash.
+\newblock In {\em {Crypto}}, volume 403 of {\em LNCS}, pages 319--327, 1988.
+
+\bibitem[CGH98]{CGH98}
+Ran Canetti, Oded Goldreich, and Shai Halevi.
+\newblock The random oracle methodology, revisited.
+\newblock In {\em STOC}, volume~45. ACM, 1998.
+\newblock URL: \url{http://doi.acm.org/10.1145/1008731.1008734}, \href
+  {https://doi.org/10.1145/1008731.1008734}
+  {\path{doi:10.1145/1008731.1008734}}.
+
+\bibitem[Cha82]{Cha82}
+D.~Chaum.
+\newblock Blind signatures for untraceable payments.
+\newblock In {\em {Crypto}}, LNCS, pages 199--203, 1982.
+
+\bibitem[Cha83]{Cha83}
+D.~Chaum.
+\newblock Blind signature system.
+\newblock In {\em {Crypto}}, LNCS, page 153, 1983.
+
+\bibitem[Cha85]{Cha85}
+David Chaum.
+\newblock {Security without Identification: Transactions System to Make Big
+  Brother Obsolete}.
+\newblock 28(10):1030--1044, 1985.
+
+\bibitem[Che06]{Che06}
+Jung~Hee Cheon.
+\newblock Security analysis of the strong diffie-hellman problem.
+\newblock In {\em Eurocrypt}, volume 4004 of {\em LNCS}. Springer, 2006.
+
+\bibitem[CHK04]{CHK04}
+Ran Canetti, Shai Halevi, and Jonathan Katz.
+\newblock {Chosen-Ciphertext Security from Identity-Based Encryption}.
+\newblock In {\em Eurocrypt}, LNCS, pages 207--222. Springer, 2004.
+
+\bibitem[CHKP10]{CHKP10}
+D.~Cash, D.~Hofheinz, E.~Kiltz, and C.~Peikert.
+\newblock Bonsai trees, or how to delegate a lattice basis.
+\newblock In {\em {Eurocrypt}}, volume 6110 of {\em LNCS}, pages 523--552.
+  Springer, 2010.
+
+\bibitem[CHL05]{CHL05a}
+Jan Camenisch, Susan Hohenberger, and Anna Lysyanskaya.
+\newblock Compact e-cash.
+\newblock In {\em {Eurocrypt}}, number 3494 in LNCS, pages 302--321. Springer,
+  2005.
+
+\bibitem[CHL{\etalchar{+}}15]{CHL+15}
+Jung~Hee Cheon, Kyoohyung Han, Changmin Lee, Hansol Ryu, and Damien Stehlé.
+\newblock {Cryptanalysis of the Multilinear Map over the Integers}.
+\newblock In {\em Eurocrypt}, 2015.
+
+\bibitem[CKL06]{CKL06}
+Ran Canetti, Eyal Kushilevitz, and Yehuda Lindell.
+\newblock On the limitations of universally composable two-party computation
+  without set-up assumptions.
+\newblock {\em Journal of Cryptology}, 19(2):135--167, 2006.
+\newblock \href {https://doi.org/10.1007/s00145-005-0419-9}
+  {\path{doi:10.1007/s00145-005-0419-9}}.
+
+\bibitem[CL01]{CL01}
+Jan Camenisch and Anna Lysyanskaya.
+\newblock An efficient system for non-transferable anonymous credentials with
+  optional anonymity revocation.
+\newblock In {\em {Eurocrypt}}, number 2045 in LNCS, pages 93--118. Springer,
+  2001.
+
+\bibitem[Coo71]{Coo71}
+Stephen~A. Cook.
+\newblock The complexity of theorem-proving procedures.
+\newblock In {\em Proceedings of the Third Annual ACM Symposium on Theory of
+  Computing}, STOC '71, pages 151--158. ACM, 1971.
+\newblock URL: \url{http://doi.acm.org/10.1145/800157.805047}, \href
+  {https://doi.org/10.1145/800157.805047} {\path{doi:10.1145/800157.805047}}.
+
+\bibitem[CP92]{CP92}
+D.~Chaum and T.~Pedersen.
+\newblock {Transferred Cash Grows in Size}.
+\newblock In {\em {Eurocrypt}}, volume 658 of {\em LNCS}, pages 390--407, 1992.
+
+\bibitem[DG17a]{DG17a}
+Nico D{\"o}ttling and Sanjam Garg.
+\newblock {From Selective IBE to Full IBE and Selective HIBE}.
+\newblock In {\em TCC}, LNCS, pages 372--408. Springer, 2017.
+
+\bibitem[DG17b]{DG17}
+Nico Döttling and Sanjam Garg.
+\newblock {Identity-Based Encryption from the Diffie-Hellman Assumption}.
+\newblock In {\em Crypto}, volume 10401 of {\em LNCS}, pages 537--569.
+  Springer, 2017.
+
+\bibitem[DM14]{DM14}
+L{\'e}o Ducas and Daniele Micciancio.
+\newblock {Improved Short Lattice Signatures in the Standard Model}.
+\newblock In {\em Crypto}, LNCS, pages 335--352. Springer, 2014.
+
+\bibitem[dPLNS17]{dPLNS17}
+Rafa~l del Pino, Vadim Lyubashevsky, Gregory Neven, and Gregory Seiler.
+\newblock {Practical Quantum-Safe Voting from Lattices}.
+\newblock In {\em CCS}, 2017.
+
+\bibitem[EGL85]{EGL85}
+S.~Even, O.~Goldreich, and A.~Lempel.
+\newblock A randomized protocol for signing contracts.
+\newblock 28(6):637--647, 1985.
+
+\bibitem[FS86]{FS86}
+Amos Fiat and Adi Shamir.
+\newblock How to prove yourself: Practical solutions to identification and
+  signature problems.
+\newblock In Andrew~M. Odlyzko, editor, {\em Crypto}, pages 186--194. Springer,
+  1986.
+
+\bibitem[FY93]{FY93}
+M.~Franklin and M.~Yung.
+\newblock Secure and efficient off-line digital money.
+\newblock In {\em {ICALP}}, volume 700 of {\em LNCS}, pages 265--276. Springer,
+  1993.
+
+\bibitem[Gen09]{Gen09}
+C.~Gentry.
+\newblock Fully homomorphic encryption using ideal lattices.
+\newblock In {\em {STOC}}, pages 169--178. ACM, 2009.
+
+\bibitem[GH08]{GH08}
+Matthew Green and Susan Hohenberger.
+\newblock {Universally Composable Adaptive Oblivious Transfer}.
+\newblock In {\em {Asiacrypt}}, number 5350 in LNCS, pages 179--197. Springer,
+  2008.
+
+\bibitem[Gil77]{Gil77}
+John Gill.
+\newblock {Computational Complexity of Probabilistic Turing Machines}.
+\newblock {\em SIAM J. on Computing}, 6(4):675--695, 1977.
+\newblock \href {https://arxiv.org/abs/https://doi.org/10.1137/0206049}
+  {\path{arXiv:https://doi.org/10.1137/0206049}}, \href
+  {https://doi.org/10.1137/0206049} {\path{doi:10.1137/0206049}}.
+
+\bibitem[GM82]{GM82}
+Shafi Goldwasser and Silvio Micali.
+\newblock Probabilistic encryption \& how to play mental poker keeping secret
+  all partial information.
+\newblock In {\em STOC}, pages 365--377. ACM, 1982.
+
+\bibitem[Gol04]{Gol04}
+Oded Goldreich.
+\newblock {\em Foundations of Cryptography: Volume 2, Basic Applications}.
+\newblock Cambridge University Press, 2004.
+
+\bibitem[GOS06]{GOS06}
+Jens Groth, Rafail Ostrovsky, and Amit Sahai.
+\newblock {Perfect Non-interactive Zero Knowledge for NP}.
+\newblock In {\em Eurocrypt}, 2006.
+
+\bibitem[GPS17]{GPS17}
+Steven~D. Galbraith, Christophe Petit, and Javier Silva.
+\newblock {Identification Protocols and Signature Schemes Based on
+  Supersingular Isogeny Problems}.
+\newblock In {\em Asiacrypt}, LNCS, pages 3--33. Springer, 2017.
+
+\bibitem[GPV08]{GPV08}
+C.~Gentry, C.~Peikert, and V.~Vaikuntanathan.
+\newblock Trapdoors for hard lattices and new cryptographic constructions.
+\newblock In {\em {STOC}}, pages 197--206. {ACM}, 2008.
+
+\bibitem[Gro07]{Gro07}
+J.~Groth.
+\newblock Fully anonymous group signatures without random oracles.
+\newblock In {\em {Asiacrypt}}, volume 4833 of {\em LNCS}, pages 164--180.
+  Springer, 2007.
+
+\bibitem[GS08]{GS08}
+J.~Groth and A.~Sahai.
+\newblock Efficient non-interactive proof systems for bilinear groups.
+\newblock In {\em {Eurocrypt}}, volume 4965 of {\em LNCS}, pages 415--432.
+  Springer, 2008.
+
+\bibitem[GSW13]{GSW13}
+C.~Gentry, A.~Sahai, and B.~Waters.
+\newblock Homomorphic encryption from learning with errors:
+  Conceptually-simpler, asymptotically-faster, attribute-based.
+\newblock In {\em {Crypto}}, number 8042 in LNCS, pages 75--92, 2013.
+
+\bibitem[IKOS07]{IKOS07}
+Yuval Ishai, Eyal Kushilevitz, Rafail Ostrovsky, and Amit Sahai.
+\newblock {Zero-knowledge from Secure Multiparty Computation}.
+\newblock In {\em STOC}, pages 21--30. ACM, 2007.
+\newblock URL: \url{http://doi.acm.org/10.1145/1250790.1250794}, \href
+  {https://doi.org/10.1145/1250790.1250794}
+  {\path{doi:10.1145/1250790.1250794}}.
+
+\bibitem[JDF11]{JDF11}
+David Jao and Luca De~Feo.
+\newblock {Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic
+  Curve Isogenies}.
+\newblock In {\em PQCrypto}, LNCS, pages 19--34. Springer, 2011.
+
+\bibitem[Jou00]{Jou00}
+Antoine Joux.
+\newblock A one round protocol for tripartite diffie--hellman.
+\newblock In Wieb Bosma, editor, {\em Algorithmic Number Theory}, pages
+  385--393. Springer, 2000.
+
+\bibitem[KB16]{KB16}
+Taechan Kim and Razvan Barbulescu.
+\newblock Extended tower number field sieve: A new complexity for the medium
+  prime case.
+\newblock In Matthew Robshaw and Jonathan Katz, editors, {\em Crypto}, pages
+  543--571. Springer, 2016.
+
+\bibitem[KL07]{KL07}
+Jonathan Katz and Yehuda Lindell.
+\newblock {\em Introduction to Modern Cryptography (Chapman \& Hall/Crc
+  Cryptography and Network Security Series)}.
+\newblock Chapman \& Hall/CRC, 2007.
+
+\bibitem[KTX08]{KTX08}
+A.~Kawachi, K.~Tanaka, and K.~Xagawa.
+\newblock Concurrently secure identification schemes based on the worst-case
+  hardness of lattice problems.
+\newblock In {\em {Asiacrypt}}, volume 5350 of {\em LNCS}, pages 372--389.
+  Springer, 2008.
+
+\bibitem[KTY07]{KTY07}
+Aggelos Kiayias, Yiannis Tsiounis, and Moti Yung.
+\newblock Group encryption.
+\newblock In {\em {Asiacrypt}}, number 4833 in LNCS, pages 181--199. Springer,
+  2007.
+
+\bibitem[KW18]{KW18}
+Sam Kim and David~J. Wu.
+\newblock {Multi-Theorem Preprocessing NIZKs from Lattices}.
+\newblock In {\em Crypto}, LNCS, page To appear. Springen, 2018.
+
+\bibitem[LLM{\etalchar{+}}16a]{LLM+16}
+B.~Libert, S.~Ling, F.~Mouhartem, K.~Nguyen, and H.~Wang.
+\newblock Signature schemes with efficient protocols and dynamic group
+  signatures from lattice assumptions.
+\newblock In {\em {Asiacrypt}}, 2016.
+\newblock URL: \url{http://ia.cr/2016/101}.
+
+\bibitem[LLM{\etalchar{+}}16b]{LLM+16a}
+B.~Libert, S.~Ling, F.~Mouhartem, K.~Nguyen, and H.~Wang.
+\newblock Zero-knowledge arguments for matrix-vector relations and
+  lattice-based group encryption.
+\newblock In {\em {Asiacrypt}}, 2016.
+\newblock URL: \url{https://ia.cr/2016/879}.
+
+\bibitem[LLM{\etalchar{+}}17]{LLM+17}
+Beno{\^i}t Libert, San Ling, Fabrice Mouhartem, Khoa Nguyen, and Huaxiong Wang.
+\newblock Adaptive oblivious transfer with access control from lattice
+  assumptions.
+\newblock In Tsuyoshi Takagi and Thomas Peyrin, editors, {\em Asiacrypt}, pages
+  533--563. Springer, 2017.
+
+\bibitem[LLNW16]{LLNW16}
+B.~Libert, S.~Ling, K.~Nguyen, and H.~Wang.
+\newblock {Zero-Knowledge Arguments for Lattice-Based Accumulators:
+  Logarithmic-size Ring Signatures and Group Signatures Without Trapdoors}.
+\newblock In {\em {Eurocrypt}}, volume 9666 of {\em LNCS}, pages 1--31.
+  Springer, 2016.
+
+\bibitem[LLNW17]{LLNW17}
+Beno~t Libert, San Ling, Khoa Nguyen, and Huaxiong Wang.
+\newblock {Zero-Knowledge Arguments for Lattice-Based PRFs and Applications to
+  E-Cash}.
+\newblock In {\em Asiacrypt}, LNCS, pages 304--335. Springer, 2017.
+
+\bibitem[LM08]{LM08}
+Vadim Lyubashevsky and Daniele Micciancio.
+\newblock {Asymptotically Efficient Lattice-Based Digital Signatures}.
+\newblock In {\em TCC}, LNCS, pages 37--54. Springer, 2008.
+
+\bibitem[LMPY16]{LMPY16}
+Beno\^{\i}t Libert, Fabrice Mouhartem, Thomas Peters, and Moti Yung.
+\newblock Practical "signatures with efficient protocols" from simple
+  assumptions.
+\newblock In {\em AsiaCCS}, pages 511--522. ACM, 2016.
+\newblock URL: \url{http://doi.acm.org/10.1145/2897845.2897898}, \href
+  {https://doi.org/10.1145/2897845.2897898}
+  {\path{doi:10.1145/2897845.2897898}}.
+
+\bibitem[LNWX18]{LNWX18}
+San Ling, Khoa Nguyen, Huaxiong Wang, and Yanhong Xu.
+\newblock {Constant-Size Group Signatures from Lattices}.
+\newblock In {\em PKC}, LNCS, pages 58--88. Springer, 2018.
+
+\bibitem[LP07]{LP07}
+Yehuda Lindell and Benny Pinkas.
+\newblock An efficient protocol for secure two-party computation in the
+  presence of malicious adversaries.
+\newblock In Moni Naor, editor, {\em Eurocrypt}, pages 52--78. Springer, 2007.
+
+\bibitem[LPQ17]{LPQ17}
+Benoît Libert, Thomas Peters, and Chen Qian.
+\newblock {Structure-Preserving Chosen-Ciphertext Security with Shorter
+  Verifiable Ciphertexts}.
+\newblock In {\em PKC}, volume 10174 of {\em LNCS}, pages 247--276. Springer,
+  2017.
+
+\bibitem[LPY15]{LPY15}
+Beno\^{\i}t Libert, Thomas Peters, and Moti Yung.
+\newblock Short group signatures via structure-preserving signatures: Standard
+  model security from simple assumptions.
+\newblock In {\em {Crypto}}, volume 9216 of {\em LNCS}, pages 296--316.
+  Springer, 2015.
+
+\bibitem[LS14]{LS14}
+Adeline Langlois and Damien Stehlé.
+\newblock {Worst-case to average-case reductions for module lattices}.
+\newblock {\em Designs, Codes and Cryptography}, 2014.
+
+\bibitem[LYJP14]{LYJP14}
+Beno{\^\i}t Libert, Moti Yung, Marc Joye, and Thomas Peters.
+\newblock Traceable group encryption.
+\newblock In {\em {PKC} 2014}, volume 8383 of {\em LNCS}, pages 592--610.
+  Springer, 2014.
+\newblock \href {https://doi.org/10.1007/978-3-642-54631-0_34}
+  {\path{doi:10.1007/978-3-642-54631-0_34}}.
+
+\bibitem[Lyu08]{Lyu08}
+Vadim Lyubashevsky.
+\newblock Lattice-based identification schemes secure under active attacks.
+\newblock In {\em {PKC}}, volume 4939 of {\em LNCS}, pages 162--179. Springer,
+  2008.
+
+\bibitem[Lyu09]{Lyu09}
+Vadim Lyubashevsky.
+\newblock {Fiat-Shamir with Aborts: Applications to Lattice and Factoring-Based
+  Signatures}.
+\newblock In {\em Asiacrypt}, pages 598--616. Springer, 2009.
+
+\bibitem[Lyu12]{Lyu12}
+V.~Lyubashevsky.
+\newblock Lattice signatures without trapdoors.
+\newblock In {\em {Eurocrypt}}, volume 7237 of {\em LNCS}. Springer, 2012.
+
+\bibitem[Moh11]{Moh11}
+Payman Mohassel.
+\newblock {One-Time Signatures and Chameleon Hash Functions}.
+\newblock In {\em SAC}, LCNS, pages 302--319. Springer, 2011.
+
+\bibitem[MP12]{MP12}
+D.~Micciancio and C.~Peikert.
+\newblock Trapdoors for lattices: Simpler, tighter, faster, smaller.
+\newblock In {\em {Eurocrypt}}, volume 7237 of {\em LNCS}, pages 700--718.
+  Springer, 2012.
+
+\bibitem[MSS17]{MSS17}
+Alfred Menezes, Palash Sarkar, and Shashank Singh.
+\newblock {Challenges with Assessing the Impact of NFS Advances on the Security
+  of Pairing-Based Cryptography}.
+\newblock In Rapha{\"e}l C.-W. Phan and Moti Yung, editors, {\em Paradigms in
+  Cryptology -- Mycrypt. Malicious and Exploratory Cryptology}, pages 83--108.
+  Springer, 2017.
+
+\bibitem[Nao03]{Nao03}
+Moni Naor.
+\newblock On cryptographic assumptions and challenges.
+\newblock In Springer, editor, {\em Crypto}, pages 96--109, 2003.
+
+\bibitem[NIS17]{NIS17}
+NIST.
+\newblock {NIST post-quantum competition. Round 1.}, 2017.
+\newblock
+  \url{https://csrc.nist.gov/Projects/Post-Quantum-Cryptography/Round-1-Submissions}.
+
+\bibitem[NP99]{NP99}
+M.~Naor and B.~Pinkas.
+\newblock Oblivious transfer with adaptive queries.
+\newblock In {\em {Crypto}}, volume 1666 of {\em LNCS}, pages 573--590, 1999.
+
+\bibitem[Oka95]{Oka95}
+T.~Okamoto.
+\newblock An efficient divisible electronic cash scheme.
+\newblock In {\em {Crypto}}, volume 963 of {\em LNCS}, pages 438--451.
+  Springer, 1995.
+
+\bibitem[OO91]{OO91}
+K.~Ohta and T.~Okamoto.
+\newblock Universal electronic cash.
+\newblock In {\em {Crypto}}, volume 576 of {\em LNCS}, pages 324--337.
+  Springer, 1991.
+
+\bibitem[Pre17]{Pre17}
+Thomas Prest.
+\newblock {Sharper Bounds in Lattice-Based Cryptography Using the Rényi
+  Divergence}.
+\newblock In {\em Asiacrypt}, LNCS, pages 347--374o. Springer, 2017.
+
+\bibitem[PV08]{PV08}
+C.~Peikert and V.~Vaikuntanathan.
+\newblock Non-interactive statistical zero-knowledge proofs for lattice
+  problems.
+\newblock In {\em {Crypto}}, volume 5157 of {\em LNCS}, pages 536--553.
+  Springer, 2008.
+
+\bibitem[PVW08]{PVW08}
+C.~Peikert, V.~Vaikuntanathan, and B.~Waters.
+\newblock A framework for efficient and composable oblivious transfer.
+\newblock In {\em {Crypto}}, volume 5157 of {\em LNCS}, pages 554--571, 2008.
+
+\bibitem[PW08]{PW08}
+Chris Peikert and Brent Waters.
+\newblock {Lossy Trapdoor Functions and Their Applications}.
+\newblock In {\em STOC}, pages 187--196. ACM, 2008.
+
+\bibitem[Rab60]{Rab60}
+Michael~Oser Rabin.
+\newblock Degree of difficulty of computing a function and a partial ordering
+  of recursive sets.
+\newblock Technical Report 2, {Hebrew University of Jerusalem}, 1960.
+
+\bibitem[Rab81]{Rab81}
+M.~Rabin.
+\newblock How to exchange secrets by oblivious transfer.
+\newblock Technical Report TR-81, Aiken Computation Laboratory, Harvard
+  University, 1981.
+
+\bibitem[Reg05]{Reg05}
+O.~Regev.
+\newblock On lattices, learning with errors, random linear codes, and
+  cryptography.
+\newblock In {\em {STOC}}, pages 84--93. {ACM}, 2005.
+
+\bibitem[RSS18]{RSS18}
+Ron~D. Rothblum, Adam Sealfon, and Katerina Sotiraki.
+\newblock {Towards Non-Interactive Zero-Knowledge for NP from LWE}.
+\newblock {iacr ePrint Report}, 2018.
+\newblock \url{https://eprint.iacr.org/2018/240}.
+
+\bibitem[Sch96]{Sch96}
+Claus~Peter Schnorr.
+\newblock {Security of $2^t$-Root Identification and Signatures}.
+\newblock In {\em Crypto}, LNCS, pages 143--156. Springer, 1996.
+
+\bibitem[Sho99]{Sho99}
+Peter~W. Shor.
+\newblock {Polynomial-time algorithms for prime factorization and discrete
+  logarithms on a quantum computer}.
+\newblock {\em SIAM review}, 41(2):303--332, 1999.
+
+\bibitem[Sho06]{Sho06}
+Victor Shoup.
+\newblock {Sequences of Games: A Tool for Taming Complexity in Security
+  Proofs}.
+\newblock Tutorial. \url{http://www.shoup.net/papers/games.pdf}, January 2006.
+
+\bibitem[SOK00]{SOK00}
+Ryuichi Sakai, Kiyoshi Ohgishi, and Masao Kasahara.
+\newblock {Cryptosystems Based on Pairings}.
+\newblock In {\em Symposium on Cryptography and Information Security}, pages
+  26--28, 2000.
+
+\bibitem[Ste96]{Ste96}
+Jacques Stern.
+\newblock A new paradigm for public key identification.
+\newblock 42(6):1757--1768, 1996.
+
+\bibitem[Tsi97]{Tsi97}
+Y.~Tsiounis.
+\newblock {\em Efficient Electronic Cash: New Notions and Techniques}.
+\newblock PhD thesis, 1997.
+
+\bibitem[VP17]{VP17}
+Mathy Vanhoef and Frank Piessens.
+\newblock {Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2}.
+\newblock In {\em CCS}, pages 1313--1328. ACM, 2017.
+
+\bibitem[Yao86]{Yao86}
+Andrew Chi-Chih Yao.
+\newblock How to generate and exchange secrets.
+\newblock In {\em FOCS}, 1986.
+
+\bibitem[ZAW{\etalchar{+}}10]{ZAW+10}
+Y.~Zhang, M.-H. Au, D.~Wong, Q.~Huang, N.~Mamoulis, D.~Cheung, and S.-M. Yiu.
+\newblock Oblivious transfer with access control: Realizing disjunction without
+  duplication.
+\newblock In {\em {Pairing}}, number 6847 in LNCS, pages 96--115, 2010.
+
+\end{thebibliography}

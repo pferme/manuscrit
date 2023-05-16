@@ -1,0 +1,11 @@
+\makeatletter
+\newcommand\frenchtableofcontents{%
+  \selectlanguage{french}%
+  \chapter*[\contentsname]{\contentsname
+    \@mkboth{%
+      \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+ \@starttoc{tof}%
+  \addcontentsline{tof}{chapter}{\contentsname}
+  \selectlanguage{english}%
+ }
+ \makeatother

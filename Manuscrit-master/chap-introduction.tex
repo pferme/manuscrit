@@ -1,0 +1,214 @@
+In the last fifty years, the use of cryptography has shifted from military and commercial secrets to a broader public.
+For instance, the Enigma machine had a design for military purposes, and another one for companies (Enigma A26).
+As of today, about $60\%$ of the first million most visited websites propose encrypted and authenticated communications (via \texttt{https}), and so are most of the communications channels used by electronic devices (like \textit{Wifi Protected Access}).
+
+At the same time, the growth of exchanged data and the sensitivity of transferred information make the urge of protecting these data efficiently even more critical.
+While we are reaching the Moore's law barrier, other threats exist against nowadays' cryptosystems.
+For instance, the existence of a quantum computer with sufficient memory~\cite{Sho99} would break most of real-world cryptographic designs, which mostly rely on modular arithmetic assumptions.
+In this context, it is crucial to design cryptographic schemes that are believed to be quantum-resistant.
+
+To address this problem, \textit{post-quantum cryptography} arose in the early 2000s.
+The different candidates rely on several mathematical objects, such as lattices, error-correcting codes, systems of multivariate polynomials, etc.
+Recently, the National Institute of Standards and Technology (or \textit{NIST}) organized a competition to evaluate different post-quantum schemes for encryption and signatures~\cite{NIS17}.
+In this competition, 82 protocols have been proposed out of which: 28 were lattice-based, 24 were code-based, 13 were multi-variate based, 4 were hash-based and the 13 left were categorized as ``other''.
+
+Though, real-world cryptography mainly aims at designing digital signatures and encryption schemes, as illustrated by the NIST competition. 
+Meanwhile, ongoing research in cryptology proposes different solutions to address more specific problems, such as the design of electronic-cash systems\footnote{Which is not to be confused with cryptocurrency\ldots}~\cite{CFN88}, which are the digital analogue of real money. Coins are delivered by a central authority (the bank) and spendings remain untraceable. In case of misbehavior (such as double-spending), the identity of the cheater is revealed.
+
+Cryptographic constructions should additionally verify some security requirements.
+For instance, an encryption scheme has to hide a message in the presence of an eavesdropper, or even an active adversary who can alter some messages.
+To guarantee these requirements, cryptographers provide security proofs in the sense of precise security models.
+A security proof mainly states that a given cryptographic scheme is secure if some problems are hard.
+
+At last but not least, the importance of privacy and data protection has been a hot topic in the last years, as reflected by the development of the general data protection regulation law in 2016, which is implemented since may 25$^\text{th}$.
+Hence, it is appealing to have privacy-preserving cryptographic constructions which would ideally resist the advent of a quantum computer.
+Nevertheless, the design of such protocols crucially relies on ``zero-knowledge proofs''. These are $2$-party protocols between a prover and a verifier where the prover should convince the verifier of a statement without leaking any piece of information about this statement.
+In the context of post-quantum cryptography, such proofs systems are still limited in power or costly in terms of time, memory and communication consumptions.
+
+\section{Privacy-Preserving Cryptography}
+\label{se:privacy-preserving-crypto}
+
+In this context, `privacy-preserving' refers to the ability of a primitive to provide some functionalities while holding sensitive information private.
+An example of such primitives are \textit{anonymous credentials}~\cite{Cha85,CL01}.
+Informally, this primitive allows users to prove themselves to some verifiers without telling their identity, nor the pattern of their authentications.
+To realize this, this system involves one (or more) credential issuer(s) and a set of users who have their own secret keys and pseudonyms that are bound to their secret.
+Users can dynamically obtain credentials from an issuer that only knows users' pseudonyms and obliviously sign users' secret key as well as a set of attributes.
+Later on, users can make themselves know to verifiers under a different pseudonym and demonstrate possession of a certification from the issuer, without revealing neither the signature nor the secret key.
+This primitive thus allows a user to authenticate to a system (e.g., in anonymous access control) while retaining its anonymity.
+In addition, the system is guaranteed that users indeed possess a valid credential.
+
+Interests in privacy-based cryptography date back to the beginning of public-key cryptography~\cite{Rab81,Cha82,GM82,Cha85}.
+A reason for that could be the similarities between the motivations of cryptography and the requirements of privacy protection.
+Additionally, cryptographers' work in this field may have direct consequences in term of services that could be developed in the real-world.
+Indeed, having a practical anonymous credential scheme will enable its use for access control in a way that limits security flaws.
+Whereas, nowadays' implementations are based on more elementary building blocks, like signatures, whose manipulations may lead to different security holes~\cite{VP17}.
+
+Similarly, \textit{advanced primitives} often involve simpler building blocks in their design.
+The difference lies in that provable security conveys security guarantees for the construction.
+As explained before, these proofs make the security of a set of schemes rely on hardness assumptions.
+Thus, the security relies on the validity of those assumptions, which are independently studied by cryptanalysts.
+Hence, security is guaranteed by the study of those assumptions.
+For example, the security analysis of multilinear maps in~\cite{CHL+15} made obsolete a large amount of candidates at this time.
+This example reflects the importance of relying on well-studied and simple assumptions as we will explain in~\cref{ch:proofs}.
+
+In the context of this thesis, the developed cryptographic schemes rely on lattices and bilinear maps over cyclic groups.
+Lattice-based cryptography is used to step towards post-quantum cryptography, while the latter proves useful in the design of practical schemes.
+The details of these two structures are given in~\cref{ch:structures}.
+
+\subsection{Zero-Knowledge Proofs}
+
+As explained before, zero-knowledge proofs are a basic building block for privacy-preserving cryptography.
+They require completeness, soundness and zero-knowledge properties.
+Completeness captures the correctness of the protocol if everyone is honest. In the case of a dishonest prover, soundness asks the probability that the verifier is convinced to be negligible.
+On the contrary, if the verifier is cheating, the zero-knowledge property guarantees that the prover's secret remains hidden. 
+
+In the case of identification schemes, the nature of the secret remains simple and solutions exist under multiple assumptions~\cite{Sch96,Ste96,KTX08,Lyu08}.
+For more complex statements, such as proving correct computation, a gap appears between post-quantum schemes and modular arithmetic-based schemes.
+In the case of pairing-based cryptography, there exist non-interactive zero-knowledge proofs which can prove a large variety of statements~\cite{GOS06,GS08} without idealized assumptions.
+Such proofs are still missing in the context of post-quantum cryptography so far.
+
+In the lattice world, there are two main families of proof systems: Schnorr-like proofs~\cite{Sch96,Lyu09} and Stern-like proofs~\cite{Ste96}, named after their respective authors.
+The first family works on some structured lattices. Exploiting this structure allows for more compact proofs, while the expressiveness of statements is quite restricted.
+The second kind of proofs is combinatorial and works on the representation of lattice elements (as matrix and vectors).
+By nature, these proofs are quite expensive in term of communication complexity.
+However, they can be used to prove a wide variety of statements as we will explain in more details along this thesis and especially in~\cref{sse:stern}.
+More generally, zero-knowledge proofs are detailed in~\cref{ch:zka}.
+
+\subsection{Signatures with Efficient Protocols}
+
+To enable privacy-preserving functionalities, a possible avenue is to couple zero-knowledge proofs with signature schemes.
+One of such signatures are \textit{signatures with efficient protocols}.
+This primitive extends the functionalities of ordinary digital signature schemes in two ways: (i)~It provides a protocol to allow a signer to obliviously sign a hidden message and (ii)~Users are able to prove knowledge of a hidden message-signature pair in a zero-knowledge fashion.
+
+These two properties turn out to be extremely useful when it comes designing efficient anonymity-related protocols such as anonymous credentials or e-cash.
+The design of effective signatures with efficient protocols is thus important for privacy-preserving cryptography.
+
+In this thesis, we provide two of these signature schemes.
+One of them, described in~\cref{ch:sigmasig}, based on pairings, shifts the~\cite{LPY15} signature scheme to an idealized but practically acceptable model, aiming at efficiency.
+The other, described in~\cref{ch:gs-lwe}, adapts a variant of Boyen's signature~\cite{Boy10,BHJ+15} along with the Kawachi-Tanaka-Xagawa commitment scheme~\cite{KTX08} to provide a lattice-based signature schemes that is compatible with Stern-like proofs.
+This scheme has also been relaxed in the context of adaptive oblivious transfer where, in some places, it is only required to have random-message security instead of security against chosen-message security as described in~\cref{ch:ot-lwe}.
+
+\section{Pairings and Lattices} 
+
+In this thesis, the proposed constructions rely on the assumed hardness of assumptions over pairing-friendly groups and lattices.
+These two objects have widely been used in cryptography since the early 2000s~\cite{SOK00,Reg05}.
+Even since, they attracted much attention from cryptographers, leading to multiple constructions in advanced cryptography (as in~\cite{Jou00,BBS04,BN06,GS08,LYJP14,LPQ17} for pairings, and~\cite{GPV08,ABB10,BV11,GSW13,dPLNS17} for lattices).
+
+\subsection{Pairing-Based Cryptography}
+
+A pairing is a bilinear map from two cyclic source groups to a target group.
+This bilinear property takes advantage of a rich structure to groups that are compatible with such a map.
+It is then not surprising to see the variety of schemes that stems from pairing-based cryptography.
+In the context of privacy-based cryptography, an important breakthrough was the introduction of Groth-Sahai proofs~\cite{GOS06,GS08} that allow proving in a non-interactive zero-knowledge fashion a large class of statements in the standard model.
+For instance, Groth-Sahai proofs have been used in group signatures and anonymous-credential schemes~\cite{Gro07,BCKL08,BCC+09}, or e-cash systems in the standard model~\cite{BCKL09}.
+
+In this thesis, however, our pairing-based constructions focus on practicality.
+Thus, they are instantiated in the random oracle model, where Schnorr's proof are made non-interactive through the Fiat-Shamir transform when the statement to prove is simple enough.
+
+A recent line of work in cryptanalysis of bilinear maps~\cite{KB16,MSS17,BD18} led to a change in the panorama of practical pairing-based cryptography.
+This affects us in the sense that security parameter has to be increased in order to achieve the same security level.
+
+Nevertheless, pairing-based cryptography offers a nice tradeoff between its capabilities and efficiency.
+As an example, we can cite the work of Döttling and Garg~\cite{DG17}, who closed the problem of providing an identity-based encryption scheme which only relies on the Diffie-Hellman assumption (it is construction on cyclic groups that does not need pairings, as defined in~\cref{de:DDH}).
+While their construction relies on a simpler mathematical object, it does not reach the efficiency of pairing-based ones~\cite{BB04}.
+
+\subsection{Lattice-Based Cryptography}
+
+From an algebraic point of view, a lattice is a discrete subgroup of $\RR^n$,
+which leads to a simple additive structure.
+The core difference with number-theoretic cryptography, such as discrete-logarithm-based cryptography, is the existence of the geometrical structure of the lattice.
+From this geometry rises some problems that are believed to withstand quantum computers.
+Despite this apparently simple structure, some advanced primitives are only known, as of today, to be possible under lattice assumptions, such as fully-homomorphic encryption~\cite{Gen09,BV11,GSW13}.
+
+The versatility of lattice-based cryptography is enabled by the existence of lattice trapdoors~\cite{GPV08,CHKP10,MP12}, as we explain in~\cref{sse:lattice-trapdoors}.
+Informally, the knowledge of a short basis for a lattice allows sampling short vectors, which is believed to be hard without such a short basis.
+Furthermore, knowing a short basis for the lattice $\{\mathbf{v} \in \ZZ^m \mid \mathbf{A} \mathbf{z} = 0 \bmod q\}$ described by matrix $\mathbf{A} \in \ZZ_q^{n \times m}$ makes it possible to generate a short basis for a related lattice described by $[ \mathbf{A} \mid \mathbf{B}] \in \ZZ_q^{n \times m'}$.
+An application for this property is Boyen's signature scheme~\cite{Boy10}.
+In this scheme, a signature for message $m$ is a short vector in the orthogonal lattice of the matrix $\mathbf{A}_m = [\mathbf{A} \mid \mathbf{B}_m]$, where $\mathbf{B}_m$ is publicly computable.
+Hence, knowing a trapdoor for $\mathbf{A}$ makes the computation of this short vector possible, and the message is bound to the description of the lattice $\mathbf{A}_m$.
+
+Still, the use of lattice trapdoors comes at a price, as it significantly decreases the efficiency of cryptographic designs that use them~\cite{Lyu12,LLNW16}.
+Given that we provide the first lattice-based construction for the scheme we present, we focused on designing provably-secure scheme under well-studied assumptions.
+
+\section{Our Results}
+
+In this thesis, we present several cryptographic constructions that preserve privacy.
+These constructions are the result of both improvements we made in the use of zero-knowledge proofs and the ability to prove the security of our constructions under standard assumptions.
+We believe that these advances on zero-knowledge proofs are of independent interest and that the given schemes are a step towards quantum-secure privacy-preserving cryptography.
+In the following, we detail four contributions that are developed in this thesis.
+These results are taken from four published articles: \cite{LMPY16,LLM+16,LLM+16a,LLM+17}.
+
+\subsection{Dynamic Group Signatures and Anonymous Credentials}
+
+In~\cref{pa:gs-ac}, we present two primitives: dynamic group signatures and anonymous credentials.
+We already described the behavior of anonymous credential in~\cref{se:privacy-preserving-crypto}.
+As for dynamic group signatures, they are a primitive that allows a group of users to authenticate messages on behalf of the group while remaining anonymous inside this group.
+The users still remain accountable for their actions, as another authority knows a secret information that gives it the ability to lift anonymity of misbehaving users.
+
+By itself, this primitive can be used to provide anonymous authentications while providing accountability (which is not the case with anonymous credentials).
+For instance, in the Internet of things, such as smart cars, it is important to provide authenticated communication channels as well as anonymity. For car communications, if exchanged data may not be sensitive by themselves, the identity of the driver could be.
+We can imagine a scenario where some burglars eavesdrop a specific car to know whenever a house is empty.
+
+In this thesis, we present in~\cref{ch:sigmasig} pairing-based group signatures that aims at efficiency while relying on simple assumptions.
+The resulting scheme shows competitive signature size with other schemes that rely on more ad-hoc assumptions, and its practicality is supported by an implementation.
+This scheme is presented in~\cite{LMPY16}, which is joint work with Benoît Libert, Thomas Peters and Moti Yung presented at AsiaCCS'16.
+
+\cref{ch:gs-lwe} presents the first \textit{dynamic} group signature scheme relying on lattice assumptions.
+This has been made possible by adapting Stern-like proofs to properly interact with a signature scheme: a variant of Boyen's signature~\cite{Boy10,BHJ+15}.
+It results in a \textit{signature with efficient protocols} that is of independent interest.
+Later, it has been adapted in the design dynamic group encryption~\cite{LLM+16a} and adaptive oblivious transfer~\cite{LLM+17}.
+This work is described in~\cite{LLM+16}, made with Benoît Libert, San Ling, Khoa Nguyen and Huaxiong Wang and presented at Asiacrypt'16.
+
+\subsection{Group Encryption}
+
+Group encryption schemes~\cite{KTY07} are the encryption analogue of group signatures.
+In this setting, a user is willing to send a message to a group member, while keeping the recipient of the message hidden inside the group.
+In order to keep user accountable for their actions, an opening authority is further empowered with some secret information allowing it to un-anonymize ciphertexts.
+
+More formally, a group signature scheme is a primitive allowing the sender to generate publicly verifiable proofs that: (1) The ciphertext is well-formed and intended to some registered group member who will be able to decrypt; (2) The opening authority will be able to identify the receiver if necessary; (3) The plaintext satisfies certain properties, such as being a witness for some public relation.
+In the model of Kiayias, Tsiounis and Yung~\cite{KTY07}, the message secrecy and anonymity properties are required to withstand active adversaries, which are granted access to decryption oracles in all security definitions.
+
+A natural application is to allow a firewall to filter all incoming encrypted emails except those intended for some certified organization members and the content of which is additionally guaranteed to satisfy certain requirements, like the absence of malware.
+Furthermore, group encryption schemes are motivated by privacy applications such as anonymous trusted third parties, key recovery mechanisms or oblivious retriever storage system.
+In cloud storage services, group encryption enables privacy-preserving asynchronous transfers of encrypted datasets.
+Namely, it allows users to archive encrypted datasets on remote servers while convincing those servers that the data is indeed intended to some anonymous certified client who has a valid account to the storage provider.
+In case of suspicions on the archive's content, a judge should be able do identify the recipient of the archive.
+
+To tackle the problem of designing lattice-based group encryption, we needed to handle ``quadratic relations''.
+Indeed, lattice-based zero-knowledge proof systems were able to handle only relations where witnesses are multiplied by a public value.
+Let us recall that, in Learning-With-Errors schemes, an encryption have the form $\mathbf{A} \cdot \mathbf{s} + \mathbf{e} + \mathbf{m} \lceil \frac{q}{2} \rceil \bmod q$, where $\mathbf{A}$ is the recipient public-key.
+As group encryption requires this public-key $\mathbf{A}$ to be private, a way to achieve this is to have a zero-knowledge proof system which handles relations where the witness is multiplied with a private matrix.
+
+We address this issue introducing new technique to handle this kind of relations.
+These techniques, based on a \textit{divide-and-conquer} strategy, are described in~\cref{ch:ge-lwe}, as well as the construction of the group encryption scheme proven fully-secure in the standard model.
+This work have been presented at Asiacrypt'16~\cite{LLM+16a} and have been done with Benoît Libert, San Ling, Khoa Nguyen and Huaxiong Wang.
+
+\subsection{Adaptive Oblivious Transfer}
+
+Oblivious transfer is a primitive coined by Rabin~\cite{Rab81} and later extended by Even, Goldreich and Lempel~\cite{EGL85}.
+It involves a server with a database of messages indexed from $1$ to $N$ and a receiver with a secret index $\rho \in \{1,\ldots,N\}$.
+The protocol allows the receiver to retrieve the $\rho$-th message from the database without letting it infer anything on his choice.
+Furthermore, the receiver only obtains the $\rho$-th message and learns nothing about the other messages.
+
+In its adaptive flavor~\cite{NP99}, oblivious transfer allows the receiver to interact $k$ times with the server to obtain $k$ messages in such a way that, each request may depend on the previously retrieved messages.
+
+From a theoretical point of view, oblivious transfer is known to be a \textit{complete building block} for cryptography in the sense that, if it can be realized, then any secure multiparty computation can be.
+In its adaptive variant, oblivious transfer has applications in privacy-preserving access to sensitive databases (such as medical records or financial data) stored in an encrypted form on a remote server.
+
+In its basic form, (adaptive) oblivious transfer does not restrict in any way the population of users who can obtain specific records.
+In many sensitive databases (e.g., DNA samples or patients' medical history), however, not all users should be able to access the whole database.
+It is thus crucial to protect the access to certain entries conditioned on the receiver holding suitable credentials delivered by authorities.
+At the same time, privacy protection requires that authorized users should be able to query database records while leaking as little as possible about their interests or activities.
+
+These requirements are handled by endowing oblivious transfer with access control, as stated by Camenish, Dubovitskaya and Neven~\cite{CDN09}.
+In this variant, each database record is protected by a different access control policy.
+Based on their attributes, users can obtain credentials from pre-determined authorities, which entitle them to anonymously retrieve database records of which the access policy accepts their certified attributes.
+During the transfer phase, the user demonstrates, in a zero-knowledge manner, possession of an attribute string compatible with the policy of a record in the database, as well as a credential for this attribute.
+The only information that the database holder eventually learns is that some user retrieved some record which he was authorized to obtain.
+
+To achieve this, an important property is the expressiveness of such access policies.
+In other words, the system should be able to handle complex attribute policies while keeping time and memory consumption reasonable\footnote{Here, ``\textit{reasonable}'' means (probabilistic) polynomial time.}.
+In this thesis, we propose in~\cref{ch:ot-lwe} a zero-knowledge protocol to efficiently handle any access policy that can be described with a logarithmic-depth boolean circuit, also known as $\mathsf{NC}1$, based on lattices.
+In the context of adaptive oblivious transfer with access control, most of the schemes (based on pairing assumptions) manage to handle the case of conjunctions under reasonable assumptions~\cite{CDN09,CDNZ11,ACDN13}. Under strong assumptions, however, the case of $\mathsf{NC}1$ can be taken care of~\cite{ZAW+10}.
+
+This joint work with Benoît Libert, San Ling, Khoa Nguyen and Huaxiong Wang was presented at Asiacrypt'17~\cite{LLM+17}. 

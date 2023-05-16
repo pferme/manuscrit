@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: alphaurl.bst.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: these.bib.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty journal in Cha85
+Warning--empty journal in EGL85
+Warning--empty journal in Ste96
+Warning--empty school in Tsi97
+You've used 104 entries,
+            3368 wiz_defined-function locations,
+            1346 strings with 19519 characters,
+and the built_in function-call counts, 65719 in all, are:
+= -- 7206
+> -- 2265
+< -- 143
++ -- 744
+- -- 733
+* -- 3656
+:= -- 8830
+add.period$ -- 389
+call.type$ -- 104
+change.case$ -- 669
+chr.to.int$ -- 102
+cite$ -- 108
+duplicate$ -- 2411
+empty$ -- 5899
+format.name$ -- 858
+if$ -- 16799
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 101
+newline$ -- 537
+num.names$ -- 330
+pop$ -- 1264
+preamble$ -- 1
+purify$ -- 776
+quote$ -- 0
+skip$ -- 4552
+stack$ -- 0
+substring$ -- 3182
+swap$ -- 921
+text.length$ -- 163
+text.prefix$ -- 29
+top$ -- 0
+type$ -- 820
+warning$ -- 4
+while$ -- 530
+width$ -- 107
+write$ -- 1483
+(There were 4 warnings)

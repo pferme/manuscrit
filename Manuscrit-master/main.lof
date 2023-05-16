@@ -1,0 +1,27 @@
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\addvspace {10pt}
+\babel@toc {english}{}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of a polynomial-time reduction from $A$ to $B$.}}{13}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Some security games examples.\relax }}{17}{figure.2.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {\ensuremath {\mathrm {IND\pcmathhyphen {}CPA}}{} game for \textsf {PKE}\xspace }}}{17}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {EU-CMA game for signatures}}}{17}{subfigure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Simulation-based cryptography.\relax }}{19}{figure.2.3}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Illustration of a polynomial-time reduction from $A$ to $B$.}}{25}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Some security games examples.\relax }}{29}{figure.3.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {\ensuremath {\mathrm {IND\pcmathhyphen {}CPA}}{} game for \textsf {PKE}\xspace }}}{29}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {EU-CMA game for signatures}}}{29}{subfigure.2.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Simulation-based cryptography.\relax }}{31}{figure.3.3}

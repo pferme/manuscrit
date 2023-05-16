@@ -1,0 +1,183 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Lattice-Based Cryptography} %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+During the last decade, lattice-based cryptography has emerged as a promising candidate for post-quantum cryptography.
+For example, on the first round of the NIST post-quantum competition, there are 28 out of 82 submissions stem from lattice-based cryptography~\cite{NIS17}.
+Lattice-based cryptography takes advantage of a simple mathematical structure in order to realize advanced functionalities, beyond encryption and signature schemes.
+For instance, fully homomorphic encryption~\cite{Gen09,GSW13} is only known to be possible in the lattice-based world for now.
+
+In the context of provable security, lattice assumptions benefit from a worst-case-to-average-case reduction~\cite{Reg05,GPV08,MP12,AFG14}.
+Concurrently, worst-case lattice problems have been extensively analyzed in the last decade~\cite{ADS15,ADRS15,HK17}, both classically and quantumly.
+
+This gives us a good confidence in lattice assumptions (given the \emph{caveats} of \cref{ch:proofs}) such as Learning-with-Errors ($\LWE$) and Short Integer Solutions ($\SIS$) which are defined in Section~\ref{sse:lattice-problems}. The rest of this section will describe some useful tools that rely on \emph{lattice trapdoors}.
+
+\subsection{Lattices and Hard Lattice Problems}
+\label{sse:lattice-problems}
+\addcontentsline{tof}{subsection}{\protect\numberline{\thesubsection} Réseaux euclidiens et problèmes difficiles}
+
+\begin{figure}
+  \centering
+  \input fig-lattice-base
+  \caption{A lattice $\Lambda$ with two different basis.}
+  \label{fig:lattice-basis}
+\end{figure}
+
+A (full-rank) lattice~$\Lambda$ is defined as the set of all integer linear combinations of some linearly independent basis vectors~$(\mathbf{b}_i^{})^{}_{1\leq i \leq n}$ of~$\RR^n_{}$.
+The integer~$n$ denotes the \emph{dimension} of the lattice.
+A lattice basis is not unique, as illustrated in Figure~\ref{fig:lattice-basis} with a dimension $2$ lattice.
+In the following, we work with $q$-ary lattices, for some prime number $q$, defined as follows.
+
+\begin{definition}[$q$-ary lattices] \label{de:qary-lattices} \index{Lattices}
+  Let two integers~$m \geq n \geq 1$, a prime~$q \geq 2$, a matrix $\mathbf{A} \in \ZZ_q^{n \times m}$ and a vector~$\mathbf{u} \in \ZZ_q^n$, define
+  \begin{align*}
+    \Lambda_q^{}(\mathbf{A})               & \triangleq \{ \mathbf{e} \in \ZZ^m_{} \mid \exists~\mathbf{s} \in \ZZ_q^n ~\text{ s.t. }~\mathbf{A}^T_{} \cdot \mathbf{s} = \mathbf{e} \bmod q \} \text{ as well as}\\
+    \Lambda_q^{\perp} (\mathbf{A})      & \triangleq \{\mathbf{e} \in \ZZ^m_{} \mid \mathbf{A} \cdot \mathbf{e} = \mathbf{0}^n \bmod q \} \text{, and}\\
+    \Lambda_q^{\mathbf{u}} (\mathbf{A}) & \triangleq  \{\mathbf{e} \in \ZZ^m_{} \mid \mathbf{A} \cdot \mathbf{e} = \mathbf{u} \bmod q \}.
+  \end{align*}
+
+  For any lattice point $\mathbf{t} \in \Lambda_q^{\mathbf{u}} (\mathbf{A})$, it holds that $\Lambda_q^{\mathbf{u}}(\mathbf{A})=\Lambda_q^{\perp}(\mathbf{A}) + \mathbf{t}$, meaning that $\Lambda_q^{\mathbf{u}} (\mathbf{A}) $
+  is a shift of   $\Lambda_q^{\perp} (\mathbf{A})$.
+\end{definition}
+
+\begin{definition}[Gaussian distribution over a lattice] \index{Probability!Gaussian distribution}
+  For a lattice~$\Lambda$, a vector $\mathbf{c} \in \RR^n$ and a real~$\sigma>0$, define the distribution function
+  $\rho_{\sigma,\mathbf{c}}(\mathbf{x}) \triangleq \exp(-\pi\|\mathbf{x}- \mathbf{c} \|^2/\sigma^2)$.
+  The discrete Gaussian distribution of support~$\Lambda$, parameter~$\sigma$ and center $\mathbf{c}$ is defined as
+  $D_{\Lambda,\sigma,\mathbf{c}}(\mathbf{y}) = \rho_{\sigma,\mathbf{c}}(\mathbf{y})/\rho_{\sigma,\mathbf{c}}(\Lambda)$ for any $\mathbf{y} \in \Lambda$, where $\rho_{\sigma, \mathbf{c}}(\Lambda) \triangleq \sum_{\mathbf x \in \Lambda} \rho_{\sigma, \mathbf{c}}(\mathbf{x})$.
+  We denote by  $D_{\Lambda,\sigma}(\mathbf{y}) $ the distribution centered in $\mathbf{c}=\mathbf{0}$.
+\end{definition}
+
+\begin{lemma}[{\cite[Le.~1.5]{Ban93}}]
+\label{le:small}
+For any lattice~$\Lambda \subseteq \RR^{n}_{}$ and positive real number~$\sigma>0$, we have
+$\Pr_{\mathbf{b} \sample D_{\Lambda,\sigma}} \left[ \|\mathbf{b}\| \leq \sigma \sqrt{n} \right] \geq 1-2^{-\Omega(n)}.$
+\end{lemma}
+
+In order to work with lattices in cryptography, hard lattice problems have to be defined~\cite{Ajt96}.
+In the following we state the \textit{Shortest Independent Vectors Problem}~($\SIVP$).
+This problem reduces to the \textit{Learning-with-Errors}~($\LWE$) problems and the Short Integer Solution~($\SIS$) problem as explained later in \cref{le:sis-hard} and~\ref{le:lwe-hard}.
+These links are important as those are ``worst-case-to-average-case'' reductions.
+
+By itself, the $\SIVP$ assumption is not very handy in order to construct new cryptographic designs.
+On the other hand, the $\LWE$ and $\SIS$ assumptions --\,which are ``average-case'' assumptions\,-- are more suitable to design cryptographic schemes.
+
+In order to define the $\SIVP$ problem and assumption, let us first define the successive minima of a lattice, a generalization of the minimum of a lattice (i.e., the length of a shortest non-zero vector in a lattice).
+
+\begin{definition}[Successive minima] \label{de:lattice-lambda}
+  For a lattice $\Lambda$ of dimension $n$, let us define for each~$i \in \{1,\ldots,n\}$ the $i$-th successive minimum as
+  \[ \lambda_i(\Lambda) = \inf \bigl\{ r \mid \dim \left( \Span\left(\Lambda \cap \mathcal B\left(\mathbf{0}, r \right) \right)  \right) \geq i \bigr\}, \]
+  where $\mathcal B(\mathbf{c}, r)$ denotes the ball of radius $r$ centered in $\mathbf{c}$.
+\end{definition}
+
+This leads us to the $\SIVP$ problem, which is to find a set of sufficiently short linearly independent vectors given a lattice basis.
+
+\begin{definition}[$\SIVP$] \label{de:sivp}
+  For a dimension-$n$ lattice described by a basis $\mathbf{B} \in \RR^{n \times m}$, and a parameter $\gamma > 0$, the shortest independent vectors problem is to find $n$ linearly independent vectors $v_1, \ldots, v_n$ such that $\| v_1 \| \leq \| v_2 \| \leq \ldots \leq \| v_n \|$ and $\|v_n\| \leq \gamma \cdot \lambda_n(\mathbf{B})$.
+\end{definition}
+
+As explained before, the hardness of this assumption for worst-case lattices implies the hardness of the following two assumptions in their average-case setting, which are illustrated in Figure~\ref{fig:lwe-sis}.
+In particular, it means that no polynomial-time algorithm can solve those problems with non-negligible probability and non-negligible advantage given that $\SIVP$ is hard.
+%As explained before, we will rely on the assumption that both algorithmic problems below are hard. Meaning that no (probabilistic) polynomial time algorithms can solve them with non-negligible probability and non-negligible advantage, respectively.
+
+\begin{definition}[The $\SIS$ and $\ISIS$ problem] \label{de:sis} \index{Lattices!Short Integer Solution} \index{Lattices!Inhomogeneous \SIS}
+  Let~$m,q,\beta$ be functions of~$n \in \mathbb{N}$ and $\|\cdot\|$ be a norm (e.g., Euclidean norm $\|\cdot\|_2$ or infinite norm $\|\cdot\|_\infty$).
+  The \textit{Short Integer Solution} problem $\SIS_{n,m,q,\beta}$ is, given~$\mathbf{A} \sample \U(\Zq^{n \times m})$, find~$\mathbf{x} \in \Lambda_q^{\perp}(\mathbf{A})$ with~$0 < \|\mathbf{x}\| \leq \beta$.
+
+  The \textit{Inhomogeneous Short Integer Solution}~$\ISIS_{n,m,q,\beta}$ problem is, given~$\mathbf{A} \sample \U(\Zq^{n \times m})$ and $\mathbf{u} \in \Zq^n$, find~$\mathbf{x} \in \Lambda_q^{\mathbf{u}}(\mathbf{A})$ with~$0 < \| \mathbf{x} \| \leq \beta$.
+\end{definition}
+
+Evidence of the hardness of the $\SIS$ and $\ISIS$ assumptions is given by the following Lemma, which reduced these problems from $\SIVP$.
+
+\begin{lemma}[{\cite[Se.~9]{GPV08}}] \label{le:sis-hard}
+  If~$q \geq \sqrt{n} \beta$ and~$m,\beta \leq \mathsf{poly}(n)$, then $\SIS_{n,m,q,\beta}$ and $\ISIS_{n,m,q,\beta}$ problems are both at least as hard as
+  standard worst-case lattice problem $\mathsf{SIVP}_\gamma$ with~$\gamma = \softO(\beta\sqrt{n})$.
+\end{lemma}
+
+\begin{definition}[The $\LWE$ problem] \label{de:lwe} \index{Lattices!Learning With Errors}
+  Let $n,m \geq 1$, $q \geq 2$, and let $\chi$ be a probability distribution on~$\mathbb{Z}$.
+  For a fixed $\mathbf{s} \in \mathbb{Z}_q^n$, let $A_{\mathbf{s}, \chi}$ be the distribution obtained by sampling $\mathbf{a} \hookleftarrow  \U(\mathbb{Z}_q^n)$ and $e \hookleftarrow \chi$, and outputting $(\mathbf{a}, \mathbf{a}^T\cdot\mathbf{s} + e) \in \mathbb{Z}_q^n \times \mathbb{Z}_q$.
+  The \emph{Learning-with-Errors} problem $\mathsf{LWE}_{n,q,\chi}$ asks to distinguish~$m$ samples chosen according to $\mathcal{A}_{\mathbf{s},\chi}$ (for $\mathbf{s} \hookleftarrow \U(\mathbb{Z}_q^n)$) and $m$ samples chosen according to $\U(\mathbb{Z}_q^n \times \mathbb{Z}_q)$.
+\end{definition}
+
+\begin{figure}
+  \centering
+  \input fig-lwe-sis
+  \caption{Illustration of the LWE and SIS problems.}
+  \label{fig:lwe-sis}
+\end{figure}
+
+The worst-case-to-average-case reduction for $\LWE$ is stated by the following Lemma.
+
+\begin{lemma}[{\cite{Reg05,Pei09,BLP+13}}] \label{le:lwe-hard}
+  If $q$ is a prime power, $B \geq \sqrt{n}\omega(\log n)$, $\gamma= \widetilde{\mathcal{O}}(nq/B)$, then there exists an efficient sampleable $B$-bounded distribution~$\chi$ ({i.e.}, $\chi$ outputs samples with norm at most $B$ with overwhelming probability) such that $\mathsf{LWE}_{n,q,\chi}$ is as least as hard as $\mathsf{SIVP}_{\gamma}$.
+\end{lemma}
+ % (see~\cite{Pei09,BLPRS13} for classical analogues).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% subsection: lattice trapdoors %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Lattice Trapdoors}
+\label{sse:lattice-trapdoors}
+\addcontentsline{tof}{subsection}{\protect\numberline{\thesubsection} Trappes d'un réseau euclidien}
+
+In this section, we recall the specifications of different algorithms that use ``\textit{lattice trapdoors}''.
+A trapdoor for a lattice $\Lambda$ is a \textit{short} basis of this lattice.
+The knowledge of such a basis allows sampling elements in $D_{\Lambda, \sigma}$ within some restrictions given in~\cref{le:GPV}.
+The existence of this sampler allows sampling short vectors which is believed to be infeasible without knowing such a short basis.
+%permits to solve hard lattice problems such as $\SIS$, which is assumed to be intractable in polynomial time.
+Indeed,~\cref{le:TrapGen} shows that it is possible to sample a (statistically close to) uniform matrix $\mathbf{A} \in \ZZ_q^{n \times m}$ along with a short basis for $\Lambda^\perp_{q}(\mathbf{A})$.
+Thus, a vector sampled from $D_{\Lambda^\perp_{q}(\mathbf{A}), \sigma}$, which is short with overwhelming probabilities according to~\cref{le:small}, is a solution to $\SIS_{n,m,q,\sigma \sqrt{n}}$.
+
+Gentry {\em et al.}~\cite{GPV08} showed that Gaussian distributions with lattice support can be sampled efficiently given a sufficiently short basis of the lattice.
+
+\scbf{Recall.} Given a matrix $\mathbf{A}$, $\widetilde{\mathbf{A}}$ denotes the Gram-Schmidt orthogonalization of $\mathbf{A}$.
+
+\begin{lemma}[{\cite[Le.~2.3]{BLP+13}}]
+  \index{Lattice Trapdoors!\GPVSample}
+\label{le:GPV}
+There exists a $\ppt$ (probabilistic polynomial-time) algorithm $\GPVSample$ that inputs a
+basis~$\mathbf{B}$ of a lattice~$\Lambda \subseteq \ZZ^n$ and a
+rational~$\sigma \geq  \|\widetilde{\mathbf{B}}\| \cdot \Omega(\sqrt{\log n})$,
+and outputs vectors~$\mathbf{b} \in \Lambda$ with distribution~$D_{\Lambda,\sigma}$.
+\end{lemma}
+
+The following Lemma states that it is possible to efficiently compute a statistically uniform~$\mathbf{A}$ along with a short basis of its orthogonal lattice $\Lambda^{\perp}_q(\mathbf{A})$.
+
+%We
+%use an algorithm that jointly samples a uniform~$\mathbf{A}$ and a short
+%basis of~$\Lambda_q^{\perp}(\mathbf{A})$.
+
+\begin{lemma}[{\cite[Th.~3.2]{AP09}}]
+\label{le:TrapGen}
+  \index{Lattice Trapdoors!\TrapGen}
+\label{le:GPV}
+There exists a $\ppt$ algorithm $\TrapGen$ that takes as inputs $1^n$, $1^m$ and an integer~$q \geq 2$ with~$m \geq \Omega(n \log q)$, and outputs a matrix~$\mathbf{A} \in \ZZ_q^{n \times m}$ and a basis~$\mathbf{T}_{\mathbf{A}}$ of~$\Lambda_q^{\perp}(\mathbf{A})$ such that~$\mathbf{A}$ is within statistical distance~$2^{-\Omega(n)}$ to~$\U(\ZZ_q^{n \times m})$, and~$\|\widetilde{\mathbf{T}_{\mathbf{A}}}\| \leq \bigO(\sqrt{n \log q})$.
+\end{lemma}
+
+\noindent Lemma~\ref{le:TrapGen} is often combined with the sampler from Lemma~\ref{le:GPV}. Micciancio and Peikert~\cite{MP12} proposed a more efficient approach for this combined task, which is to be be preferred in practice but, for the sake of simplicity, schemes are presented using $\TrapGen$ and $\GPVSample$ in this thesis.
+
+We also make use of an algorithm that extends a trapdoor for~$\mathbf{A} \in \ZZ_q^{n \times m}$ to a trapdoor of any~$\mathbf{B} \in \ZZ_q^{n \times m'}$ for which a $m$-subset of its columns is $\mathbf{A}$. For the sake of simplicity we will consider the case where~$\mathbf{A}$ is the left~$n \times m$ submatrix of~$\mathbf{B}$.
+
+\begin{lemma}[{\cite[Le.~3.2]{CHKP10}}]\label{lem:extbasis}
+  \index{Lattice Trapdoors!\ExtBasis}
+  There exists a $\ppt$ algorithm $\ExtBasis$ that takes as inputs a
+  matrix~$\mathbf{B} \in \ZZ_q^{n \times m' }$ whose first~$m$ columns
+  span~$\ZZ_q^n$, and a basis~$\mathbf{T}_{\mathbf{A}}$
+  of~$\Lambda_q^{\perp}(\mathbf{A})$ where~$\mathbf{A}$ is the left~$n \times
+  m$ submatrix of~~$\mathbf{B}$, and outputs a basis~$\mathbf{T}_{\mathbf{B}}$
+  of~$\Lambda_q^{\perp}(\mathbf{B})$ with~$\|\widetilde{\mathbf{T}_{\mathbf{B}}}\|
+  \leq \|\widetilde{\mathbf{T}_{\mathbf{A}}}\|$.
+\end{lemma}
+
+In some of our security proofs, analogously to \cite{Boy10,BHJ+15}, we also use a technique due to Agrawal, Boneh and Boyen~\cite{ABB10} that implements an all-but-one trapdoor mechanism (akin to the one of Boneh and Boyen \cite{BB04}) in the lattice setting.
+
+\begin{lemma}[{\cite[Th.~19]{ABB10}}]\label{lem:sampler}
+  \index{Lattice Trapdoors!\SampleR}
+  There exists a $\ppt$ algorithm $\SampleR$ that takes as inputs matrices $\mathbf{A}, \mathbf{C} \in \ZZ_q^{n \times m}$, a low-norm matrix $\mathbf{R} \in \ZZ^{m \times m}$,
+  a short basis $\mathbf{T_C} \in \ZZ^{m \times m}$ of $\Lambda_q^{\perp}(\mathbf{C})$, a vector $\mathbf{u} \in \ZZ_q^{n}$ and a rational $\sigma$ such that $\sigma \geq \|
+  \widetilde{\mathbf{T_C}}\| \cdot \Omega(\sqrt{\log n})$, and outputs a short vector $\mathbf{b} \in \ZZ^{2m}$ such that $\left[ \begin{array}{c|c} \mathbf{A} ~ &~ \mathbf{A}
+  \cdot \mathbf{R} + \mathbf{C} \end{array} \right]\cdot \mathbf{b} = \mathbf{u} \bmod q$ and with distribution statistically close to $D_{L,\sigma}$ where $L$ denotes the shifted
+  lattice $\Lambda^\mathbf{u}_q \left( \left[ \begin{array}{c|c} \mathbf{A} ~&~ \mathbf{A} \cdot \mathbf{R} + \mathbf{C} \end{array} \right] \right)$.
+  %$\{ \mathbf{x} \in \ZZ^{2 m} : \left[ \begin{array}{c|c} \mathbf{A} ~&~ \mathbf{A} \cdot \mathbf{R} + \mathbf{C} \end{array} \right] \cdot \mathbf{x} = \mathbf{u} \bmod q \}$.
+\end{lemma}
