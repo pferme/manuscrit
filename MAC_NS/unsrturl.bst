@@ -1,7 +1,7 @@
-%%% Modification of BibTeX style file /usr/local/texlive/2019/texmf-dist/bibtex/bst/base/plain.bst
-%%% ... by urlbst, version 0.8 (marked with "% urlbst")
-%%% See <http://purl.org/nxg/dist/urlbst>
-%%% Modifications Copyright 2002-03, 2005-12, 2014, 2019, Norman Gray,
+%%% Modification of BibTeX style file /usr/local/texlive/2022/texmf-dist/bibtex/bst/base/unsrt.bst
+%%% ... by urlbst, version 0.9.1 (marked with "% urlbst")
+%%% See <https://purl.org/nxg/dist/urlbst> and repository <https://heptapod.host/nxg/urlbst>
+%%% Modifications Copyright 2002–23, Norman Gray,
 %%% and distributed under the terms of the LPPL; see README for discussion.
 %%%
 %%% Added webpage entry type, and url and lastchecked fields.
@@ -11,7 +11,7 @@
 %%% Added hyperref support.
 %%% Original headers follow...
 
-% BibTeX standard bibliography style `plain'
+% BibTeX standard bibliography style `unsrt'
    % Version 0.99b (8-Dec-10 release) for BibTeX versions 0.99a or later.
    % Copyright (C) 1984, 1985, 1988, 2010 Howard Trickey and Oren Patashnik.
    % Unlimited copying and redistribution of this file are permitted as long as
@@ -61,30 +61,31 @@ STRINGS { urlintro
   eprinturl eprintprefix doiprefix doiurl pubmedprefix pubmedurl
   citedstring onlinestring linktextstring
   openinlinelink closeinlinelink }
-INTEGERS { hrefform inlinelinks makeinlinelink
-  addeprints adddoiresolver addpubmedresolver }
+INTEGERS { hrefform doiform inlinelinks makeinlinelink
+  addeprints adddoi addpubmed }
 FUNCTION {init.urlbst.variables}
 {
   % The following constants may be adjusted by hand, if desired
 
   % The first set allow you to enable or disable certain functionality.
-  #1 'addeprints :=         % 0=no eprints; 1=include eprints
-  #1 'adddoiresolver :=     % 0=no DOI resolver; 1=include it
-  #1 'addpubmedresolver :=     % 0=no PUBMED resolver; 1=include it
-  #2 'hrefform :=           % 0=no crossrefs; 1=hypertex xrefs; 2=hyperref refs
-  #0 'inlinelinks :=        % 0=URLs explicit; 1=URLs attached to titles
+  #1 'addpubmed :=	% 0=no PUBMED resolver; 1=include it
+  #0 'doiform :=	% 0=with href; 1=with \doi{}
+  #1 'adddoi :=	% 0=no DOI resolver; 1=include it
+  #1 'addeprints :=	% 0=no eprints; 1=include eprints
+  #0 'inlinelinks :=	% 0=URLs explicit; 1=URLs attached to titles
+  #2 'hrefform :=	% 0=no crossrefs; 1=hypertex hrefs; 2=hyperref hrefs
 
   % String constants, which you _might_ want to tweak.
-  "URL: " 'urlintro := % prefix before URL; typically "Available from:" or "URL":
-  "online" 'onlinestring := % indication that resource is online; typically "online"
-  "cited " 'citedstring := % indicator of citation date; typically "cited "
-  "[link]" 'linktextstring := % dummy link text; typically "[link]"
-  "http://arxiv.org/abs/" 'eprinturl := % prefix to make URL from eprint ref
-  "arXiv:" 'eprintprefix := % text prefix printed before eprint ref; typically "arXiv:"
-  "https://doi.org/" 'doiurl := % prefix to make URL from DOI
-  "doi:" 'doiprefix :=      % text prefix printed before DOI ref; typically "doi:"
-  "http://www.ncbi.nlm.nih.gov/pubmed/" 'pubmedurl := % prefix to make URL from PUBMED
-  "PMID:" 'pubmedprefix :=      % text prefix printed before PUBMED ref; typically "PMID:"
+  "https://arxiv.org/abs/" 'eprinturl :=	% prefix to make URL from eprint ref
+  "http://www.ncbi.nlm.nih.gov/pubmed/" 'pubmedurl :=	% prefix to make URL from PUBMED
+  "[link]" 'linktextstring :=	% anonymous link text
+  "URL: " 'urlintro :=	% text prefix before URL
+  "https://doi.org/" 'doiurl :=	% prefix to make URL from DOI
+  "cited " 'citedstring :=	% label in "lastchecked" remark
+  "doi:" 'doiprefix :=	% printed text to introduce DOI
+  "arXiv:" 'eprintprefix :=	% text prefix printed before eprint ref
+  "PMID:" 'pubmedprefix :=	% text prefix printed before PUBMED ref
+  "online" 'onlinestring :=	% label that a resource is online
 
   % The following are internal state variables, not configuration constants,
   % so they shouldn't be fiddled with.
@@ -92,7 +93,7 @@ FUNCTION {init.urlbst.variables}
   "" 'openinlinelink :=     % ditto
   "" 'closeinlinelink :=    % ditto
 }
-INTEGERS { 
+INTEGERS {
   bracket.state
   outside.brackets
   open.brackets
@@ -137,6 +138,19 @@ FUNCTION {output.nonnull.original}
 }
 
 % urlbst...
+% Minimal DOI parsing.
+% Given a DOI on the stack, check whether it starts with 'doiurl' or not.
+% In either case, leave on the stack first a DOI with, and then a DOI without, the URL prefix.
+FUNCTION {parse.doi}
+{
+  #1 doiurl text.length$ substring$
+  doiurl =
+    { doi
+      doi doiurl text.length$ #1 + #999 substring$ }
+    { doiurl doi *
+      doi }
+  if$
+}
 % The following three functions are for handling inlinelink.  They wrap
 % a block of text which is potentially output with write$ by multiple
 % other functions, so we don't know the content a priori.
@@ -152,8 +166,8 @@ FUNCTION {uand}
 { 'skip$ { pop$ #0 } if$ } % 'and' (which isn't defined at this point in the file)
 FUNCTION {possibly.setup.inlinelink}
 { makeinlinelink hrefform #0 > uand
-    { doi empty$ adddoiresolver uand
-        { pubmed empty$ addpubmedresolver uand
+    { doi empty$ adddoi uand
+        { pubmed empty$ addpubmed uand
             { eprint empty$ addeprints uand
                 { url empty$
                     { "" }
@@ -163,7 +177,12 @@ FUNCTION {possibly.setup.inlinelink}
               if$ }
             { pubmedurl pubmed * }
           if$ }
-        { doiurl doi * }
+%        { doiurl doi * }
+        { doi empty$
+            { "XXX" }
+            { doi parse.doi pop$ }
+          if$
+        }
       if$
       % an appropriately-formatted URL is now on the stack
       hrefform #1 = % hypertex
@@ -213,14 +232,14 @@ FUNCTION {output.nonnull}
       bracket.state open.brackets =
         { " [" * }
         { ", " * } % bracket.state will be within.brackets
-      if$ 
-      s * 
+      if$
+      s *
       close.brackets 'bracket.state :=
     }
   if$
 }
 
-% Call this function just before adding something which should be presented in 
+% Call this function just before adding something which should be presented in
 % brackets.  bracket.state is handled specially within output.nonnull.
 FUNCTION {inbrackets}
 { bracket.state close.brackets =
@@ -597,7 +616,6 @@ FUNCTION {empty.misc.check}
 { author empty$ title empty$ howpublished empty$
   month empty$ year empty$ note empty$
   and and and and and
-  key empty$ not and
     { "all relevant fields are empty in " cite$ * warning$ }
     'skip$
   if$
@@ -716,14 +734,14 @@ FUNCTION {make.href.null}
 }
 % make hypertex specials
 FUNCTION {make.href.hypertex}
-{ 
+{
   "\special {html:<a href=" quote$ *
   swap$ * quote$ * "> }" * swap$ *
   "\special {html:</a>}" *
 }
 % make hyperref specials
 FUNCTION {make.href.hyperref}
-{ 
+{
   "\href {" swap$ * "} {\path{" * swap$ * "}}" *
 }
 FUNCTION {make.href}
@@ -760,7 +778,13 @@ FUNCTION {format.eprint}
 FUNCTION {format.doi}
 { doi empty$
     { "" }
-    { doiprefix doi * doiurl doi * make.href }
+    { doi parse.doi % leaves "https://doi.org/DOI" DOI on the stack
+      's := 't :=
+      doiform #1 =
+        { "\doi{" s * "}" * }
+        { doiprefix s * t make.href }
+      if$
+    }
   if$
 }
 
@@ -778,10 +802,10 @@ FUNCTION {format.pubmed}
 % the URL and the lastchecked in brackets.
 FUNCTION {output.url}
 { url empty$
-    'skip$ 
-    { new.block 
+    'skip$
+    { new.block
       format.url output
-      format.lastchecked output 
+      format.lastchecked output
     }
   if$
 }
@@ -792,10 +816,11 @@ FUNCTION {output.web.refs}
   inlinelinks
     'skip$ % links were inline -- don't repeat them
     { % If the generated DOI will be the same as the URL,
-      % then don't print the URL (thanks to Joseph Wright for this code,
+      % then don't print the URL (thanks to Joseph Wright
+      % for (the original version of) this code,
       % at http://tex.stackexchange.com/questions/5660)
-      adddoiresolver 
-          doiurl doi empty$ { "X" } { doi } if$ * % DOI URL to be generated
+      adddoi
+          doi empty$ { "X" } { doi parse.doi pop$ } if$ % DOI URL to be generated
           url empty$ { "Y" } { url } if$          % the URL, or "Y" if empty
           =                                       % are the strings equal?
           and
@@ -806,11 +831,11 @@ FUNCTION {output.web.refs}
         { format.eprint output.nonnull }
         'skip$
       if$
-      adddoiresolver doi empty$ not and
+      adddoi doi empty$ not and
         { format.doi output.nonnull }
         'skip$
       if$
-      addpubmedresolver pubmed empty$ not and
+      addpubmed pubmed empty$ not and
         { format.pubmed output.nonnull }
         'skip$
       if$
@@ -848,7 +873,7 @@ FUNCTION {fin.entry}
 % Webpage entry type.
 % Title and url fields required;
 % author, note, year, month, and lastchecked fields optional
-% See references 
+% See references
 %   ISO 690-2 http://www.nlc-bnc.ca/iso/tc46sc9/standard/690-2e.htm
 %   http://www.classroom.net/classroom/CitingNetResources.html
 %   http://neal.ctstateu.edu/history/cite.html
@@ -1270,151 +1295,6 @@ MACRO {toplas} {"ACM Transactions on Programming Languages and Systems"}
 MACRO {tcs} {"Theoretical Computer Science"}
 
 READ
-
-FUNCTION {sortify}
-{ purify$
-  "l" change.case$
-}
-
-INTEGERS { len }
-
-FUNCTION {chop.word}
-{ 's :=
-  'len :=
-  s #1 len substring$ =
-    { s len #1 + global.max$ substring$ }
-    's
-  if$
-}
-
-FUNCTION {sort.format.names}
-{ 's :=
-  #1 'nameptr :=
-  ""
-  s num.names$ 'numnames :=
-  numnames 'namesleft :=
-    { namesleft #0 > }
-    { nameptr #1 >
-        { "   " * }
-        'skip$
-      if$
-      s nameptr "{vv{ } }{ll{ }}{  ff{ }}{  jj{ }}" format.name$ 't :=
-      nameptr numnames = t "others" = and
-        { "et al" * }
-        { t sortify * }
-      if$
-      nameptr #1 + 'nameptr :=
-      namesleft #1 - 'namesleft :=
-    }
-  while$
-}
-
-FUNCTION {sort.format.title}
-{ 't :=
-  "A " #2
-    "An " #3
-      "The " #4 t chop.word
-    chop.word
-  chop.word
-  sortify
-  #1 global.max$ substring$
-}
-
-FUNCTION {author.sort}
-{ author empty$
-    { key empty$
-        { "to sort, need author or key in " cite$ * warning$
-          ""
-        }
-        { key sortify }
-      if$
-    }
-    { author sort.format.names }
-  if$
-}
-
-FUNCTION {author.editor.sort}
-{ author empty$
-    { editor empty$
-        { key empty$
-            { "to sort, need author, editor, or key in " cite$ * warning$
-              ""
-            }
-            { key sortify }
-          if$
-        }
-        { editor sort.format.names }
-      if$
-    }
-    { author sort.format.names }
-  if$
-}
-
-FUNCTION {author.organization.sort}
-{ author empty$
-    { organization empty$
-        { key empty$
-            { "to sort, need author, organization, or key in " cite$ * warning$
-              ""
-            }
-            { key sortify }
-          if$
-        }
-        { "The " #4 organization chop.word sortify }
-      if$
-    }
-    { author sort.format.names }
-  if$
-}
-
-FUNCTION {editor.organization.sort}
-{ editor empty$
-    { organization empty$
-        { key empty$
-            { "to sort, need editor, organization, or key in " cite$ * warning$
-              ""
-            }
-            { key sortify }
-          if$
-        }
-        { "The " #4 organization chop.word sortify }
-      if$
-    }
-    { editor sort.format.names }
-  if$
-}
-
-FUNCTION {presort}
-{ type$ "book" =
-  type$ "inbook" =
-  or
-    'author.editor.sort
-    { type$ "proceedings" =
-        'editor.organization.sort
-        { type$ "manual" =
-            'author.organization.sort
-            'author.sort
-          if$
-        }
-      if$
-    }
-  if$
-  "    "
-  *
-  year field.or.null sortify
-  *
-  "    "
-  *
-  title field.or.null
-  sort.format.title
-  *
-  #1 entry.max$ substring$
-  'sort.key$ :=
-}
-
-ITERATE {presort}
-
-SORT
 
 STRINGS { longest.label }
 

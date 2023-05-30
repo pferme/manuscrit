@@ -2,14 +2,15 @@
 \BOOKMARK [1][-]{section.2}{Multiple Access Channels Capacities}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Classical Capacities}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Non-Signaling Assisted Capacities}{section.2}% 4
-\BOOKMARK [1][-]{section.3}{Basic Properties of Non-Signaling Assisted Codes for MACs}{}% 5
-\BOOKMARK [2][-]{subsection.3.1}{A Smaller Linear Program Computing SNS\(W,k1,k2\)}{section.3}% 6
+\BOOKMARK [1][-]{section.3}{Properties of Non-Signaling Assisted Codes}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Symmetrization}{section.3}% 6
 \BOOKMARK [2][-]{subsection.3.2}{Properties of SNS\(W,k1,k2\), CNS\(W\) and CNS0\(W\)}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.3}{Linear Program with Reduced Size for Structured Channels}{section.3}% 8
-\BOOKMARK [1][-]{section.4}{Non-Signaling Achievability Bounds for the MAC}{}% 9
+\BOOKMARK [1][-]{section.4}{Non-Signaling Achievability Bounds}{}% 9
 \BOOKMARK [2][-]{subsection.4.1}{Zero-Error Non-Signaling Assisted Achievable Rate Pairs}{section.4}% 10
 \BOOKMARK [2][-]{subsection.4.2}{Non-Signaling Assisted Achievable Rate Pairs with Non-Zero Error}{section.4}% 11
 \BOOKMARK [1][-]{section.5}{Relaxed Non-Signaling Assisted Capacity Region and Outer Bounds}{}% 12
 \BOOKMARK [2][-]{subsection.5.1}{Outer Bound Part of Theorem 5.5}{section.5}% 13
 \BOOKMARK [2][-]{subsection.5.2}{Achievability Part of Theorem 5.5}{section.5}% 14
-\BOOKMARK [1][-]{section.6}{Conclusion}{}% 15
+\BOOKMARK [1][-]{section.6}{Independent Non-Signaling Assisted Capacity Region}{}% 15
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 16
