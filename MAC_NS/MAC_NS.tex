@@ -2020,13 +2020,9 @@ In particular, this will imply that the capacity regions are the same:
 
   As $1-\frac{1}{2n}$ tends to $1$ when $n$ tends to infinity, we get that $\forall \varepsilon > 0, \exists N \in \mathbb{N}, \forall n\geq N$:
 
-\[(1-\varepsilon)\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},2^{nR_1},2^{nR_1}) \leq \mathrm{S}_{\text{sum}}(W^{\otimes n},2^{n(R_1-\frac{\log(n)}{n})},2^{n(R_2-\frac{\log(n)}{n})}) \leq \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},2^{n(R_1-\frac{\log(n)}{n})},2^{n(R_2-\frac{\log(n)}{n})}) \ . \]
+  \[(1-\varepsilon)\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},2^{nR_1},2^{nR_1}) \leq \mathrm{S}_{\text{sum}}(W^{\otimes n},2^{n(R_1-\frac{\log(n)}{n})},2^{n(R_2-\frac{\log(n)}{n})}) \leq \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},2^{n(R_1-\frac{\log(n)}{n})},2^{n(R_2-\frac{\log(n)}{n})}) \ . \]
 
-This implies that:
-
-\[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \iff \underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ ,\]
-
-thus the capacity regions with and without non-signaling assistance are the same.
+  This implies in particular that the capacity regions are equal.
 \end{proof}
 
 In order to prove Theorem~\ref{theo:NSsr}, we will need the following lemma:
