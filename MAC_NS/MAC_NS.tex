@@ -2020,9 +2020,13 @@ In particular, this will imply that the capacity regions are the same:
 
   As $1-\frac{1}{2n}$ tends to $1$ when $n$ tends to infinity, we get that $\forall \varepsilon > 0, \exists N \in \mathbb{N}, \forall n\geq N$:
 
-  \[(1-\varepsilon)\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},2^{nR_1},2^{nR_1}) \leq \mathrm{S}_{\text{sum}}(W^{\otimes n},2^{n(R_1-\frac{\log(n)}{n})},2^{n(R_2-\frac{\log(n)}{n})}) \leq \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},2^{n(R_1-\frac{\log(n)}{n})},2^{n(R_2-\frac{\log(n)}{n})}) \ . \]
+  \[(1-\varepsilon)\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},2^{nR_1},2^{nR_1}) \leq \mathrm{S}_{\text{sum}}(W^{\otimes n},2^{n(R_1-\frac{\log(n)}{n})},2^{n(R_2-\frac{\log(n)}{n})}) \ . \]
 
-  This implies in particular that the capacity regions are equal.
+Thus, if $\underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},2^{nR_1},2^{nR_1})  = 1$, we have that for all $R_1'<R_1$ and $R_2'<R_2$:
+
+\[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}(W^{\otimes n},2^{nR_1'},2^{nR_1'}) \geq 1-\varepsilon \ . \]
+
+Since this is true for all $\varepsilon > 0$, we get in fact that $\underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}(W^{\otimes n},2^{nR_1'},2^{nR_1'}) = 1$. This implies that $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W) \subseteq \mathcal{C}_{\text{sum}}(W)$, and thus that the capacity regions are equal as the other inclusion is always satisfied.
 \end{proof}
 
 In order to prove Theorem~\ref{theo:NSsr}, we will need the following lemma:
