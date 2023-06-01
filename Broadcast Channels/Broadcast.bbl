@@ -1,0 +1,340 @@
+\begin{thebibliography}{10}
+
+\bibitem{BF18}
+Siddharth Barman and Omar Fawzi.
+\newblock Algorithmic aspects of optimal channel coding.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 64(2):1038--1045, 2018.
+\newblock \href {https://doi.org/10.1109/TIT.2017.2696963}
+  {\path{doi:10.1109/TIT.2017.2696963}}.
+
+\bibitem{Cover72}
+Thomas~M. Cover.
+\newblock Broadcast channels.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 18(1):2--14, 1972.
+\newblock \href {https://doi.org/10.1109/TIT.1972.1054727}
+  {\path{doi:10.1109/TIT.1972.1054727}}.
+
+\bibitem{Shannon48}
+Claude~E. Shannon.
+\newblock A mathematical theory of communication.
+\newblock {\em Bell Syst. Tech. J.}, 27(3):379--423, 1948.
+\newblock \href {https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}
+  {\path{doi:10.1002/j.1538-7305.1948.tb01338.x}}.
+
+\bibitem{Liao73}
+Henry~Herng{-}Jiunn Liao.
+\newblock Multiple access channels ({Ph.D. Thesis} abstr.).
+\newblock {\em {IEEE} Trans. Inf. Theory}, 19(2):253, 1973.
+\newblock \href {https://doi.org/10.1109/TIT.1973.1054960}
+  {\path{doi:10.1109/TIT.1973.1054960}}.
+
+\bibitem{Ahlswede73}
+Rudolf Ahlswede.
+\newblock Multi-way communication channels.
+\newblock In {\em 2nd International Symposium on Information Theory,
+  Tsahkadsor, Armenia, USSR, September 2-8, 1971}, pages 23--52. Publishing
+  House of the Hungarian Academy of Science, 1973.
+
+\bibitem{Bergmans73}
+Patrick~P. Bergmans.
+\newblock Random coding theorem for broadcast channels with degraded
+  components.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 19(2):197--207, 1973.
+\newblock \href {https://doi.org/10.1109/TIT.1973.1054980}
+  {\path{doi:10.1109/TIT.1973.1054980}}.
+
+\bibitem{Gallager74}
+R.G. Gallager.
+\newblock Capacity and coding for degraded broadcast channels.
+\newblock {\em Problemy Peredachi Informatsii}, 10(3):3--14, 1974.
+
+\bibitem{AK75}
+Rudolf Ahlswede and J{\'{a}}nos K{\"{o}}rner.
+\newblock Source coding with side information and a converse for degraded
+  broadcast channels.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 21(6):629--637, 1975.
+\newblock \href {https://doi.org/10.1109/TIT.1975.1055469}
+  {\path{doi:10.1109/TIT.1975.1055469}}.
+
+\bibitem{Marton77}
+Katalin Marton.
+\newblock The capacity region of deterministic broadcast channels.
+\newblock In {\em Trans. Int. Symp. Inform. Theory}, pages 243--248, 1977.
+
+\bibitem{Pinsker78}
+Mark~Semenovich Pinsker.
+\newblock Capacity of noiseless broadcast channel.
+\newblock {\em Problemy Peredachi Informatsii}, 14(2):28--34, 1978.
+
+\bibitem{GIP80}
+Sergei~Izrail'evich Gel'fand and Mark~Semenovich Pinsker.
+\newblock Capacity of a broadcast channel with one deterministic component.
+\newblock {\em Problemy Peredachi Informatsii}, 16(1):24--34, 1980.
+
+\bibitem{Cover75}
+Thomas~M. Cover.
+\newblock An achievable rate region for the broadcast channel.
+\newblock {\em IEEE Transactions on Information Theory}, 21(4):399--404, 1975.
+\newblock \href {https://doi.org/10.1109/TIT.1975.1055418}
+  {\path{doi:10.1109/TIT.1975.1055418}}.
+
+\bibitem{Meulen75}
+Edward~C. van~der Meulen.
+\newblock Random coding theorems for the general discrete memoryless broadcast
+  channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 21(2):180--190, 1975.
+\newblock \href {https://doi.org/10.1109/TIT.1975.1055347}
+  {\path{doi:10.1109/TIT.1975.1055347}}.
+
+\bibitem{Marton79}
+Katalin Marton.
+\newblock A coding theorem for the discrete memoryless broadcast channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 25(3):306--311, 1979.
+\newblock \href {https://doi.org/10.1109/TIT.1979.1056046}
+  {\path{doi:10.1109/TIT.1979.1056046}}.
+
+\bibitem{Sato78}
+Hiroshi Sato.
+\newblock An outer bound to the capacity region of broadcast channels
+  (corresp.).
+\newblock {\em {IEEE} Trans. Inf. Theory}, 24(3):374--377, 1978.
+\newblock \href {https://doi.org/10.1109/TIT.1978.1055883}
+  {\path{doi:10.1109/TIT.1978.1055883}}.
+
+\bibitem{NG07}
+Chandra Nair and Abbas~El Gamal.
+\newblock An outer bound to the capacity region of the broadcast channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 53(1):350--355, 2007.
+\newblock \href {https://doi.org/10.1109/TIT.2006.887492}
+  {\path{doi:10.1109/TIT.2006.887492}}.
+
+\bibitem{GN20}
+Amin Gohari and Chandra Nair.
+\newblock New outer bounds for the two-receiver broadcast channel.
+\newblock In {\em {IEEE} International Symposium on Information Theory, {ISIT}
+  2020, Los Angeles, CA, USA, June 21-26, 2020}, pages 1492--1497. {IEEE},
+  2020.
+\newblock \href {https://doi.org/10.1109/ISIT44484.2020.9174003}
+  {\path{doi:10.1109/ISIT44484.2020.9174003}}.
+
+\bibitem{BCPSW14}
+Nicolas Brunner, Daniel Cavalcanti, Stefano Pironio, Valerio Scarani, and
+  Stephanie Wehner.
+\newblock Bell nonlocality.
+\newblock {\em Rev. Mod. Phys.}, 86:419--478, Apr 2014.
+\newblock \href {https://doi.org/10.1103/RevModPhys.86.419}
+  {\path{doi:10.1103/RevModPhys.86.419}}.
+
+\bibitem{PLMK11}
+R.~Prevedel, Y.~Lu, W.~Matthews, R.~Kaltenbaek, and K.~J. Resch.
+\newblock Entanglement-enhanced classical communication over a noisy classical
+  channel.
+\newblock {\em Phys. Rev. Lett.}, 106:110505, Mar 2011.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.106.110505}
+  {\path{doi:10.1103/PhysRevLett.106.110505}}.
+
+\bibitem{BSST99}
+Charles~H Bennett, Peter~W Shor, John~A Smolin, and Ashish~V Thapliyal.
+\newblock Entanglement-assisted classical capacity of noisy quantum channels.
+\newblock {\em Physical Review Letters}, 83(15):3081, 1999.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.83.3081}
+  {\path{doi:10.1103/PhysRevLett.83.3081}}.
+
+\bibitem{Matthews12}
+William Matthews.
+\newblock A linear program for the finite block length converse of
+  {Polyanskiy-Poor-Verd{\'{u}}} via nonsignaling codes.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 58(12):7036--7044, 2012.
+\newblock \href {https://doi.org/10.1109/TIT.2012.2210695}
+  {\path{doi:10.1109/TIT.2012.2210695}}.
+
+\bibitem{QS17}
+Yihui Quek and Peter~W. Shor.
+\newblock Quantum and superquantum enhancements to two-sender, two-receiver
+  channels.
+\newblock {\em Phys. Rev. A}, 95:052329, May 2017.
+\newblock \href {https://doi.org/10.1103/PhysRevA.95.052329}
+  {\path{doi:10.1103/PhysRevA.95.052329}}.
+
+\bibitem{LALS20}
+Felix Leditzky, Mohammad~A Alhejji, Joshua Levin, and Graeme Smith.
+\newblock Playing games with multiple access channels.
+\newblock {\em Nature communications}, 11(1):1--5, 2020.
+\newblock \href {https://doi.org/10.1038/s41467-020-15240-w}
+  {\path{doi:10.1038/s41467-020-15240-w}}.
+
+\bibitem{SLSS22}
+Akshay Seshadri, Felix Leditzky, Vikesh Siddhu, and Graeme Smith.
+\newblock On the separation of correlation-assisted sum capacities of multiple
+  access channels.
+\newblock In {\em {IEEE} International Symposium on Information Theory, {ISIT}
+  2022, Espoo, Finland, June 26 - July 1, 2022}, pages 2756--2761. {IEEE},
+  2022.
+\newblock \href {https://doi.org/10.1109/ISIT50566.2022.9834459}
+  {\path{doi:10.1109/ISIT50566.2022.9834459}}.
+
+\bibitem{FF22}
+Omar Fawzi and Paul Ferm{\'{e}}.
+\newblock Beating the sum-rate capacity of the binary adder channel with
+  non-signaling correlations.
+\newblock In {\em {IEEE} International Symposium on Information Theory, {ISIT}
+  2022, Espoo, Finland, June 26 - July 1, 2022}, pages 2750--2755. {IEEE},
+  2022.
+\newblock \href {https://doi.org/10.1109/ISIT50566.2022.9834699}
+  {\path{doi:10.1109/ISIT50566.2022.9834699}}.
+
+\bibitem{PDB23}
+Uzi Pereg, Christian Deppe, and Holger Boche.
+\newblock The multiple-access channel with entangled transmitters.
+\newblock {\em CoRR}, abs/2303.10456, 2023.
+\newblock \href {https://arxiv.org/abs/2303.10456} {\path{arXiv:2303.10456}},
+  \href {https://doi.org/10.48550/arXiv.2303.10456}
+  {\path{doi:10.48550/arXiv.2303.10456}}.
+
+\bibitem{PDB21}
+Uzi Pereg, Christian Deppe, and Holger Boche.
+\newblock Quantum broadcast channels with cooperating decoders: An
+  information-theoretic perspective on quantum repeaters.
+\newblock In {\em {IEEE} International Symposium on Information Theory, {ISIT}
+  2021, Melbourne, Australia, July 12-20, 2021}, pages 772--777. {IEEE}, 2021.
+\newblock \href {https://doi.org/10.1109/ISIT45174.2021.9518284}
+  {\path{doi:10.1109/ISIT45174.2021.9518284}}.
+
+\bibitem{BFGG20}
+Siddharth Barman, Omar Fawzi, Suprovat Ghoshal, and Emirhan G{\"{u}}rpinar.
+\newblock Tight approximation bounds for maximum multi-coverage.
+\newblock In Daniel Bienstock and Giacomo Zambelli, editors, {\em Integer
+  Programming and Combinatorial Optimization - 21st International Conference,
+  {IPCO} 2020, London, UK, June 8-10, 2020, Proceedings}, volume 12125 of {\em
+  Lecture Notes in Computer Science}, pages 66--77. Springer, 2020.
+\newblock \href {https://doi.org/10.1007/978-3-030-45771-6\_6}
+  {\path{doi:10.1007/978-3-030-45771-6\_6}}.
+
+\bibitem{DMMS20}
+Szymon Dudycz, Pasin Manurangsi, Jan Marcinkowski, and Krzysztof Sornat.
+\newblock Tight approximation for proportional approval voting.
+\newblock In Christian Bessiere, editor, {\em Proceedings of the Twenty-Ninth
+  International Joint Conference on Artificial Intelligence, {IJCAI} 2020},
+  pages 276--282. ijcai.org, 2020.
+\newblock \href {https://doi.org/10.24963/ijcai.2020/39}
+  {\path{doi:10.24963/ijcai.2020/39}}.
+
+\bibitem{FKP01}
+Uriel Feige, Guy Kortsarz, and David Peleg.
+\newblock The dense \emph{k}-subgraph problem.
+\newblock {\em Algorithmica}, 29(3):410--421, 2001.
+\newblock \href {https://doi.org/10.1007/s004530010050}
+  {\path{doi:10.1007/s004530010050}}.
+
+\bibitem{AAMMW11}
+Noga Alon, Sanjeev Arora, Rajsekar Manokaran, Dana Moshkovitz, and Omri
+  Weinstein.
+\newblock Inapproximability of densest $\kappa$-subgraph from average case
+  hardness.
+\newblock {\em Unpublished manuscript}, 1, 2011.
+\newblock URL: \url{https://www.tau.ac.il/~nogaa/PDFS/dks8.pdf}.
+
+\bibitem{BT96}
+Steven~J. Brams and Alan~D. Taylor.
+\newblock {\em Fair division - from cake-cutting to dispute resolution}.
+\newblock Cambridge University Press, 1996.
+
+\bibitem{Moulin03}
+Herv{\'{e}} Moulin.
+\newblock {\em Fair division and collective welfare}.
+\newblock {MIT} Press, 2003.
+
+\bibitem{BN05}
+Liad Blumrosen and Noam Nisan.
+\newblock On the computational power of iterative auctions.
+\newblock In John Riedl, Michael~J. Kearns, and Michael~K. Reiter, editors,
+  {\em Proceedings 6th {ACM} Conference on Electronic Commerce (EC-2005),
+  Vancouver, BC, Canada, June 5-8, 2005}, pages 29--43. {ACM}, 2005.
+\newblock \href {https://doi.org/10.1145/1064009.1064013}
+  {\path{doi:10.1145/1064009.1064013}}.
+
+\bibitem{DS06}
+Shahar Dobzinski and Michael Schapira.
+\newblock An improved approximation algorithm for combinatorial auctions with
+  submodular bidders.
+\newblock In {\em Proceedings of the Seventeenth Annual {ACM-SIAM} Symposium on
+  Discrete Algorithms, {SODA} 2006, Miami, Florida, USA, January 22-26, 2006},
+  pages 1064--1073. {ACM} Press, 2006.
+\newblock URL: \url{http://dl.acm.org/citation.cfm?id=1109557.1109675}.
+
+\bibitem{MSV08}
+Vahab~S. Mirrokni, Michael Schapira, and Jan Vondr{\'{a}}k.
+\newblock Tight information-theoretic lower bounds for welfare maximization in
+  combinatorial auctions.
+\newblock In Lance Fortnow, John Riedl, and Tuomas Sandholm, editors, {\em
+  Proceedings 9th {ACM} Conference on Electronic Commerce (EC-2008), Chicago,
+  IL, USA, June 8-12, 2008}, pages 70--77. {ACM}, 2008.
+\newblock \href {https://doi.org/10.1145/1386790.1386805}
+  {\path{doi:10.1145/1386790.1386805}}.
+
+\bibitem{Willems90}
+F.M.J. Willems.
+\newblock The maximal-error and average-error capacity region of the broadcast
+  channel are identical : A direct proof.
+\newblock {\em Problems of Control and Information Theory}, 19(4):339--347,
+  December 1990.
+\newblock URL:
+  \url{https://research.tue.nl/nl/publications/the-maximal-error-and-average-error-capacity-region-of-the-broadc}.
+
+\bibitem{LinearProgramming}
+Bernd G{\"{a}}rtner and Jir{\'{\i}} Matousek.
+\newblock {\em Understanding and using linear programming}.
+\newblock Universitext. Springer, 2007.
+\newblock \href {https://doi.org/10.1007/978-3-540-30717-4}
+  {\path{doi:10.1007/978-3-540-30717-4}}.
+
+\bibitem{GJ79}
+M.~R. Garey and David~S. Johnson.
+\newblock {\em Computers and Intractability: {A} Guide to the Theory of
+  {NP}-Completeness}.
+\newblock W. H. Freeman, 1979.
+
+\bibitem{Vondrak08}
+Jan Vondr{\'{a}}k.
+\newblock Optimal approximation for the submodular welfare problem in the value
+  oracle model.
+\newblock In Cynthia Dwork, editor, {\em Proceedings of the 40th Annual {ACM}
+  Symposium on Theory of Computing, Victoria, British Columbia, Canada, May
+  17-20, 2008}, pages 67--74. {ACM}, 2008.
+\newblock \href {https://doi.org/10.1145/1374376.1374389}
+  {\path{doi:10.1145/1374376.1374389}}.
+
+\bibitem{BFF21}
+Siddharth Barman, Omar Fawzi, and Paul Ferm{\'{e}}.
+\newblock Tight approximation guarantees for concave coverage problems.
+\newblock In Markus Bl{\"{a}}ser and Benjamin Monmege, editors, {\em 38th
+  International Symposium on Theoretical Aspects of Computer Science, {STACS}
+  2021, March 16-19, 2021, Saarbr{\"{u}}cken, Germany (Virtual Conference)},
+  volume 187 of {\em LIPIcs}, pages 9:1--9:17. Schloss Dagstuhl -
+  Leibniz-Zentrum f{\"{u}}r Informatik, 2021.
+\newblock \href {https://doi.org/10.4230/LIPIcs.STACS.2021.9}
+  {\path{doi:10.4230/LIPIcs.STACS.2021.9}}.
+
+\bibitem{DR98}
+Devdatt~P. Dubhashi and Desh Ranjan.
+\newblock Balls and bins: {A} study in negative dependence.
+\newblock {\em Random Struct. Algorithms}, 13(2):99--124, 1998.
+\newblock \href {https://doi.org/10.7146/brics.v3i25.20006}
+  {\path{doi:10.7146/brics.v3i25.20006}}.
+
+\bibitem{Hoeffding63}
+Wassily Hoeffding.
+\newblock Probability inequalities for sums of bounded random variables.
+\newblock {\em Journal of the American Statistical Association},
+  58(301):13--30, 1963.
+\newblock \href {https://doi.org/10.1080/01621459.1963.10500830}
+  {\path{doi:10.1080/01621459.1963.10500830}}.
+
+\bibitem{JP83}
+Kumar Joag-Dev and Frank Proschan.
+\newblock Negative association of random variables with applications.
+\newblock {\em The Annals of Statistics}, pages 286--295, 1983.
+\newblock \href {https://doi.org/10.1214/aos/1176346079}
+  {\path{doi:10.1214/aos/1176346079}}.
+
+\end{thebibliography}
