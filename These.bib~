@@ -1,3 +1,4 @@
+%%%%%   MaxCoverage   %%%%%
 @article{AS04,
   author    = {Alexander A. Ageev and
                Maxim Sviridenko},
@@ -26,7 +27,7 @@
   url={https://doi.org/10.1017/S0305004100061806},
   doi={10.1017/S0305004100061806}
 }
-@article{BF18,
+@article{BF17,
   author    = {Siddharth Barman and
                Omar Fawzi},
   title     = {Algorithmic Aspects of Optimal Channel Coding},
@@ -330,7 +331,7 @@
   biburl    = {https://dblp.org/rec/conf/soda/Manurangsi20.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
-@inproceedings{MW08,
+@inproceedings{marden2008distributed,
   author    = {Jason R. Marden and
                Adam Wierman},
   title     = {Distributed welfare games with applications to sensor coverage},
@@ -355,7 +356,7 @@
   url = {https://doi.org/10.1007/978-1-4757-3155-2_3},
   doi = {10.1007/978-1-4757-3155-2_3}
 }
-@book{NRTV07,
+@book{AGT,
   editor    = {Noam Nisan and
                Tim Roughgarden and
                {\'{E}}va Tardos and
@@ -380,7 +381,7 @@
   archivePrefix = {arXiv},
   eprint    = {1807.01343},
 }
-@book{SS07,
+@book{StochasticOrders,
   title={Stochastic orders},
   author={Shaked, Moshe and Shanthikumar, J George},
   year={2007},
@@ -388,7 +389,7 @@
   url={https://doi.org/10.1007/978-0-387-34675-5},
   doi={10.1007/978-0-387-34675-5}
 }
-@article{SFL16,
+@article{Skowron2016,
   author    = {Piotr Skowron and
                Piotr Faliszewski and
                J{\'{e}}r{\^{o}}me Lang},

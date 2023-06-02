@@ -16,7 +16,7 @@ Andrew~D Barbour and Peter Hall.
 \newblock \href {https://doi.org/10.1017/S0305004100061806}
   {\path{doi:10.1017/S0305004100061806}}.
 
-\bibitem{BF17}
+\bibitem{BF18}
 Siddharth Barman and Omar Fawzi.
 \newblock Algorithmic aspects of optimal channel coding.
 \newblock {\em {IEEE} Trans. Inf. Theory}, 64(2):1038--1045, 2018.
@@ -173,7 +173,7 @@ Pasin Manurangsi.
 \newblock \href {https://doi.org/10.1137/1.9781611975994.5}
   {\path{doi:10.1137/1.9781611975994.5}}.
 
-\bibitem{marden2008distributed}
+\bibitem{MW08}
 Jason~R. Marden and Adam Wierman.
 \newblock Distributed welfare games with applications to sensor coverage.
 \newblock In {\em Proceedings of the 47th {IEEE} Conference on Decision and
@@ -189,7 +189,7 @@ Robert~A Murphey.
 \newblock \href {https://doi.org/10.1007/978-1-4757-3155-2_3}
   {\path{doi:10.1007/978-1-4757-3155-2_3}}.
 
-\bibitem{AGT}
+\bibitem{NRTV07}
 Noam Nisan, Tim Roughgarden, {\'{E}}va Tardos, and Vijay~V. Vazirani, editors.
 \newblock {\em Algorithmic Game Theory}.
 \newblock Cambridge University Press, 2007.
@@ -203,14 +203,14 @@ Dario Paccagnan and Jason~R Marden.
 \newblock {\em CoRR}, abs/1807.01343, 2018.
 \newblock \href {http://arxiv.org/abs/1807.01343} {\path{arXiv:1807.01343}}.
 
-\bibitem{StochasticOrders}
+\bibitem{SS07}
 Moshe Shaked and J~George Shanthikumar.
 \newblock {\em Stochastic orders}.
 \newblock Springer Science \& Business Media, 2007.
 \newblock \href {https://doi.org/10.1007/978-0-387-34675-5}
   {\path{doi:10.1007/978-0-387-34675-5}}.
 
-\bibitem{Skowron2016}
+\bibitem{SFL16}
 Piotr Skowron, Piotr Faliszewski, and J{\'{e}}r{\^{o}}me Lang.
 \newblock Finding a collective set of items: From proportional
   multirepresentation to group recommendation.

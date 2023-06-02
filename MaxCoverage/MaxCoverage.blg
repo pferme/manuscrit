@@ -10,7 +10,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: MaxCoverage.bib
 You've used 30 entries,
             2882 wiz_defined-function locations,
-            897 strings with 12632 characters,
+            898 strings with 12589 characters,
 and the built_in function-call counts, 15404 in all, are:
 = -- 1673
 > -- 549

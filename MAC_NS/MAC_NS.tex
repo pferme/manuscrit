@@ -340,7 +340,7 @@ As in the unassisted case, we want to maximize over all non-signaling box $P$ th
   \end{aligned}
 \end{equation}
 
-Since it is given as a linear program, the complexity of computing $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ is polynomial in the number of variables and constraints (see for instance Section 7.1 of~\cite{LinearProgramming}), which is a polynomial in $|\mathcal{X}_1|,|\mathcal{X}_2|,|\mathcal{Y}|,k_1$ and $k_2$. Also, as it is easy to check that a classical strategy is a particular case of a non-signaling assisted strategy, we have that $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \geq \mathrm{S}(W,k_1,k_2)$.
+Since it is given as a linear program, the complexity of computing $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ is polynomial in the number of variables and constraints (see for instance Section 7.1 of~\cite{GM07}), which is a polynomial in $|\mathcal{X}_1|,|\mathcal{X}_2|,|\mathcal{Y}|,k_1$ and $k_2$. Also, as it is easy to check that a classical strategy is a particular case of a non-signaling assisted strategy, we have that $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \geq \mathrm{S}(W,k_1,k_2)$.
 
 We have then the same definitions of capacity and zero-error capacity:
 \begin{defi}[Non-Signaling Assisted Capacity Region $\mathcal{C}^{\mathrm{NS}}(W)$ of a MAC $W$]
@@ -877,7 +877,7 @@ Let $\mathcal{Z} := \{\mathcal{X}_1, \mathcal{X}_2, \mathcal{Y}, \mathcal{X}_1 \
 
 \[ |\mathcal{O}_{S_n}(\mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n)| = \binom{n + |\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}|   - 1}{|\mathcal{X}_1| |\mathcal{X}_2| |\mathcal{Y}| - 1} \leq (n+|\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}|-1)^{|\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}| - 1} \ .\]
 
-So the number of variables and constraints is $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$. Note also that all the numbers occurring this linear program are integers or fractions of integers, with those integers ranging in $\left[\left(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|\right)^n\right]$, thus of size $O(n\log(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|))$. So the size of this linear program is bounded by $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$, and thus $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ can be computed in polynomial time in $n$; see for instance Section 7.1 of~\cite{LinearProgramming}.
+So the number of variables and constraints is $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$. Note also that all the numbers occurring this linear program are integers or fractions of integers, with those integers ranging in $\left[\left(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|\right)^n\right]$, thus of size $O(n\log(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|))$. So the size of this linear program is bounded by $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$, and thus $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ can be computed in polynomial time in $n$; see for instance Section 7.1 of~\cite{GM07}.
 \end{proof}
 
 In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For all of them, $\mathcal{A}$ and $\mathcal{B}$ will denote finite sets on which a group $G$ is acting, and $x^G$ will denote the orbit of $x$ under $G$:
@@ -1029,7 +1029,7 @@ The binary adder channel $W_{\text{BAC}}$ is the following MAC:
 
 Its classical capacity region $\mathcal{C}(W_{\text{BAC}})$ is well known and consists of all $(R_1,R_2)$ such that $R_1 \leq 1,R_2 \leq 1, R_1+R_2 \leq \frac{3}{2}$, as a consequence of Theorem~\ref{theo:capacity}. Its zero-error classical capacity $\mathcal{C}_0(W_{\text{BAC}})$ is not yet characterized. A lot of work has been done in finding outer and inner bounds on this region~\cite{Lindstrom69,Tilborg78,KL78,Weldon78,KLWY83,BT85,BB98,UL98,AB99,MO05,OS15}. To date, the best lower bound on the sum-rate capacity is $\log_2(240/6) \simeq 1.3178$~\cite{MO05}.
 
-Thanks to Proposition~\ref{prop:IB}, we were able to compute the regions $\mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W)$ for $n$ going up to $7$, which led to Figure~\ref{fig:BAC}. The code can be found on \href{https://github.com/pferme/MAC_NS_LP}{GitHub}. It uses Mosek linear programming solver~\cite{mosek}.
+Thanks to Proposition~\ref{prop:IB}, we were able to compute the regions $\mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W)$ for $n$ going up to $7$, which led to Figure~\ref{fig:BAC}. The code can be found on \href{https://github.com/pferme/MAC_NS_LP}{GitHub}. It uses Mosek linear programming solver~\cite{Mosek}.
 
 Note that the linear program from Theorem~\ref{theo:polyLP} has still a large number of variables and constraints although polynomial in $n$. Specifically, for $n=2$, it has $244$ variables and $480$ constraints; for $n=3$, it has $1112$ variables and $2054$ constraints; for $n=7$, it has $95592$ variables and $162324$ constraints; finally, for $n=8$, it has $226911$ variables and $383103$ constraints.
 
