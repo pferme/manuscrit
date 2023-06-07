@@ -545,7 +545,7 @@ Let us consider an optimal solution $p_x,r_{x,y_1,y_2},r^1_{x,y_1},r^2_{x,y_2}$ 
 \label{section:ApproxDetBC}
 In this section, we will address the question of the approximability of $\mathrm{S}(W,k_1,k_2)$, in the restricted scenario of a deterministic broadcast channel $W$.
 
-We say that $W$ is deterministic if $\forall x,y_1,y_2, W(y_1y_2|x) \in \{0,1\}$. We can then define $(W_1(x),W_2(x))$ as the only pair $(y_1,y_2)$ such that $W(y_1y_2|x)=1$, which exists uniquely as $W$ is a conditional probability distribution. We have then:
+We say that $W$ is deterministic if $\forall x,y_1,y_2, W(y_1y_2|x) \in \{0,1\}$. We can then define $(W_1(x),W_2(x))$ as the only pair $(y_1,y_2)$ such that $W(y_1y_2|x)=1$, which exists uniquely as $W$ is a conditional probability distribution. Thus we have:
 
 \begin{equation}
   \begin{aligned}
@@ -563,14 +563,24 @@ A deterministic channel $W$, up to a permutation of elements of $\mathcal{X}$, i
 
 Indeed, permuting the elements of $\mathcal{X}$ won't change $G_W$, and permuting elements of $\mathcal{Y}_1$ or $\mathcal{Y}_2$ will result in an isomorphic graph. These permutations do not change $\mathrm{S}(W,k_1,k_2)$, so we can ignore them in order to compute this quantity.
 
-As a consequence, the quantity $k_1k_2\mathrm{S}(W,k_1,k_2)$ can be seen as the solution of the following bipartite graph problem on $G_W, k_1$ and $k_2$, which we call \textsc{DensestQuotientGraph}: given a bipartite graph $G$ and integers $k_1,k_2$, maximize, over all quotient graphs of $G$ in $k_1$ parts on the left and $k_2$ parts on the right, the resulting number of edges.
+As a consequence, the quantity $k_1k_2\mathrm{S}(W,k_1,k_2)$ can be seen as the solution of the following bipartite graph problem on $G_W, k_1$ and $k_2$, which we call \textsc{DensestQuotientGraph}: given a bipartite graph $G$ and integers $k_1,k_2$, maximize, over all quotient graphs of $G$ in $k_1$ parts on the left and $k_2$ parts on the right, the resulting number of edges. Formally, this gives:
 
-Recall that the bipartite graph $G$ quotiented by partitions $\mathcal{P}_1,\mathcal{P}_2$ is given by:
-\[ G^{\mathcal{P}_1,\mathcal{P}_2} := \left(\mathcal{P}_1 \sqcup \mathcal{P}_2, \{(p_1,p_2) \in \mathcal{P}_1 \times \mathcal{P}_2: E^G \cap (p_1 \times p_2) \not= \emptyset\}\right) \ .\]
+\begin{defi}[Graph notations]
+  Consider a bipartite graph $G = (V_1 \sqcup V_2, E \subseteq V_1 \times V_2)$:
+  \begin{enumerate}
+    \item $G^{\mathcal{P}_1,\mathcal{P}_2}$, the quotient of $G$ by partitions $\mathcal{P}_1,\mathcal{P}_2$ of respectively $V_1,V_2$, is defined by:
+      \[ G^{\mathcal{P}_1,\mathcal{P}_2} := \left(\mathcal{P}_1 \sqcup \mathcal{P}_2, \{(p_1,p_2) \in \mathcal{P}_1 \times \mathcal{P}_2: E \cap (p_1 \times p_2) \not= \emptyset\}\right) \ .\]
+    \item $e_G(\mathcal{P}_1,\mathcal{P}_2) := |E^{G^{\mathcal{P}_1,\mathcal{P}_2}}|$ is the number of edges of $G^{\mathcal{P}_1,\mathcal{P}_2}$.
+    \item $N_G^{\mathcal{P}_1,\mathcal{P}_2}(p) := N_{G^{\mathcal{P}_1,\mathcal{P}_2}}(p)$ is the set of neighbors of $p$ in the graph $G^{\mathcal{P}_1,\mathcal{P}_2}$.
+    \item Similarly, $\deg_G^{\mathcal{P}_1,\mathcal{P}_2}(p) := \deg_{G^{\mathcal{P}_1,\mathcal{P}_2}}(p)$ is the degree, ie. the number of neighbors, of $p$ in the graph $G^{\mathcal{P}_1,\mathcal{P}_2}$.
+    \item We will use $V_1,V_2$ in previous notations when we do not partition on the left and right part respectively (or identify those to trivial partitions in singletons). For instance, $G^{V_1,V_2}=G$.
+    \item We will use the notations $e(\mathcal{P}_1,\mathcal{P}_2)$, $N_{\mathcal{P}_1,\mathcal{P}_2}(p)$  and $\deg_{\mathcal{P}_1,\mathcal{P}_2}(p)$ when the graph $G$ considered is clear from the context.
+  \end{enumerate}
+\end{defi}
 
-So formally, \textsc{DensestQuotientGraph} is the following problem:
-\[  \textsc{DensestQuotientGraph}(G,k_1,k_2) := \underset{\mathcal{P}_1 \text{ in $k_1$ parts},\mathcal{P}_2 \text{ in $k_2$ parts}}{\maxi} \ e_G(\mathcal{P}_1,\mathcal{P}_2) := |E^{G^{\mathcal{P}_1,\mathcal{P}_2}}| \ . \]
-
+\begin{defi}
+\[  \textsc{DensestQuotientGraph}(G,k_1,k_2) := \underset{\mathcal{P}_1 \text{ in $k_1$ parts},\mathcal{P}_2 \text{ in $k_2$ parts}}{\maxi} \ e_G(\mathcal{P}_1,\mathcal{P}_2) \ . \]
+\end{defi}
 Let us show the equivalence with the broadcast channel coding problem:
 
 \begin{prop}
@@ -587,10 +597,9 @@ An optimal solution achieving $\mathrm{S}(W,k_1,k_2)$ can be obtained with extre
     = &&\underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&&\sum_{i_1,i_2} \max_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}}\\
     = &&\underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&&\sum_{i_1,i_2} \mathbbm{1}_{\exists (y_1,y_2) \in E^{G_W}: y_1 \in \mathcal{P}_1^{i_1}\text{ and } y_2 \in \mathcal{P}_2^{i_2}}\\
     = &&\underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&&\sum_{i_1,i_2} \mathbbm{1}_{E^{G_W} \cap \left(\mathcal{P}_1^{i_1} \times \mathcal{P}_2^{i_2}\right) \not= \emptyset}\\
-    = &&\underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&& e_{G_W}(\mathcal{P}_1,\mathcal{P}_2) \ ,\\
+    = &&\underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&& e_{G_W}(\mathcal{P}_1,\mathcal{P}_2) \ .\\
     \end{aligned}
 \end{equation}
-by definition of $e_{G_W}(\mathcal{P}_1,\mathcal{P}_2) = |E^{G_W^{\mathcal{P}_1,\mathcal{P}_2}}| = |\{(p_1,p_2) \in \mathcal{P}_1 \times \mathcal{P}_2: E^{G_W} \cap (p_1 \times p_2) \not= \emptyset\}|$. This concludes the equivalence.
 \end{proof}
 
 \subsection{Approximation Algorithm for \textsc{DensestQuotientGraph}}
@@ -606,71 +615,66 @@ In this section, we will sort out how hard is \textsc{DensestQuotientGraph}, and
   There exists a polynomial-time $(1-e^{-1})^2$-approximation algorithm for the deterministic broadcast channel coding problem.
 \end{cor}
 
+The approximation algorithm is a two-step process. First, we consider the problem of maximizing $\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)$ over all partitions $\mathcal{P}_2$ of $V_2$ in $k_2$ parts. We will show that this is a special case of the submodular welfare problem, which can be approximated within a factor $1-e^{-1}$~\cite{Vondrak08}. We then choose the partition $\mathcal{P}_1$ on $V_1$ in $k_1$ parts uniformly at random. This partition couple will give an objective value $e(\mathcal{P}_1,\mathcal{P}_2)$ within a $(1-e^{-1})^2$ factor from the optimal solution in expectation.
+
 \begin{proof}[Proof of Theorem~\ref{theo:DQGapprox}]
   Consider first the hardness result. Let us show that the decision version of \textsc{DensestQuotientGraph} is \textrm{NP}-complete. It is in \textrm{NP}, the certificate being the two partitions and the selection of edges between those partitions. It is \textrm{NP}-hard as one of its particular cases is the \textsc{SetSplitting} problem (see for instance~\cite{GJ79}), in the case where $k_1=2$ and $k_2=|V_2|$, by interpreting the neighbors of $v_2 \in V_2$ as a set covering elements of $V_1$.
 
 We will show nonetheless that this problem can be approximated within a factor $(1-e^{-1})^2$ in polynomial time. First we consider the case where $k_2=|V_2|$. We can then always assume that the right partition is $\mathcal{P}_2 := \{ \{v_2\} : v_2 \in V_2 \}$, which leads necessarily to a greater or equal number of edges in the quotient graph that with any other right partition. So, in that setting, we need only to find a partition of $V_1$ in $k_1$ parts maximizing the number of edges between vertices in the right part and the quotient of the left vertices.
 
-First, one can note that the maximum value we can get is upper bounded by $\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right)$. Indeed, each vertex of $v_2$ van be connected at most to the $k_1$ parts of $V_1$, so its contribution is bounded by $k_1$, and there needs to be an edge to each part it is connected, so its contribution is also bounded by $\deg(v_2)$.
+First, one can note that the maximum value we can get is upper bounded by $\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right)$. Indeed, each vertex of $v_2$ van be connected at most to the $k_1$ parts of $V_1$, so its contribution is bounded by $k_1$, and there needs to be an edge to each part it is connected, so its contribution is also bounded by $\deg(v_2)$. Let us show that if we take a partition $\mathcal{P}_1$ of $V_1$ uniformly at random, we get:
+\[ \mathbb{E}_{\mathcal{P}_1}[e(\mathcal{P}_1,V_2)] \geq \left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right) \geq (1-e^{-1})\max_{\mathcal{P}_1}e(\mathcal{P}_1,V_2) \ .\]
 
-We define $e^1_G(\mathcal{P}_1) := e_G(\mathcal{P}_1, \{\{v_2\}: v_2 \in V_2\})$ as the number of edges in $G$ quotiented on the left by the partition $\mathcal{P}_1$ but without quotienting the right part. Let us show that if we take a partition $\mathcal{P}_1$ of $V_1$ uniformly at random, we get:
-\[ \mathbb{E}_{\mathcal{P}_1}[e^1_G(\mathcal{P}_1)] \geq \left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right) \geq (1-e^{-1})\max_{\mathcal{P}_1}e^1_G(\mathcal{P}_1) \ .\]
-
-Let us call $G_{v_2} := \left(V^G_1 \sqcup \{v_2\}, E^G \cap \left(V^G_1 \times \{v_2\}\right)\right)$. We have then that $e^1_G(\mathcal{P}_1)=\sum_{v_2 \in V_2}e^1_{G_{v_2}}(\mathcal{P}_1)$, so by linearity of expectation, we have that $\mathbb{E}_{\mathcal{P}_1}[e^1_G(\mathcal{P}_1)] = \sum_{v_2 \in V_2}\mathbb{E}_{\mathcal{P}_1}[e^1_{G_{v_2}}(\mathcal{P}_1)]$. We will focus on the contribution of one particular $v_2$. It is enough to consider only its neighbors $N(v_2)$ as other elements of $V_1$ do not contribute to $e^1_{G_{v_2}}(\mathcal{P}_1)$.
-
-Then, we have that $e^1_{G_{v_2}}(\mathcal{P}_1)=|\{i \in [k_1]: N(v_2) \cap \mathcal{P}_1^i \not= \emptyset  \}|$. Let us call $N(v_2) = \{v_1^1, \ldots, v_1^{\deg(v_2)}\}$. We have that $\mathbb{P}\left(v_1^j \in \mathcal{P}_1^i\right) = \frac{1}{k_1}$ since the partition is taken uniformly at random. Then, we have:
+We have that $e(\mathcal{P}_1,V_2)=\sum_{v_2 \in V_2}\deg_{\mathcal{P}_1,V_2}(v_2)$, so by linearity of expectation $\mathbb{E}_{\mathcal{P}_1}[e(\mathcal{P}_1,V_2)] = \sum_{v_2 \in V_2}\mathbb{E}_{\mathcal{P}_1}[\deg_{\mathcal{P}_1,V_2}(v_2)]$. However $\deg_{\mathcal{P}_1,V_2}(v_2)=|\{i_1 \in [k_1]: N(v_2) \cap \mathcal{P}_1^{i_1} \not= \emptyset  \}|$. Recall also that for any $v_1$, $\mathbb{P}\left(v_1 \in \mathcal{P}_1^{i_1}\right) = \frac{1}{k_1}$ since the partition is taken uniformly at random. Thus, we get:
 
 \begin{equation}
   \begin{aligned}
-    \mathbb{E}_{\mathcal{P}_1}[e^1_{G_{v_2}}(\mathcal{P}_1)] &= \mathbb{E}_{\mathcal{P}_1}\left[|\{i \in [k_1]: N(v_2) \cap \mathcal{P}_1^i \not= \emptyset  \}|\right]
-    = \mathbb{E}_{\mathcal{P}_1}\left[\sum_{i \in [k_1]} \mathbbm{1}_{N(v_2) \cap \mathcal{P}_1^i \not= \emptyset}\right]\\
-    &= \sum_{i = 1}^{k_1} \mathbb{E}_{\mathcal{P}_1}\left[\mathbbm{1}_{N(v_2) \cap \mathcal{P}_1^i \not= \emptyset}\right]
-    = \sum_{i = 1}^{k_1}\mathbb{P}\left(N(v_2) \cap \mathcal{P}_1^i \not= \emptyset\right)\\
-    &= \sum_{i = 1}^{k_1}\left(1 - \mathbb{P}\left(N(v_2) \cap \mathcal{P}_1^i = \emptyset\right)\right)
-    = \sum_{i = 1}^{k_1}\left(1 - \prod_{v_1 \in N(v_2)}\mathbb{P}\left(v_1 \not\in \mathcal{P}_1^i)\right)\right)\\
-    &= \sum_{i = 1}^{k_1}\left(1 - \prod_{v_1 \in N(v_2)}\mathbb{P}\left(v_1 \not\in \mathcal{P}_1^i)\right)\right) =\sum_{i = 1}^{k_1}\left(1 - \prod_{j = 1}^{\deg(v_2)}\left(1- \mathbb{P}\left(v_1^j \in \mathcal{P}_1^i\right)\right)\right)\\
-    &= k_1\left(1-\left(1-\frac{1}{k_1}\right)^{\deg(v_2)}\right) \ .
+    \mathbb{E}_{\mathcal{P}_1}[\deg_{\mathcal{P}_1,V_2}(v_2)] &= \mathbb{E}_{\mathcal{P}_1}\left[|\{i_1 \in [k_1]: N(v_2) \cap \mathcal{P}_1^{i_1} \not= \emptyset  \}|\right]
+    = \mathbb{E}_{\mathcal{P}_1}\left[\sum_{i_1=1}^{k_1} \mathbbm{1}_{N(v_2) \cap \mathcal{P}_1^{i_1} \not= \emptyset}\right]\\
+    &= \sum_{i_1=1}^{k_1} \mathbb{E}_{\mathcal{P}_1}\left[\mathbbm{1}_{N(v_2) \cap \mathcal{P}_1^{i_1} \not= \emptyset}\right]
+    = \sum_{i_1=1}^{k_1}\mathbb{P}\left(N(v_2) \cap \mathcal{P}_1^{i_1} \not= \emptyset\right)\\
+    &= \sum_{i_1=1}^{k_1}\left(1 - \mathbb{P}\left(N(v_2) \cap \mathcal{P}_1^{i_1} = \emptyset\right)\right)
+    = \sum_{i_1=1}^{k_1}\left(1 - \prod_{v_1 \in N(v_2)}\mathbb{P}\left(v_1 \not\in \mathcal{P}_1^{i_1}\right)\right)\\
+    &= \sum_{i_1=1}^{k_1}\left(1 - \prod_{v_1 \in N(v_2)}\mathbb{P}\left(v_1 \not\in \mathcal{P}_1^{i_1}\right)\right) = k_1\left(1-\left(1-\frac{1}{k_1}\right)^{\deg(v_2)}\right) \ ,
   \end{aligned}
 \end{equation}
 
-So, in all we have that:
-\[ \mathbb{E}_{\mathcal{P}_1}[e^1_G(\mathcal{P}_1)] = \sum_{v_2 \in V_2}\mathbb{E}_{\mathcal{P}_1}[e^1_{G_{v_2}}(\mathcal{P}_1)] = k_1\sum_{v_2 \in V_2}\left(1-\left(1-\frac{1}{k_1}\right)^{\deg(v_2)}\right) \ . \]
+since $\mathbb{P}\left(v_1 \not\in \mathcal{P}_1^{i_1}\right)=1-\frac{1}{k_1}$ and $|N(v_2)|=\deg(v_2)$. So, in all:
 
-However, the function $x \mapsto 1-\left(1-\frac{1}{k_1}\right)^x$ is nondecreasing concave, so we have that:
+\[ \mathbb{E}_{\mathcal{P}_1}[e(\mathcal{P}_1,V_2)] = \sum_{v_2 \in V_2}\mathbb{E}_{\mathcal{P}_1}[\deg_{\mathcal{P}_1,V_2}(v_2)] = k_1\sum_{v_2 \in V_2}\left(1-\left(1-\frac{1}{k_1}\right)^{\deg(v_2)}\right) \ . \]
+
+However, the function $f : x \mapsto 1-\left(1-\frac{1}{k_1}\right)^x$ is nondecreasing concave with $f(0)=0$, so $\frac{f(x)}{x} \geq \frac{f(y)}{y}$ for $x \leq y$. In particular, we have that:
+\[ f(\min(k_1,\deg(v_2))) \geq \frac{\min(k_1,\deg(v_2))}{k_1}f(k_1) \ , \]
+
+and thus:
+\begin{equation}
+  \begin{aligned}
+    \mathbb{E}_{\mathcal{P}_1}[e(\mathcal{P}_1,V_2)] &\geq k_1\sum_{v_2 \in V_2}\left(1-\left(1-\frac{1}{k_1}\right)^{\min(k_1,\deg(v_2))}\right) \geq k_1\frac{\sum_{v_2 \in V_2}\min(k_1,\deg(v_2))}{k_1}\left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\\
+    &\geq \left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right) \geq (1-e^{-1})\max_{\mathcal{P}_1}e(\mathcal{P}_1,V_2) \ ,
+  \end{aligned}
+\end{equation}
+
+
+Let us now consider the general case with $k_2$ unconstrained. We apply the previous discussion on the graph $G^{V_1,\mathcal{P}_2}$ for some fixed partition $\mathcal{P}_2$ of $V_2$. Since $e_{G^{V_1,\mathcal{P}_2}}(\mathcal{P}_1,\mathcal{P}_2) = e(\mathcal{P}_1,\mathcal{P}_2)$, we have the upper bound:
+\[ \max_{\mathcal{P}_1} e(\mathcal{P}_1,\mathcal{P}_2) \leq \sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right) \ , \]
+
+and the previous algorithm gives us a partition $\mathcal{P}_1$ of $V_1$ such that:
+\[ e(\mathcal{P}_1,\mathcal{P}_2) \geq (1-e^{-1})\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)\ . \]
+
+Therefore, let us focus on the following optimization problem:
+\[\max_{\mathcal{P}_2}\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right) \ , \]
+
+We will give a $(1-e^{-1})$ approximation algorithm running in polynomial time for this problem. In all, this will allow us to get in polynomial time a partition pair $(\mathcal{P}_1,\mathcal{P}_2)$ such that:
 
 \begin{equation}
   \begin{aligned}
-    \mathbb{E}_{\mathcal{P}_1}[e^1_G(\mathcal{P}_1)] &\geq k_1\sum_{v_2 \in V_2}\left(1-\left(1-\frac{1}{k_1}\right)^{\min(k_1,\deg(v_2))}\right) \geq k_1\frac{\sum_{v_2 \in V_2}\min(k_1,\deg(v_2))}{k_1}\left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\\
-    &\geq \left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right) \geq (1-e^{-1})\max_{\mathcal{P}_1}e^1_G(\mathcal{P}_1) \ .
+    e(\mathcal{P}_1,\mathcal{P}_2) &\geq (1-e^{-1})\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)\\
+    &\geq (1-e^{-1})^2\max_{\mathcal{P}_2}\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)\\
+    &\geq (1-e^{-1})^2\max_{\mathcal{P}_1,\mathcal{P}_2} e(\mathcal{P}_1,\mathcal{P}_2) \ .
   \end{aligned}
 \end{equation}
 
-Indeed, $\sum_x g(f(x)) \geq \frac{\sum_{x}{f(x)}}{M}g(M)$ if $\forall x, f(x) \leq M$ and $g$ nondecreasing concave.
-
-Then, we look at the general case of $k_1$ and $k_2$ unconstrained, but we look at a different objective function. Now, we want to find the value of:
-\[\max_{\mathcal{P}_2}\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right) \ , \]
-where $\mathcal{P}_2$ is a partition of $V_2$ in $k_2$ parts, $G^{\mathcal{P}_2} := G^{\{ \{v_1\}: v_1 \in V_1^G\},\mathcal{P}_2}$ the graph quotiented on right by $\mathcal{P}_2$ but without quotienting the left part, and $\deg_{G^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})$ the degree of the part in $G^{\mathcal{P}_2}$.
-
-Thanks to what was done before, we know that:
-\[ \max_{\mathcal{P}_2}\sum_{p_2 \in \mathcal{P}_2}\min\left(k_1,\deg_{G^{\mathcal{P}_2}}(p_2)\right) \geq \max_{\mathcal{P}_2} \max_{\mathcal{P}_1} e^1_{G^{\mathcal{P}_2}}(\mathcal{P}_1) = \max_{\mathcal{P}_1,\mathcal{P}_2} e_G(\mathcal{P}_1,\mathcal{P}_2) \ . \]
-
-Furthermore, given a partition $\mathcal{P}_2$ of $V_2$, we can apply the previous algorithm on $\mathcal{P}_2$ to get $\mathcal{P}_1$ such that $e^1_{G^{\mathcal{P}_2}}(\mathcal{P}_1) \geq (1-e^{-1})\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right)$.
-
-We will show that we have a $(1-e^{-1})$ polynomial-time approximation of:
-
-\[ \max_{\mathcal{P}_2}\sum_{p_2 \in \mathcal{P}_2}\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right) \ .\]
-
-Thus in all we will get in polynomial time a pair of partition $(\mathcal{P}_1,\mathcal{P}_2)$ such that:
-
-\begin{equation}
-  \begin{aligned}
-    e_G(\mathcal{P}_1,\mathcal{P}_2) &\geq (1-e^{-1})\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right)\\
-    &\geq (1-e^{-1})^2\max_{\mathcal{P}_2}\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right)\\
-    &\geq (1-e^{-1})^2\max_{\mathcal{P}_1,\mathcal{P}_2} e_G(\mathcal{P}_1,\mathcal{P}_2) \ .
-  \end{aligned}
-\end{equation}
-
-The problem $\max_{\mathcal{P}_2}\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right)$ is a particular instance of the submodular welfare problem discussed in~\cite{Vondrak08}. Indeed, the function $h(S) := \min\left(k_1,\deg_{G^{\mathcal{P}_2}}(S)\right)$, for $S \subseteq V_2$, is a nondecreasing submodular function. Thus, we want to maximize $\sum_{i=1}^{k_2}h(S_i)$ where $(S_i)_{i \in [k_2]}$ is a partition of the items in $V_2$ among the $k_2$ bidders. It is a particular case of the submodular welfare problem where each nondecreasing submodular utility weight is the same for all bidders and equal to $h$. Thus, thanks to~\cite{Vondrak08}, there exists a $(1-e^{-1})$ polynomial-time approximation of $\max_{\mathcal{P}_2}\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right)$. This concludes the proof.
+The problem $\max_{\mathcal{P}_2}\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)$ is a particular instance of the submodular welfare problem discussed in~\cite{Vondrak08}. Note first that $\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) = \deg_{V_1,\{\mathcal{P}_2^{i_2}, V_2-\mathcal{P}_2^{i_2}\}}(\mathcal{P}_2^{i_2})$, as the degree of $\mathcal{P}_2^{i_2}$ does not depend on the rest of the partition $\mathcal{P}_2$. Then, $h(S_2) := \min\left(k_1,\deg_{V_1,\{S_2,V_2-S_2\}}(S_2)\right)$, for $S_2 \subseteq V_2$, is a nondecreasing submodular function, as $S_2 \mapsto \deg_{V_1,\{S_2,V_2-S_2\}}(S_2)$ is a nondecreasing submodular function on $V_2$ and $\min(k_1,\cdot)$ is nondecreasing concave. Thus, we want to maximize $\sum_{i_2=1}^{k_2}h(S_{i_2})$ where $(S_{i_2})_{i_2 \in [k_2]}$ is a partition of items in $V_2$ among $k_2$ bidders. It is a particular case of the submodular welfare problem where each nondecreasing submodular utility weight is the same for all bidders and equal to $h$. Thus, thanks to~\cite{Vondrak08}, there exists a $(1-e^{-1})$ polynomial-time approximation of $\max_{\mathcal{P}_2}\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)$.
 \end{proof}
 
 \subsection{Deterministic Non-Signaling Assisted Capacity Region}
@@ -694,9 +698,9 @@ This turns out to be true, and will be proved through the following theorem:
   We apply Theorem~\ref{theo:NSdet} on the deterministic broadcast channel $W^{\otimes n}$.
 
   We fix $k_1=2^{nR_1},k_2=2^{nR_2}$ and $\ell_1=\frac{2^{nR_1}}{n},\ell_2=\frac{2^{nR_2}}{n}$. Since $1-\left(1-\frac{1}{\ell}\right)^{k} \geq 1-e^{-\frac{k}{\ell}}$, we get:
-\[ \left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-e^{-nR_1}\right)\left(1-e^{-nR_2}\right)\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},2^{nR_1},2^{nR_1}) \leq \mathrm{S}\left(W^{\otimes n},\frac{2^{nR_1}}{n},\frac{2^{nR_2}}{n}\right)\ . \]
+\[ \left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-e^{-n}\right)^2\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},2^{nR_1},2^{nR_1}) \leq \mathrm{S}\left(W^{\otimes n},\frac{2^{nR_1}}{n},\frac{2^{nR_2}}{n}\right)\ . \]
 
-  As $\left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-e^{-nR_1}\right)\left(1-e^{-nR_2}\right)$ tends to $1$ when $n$ tends to infinity, we get that $\forall \varepsilon, \exists N \in \mathbb{N}, \forall n\geq N$:
+  As $\left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-e^{-n}\right)^2$ tends to $1$ when $n$ tends to infinity, we get that $\forall \varepsilon, \exists N \in \mathbb{N}, \forall n\geq N$:
 
 \[ (1-\varepsilon)\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},2^{nR_1},2^{nR_1}) \leq \mathrm{S}(W^{\otimes n},2^{n(R_1-\frac{\log(n)}{n})},2^{n(R_2-\frac{\log(n)}{n})}) \ . \]
 
@@ -711,106 +715,118 @@ Since this is true for all $\varepsilon > 0$, we get in fact that $\underset{n \
 Let us now prove the main result:
 
 \begin{proof}[Proof of Theorem~\ref{theo:NSdet}]
-  The proof will be done in three parts:
+  The proof will be done in three parts. We will work on the graph $G_W$:
   \begin{enumerate}
   \item First, we prove that for any partition $\mathcal{P}_2$ of $\mathcal{Y}_2$ in $\ell_2$ parts:
-    \[ \mathrm{S}(W,\ell_1,\ell_2) \geq \left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\frac{\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right)}{k_1\ell_2} \ , \]
-    with $G_W^{\mathcal{P}_2}$ defined as in the proof of Theorem~\ref{theo:DQGapprox}.
+    \[ \mathrm{S}(W,\ell_1,\ell_2) \geq \left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\frac{\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)}{k_1\ell_2} \ , \]
   \item Then, we show that there exists a partition $\mathcal{P}_2$ such that:
-    \[ \frac{\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right)}{k_1\ell_2} \geq \left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\frac{\min\left(k_1k_2,\sum_{y_1}\min(k_2,\deg_{G_W}(y_1))\right)}{k_1k_2} \ , \]
+    \[ \frac{\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)}{k_1\ell_2} \geq \left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\frac{\min\left(k_1k_2,\sum_{y_1}\min(k_2,\deg(y_1))\right)}{k_1k_2} \ , \]
   \item Finally, we prove that:
-    \[ \frac{\min\left(k_1k_2,\sum_{y_1}\min(k_2,\deg_{G_W}(y_1))\right)}{k_1k_2} \geq \mathrm{S}^{\textrm{NS}}(W,k_1,k_2) \ . \]
+    \[ \frac{\min\left(k_1k_2,\sum_{y_1}\min(k_2,\deg(y_1))\right)}{k_1k_2} \geq \mathrm{S}^{\textrm{NS}}(W,k_1,k_2) \ . \]
   \end{enumerate}
 
   By combining these three inequalities, we get precisely the claimed result.
 
   \begin{enumerate}
   \item This part shares a lot of similarities with the proof of Theorem~\ref{theo:DQGapprox}, which we will adapt to this particular situation. Let us show that if we take a partition $\mathcal{P}_1$ of $\mathcal{Y}_1$ of size $\ell_1$ uniformly at random, we get, for some fixed $\mathcal{P}_2$ of size $\ell_2$:
-    \[ \mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)] \geq \frac{\ell_1}{k_1}\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right) \ .\]
+    \[ \mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)] \geq \frac{\ell_1}{k_1}\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right) \ .\]
 
     Then, since $\ell_1\ell_2 \mathrm{S}(W,\ell_1,\ell_2) = \underset{\mathcal{P}_1 \text{ in $\ell_1$ parts},\mathcal{P}_2 \text{ in $\ell_2$ parts}}{\maxi} \ e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)$ by Proposition~\ref{prop:BCCisDQG}, this will imply that:
-    \[ \mathrm{S}(W,\ell_1,\ell_2) \geq \frac{1}{\ell_1\ell_2}\mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)] \geq \left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\frac{\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right)}{k_1\ell_2} \ .\]
+    \[ \mathrm{S}(W,\ell_1,\ell_2) \geq \frac{1}{\ell_1\ell_2}\mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)] \geq \left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\frac{\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)}{k_1\ell_2} \ .\]
 
-We have that $e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)=e^1_{G_W^{\mathcal{P}_2}}(\mathcal{P}_1)=\sum_{i_2=1}^{\ell_2}e^1_{G_{W,\mathcal{P}_2^{i_2}}^{\mathcal{P}_2}}(\mathcal{P}_1)$ (with $G_W^{\mathcal{P}_2}$ being the graph quotiented only on the right part by $\mathcal{P}_2$, and $G_{W,\mathcal{P}_2^{i_2}}^{\mathcal{P}_2}$ its restriction to the right vertex $\mathcal{P}_2^{i_2}$ in the right part), so by linearity of expectation, we have that $\mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)] = \sum_{i_2=1}^{\ell_2}\mathbb{E}_{\mathcal{P}_1}[e^1_{G_{W,\mathcal{P}_2^{i_2}}^{\mathcal{P}_2}}(\mathcal{P}_1)]$, so we will focus on the contribution of one particular $\mathcal{P}_2^{i_2}$. It is enough to consider only its neighbors as the other elements of $\mathcal{Y}_1$ do not contribute in $e^1_{G_{W,\mathcal{P}_2^{i_2}}^{\mathcal{P}_2}}(\mathcal{P}_1)$.
+We have that $e_{G_W}(\mathcal{P}_1,\mathcal{P}_2) = \sum_{i_2=1}^{\ell_2}\deg_{\mathcal{P}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})$, so by linearity of expectation, we have that $\mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)] = \sum_{i_2=1}^{\ell_2}\mathbb{E}_{\mathcal{P}_1}[\deg_{\mathcal{P}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})]$, so we will focus on the contribution of one particular $\mathcal{P}_2^{i_2}$.
 
-Then, we have that $e^1_{G_{W,\mathcal{P}_2^{i_2}}^{\mathcal{P}_2}}(\mathcal{P}_1)=|\{i_1 \in [\ell_1]: N(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} \not= \emptyset  \}|$. Let us call $N(\mathcal{P}_2^{i_2}) = \{v_1^1, \ldots, v_1^{\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})}\}$. We have that $\mathbb{P}\left(v_1^j \in \mathcal{P}_1^{i_1}\right) = \frac{1}{\ell_1}$ since the partition is taken uniformly at random. Then, we have:
+Then, we have that $\deg_{\mathcal{P}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})=|\{i_1 \in [\ell_1]: N_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} \not= \emptyset  \}|$. Recall that $\mathbb{P}\left(v_1 \in \mathcal{P}_1^{i_1}\right) = \frac{1}{\ell_1}$ for any $v_1$ since the partition is taken uniformly at random. Thus:
 
 \begin{equation}
   \begin{aligned}
-    \mathbb{E}_{\mathcal{P}_1}[e^1_{G_{W,\mathcal{P}_2^{i_2}}^{\mathcal{P}_2}}(\mathcal{P}_1)] &= \mathbb{E}_{\mathcal{P}_1}\left[|\{i_1 \in [\ell_1]: N(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} \not= \emptyset  \}|\right]
-    = \mathbb{E}_{\mathcal{P}_1}\left[\sum_{i_1=1}^{\ell_1} \mathbbm{1}_{N(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} \not= \emptyset}\right]\\
-    &= \sum_{i_1 = 1}^{\ell_1} \mathbb{E}_{\mathcal{P}_1}\left[\mathbbm{1}_{N(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} \not= \emptyset}\right]
-    = \sum_{i_1 = 1}^{\ell_1}\mathbb{P}\left(N(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} \not= \emptyset\right)\\
-    &= \sum_{i_1 = 1}^{\ell_1}\left(1 - \mathbb{P}\left(N(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} = \emptyset\right)\right)
+    \mathbb{E}_{\mathcal{P}_1}[\deg_{\mathcal{P}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})] &= \mathbb{E}_{\mathcal{P}_1}\left[|\{i_1 \in [\ell_1]: N_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} \not= \emptyset  \}|\right]
+    = \mathbb{E}_{\mathcal{P}_1}\left[\sum_{i_1=1}^{\ell_1} \mathbbm{1}_{N_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} \not= \emptyset}\right]\\
+    &= \sum_{i_1 = 1}^{\ell_1} \mathbb{E}_{\mathcal{P}_1}\left[\mathbbm{1}_{N_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} \not= \emptyset}\right]
+    = \sum_{i_1 = 1}^{\ell_1}\mathbb{P}\left(N_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} \not= \emptyset\right)\\
+    &= \sum_{i_1 = 1}^{\ell_1}\left(1 - \mathbb{P}\left(N_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) \cap \mathcal{P}_1^{i_1} = \emptyset\right)\right)
     = \sum_{i_1 = 1}^{\ell_1}\left(1 - \prod_{v_1 \in N(\mathcal{P}_2^{i_2})}\mathbb{P}\left(v_1 \not\in \mathcal{P}_1^{i_1})\right)\right)\\
-    &=\sum_{i_1 = 1}^{\ell_1}\left(1 - \prod_{j = 1}^{\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})}\left(1- \mathbb{P}\left(v_1^j \in \mathcal{P}_1^{i_1}\right)\right)\right) = \ell_1\left(1-\left(1-\frac{1}{\ell_1}\right)^{\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})}\right) \ .
+    &= \ell_1\left(1-\left(1-\frac{1}{\ell_1}\right)^{\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})}\right) \ .
   \end{aligned}
 \end{equation}
 
 So, in all we have that:
-\[ \mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)] = \sum_{i_2=1}^{\ell_2}\mathbb{E}_{\mathcal{P}_1}[e^1_{G_{W,\mathcal{P}_2^{i_2}}^{\mathcal{P}_2}}(\mathcal{P}_1)] = \ell_1\sum_{i_2=1}^{\ell_2}\left(1-\left(1-\frac{1}{\ell_1}\right)^{\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})}\right) \ . \]
+\[ \mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)] = \sum_{i_2=1}^{\ell_2}\mathbb{E}_{\mathcal{P}_1}[\deg_{\mathcal{P}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})] = \ell_1\sum_{i_2=1}^{\ell_2}\left(1-\left(1-\frac{1}{\ell_1}\right)^{\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})}\right) \ . \]
 
-The function $x \mapsto 1-\left(1-\frac{1}{\ell_1}\right)^x$ is nondecreasing concave, so we have that:
+However the function $f : x \mapsto 1-\left(1-\frac{1}{\ell_1}\right)^x$ is nondecreasing concave with $f(0)=0$, so $\frac{f(x)}{x} \geq \frac{f(y)}{y}$ for $x \leq y$. In particular, we have that:
+\[ f(\min(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))) \geq \frac{\min(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})))}{k_1}f(k_1) \ , \]
 
+and thus:
 \begin{equation}
   \begin{aligned}
-    \mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)] &\geq \ell_1\sum_{i_2=1}^{\ell_2}\left(1-\left(1-\frac{1}{\ell_1}\right)^{\min(k_1,\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2}))}\right)\\
-    &\geq \ell_1\frac{\sum_{i_2=1}^{\ell_2}\min(k_1,\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2}))}{k_1}\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\\
-    &= \frac{\ell_1}{k_1}\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right) \ ,
+    \mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)] &\geq \ell_1\sum_{i_2=1}^{\ell_2}\left(1-\left(1-\frac{1}{\ell_1}\right)^{\min(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))}\right)\\
+    &\geq \ell_1\frac{\sum_{i_2=1}^{\ell_2}\min(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))}{k_1}\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\\
+    &= \frac{\ell_1}{k_1}\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right) \ ,
   \end{aligned}
-\end{equation}
-since, as before, $\sum_x g(f(x)) \geq \frac{\sum_{x}{f(x)}}{M}g(M)$ if $\forall x, f(x) \leq M$ and $g$ nondecreasing concave. This concludes the first part of the proof.
+\end{equation} 
+which concludes the first part of the proof.
   
-\item Let us take $\mathcal{P}_2$ a partition of $\mathcal{Y}_2$ of size $\ell_2$ uniformly at random, and let us prove that:
-  \[ \mathbb{E}\left[\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right)\right] \geq \frac{\ell_2}{k_2}\left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\min\left(k_1k_2,\sum_{y_1}\min(k_2,\deg_{G_W}(y_1))\right) \ . \]
+\item Let us take $\mathcal{P}_2$ a partition of $\mathcal{Y}_2$ of size $\ell_2$ uniformly at random, and let us prove that
+  \[ \mathbb{E}\left[\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)\right] \]
+  is greater than or equal to
+  \[ \frac{\ell_2}{k_2}\left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\min\left(k_1k_2,\sum_{y_1}\min(k_2,\deg(y_1))\right) \ . \]
 
-  First, $\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right) = \sum_{i_2=1}^{\ell_2}\varphi(\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2}))$ with $\varphi(j):=\min(k_1,j)$ which is a concave function. We will use several tools introduced in~\cite{BFF21} to handle those concave functions in approximation algorithms. Specifically, we have that the Poisson concavity ratio $\alpha_{\varphi} := \inf_{x \in \mathbb{R}^+} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x))} = 1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}$ for that particular function. We will also need the following lemma, whose proof is based on convex order:
+  First, $\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right) = \sum_{i_2=1}^{\ell_2}\varphi(\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))$ with $\varphi(j):=\min(k_1,j)$ which is a concave function. We will use several tools introduced in~\cite{BFF21} to handle those concave functions in approximation algorithms. Specifically, we have that the Poisson concavity ratio $\alpha_{\varphi} := \inf_{x \in \mathbb{R}^+} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x))} = 1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}$ for that particular function. We will also need the following lemma, whose proof is based on convex order:
   \begin{lem}[Lemma 2.2 of~\cite{BFF21}]
     For $\varphi$ concave, and $p \in [0,1]^m$, we have:
     \[\mathbb{E}\Big[\varphi\Big(\sum_{i=1}^m\Ber(p_i)\Big)\Big] \geq \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i=1}^m p_i\Big)\Big)\Big]\ .\]
   \label{lem:ConvexOrder}
 \end{lem}
   
-Let us find the law of $\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})$:
+Let us find the law of $\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})$:
   \begin{equation}
     \begin{aligned}
-      \deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2}) &= \sum_{y_1} \mathbbm{1}_{N(y_1) \cap \mathcal{P}_2^{i_2} \not= \emptyset} = \sum_{y_1} \left(1-\mathbbm{1}_{N(y_1) \cap \mathcal{P}_2^{i_2} = \emptyset}\right) = \sum_{y_1} \left(1-\mathbbm{1}_{\forall y_2 \in N(y_1), y_2 \not\in \mathcal{P}_2^{i_2}}\right)\\
-      &= \sum_{y_1} \Ber\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg_{G_W}(y_1)}\right)
+      \deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) &= \sum_{y_1} \mathbbm{1}_{N(y_1) \cap \mathcal{P}_2^{i_2} \not= \emptyset} = \sum_{y_1} \left(1-\mathbbm{1}_{N(y_1) \cap \mathcal{P}_2^{i_2} = \emptyset}\right) = \sum_{y_1} \left(1-\mathbbm{1}_{\forall y_2 \in N(y_1), y_2 \not\in \mathcal{P}_2^{i_2}}\right)\\
+      &= \sum_{y_1} \Ber\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg_(y_1)}\right)
     \end{aligned}
   \end{equation}
 
 Thus:
 \begin{equation}
   \begin{aligned}
-    \mathbb{E}\left[\varphi(\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2}))\right] &= \mathbb{E}\left[\varphi\left(\sum_{y_1}\Ber\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg_{G_W}(y_1)}\right)\right)\right]\\
-    &\geq  \mathbb{E}\left[\varphi\left(\Poi\left(\sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg_{G_W}(y_1)}\right)\right)\right)\right] \text{ by Lemma~\ref{lem:ConvexOrder}}\\
-    &\geq \alpha_{\varphi}\varphi\left(\sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg_{G_W}(y_1)}\right)\right) \text{ by definition of $\alpha_{\varphi}$.}
+    \mathbb{E}\left[\varphi(\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))\right] &= \mathbb{E}\left[\varphi\left(\sum_{y_1}\Ber\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg(y_1)}\right)\right)\right]\\
+    &\geq  \mathbb{E}\left[\varphi\left(\Poi\left(\sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg(y_1)}\right)\right)\right)\right] \text{ by Lemma~\ref{lem:ConvexOrder}}\\
+    &\geq \alpha_{\varphi}\varphi\left(\sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg(y_1)}\right)\right) \text{ by definition of $\alpha_{\varphi}$.}
   \end{aligned}
 \end{equation}
 
 But:
 \begin{equation}
   \begin{aligned}
-    \sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg_{G_W}(y_1)}\right) &\geq \sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\min\left(k_2,\deg_{G_W}(y_1)\right))}\right)\\
-    &\geq \left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\frac{1}{k_2}\sum_{y_1}\min\left(k_2,\deg_{G_W}(y_1)\right) \ ,
+    \sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg(y_1)}\right) &\geq \sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\min\left(k_2,\deg(y_1)\right))}\right)\\
+    &\geq \left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\frac{1}{k_2}\sum_{y_1}\min\left(k_2,\deg(y_1)\right) \ ,
   \end{aligned}
 \end{equation}
 
-as before. $\varphi$ is also sublinear, so:
+as before. Since $\varphi$ is concave and $\varphi(0)=0$, we have in particular that for all $0 \leq c \leq 1$ and $x \in \mathbb{R}, \varphi(cx)\geq c\varphi(x)$. We know also that $\varphi$ is nondecreasing. This implies that:
 
 \begin{equation}
   \begin{aligned}
-    \mathbb{E}\left[\varphi(\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})))\right] &\geq \alpha_{\varphi}\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\min\left(k_1,\frac{1}{k_2}\sum_{y_1}\min\left(k_2,\deg_{G_W}(y_1)\right)\right)\\
-    &= \frac{1}{k_2}\left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\min\left(k_1k_2,\sum_{y_1}\min\left(k_2,\deg_{G_W}(y_1)\right)\right)\\
+\varphi\left(\sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg(y_1)}\right)\right) &\geq \varphi\left(\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\frac{1}{k_2}\sum_{y_1}\min\left(k_2,\deg(y_1)\right)\right) \\
+&\geq \left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\varphi\left(\frac{1}{k_2}\sum_{y_1}\min\left(k_2,\deg(y_1)\right)\right) \ ,
+  \end{aligned}
+\end{equation}
+
+as $0 \leq 1-\left(1-\frac{1}{\ell_2}\right)^{k_2} \leq 1$. Thus:
+
+\begin{equation}
+  \begin{aligned}
+    \mathbb{E}\left[\varphi(\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})))\right] &\geq \alpha_{\varphi}\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\min\left(k_1,\frac{1}{k_2}\sum_{y_1}\min\left(k_2,\deg(y_1)\right)\right)\\
+    &= \frac{1}{k_2}\left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\min\left(k_1k_2,\sum_{y_1}\min\left(k_2,\deg(y_1)\right)\right)\\
   \end{aligned}
 \end{equation}
 
 since $\alpha_{\varphi} = 1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}$.
 
-Finally, $\mathbb{E}\left[\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right)\right] = \sum_{i_2=1}^{\ell_2}\mathbb{E}\left[\varphi(\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2}))\right]$, so we get that:
-\[ \mathbb{E}\left[\sum_{i_2 \in [k_2]}\min\left(k_1,\deg_{G_W^{\mathcal{P}_2}}(\mathcal{P}_2^{i_2})\right)\right] \]
-is larger than:
-\[ \frac{\ell_2}{k_2}\left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\min\left(k_1k_2,\sum_{y_1}\min\left(k_2,\deg_{G_W}(y_1)\right)\right) \ . \]
+Finally, $\mathbb{E}\left[\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)\right] = \sum_{i_2=1}^{\ell_2}\mathbb{E}\left[\varphi(\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))\right]$, so we get that
+\[ \mathbb{E}\left[\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)\right] \]
+is larger than
+\[ \frac{\ell_2}{k_2}\left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\min\left(k_1k_2,\sum_{y_1}\min\left(k_2,\deg(y_1)\right)\right) \ . \]
 
 Thus, in particular, there exists some partition $\mathcal{P}_2$ that satisfies the same inequality, which concludes the second part of the proof.
 
@@ -820,28 +836,24 @@ Thus, in particular, there exists some partition $\mathcal{P}_2$ that satisfies 
     \[ \sum_x r_{x,W_1(x),W_2(x)} \leq \sum_x p_x = k_1k_2 \ . \]
   \item $\sum_x r_{x,W_1(x),W_2(x)} = \sum_{y_1}\sum_{x:W_1(x)=y_1} r_{x,y_1,W_2(x)}$ and we have that:
     \begin{enumerate}
-    \item $\sum_{x:W_1(x)=y_1} r_{x,y_1,W_2(x)} \leq \sum_{x:W_1(x)=y_1} 1 = \deg_{G_W}(y_1)$ ,
+    \item $\sum_{x:W_1(x)=y_1} r_{x,y_1,W_2(x)} \leq \sum_{x:W_1(x)=y_1} 1 = \deg(y_1)$ ,
     \item $\sum_{x:W_1(x)=y_1} r_{x,y_1,W_2(x)} \leq \sum_{x:W_1(x)=y_1} r^1_{x,y_1} \leq \sum_x r^1_{x,y_1} = k_2$ ,
     \end{enumerate}
-    so $\sum_{x:W_1(x)=y_1} r_{x,y_1,W_2(x)} \leq \min(k_2,\deg_{G_W}(y_1))$, and thus:
-    \[ \sum_x r_{x,W_1(x),W_2(x)} \leq \sum_{y_1}\min(k_2,\deg_{G_W}(y_1)) \ .\]
+    so $\sum_{x:W_1(x)=y_1} r_{x,y_1,W_2(x)} \leq \min(k_2,\deg(y_1))$, and thus:
+    \[ \sum_x r_{x,W_1(x),W_2(x)} \leq \sum_{y_1}\min(k_2,\deg(y_1)) \ .\]
   \end{enumerate}
 
   In all, we get that:
-  \[ \mathrm{S}^{\textrm{NS}}(W,k_1,k_2) = \frac{1}{k_1k_2}\sum_x r_{x,W_1(x),W_2(x)} \leq \frac{\min\left(k_1k_2,\sum_{y_1}\min(k_2,\deg_{G_W}(y_1))\right)}{k_1k_2} \ , \]
+  \[ \mathrm{S}^{\textrm{NS}}(W,k_1,k_2) = \frac{1}{k_1k_2}\sum_x r_{x,W_1(x),W_2(x)} \leq \frac{\min\left(k_1k_2,\sum_{y_1}\min(k_2,\deg(y_1))\right)}{k_1k_2} \ , \]
   which concludes the third and last part of the proof.
   \end{enumerate}
 \end{proof}
 
 \section{Hardness of Approximation of Broadcast Channel Coding}
 \label{section:HardnessBC}
-The goal of this section is to show that the broadcast channel coding problem in the general case cannot be approximated in polynomial time within a $\Omega(1)$ factor. It will be a good insight that non-signaling assistance will enlarge the capacity region of the channel.
+The goal of this section is to show that the general broadcast channel coding problem cannot be approximated in polynomial time within a $\Omega(1)$ factor, under reasonable hardness assumptions. It will be a good insight that non-signaling assistance will enlarge the capacity region of the channel as discussed in the introduction.
 
-Indeed, if capacity regions with and without non-signaling assistance were the same, then, under some meta-converse hypothesis, there would exist some constant (independent from $k_1, k_2$ and $n$) multiplicative factor between the objective value of the program with and without non-signaling assistance. Therefore, this would imply that computing the non-signaling assisted value would give a constant factor approximation of the unassisted problem. Note that computing the value of non-signaling assisted program can be done in polynomial time as it is a linear program.
-
-So, in all, if the non-signaling assisted capacity region is the same as the unassisted capacity region, with some meta-converse theorem, then there would exist a $\Omega(1)$ approximation algorithm running in polynomial time to the unassisted problem. Thus, showing that no such approximation exists implies that there is a gap between the non-signaling assisted capacity region and the unassisted one.
-
-However, showing unconditional results of the sort is out of reach. A natural direction would be to show that obtaining such approximation factor in polynomial time is \textrm{NP}-hard. This objective seems however intractable. Hence, we will prove a more constrained hardness of approximation, under the value-query model.
+Formally, one would want to show that it is \textrm{NP}-hard to approximate this problem within a $\Omega(1)$ factor in polynomial time. As a first step towards this goal, we will prove a $\Omega\left(\frac{1}{\sqrt{m}}\right)$-approximation hardness in the value query model.
 
 \subsection{Social Welfare Reformulation}
 The social welfare maximization problem is defined as follows: given a set $M$ of $m$ items as well as $k$ bidders with their associated utilities $\left(v_i : 2^M \rightarrow \mathbb{R}_+\right)_{i \in [k]}$, the goal is to partition $M$ between the bidders to maximize the sum of their utilities. Formally, we want to compute:
@@ -948,7 +960,7 @@ In order to prove our hardness result, we will need the following version of the
 Let us now state the value query hardness of approximation of the broadcast channel problem:
 \begin{theo}
   \label{theo:VQhardnessBC}
-  In the value query model, for any fixed $\varepsilon > 0$, a $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm computing $\mathrm{S}^1(W,k_1)=k_1k_2\mathrm{S}(W,k_1,|\mathcal{Y}_2|)$, with $m = |\mathcal{Y}_1|$ and $W$ a broadcast channel, requires exponentially many value queries to $f_W^1$.
+  In the value query model, for any fixed $\varepsilon > 0$, a $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm computing $\mathrm{S}^1(W,k_1)=k_1k_2\mathrm{S}(W,k_1,|\mathcal{Y}_2|)$, with $m = |\mathcal{Y}_1| = k_1^2$ and $W$ a broadcast channel, requires exponentially many value queries to $f_W^1$.
 \end{theo}
 
 \begin{rk}
@@ -957,26 +969,26 @@ Let us now state the value query hardness of approximation of the broadcast chan
 
 \begin{proof}
   The proof is inspired by Theorem 3.1 of~\cite{MSV08}. We will show using probabilistic arguments that any $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm requires an exponential number of value queries.
-  Let us fix a small constant $\delta > 0$. We choose $k \in \mathbb{N}$ bidders for $m := k^2$ items, and thus $\mathcal{Y}_1 := [m]$. Then, we choose uniformly at random an equi-partition of $\mathcal{Y}_1$ in $k$ parts of size $k$, which we name $T_1, \ldots, T_k$.
+  Let us fix a small constant $\delta > 0$. We choose $k_1 \in \mathbb{N}$ as the number of messages (the bidders) and the output space $\mathcal{Y}_1 := [m]$ with $m := k_1^2$ (the items). Then, we choose uniformly at random an equi-partition of $\mathcal{Y}_1$ in $k_1$ parts of size $k_1$, which we name $T_1, \ldots, T_{k_1}$.
 
-  Let us define now $\mathcal{Y}_2 := [m+k+1]$. We take $\mathcal{X} := \mathcal{Y}_2 = [m+1+k]$ as well. We can now define our broadcast channel $W$, with some positive constant $C$ to be fixed later to guarantee that $W$ is a conditional probability distribution. Let us define its value for $y_2=1$:
+  Let us define now $\mathcal{Y}_2 := [m+k_1+1]$. We take $\mathcal{X} := \mathcal{Y}_2 = [m+1+k_1]$ as well. We can now define our broadcast channel $W$, with some positive constant $C$ to be fixed later to guarantee that $W$ is a conditional probability distribution. Let us define its value for $y_2=1$:
   \[ W(y_1 1|x) := C\times\begin{cases}
     m^{2\delta}\mathbbm{1}_{y_1=x} & \text{when } 1 \leq x \leq m\\
   \frac{1}{m^{\frac{1}{2}-\delta}} & \text{when } x = m+1\\
-  \mathbbm{1}_{y_1 \in T_j} & \text{when } 1 \leq j := x-(m+1) \leq k\\
+  \mathbbm{1}_{y_1 \in T_j} & \text{when } 1 \leq j := x-(m+1) \leq k_1\\
   \end{cases}
   \]
 
   Then, we define other $y_2$ inputs as translations of $W(y_1 1|x)$. Specifically, we define:
-  \[ W(y_1y_2|x) := W(y_11|t_{y_2-1}(x)) \text{ with } t_s(x) := 1 + [(x-1+s) \mod (m+k+1)] \ .\] 
+  \[ W(y_1y_2|x) := W(y_11|t_{y_2-1}(x)) \text{ with } t_s(x) := 1 + [(x-1+s) \mod (m+k_1+1)] \ .\] 
 
   All coefficients are nonnegative. So $W$ will be a channel if for all $x$, $\sum_{y_1,y_2} W(y_1 y_2|x) = 1$. However, one has, for some fixed $x_0$:
 
   \begin{equation}
     \begin{aligned}
       \sum_{y_1,y_2} W(y_1 y_2|x_0) &= \sum_{y_1} \sum_{y_2} W(y_1 y_2|x_0) = \sum_{y_1} \sum_{y_2}  W(y_1 1|t_{y_2-1}(x_0)) = \sum_{y_1} \sum_x  W(y_1 1|x) \\
-      &= C \sum_{y_1}\left[\sum_{1 \leq i \leq m} m^{2\delta}\mathbbm{1}_{y_1=i} + \frac{1}{m^{\frac{1}{2}-\delta}} + \sum_{1 \leq j \leq k} \mathbbm{1}_{y_1 \in T_j}\right]\\
-      &= C \left[\sum_{1 \leq i \leq m} m^{2\delta} + m\times\frac{1}{m^{\frac{1}{2}-\delta}} + \sum_{1 \leq j \leq k} k\right]\\
+      &= C \sum_{y_1}\left[\sum_{1 \leq i \leq m} m^{2\delta}\mathbbm{1}_{y_1=i} + \frac{1}{m^{\frac{1}{2}-\delta}} + \sum_{1 \leq j \leq k_1} \mathbbm{1}_{y_1 \in T_j}\right]\\
+      &= C \left[\sum_{1 \leq i \leq m} m^{2\delta} + m\times\frac{1}{m^{\frac{1}{2}-\delta}} + \sum_{1 \leq j \leq k_1} k_1\right]\\
       &= 1 \text{ by choosing } C = \frac{1}{m^{1+2\delta} + m^{\frac{1}{2}+\delta} + m} \text{, which does not depend on } x_0  \ .
     \end{aligned}
   \end{equation}
@@ -986,60 +998,60 @@ Let us now state the value query hardness of approximation of the broadcast chan
   \begin{equation}
     \begin{aligned}
       f_W^1(S) &= \sum_{y_2} \max_x \sum_{y_1 \in S} W(y_1y_2|x) = \sum_{y_2} \max_x \sum_{y_1 \in S} W(y_11|t_{y_2-1}(x))\\
-      &= (m+k+1)\max_x \sum_{y_1 \in S} W(y_11|x) \text{ since $t_{y_2-1}$ bijection}\\
-      &= C(m+k+1) \times \max\begin{cases}
+      &= (m+k_1+1)\max_x \sum_{y_1 \in S} W(y_11|x) \text{ since $t_{y_2-1}$ bijection}\\
+      &= C(m+k_1+1) \times \max\begin{cases}
       m^{2\delta}|\{i\} \cap S| & \text{for } 1 \leq i \leq m\\
       \frac{1}{m^{\frac{1}{2}-\delta}}|S|\\
-      |T_j \cap S| & \text{for } 1 \leq j \leq k\\
+      |T_j \cap S| & \text{for } 1 \leq j \leq k_1\\
       \end{cases}
     \end{aligned}
   \end{equation}
       
-  Let us also consider an alternate broadcast channel $W'$, with the only difference that $\mathbbm{1}_{y_1 \in T_j}$ is replaced by $\frac{1}{m^{\frac{1}{2}}}$, for $j \in [k]$. For that channel, the constant $C$ remains the same (since $\sum_j\sum_{y_1}\mathbbm{1}_{y_1 \in T_j} = k \times k = k \times m \times \frac{1}{k} = \sum_j\sum_{y_1}\frac{1}{m^{\frac{1}{2}}}$), so we get that:
+  Let us also consider an alternate broadcast channel $W'$, with the only difference that $\mathbbm{1}_{y_1 \in T_j}$ is replaced by $\frac{1}{m^{\frac{1}{2}}}$, for $j \in [k_1]$. For that channel, the constant $C$ remains the same (since $\sum_j\sum_{y_1}\mathbbm{1}_{y_1 \in T_j} = k_1 \times k_1 = k_1 \times m \times \frac{1}{k_1} = \sum_j\sum_{y_1}\frac{1}{m^{\frac{1}{2}}}$), so we get that:
   \begin{equation}
     \begin{aligned}
-      f_{W'}^1(S) &= C(m+k+1) \times \max\begin{cases}
+      f_{W'}^1(S) &= C(m+k_1+1) \times \max\begin{cases}
       m^{2\delta}|\{i\} \cap S| & \text{for } 1 \leq i \leq m\\
       \frac{1}{m^{\frac{1}{2}-\delta}}|S|\\
-      \frac{1}{m^{\frac{1}{2}}}|S| & \text{for } 1 \leq j \leq k\\
+      \frac{1}{m^{\frac{1}{2}}}|S| & \text{for } 1 \leq j \leq k_1\\
       \end{cases}\\
-      &= C(m+k+1) \times \max\begin{cases}
+      &= C(m+k_1+1) \times \max\begin{cases}
       m^{2\delta}|\{i\} \cap S| & \text{for } 1 \leq i \leq m\\
       \frac{1}{m^{\frac{1}{2}-\delta}}|S|\\
       \end{cases}
     \end{aligned}
   \end{equation}
 
-  since $\frac{1}{m^{\frac{1}{2}}}|S| \leq \frac{1}{m^{\frac{1}{2}-\delta}}|S|$. We will prove that it takes an exponential number of value queries to distinguish between $f_W^1$ and $f_{W'}^1$. On the one hand, one can easily show that the maximum value of $\frac{\mathrm{S}^1(W',k_1)}{C(m+k+1)}$ is $(k-1)m^{2\delta}+\frac{1}{m^{\frac{1}{2}-\delta}}(m-(k-1)) = O(m^{\frac{1}{2}+2\delta})$, obtained taking $(k-1)$ singletons for the first bidders, giving the rest of the items to the last. On the other hand, the maximum value of $\frac{\mathrm{S}^1(W,k_1)}{C(m+k+1)}$ is $k \times k = m$, obtained with bidders choosing items accordingly to the partition $T_1, \ldots, T_k$. The fact that it requires an exponential number of value queries to distinguish between the two situations will imply that one cannot get an approximation rate better than $\Omega\left(\frac{1}{m^{\frac{1}{2}-2\delta}}\right)$ in less than an exponential number of value queries.
+  since $\frac{1}{m^{\frac{1}{2}}}|S| \leq \frac{1}{m^{\frac{1}{2}-\delta}}|S|$. We will prove that it takes an exponential number of value queries to distinguish between $f_W^1$ and $f_{W'}^1$. On the one hand, one can easily show that the maximum value of $\frac{\mathrm{S}^1(W',k_1)}{C(m+k_1+1)}$ is $(k_1-1)m^{2\delta}+\frac{1}{m^{\frac{1}{2}-\delta}}(m-(k_1-1)) = O(m^{\frac{1}{2}+2\delta})$, obtained taking $(k_1-1)$ singletons as the first components of the partition (the bidders), giving the rest of $\mathcal{Y}_1$ (the items) to the last. On the other hand, the maximum value of $\frac{\mathrm{S}^1(W,k_1)}{C(m+k_1+1)}$ is $k_1 \times k_1 = m$, obtained with the partition $T_1, \ldots, T_{k_1}$. The fact that it requires an exponential number of value queries to distinguish between the two situations will imply that one cannot get an approximation rate better than $\Omega\left(\frac{1}{m^{\frac{1}{2}-2\delta}}\right)$ in less than an exponential number of value queries.
 
-  We will now prove that distinguishing between $f_W^1$ and $f_{W'}^1$ requires an exponential number of value queries. Let us focus on one bidder. We define $v(S) := \frac{f_W^1(S)}{C(m+k+1)}$ and $v'(S) := \frac{f_{W'}^1(S)}{C(m+k+1)}$, so distinguishing between $v$ and $v'$ is the same as distinguishing between $f_W^1$ and $f_{W'}^1$. We have always $v(\emptyset) = v'(\emptyset) = 0$, so we do not need to consider empty sets.
+  We will now prove that distinguishing between $f_W^1$ and $f_{W'}^1$ requires an exponential number of value queries. We define $v(S) := \frac{f_W^1(S)}{C(m+k_1+1)}$ and $v'(S) := \frac{f_{W'}^1(S)}{C(m+k_1+1)}$, so distinguishing between $v$ and $v'$ is the same as distinguishing between $f_W^1$ and $f_{W'}^1$. We have always $v(\emptyset) = v'(\emptyset) = 0$, so we do not need to consider empty sets.
 
-  Let us fix some non-empty set $S \subseteq [m]$. Let us define the random boolean variables $X_j^i := \mathbbm{1}_{i \in T_j}$ for $j \in [k]$ and $i \in [m]$. By construction of the random equi-partition $T_1, \ldots, T_k$, $(X_j^i)_{i \in [m]}$ is a permutation distribution (see Definition 2.10 of~\cite{JP83}) of $(0,\ldots,0,1,\ldots,1)$ with $m-k$ zeros and $k$ ones, each $X_j^i$ following a Bernouilli law of parameter $p := \frac{1}{k}$. Thus it is negatively associated (by Theorem 2.11 of~\cite{JP83}), and the sub-family $(X_j^i)_{i \in S}$ is negatively associated as well. Note in particular that $|T_j \cap S| = \sum_{i \in S} X_j^i$ is a sum of negatively associated Bernouilli variables of the same parameter $p$, so Chernoff-Hoeffding bound as depicted in Proposition~\ref{prop:chernoff} holds.
+  Let us fix some non-empty set $S \subseteq [m]$. Let us define the random boolean variables $X_j^i := \mathbbm{1}_{i \in T_j}$ for $j \in [k_1]$ and $i \in [m]$. By construction of the random equi-partition $T_1, \ldots, T_{k_1}$, $(X_j^i)_{i \in [m]}$ is a permutation distribution (see Definition 2.10 of~\cite{JP83}) of $(0,\ldots,0,1,\ldots,1)$ with $m-k_1$ zeros and $k_1$ ones, each $X_j^i$ following a Bernouilli law of parameter $p := \frac{1}{k_1}$. Thus it is negatively associated (by Theorem 2.11 of~\cite{JP83}), and the sub-family $(X_j^i)_{i \in S}$ is negatively associated as well. Note in particular that $|T_j \cap S| = \sum_{i \in S} X_j^i$ is a sum of negatively associated Bernouilli variables of the same parameter $p$, so Chernoff-Hoeffding bound as depicted in Proposition~\ref{prop:chernoff} holds.
   
   Let us first assume that $S$ is of size $0 < |S| \leq m^{\frac{1}{2}+\delta}$. Then, we have that $\frac{1}{m^{\frac{1}{2}-\delta}}|S| \leq m^{2\delta}$, so we get that $v'(S) = m^{2\delta}$. On the other hand, we have that:
     \begin{equation}
     \begin{aligned}
       v(S) &= \max\begin{cases}
       m^{2\delta}\\
-      |T_j \cap S| \text{ for } 1 \leq j \leq k\\
+      |T_j \cap S| \text{ for } 1 \leq j \leq k_1\\
       \end{cases}
     \end{aligned}
     \end{equation}
 
-    Thus, $v(S)$ is different from $v'(S)$ if and only if $\exists j \in k, |T_j \cap S| > m^{2\delta}$. But, we have:
+    Thus, $v(S)$ is different from $v'(S)$ if and only if $\exists j \in k_1, |T_j \cap S| > m^{2\delta}$. But, we have:
     \begin{equation}
       \begin{aligned}
-        &\mathbb{P}\left(\exists j \in k, |T_j \cap S| > m^{2\delta}\right) \leq \sum_{j \in [k]} \mathbb{P}\left(|T_j \cap S| > m^{2\delta}\right) \text{ by union bound}\\
-        &=\sum_{j \in [k]} \mathbb{P}\left(\sum_{i \in S}X_j^i > m^{2\delta}\right)
-        =\sum_{j \in [k]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{m^{2\delta}}{[S|}-1}{p}\right)p \right)\\
-        &\leq \sum_{j \in [k]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{m^{2\delta}}{|S|}}{p}\right)p \right)\\
-        &\leq \sum_{j \in [k]}\exp\left(-\frac{p|S|}{4}\left(\frac{m^{2\delta}}{p|S|}\right)^2\right) \text{ by Chernoff-Hoeffding bound as depicted in Proposition~\ref{prop:chernoff}}\\
-        &= \sum_{j \in [k]}\exp\left(-\frac{1}{4p|S|}m^{4\delta}\right) \leq \sum_{j \in [k]}\exp\left(-\frac{m^{-\delta}}{4}m^{4\delta}\right) \text{ since } \frac{1}{p|S|} = \frac{k}{|S|} \geq m^{-\delta}\\
+        &\mathbb{P}\left(\exists j \in k_1, |T_j \cap S| > m^{2\delta}\right) \leq \sum_{j \in [k_1]} \mathbb{P}\left(|T_j \cap S| > m^{2\delta}\right) \text{ by union bound}\\
+        &=\sum_{j \in [k_1]} \mathbb{P}\left(\sum_{i \in S}X_j^i > m^{2\delta}\right)
+        =\sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{m^{2\delta}}{[S|}-1}{p}\right)p \right)\\
+        &\leq \sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{m^{2\delta}}{|S|}}{p}\right)p \right)\\
+        &\leq \sum_{j \in [k_1]}\exp\left(-\frac{p|S|}{4}\left(\frac{m^{2\delta}}{p|S|}\right)^2\right) \text{ by Chernoff-Hoeffding bound as depicted in Proposition~\ref{prop:chernoff}}\\
+        &= \sum_{j \in [k_1]}\exp\left(-\frac{1}{4p|S|}m^{4\delta}\right) \leq \sum_{j \in [k_1]}\exp\left(-\frac{m^{-\delta}}{4}m^{4\delta}\right) \text{ since } \frac{1}{p|S|} = \frac{k_1}{|S|} \geq m^{-\delta}\\
         &= m^{\frac{1}{2}}e^{-\frac{m^{3\delta}}{4}}\ .
       \end{aligned}
     \end{equation}
 
-    Thus, this event occurs with exponentially small probability (on the choice of the partition $T_1,\ldots,T_k$).
+    Thus, this event occurs with exponentially small probability (on the choice of the partition $T_1,\ldots,T_{k_1}$).
 
     Let us now study the case of $S$ of size $|S| > m^{\frac{1}{2}+\delta}$. Then, we have that $\frac{1}{m^{\frac{1}{2}-\delta}}|S| > m^{2\delta}$, so we get that $v'(S) = \frac{1}{m^{\frac{1}{2}-\delta}}|S|$. On the other hand, we have that:
     
@@ -1047,21 +1059,21 @@ Let us now state the value query hardness of approximation of the broadcast chan
     \begin{aligned}
       v(S) &= \max\begin{cases}
       \frac{1}{m^{\frac{1}{2}-\delta}}|S|\\
-      |T_j \cap S| \text{ for } 1 \leq j \leq k\\
+      |T_j \cap S| \text{ for } 1 \leq j \leq k_1\\
       \end{cases}
     \end{aligned}
     \end{equation}
     
-    Thus, $v(S)$ is different from $v'(S)$ if and only if $\exists j \in [k], |T_j \cap S| > \frac{1}{m^{\frac{1}{2}-\delta}}|S|$. But, we have:
+    Thus, $v(S)$ is different from $v'(S)$ if and only if $\exists j \in [k_1], |T_j \cap S| > \frac{1}{m^{\frac{1}{2}-\delta}}|S|$. But, we have:
         \begin{equation}
       \begin{aligned}
-        &\mathbb{P}\left(\exists j \in [k], |T_j \cap S| > \frac{1}{m^{\frac{1}{2}-\delta}}|S|\right) \leq \sum_{j \in [k]} \mathbb{P}\left(|T_j \cap S| > \frac{1}{m^{\frac{1}{2}-\delta}}|S|\right) \text{ by union bound}\\
-        &=\sum_{j \in [k]} \mathbb{P}\left(\sum_{i \in S}X_j^i > \frac{1}{m^{\frac{1}{2}-\delta}}|S|\right)
-        =\sum_{j \in [k]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{1}{|S|m^{\frac{1}{2}-\delta}}{|S|}-1}{p}\right)p \right)\\
-        &\leq \sum_{j \in [k]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{1}{m^{\frac{1}{2}-\delta}}}{p}\right)p \right)\\
-        &= \sum_{j \in [k]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + m^{\delta}\right)p \right) \text{ since } p = \frac{1}{k} = \frac{1}{m^{\frac{1}{2}}}\\
-        &\leq \sum_{j \in [k]}\exp\left(-\frac{p|S|}{4}m^{2\delta}\right) \text{ by Chernoff-Hoeffding bound as depicted in Proposition~\ref{prop:chernoff}}\\
-        &\leq \sum_{j \in [k]}\exp\left(-\frac{m^{\delta}}{4}m^{2\delta}\right) \text{ since } p|S| = \frac{|S|}{k} \geq m^{\delta}\\
+        &\mathbb{P}\left(\exists j \in [k_1], |T_j \cap S| > \frac{1}{m^{\frac{1}{2}-\delta}}|S|\right) \leq \sum_{j \in [k_1]} \mathbb{P}\left(|T_j \cap S| > \frac{1}{m^{\frac{1}{2}-\delta}}|S|\right) \text{ by union bound}\\
+        &=\sum_{j \in [k_1]} \mathbb{P}\left(\sum_{i \in S}X_j^i > \frac{1}{m^{\frac{1}{2}-\delta}}|S|\right)
+        =\sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{1}{|S|m^{\frac{1}{2}-\delta}}{|S|}-1}{p}\right)p \right)\\
+        &\leq \sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{1}{m^{\frac{1}{2}-\delta}}}{p}\right)p \right)\\
+        &= \sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + m^{\delta}\right)p \right) \text{ since } p = \frac{1}{k_1} = \frac{1}{m^{\frac{1}{2}}}\\
+        &\leq \sum_{j \in [k_1]}\exp\left(-\frac{p|S|}{4}m^{2\delta}\right) \text{ by Chernoff-Hoeffding bound as depicted in Proposition~\ref{prop:chernoff}}\\
+        &\leq \sum_{j \in [k_1]}\exp\left(-\frac{m^{\delta}}{4}m^{2\delta}\right) \text{ since } p|S| = \frac{|S|}{k_1} \geq m^{\delta}\\
         &= m^{\frac{1}{2}}e^{-\frac{m^{3\delta}}{4}}\ .
       \end{aligned}
     \end{equation}
@@ -1069,7 +1081,7 @@ Let us now state the value query hardness of approximation of the broadcast chan
 
     Thus, this event occurs with exponentially small probability as well. We have then that for all set $S$,  $\mathbb{P}\left(v(S) \not= v'(S) \right) \leq p_{\text{leak}} := m^{\frac{1}{2}}e^{-\frac{m^{3\delta}}{4}}$, which is an exponentially small bound that does not depend on $S$.
 
-    Hence, for every set $S$, only with exponentially small probability $p_{\text{leak}}$ can one distinguish between $v$ and $v'$. For some fixed algorithm $\mathcal{A}$, let us consider the sequence $L$ of queries made by $\mathcal{A}$ before it is able to distinguish between $v$ and $v'$: $L := (S_1, \ldots, S_n)$, with $v(S_i) = v'(S_i)$ for $i \in [n]$ and $v'(S_{n+1}) > v(S_{n+1})$. $L$ is independent from $T_1, \ldots T_k$ as no information from this partition is leaked before $S_{n+1}$. Thus, for such an algorithm to be correct, it should work for any equi-partition $T_1, \ldots T_k$. We have:
+    Hence, for every set $S$, only with exponentially small probability $p_{\text{leak}}$ can one distinguish between $v$ and $v'$. For some fixed algorithm $\mathcal{A}$, let us consider the sequence $L$ of queries made by $\mathcal{A}$ before it is able to distinguish between $v$ and $v'$: $L := (S_1, \ldots, S_n)$, with $v(S_i) = v'(S_i)$ for $i \in [n]$ and $v'(S_{n+1}) > v(S_{n+1})$. $L$ is independent from $T_1, \ldots T_{k_1}$ as no information from this partition is leaked before $S_{n+1}$. Thus, for such an algorithm to be correct, it should work for any equi-partition $T_1, \ldots T_{k_1}$. We have:
 
     \[ \mathbb{P}\left( \exists i \in [n] : v(S_i) \not= v'(S_i) \right) \leq \sum_{i=1}^n\mathbb{P}\left(v(S_i) \not= v'(S_i) \right) = np_{\text{leak}} \text{ by union bound.}\]
 
@@ -1077,20 +1089,20 @@ Let us now state the value query hardness of approximation of the broadcast chan
 
     \[ \mathbb{P}\left( \forall i \in [n] : v(S_i) = v'(S_i) \right) \geq 1 - np_{\text{leak}} \ . \]
 
-    So, if $1 - np_{\text{leak}} > 0$, ie. $n < \frac{1}{p_{\text{leak}}}$, then there exists some equi-partition $T_1, \ldots T_k$ such that our algorithm outputs a sequence $L$ of queries of length $n$ before being able to distinguish between $v$ and $v'$. In particular, we can take $n = \frac{1}{2p_{\text{leak}}}$ so that $L$ is of exponential size. Hence, for any algorithm $\mathcal{A}$, there exists some equi-partition $T_1, \ldots T_k$ such that $\mathcal{A}$ needs an exponential number of value queries to distinguish between $v$ and $v'$. This concludes the proof of the theorem for any deterministic algorithm.
+    So, if $1 - np_{\text{leak}} > 0$, ie. $n < \frac{1}{p_{\text{leak}}}$, then there exists some equi-partition $T_1, \ldots T_{k_1}$ such that our algorithm outputs a sequence $L$ of queries of length $n$ before being able to distinguish between $v$ and $v'$. In particular, we can take $n = \frac{1}{2p_{\text{leak}}}$ so that $L$ is of exponential size. Hence, for any algorithm $\mathcal{A}$, there exists some equi-partition $T_1, \ldots T_{k_1}$ such that $\mathcal{A}$ needs an exponential number of value queries to distinguish between $v$ and $v'$. This concludes the proof of the theorem for any deterministic algorithm.
 
-    Finally, the hardness result holds also for randomized algorithms. Indeed, let us call $\mathcal{A}_s$, the running algorithm conditioned on its random bits being $s$. $\mathcal{A}_s$ is deterministic so the previous proof holds: with high probability $p$, the sequence of $\lfloor\frac{1-p}{p_{leak}}\rfloor$ queries does not reveal anything to distinguish between $v$ and $v'$, although it is of exponential size in $m$. Then, averaging over all its random bitstrings, the same result holds, as $p_{leak}$ is independent from the equi-partition $T_1, \ldots, T_k$.
+    Finally, the hardness result holds also for randomized algorithms. Indeed, let us call $\mathcal{A}_s$, the running algorithm conditioned on its random bits being $s$. $\mathcal{A}_s$ is deterministic so the previous proof holds: with high probability $p$, the sequence of $\lfloor\frac{1-p}{p_{leak}}\rfloor$ queries does not reveal anything to distinguish between $v$ and $v'$, although it is of exponential size in $m$. Then, averaging over all its random bitstrings, the same result holds, as $p_{leak}$ is independent from the equi-partition $T_1, \ldots, T_{k_1}$.
 \end{proof}
 
 \subsection{Limitations of the Model}
-The main weakness of the previous result is that it highly relies on the restriction that one has access to the data only through value queries. Indeed, if one has access to the full data, it is possible to read the partition $T_1, \ldots, T_k$ which gives the optimal solution directly. This weakness comes from the fact that our utility function $f_W^1$ can be described by polynomial-size data, as it is characterized by a broadcast channel $W$, whereas one usually consider any $\textrm{XOS}$ functions, in particular with some having inherently an exponential-size defining set of linear valuation functions.
+The main weakness of the previous result is that it highly relies on the restriction that one has access to the data only through value queries. Indeed, if one has access to the full data, it is possible to read the partition $T_1, \ldots, T_{k_1}$ which gives the optimal solution directly. This weakness comes from the fact that our utility function $f_W^1$ can be described by polynomial-size data, as it is characterized by a broadcast channel $W$, whereas one usually consider any $\textrm{XOS}$ functions, in particular with some having inherently an exponential-size defining set of linear valuation functions.
 
 On the other hand, one can also remark that when $f_W^1$ is written as a maximum of linear valuation functions, then that defining set of linear valuation functions is of exponential size. Hence, we think that it is still relevant to study the value query complexity of such a family of functions, as it is not clear how one could recover the partition in polynomial time from this exponential-size set of linear valuations without any additional information.
 
 \section{Conclusion}
 In this work, we have studied several algorithmic aspects and non-signaling assisted capacity regions of broadcast channels. We have shown that when non-signaling assistance is shared only between the decoders, the capacity region does not change. For the class of deterministic broadcast channels, we have described a $(1-e^{-1})^2$-approximation algorithm running in polynomial time, and we have shown that the capacity region for that class is the same with or without non-signaling assistance. Finally, we have shown that in the value query model, we cannot achieve a better approximation ratio than $\Omega\left(\frac{1}{\sqrt{m}}\right)$ in polynomial time for the general broadcast channel coding problem, with $m$ the size of one of the outputs of the channel.
 
-Our results suggest that non-signaling assistance could improve the capacity region of general broadcast channels, which is left as a major open question. An intermediate result would be to show that it is \textrm{NP}-hard to approximate the broadcast channel coding problem within any constant, strengthening our hardness result without relying on the value query model. Finally, one could also try to find approximations algorithms for other sub-classes of broadcast channels, such as semi-deterministic or degraded ones. This could be a crucial step towards showing that the capacity region for those classes is the same with or without non-signaling assistance.
+Our results suggest that non-signaling assistance could improve the capacity region of general broadcast channels, which is left as a major open question. An intermediate result would be to show that it is \textrm{NP}-hard to approximate the broadcast channel coding problem within any constant, strengthening our hardness result without relying on the value query model. Finally, one could also try to develop approximations algorithms for other sub-classes of broadcast channels, such as semi-deterministic or degraded ones. This could be a crucial step towards showing that the capacity region for those classes is the same with or without non-signaling assistance.
 
 \section*{Acknowledgements}
 We would like to thank Stéphan Thomassé and Siddharth Barman for discussions respectively on graph algorithms and social welfare problems.
