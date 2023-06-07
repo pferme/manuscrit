@@ -256,12 +256,12 @@ Here, we consider the case where the receivers are given non-signaling assistanc
   \end{aligned}
 \end{equation}
 
-Thus, when receivers are given non-signaling assistance, it means that the product $d_1(j_1|y_1)d_2(j_2|y_2)$ is replaced by the non-signaling box $d(j_1j_2|y_1y_2)$. We define the joint and sum success probabilities $\mathrm{S}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2)$ and $\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2)$ according to this:
+Thus, when receivers are given non-signaling assistance, it means that the product $d_1(j_1|y_1)d_2(j_2|y_2)$ is replaced by the non-signaling box $d(j_1j_2|y_1y_2)$. We define the joint and sum success probabilities $\mathrm{S}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2)$ and $\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2)$ according to this:
 
 \begin{equation}
   \begin{aligned}
-    \mathrm{S}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2) := &&\underset{e,d_1,d_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)d(i_1i_2|y_1y_2)\\
-    \Big(\text{resp. }\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2) := &&\underset{e,d_1,d_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\frac{\sum_{j_2}d(i_1j_2|y_1y_2) + \sum_{j_1}d(j_1i_2|y_1y_2)}{2}\Big)\\
+    \mathrm{S}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2) := &&\underset{e,d_1,d_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)d(i_1i_2|y_1y_2)\\
+    \Big(\text{resp. }\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2) := &&\underset{e,d_1,d_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\frac{\sum_{j_2}d(i_1j_2|y_1y_2) + \sum_{j_1}d(j_1i_2|y_1y_2)}{2}\Big)\\
     &&\st &&& \sum_x e(x|i_1i_2) = 1\\
     &&&&& \sum_{j_2} d(j_1j_2|y_1y_2) = \sum_{j_1} d(j_1j_2|y_1y'_2)\\
     &&&&& \sum_{j_1} d(j_1j_2|y_1y_2) = \sum_{j_1} d(j_1j_2|y'_1y_2)\\
@@ -270,34 +270,34 @@ Thus, when receivers are given non-signaling assistance, it means that the produ
   \end{aligned}
 \end{equation}
 
-The corresponding capacity regions $\mathcal{C}^{\mathrm{NS}_{\text{decs}}}(W)$ and $\mathcal{C}^{\mathrm{NS}_{\text{decs}}}_{\text{sum}}(W)$ are defined as before:
+The corresponding capacity regions $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ and $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$ are defined as before:
 
-\begin{defi}[Capacity Region $\mathcal{C}^{\mathrm{NS}_{\text{decs}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{decs}}}_{\text{sum}}(W)$) of a broadcast channel $W$]
+\begin{defi}[Capacity Region $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$) of a broadcast channel $W$]
   A rate pair $(R_1,R_2)$ is achievable (resp. sum-achievable) with non-signaling assistance between the decoders if:
-  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\text{decs}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  \[ \text{(resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\text{decs}}}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 )\ . \]
-  We define the joint (resp. sum) capacity region with non-signaling assistance between the decoders $\mathcal{C}^{\mathrm{NS}_{\text{decs}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{decs}}}_{\text{sum}}(W)$) as the closure of the set of all rate pairs achievable (resp. sum-achievable) with non-signaling assistance between the decoders.
+  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\text{dec}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+  \[ \text{(resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 )\ . \]
+  We define the joint (resp. sum) capacity region with non-signaling assistance between the decoders $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$) as the closure of the set of all rate pairs achievable (resp. sum-achievable) with non-signaling assistance between the decoders.
 \end{defi}
 
 The objective of this section is to show that sharing non-signaling assistance between the decoders does not change the capacity regions of a broadcast channel. In order to do so, we will also show that sum and joint capacity regions with non-signaling assistance between the decoders are the same. This is an extension of the result by~\cite{PDB21} where it has been proved to be the case for the weaker resource that is quantum entanglement.
 
 \begin{prop}
   \label{prop:NSdecoderssum}
-  For any broadcast channel $W$, $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W)= \mathcal{C}^{\mathrm{NS}_{\text{decs}}}(W)$
+  For any broadcast channel $W$, $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W)= \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$
 \end{prop}
 
 \begin{proof}
   Given an encoder $e$ and a non-signaling decoding box $d$, the maximum success probability of encoding and decoding correctly with those is given by:
-\[ \mathrm{S}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2,e,d) := \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)d(i_1i_2|y_1y_2) \ . \]
+\[ \mathrm{S}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d) := \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)d(i_1i_2|y_1y_2) \ . \]
 
 This should be compared to the sum success probability of encoding and decoding correctly with those:
-\[ \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2,e,d) := \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\left[\frac{\sum_{j_2}d(i_1j_2|y_1y_2)+\sum_{j_1}d(j_1i_2|y_1y_2)}{2}\right] \ . \]
+\[ \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d) := \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\left[\frac{\sum_{j_2}d(i_1j_2|y_1y_2)+\sum_{j_1}d(j_1i_2|y_1y_2)}{2}\right] \ . \]
 
 Similarly to what was done in Proposition~\ref{prop:capacitysum}, we focus on the error probabilities rather than success probabilities. This leads again to:
 
-\[ \mathrm{E}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2,e,d) = \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\left[1-d(i_1i_2|y_1y_2)\right] \ , \]
+\[ \mathrm{E}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d) = \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\left[1-d(i_1i_2|y_1y_2)\right] \ , \]
 and:
-\[ \mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2,e,d) = \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\left[\frac{1-\sum_{j_2}d(i_1j_2|y_1y_2)}{2}+\frac{1-\sum_{j_1}d(j_1i_2|y_1y_2)}{2}\right] \ . \]
+\[ \mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d) = \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\left[\frac{1-\sum_{j_2}d(i_1j_2|y_1y_2)}{2}+\frac{1-\sum_{j_1}d(j_1i_2|y_1y_2)}{2}\right] \ . \]
 
 But we have that:
 
@@ -308,29 +308,29 @@ since $d(j_1j_2|y_1y_2) \in [0,1]$, and we have that:
 with $S := \{(i_1,j_2): j_2 \in [k_2]-\{i_2\}\} \sqcup \{(j_1,i_2): j_1 \in [k_1]-\{i_1\}\}$.
 
 Thus, this implies that:
-\[\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2,e,d) \leq \mathrm{E}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2,e,d) \leq 2\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2,e,d) \ ,\]
+\[\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d) \leq \mathrm{E}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d) \leq 2\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d) \ ,\]
 and by maximizing over all $e$ and $d$:
-\[\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2) \leq \mathrm{E}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2) \leq 2\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2) \ .\]
+\[\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2) \leq \mathrm{E}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2) \leq 2\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2) \ .\]
 As before, this implies that the capacity regions are the same.
 \end{proof}
 
 \begin{theo}
     \label{theo:NSdecoders}
-   For any broadcast channel $W$, $\mathcal{C}(W) = \mathcal{C}^{\mathrm{NS}_{\text{decs}}}(W)$
+   For any broadcast channel $W$, $\mathcal{C}(W) = \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$
 \end{theo}
 
 \begin{proof}
 In the sum scenario, since the objective function does not depend on the product $d_1(j_1|y_1)d_2(j_2|y_2)$ but only on the marginals $d_1(j_1|y_1)$ and $d_2(j_2|y_2)$, the non-signaling box won't give additional decoding power. Indeed, for any encoder $e$ and non-signaling decoding box $d$, we have that:
 \begin{equation}
   \begin{aligned}
-    \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2,e,d) &:= \frac{1}{2k_1k_2}\sum_{i_1,x,y_1} W_1(y_1|x)\left(\sum_{j_2}d(i_1j_2|y_1y_2)\right)\sum_{i_2} e(x|i_1i_2)\\
+    \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d) &:= \frac{1}{2k_1k_2}\sum_{i_1,x,y_1} W_1(y_1|x)\left(\sum_{j_2}d(i_1j_2|y_1y_2)\right)\sum_{i_2} e(x|i_1i_2)\\
     &+ \frac{1}{2k_1k_2} \sum_{i_2,x,y_2} W_2(y_2|x)\left(\sum_{j_1}d(j_1i_2|y_1y_2)\right)\sum_{i_1} e(x|i_1i_2) \ .
   \end{aligned}
 \end{equation}
 
-Thus, by choosing $d_1(j_1|y_1) := \sum_{j_2}d(j_1j_2|y_1y_2)$ and $d_2(j_2|y_2) := \sum_{j_1}d(j_1j_2|y_1y_2)$, which are well-defined since $d$ is a non-signaling box, one gets that $\mathrm{S}_{\text{sum}}(W,k_1,k_2,e,d_1,d_2) = \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2,e,d)$. By optimizing over all $e$ and $d$, one gets $\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2) \leq \mathrm{S}_{\text{sum}}(W,k_1,k_2)$. Since the inequality is obvious in the other direction, as $d(j_1j_2|y_1y_2) := d_1(j_1|y_1)d_2(j_2|y_2)$ is always a non-signaling box, we have that $\mathrm{S}_{\text{sum}}(W,k_1,k_2)=\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W,k_1,k_2)$. This implies in particular that the capacity regions are the same, ie. $\mathcal{C}_{\text{sum}}(W)=\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W)$
+Thus, by choosing $d_1(j_1|y_1) := \sum_{j_2}d(j_1j_2|y_1y_2)$ and $d_2(j_2|y_2) := \sum_{j_1}d(j_1j_2|y_1y_2)$, which are well-defined since $d$ is a non-signaling box, one gets that $\mathrm{S}_{\text{sum}}(W,k_1,k_2,e,d_1,d_2) = \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d)$. By optimizing over all $e$ and $d$, one gets $\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2) \leq \mathrm{S}_{\text{sum}}(W,k_1,k_2)$. Since the inequality is obvious in the other direction, as $d(j_1j_2|y_1y_2) := d_1(j_1|y_1)d_2(j_2|y_2)$ is always a non-signaling box, we have that $\mathrm{S}_{\text{sum}}(W,k_1,k_2)=\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2)$. This implies in particular that the capacity regions are the same, ie. $\mathcal{C}_{\text{sum}}(W)=\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W)$
 
-Finally, since $\mathcal{C}(W) = \mathcal{C}_{\text{sum}}(W)$ by Proposition~\ref{prop:capacitysum} and $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{decs}}}(W)= \mathcal{C}^{\mathrm{NS}_{\text{decs}}}(W)$ by Proposition~\ref{prop:NSdecoderssum}, we get that $\mathcal{C}(W) = \mathcal{C}^{\mathrm{NS}_{\text{decs}}}(W)$.
+Finally, since $\mathcal{C}(W) = \mathcal{C}_{\text{sum}}(W)$ by Proposition~\ref{prop:capacitysum} and $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W)= \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ by Proposition~\ref{prop:NSdecoderssum}, we get that $\mathcal{C}(W) = \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$.
 \end{proof}
 
 \subsection{Full Non-Signaling Assistance}
