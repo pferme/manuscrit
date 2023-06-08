@@ -22,7 +22,7 @@
 
 \usepackage{subfig}
 \usepackage{float}
-\floatstyle{boxed}
+%\floatstyle{boxed}
 \restylefloat{figure}
 
 \pdfobjcompresslevel 0
@@ -47,6 +47,7 @@
   pdfsubject={Information Theory}}
 \usepackage{microtype}
 \usepackage{longtable}
+
 % numbering
 \setsecnumdepth{subsubsection}
 \maxtocdepth   {subsection}
@@ -57,14 +58,12 @@
 \makeatother
 
 \usepackage{doi}
-\usepackage{amsmath, amssymb, mathrsfs, mathtools}
+\usepackage{amsmath, amssymb}%, mathrsfs, mathtools}
 \usepackage{amsthm} % For theorem style
 \usepackage{thmtools}
 \usepackage{thm-restate}
 \usepackage{comment}
-\usepackage{tikz}
-\usepackage{tikzpeople}
-\usetikzlibrary{positioning,patterns,shapes}
+
 
 % theorems, definitions
 \declaretheorem[numberwithin=chapter]{theorem}
@@ -74,12 +73,57 @@
 
 % References
 \usepackage[capitalise]{cleveref}
-
 \usepackage{pdfpages}
 \usepackage{xspace}
 
 \input frtoc
 \input macros
+
+%%% Personnal packages
+% Style CLEAN
+\usepackage{bm}
+\usepackage{bbm}
+% Solving conflict while uploading physics package
+\let\trace=\undefined
+\usepackage{physics}
+\usepackage{enumitem}
+
+% Shortcuts
+\DeclareMathOperator{\Poi}{\text{Poi}}
+\DeclareMathOperator{\Ber}{\text{Ber}}
+\DeclareMathOperator{\Bin}{\text{Bin}}
+\DeclareMathOperator{\maxi}{\text{maximize}}
+\DeclareMathOperator{\mini}{\text{minimize}}
+\DeclareMathOperator{\st}{\text{subject to}}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
+
+% tikz
+\usepackage{tikz}
+\usepackage{tikzpeople}
+\usetikzlibrary{positioning,patterns,shapes,arrows,quotes,angles,calc}
+\usetikzlibrary{spy}
+\tikzstyle{block} = [draw, fill=white, rectangle, minimum height=2em, minimum width=3em]
+\tikzstyle{bigblock} = [draw, fill=white, rectangle, minimum height=3em, minimum width=4em]
+\tikzstyle{Bigblock} = [draw, fill=white, rectangle, minimum height=5em, minimum width=6em]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+\usepackage{pgfplots}
+\pgfplotsset{compat = newest}
+
+% Theorem style REMOVE
+\theoremstyle{definition}
+\newtheorem{theo}{Theorem}[section]
+\newtheorem{lem}[theo]{Lemma}
+\newtheorem{cor}[theo]{Corollary}
+\newtheorem{prop}[theo]{Proposition}
+\newtheorem{defi}[theo]{Definition}
+\newtheorem{conj}[theo]{Conjecture}
+\newtheorem{theo*}{Theorem}
+\theoremstyle{remark}
+\newtheorem*{rk}{Remark}
 
 \title{Fancy english title}
 \author{Paul Fermé}
@@ -118,7 +162,7 @@
 
 \begin{otherlanguage}{french}
 \chapter{Résumé substantiel en Français}
-\label{ch:resume-fr}
+\label{chap:resume-fr}
 
 \input chap-resume
 \end{otherlanguage}
@@ -128,34 +172,45 @@
 
 \chapter{Introduction}
 \addcontentsline{tof}{chapter}{\protect\numberline{\thechapter} Introduction}
-\label{ch:introduction}
+\label{chap:introduction}
 
 \input chap-introduction
 
 \cleardoublepage
 {\let\newpage\relax
-\part{Background}
-\label{pa:background}
-\addcontentsline{tof}{part}{\protect\numberline{\thepart} Préliminaires}
+\chapter{Background}
+\addcontentsline{tof}{chapter}{\protect\numberline{\thepart} Préliminaires}
+\label{chap:background}
 }
 
-\chapter{Chapter 1 Background} \label{ch:background-one}
-\addcontentsline{tof}{chapter}{\protect\numberline{\thechapter} Chapitre 1 de Préliminaires}
-
-\input chap-background-one
+\input chap-background
 
 \cleardoublepage
 {\let\newpage\relax
-\part{Part 2}
-\addcontentsline{tof}{part}{\protect\numberline{\thepart} Partie 2}
-\label{pa:two}
+\chapter{Tight Approximation Guarantees for Concave Coverage Problems}
+\addcontentsline{tof}{chapter}{\protect\numberline{\thepart} TODO}
+\label{chap:MaxCoverage}
 }
 
-\chapter{Chapter 1 Part 2}
-\addcontentsline{tof}{chapter}{\protect\numberline{\thechapter} Chapitre 1 Partie 2}
-\label{ch:two-one}
+\input chap-MaxCoverage
 
-\input chap-two-one
+\cleardoublepage
+{\let\newpage\relax
+\chapter{Multiple-Access Channel Coding with Non-Signaling Correlations}
+\addcontentsline{tof}{chapter}{\protect\numberline{\thepart} TODO}
+\label{chap:MAC}
+}
+
+\input chap-MAC
+
+\cleardoublepage
+{\let\newpage\relax
+  \chapter{Broadcast Channel Coding with Non-Signaling Correlations}
+\addcontentsline{tof}{chapter}{\protect\numberline{\thepart} TODO}
+\label{chap:Broadcast}
+}
+
+\input chap-Broadcast
 
 %%%%%%%%%%%
 
@@ -165,14 +220,8 @@
 
 \input chap-conclusion
 
-%\chapter*[Publication List]{List of Publications}
-%\addcontentsline{toc}{chapter}{List of publications}
-%\addcontentsline{tof}{chapter}{Liste des publications}
-%
-%\input chap-publications
-
-\bibliographystyle{alphaurl.bst}
-\bibliography{these_exemple.bib}
+\bibliographystyle{alphaurl}
+\bibliography{these}
 \addcontentsline{tof}{chapter}{Bibliographie}
 %\printindex
 %\addcontentsline{tof}{chapter}{Index en anglais}

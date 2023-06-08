@@ -1,0 +1,57 @@
+import pandas
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+border = math.log(3,2)
+borderC = 1.5
+lowerBound = 1.25
+
+N = 6
+Data = 'Add'+str(N)+'.csv'
+
+df = pandas.read_csv(Data)
+results = df.values
+
+# PLOT
+R1 = []
+R2 = []
+S = []
+
+for res in results:
+    S.append(res[2])
+    R1.append(res[3])
+    R2.append(res[4])
+
+# Deux frontières
+prec = 0.001
+def line(t):
+    return border - t
+borderLineX = [t for t in np.linspace(0.6,1,1/prec)]
+borderLineY = [line(t) for t in np.linspace(0.6,1,1/prec)]
+borderLineZ = [1 for t in np.linspace(0.6,1,1/prec)]
+
+def lineC(t):
+    return borderC - t
+borderCLineX = [t for t in np.linspace(0.5,1,1/prec)]
+borderCLineY = [lineC(t) for t in np.linspace(0.5,1,1/prec)]
+borderCLineZ = [1 for t in np.linspace(0.5,1,1/prec)]
+
+def lineLB(t):
+    return lowerBound - t
+borderLBLineX = [t for t in np.linspace(0.25,1,1/prec)]
+borderLBLineY = [lineLB(t) for t in np.linspace(0.25,1,1/prec)]
+borderLBLineZ = [1 for t in np.linspace(0.25,1,1/prec)]
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_trisurf(R1,R2,S)
+ax.plot(borderLineX,borderLineY,borderLineZ)
+ax.plot(borderCLineX,borderCLineY,borderCLineZ)
+ax.plot(borderLBLineX,borderLBLineY,borderLBLineZ)
+ax.set_xlabel('R1')
+ax.set_ylabel('R2')
+ax.set_zlabel('S(Add^'+str(N)+',2**('+str(N)+'R1),2**('+str(N)+'R2)')
+#ax.set_zticks(np.linspace(0,1,6))
+fig.show()

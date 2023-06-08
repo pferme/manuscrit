@@ -1,627 +1,719 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{BdPMW16}
-
-\bibitem[AB09]{AB09}
-Sanjeev Arora and Boaz Barak.
-\newblock {\em Computational Complexity: A Modern Approach}.
-\newblock Cambridge University Press, 1st edition, 2009.
-
-\bibitem[ABB10]{ABB10}
-S.~Agrawal, D.~Boneh, and X.~Boyen.
-\newblock Efficient lattice {(H)IBE} in the standard model.
-\newblock In {\em {Eurocrypt}}, volume 6110 of {\em LNCS}, pages 553--572.
-  Springer, 2010.
-
-\bibitem[ACDN13]{ACDN13}
-Masayuki Abe, Jan Camenisch, Maria Dubovitskaya, and Ryo Nishimaki.
-\newblock Universally composable adaptive oblivious transfer (with access
-  control) from standard assumptions.
-\newblock In {\em ACM Workshop on Digital Identity Management}, pages 1--12,
-  2013.
-\newblock \href {https://doi.org/10.1145/2517881.2517883}
-  {\path{doi:10.1145/2517881.2517883}}.
-
-\bibitem[BB04]{BB04}
-D.~Boneh and X.~Boyen.
-\newblock Efficient selective-{ID} secure identity-based encryption without
-  random oracles.
-\newblock In {\em {E}urocrypt}, volume 3027 of {\em LNCS}, pages 223--238.
-  Springer, 2004.
-
-\bibitem[BBS04]{BBS04}
-Dan Boneh, Xavier Boyen, and Hovav Shacham.
-\newblock Short group signatures.
-\newblock In {\em {Crypto}}, volume 3152 of {\em LNCS}, pages 41--55. Springer,
-  2004.
-
-\bibitem[BCC{\etalchar{+}}09]{BCC+09}
-Mira Belenkiy, Jan Camenisch, Melissa Chase, Markulf Kohlweiss, Anna
-  Lysyanskaya, and Hovav Shacham.
-\newblock {Randomizable Proofs and Delegatable Anonymous Credentials}.
-\newblock In {\em {Crypto}}, volume 5677 of {\em LNCS}, pages 108--125.
-  Springer, 2009.
-
-\bibitem[BCKL08]{BCKL08}
-Mira Belenkiy, Melissa Chase, Markulf Kohlweiss, and Anna Lysyanskaya.
-\newblock {P-signatures and Noninteractive Anonymous Credentials}.
-\newblock In {\em {TCC}}, number 4948 in LNCS, pages 356--374. Springer, 2008.
-
-\bibitem[BCKL09]{BCKL09}
-Mira Belenkiy, Melissa Chase, Markulf Kohlweiss, and Anna Lysyanskaya.
-\newblock {Compact E-Cash and Simulatable VRFs Revisited}.
-\newblock In {\em {Pairing}}, volume 5671 of {\em LNCS}, pages 114--131.
-  Springer, 2009.
-
-\bibitem[BD18]{BD18}
-Razvan Barbulescu and Sylvain Duquesne.
-\newblock {Updating Key Size Estimations for Pairings}.
-\newblock {\em Journal of Cryptology}, pages 1--39, 2018.
-\newblock \href {https://doi.org/10.1007/s00145-018-9280-5}
-  {\path{doi:10.1007/s00145-018-9280-5}}.
-
-\bibitem[BdPMW16]{BDPMW16}
-F.~Bourse, R.~del Pino, M.~Minelli, and H~Wee.
-\newblock {FHE Circuit Privacy Almost for Free}.
-\newblock In {\em {Crypto}}, number 9815 in LNCS, pages 62--89, 2016.
-
-\bibitem[BF01]{BF01}
-Dan Boneh and Matt Franklin.
-\newblock Identity-based encryption from the weil pairing.
-\newblock In Joe Kilian, editor, {\em Crypto}, pages 213--229. Springer, 2001.
-
-\bibitem[BHJ{\etalchar{+}}15]{BHJ+15}
-Florian B{\"o}hl, Dennis Hofheinz, Tibor Jager, Jessica Koch, and Christoph
-  Striecks.
-\newblock {Confined guessing: New signatures from standard assumptions}.
-\newblock {\em Journal of Cryptology}, 28(1):176--208, 2015.
-
-\bibitem[BLL{\etalchar{+}}15]{BLL+15}
-Shi Bai, Adeline Langlois, Tancr\`ede Lepoint, Damien Stehl\'e, and Ron
-  Steinfeld.
-\newblock Improved security proofs in lattice-based cryptography: Using the
-  {R\'enyi} divergence rather than the statistical distance.
-\newblock In {\em {Asiacrypt}}, volume 9452 of {\em LNCS}. Springer, 2015.
-
-\bibitem[BLS01]{BLS01}
-Dan Boneh, B.~Lynn, and H.~Shacham.
-\newblock {Short signatures from the Weil pairing}.
-\newblock In {\em Asiacrypt}, LNCS, pages 514--532. Springer, 2001.
-
-\bibitem[BLSV18]{BLSV18}
-Zvika Brakerski, Alex Lombardi, Gil Segev, and Vinod Vaikuntanathan.
-\newblock {Anonymous IBE, Leakage Resilience and Circular Security from New
-  Assumptions}.
-\newblock In {\em {Eurocrypt}}, LNCS, pages 535--564. Springer, 2018.
-
-\bibitem[BN06]{BN06}
-Paulo S. L.~M. Barreto and Michael Naehrig.
-\newblock Pairing-friendly elliptic curves of prime order.
-\newblock In Bart Preneel and Stafford Tavares, editors, {\em Selected Areas in
-  Cryptography}, pages 319--331. Springer, 2006.
-
-\bibitem[Boy10]{Boy10}
-Xavier Boyen.
-\newblock Lattice mixing and vanishing trapdoors: A framework for fully secure
-  short signatures and more.
-\newblock In {\em {PKC}}, volume 6056 of {\em LNCS}, pages 499--517. Springer,
-  2010.
-
-\bibitem[BR93]{BR93}
-Mihir Bellare and Phillip Rogaway.
-\newblock {Random Oracles Are Practical: A Paradigm for Designing Efficient
-  Protocols}.
-\newblock In {\em CCS}. ACM, 1993.
-\newblock URL: \url{http://doi.acm.org/10.1145/168588.168596}, \href
-  {https://doi.org/10.1145/168588.168596} {\path{doi:10.1145/168588.168596}}.
-
-\bibitem[BV11]{BV11}
-Z.~Brakerski and V.~Vaikuntanathan.
-\newblock Efficient fully homomorphic encryption from (standard) {LWE}.
-\newblock In {\em {FOCS}}, pages 97--106, 2011.
-
-\bibitem[Can01]{Can01}
-R.~Canetti.
-\newblock Universally composable security: A new paradigm for cryptographic
-  protocols.
-\newblock In {\em {FOCS}}, pages 136--145, 2001.
-
-\bibitem[CDN09]{CDN09}
-J.~Camenisch, M.~Dubovitskaya, and G.~Neven.
-\newblock Oblivious transfer with access control.
-\newblock In {\em {ACM-CCS}}, pages 131--140, 2009.
-
-\bibitem[CDNZ11]{CDNZ11}
-J.~Camenisch, M.~Dubovitskaya, G.~Neven, and G.~Zaverucha.
-\newblock Oblivious transfer with hidden access control policies.
-\newblock In {\em {PKC}'11}, volume 6571 of {\em LNCS}, pages 192--209, 2011.
-
-\bibitem[CF01]{CF01}
-Ran Canetti and Marc Fischlin.
-\newblock Universally composable commitments.
-\newblock In {\em Crypto}, pages 19--40. Springer, 2001.
-
-\bibitem[CFN88]{CFN88}
-D.~Chaum, A.~Fiat, and M.~Naor.
-\newblock Untraceable electronic cash.
-\newblock In {\em {Crypto}}, volume 403 of {\em LNCS}, pages 319--327, 1988.
-
-\bibitem[CGH98]{CGH98}
-Ran Canetti, Oded Goldreich, and Shai Halevi.
-\newblock The random oracle methodology, revisited.
-\newblock In {\em STOC}, volume~45. ACM, 1998.
-\newblock URL: \url{http://doi.acm.org/10.1145/1008731.1008734}, \href
-  {https://doi.org/10.1145/1008731.1008734}
-  {\path{doi:10.1145/1008731.1008734}}.
-
-\bibitem[Cha82]{Cha82}
-D.~Chaum.
-\newblock Blind signatures for untraceable payments.
-\newblock In {\em {Crypto}}, LNCS, pages 199--203, 1982.
-
-\bibitem[Cha83]{Cha83}
-D.~Chaum.
-\newblock Blind signature system.
-\newblock In {\em {Crypto}}, LNCS, page 153, 1983.
-
-\bibitem[Cha85]{Cha85}
-David Chaum.
-\newblock {Security without Identification: Transactions System to Make Big
-  Brother Obsolete}.
-\newblock 28(10):1030--1044, 1985.
-
-\bibitem[Che06]{Che06}
-Jung~Hee Cheon.
-\newblock Security analysis of the strong diffie-hellman problem.
-\newblock In {\em Eurocrypt}, volume 4004 of {\em LNCS}. Springer, 2006.
-
-\bibitem[CHK04]{CHK04}
-Ran Canetti, Shai Halevi, and Jonathan Katz.
-\newblock {Chosen-Ciphertext Security from Identity-Based Encryption}.
-\newblock In {\em Eurocrypt}, LNCS, pages 207--222. Springer, 2004.
-
-\bibitem[CHKP10]{CHKP10}
-D.~Cash, D.~Hofheinz, E.~Kiltz, and C.~Peikert.
-\newblock Bonsai trees, or how to delegate a lattice basis.
-\newblock In {\em {Eurocrypt}}, volume 6110 of {\em LNCS}, pages 523--552.
-  Springer, 2010.
-
-\bibitem[CHL05]{CHL05a}
-Jan Camenisch, Susan Hohenberger, and Anna Lysyanskaya.
-\newblock Compact e-cash.
-\newblock In {\em {Eurocrypt}}, number 3494 in LNCS, pages 302--321. Springer,
-  2005.
-
-\bibitem[CHL{\etalchar{+}}15]{CHL+15}
-Jung~Hee Cheon, Kyoohyung Han, Changmin Lee, Hansol Ryu, and Damien Stehlé.
-\newblock {Cryptanalysis of the Multilinear Map over the Integers}.
-\newblock In {\em Eurocrypt}, 2015.
-
-\bibitem[CKL06]{CKL06}
-Ran Canetti, Eyal Kushilevitz, and Yehuda Lindell.
-\newblock On the limitations of universally composable two-party computation
-  without set-up assumptions.
-\newblock {\em Journal of Cryptology}, 19(2):135--167, 2006.
-\newblock \href {https://doi.org/10.1007/s00145-005-0419-9}
-  {\path{doi:10.1007/s00145-005-0419-9}}.
-
-\bibitem[CL01]{CL01}
-Jan Camenisch and Anna Lysyanskaya.
-\newblock An efficient system for non-transferable anonymous credentials with
-  optional anonymity revocation.
-\newblock In {\em {Eurocrypt}}, number 2045 in LNCS, pages 93--118. Springer,
-  2001.
-
-\bibitem[Coo71]{Coo71}
-Stephen~A. Cook.
-\newblock The complexity of theorem-proving procedures.
-\newblock In {\em Proceedings of the Third Annual ACM Symposium on Theory of
-  Computing}, STOC '71, pages 151--158. ACM, 1971.
-\newblock URL: \url{http://doi.acm.org/10.1145/800157.805047}, \href
-  {https://doi.org/10.1145/800157.805047} {\path{doi:10.1145/800157.805047}}.
-
-\bibitem[CP92]{CP92}
-D.~Chaum and T.~Pedersen.
-\newblock {Transferred Cash Grows in Size}.
-\newblock In {\em {Eurocrypt}}, volume 658 of {\em LNCS}, pages 390--407, 1992.
-
-\bibitem[DG17a]{DG17a}
-Nico D{\"o}ttling and Sanjam Garg.
-\newblock {From Selective IBE to Full IBE and Selective HIBE}.
-\newblock In {\em TCC}, LNCS, pages 372--408. Springer, 2017.
-
-\bibitem[DG17b]{DG17}
-Nico Döttling and Sanjam Garg.
-\newblock {Identity-Based Encryption from the Diffie-Hellman Assumption}.
-\newblock In {\em Crypto}, volume 10401 of {\em LNCS}, pages 537--569.
-  Springer, 2017.
-
-\bibitem[DM14]{DM14}
-L{\'e}o Ducas and Daniele Micciancio.
-\newblock {Improved Short Lattice Signatures in the Standard Model}.
-\newblock In {\em Crypto}, LNCS, pages 335--352. Springer, 2014.
-
-\bibitem[dPLNS17]{dPLNS17}
-Rafa~l del Pino, Vadim Lyubashevsky, Gregory Neven, and Gregory Seiler.
-\newblock {Practical Quantum-Safe Voting from Lattices}.
-\newblock In {\em CCS}, 2017.
-
-\bibitem[EGL85]{EGL85}
-S.~Even, O.~Goldreich, and A.~Lempel.
-\newblock A randomized protocol for signing contracts.
-\newblock 28(6):637--647, 1985.
-
-\bibitem[FS86]{FS86}
-Amos Fiat and Adi Shamir.
-\newblock How to prove yourself: Practical solutions to identification and
-  signature problems.
-\newblock In Andrew~M. Odlyzko, editor, {\em Crypto}, pages 186--194. Springer,
-  1986.
-
-\bibitem[FY93]{FY93}
-M.~Franklin and M.~Yung.
-\newblock Secure and efficient off-line digital money.
-\newblock In {\em {ICALP}}, volume 700 of {\em LNCS}, pages 265--276. Springer,
-  1993.
-
-\bibitem[Gen09]{Gen09}
-C.~Gentry.
-\newblock Fully homomorphic encryption using ideal lattices.
-\newblock In {\em {STOC}}, pages 169--178. ACM, 2009.
-
-\bibitem[GH08]{GH08}
-Matthew Green and Susan Hohenberger.
-\newblock {Universally Composable Adaptive Oblivious Transfer}.
-\newblock In {\em {Asiacrypt}}, number 5350 in LNCS, pages 179--197. Springer,
-  2008.
-
-\bibitem[Gil77]{Gil77}
-John Gill.
-\newblock {Computational Complexity of Probabilistic Turing Machines}.
-\newblock {\em SIAM J. on Computing}, 6(4):675--695, 1977.
-\newblock \href {https://arxiv.org/abs/https://doi.org/10.1137/0206049}
-  {\path{arXiv:https://doi.org/10.1137/0206049}}, \href
-  {https://doi.org/10.1137/0206049} {\path{doi:10.1137/0206049}}.
-
-\bibitem[GM82]{GM82}
-Shafi Goldwasser and Silvio Micali.
-\newblock Probabilistic encryption \& how to play mental poker keeping secret
-  all partial information.
-\newblock In {\em STOC}, pages 365--377. ACM, 1982.
-
-\bibitem[Gol04]{Gol04}
-Oded Goldreich.
-\newblock {\em Foundations of Cryptography: Volume 2, Basic Applications}.
-\newblock Cambridge University Press, 2004.
-
-\bibitem[GOS06]{GOS06}
-Jens Groth, Rafail Ostrovsky, and Amit Sahai.
-\newblock {Perfect Non-interactive Zero Knowledge for NP}.
-\newblock In {\em Eurocrypt}, 2006.
-
-\bibitem[GPS17]{GPS17}
-Steven~D. Galbraith, Christophe Petit, and Javier Silva.
-\newblock {Identification Protocols and Signature Schemes Based on
-  Supersingular Isogeny Problems}.
-\newblock In {\em Asiacrypt}, LNCS, pages 3--33. Springer, 2017.
-
-\bibitem[GPV08]{GPV08}
-C.~Gentry, C.~Peikert, and V.~Vaikuntanathan.
-\newblock Trapdoors for hard lattices and new cryptographic constructions.
-\newblock In {\em {STOC}}, pages 197--206. {ACM}, 2008.
-
-\bibitem[Gro07]{Gro07}
-J.~Groth.
-\newblock Fully anonymous group signatures without random oracles.
-\newblock In {\em {Asiacrypt}}, volume 4833 of {\em LNCS}, pages 164--180.
-  Springer, 2007.
-
-\bibitem[GS08]{GS08}
-J.~Groth and A.~Sahai.
-\newblock Efficient non-interactive proof systems for bilinear groups.
-\newblock In {\em {Eurocrypt}}, volume 4965 of {\em LNCS}, pages 415--432.
-  Springer, 2008.
-
-\bibitem[GSW13]{GSW13}
-C.~Gentry, A.~Sahai, and B.~Waters.
-\newblock Homomorphic encryption from learning with errors:
-  Conceptually-simpler, asymptotically-faster, attribute-based.
-\newblock In {\em {Crypto}}, number 8042 in LNCS, pages 75--92, 2013.
-
-\bibitem[IKOS07]{IKOS07}
-Yuval Ishai, Eyal Kushilevitz, Rafail Ostrovsky, and Amit Sahai.
-\newblock {Zero-knowledge from Secure Multiparty Computation}.
-\newblock In {\em STOC}, pages 21--30. ACM, 2007.
-\newblock URL: \url{http://doi.acm.org/10.1145/1250790.1250794}, \href
-  {https://doi.org/10.1145/1250790.1250794}
-  {\path{doi:10.1145/1250790.1250794}}.
-
-\bibitem[JDF11]{JDF11}
-David Jao and Luca De~Feo.
-\newblock {Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic
-  Curve Isogenies}.
-\newblock In {\em PQCrypto}, LNCS, pages 19--34. Springer, 2011.
-
-\bibitem[Jou00]{Jou00}
-Antoine Joux.
-\newblock A one round protocol for tripartite diffie--hellman.
-\newblock In Wieb Bosma, editor, {\em Algorithmic Number Theory}, pages
-  385--393. Springer, 2000.
-
-\bibitem[KB16]{KB16}
-Taechan Kim and Razvan Barbulescu.
-\newblock Extended tower number field sieve: A new complexity for the medium
-  prime case.
-\newblock In Matthew Robshaw and Jonathan Katz, editors, {\em Crypto}, pages
-  543--571. Springer, 2016.
-
-\bibitem[KL07]{KL07}
-Jonathan Katz and Yehuda Lindell.
-\newblock {\em Introduction to Modern Cryptography (Chapman \& Hall/Crc
-  Cryptography and Network Security Series)}.
-\newblock Chapman \& Hall/CRC, 2007.
-
-\bibitem[KTX08]{KTX08}
-A.~Kawachi, K.~Tanaka, and K.~Xagawa.
-\newblock Concurrently secure identification schemes based on the worst-case
-  hardness of lattice problems.
-\newblock In {\em {Asiacrypt}}, volume 5350 of {\em LNCS}, pages 372--389.
-  Springer, 2008.
-
-\bibitem[KTY07]{KTY07}
-Aggelos Kiayias, Yiannis Tsiounis, and Moti Yung.
-\newblock Group encryption.
-\newblock In {\em {Asiacrypt}}, number 4833 in LNCS, pages 181--199. Springer,
-  2007.
-
-\bibitem[KW18]{KW18}
-Sam Kim and David~J. Wu.
-\newblock {Multi-Theorem Preprocessing NIZKs from Lattices}.
-\newblock In {\em Crypto}, LNCS, page To appear. Springen, 2018.
-
-\bibitem[LLM{\etalchar{+}}16a]{LLM+16}
-B.~Libert, S.~Ling, F.~Mouhartem, K.~Nguyen, and H.~Wang.
-\newblock Signature schemes with efficient protocols and dynamic group
-  signatures from lattice assumptions.
-\newblock In {\em {Asiacrypt}}, 2016.
-\newblock URL: \url{http://ia.cr/2016/101}.
-
-\bibitem[LLM{\etalchar{+}}16b]{LLM+16a}
-B.~Libert, S.~Ling, F.~Mouhartem, K.~Nguyen, and H.~Wang.
-\newblock Zero-knowledge arguments for matrix-vector relations and
-  lattice-based group encryption.
-\newblock In {\em {Asiacrypt}}, 2016.
-\newblock URL: \url{https://ia.cr/2016/879}.
-
-\bibitem[LLM{\etalchar{+}}17]{LLM+17}
-Beno{\^i}t Libert, San Ling, Fabrice Mouhartem, Khoa Nguyen, and Huaxiong Wang.
-\newblock Adaptive oblivious transfer with access control from lattice
-  assumptions.
-\newblock In Tsuyoshi Takagi and Thomas Peyrin, editors, {\em Asiacrypt}, pages
-  533--563. Springer, 2017.
-
-\bibitem[LLNW16]{LLNW16}
-B.~Libert, S.~Ling, K.~Nguyen, and H.~Wang.
-\newblock {Zero-Knowledge Arguments for Lattice-Based Accumulators:
-  Logarithmic-size Ring Signatures and Group Signatures Without Trapdoors}.
-\newblock In {\em {Eurocrypt}}, volume 9666 of {\em LNCS}, pages 1--31.
-  Springer, 2016.
-
-\bibitem[LLNW17]{LLNW17}
-Beno~t Libert, San Ling, Khoa Nguyen, and Huaxiong Wang.
-\newblock {Zero-Knowledge Arguments for Lattice-Based PRFs and Applications to
-  E-Cash}.
-\newblock In {\em Asiacrypt}, LNCS, pages 304--335. Springer, 2017.
-
-\bibitem[LM08]{LM08}
-Vadim Lyubashevsky and Daniele Micciancio.
-\newblock {Asymptotically Efficient Lattice-Based Digital Signatures}.
-\newblock In {\em TCC}, LNCS, pages 37--54. Springer, 2008.
-
-\bibitem[LMPY16]{LMPY16}
-Beno\^{\i}t Libert, Fabrice Mouhartem, Thomas Peters, and Moti Yung.
-\newblock Practical "signatures with efficient protocols" from simple
-  assumptions.
-\newblock In {\em AsiaCCS}, pages 511--522. ACM, 2016.
-\newblock URL: \url{http://doi.acm.org/10.1145/2897845.2897898}, \href
-  {https://doi.org/10.1145/2897845.2897898}
-  {\path{doi:10.1145/2897845.2897898}}.
-
-\bibitem[LNWX18]{LNWX18}
-San Ling, Khoa Nguyen, Huaxiong Wang, and Yanhong Xu.
-\newblock {Constant-Size Group Signatures from Lattices}.
-\newblock In {\em PKC}, LNCS, pages 58--88. Springer, 2018.
-
-\bibitem[LP07]{LP07}
-Yehuda Lindell and Benny Pinkas.
-\newblock An efficient protocol for secure two-party computation in the
-  presence of malicious adversaries.
-\newblock In Moni Naor, editor, {\em Eurocrypt}, pages 52--78. Springer, 2007.
-
-\bibitem[LPQ17]{LPQ17}
-Benoît Libert, Thomas Peters, and Chen Qian.
-\newblock {Structure-Preserving Chosen-Ciphertext Security with Shorter
-  Verifiable Ciphertexts}.
-\newblock In {\em PKC}, volume 10174 of {\em LNCS}, pages 247--276. Springer,
+\begin{thebibliography}{AAM{\etalchar{+}}11}
+
+\bibitem[AA00]{Mosek}
+Erling~D Andersen and Knud~D Andersen.
+\newblock The {M}osek interior point optimizer for linear programming: an
+  implementation of the homogeneous algorithm.
+\newblock In {\em High performance optimization}, pages 197--232. Springer,
+  2000.
+\newblock \href {https://doi.org/10.1007/978-1-4757-3216-0_8}
+  {\path{doi:10.1007/978-1-4757-3216-0_8}}.
+
+\bibitem[AAM{\etalchar{+}}11]{AAMMW11}
+Noga Alon, Sanjeev Arora, Rajsekar Manokaran, Dana Moshkovitz, and Omri
+  Weinstein.
+\newblock Inapproximability of densest $\kappa$-subgraph from average case
+  hardness.
+\newblock {\em Unpublished manuscript}, 1, 2011.
+\newblock URL: \url{https://www.tau.ac.il/~nogaa/PDFS/dks8.pdf}.
+
+\bibitem[AB99]{AB99}
+Rudolf Ahlswede and Vladimir~B. Balakirsky.
+\newblock Construction of uniquely decodable codes for the two-user binary
+  adder channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 45(1):326--330, 1999.
+\newblock \href {https://doi.org/10.1109/18.746834}
+  {\path{doi:10.1109/18.746834}}.
+
+\bibitem[Ahl73]{Ahlswede73}
+Rudolf Ahlswede.
+\newblock Multi-way communication channels.
+\newblock In {\em 2nd International Symposium on Information Theory,
+  Tsahkadsor, Armenia, USSR, September 2-8, 1971}, pages 23--52. Publishing
+  House of the Hungarian Academy of Science, 1973.
+
+\bibitem[AK75]{AK75}
+Rudolf Ahlswede and J{\'{a}}nos K{\"{o}}rner.
+\newblock Source coding with side information and a converse for degraded
+  broadcast channels.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 21(6):629--637, 1975.
+\newblock \href {https://doi.org/10.1109/TIT.1975.1055469}
+  {\path{doi:10.1109/TIT.1975.1055469}}.
+
+\bibitem[Ara02]{Aravind02}
+PK~Aravind.
+\newblock A simple demonstration of {Bell}'s theorem involving two observers
+  and no probabilities or inequalities.
+\newblock {\em CoRR}, abs/quant-ph/0206070, 2002.
+\newblock \href {https://arxiv.org/abs/quant-ph/0206070}
+  {\path{arXiv:quant-ph/0206070}}.
+
+\bibitem[AS04]{AS04}
+Alexander~A. Ageev and Maxim Sviridenko.
+\newblock Pipage rounding: {A} new method of constructing algorithms with
+  proven performance guarantee.
+\newblock {\em J. Comb. Optim.}, 8(3):307--328, 2004.
+\newblock \href {https://doi.org/10.1023/B:JOCO.0000038913.96607.c2}
+  {\path{doi:10.1023/B:JOCO.0000038913.96607.c2}}.
+
+\bibitem[BB98]{BB98}
+Shraga~I. Bross and Ian~F. Blake.
+\newblock Upper bound for uniquely decodable codes in a binary input {N}-user
+  adder channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 44(1):334--340, 1998.
+\newblock \href {https://doi.org/10.1109/18.651062}
+  {\path{doi:10.1109/18.651062}}.
+
+\bibitem[BBT05]{BBT05}
+Gilles Brassard, Anne Broadbent, and Alain Tapp.
+\newblock Quantum pseudo-telepathy.
+\newblock {\em Foundations of Physics}, 35(11):1877--1907, 2005.
+\newblock \href {https://doi.org/10.1007/s10701-005-7353-4}
+  {\path{doi:10.1007/s10701-005-7353-4}}.
+
+\bibitem[BCE{\etalchar{+}}16]{BCE16}
+Felix Brandt, Vincent Conitzer, Ulle Endriss, J{\'{e}}r{\^{o}}me Lang, and
+  Ariel~D. Procaccia, editors.
+\newblock {\em Handbook of Computational Social Choice}.
+\newblock Cambridge University Press, 2016.
+\newblock \href {https://doi.org/10.1017/CBO9781107446984}
+  {\path{doi:10.1017/CBO9781107446984}}.
+
+\bibitem[BCP{\etalchar{+}}14]{BCPSW14}
+Nicolas Brunner, Daniel Cavalcanti, Stefano Pironio, Valerio Scarani, and
+  Stephanie Wehner.
+\newblock Bell nonlocality.
+\newblock {\em Rev. Mod. Phys.}, 86:419--478, Apr 2014.
+\newblock \href {https://doi.org/10.1103/RevModPhys.86.419}
+  {\path{doi:10.1103/RevModPhys.86.419}}.
+
+\bibitem[Ber73]{Bergmans73}
+Patrick~P. Bergmans.
+\newblock Random coding theorem for broadcast channels with degraded
+  components.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 19(2):197--207, 1973.
+\newblock \href {https://doi.org/10.1109/TIT.1973.1054980}
+  {\path{doi:10.1109/TIT.1973.1054980}}.
+
+\bibitem[BF18]{BF18}
+Siddharth Barman and Omar Fawzi.
+\newblock Algorithmic aspects of optimal channel coding.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 64(2):1038--1045, 2018.
+\newblock \href {https://doi.org/10.1109/TIT.2017.2696963}
+  {\path{doi:10.1109/TIT.2017.2696963}}.
+
+\bibitem[BFF21]{BFF21}
+Siddharth Barman, Omar Fawzi, and Paul Ferm{\'{e}}.
+\newblock Tight approximation guarantees for concave coverage problems.
+\newblock In Markus Bl{\"{a}}ser and Benjamin Monmege, editors, {\em 38th
+  International Symposium on Theoretical Aspects of Computer Science, {STACS}
+  2021, March 16-19, 2021, Saarbr{\"{u}}cken, Germany (Virtual Conference)},
+  volume 187 of {\em LIPIcs}, pages 9:1--9:17. Schloss Dagstuhl -
+  Leibniz-Zentrum f{\"{u}}r Informatik, 2021.
+\newblock \href {https://doi.org/10.4230/LIPIcs.STACS.2021.9}
+  {\path{doi:10.4230/LIPIcs.STACS.2021.9}}.
+
+\bibitem[BFGG20]{BFGG20}
+Siddharth Barman, Omar Fawzi, Suprovat Ghoshal, and Emirhan G{\"{u}}rpinar.
+\newblock Tight approximation bounds for maximum multi-coverage.
+\newblock In Daniel Bienstock and Giacomo Zambelli, editors, {\em Integer
+  Programming and Combinatorial Optimization - 21st International Conference,
+  {IPCO} 2020, London, UK, June 8-10, 2020, Proceedings}, volume 12125 of {\em
+  Lecture Notes in Computer Science}, pages 66--77. Springer, 2020.
+\newblock \href {https://doi.org/10.1007/978-3-030-45771-6\_6}
+  {\path{doi:10.1007/978-3-030-45771-6\_6}}.
+
+\bibitem[BH84]{Barbour84}
+Andrew~D Barbour and Peter Hall.
+\newblock On the rate of {P}oisson convergence.
+\newblock {\em Mathematical Proceedings of the Cambridge Philosophical
+  Society}, 95(3):473--480, 1984.
+\newblock \href {https://doi.org/10.1017/S0305004100061806}
+  {\path{doi:10.1017/S0305004100061806}}.
+
+\bibitem[BLS17]{Brill2018}
+Markus Brill, Jean{-}Fran{\c{c}}ois Laslier, and Piotr Skowron.
+\newblock Multiwinner approval rules as apportionment methods.
+\newblock In Satinder~P. Singh and Shaul Markovitch, editors, {\em Proceedings
+  of the Thirty-First {AAAI} Conference on Artificial Intelligence, February
+  4-9, 2017, San Francisco, California, {USA}}, pages 414--420. {AAAI} Press,
   2017.
+\newblock \href {https://doi.org/10.1177/0951629818775518}
+  {\path{doi:10.1177/0951629818775518}}.
 
-\bibitem[LPY15]{LPY15}
-Beno\^{\i}t Libert, Thomas Peters, and Moti Yung.
-\newblock Short group signatures via structure-preserving signatures: Standard
-  model security from simple assumptions.
-\newblock In {\em {Crypto}}, volume 9216 of {\em LNCS}, pages 296--316.
-  Springer, 2015.
+\bibitem[BN05]{BN05}
+Liad Blumrosen and Noam Nisan.
+\newblock On the computational power of iterative auctions.
+\newblock In John Riedl, Michael~J. Kearns, and Michael~K. Reiter, editors,
+  {\em Proceedings 6th {ACM} Conference on Electronic Commerce (EC-2005),
+  Vancouver, BC, Canada, June 5-8, 2005}, pages 29--43. {ACM}, 2005.
+\newblock \href {https://doi.org/10.1145/1064009.1064013}
+  {\path{doi:10.1145/1064009.1064013}}.
 
-\bibitem[LS14]{LS14}
-Adeline Langlois and Damien Stehlé.
-\newblock {Worst-case to average-case reductions for module lattices}.
-\newblock {\em Designs, Codes and Cryptography}, 2014.
+\bibitem[BSST99]{BSST99}
+Charles~H Bennett, Peter~W Shor, John~A Smolin, and Ashish~V Thapliyal.
+\newblock Entanglement-assisted classical capacity of noisy quantum channels.
+\newblock {\em Physical Review Letters}, 83(15):3081, 1999.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.83.3081}
+  {\path{doi:10.1103/PhysRevLett.83.3081}}.
 
-\bibitem[LYJP14]{LYJP14}
-Beno{\^\i}t Libert, Moti Yung, Marc Joye, and Thomas Peters.
-\newblock Traceable group encryption.
-\newblock In {\em {PKC} 2014}, volume 8383 of {\em LNCS}, pages 592--610.
-  Springer, 2014.
-\newblock \href {https://doi.org/10.1007/978-3-642-54631-0_34}
-  {\path{doi:10.1007/978-3-642-54631-0_34}}.
+\bibitem[BT96]{BT96}
+Steven~J. Brams and Alan~D. Taylor.
+\newblock {\em Fair division - from cake-cutting to dispute resolution}.
+\newblock Cambridge University Press, 1996.
 
-\bibitem[Lyu08]{Lyu08}
-Vadim Lyubashevsky.
-\newblock Lattice-based identification schemes secure under active attacks.
-\newblock In {\em {PKC}}, volume 4939 of {\em LNCS}, pages 162--179. Springer,
-  2008.
+\bibitem[Can17]{PoissonBound}
+Cl{\'e}ment~L Canonne.
+\newblock A short note on {P}oisson tail bounds.
+\newblock {\em Retrieved from the website:
+  \url{http://www.cs.columbia.edu/~ccanonne}}, 2017.
 
-\bibitem[Lyu09]{Lyu09}
-Vadim Lyubashevsky.
-\newblock {Fiat-Shamir with Aborts: Applications to Lattice and Factoring-Based
-  Signatures}.
-\newblock In {\em Asiacrypt}, pages 598--616. Springer, 2009.
+\bibitem[CC84]{CC84}
+Michele Conforti and G{\'{e}}rard Cornu{\'{e}}jols.
+\newblock Submodular set functions, matroids and the greedy algorithm: Tight
+  worst-case bounds and some generalizations of the {R}ado-{E}dmonds theorem.
+\newblock {\em Discret. Appl. Math.}, 7(3):251--274, 1984.
+\newblock \href {https://doi.org/10.1016/0166-218X(84)90003-9}
+  {\path{doi:10.1016/0166-218X(84)90003-9}}.
 
-\bibitem[Lyu12]{Lyu12}
-V.~Lyubashevsky.
-\newblock Lattice signatures without trapdoors.
-\newblock In {\em {Eurocrypt}}, volume 7237 of {\em LNCS}. Springer, 2012.
+\bibitem[CCK{\etalchar{+}}17]{CCKLMNT17}
+Parinya Chalermsook, Marek Cygan, Guy Kortsarz, Bundit Laekhanukit, Pasin
+  Manurangsi, Danupon Nanongkai, and Luca Trevisan.
+\newblock From {Gap-ETH} to {FPT}-inapproximability: Clique, dominating set,
+  and more.
+\newblock In Chris Umans, editor, {\em 58th {IEEE} Annual Symposium on
+  Foundations of Computer Science, {FOCS} 2017, Berkeley, CA, USA, October
+  15-17, 2017}, pages 743--754. {IEEE} Computer Society, 2017.
+\newblock \href {https://doi.org/10.1109/FOCS.2017.74}
+  {\path{doi:10.1109/FOCS.2017.74}}.
 
-\bibitem[Moh11]{Moh11}
-Payman Mohassel.
-\newblock {One-Time Signatures and Chameleon Hash Functions}.
-\newblock In {\em SAC}, LCNS, pages 302--319. Springer, 2011.
+\bibitem[CCPV11]{CCPV11}
+Gruia C{\u{a}}linescu, Chandra Chekuri, Martin P{\'{a}}l, and Jan
+  Vondr{\'{a}}k.
+\newblock Maximizing a monotone submodular function subject to a matroid
+  constraint.
+\newblock {\em {SIAM} J. Comput.}, 40(6):1740--1766, 2011.
+\newblock \href {https://doi.org/10.1137/080733991}
+  {\path{doi:10.1137/080733991}}.
 
-\bibitem[MP12]{MP12}
-D.~Micciancio and C.~Peikert.
-\newblock Trapdoors for lattices: Simpler, tighter, faster, smaller.
-\newblock In {\em {Eurocrypt}}, volume 7237 of {\em LNCS}, pages 700--718.
-  Springer, 2012.
+\bibitem[CFN77]{CFN77}
+G{\'e}rard Cornu{\'e}jols, Marshall~L Fisher, and George~L Nemhauser.
+\newblock Exceptional paper—location of bank accounts to optimize float: An
+  analytic study of exact and approximate algorithms.
+\newblock {\em Management science}, 23(8):789--810, 1977.
+\newblock \href {https://doi.org/10.1287/mnsc.23.8.789}
+  {\path{doi:10.1287/mnsc.23.8.789}}.
 
-\bibitem[MSS17]{MSS17}
-Alfred Menezes, Palash Sarkar, and Shashank Singh.
-\newblock {Challenges with Assessing the Impact of NFS Advances on the Security
-  of Pairing-Based Cryptography}.
-\newblock In Rapha{\"e}l C.-W. Phan and Moti Yung, editors, {\em Paradigms in
-  Cryptology -- Mycrypt. Malicious and Exploratory Cryptology}, pages 83--108.
-  Springer, 2017.
+\bibitem[Cov72]{Cover72}
+Thomas~M. Cover.
+\newblock Broadcast channels.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 18(1):2--14, 1972.
+\newblock \href {https://doi.org/10.1109/TIT.1972.1054727}
+  {\path{doi:10.1109/TIT.1972.1054727}}.
 
-\bibitem[Nao03]{Nao03}
-Moni Naor.
-\newblock On cryptographic assumptions and challenges.
-\newblock In Springer, editor, {\em Crypto}, pages 96--109, 2003.
+\bibitem[Cov75]{Cover75}
+Thomas~M. Cover.
+\newblock An achievable rate region for the broadcast channel.
+\newblock {\em IEEE Transactions on Information Theory}, 21(4):399--404, 1975.
+\newblock \href {https://doi.org/10.1109/TIT.1975.1055418}
+  {\path{doi:10.1109/TIT.1975.1055418}}.
 
-\bibitem[NIS17]{NIS17}
-NIST.
-\newblock {NIST post-quantum competition. Round 1.}, 2017.
-\newblock
-  \url{https://csrc.nist.gov/Projects/Post-Quantum-Cryptography/Round-1-Submissions}.
+\bibitem[CPM19]{CPM19}
+Rahul Chandan, Dario Paccagnan, and Jason~R. Marden.
+\newblock Optimal mechanisms for distributed resource-allocation.
+\newblock {\em CoRR}, abs/1911.07823, 2019.
+\newblock \href {https://arxiv.org/abs/1911.07823} {\path{arXiv:1911.07823}}.
 
-\bibitem[NP99]{NP99}
-M.~Naor and B.~Pinkas.
-\newblock Oblivious transfer with adaptive queries.
-\newblock In {\em {Crypto}}, volume 1666 of {\em LNCS}, pages 573--590, 1999.
+\bibitem[CT01]{CT01}
+Thomas~M. Cover and Joy~A. Thomas.
+\newblock {\em Elements of Information Theory}.
+\newblock Wiley, 2001.
+\newblock \href {https://doi.org/10.1002/0471200611}
+  {\path{doi:10.1002/0471200611}}.
 
-\bibitem[Oka95]{Oka95}
-T.~Okamoto.
-\newblock An efficient divisible electronic cash scheme.
-\newblock In {\em {Crypto}}, volume 963 of {\em LNCS}, pages 438--451.
-  Springer, 1995.
+\bibitem[DMMS20]{DMMS20}
+Szymon Dudycz, Pasin Manurangsi, Jan Marcinkowski, and Krzysztof Sornat.
+\newblock Tight approximation for proportional approval voting.
+\newblock In Christian Bessiere, editor, {\em Proceedings of the Twenty-Ninth
+  International Joint Conference on Artificial Intelligence, {IJCAI} 2020},
+  pages 276--282. ijcai.org, 2020.
+\newblock \href {https://doi.org/10.24963/ijcai.2020/39}
+  {\path{doi:10.24963/ijcai.2020/39}}.
 
-\bibitem[OO91]{OO91}
-K.~Ohta and T.~Okamoto.
-\newblock Universal electronic cash.
-\newblock In {\em {Crypto}}, volume 576 of {\em LNCS}, pages 324--337.
-  Springer, 1991.
+\bibitem[DR98]{DR98}
+Devdatt~P. Dubhashi and Desh Ranjan.
+\newblock Balls and bins: {A} study in negative dependence.
+\newblock {\em Random Struct. Algorithms}, 13(2):99--124, 1998.
+\newblock \href {https://doi.org/10.7146/brics.v3i25.20006}
+  {\path{doi:10.7146/brics.v3i25.20006}}.
 
-\bibitem[Pre17]{Pre17}
-Thomas Prest.
-\newblock {Sharper Bounds in Lattice-Based Cryptography Using the Rényi
-  Divergence}.
-\newblock In {\em Asiacrypt}, LNCS, pages 347--374o. Springer, 2017.
+\bibitem[DS06]{DS06}
+Shahar Dobzinski and Michael Schapira.
+\newblock An improved approximation algorithm for combinatorial auctions with
+  submodular bidders.
+\newblock In {\em Proceedings of the Seventeenth Annual {ACM-SIAM} Symposium on
+  Discrete Algorithms, {SODA} 2006, Miami, Florida, USA, January 22-26, 2006},
+  pages 1064--1073. {ACM} Press, 2006.
+\newblock URL: \url{http://dl.acm.org/citation.cfm?id=1109557.1109675}.
 
-\bibitem[PV08]{PV08}
-C.~Peikert and V.~Vaikuntanathan.
-\newblock Non-interactive statistical zero-knowledge proofs for lattice
-  problems.
-\newblock In {\em {Crypto}}, volume 5157 of {\em LNCS}, pages 536--553.
-  Springer, 2008.
+\bibitem[DV15]{DV15}
+Shaddin Dughmi and Jan Vondr{\'{a}}k.
+\newblock Limitations of randomized mechanisms for combinatorial auctions.
+\newblock {\em Games Econ. Behav.}, 92:370--400, 2015.
+\newblock \href {https://doi.org/10.1016/j.geb.2014.01.007}
+  {\path{doi:10.1016/j.geb.2014.01.007}}.
 
-\bibitem[PVW08]{PVW08}
-C.~Peikert, V.~Vaikuntanathan, and B.~Waters.
-\newblock A framework for efficient and composable oblivious transfer.
-\newblock In {\em {Crypto}}, volume 5157 of {\em LNCS}, pages 554--571, 2008.
+\bibitem[Fei98]{Feige98}
+Uriel Feige.
+\newblock A threshold of ln \emph{n} for approximating set cover.
+\newblock {\em J. {ACM}}, 45(4):634--652, 1998.
+\newblock \href {https://doi.org/10.1145/285055.285059}
+  {\path{doi:10.1145/285055.285059}}.
 
-\bibitem[PW08]{PW08}
-Chris Peikert and Brent Waters.
-\newblock {Lossy Trapdoor Functions and Their Applications}.
-\newblock In {\em STOC}, pages 187--196. ACM, 2008.
+\bibitem[FF22]{FF22}
+Omar Fawzi and Paul Ferm{\'{e}}.
+\newblock Beating the sum-rate capacity of the binary adder channel with
+  non-signaling correlations.
+\newblock In {\em {IEEE} International Symposium on Information Theory, {ISIT}
+  2022, Espoo, Finland, June 26 - July 1, 2022}, pages 2750--2755. {IEEE},
+  2022.
+\newblock \href {https://doi.org/10.1109/ISIT50566.2022.9834699}
+  {\path{doi:10.1109/ISIT50566.2022.9834699}}.
 
-\bibitem[Rab60]{Rab60}
-Michael~Oser Rabin.
-\newblock Degree of difficulty of computing a function and a partial ordering
-  of recursive sets.
-\newblock Technical Report 2, {Hebrew University of Jerusalem}, 1960.
+\bibitem[FK14]{FK14}
+Vitaly Feldman and Pravesh Kothari.
+\newblock Learning coverage functions and private release of marginals.
+\newblock In Maria{-}Florina Balcan, Vitaly Feldman, and Csaba
+  Szepesv{\'{a}}ri, editors, {\em Proceedings of The 27th Conference on
+  Learning Theory, {COLT} 2014, Barcelona, Spain, June 13-15, 2014}, volume~35
+  of {\em {JMLR} Workshop and Conference Proceedings}, pages 679--702.
+  JMLR.org, 2014.
+\newblock URL: \url{http://proceedings.mlr.press/v35/feldman14a.html}.
 
-\bibitem[Rab81]{Rab81}
-M.~Rabin.
-\newblock How to exchange secrets by oblivious transfer.
-\newblock Technical Report TR-81, Aiken Computation Laboratory, Harvard
-  University, 1981.
+\bibitem[FKP01]{FKP01}
+Uriel Feige, Guy Kortsarz, and David Peleg.
+\newblock The dense \emph{k}-subgraph problem.
+\newblock {\em Algorithmica}, 29(3):410--421, 2001.
+\newblock \href {https://doi.org/10.1007/s004530010050}
+  {\path{doi:10.1007/s004530010050}}.
 
-\bibitem[Reg05]{Reg05}
-O.~Regev.
-\newblock On lattices, learning with errors, random linear codes, and
-  cryptography.
-\newblock In {\em {STOC}}, pages 84--93. {ACM}, 2005.
+\bibitem[FW10]{FW10}
+Manuel Fern{\'a}ndez and Stuart Williams.
+\newblock Closed-form expression for the {P}oisson-binomial probability density
+  function.
+\newblock {\em IEEE Transactions on Aerospace and Electronic Systems},
+  46(2):803--817, 2010.
+\newblock \href {https://doi.org/10.1109/TAES.2010.5461658}
+  {\path{doi:10.1109/TAES.2010.5461658}}.
 
-\bibitem[RSS18]{RSS18}
-Ron~D. Rothblum, Adam Sealfon, and Katerina Sotiraki.
-\newblock {Towards Non-Interactive Zero-Knowledge for NP from LWE}.
-\newblock {iacr ePrint Report}, 2018.
-\newblock \url{https://eprint.iacr.org/2018/240}.
+\bibitem[Gal74]{Gallager74}
+R.G. Gallager.
+\newblock Capacity and coding for degraded broadcast channels.
+\newblock {\em Problemy Peredachi Informatsii}, 10(3):3--14, 1974.
 
-\bibitem[Sch96]{Sch96}
-Claus~Peter Schnorr.
-\newblock {Security of $2^t$-Root Identification and Signatures}.
-\newblock In {\em Crypto}, LNCS, pages 143--156. Springer, 1996.
+\bibitem[GJ79]{GJ79}
+M.~R. Garey and David~S. Johnson.
+\newblock {\em Computers and Intractability: {A} Guide to the Theory of
+  {NP}-Completeness}.
+\newblock W. H. Freeman, 1979.
 
-\bibitem[Sho99]{Sho99}
-Peter~W. Shor.
-\newblock {Polynomial-time algorithms for prime factorization and discrete
-  logarithms on a quantum computer}.
-\newblock {\em SIAM review}, 41(2):303--332, 1999.
+\bibitem[GK11]{GK11}
+Abbas~El Gamal and Young{-}Han Kim.
+\newblock {\em Network Information Theory}.
+\newblock Cambridge University Press, 2011.
+\newblock \href {https://doi.org/10.1017/CBO9781139030687}
+  {\path{doi:10.1017/CBO9781139030687}}.
 
-\bibitem[Sho06]{Sho06}
-Victor Shoup.
-\newblock {Sequences of Games: A Tool for Taming Complexity in Security
-  Proofs}.
-\newblock Tutorial. \url{http://www.shoup.net/papers/games.pdf}, January 2006.
+\bibitem[GM07]{GM07}
+Bernd G{\"{a}}rtner and Jir{\'{\i}} Matousek.
+\newblock {\em Understanding and using linear programming}.
+\newblock Universitext. Springer, 2007.
+\newblock \href {https://doi.org/10.1007/978-3-540-30717-4}
+  {\path{doi:10.1007/978-3-540-30717-4}}.
 
-\bibitem[SOK00]{SOK00}
-Ryuichi Sakai, Kiyoshi Ohgishi, and Masao Kasahara.
-\newblock {Cryptosystems Based on Pairings}.
-\newblock In {\em Symposium on Cryptography and Information Security}, pages
-  26--28, 2000.
+\bibitem[GN20]{GN20}
+Amin Gohari and Chandra Nair.
+\newblock New outer bounds for the two-receiver broadcast channel.
+\newblock In {\em {IEEE} International Symposium on Information Theory, {ISIT}
+  2020, Los Angeles, CA, USA, June 21-26, 2020}, pages 1492--1497. {IEEE},
+  2020.
+\newblock \href {https://doi.org/10.1109/ISIT44484.2020.9174003}
+  {\path{doi:10.1109/ISIT44484.2020.9174003}}.
 
-\bibitem[Ste96]{Ste96}
-Jacques Stern.
-\newblock A new paradigm for public key identification.
-\newblock 42(6):1757--1768, 1996.
+\bibitem[GP80]{GIP80}
+Sergei~Izrail'evich Gel'fand and Mark~Semenovich Pinsker.
+\newblock Capacity of a broadcast channel with one deterministic component.
+\newblock {\em Problemy Peredachi Informatsii}, 16(1):24--34, 1980.
 
-\bibitem[Tsi97]{Tsi97}
-Y.~Tsiounis.
-\newblock {\em Efficient Electronic Cash: New Notions and Techniques}.
-\newblock PhD thesis, 1997.
+\bibitem[HDW08]{HDW08}
+Min{-}Hsiu Hsieh, Igor Devetak, and Andreas~J. Winter.
+\newblock Entanglement-assisted capacity of quantum multiple-access channels.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 54(7):3078--3090, 2008.
+\newblock \href {https://doi.org/10.1109/TIT.2008.924726}
+  {\path{doi:10.1109/TIT.2008.924726}}.
 
-\bibitem[VP17]{VP17}
-Mathy Vanhoef and Frank Piessens.
-\newblock {Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2}.
-\newblock In {\em CCS}, pages 1313--1328. ACM, 2017.
+\bibitem[Hoc97]{Hochbaum96}
+Dorit~S. Hochbaum.
+\newblock Approximation algorithms for {NP}-hard problems.
+\newblock {\em {SIGACT} News}, 28(2):40--52, 1997.
+\newblock \href {https://doi.org/10.1145/261342.571216}
+  {\path{doi:10.1145/261342.571216}}.
 
-\bibitem[Yao86]{Yao86}
-Andrew Chi-Chih Yao.
-\newblock How to generate and exchange secrets.
-\newblock In {\em FOCS}, 1986.
+\bibitem[Hoe63]{Hoeffding63}
+Wassily Hoeffding.
+\newblock Probability inequalities for sums of bounded random variables.
+\newblock {\em Journal of the American Statistical Association},
+  58(301):13--30, 1963.
+\newblock \href {https://doi.org/10.1080/01621459.1963.10500830}
+  {\path{doi:10.1080/01621459.1963.10500830}}.
 
-\bibitem[ZAW{\etalchar{+}}10]{ZAW+10}
-Y.~Zhang, M.-H. Au, D.~Wong, Q.~Huang, N.~Mamoulis, D.~Cheung, and S.-M. Yiu.
-\newblock Oblivious transfer with access control: Realizing disjunction without
-  duplication.
-\newblock In {\em {Pairing}}, number 6847 in LNCS, pages 96--115, 2010.
+\bibitem[JDP83]{JP83}
+Kumar Joag-Dev and Frank Proschan.
+\newblock Negative association of random variables with applications.
+\newblock {\em The Annals of Statistics}, pages 286--295, 1983.
+\newblock \href {https://doi.org/10.1214/aos/1176346079}
+  {\path{doi:10.1214/aos/1176346079}}.
+
+\bibitem[JNV{\etalchar{+}}20]{JNWY20}
+Zhengfeng Ji, Anand Natarajan, Thomas Vidick, John Wright, and Henry Yuen.
+\newblock {MIP*=RE}.
+\newblock {\em CoRR}, abs/2001.04383, 2020.
+\newblock URL: \url{https://arxiv.org/abs/2001.04383}, \href
+  {https://arxiv.org/abs/2001.04383} {\path{arXiv:2001.04383}}.
+
+\bibitem[Jr.78]{Weldon78}
+E.~J.~Weldon Jr.
+\newblock Coding for a multiple-access channel.
+\newblock {\em Inf. Control.}, 36(3):256--274, 1978.
+\newblock \href {https://doi.org/10.1016/S0019-9958(78)90312-1}
+  {\path{doi:10.1016/S0019-9958(78)90312-1}}.
+
+\bibitem[KL78]{KL78}
+Tadao Kasami and Shu Lin.
+\newblock Bounds on the achievable rates of block coding for a memoryless
+  multiple-access channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 24(2):187--197, 1978.
+\newblock \href {https://doi.org/10.1109/TIT.1978.1055860}
+  {\path{doi:10.1109/TIT.1978.1055860}}.
+
+\bibitem[KLWY83]{KLWY83}
+Tadao Kasami, Shu Lin, Victor~K.{-}W. Wei, and Saburo Yamamura.
+\newblock Graph theoretic approaches to the code construction for the two-user
+  multiple-access binary adder channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 29(1):114--130, 1983.
+\newblock \href {https://doi.org/10.1109/TIT.1983.1056614}
+  {\path{doi:10.1109/TIT.1983.1056614}}.
+
+\bibitem[LALS20]{LALS20}
+Felix Leditzky, Mohammad~A Alhejji, Joshua Levin, and Graeme Smith.
+\newblock Playing games with multiple access channels.
+\newblock {\em Nature communications}, 11(1):1--5, 2020.
+\newblock \href {https://doi.org/10.1038/s41467-020-15240-w}
+  {\path{doi:10.1038/s41467-020-15240-w}}.
+
+\bibitem[Lia73]{Liao73}
+Henry~Herng{-}Jiunn Liao.
+\newblock Multiple access channels ({Ph.D. Thesis} abstr.).
+\newblock {\em {IEEE} Trans. Inf. Theory}, 19(2):253, 1973.
+\newblock \href {https://doi.org/10.1109/TIT.1973.1054960}
+  {\path{doi:10.1109/TIT.1973.1054960}}.
+
+\bibitem[Lin69]{Lindstrom69}
+Bernt Lindstr{\"o}m.
+\newblock Determination of two vectors from the sum.
+\newblock {\em Journal of Combinatorial Theory}, 6(4):402--407, 1969.
+\newblock \href {https://doi.org/10.1016/S0021-9800(69)80038-4}
+  {\path{doi:10.1016/S0021-9800(69)80038-4}}.
+
+\bibitem[Man20]{Manurangsi20}
+Pasin Manurangsi.
+\newblock Tight running time lower bounds for strong inapproximability of
+  maximum \emph{k}-coverage, unique set cover and related problems (via
+  \emph{t}-wise agreement testing theorem).
+\newblock In Shuchi Chawla, editor, {\em Proceedings of the 2020 {ACM-SIAM}
+  Symposium on Discrete Algorithms, {SODA} 2020, Salt Lake City, UT, USA,
+  January 5-8, 2020}, pages 62--81. {SIAM}, 2020.
+\newblock \href {https://doi.org/10.1137/1.9781611975994.5}
+  {\path{doi:10.1137/1.9781611975994.5}}.
+
+\bibitem[Mar77]{Marton77}
+Katalin Marton.
+\newblock The capacity region of deterministic broadcast channels.
+\newblock In {\em Trans. Int. Symp. Inform. Theory}, pages 243--248, 1977.
+
+\bibitem[Mar79]{Marton79}
+Katalin Marton.
+\newblock A coding theorem for the discrete memoryless broadcast channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 25(3):306--311, 1979.
+\newblock \href {https://doi.org/10.1109/TIT.1979.1056046}
+  {\path{doi:10.1109/TIT.1979.1056046}}.
+
+\bibitem[Mat12]{Matthews12}
+William Matthews.
+\newblock A linear program for the finite block length converse of
+  {Polyanskiy-Poor-Verd{\'{u}}} via nonsignaling codes.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 58(12):7036--7044, 2012.
+\newblock \href {https://doi.org/10.1109/TIT.2012.2210695}
+  {\path{doi:10.1109/TIT.2012.2210695}}.
+
+\bibitem[Mer90]{Mermin90}
+N~David Mermin.
+\newblock Simple unified form for the major no-hidden-variables theorems.
+\newblock {\em Physical review letters}, 65(27):3373, 1990.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.65.3373}
+  {\path{doi:10.1103/PhysRevLett.65.3373}}.
+
+\bibitem[M{\"{O}}05]{MO05}
+M.~Mattas and Patric R.~J. {\"{O}}sterg{\aa}rd.
+\newblock A new bound for the zero-error capacity region of the two-user binary
+  adder channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 51(9):3289--3291, 2005.
+\newblock \href {https://doi.org/10.1109/TIT.2005.853309}
+  {\path{doi:10.1109/TIT.2005.853309}}.
+
+\bibitem[Mou03]{Moulin03}
+Herv{\'{e}} Moulin.
+\newblock {\em Fair division and collective welfare}.
+\newblock {MIT} Press, 2003.
+
+\bibitem[MSV08]{MSV08}
+Vahab~S. Mirrokni, Michael Schapira, and Jan Vondr{\'{a}}k.
+\newblock Tight information-theoretic lower bounds for welfare maximization in
+  combinatorial auctions.
+\newblock In Lance Fortnow, John Riedl, and Tuomas Sandholm, editors, {\em
+  Proceedings 9th {ACM} Conference on Electronic Commerce (EC-2008), Chicago,
+  IL, USA, June 8-12, 2008}, pages 70--77. {ACM}, 2008.
+\newblock \href {https://doi.org/10.1145/1386790.1386805}
+  {\path{doi:10.1145/1386790.1386805}}.
+
+\bibitem[Mur00]{Murphey00}
+Robert~A Murphey.
+\newblock Target-based weapon target assignment problems.
+\newblock In {\em Nonlinear assignment problems}, pages 39--53. Springer, 2000.
+\newblock \href {https://doi.org/10.1007/978-1-4757-3155-2_3}
+  {\path{doi:10.1007/978-1-4757-3155-2_3}}.
+
+\bibitem[MW08]{MW08}
+Jason~R. Marden and Adam Wierman.
+\newblock Distributed welfare games with applications to sensor coverage.
+\newblock In {\em Proceedings of the 47th {IEEE} Conference on Decision and
+  Control, {CDC} 2008, December 9-11, 2008, Canc{\'{u}}n, Mexico}, pages
+  1708--1713. {IEEE}, 2008.
+\newblock \href {https://doi.org/10.1109/CDC.2008.4738800}
+  {\path{doi:10.1109/CDC.2008.4738800}}.
+
+\bibitem[ND20]{ND20}
+Janis N{\"{o}}tzel and Stephen Diadamo.
+\newblock Entanglement-enabled communication for the internet of things.
+\newblock In Mohammad~S. Obaidat, Kuei{-}Fang Hsiao, Petros Nicopolitidis, and
+  Daniel~Cascado Caballero, editors, {\em International Conference on Computer,
+  Information and Telecommunication Systems, {CITS} 2020, Hangzhou, China,
+  October 5-7, 2020}, pages 1--6. {IEEE}, 2020.
+\newblock \href {https://doi.org/10.1109/CITS49457.2020.9232550}
+  {\path{doi:10.1109/CITS49457.2020.9232550}}.
+
+\bibitem[NG07]{NG07}
+Chandra Nair and Abbas~El Gamal.
+\newblock An outer bound to the capacity region of the broadcast channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 53(1):350--355, 2007.
+\newblock \href {https://doi.org/10.1109/TIT.2006.887492}
+  {\path{doi:10.1109/TIT.2006.887492}}.
+
+\bibitem[Noe20]{Noetzel20}
+Janis Noetzel.
+\newblock Entanglement-enabled communication.
+\newblock {\em {IEEE} J. Sel. Areas Inf. Theory}, 1(2):401--415, 2020.
+\newblock \href {https://doi.org/10.1109/jsait.2020.3017121}
+  {\path{doi:10.1109/jsait.2020.3017121}}.
+
+\bibitem[NRTV07]{NRTV07}
+Noam Nisan, Tim Roughgarden, {\'{E}}va Tardos, and Vijay~V. Vazirani, editors.
+\newblock {\em Algorithmic Game Theory}.
+\newblock Cambridge University Press, 2007.
+\newblock \href {https://doi.org/10.1017/CBO9780511800481}
+  {\path{doi:10.1017/CBO9780511800481}}.
+
+\bibitem[OS15]{OS15}
+Or~Ordentlich and Ofer Shayevitz.
+\newblock A {VC}-dimension-based outer bound on the zero-error capacity of the
+  binary adder channel.
+\newblock In {\em {IEEE} International Symposium on Information Theory, {ISIT}
+  2015, Hong Kong, China, June 14-19, 2015}, pages 2366--2370. {IEEE}, 2015.
+\newblock \href {https://doi.org/10.1109/ISIT.2015.7282879}
+  {\path{doi:10.1109/ISIT.2015.7282879}}.
+
+\bibitem[PDB21]{PDB21}
+Uzi Pereg, Christian Deppe, and Holger Boche.
+\newblock Quantum broadcast channels with cooperating decoders: An
+  information-theoretic perspective on quantum repeaters.
+\newblock In {\em {IEEE} International Symposium on Information Theory, {ISIT}
+  2021, Melbourne, Australia, July 12-20, 2021}, pages 772--777. {IEEE}, 2021.
+\newblock \href {https://doi.org/10.1109/ISIT45174.2021.9518284}
+  {\path{doi:10.1109/ISIT45174.2021.9518284}}.
+
+\bibitem[PDB23]{PDB23}
+Uzi Pereg, Christian Deppe, and Holger Boche.
+\newblock The multiple-access channel with entangled transmitters.
+\newblock {\em CoRR}, abs/2303.10456, 2023.
+\newblock \href {https://arxiv.org/abs/2303.10456} {\path{arXiv:2303.10456}},
+  \href {https://doi.org/10.48550/arXiv.2303.10456}
+  {\path{doi:10.48550/arXiv.2303.10456}}.
+
+\bibitem[Per90]{Peres90}
+Asher Peres.
+\newblock Incompatible results of quantum measurements.
+\newblock {\em Physics Letters A}, 151(3-4):107--108, 1990.
+\newblock \href {https://doi.org/10.1016/0375-9601(90)90172-K}
+  {\path{doi:10.1016/0375-9601(90)90172-K}}.
+
+\bibitem[Pin78]{Pinsker78}
+Mark~Semenovich Pinsker.
+\newblock Capacity of noiseless broadcast channel.
+\newblock {\em Problemy Peredachi Informatsii}, 14(2):28--34, 1978.
+
+\bibitem[PLM{\etalchar{+}}11]{PLMK11}
+R.~Prevedel, Y.~Lu, W.~Matthews, R.~Kaltenbaek, and K.~J. Resch.
+\newblock Entanglement-enhanced classical communication over a noisy classical
+  channel.
+\newblock {\em Phys. Rev. Lett.}, 106:110505, Mar 2011.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.106.110505}
+  {\path{doi:10.1103/PhysRevLett.106.110505}}.
+
+\bibitem[PM18]{PM19}
+Dario Paccagnan and Jason~R Marden.
+\newblock Utility design for distributed resource allocation--part {II}:
+  Applications to submodular, covering, and supermodular problems.
+\newblock {\em CoRR}, abs/1807.01343, 2018.
+\newblock \href {https://arxiv.org/abs/1807.01343} {\path{arXiv:1807.01343}}.
+
+\bibitem[PPV10]{PPV10}
+Yury Polyanskiy, H.~Vincent Poor, and Sergio Verd{\'{u}}.
+\newblock Channel coding rate in the finite blocklength regime.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 56(5):2307--2359, 2010.
+\newblock \href {https://doi.org/10.1109/TIT.2010.2043769}
+  {\path{doi:10.1109/TIT.2010.2043769}}.
+
+\bibitem[QS17]{QS17}
+Yihui Quek and Peter~W. Shor.
+\newblock Quantum and superquantum enhancements to two-sender, two-receiver
+  channels.
+\newblock {\em Phys. Rev. A}, 95:052329, May 2017.
+\newblock \href {https://doi.org/10.1103/PhysRevA.95.052329}
+  {\path{doi:10.1103/PhysRevA.95.052329}}.
+
+\bibitem[Sat78]{Sato78}
+Hiroshi Sato.
+\newblock An outer bound to the capacity region of broadcast channels
+  (corresp.).
+\newblock {\em {IEEE} Trans. Inf. Theory}, 24(3):374--377, 1978.
+\newblock \href {https://doi.org/10.1109/TIT.1978.1055883}
+  {\path{doi:10.1109/TIT.1978.1055883}}.
+
+\bibitem[SFL16]{SFL16}
+Piotr Skowron, Piotr Faliszewski, and J{\'{e}}r{\^{o}}me Lang.
+\newblock Finding a collective set of items: From proportional
+  multirepresentation to group recommendation.
+\newblock {\em Artif. Intell.}, 241:191--216, 2016.
+\newblock \href {https://doi.org/10.1016/j.artint.2016.09.003}
+  {\path{doi:10.1016/j.artint.2016.09.003}}.
+
+\bibitem[Sha48]{Shannon48}
+Claude~E. Shannon.
+\newblock A mathematical theory of communication.
+\newblock {\em Bell Syst. Tech. J.}, 27(3):379--423, 1948.
+\newblock \href {https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}
+  {\path{doi:10.1002/j.1538-7305.1948.tb01338.x}}.
+
+\bibitem[SLSS22]{SLSS22}
+Akshay Seshadri, Felix Leditzky, Vikesh Siddhu, and Graeme Smith.
+\newblock On the separation of correlation-assisted sum capacities of multiple
+  access channels.
+\newblock In {\em {IEEE} International Symposium on Information Theory, {ISIT}
+  2022, Espoo, Finland, June 26 - July 1, 2022}, pages 2756--2761. {IEEE},
+  2022.
+\newblock \href {https://doi.org/10.1109/ISIT50566.2022.9834459}
+  {\path{doi:10.1109/ISIT50566.2022.9834459}}.
+
+\bibitem[SS07]{SS07}
+Moshe Shaked and J~George Shanthikumar.
+\newblock {\em Stochastic orders}.
+\newblock Springer Science \& Business Media, 2007.
+\newblock \href {https://doi.org/10.1007/978-0-387-34675-5}
+  {\path{doi:10.1007/978-0-387-34675-5}}.
+
+\bibitem[SVW17]{SVW17}
+Maxim Sviridenko, Jan Vondr{\'{a}}k, and Justin Ward.
+\newblock Optimal approximation for submodular and supermodular optimization
+  with bounded curvature.
+\newblock {\em Math. Oper. Res.}, 42(4):1197--1218, 2017.
+\newblock \href {https://doi.org/10.1287/moor.2016.0842}
+  {\path{doi:10.1287/moor.2016.0842}}.
+
+\bibitem[TT19]{TF19}
+Wenpin Tang and Fengmin Tang.
+\newblock The {P}oisson binomial distribution--old \& new.
+\newblock {\em CoRR}, abs/1908.10024, 2019.
+\newblock \href {https://arxiv.org/abs/1908.10024} {\path{arXiv:1908.10024}}.
+
+\bibitem[UL98]{UL98}
+R{\"u}diger Urbanke and Quinn Li.
+\newblock The zero-error capacity region of the 2-user synchronous {BAC} is
+  strictly smaller than its {Shannon} capacity region.
+\newblock In {\em 1998 Information Theory Workshop (Cat. No. 98EX131)},
+  page~61. IEEE, 1998.
+\newblock \href {https://doi.org/10.1109/ITW.1998.706434}
+  {\path{doi:10.1109/ITW.1998.706434}}.
+
+\bibitem[vdBvT85]{BT85}
+P.~A. B. M.~Coebergh van~den Braak and Henk C.~A. van Tilborg.
+\newblock A family of good uniquely decodable code pairs for the two-access
+  binary adder channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 31(1):3--9, 1985.
+\newblock \href {https://doi.org/10.1109/TIT.1985.1057004}
+  {\path{doi:10.1109/TIT.1985.1057004}}.
+
+\bibitem[vdM75]{Meulen75}
+Edward~C. van~der Meulen.
+\newblock Random coding theorems for the general discrete memoryless broadcast
+  channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 21(2):180--190, 1975.
+\newblock \href {https://doi.org/10.1109/TIT.1975.1055347}
+  {\path{doi:10.1109/TIT.1975.1055347}}.
+
+\bibitem[Von07]{Vondrak07}
+Jan Vondr{\'a}k.
+\newblock Submodularity in {C}ombinatorial {O}ptimization.
+\newblock {\em Univerzita Karlova, Matematicko-{F}yzik{\'a}ln{\'\i} {F}akulta},
+  2007.
+\newblock URL:
+  \url{https://dspace.cuni.cz/bitstream/handle/20.500.11956/13738/140038775.pdf}.
+
+\bibitem[Von08]{Vondrak08}
+Jan Vondr{\'{a}}k.
+\newblock Optimal approximation for the submodular welfare problem in the value
+  oracle model.
+\newblock In Cynthia Dwork, editor, {\em Proceedings of the 40th Annual {ACM}
+  Symposium on Theory of Computing, Victoria, British Columbia, Canada, May
+  17-20, 2008}, pages 67--74. {ACM}, 2008.
+\newblock \href {https://doi.org/10.1145/1374376.1374389}
+  {\path{doi:10.1145/1374376.1374389}}.
+
+\bibitem[vT78]{Tilborg78}
+Henk C.~A. van Tilborg.
+\newblock An upper bound for codes in a two-access binary erasure channel
+  {(Corresp.)}.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 24(1):112--116, 1978.
+\newblock \href {https://doi.org/10.1109/TIT.1978.1055814}
+  {\path{doi:10.1109/TIT.1978.1055814}}.
+
+\bibitem[Wil90]{Willems90}
+F.M.J. Willems.
+\newblock The maximal-error and average-error capacity region of the broadcast
+  channel are identical : A direct proof.
+\newblock {\em Problems of Control and Information Theory}, 19(4):339--347,
+  December 1990.
+\newblock URL:
+  \url{https://research.tue.nl/nl/publications/the-maximal-error-and-average-error-capacity-region-of-the-broadc}.
 
 \end{thebibliography}
