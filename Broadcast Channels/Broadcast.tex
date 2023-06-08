@@ -99,7 +99,7 @@ On the other direction, we consider the subproblem of broadcast channel coding w
 \section{Broadcast Channel Coding}
 \label{section:BCCpb}
 \subsection{Broadcast Channels}
-Formally, a broadcast channel is given by a conditional probability distribution on input $\mathcal{X}$ and two outputs $\mathcal{Y}_1$ and $\mathcal{Y}_2$, so $W := \left(W(y_1,y_2|x)\right)_{y_1 \in \mathcal{Y}_1, y_2 \in \mathcal{Y}_2, x \in \mathcal{X}}$, where $W(y_1y_2|x) \geq 0, \sum_{y_1 \in \mathcal{Y}_1, y_2 \in \mathcal{Y}_2} W(y_1y_2|x) = 1$. We define its marginals $W_1$ and $W_2$ by $W_1(y_1|x) := \sum_{y_2 \in \mathcal{Y}_2} W(y_1y_2|x)$ and $W_2(y_2|x) := \sum_{y_1 \in \mathcal{Y}_1} W(y_1y_2|x)$. We will denote such a broadcast channel by $W : \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$. The tensor product of two broadcast channels $W: \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$ and $W': \mathcal{X}' \rightarrow \mathcal{Y}'_1 \times \mathcal{Y}'_2$ is denoted by $W \otimes W' : \mathcal{X} \times \mathcal{X}' \rightarrow (\mathcal{Y}_1 \times \mathcal{Y}_1') \times (\mathcal{Y}_2 \times \mathcal{Y}_2')$ and defined by $(W \otimes W')(y_1y_1'y_2y_2'|xx') := W(y_1y_2|x) \cdot W'(y_1'y_2'|x')$. We define $W^{\otimes n}(y_1^ny_2^n|x^n) := \prod_{i=1}^nW(y_{1,i}y_{2,i}|x_i)$, for $y_1^n := y_{1,1} \ldots y_{1,n} \in \mathcal{Y}_1^n$ and $y_2^n := y_{2,1} \ldots y_{2,n} \in \mathcal{Y}_2^n$ and $x^n := x_1 \ldots x_n \in \mathcal{X}^n$. We will use the notation $[k]:=\{1,\ldots,k\}$.
+Formally, a broadcast channel is given by a conditional probability distribution on input $\mathcal{X}$ and two outputs $\mathcal{Y}_1$ and $\mathcal{Y}_2$, so $W := \left(W(y_1,y_2|x)\right)_{y_1 \in \mathcal{Y}_1, y_2 \in \mathcal{Y}_2, x \in \mathcal{X}}$, with $W(y_1y_2|x) \geq 0$ and such that $\sum_{y_1 \in \mathcal{Y}_1, y_2 \in \mathcal{Y}_2} W(y_1y_2|x) = 1$. We define its marginals $W_1$ and $W_2$ respectively by $W_1(y_1|x) := \sum_{y_2 \in \mathcal{Y}_2} W(y_1y_2|x)$ and $W_2(y_2|x) := \sum_{y_1 \in \mathcal{Y}_1} W(y_1y_2|x)$. We will denote such a broadcast channel by $W : \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$. The tensor product of two broadcast channels $W: \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$ and $W': \mathcal{X}' \rightarrow \mathcal{Y}'_1 \times \mathcal{Y}'_2$ is denoted by $W \otimes W' : \mathcal{X} \times \mathcal{X}' \rightarrow (\mathcal{Y}_1 \times \mathcal{Y}_1') \times (\mathcal{Y}_2 \times \mathcal{Y}_2')$ and defined by $(W \otimes W')(y_1y_1'y_2y_2'|xx') := W(y_1y_2|x) \cdot W'(y_1'y_2'|x')$. We define $W^{\otimes n}(y_1^ny_2^n|x^n) := \prod_{i=1}^nW(y_{1,i}y_{2,i}|x_i)$, for $y_1^n := y_{1,1} \ldots y_{1,n} \in \mathcal{Y}_1^n$ and $y_2^n := y_{2,1} \ldots y_{2,n} \in \mathcal{Y}_2^n$ and $x^n := x_1 \ldots x_n \in \mathcal{X}^n$. We will use the notation $[k]:=\{1,\ldots,k\}$.
 
 The coding problem for a broadcast channel $W : \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$ is the following: one wants to encode a couple of messages belonging to $[k_1] \times [k_2]$ into $\mathcal{X}$, which will be given as input to the channel $W$. This results in two random outputs in $\mathcal{Y}_1$ and $\mathcal{Y}_2$, which one needs to decode back into the corresponding messages in $[k_1]$ and $[k_2]$. We will call $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$ the encoder, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$ the first decoder and $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$ the second decoder. This is depicted in Figure~\ref{fig:BCcoding}.
 
@@ -174,7 +174,7 @@ One can rewrite this optimization program in a more convenient way, proving that
 \end{prop}
 
 \begin{proof}
-  It follows directly from the definitions $W_1(y_1|x) := \sum_{y_2} W(y_1y_2|x)$ and $W_2(y_2|x) := \sum_{y_1} W(y_1y_2|x)$.
+  It follows from the definitions $W_1(y_1|x) := \sum_{y_2} W(y_1y_2|x)$ and $W_2(y_2|x) := \sum_{y_1} W(y_1y_2|x)$.
 \end{proof}
 
 
@@ -261,7 +261,8 @@ Thus, when receivers are given non-signaling assistance, it means that the produ
 \begin{equation}
   \begin{aligned}
     \mathrm{S}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2) := &&\underset{e,d_1,d_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)d(i_1i_2|y_1y_2)\\
-    \Big(\text{resp. }\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2) := &&\underset{e,d_1,d_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\frac{\sum_{j_2}d(i_1j_2|y_1y_2) + \sum_{j_1}d(j_1i_2|y_1y_2)}{2}\Big)\\
+    \Big(\text{resp. }\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2) := &&\underset{e,d_1,d_2}{\maxi} &&& \frac{1}{2k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\sum_{j_2}d(i_1j_2|y_1y_2)\\
+    &&+&&& \frac{1}{2k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\sum_{j_1}d(j_1i_2|y_1y_2)\Big)\\
     &&\st &&& \sum_x e(x|i_1i_2) = 1\\
     &&&&& \sum_{j_2} d(j_1j_2|y_1y_2) = \sum_{j_1} d(j_1j_2|y_1y'_2)\\
     &&&&& \sum_{j_1} d(j_1j_2|y_1y_2) = \sum_{j_1} d(j_1j_2|y'_1y_2)\\
@@ -543,27 +544,18 @@ Let us consider an optimal solution $p_x,r_{x,y_1,y_2},r^1_{x,y_1},r^2_{x,y_2}$ 
 
 \section{Approximation of Deterministic Broadcast Channel Coding}
 \label{section:ApproxDetBC}
-In this section, we will address the question of the approximability of $\mathrm{S}(W,k_1,k_2)$, in the restricted scenario of a deterministic broadcast channel $W$.
+In this section, we will address the question of the approximability of $\mathrm{S}(W,k_1,k_2)$, in the restricted scenario of a deterministic broadcast channel $W$. Specifically, we study the problem of finding a code  $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$,  $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$ that maximizes the program computing $\mathrm{S}(W,k_1,k_2)$. Note that the restriction to deterministic codes does not affect the value of the objective of the program which is convex, and that the problem is as hard as finding any code maximizing the program computing $\mathrm{S}(W,k_1,k_2)$, as a deterministic code with a better or equal value can be retrieved easily from any code.
 
-We say that $W$ is deterministic if $\forall x,y_1,y_2, W(y_1y_2|x) \in \{0,1\}$. We can then define $(W_1(x),W_2(x))$ as the only pair $(y_1,y_2)$ such that $W(y_1y_2|x)=1$, which exists uniquely as $W$ is a conditional probability distribution. Thus we have:
+We say that $W$ is deterministic if $\forall x,y_1,y_2, W(y_1y_2|x) \in \{0,1\}$. We can then define $(W_1(x),W_2(x))$ as the only pair $(y_1,y_2)$ such that $W(y_1y_2|x)=1$, which exists uniquely as $W$ is a conditional probability distribution. Thus, the deterministic broadcast channel coding problem can be defined in the following way:
 
-\begin{equation}
-  \begin{aligned}
-    \mathrm{S}(W,k_1,k_2) = &&\underset{e,d_1,d_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{x,i_1,i_2}e(x|i_1i_2)d_1(i_1|W_1(x))d_2(i_2|W_2(x))\\
-    &&\st &&& \sum_{x \in \mathcal{X}} e(x|i_1i_2) = 1, \forall i_1 \in [k_1], i_2 \in [k_2]\\
-    &&&&& \sum_{j_1 \in [k_1]} d_1(j_1|y_1) = 1, \forall y_1 \in \mathcal{Y}_1\\
-    &&&&& \sum_{j_2 \in [k_2]} d_2(j_2|y_2) = 1, \forall y_2 \in \mathcal{Y}_2\\
-    &&&&& e(x|i_1i_2), d_1(j_1|y_2), d_2(j_2|y_2) \geq 0
-  \end{aligned}
-\end{equation}
+\begin{defi}[\textsc{DetBCC}]
+  Given a deterministic channel $W$ and integers $k_1$ and $k_2$, the deterministic broadcast channel coding problem, which we call \textsc{DetBCC}, entails maximizing
+  \[ \mathrm{S}(W,k_1,k_2,e,d_1,d_2) := \frac{1}{k_1k_2}\sum_{i_1,i_2}\mathbbm{1}_{d_1(W_1(e(i_1i_2)))=i_1}\mathbbm{1}_{d_2(W_2(e(i_1i_2)))=i_2}\]
+  over all functions $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$,  $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$.
+\end{defi}
 
-\subsection{Reformulation as a Graph Problem}
-A deterministic channel $W$, up to a permutation of elements of $\mathcal{X}$, is characterized by the following bipartite graph:
-\[ G_W:=(\mathcal{Y}_1 \sqcup \mathcal{Y}_2, E = \{(y_1,y_2) \in \mathcal{Y}_1 \times \mathcal{Y}_2: \exists x \in \mathcal{X}, y_1=W_1(x) \text{ and } y_2=W_2(x)\}) \ . \]
-
-Indeed, permuting the elements of $\mathcal{X}$ won't change $G_W$, and permuting elements of $\mathcal{Y}_1$ or $\mathcal{Y}_2$ will result in an isomorphic graph. These permutations do not change $\mathrm{S}(W,k_1,k_2)$, so we can ignore them in order to compute this quantity.
-
-As a consequence, the quantity $k_1k_2\mathrm{S}(W,k_1,k_2)$ can be seen as the solution of the following bipartite graph problem on $G_W, k_1$ and $k_2$, which we call \textsc{DensestQuotientGraph}: given a bipartite graph $G$ and integers $k_1,k_2$, maximize, over all quotient graphs of $G$ in $k_1$ parts on the left and $k_2$ parts on the right, the resulting number of edges. Formally, this gives:
+\subsection{Reformulation as a Bipartite Graph Problem}
+In this subsection, we will reformulate \textsc{DetBCC} as a bipartite graph problem. But first, let us introduce some notations:
 
 \begin{defi}[Graph notations]
   Consider a bipartite graph $G = (V_1 \sqcup V_2, E \subseteq V_1 \times V_2)$:
@@ -578,32 +570,74 @@ As a consequence, the quantity $k_1k_2\mathrm{S}(W,k_1,k_2)$ can be seen as the 
   \end{enumerate}
 \end{defi}
 
-\begin{defi}
-\[  \textsc{DensestQuotientGraph}(G,k_1,k_2) := \underset{\mathcal{P}_1 \text{ in $k_1$ parts},\mathcal{P}_2 \text{ in $k_2$ parts}}{\maxi} \ e_G(\mathcal{P}_1,\mathcal{P}_2) \ . \]
+Now, let us remark that a deterministic channel $W$, up to a permutation of elements of $\mathcal{X}$, is characterized by the following bipartite graph:
+
+\begin{defi}[Bipartite Graph $G_W$ associated to the deterministic channel $W$]
+\[ G_W:=(\mathcal{Y}_1 \sqcup \mathcal{Y}_2, E = \{(y_1,y_2) \in \mathcal{Y}_1 \times \mathcal{Y}_2: \exists x \in \mathcal{X}, y_1=W_1(x) \text{ and } y_2=W_2(x)\}) \ . \]
 \end{defi}
-Let us show the equivalence with the broadcast channel coding problem:
+
+Indeed, permuting the elements of $\mathcal{X}$ does not change $G_W$ nor $\mathrm{S}(W,k_1,k_2)$. As a consequence, up to a multiplicative factor $k_1k_2$, we will show that \textsc{DetBCC} is equivalent to the following bipartite graph problem:
+
+\begin{defi}[\textsc{DensestQuotientGraph}]
+Given a bipartite graph $G  = (V_1 \sqcup V_2, E)$ and integers $k_1,k_2$, the problem \textsc{DensestQuotientGraph} entails maximizing $e_G(\mathcal{P}_1,\mathcal{P}_2)$, the number of edges of the quotient graph of $G$ by $\mathcal{P}_1,\mathcal{P}_2$, over all partitions $\mathcal{P}_1$ of $V_1$ in $k_1$ parts and $\mathcal{P}_2$ of $V_2$ in $k_2$ parts.
+\end{defi}
 
 \begin{prop}
   \label{prop:BCCisDQG}
-  We have $k_1k_2\mathrm{S}(W,k_1,k_2) = \textsc{DensestQuotientGraph}(G_W,k_1,k_2)$.
+  Given a deterministic channel $W$ and integers $k_1,k_2$, it is equivalent to solve \textsc{DetBCC} on $W,k_1,k_2$ or \textsc{DensestQuotientGraph} on $G_W,k_1,k_2$. That is to say, given an optimal solution of one of those problems, one can efficiently construct an optimal solution of the other. Furthermore, their optimal values satisfy $k_1k_2\textsc{DetBCC}(W,k_1,k_2) = \textsc{DensestQuotientGraph}(G_W,k_1,k_2)$.
 \end{prop}
 \begin{proof}
-An optimal solution achieving $\mathrm{S}(W,k_1,k_2)$ can be obtained with extremal points as the optimization program defining $\mathrm{S}(W,k_1,k_2)$ is convex. We can thus assume that $e,d_1,d_2$ are functions. Therefore, $d_1$ defines a partition of $\mathcal{Y}_1$, $d_2$ defines a partition of $\mathcal{Y}_2$, and then $e$ denotes the choice of which edge between partition $i_1$ and $i_2$ one choose. Indeed, with $\mathcal{P}_1,\mathcal{P}_2$ corresponding partitions of $\mathcal{Y}_1,\mathcal{Y}_2$ in $k_1,k_2$ parts:
+ Consider an optimal solution $e,d_1,d_2$ of \textsc{DetBCC}. Note that $d_1$ defines a partition $\mathcal{P}_1$ of $\mathcal{Y}_1$ in $k_1$ parts and $d_2$ defines a partition $\mathcal{P}_2$ of $\mathcal{Y}_2$ in $k_2$ parts, with $\mathcal{P}_b^{i_b} := \{y_b \in \mathcal{Y}_b : d_b(y) = i_b \}$ for $b \in \{1,2\}$. Then we have:
 \begin{equation}
   \begin{aligned}
-    k_1k_2\mathrm{S}(W,k_1,k_2) = &&\underset{e,d_1,d_2}{\maxi} &&&\sum_{x,i_1,i_2} \mathbbm{1}_{x=e(i_1,i_2)}\mathbbm{1}_{i_1=d_1(W_1(x))}\mathbbm{1}_{i_2=d_2(W_2(x))}\\
-    = &&\underset{e,d_1,d_2}{\maxi} &&&\sum_{i_1,i_2} \mathbbm{1}_{i_1=d_1(W_1(e(i_1,i_2)))}\mathbbm{1}_{i_2=d_2(W_2(e(i_1,i_2)))}\\
-    = &&\underset{e,\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&&\sum_{i_1,i_2} \mathbbm{1}_{W_1(e(i_1,i_2)) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(e(i_1,i_2)) \in \mathcal{P}_2^{i_2}}\\
-    = &&\underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&&\sum_{i_1,i_2} \max_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}}\\
-    = &&\underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&&\sum_{i_1,i_2} \mathbbm{1}_{\exists (y_1,y_2) \in E^{G_W}: y_1 \in \mathcal{P}_1^{i_1}\text{ and } y_2 \in \mathcal{P}_2^{i_2}}\\
-    = &&\underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&&\sum_{i_1,i_2} \mathbbm{1}_{E^{G_W} \cap \left(\mathcal{P}_1^{i_1} \times \mathcal{P}_2^{i_2}\right) \not= \emptyset}\\
-    = &&\underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&& e_{G_W}(\mathcal{P}_1,\mathcal{P}_2) \ .\\
+    k_1k_2\mathrm{S}(W,k_1,k_2,e,d_1,d_2) &= \sum_{i_1,i_2} \mathbbm{1}_{i_1=d_1(W_1(e(i_1,i_2)))}\mathbbm{1}_{i_2=d_2(W_2(e(i_1,i_2)))}\\
+    &= \sum_{i_1,i_2} \mathbbm{1}_{W_1(e(i_1,i_2)) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(e(i_1,i_2)) \in \mathcal{P}_2^{i_2}} \ .
     \end{aligned}
 \end{equation}
+
+However, since we consider an optimal solution, we have that:
+\[ \mathbbm{1}_{W_1(e(i_1,i_2)) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(e(i_1,i_2)) \in \mathcal{P}_2^{i_2}} = \max_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}} \ , \]
+as $e(i_1,i_2)$ appears only here in the objective value. Thus:
+
+\begin{equation}
+  \begin{aligned}   
+    k_1k_2\mathrm{S}(W,k_1,k_2,e,d_1,d_2) &=  \sum_{i_1,i_2} \max_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}}\\
+    &= \sum_{i_1,i_2} \mathbbm{1}_{\exists (y_1,y_2) \in E^{G_W}: y_1 \in \mathcal{P}_1^{i_1}\text{ and } y_2 \in \mathcal{P}_2^{i_2}}\\
+    &= \sum_{i_1,i_2} \mathbbm{1}_{E^{G_W} \cap \left(\mathcal{P}_1^{i_1} \times \mathcal{P}_2^{i_2}\right) \not= \emptyset}\\
+    &=  e_{G_W}(\mathcal{P}_1,\mathcal{P}_2) \ ,\\
+    \end{aligned}
+\end{equation}
+
+which proves that given an optimal solution of \textsc{DetBCC}, one can efficiently construct a solution $\mathcal{P}_1,\mathcal{P}_2$ of \textsc{DensestQuotientGraph} such that:
+\[ e_{G_W}(\mathcal{P}_1,\mathcal{P}_2) =  k_1k_2\textsc{DetBCC}(W,k_1,k_2) \ . \]
+
+For the other direction, consider an optimal solution $\mathcal{P}_1,\mathcal{P}_2$ of \textsc{DensestQuotientGraph}. We have as before that:
+\[ e_{G_W}(\mathcal{P}_1,\mathcal{P}_2) =  \sum_{i_1,i_2} \max_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}} \ . \]
+
+Now, let us define $e(i_1,i_2) \in \text{argmax}_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}}$ and $d_b(y_b)$ the index of the part of $\mathcal{P}_b$ where $y_b$ lies, for $b \in \{1,2\}$. With those definitions, we get again that:
+
+\[ \max_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}} = \mathbbm{1}_{W_1(e(i_1,i_2)) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(e(i_1,i_2)) \in \mathcal{P}_2^{i_2}} = \mathbbm{1}_{i_1=d_1(W_1(e(i_1,i_2)))}\mathbbm{1}_{i_2=d_2(W_2(e(i_1,i_2)))} \ ,\]
+
+and thus we have:
+\begin{equation}
+  \begin{aligned}
+e_{G_W}(\mathcal{P}_1,\mathcal{P}_2) &=  \sum_{i_1,i_2} \max_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}}\\
+&= \sum_{i_1,i_2} \mathbbm{1}_{i_1=d_1(W_1(e(i_1,i_2)))}\mathbbm{1}_{i_2=d_2(W_2(e(i_1,i_2)))}\\
+&= k_1k_2\mathrm{S}(W,k_1,k_2,e,d_1,d_2) \ ,
+    \end{aligned}
+\end{equation}
+
+which proves that given an optimal solution of \textsc{DensestQuotientGraph}, one can efficiently construct a solution $e,d_1,d_2$ of \textsc{DetBCC} such that:
+\[ k_1k_2\mathrm{S}(W,k_1,k_2,e,d_1,d_2) = \textsc{DensestQuotientGraph}(G_W,k_1,k_2) \ . \]
+
+In particular, this implies that their optimal objective values satisfy $k_1k_2\textsc{DetBCC}(W,k_1,k_2) = \textsc{DensestQuotientGraph}(G_W,k_1,k_2)$. Therefore, the solutions of both problems constructed throughout the proof are in fact optimal.
 \end{proof}
 
+\begin{rk}
+  Note that all bipartite graphs can be written as $G_W$ for some deterministic broadcast channel $W$, with $W$ unique up to a permutation of $\mathcal{X}$.
+\end{rk}
 \subsection{Approximation Algorithm for \textsc{DensestQuotientGraph}}
-In this section, we will sort out how hard is \textsc{DensestQuotientGraph}, and thanks to Proposition~\ref{prop:BCCisDQG}, how hard is it to solve the broadcast channel coding problem for deterministic channels.
+In this section, we will sort out how hard is \textsc{DensestQuotientGraph}, and thanks to Proposition~\ref{prop:BCCisDQG}, how hard is it to solve \textsc{DetBCC}.
 
 \begin{theo}
   \label{theo:DQGapprox}
@@ -612,10 +646,10 @@ In this section, we will sort out how hard is \textsc{DensestQuotientGraph}, and
 
 \begin{cor}
   \label{theo:DetBCCapprox}
-  There exists a polynomial-time $(1-e^{-1})^2$-approximation algorithm for the deterministic broadcast channel coding problem.
+  There exists a polynomial-time $(1-e^{-1})^2$-approximation algorithm for \textsc{DetBCC}.
 \end{cor}
 
-The approximation algorithm is a two-step process. First, we consider the problem of maximizing $\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)$ over all partitions $\mathcal{P}_2$ of $V_2$ in $k_2$ parts. We will show that this is a special case of the submodular welfare problem, which can be approximated within a factor $1-e^{-1}$~\cite{Vondrak08}. We then choose the partition $\mathcal{P}_1$ on $V_1$ in $k_1$ parts uniformly at random. This partition couple will give an objective value $e(\mathcal{P}_1,\mathcal{P}_2)$ within a $(1-e^{-1})^2$ factor from the optimal solution in expectation.
+The approximation algorithm is a two-step process. First, we consider the problem of maximizing $\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)$ over all partitions $\mathcal{P}_2$ of $V_2$ in $k_2$ parts. We will show that this is a special case of the submodular welfare problem, which can be approximated within a factor $1-e^{-1}$ in polynomial time~\cite{Vondrak08}. We then choose the partition $\mathcal{P}_1$ on $V_1$ in $k_1$ parts uniformly at random. This partition couple will give an objective value $e(\mathcal{P}_1,\mathcal{P}_2)$ within a $(1-e^{-1})^2$ factor from the optimal solution in expectation.
 
 \begin{proof}[Proof of Theorem~\ref{theo:DQGapprox}]
   Consider first the hardness result. Let us show that the decision version of \textsc{DensestQuotientGraph} is \textrm{NP}-complete. It is in \textrm{NP}, the certificate being the two partitions and the selection of edges between those partitions. It is \textrm{NP}-hard as one of its particular cases is the \textsc{SetSplitting} problem (see for instance~\cite{GJ79}), in the case where $k_1=2$ and $k_2=|V_2|$, by interpreting the neighbors of $v_2 \in V_2$ as a set covering elements of $V_1$.
@@ -649,8 +683,10 @@ However, the function $f : x \mapsto 1-\left(1-\frac{1}{k_1}\right)^x$ is nondec
 and thus:
 \begin{equation}
   \begin{aligned}
-    \mathbb{E}_{\mathcal{P}_1}[e(\mathcal{P}_1,V_2)] &\geq k_1\sum_{v_2 \in V_2}\left(1-\left(1-\frac{1}{k_1}\right)^{\min(k_1,\deg(v_2))}\right) \geq k_1\frac{\sum_{v_2 \in V_2}\min(k_1,\deg(v_2))}{k_1}\left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\\
-    &\geq \left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right) \geq (1-e^{-1})\max_{\mathcal{P}_1}e(\mathcal{P}_1,V_2) \ ,
+    \mathbb{E}_{\mathcal{P}_1}[e(\mathcal{P}_1,V_2)] &\geq k_1\sum_{v_2 \in V_2}\left(1-\left(1-\frac{1}{k_1}\right)^{\min(k_1,\deg(v_2))}\right)\\
+    &\geq k_1\frac{\sum_{v_2 \in V_2}\min(k_1,\deg(v_2))}{k_1}\left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\\
+    &\geq \left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right)\\
+    &\geq (1-e^{-1})\max_{\mathcal{P}_1}e(\mathcal{P}_1,V_2) \ ,
   \end{aligned}
 \end{equation}
 
@@ -855,69 +891,44 @@ The goal of this section is to show that the general broadcast channel coding pr
 
 Formally, one would want to show that it is \textrm{NP}-hard to approximate this problem within a $\Omega(1)$ factor in polynomial time. As a first step towards this goal, we will prove a $\Omega\left(\frac{1}{\sqrt{m}}\right)$-approximation hardness in the value query model.
 
+First, let us introduce formally the problem:
+\begin{defi}[\textsc{BCC}]
+  Given a channel $W$ and integers $k_1$ and $k_2$, the broadcast channel coding problem, which we call \textsc{BCC}, entails maximizing
+  \[ \mathrm{S}(W,k_1,k_2,e,d_1,d_2) := \frac{1}{k_1k_2}\sum_{y_1,y_2,i_1,i_2} W(y_1y_2|e(i_1,i_2))\mathbbm{1}_{d_1(y_1)=i_1, d_2(y_2)=i_2}\]
+  over all functions $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$,  $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$.
+\end{defi}
+
+As in the deterministic case, we restrict ourselves to deterministic encoders and decoders, which does not change the value nor the hardness of the problem. Also, it can be equivalently stated in terms of partitions corresponding to $d_1,d_2$ as:
+\begin{prop}[Equivalent formulation of \textsc{BCC}]
+  Given a channel $W$ and integers $k_1$ and $k_2$, the broadcast channel coding problem, which we call \textsc{BCC}, entails maximizing:
+  \[ \frac{1}{k_1k_2}\sum_{i_1,i_2} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}, y_2 \in \mathcal{P}_1^{i_2}} W(y_1y_2|x) \ , \]
+  over all partitions $\mathcal{P}_1$ of $\mathcal{Y}_1$ in $k_1$ parts and $\mathcal{P}_2$ of $\mathcal{Y}_2$ in $k_2$ parts.
+\end{prop}
+
+
 \subsection{Social Welfare Reformulation}
 The social welfare maximization problem is defined as follows: given a set $M$ of $m$ items as well as $k$ bidders with their associated utilities $\left(v_i : 2^M \rightarrow \mathbb{R}_+\right)_{i \in [k]}$, the goal is to partition $M$ between the bidders to maximize the sum of their utilities. Formally, we want to compute:
  \[ \underset{\mathcal{P} \text{ partition in $k$ parts of } M}{\maxi}\sum_{i=1}^k v_i\left(\mathcal{P}^i\right) \ . \]
 
-Let us show that computing $\mathrm{S}(W,k_1,|\mathcal{Y}_2|)$ can be reformulated as a particular instance of the social welfare maximization problem. First, we can write:
+ Let us show that the subproblem of \textsc{BCC} restricted to $k_2=|\mathcal{Y}_2|$ can be reformulated as a particular instance of the social welfare maximization problem. In that case, it is easy to see that $\mathcal{P}_2 = (\{y_2\})_{y_2 \in \mathcal{Y}_2}$ is always an optimal solution. Indeed, for any partition $\mathcal{P}_2$, we have:
 
 \begin{equation}
   \begin{aligned}
-    \mathrm{S}(W,k_1,k_2) = && \underset{e,d_1,d_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{y_1,y_2,i_1,i_2} W(y_1y_2|e(i_1,i_2))\mathbbm{1}_{d_1(y_1)=i_1, d_2(y_2)=i_2} \ ,
+    \frac{1}{k_1|\mathcal{Y}_2|}\sum_{i_1,i_2}  \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}, y_2 \in \mathcal{P}_2^{i_2}} W(y_1y_2|x) &\leq \frac{1}{k_1|\mathcal{Y}_2|}\sum_{i_1,i_2}  \sum_{y_2 \in \mathcal{P}_2^{i_2}} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}} W(y_1y_2|x) \\
+    &= \frac{1}{k_1|\mathcal{Y}_2|}\sum_{i_1}  \sum_{y_2 \in \mathcal{Y}_2} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}} W(y_1y_2|x) \ .
   \end{aligned}
 \end{equation}
 
-with $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$,  $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$. Indeed, this comes from the fact that a linear program is maximized on its extremal points. Then:
-
-\begin{equation}
-  \begin{aligned}
-    \mathrm{S}(W,k_1,k_2) = && \underset{e,d_1,d_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{i_1,i_2} \sum_{y_1 \in d_1^{-1}(i_1), y_2 \in d_2^{-1}(i_2)} W(y_1y_2|e(i_1,i_2)) \\
-    = && \underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{i_1,i_2} \max_{e(i_1,i_2)} \sum_{y_1 \in \mathcal{P}_1^{i_1}, y_2 \in \mathcal{P}_1^{i_2}} W(y_1y_2|e(i_1,i_2)) \\
-    &&&&&\text{with $\mathcal{P}_1,\mathcal{P}_2$ partitions of $\mathcal{Y}_1, \mathcal{Y}_2$ respectively} \\
-    = && \underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{i_1,i_2} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}, y_2 \in \mathcal{P}_1^{i_2}} W(y_1y_2|x) \ .
-  \end{aligned}
-\end{equation}
-
-Thus, in all, we have that:
-
-\begin{equation}
-  \begin{aligned}
-    \mathrm{S}(W,k_1,k_2) = && \underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} &&& \frac{1}{k_1k_2}\sum_{i_1,i_2} f_W(\mathcal{P}_1^{i_1}, \mathcal{P}_1^{i_2}) \text{ with } f_W(S_1,S_2) := \max_x \sum_{y_1 \in S_1, y_2 \in S_2} W(y_1y_2|x) \ .
-  \end{aligned}
-\end{equation}
-
-We will now focus on the particular case of $k_2=|\mathcal{Y}_2|$. In that case, it is easy to see that $\mathcal{P}_2 = (\{y_2\})_{y_2 \in \mathcal{Y}_2}$ is always an optimal solution. Indeed, for any partition $\mathcal{P}_2$, we have:
-
-\begin{equation}
-  \begin{aligned}
-    \frac{1}{k_1k_2}\sum_{i_1,i_2}  \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}, y_2 \in \mathcal{P}_2^{i_2}} W(y_1y_2|x) &\leq \frac{1}{k_1k_2}\sum_{i_1,i_2}  \sum_{y_2 \in \mathcal{P}_2^{i_2}} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}} W(y_1y_2|x) \\
-    &= \frac{1}{k_1k_2}\sum_{i_1}  \sum_{y_2 \in \mathcal{Y}_2} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}} W(y_1y_2|x) \ .
-  \end{aligned}
-\end{equation}
-
-We can now rewrite our program in the following way:
-
-\begin{equation}
-  \begin{aligned}
-    \mathrm{S}^1(W,k_1) := k_1k_2\mathrm{S}(W,k_1,|\mathcal{Y}_2|) = && \underset{\mathcal{P}_1}{\maxi} &&& \sum_{i_1} \sum_{y_2} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}} W(y_1y_2|x) \ .
-  \end{aligned}
-\end{equation}
-
-Finally, we can rewrite this as:
-
-\begin{equation}
-  \begin{aligned}
-    \mathrm{S}^1(W,k_1) = && \underset{\mathcal{P}_1}{\maxi} &&& \sum_{i_1} f_W^1(\mathcal{P}_1^{i_1}) \text{ with } f_W^1(S_1) := \sum_{y_2} \max_x \sum_{y_1 \in S_1} W(y_1y_2|x)
-  \end{aligned}
-\end{equation}
+Therefore, the objective function becomes:
+\[ \mathrm{S}^1(W,k_1,\mathcal{P}_1) := \frac{1}{k_1}\sum_{i_1=1}^{k_1} f_W^1(\mathcal{P}_1^{i_1}) \text{ with } f_W^1(S_1) := \frac{1}{|\mathcal{Y}_2|}\sum_{y_2} \max_x \sum_{y_1 \in S_1} W(y_1y_2|x)\ .\]
 
 
-Hence, computing $\mathrm{S}^1(W,k_1)$ is a particular case of the social welfare maximization problem with a common utility $f_W^1$ for all $k_1$ bidders.
+Hence, up to a multiplicative factor $k_1$, maximizing $\mathrm{S}^1(W,k_1,\mathcal{P}_1)$ over all partitions $\mathcal{P}_1$ of size $k_1$ is a particular case of the social welfare maximization problem with a common utility $f_W^1$ for all $k_1$ bidders.
 
 \subsection{Value Query Hardness}
 Let us first introduce the value query model. As described in~\cite{DS06,MSV08}, a value query to a utility $v$ asks for the value of some input set $S \subseteq M$, and gets as response $v(S) \in \mathbb{R}_+$. In the value query model, we aim at solving the social welfare maximization problem accessing the data only through value queries to $(v_i)_{i \in [k]}$.
 
-This is more restricted than using any algorithm, but in such a model, it is possible to show unconditional lower bounds on the number of queries needed to solve a given problem within an approximation rate. In the case of the social welfare maximization problem with \textrm{XOS} utility functions, the approximation rate achievable in polynomial time has been proved in~\cite{DS06,MSV08} to be of the order of $\Theta\left(\frac{1}{\sqrt{m}}\right)$. Specifically, in~\cite{DS06}, a $\Omega\left(\frac{1}{m^{\frac{1}{2}}}\right)$-approximation in polynomial time was given, and in~\cite{MSV08}, it has been shown that any $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation for $\varepsilon > 0$ requires an exponential number of value queries. We will adapt their proof in the particular case of one common \textrm{XOS} utility function of the form $f_W^1(S_1) := \sum_{y_2} \max_x \sum_{y_1 \in S_1} W(y_1y_2|x)$ for some broadcast channel $W$. But first, let us introduce the definition of \textrm{XOS} functions and prove that $f_W^1$ is one of those.
+This is more restricted than using any algorithm, but in such a model, it is possible to show unconditional lower bounds on the number of queries needed to solve a given problem within an approximation rate. In the case of the social welfare maximization problem with \textrm{XOS} utility functions, the approximation rate achievable in polynomial time has been proved in~\cite{DS06,MSV08} to be of the order of $\Theta\left(\frac{1}{\sqrt{m}}\right)$. Specifically, in~\cite{DS06}, a $\Omega\left(\frac{1}{m^{\frac{1}{2}}}\right)$-approximation in polynomial time was given, and in~\cite{MSV08}, it has been shown that any $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation for $\varepsilon > 0$ requires an exponential number of value queries. We will adapt their proof in the particular case of one common \textrm{XOS} utility function of the form $f_W^1$ for some broadcast channel $W$. But first, let us introduce the definition of \textrm{XOS} functions and prove that $f_W^1$ is one of those.
 
 \begin{defi}
   A linear valuation function (also known as additive) is a set function $a : 2^M \rightarrow \mathbb{R}_+$ that assigns a non-negative value to every singleton $\{ j\}$ for $j \in M$, and for all $S \subseteq M$ it holds that $a(S) = \sum_{j \in S} a(\{ j\})$.
@@ -935,9 +946,9 @@ This is more restricted than using any algorithm, but in such a model, it is pos
 \begin{proof}
   \begin{equation}
     \begin{aligned}
-      &&f_W^1(S) &= \sum_{y_2} \max_x \sum_{y_1 \in S_1} W(y_1y_2|x) = \max_{\lambda : \mathcal{Y}_2 \rightarrow \mathcal{X}} a_{\lambda}(S) \text{ , where}\\
-      &&a_{\lambda}(S) &= \sum_{y_2}  \sum_{y_1 \in S} W(y_1y_2|\lambda(y_2)) = \sum_{y_1 \in S} \left[\sum_{y_2}  W(y_1y_2|m(y_2))\right]\\
-      &&&= \sum_{y_1 \in S} a_{\lambda}(\{ y_1 \})) \text{ with } a_{\lambda}(\{ y_1 \})) = \sum_{y_2}  W(y_1y_2|\lambda(y_2)) \in \mathbb{R}_+
+      &&f_W^1(S) &= \frac{1}{|\mathcal{Y}_2|}\sum_{y_2} \max_x \sum_{y_1 \in S_1} W(y_1y_2|x) = \max_{\lambda : \mathcal{Y}_2 \rightarrow \mathcal{X}} a_{\lambda}(S) \text{ , where}\\
+      &&a_{\lambda}(S) &= \frac{1}{|\mathcal{Y}_2|}\sum_{y_2}  \sum_{y_1 \in S} W(y_1y_2|\lambda(y_2)) = \sum_{y_1 \in S} \left[\frac{1}{|\mathcal{Y}_2|}\sum_{y_2}  W(y_1y_2|m(y_2))\right]\\
+      &&&= \sum_{y_1 \in S} a_{\lambda}(\{ y_1 \})) \text{ with } a_{\lambda}(\{ y_1 \})) = \frac{1}{|\mathcal{Y}_2|}\sum_{y_2}  W(y_1y_2|\lambda(y_2)) \in \mathbb{R}_+
       \end{aligned}
   \end{equation}
 
@@ -960,7 +971,7 @@ In order to prove our hardness result, we will need the following version of the
 Let us now state the value query hardness of approximation of the broadcast channel problem:
 \begin{theo}
   \label{theo:VQhardnessBC}
-  In the value query model, for any fixed $\varepsilon > 0$, a $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm computing $\mathrm{S}^1(W,k_1)=k_1k_2\mathrm{S}(W,k_1,|\mathcal{Y}_2|)$, with $m = |\mathcal{Y}_1| = k_1^2$ and $W$ a broadcast channel, requires exponentially many value queries to $f_W^1$.
+  In the value query model, for any fixed $\varepsilon > 0$, a $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm of the broadcast channel coding problem on $W,k_1,k_2$, restricted to the case of $|\mathcal{Y}_2| = k_2$ and $m = |\mathcal{Y}_1| = k_1^2$, requires exponentially many value queries to $f_W^1$.
 \end{theo}
 
 \begin{rk}
@@ -997,9 +1008,9 @@ Let us now state the value query hardness of approximation of the broadcast chan
 
   \begin{equation}
     \begin{aligned}
-      f_W^1(S) &= \sum_{y_2} \max_x \sum_{y_1 \in S} W(y_1y_2|x) = \sum_{y_2} \max_x \sum_{y_1 \in S} W(y_11|t_{y_2-1}(x))\\
-      &= (m+k_1+1)\max_x \sum_{y_1 \in S} W(y_11|x) \text{ since $t_{y_2-1}$ bijection}\\
-      &= C(m+k_1+1) \times \max\begin{cases}
+      f_W^1(S) &= \frac{1}{|\mathcal{Y}_2|}\sum_{y_2} \max_x \sum_{y_1 \in S} W(y_1y_2|x) = \sum_{y_2} \max_x \sum_{y_1 \in S} W(y_11|t_{y_2-1}(x))\\
+      &= \frac{m+k_1+1}{|\mathcal{Y}_2|}\max_x \sum_{y_1 \in S} W(y_11|x) \text{ since $t_{y_2-1}$ bijection}\\
+      &= \frac{C(m+k_1+1)}{|\mathcal{Y}_2|} \times \max\begin{cases}
       m^{2\delta}|\{i\} \cap S| & \text{for } 1 \leq i \leq m\\
       \frac{1}{m^{\frac{1}{2}-\delta}}|S|\\
       |T_j \cap S| & \text{for } 1 \leq j \leq k_1\\
@@ -1010,21 +1021,21 @@ Let us now state the value query hardness of approximation of the broadcast chan
   Let us also consider an alternate broadcast channel $W'$, with the only difference that $\mathbbm{1}_{y_1 \in T_j}$ is replaced by $\frac{1}{m^{\frac{1}{2}}}$, for $j \in [k_1]$. For that channel, the constant $C$ remains the same (since $\sum_j\sum_{y_1}\mathbbm{1}_{y_1 \in T_j} = k_1 \times k_1 = k_1 \times m \times \frac{1}{k_1} = \sum_j\sum_{y_1}\frac{1}{m^{\frac{1}{2}}}$), so we get that:
   \begin{equation}
     \begin{aligned}
-      f_{W'}^1(S) &= C(m+k_1+1) \times \max\begin{cases}
+      f_{W'}^1(S) &= \frac{C(m+k_1+1)}{|\mathcal{Y}_2|} \times \max\begin{cases}
       m^{2\delta}|\{i\} \cap S| & \text{for } 1 \leq i \leq m\\
       \frac{1}{m^{\frac{1}{2}-\delta}}|S|\\
       \frac{1}{m^{\frac{1}{2}}}|S| & \text{for } 1 \leq j \leq k_1\\
       \end{cases}\\
-      &= C(m+k_1+1) \times \max\begin{cases}
+      &= \frac{C(m+k_1+1)}{|\mathcal{Y}_2|} \times \max\begin{cases}
       m^{2\delta}|\{i\} \cap S| & \text{for } 1 \leq i \leq m\\
       \frac{1}{m^{\frac{1}{2}-\delta}}|S|\\
       \end{cases}
     \end{aligned}
   \end{equation}
 
-  since $\frac{1}{m^{\frac{1}{2}}}|S| \leq \frac{1}{m^{\frac{1}{2}-\delta}}|S|$. We will prove that it takes an exponential number of value queries to distinguish between $f_W^1$ and $f_{W'}^1$. On the one hand, one can easily show that the maximum value of $\frac{\mathrm{S}^1(W',k_1)}{C(m+k_1+1)}$ is $(k_1-1)m^{2\delta}+\frac{1}{m^{\frac{1}{2}-\delta}}(m-(k_1-1)) = O(m^{\frac{1}{2}+2\delta})$, obtained taking $(k_1-1)$ singletons as the first components of the partition (the bidders), giving the rest of $\mathcal{Y}_1$ (the items) to the last. On the other hand, the maximum value of $\frac{\mathrm{S}^1(W,k_1)}{C(m+k_1+1)}$ is $k_1 \times k_1 = m$, obtained with the partition $T_1, \ldots, T_{k_1}$. The fact that it requires an exponential number of value queries to distinguish between the two situations will imply that one cannot get an approximation rate better than $\Omega\left(\frac{1}{m^{\frac{1}{2}-2\delta}}\right)$ in less than an exponential number of value queries.
+  since $\frac{1}{m^{\frac{1}{2}}}|S| \leq \frac{1}{m^{\frac{1}{2}-\delta}}|S|$. Let us consider normalized versions $v(S) := \frac{|\mathcal{Y}_2|}{C(m+k_1+1}f_W^1(S)$ and $v'(S) := \frac{|\mathcal{Y}_2|}{C(m+k_1+1}f_{W'}^1(S)$, so distinguishing between $v$ and $v'$ is the same as distinguishing between $f_W^1$ and $f_{W'}^1$. We will prove that it takes an exponential number of value queries to distinguish between $v$ and $v'$. On the one hand, one can easily show that the maximum value of the social welfare problem with $v'$ is $(k_1-1)m^{2\delta}+\frac{1}{m^{\frac{1}{2}-\delta}}(m-(k_1-1)) = O(m^{\frac{1}{2}+2\delta})$, obtained taking $(k_1-1)$ singletons as the first components of the partition (the bidders), giving the rest of $\mathcal{Y}_1$ (the items) to the last. On the other hand, the maximum value of the social welfare problem with $v$ is $k_1 \times k_1 = m$, obtained with the partition $T_1, \ldots, T_{k_1}$. The fact that it requires an exponential number of value queries to distinguish between the two situations will imply that one cannot get an approximation rate better than $\Omega\left(\frac{1}{m^{\frac{1}{2}-2\delta}}\right)$ in less than an exponential number of value queries.
 
-  We will now prove that distinguishing between $f_W^1$ and $f_{W'}^1$ requires an exponential number of value queries. We define $v(S) := \frac{f_W^1(S)}{C(m+k_1+1)}$ and $v'(S) := \frac{f_{W'}^1(S)}{C(m+k_1+1)}$, so distinguishing between $v$ and $v'$ is the same as distinguishing between $f_W^1$ and $f_{W'}^1$. We have always $v(\emptyset) = v'(\emptyset) = 0$, so we do not need to consider empty sets.
+  We will now prove that distinguishing between $v$ and $v'$ requires an exponential number of value queries. Note first that $v(\emptyset) = v'(\emptyset) = 0$, so we do not need to consider empty sets.
 
   Let us fix some non-empty set $S \subseteq [m]$. Let us define the random boolean variables $X_j^i := \mathbbm{1}_{i \in T_j}$ for $j \in [k_1]$ and $i \in [m]$. By construction of the random equi-partition $T_1, \ldots, T_{k_1}$, $(X_j^i)_{i \in [m]}$ is a permutation distribution (see Definition 2.10 of~\cite{JP83}) of $(0,\ldots,0,1,\ldots,1)$ with $m-k_1$ zeros and $k_1$ ones, each $X_j^i$ following a Bernouilli law of parameter $p := \frac{1}{k_1}$. Thus it is negatively associated (by Theorem 2.11 of~\cite{JP83}), and the sub-family $(X_j^i)_{i \in S}$ is negatively associated as well. Note in particular that $|T_j \cap S| = \sum_{i \in S} X_j^i$ is a sum of negatively associated Bernouilli variables of the same parameter $p$, so Chernoff-Hoeffding bound as depicted in Proposition~\ref{prop:chernoff} holds.
   
@@ -1105,7 +1116,7 @@ In this work, we have studied several algorithmic aspects and non-signaling assi
 Our results suggest that non-signaling assistance could improve the capacity region of general broadcast channels, which is left as a major open question. An intermediate result would be to show that it is \textrm{NP}-hard to approximate the broadcast channel coding problem within any constant, strengthening our hardness result without relying on the value query model. Finally, one could also try to develop approximations algorithms for other sub-classes of broadcast channels, such as semi-deterministic or degraded ones. This could be a crucial step towards showing that the capacity region for those classes is the same with or without non-signaling assistance.
 
 \section*{Acknowledgements}
-We would like to thank Stéphan Thomassé and Siddharth Barman for discussions respectively on graph algorithms and social welfare problems.
+We would like to thank Stéphan Thomassé and Siddharth Barman for discussions on graph algorithms and social welfare problems respectively.
   
 %%%   BIBLIOGRAPHY   %%%
 \bibliographystyle{unsrturl}
