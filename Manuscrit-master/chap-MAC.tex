@@ -46,7 +46,7 @@ The coding problem for a MAC $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow
 \caption{Coding for a MAC $W$.}
 \end{figure}
 
-We want to maximize over all encoders $e_1,e_2$ and decoders $d$ the probability of successfully encoding and decoding the messages through $W$, ie. the probability that $j_1 = i_1$ and  $j_2 = i_2$, given that the input messages are taken uniformly in $[k_1]$ and $[k_2]$. We call this quantity $\mathrm{S}(W,k_1,k_2)$, which is characterized by the following optimization program:
+We want to maximize over all encoders $e_1,e_2$ and decoders $d$ the probability of successfully encoding and decoding the messages through $W$, i.e. the probability that $j_1 = i_1$ and  $j_2 = i_2$, given that the input messages are taken uniformly in $[k_1]$ and $[k_2]$. We call this quantity $\mathrm{S}(W,k_1,k_2)$, which is characterized by the following optimization program:
 
 \begin{equation}
 \label{eq:def-succ-prob-mac}
@@ -65,8 +65,8 @@ One should note that we allow randomized encoders and decoders for generality re
 \begin{equation*}
   \begin{aligned}
     &\mathbb{P}\left(J_1 = I_1, J_2 = I_2\right) = \frac{1}{k_1k_2}\sum_{i_1,i_2} \mathbb{P}\left(J_1 = I_1, J_2 = I_2|I_1=i_1,I_2=i_2\right)\\
-    &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2}e_1(x_1|i_1)e_2(x_2|i_2) \mathbb{P}\left(J_1 = i_1, J_2 = i_2|I_1=i_1,I_2=i_2,X_1=x_1,X_2=x_2\right)\\
-    &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y}W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2) \mathbb{P}\left(J_1 = i_1,J_2=i_2|I_1=i_1,I_2=i_2,X_1=x_1,X_2=x_2,Y=y\right)\\
+    &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2}e_1(x_1|i_1)e_2(x_2|i_2) \mathbb{P}\left(J_1 = i_1, J_2 = i_2|i_1,i_2,X_1=x_1,X_2=x_2\right)\\
+    &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y}W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\mathbb{P}\left(J_1 = i_1,J_2=i_2|i_1,i_2,x_1,x_2,Y=y\right)\\
     &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y}W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)d(i_1,i_2|y) \ .\\
   \end{aligned}
 \end{equation*}
@@ -75,27 +75,27 @@ One should note that we allow randomized encoders and decoders for generality re
 Since MACs are more general than point-to-point channels (by defining $W(y|x_1x_2):=\hat{W}(y|x_1)$ for $\hat{W}$ a point-to-point channel and looking only at its first input), computing $\mathrm{S}(W,k_1,k_2)$ is \textrm{NP}-hard, and it is even \textrm{NP}-hard to approximate $\mathrm{S}(W,k_1,k_2)$ within a better ratio than $\left(1-e^{-1}\right)$, as a consequence of the hardness result on $\mathrm{S}(W,k)$ shown in~\cite{BF18}.
 
 The (classical) capacity of a MAC, as defined for example in~\cite{CT01}, can be reformulated in the following way:
-\begin{defi}[Capacity Region $\mathcal{C}(W)$ of a MAC $W$]
+\begin{definition}[Capacity Region $\mathcal{C}(W)$ of a MAC $W$]
   A rate pair $(R_1,R_2)$ is achievable if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   We define the (classical) capacity region $\mathcal{C}(W)$ as the closure of the set of all achievable rate pairs.
-\end{defi}
+\end{definition}
 
 The capacity region $\mathcal{C}(W)$ is characterized by a single-letter formula:
 
-\begin{theo}[Liao~\cite{Liao73} and Ahlswede~\cite{Ahlswede73}]
+\begin{theorem}[Liao~\cite{Liao73} and Ahlswede~\cite{Ahlswede73}]
   \label{theo:capacity}
   $\mathcal{C}(W)$ is the closure of the convex hull of all rate pairs $(R_1,R_2)$ satisfying:
   \[ R_1 < I(X_1:Y|X_2)\ ,\ R_2 < I(X_2:Y|X_1)\ ,\ R_1+R_2 < I((X_1,X_2):Y) \ ,\]
   for $(X_1,X_2) \in \mathcal{X}_1 \times \mathcal{X}_2$ following a product law $P_{X_1} \times P_{X_2}$, and $Y \in \mathcal{Y}$ the outcome of $W$ on inputs $X_1,X_2$.
-\end{theo}
+\end{theorem}
 
 For the zero-error (classical) capacity, this leads to the following definition:
-\begin{defi}[Zero-Error Capacity Region $\mathcal{C}_0(W)$ of a MAC $W$]
+\begin{definition}[Zero-Error Capacity Region $\mathcal{C}_0(W)$ of a MAC $W$]
   A rate pair $(R_1,R_2)$ is achievable with zero-error if:
   \[ \exists n_0  \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   We define the zero-error (classical) capacity region $\mathcal{C}_0(W)$ as the closure of the set of all achievable rate pairs with zero-error.
-\end{defi}
+\end{definition}
 
 We will also consider what we call the sum success probability $\mathrm{S}_{\text{sum}}(W,k_1,k_2)$, defined using $\frac{\mathbb{P}\left(J_1=I_1\right)+\mathbb{P}\left(J_2=I_2\right)}{2}$ rather than $\mathbb{P}\left(J_1=I_1,J_2=I_2\right)$ as an objective value, which leads to the following optimization program:
 \begin{equation}
@@ -114,36 +114,37 @@ Note that we used independent decoders $d_1(j_1|y),d_2(j_2|y)$ rather than a glo
 
 As for the usual (joint) success probability, we can define its capacity region:
 
-\begin{defi}[Sum-Capacity Region $\mathcal{C}_{\text{sum}}(W)$ of a MAC $W$]
+\begin{definition}[Sum-Capacity Region $\mathcal{C}_{\text{sum}}(W)$ of a MAC $W$]
   A rate pair $(R_1,R_2)$ is sum-achievable if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   We define the sum-capacity region $\mathcal{C}_{\text{sum}}(W)$ as the closure of the set of all sum-achievable rate pairs.
-\end{defi}
+\end{definition}
 
 However, it turns out those two notions of success define the same capacity region:
-\begin{prop}
+\begin{proposition}
   \label{prop:CapaSumJoint}
   $\mathcal{C}(W) = \mathcal{C}_{\text{sum}}(W)$
-\end{prop}
+\end{proposition}
 \begin{proof}
   Let us focus on error probabilities rather than success ones. Call them respectively $\mathrm{E}(W,k_1,k_2) := 1-\mathrm{S}(W,k_1,k_2)$ and $\mathrm{E}_{\text{sum}}(W,k_1,k_2) := 1-\mathrm{S}_{\text{sum}}(W,k_1,k_2)$. Let us fix a solution $e_1,d_1,e_2,d_2$ of the optimization program computing $\mathrm{S}(W,k_1,k_2)$. Let us remark first that:
 
   \[ \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2) = k_1k_2\ , \]
 
-  thus, the value of the maximum error for those encoders and decoders is:
+  thus, the value of the maximum error for those encoders and decoders, which we call $\mathrm{E}(W,k_1,k_2,e_1,d_1,e_2,d_2)$, is:
 
 \begin{equation}
   \begin{aligned}
-    &\mathrm{E}(W,k_1,k_2,e_1,d_1,e_2,d_2) := 1 -  \frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)d_1(i_1|y)d_2(i_2|y)\right)\\
-    &=\frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)-\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)d_1(i_1|y)d_2(i_2|y)\right)\\
+    & 1 -  \frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)d_1(i_1|y)d_2(i_2|y)\right)\\
+    &=\frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\\
+    &-\frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)d_1(i_1|y)d_2(i_2|y)\\
     &=\frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\left[1-d_1(i_1|y)d_2(i_2|y)\right]\right) \ .\\
   \end{aligned}
 \end{equation}
 
-Similarly, the value of the sum error for those encoder and decoders is:
+Similarly, the value of the sum error for those encoder and decoders, which we call $\mathrm{E}_{\text{sum}}(W,k_1,k_2,e_1,d_1,e_2,d_2)$, is:
 \begin{equation}
   \begin{aligned}
-    \mathrm{E}_{\text{sum}}(W,k_1,k_2,e_1,d_1,e_2,d_2) &:= 1 -  \frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\frac{d_1(i_1|y)+d_2(i_2|y)}{2}\right)\\
+    &1 -  \frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\frac{d_1(i_1|y)+d_2(i_2|y)}{2}\right)\\
     &= \frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\left[1-\frac{d_1(i_1|y)+d_2(i_2|y)}{2}\right]\right) \ .
   \end{aligned}
 \end{equation}
@@ -175,7 +176,6 @@ Thus, up to a multiplicative factor $2$, the error is the same. In particular, w
 This implies that one can consider for example $P(x_1x_2|i_1i_2)$ since it does not depend on $y$, or even $P(x_1|i_1)$ since it does not depend on $i_2,y$. Then, in our coding scenario, when the senders and the receiver are given non-signaling assistance, it means that they share a tripartite non-signaling box, the behavior of which is described by $P$. In this case, the expression $e_1(x_1|i_1)e_2(x_2|i_2)d(j_1j_2|y)$ in \eqref{eq:def-succ-prob-mac} is replaced by $P(x_1x_2(j_1j_2)|i_1i_2y)$, as depicted in Figure~\ref{fig:MACNScoding}.
 
 \begin{figure}[!h]
-  \begin{center}
       \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [input, name=i1] {};
     \node [input, name=i2] {};
@@ -208,8 +208,7 @@ This implies that one can consider for example $P(x_1x_2|i_1i_2)$ since it does 
     \draw (W.north) -- (y);
     \draw (y) -- node {$y$} (ybis);
       \end{tikzpicture}
-      \ \ \ \
-\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+      \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [input, name=i1] {};
     \node [input, name=i2] {};
     \node [Bigblock, below of=i2] (P) {$P(x_1x_2(j_1j_2)|i_1i_2y)$};
@@ -240,7 +239,6 @@ This implies that one can consider for example $P(x_1x_2|i_1i_2)$ since it does 
     \draw (W.north) -- (y);
     \draw (y) -- node {$y$} (ybis);
 \end{tikzpicture}
-\end{center}
 \caption{A non-signaling box $P$ replacing $e_1,e_2$ and $d$ in the coding problem for the MAC $W$.}
 \label{fig:MACNScoding}
 \end{figure}
@@ -250,7 +248,7 @@ The cyclicity of Figure~\ref{fig:MACNScoding} is at first sight counter-intuitiv
           so we recover globally $P((j_1 j_2)|i_1 i_2 y x_1 x_2) \times P(x_1 x_2 |i_1 i_2) = P(x_1 x_2 (j_1 j_2)|i_1 i_2 y)$ the prescribed conditional probability. 
           The non-signaling condition ensures that it is possible to consider the conditional probabilities of each party independently. This clarifies how one can effectively encode and then decode messages through a non-signaling box.
 
-As in the unassisted case, we want to maximize over all non-signaling box $P$ the probability of successfully encoding and decoding the messages through $W$, ie. the probability that $j_1 = i_1$ and  $j_2 = i_2$, given that the input messages are taken uniformly in $[k_1]$ and $[k_2]$. We call this quantity $\mathrm{S^{\mathrm{NS}}}(W,k_1,k_2)$, which is characterized by the following optimization program:
+As in the unassisted case, we want to maximize over all non-signaling box $P$ the probability of successfully encoding and decoding the messages through $W$, i.e. the probability that $j_1 = i_1$ and  $j_2 = i_2$, given that the input messages are taken uniformly in $[k_1]$ and $[k_2]$. We call this quantity $\mathrm{S^{\mathrm{NS}}}(W,k_1,k_2)$, which is characterized by the following optimization program:
 
 \begin{equation}
   \begin{aligned}
@@ -266,23 +264,22 @@ As in the unassisted case, we want to maximize over all non-signaling box $P$ th
 Since it is given as a linear program, the complexity of computing $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ is polynomial in the number of variables and constraints (see for instance Section 7.1 of~\cite{GM07}), which is a polynomial in $|\mathcal{X}_1|,|\mathcal{X}_2|,|\mathcal{Y}|,k_1$ and $k_2$. Also, as it is easy to check that a classical strategy is a particular case of a non-signaling assisted strategy, we have that $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \geq \mathrm{S}(W,k_1,k_2)$.
 
 We have then the same definitions of capacity and zero-error capacity:
-\begin{defi}[Non-Signaling Assisted Capacity Region $\mathcal{C}^{\mathrm{NS}}(W)$ of a MAC $W$]
+\begin{definition}[Non-Signaling Assisted Capacity Region $\mathcal{C}^{\mathrm{NS}}(W)$ of a MAC $W$]
   A rate pair $(R_1,R_2)$ is achievable with non-signaling assistance if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   We define the non-signaling assisted capacity region $\mathcal{C}^{\mathrm{NS}}(W)$ as the closure of the set of all achievable rate pairs with non-signaling assistance.
-\end{defi}
+\end{definition}
 
-\begin{defi}[Zero-Error Non-Signaling Assisted Capacity Region $\mathcal{C}^{\mathrm{NS}}_0(W)$ of a MAC $W$]
+\begin{definition}[Zero-Error Non-Signaling Assisted Capacity Region $\mathcal{C}^{\mathrm{NS}}_0(W)$ of a MAC $W$]
   A rate pair $(R_1,R_2)$ is achievable with zero-error and non-signaling assistance if:
   \[ \exists n_0 \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   We define the zero-error non-signaling assisted capacity region $\mathcal{C}^{\mathrm{NS}}_0(W)$ as the closure of the set of all achievable rate pairs with zero-error and non-signaling assistance.
-\end{defi}
+\end{definition}
 
 \paragraph{Independent non-signaling assistance} One can also consider the case where non-signaling assistance is shared independently between the first sender and the receiver as well as between the second encoder and the receiver, which we call independent non-signaling assistance. The precise scenario is depicted in Figure~\ref{fig:MACNSsrcoding}:
 
 \begin{figure}[!h]
-  \begin{center}
-      \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+  \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [input, name=i1] {};
     \node [input, name=i2] {};
     \node [Bigblock, below of=i2] (P) {$\ \ \ e_1\ \ \ \ \ \ d_1\ \ \ \ \ \ e_2\ \ \ \ \ \ d_2\ \ \ $};
@@ -320,8 +317,7 @@ We have then the same definitions of capacity and zero-error capacity:
     \coordinate (y) at ($ (W.north)+(0pt,2cm) $) ;
     \draw (W.north) -- (y);
     \draw (y) -- node {$y$} (ybis);
-      \end{tikzpicture}
-      \ \ \ \
+  \end{tikzpicture}
 \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [input, name=i1] {};
     \node [input, name=i2] {};
@@ -361,7 +357,6 @@ We have then the same definitions of capacity and zero-error capacity:
     \draw (W.north) -- (y);
     \draw (y) -- node {$y$} (ybis);
 \end{tikzpicture}
-\end{center}
 \caption{Non-signaling boxes $P^1,P^2$ replacing $e_1,d_1$ and $e_2,d_2$ in the coding problem for the MAC $W$.}
 \label{fig:MACNSsrcoding}
 \end{figure}
@@ -369,7 +364,7 @@ We have then the same definitions of capacity and zero-error capacity:
 This leads to the following definition of the success probability $\mathrm{S}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2)$:
 \begin{equation}
   \begin{aligned}
-    \mathrm{S}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2) := &&\underset{P^1, P^2}{\maxi} &&& \frac{1}{k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P^1(x_1i_1|i_1y)P^2(x_2i_2|i_2y)\\
+    &&\underset{P^1, P^2}{\maxi} &&& \frac{1}{k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P^1(x_1i_1|i_1y)P^2(x_2i_2|i_2y)\\
     &&\st &&& \sum_{x_1} P^1(x_1j_1|i_1y) = \sum_{x_1} P^1(x_1j_1|i_1'y)\\
     &&&&& \sum_{j_1} P^1(x_1j_1|i_1y) = \sum_{j_1} P^1(x_1j_1|i_1y')\\
     &&&&& \sum_{x_1,j_1} P^1(x_1j_1|i_1y) = 1\\
@@ -383,7 +378,7 @@ This leads to the following definition of the success probability $\mathrm{S}^{\
 As before, one can also consider the sum-success probability $\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2)$:
 \begin{equation}
   \begin{aligned}
-    \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2) := &&\underset{P^1, P^2}{\maxi} &&& \frac{1}{2k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P^1(x_1i_1|i_1y)\sum_{j_2}P^2(x_2j_2|i_2y)\\
+    &&\underset{P^1, P^2}{\maxi} &&& \frac{1}{2k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P^1(x_1i_1|i_1y)\sum_{j_2}P^2(x_2j_2|i_2y)\\
     &&+&&& \frac{1}{2k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P^2(x_2i_2|i_2y)\sum_{j_1}P^1(x_1j_1|i_1y)\\
     &&\st &&& \sum_{x_1} P^1(x_1j_1|i_1y) = \sum_{x_1} P^1(x_1j_1|i_1'y)\\
     &&&&& \sum_{j_1} P^1(x_1j_1|i_1y) = \sum_{j_1} P^1(x_1j_1|i_1y')\\
@@ -395,19 +390,19 @@ As before, one can also consider the sum-success probability $\mathrm{S}_{\text{
   \end{aligned}
 \end{equation}
 
-\begin{defi}[Independent Non-Signaling Assisted Capacity (resp. Sum-Capacity) Region $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)$ (resp. $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)$)  of a MAC $W$]
+\begin{definition}[Independent Non-Signaling Assisted Capacity (resp. Sum-Capacity) Region $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)$ (resp. $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)$)  of a MAC $W$]
   A rate pair $(R_1,R_2)$ is achievable (resp. sum-achievable) with independent non-signaling assistance if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
 
    \[ (\text{resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ .) \]
   We define the independent non-signaling assisted capacity (reps. sum-capacity) region $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)$ (resp. $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)$) as the closure of the set of all achievable (resp. sum-achievable) rate pairs with independent non-signaling assistance.
-\end{defi}
+\end{definition}
 
 However, it turns out those two notions of success define the same capacity region:
-\begin{prop}
+\begin{proposition}
   \label{prop:NSCapaSumJoint}
   $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W) = \mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)$
-\end{prop}
+\end{proposition}
 \begin{proof}
   Given non-signaling boxes $P^1,P^2$, the maximum success probability of encoding and decoding correctly with those is given by:
 \[ \mathrm{S}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2,P^1,P^2) := \frac{1}{k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P^1(x_1i_1|i_1y)P^2(x_2i_2|i_2y) \ . \]
@@ -465,7 +460,7 @@ Thus, as before, the capacity regions are the same.
 \label{section:complexity}
 \subsection{Symmetrization}
 One can prove an equivalent formulation of the linear program computing $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ with a number of variables and constraints polynomial in only $|\mathcal{X}_1|,|\mathcal{X}_2|$ and $|\mathcal{Y}|$ and independent of $k_1$ and $k_2$:
-\begin{prop}
+\begin{proposition}
   \label{prop:NSLP}
   For a MAC $W: \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ and $k_1,k_2 \in \mathbb{N}^*$, we have:
   \begin{equation}
@@ -481,7 +476,7 @@ One can prove an equivalent formulation of the linear program computing $\mathrm
   \end{aligned}
   \end{equation}
 
-\end{prop}
+\end{proposition}
 
 \begin{proof}
   One can check that given a solution of the original program, the following choice of variables is a valid solution of the second program achieving the same objective value:
@@ -505,19 +500,20 @@ For the other direction, given those variables, a non-signaling probability dist
 \end{proof}
 
 This symmetrization can also be done for the program computing $\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2)$:
-\begin{prop}
+\begin{proposition}
   \label{prop:NSsrProgram}
   \begin{equation}
     \begin{aligned}
       \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2) = &&\underset{r^1,r^2,p^1,p^2}{\maxi} &&& \frac{1}{2k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)\left(p^2_{x_2}r^1_{x_1,y} + p^1_{x_1}r^2_{x_2,y}\right)\\
       && = &&& \frac{1}{2}\left[ \frac{1}{k_1}\sum_{x_1,y} W^1_{p^2,k_2}(y|x_1)r^1_{x_1,y} + \frac{1}{k_2}\sum_{x_2,y}W^2_{p^1,k_1}(y|x_2)r^2_{x_2,y} \right]\\
-      && \text{with} &&& W^1_{p^2,k_2}(y|x_1) := \frac{1}{k_2}\sum_{x_2} W(y|x_1x_2)p^2_{x_2} ,W^2_{p^1,k_1}(y|x_2) := \frac{1}{k_1}\sum_{x_1} W(y|x_1x_2)p^1_{x_1}\\
+      && \text{with} &&& W^1_{p^2,k_2}(y|x_1) := \frac{1}{k_2}\sum_{x_2} W(y|x_1x_2)p^2_{x_2}\\
+      && \text{and} &&& W^2_{p^1,k_1}(y|x_2) := \frac{1}{k_1}\sum_{x_1} W(y|x_1x_2)p^1_{x_1}\\
       &&\st &&& \sum_{x_1} r^1_{x_1,y} = 1, \sum_{x_2} r^2_{x_2,y} = 1\\
       &&&&& \sum_{x_1} p^1_{x_1} = k_1, \sum_{x_2} p^2_{x_2} = k_2\\
       &&&&& 0 \leq r^1_{x_1,y} \leq p^1_{x_1}, 0 \leq r^2_{x_2,y} \leq p^2_{x_2}
     \end{aligned}
   \end{equation}
-\end{prop}
+\end{proposition}
 
 \begin{proof}
   One can check that given a solution of the original program, the following choice of variables is a valid solution of the second program achieving the same objective value:
@@ -541,19 +537,19 @@ For the other direction, given those variables, non-signaling probability distri
 \end{proof}
 
 \subsection{Properties of $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$, $\mathcal{C}^{\mathrm{NS}}(W)$ and $\mathcal{C}^{\mathrm{NS}}_0(W)$}
-\begin{defi}
+\begin{definition}
   We say that a conditional probability distribution $Q(a^n|x^n)$ defined on $\left(\mathcal{A}_1 \times \ldots \times \mathcal{A}_n\right) \times \left(\mathcal{X}_1 \times \ldots \times \mathcal{X}_n\right)$ and $Q'(a'^n|x'^n)$ is \emph{non-signaling} if for all $a^n, x^n, \hat{x}^n$, we have
     \[ \forall i \in [n], \sum_{a_i}Q(a_1\ldots a_i \ldots a_n|x_1\ldots x_i \ldots x_n) = \sum_{a_i}Q(a_1\ldots a_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n) \ .\]
-\end{defi}
+\end{definition}
 
-\begin{defi}
+\begin{definition}
   Let $Q(a^n|x^n)$ be a conditional probability distribution defined on $\left(\mathcal{A}_1 \times \ldots \times \mathcal{A}_n\right) \times \left(\mathcal{X}_1 \times \ldots \times \mathcal{X}_n\right)$ and $Q'(a'^n|x'^n)$ defined on $\left(\mathcal{A}'_1 \times \ldots \times \mathcal{A}'_n\right) \times \left(\mathcal{X}'_1 \times \ldots \times \mathcal{X}'_n\right)$. We define $P := Q \otimes Q'$ the tensor product conditional probability distribution defined on $\left(\left(\mathcal{A}_1 \times \mathcal{A}'_1\right) \times \ldots \times \left(\mathcal{A}_n \times \mathcal{A}'_n\right) \right) \times \left(\left(\mathcal{X}_1 \times \mathcal{X}'_1\right) \times \ldots \times \left(\mathcal{X}_n \times \mathcal{X}'_n\right) \right) $ by $P(a_1a'_1\ldots a_na'_n|x_1x'_1\ldots x_nx'_n) := Q(a^n|x^n) \cdot Q'(a'^n|x'^n)$.
-\end{defi}
+\end{definition}
 
-\begin{lem}
+\begin{lemma}
   \label{lem:NStensor}
   If both $Q$ and $Q'$ are non-signaling, then $P = Q \otimes Q'$ is non-signaling.
-\end{lem}
+\end{lemma}
 \begin{proof}
   Let $a_1, \ldots, a_{i-1}, a_{i+1}, \ldots, a_n \in \mathcal{A}_1 \times \ldots \times \mathcal{A}_{i-1} \times \mathcal{A}_{i+1} \times \ldots \times \mathcal{A}_n$, $a'_1, \ldots, a'_{i-1}, a'_{i+1}, \ldots, a'_n \in \mathcal{A}'_1 \times \ldots \times \mathcal{A}'_{i-1} \times \mathcal{A}'_{i+1} \times \ldots \times \mathcal{A}'_n$, $x_1, \ldots, x_n \in \mathcal{X}_1 \times \ldots \times \mathcal{X}_n$ and $x'_1, \ldots, x'_n \in \mathcal{X}'_1 \times \ldots \times \mathcal{X}'_n$. We have:
 
@@ -571,7 +567,7 @@ For the other direction, given those variables, non-signaling probability distri
 \end{proof}
 
 
-\begin{prop}
+\begin{proposition}
   \label{prop:oneShot}
   For a MAC $W: \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ and $k_1,k_2 \in \mathbb{N}^*$, we have:
   \begin{enumerate}
@@ -581,7 +577,7 @@ For the other direction, given those variables, non-signaling probability distri
     
   \item For any MAC $W': \mathcal{X}'_1 \times \mathcal{X}'_2 \rightarrow \mathcal{Y}'$ and $k_1,k_2 \in \mathbb{N}^*$, we have $\mathrm{S}^{\mathrm{NS}}(W \otimes W',k_1k_1',k_2k_2') \geq \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \cdot \mathrm{S}^{\mathrm{NS}}(W',k'_1,k'_2)$. In particular, for any positive integer $n$, $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \geq \left[\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)\right]^n$ and $\mathrm{S}^{\mathrm{NS}}(W \otimes W',k_1,k_2) \geq \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$.
   \end{enumerate}
-\end{prop}
+\end{proposition}
 \begin{proof}
   \begin{enumerate}
   \item Let us first show that $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \geq \frac{1}{k_1k_2}$. Take $p_{x_1,x_2} := \frac{k_1k_2}{|\mathcal{X}_1||\mathcal{X}_2|}$, $r^1_{x_1,x_2,y} := \frac{p_{x_1,x_2}}{k_2}$, $r^2_{x_1,x_2,y} := \frac{p_{x_1,x_2}}{k_1}$ and $r_{x_1,x_2,y} := \frac{p_{x_1,x_2}}{k_1k_2} = \frac{1}{|\mathcal{X}_1||\mathcal{X}_2|}$. One can easily check that it is indeed a valid solution of the linear program computing $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$. Thus we have:
@@ -699,14 +695,14 @@ For the other direction, given those variables, non-signaling probability distri
   \end{enumerate}
 \end{proof}
 
-\begin{cor}
+\begin{corollary}
   \label{cor:asymptotic}
   \begin{enumerate}
       \item $\mathcal{C}^{\mathrm{NS}}(W)$ is convex.
       \item If $(R_1,R_2)$ is achievable with non-signaling assistance, then $R_1 \leq \log_2|\mathcal{X}_1|$, $R_2 \leq \log_2|\mathcal{X}_2|$ and $R_1 + R_2 \leq \log_2|\mathcal{Y}|$.
       \item If $(R_1,R_2)$ is achievable with non-signaling assistance, then for all $R_i' \leq R_i$, $(R_1',R_2')$ is achievable with non-signaling assistance.
   \end{enumerate}
-\end{cor}
+\end{corollary}
 
 \begin{proof}
   \begin{enumerate}
@@ -733,11 +729,11 @@ For the other direction, given those variables, non-signaling probability distri
 \end{proof}
 
 
-\begin{prop}
+\begin{proposition}
   \label{prop:ZENScapacity}
    $\mathcal{C}^{\mathrm{NS}}_0(W)$ is the closure of the set of rate pairs $(R_1,R_2)$ such that:
   \[ \exists n \in \mathbb{N}^*, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-\end{prop}
+\end{proposition}
 \begin{proof}
   It is clear that if $(R_1,R_2)$ is such that $\exists n_0 \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1$, then in particular $\exists n \in \mathbb{N}^*, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1$. So, $\mathcal{C}^{\mathrm{NS}}_0(W)$, which is the closure of the former rate pairs, is in particular included in the closure of the latter rate pairs.
   
@@ -762,16 +758,16 @@ For the other direction, given those variables, non-signaling probability distri
 Although $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ can be computed in polynomial time in $W$, $k_1$ and $k_2$, a channel of the form $W^{\otimes n}$ has exponential size in $n$. Thus, the linear program for $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ grows exponentially with $n$. However, using the invariance of $W^{\otimes n}$ under permutations, one can find a much smaller linear program computing $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$.
 
 
-\begin{defi} Let $G$ a group acting on $\mathcal{X}_1,\mathcal{X}_2,\mathcal{Y}$. We say that a MAC $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ is \emph{invariant under the action of $G$} if:
+\begin{definition} Let $G$ a group acting on $\mathcal{X}_1,\mathcal{X}_2,\mathcal{Y}$. We say that a MAC $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ is \emph{invariant under the action of $G$} if:
   \[\forall g \in G, W(g \cdot y|g \cdot x_1 g \cdot x_2)=W(y|x_1x_2) \ .\]
-\end{defi}
+\end{definition}
 
 In particular, for  $W^{\otimes n}: \mathcal{X}_1^n \times \mathcal{X}_2^n \rightarrow \mathcal{Y}^n$, the symmetric group $G:=S_n$ acts in a natural way in any set $\mathcal{A}$ raised to power $n$. So for $\sigma \in S_n$, we have that:
 \[ W^{\otimes n}(\sigma \cdot y^n|\sigma \cdot x_1^n \sigma \cdot x_2^n) =\prod_{i=1}^n W(y_{\sigma(i)}|x_{1,\sigma(i)}x_{2,\sigma(i)}) = \prod_{i=1}^n W(y_{i}|x_{1,i}x_{2,i}) = W^{\otimes n}(y^n|x_1^nx_2^n) \ ,\]
 and so $W^{\otimes n}$ is invariant under the action of $S_n$.
 
 Let $\mathcal{Z} := \{\mathcal{X}_1, \mathcal{X}_2, \mathcal{Y}, \mathcal{X}_1 \times \mathcal{Y}, \mathcal{X}_2 \times \mathcal{Y}, \mathcal{X}_1 \times \mathcal{X}_2,  \mathcal{X}_1 \times \mathcal{X}_2 \times \mathcal{Y} \}$. Let us call $\mathcal{O}_G(\mathcal{A})$ the set of orbits of $\mathcal{A}$ under the action of $G$. Then, one can find an equivalent smaller linear program for $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$:
-\begin{theo}
+\begin{theorem}
   \label{theo:polyLP}
   Let $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ a MAC invariant under the action of $G$. Let us name systematically $w \in \mathcal{O}_G(\mathcal{X}_1 \times \mathcal{X}_2 \times \mathcal{Y}), u \in \mathcal{O}_G(\mathcal{X}_1 \times \mathcal{X}_2), u^1 \in \mathcal{O}_G(\mathcal{X}_1), u^2 \in \mathcal{O}_G(\mathcal{X}_2), v^1 \in \mathcal{O}_G(\mathcal{X}_1 \times \mathcal{Y}), v^2 \in \mathcal{O}_G(\mathcal{X}_2 \times \mathcal{Y}), v \in \mathcal{O}_G(\mathcal{Y})$. We will also call $z_{\mathcal{A}}$ the projection of $z \in \mathcal{O}_G(\mathcal{B})$ on $\mathcal{A}$, for $\mathcal{A},\mathcal{B} \in \mathcal{Z}$ and $\mathcal{A}$ projection of $\mathcal{B}$; note that $z_{\mathcal{A}} \in \mathcal{O}_G(\mathcal{A})$, since by definition of the action, the projection of an orbit is an orbit. Let us finally call $W(w) := W(y|x_1x_2)$ for any $(x_1,x_2,y) \in w$, which is well-defined since $W$ is invariant under $G$.
   We have that $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ is the solution of the following linear program:
@@ -787,13 +783,13 @@ Let $\mathcal{Z} := \{\mathcal{X}_1, \mathcal{X}_2, \mathcal{Y}, \mathcal{X}_1 \
     &&&&& \frac{|w|}{|w_{\mathcal{X}_1\mathcal{X}_2}|}p_{w_{\mathcal{X}_1\mathcal{X}_2}} -  r^1_w - r^2_w + r_w \geq 0, \: \forall w \in \mathcal{O}_G(\mathcal{X}_1 \times \mathcal{X}_2 \times \mathcal{Y}) \ .\\
   \end{aligned}
   \end{equation}
-\end{theo}
+\end{theorem}
 
 
-\begin{cor}
+\begin{corollary}
   For a channel $W : \mathcal{X}_1 \times \mathcal{X}_2 \to \mathcal{Y}$, $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ is the solution of a linear program of size bounded by $O\left(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1}\right)$, thus it can be computed in polynomial time in $n$.
   \label{cor:poly}
-\end{cor}
+\end{corollary}
 \begin{proof}
   We use the linear program obtained in Theorem~\ref{theo:polyLP} with $G:=S_n$ acting on $W^{\otimes n}$ as described before. 
   The number of variables and constraints is linear in the number of orbits of the action of $S^n$ on the different sets $\mathcal{A} \in \mathcal{Z}$, where here $\mathcal{Z} = \{\mathcal{X}_1^n, \mathcal{X}_2^n, \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{Y}^n, \mathcal{X}^n_2 \times \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{X}^n_2,  \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n \}$. For example, for $\mathcal{A} \in \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n$, we have that:
@@ -805,10 +801,10 @@ So the number of variables and constraints is $O(n^{|\mathcal{X}_1|\cdot|\mathca
 
 In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For all of them, $\mathcal{A}$ and $\mathcal{B}$ will denote finite sets on which a group $G$ is acting, and $x^G$ will denote the orbit of $x$ under $G$:
 
-\begin{lem}
+\begin{lemma}
   \label{lem:orbitProjCard}
   Let $\tau \in \mathcal{O}_G(\mathcal{A} \times \mathcal{B})$, and call $\nu := \tau_{\mathcal{A}}$ and $\mu := \tau_{\mathcal{B}}$. For $x \in \nu$, let us call $B_{\tau}^x := \left\{y:(x,y)\in\tau\right\}$. Then, $|B_{\tau}^x|=|B_{\tau}^{x'}|=:c_{\tau}^{\nu}$ for any $x,x' \in \nu$, and furthermore, we have that $c_{\tau}^{\nu}=\frac{|\tau|}{|\nu|}$. Symmetrically, the same occurs for $A_{\tau}^y := \{x:(x,y)\in\tau\}$ with $y \in \mu$, where one gets that $|A_{\tau}^y|=|A_{\tau}^{y'}|=:c_{\tau}^{\mu}=\frac{|\tau|}{|\mu|}$ for $y,y' \in \mu$.
-\end{lem}
+\end{lemma}
 
 \begin{proof}
   Let $x,x' \in \nu$. Thus there exists $g \in G$ such that $x' = g \cdot x$. Let:
@@ -821,11 +817,11 @@ In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For al
   Furthermore, $\{ B_{\tau}^x \}_{x \in \nu}$ is a partition of $\tau$, so $\sum_{x \in \nu} |B_{\tau}^x| = |\nu| c_{\tau}^{\nu} = |\tau|$, and thus $c_{\tau}^{\nu}=\frac{|\tau|}{|\nu|}$.
 \end{proof}
 
-\begin{lem}
+\begin{lemma}
   \label{lem:fromOrbitToEle} For any $(x,y) \in \mathcal{A} \times \mathcal{B}$ and $v_{(x,y)^G}$ variable indexed by orbits of $\mathcal{A} \times \mathcal{B}$, let us define the variable $v_{x,y} := \frac{v_{(x,y)^G}}{|(x,y)^G|}$. We have:
 
   \[ \sum_{x \in \mathcal{A}} v_{x,y} = \frac{1}{|y^G|}\sum_{\tau \in \mathcal{O}_G(\mathcal{A} \times \mathcal{B}): \tau_{\mathcal{B}}=y^G} v_{\tau}, \forall y \in \mathcal{B} \ .\]
-\end{lem}
+\end{lemma}
 
 \begin{proof}
   \begin{equation}
@@ -838,12 +834,12 @@ In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For al
   \end{equation}
 \end{proof}
 
-\begin{lem}
+\begin{lemma}
   \label{lem:fromEleToOrbit}
   For any $\tau \in \mathcal{O}_G(\mathcal{A} \times \mathcal{B})$, $\mu \in \mathcal{O}_G(\mathcal{B})$ and $v_{x,y}$ variable indexed by elements of $\mathcal{A} \times \mathcal{B}$, let us define $v_{\tau} := \sum_{(x,y) \in \tau} v_{x,y}$. We have:
 
   \[ \sum_{\tau  \in \mathcal{O}_G(\mathcal{A} \times \mathcal{B}): \tau_{\mathcal{B}}=\mu} v_{\tau} = \sum_{y \in \mu} \sum_{x \in \mathcal{A}} v_{x,y} \ .\]
-\end{lem}
+\end{lemma}
 
 \begin{proof}
   \[ \sum_{\tau \in \mathcal{O}_G(\mathcal{A} \times \mathcal{B}):\tau_{\mathcal{B}}=\mu} v_{\tau} =  \sum_{\tau \in \mathcal{O}_G(\mathcal{A} \times \mathcal{B}):\tau_{\mathcal{B}}=\mu} \sum_{(x,y) \in \tau} v_{x,y} = \sum_{y \in \mu} \sum_{x \in \mathcal{A}} v_{x,y} \ . \]
@@ -937,12 +933,12 @@ In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For al
 \subsection{Zero-Error Non-Signaling Assisted Achievable Rate Pairs}
 We will now present a numerical method to find efficiently inner bounds on $\mathcal{C}_0^{\mathrm{NS}}(W)$. Thanks to Corollary~\ref{cor:poly}, we know how to decide in polynomial time in $n,k_1,k_2$ whether $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1$. However, by Proposition~\ref{prop:ZENScapacity}, if $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1$, then we have that $\left(\frac{k_1}{n},\frac{k_2}{n}\right) \in \mathcal{C}_0^{\mathrm{NS}}(W)$, which describes a way of computing achievable points for that capacity region. More precisely, this leads to the following result:
 
-\begin{prop}[Inner Bounds on $\mathcal{C}_0^{\mathrm{NS}}(W)$]
+\begin{proposition}[Inner Bounds on $\mathcal{C}_0^{\mathrm{NS}}(W)$]
   \label{prop:IB}
   Let us define the zero-error non-signaling assisted $n$-shots capacity region $\mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W)$ in the following way:
   \[ \mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W)  := \left\{ \left(\frac{k_1}{n},\frac{k_2}{n}\right) : \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1 \right\}\ . \]
   Then, we have that $\forall n \in \mathbb{N}, \mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W) \subseteq \mathcal{C}_0^{\mathrm{NS}}(W)$, and that one can decide in polynomial time in $n,k_1,k_2$ if $\left(\frac{k_1}{n},\frac{k_2}{n}\right) \in \mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W)$.
-\end{prop}
+\end{proposition}
 
 This implies that we can find efficiently achievable rate pairs for MACs.
 
@@ -1023,10 +1019,10 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
 
   Another surprising property is the speed at which one obtains efficient zero-error non-signaling assisted codes compared to classical zero-error codes. Indeed, with only three copies of the binary adder channel, one gets that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes 3}_{\mathrm{BAC}},4,5)=1$, which corresponds to a sum-rate of $\frac{2+\log_2(5)}{3} \simeq 1.4406$, which already largely beats the best known zero-error achieved sum-rate of $\log_2(240/6) \simeq 1.3178$~\cite{MO05}. These results are summarized in the following theorem:
 
-  \begin{theo}
+  \begin{theorem}
     \label{theo:BAC}
     We have that $\left(\frac{\log_2(72)}{8},\frac{\log_2(72)}{8}\right) \in \mathcal{C}^{\mathrm{NS}}_0(W_{\mathrm{BAC}})$ but $\left(\frac{\log_2(72)}{8},\frac{\log_2(72)}{8}\right) \not\in \mathcal{C}(W_{\mathrm{BAC}})$, and as a consequence, we have that $\mathcal{C}(W_{\mathrm{BAC}}) \subsetneq \mathcal{C}^{\mathrm{NS}}(W_{\mathrm{BAC}})$.
-  \end{theo}
+  \end{theorem}
   \begin{proof}
     Since $2^{8\frac{\log_2(72)}{8}}=72$ and numerically $\mathrm{S}^{\mathrm{NS}}(W^{\otimes 8}_{\mathrm{BAC}},72,72)=1$ thanks to Corollary~\ref{cor:poly}, we get that  $\left(\frac{\log_2(72)}{8},\frac{\log_2(72)}{8}\right) \in \mathcal{C}^{\mathrm{NS}}_0(W_{\mathrm{BAC}})$ by Proposition~\ref{prop:ZENScapacity}. However, $\frac{\log_2(72)}{8}+\frac{\log_2(72)}{8} > \frac{3}{2}$ so $\left(\frac{\log_2(72)}{8},\frac{\log_2(72)}{8}\right) \not\in \mathcal{C}(W_{\mathrm{BAC}})$ by Theorem~\ref{theo:capacity} applied to $W_{\mathrm{BAC}}$. Since $\mathcal{C}(W_{\mathrm{BAC}}) \subseteq \mathcal{C}^{\mathrm{NS}}(W_{\mathrm{BAC}})$ and $\mathcal{C}^{\mathrm{NS}}_0(W_{\mathrm{BAC}}) \subseteq \mathcal{C}^{\mathrm{NS}}(W_{\mathrm{BAC}})$, we thus get that $\mathcal{C}(W_{\mathrm{BAC}}) \subsetneq \mathcal{C}^{\mathrm{NS}}(W_{\mathrm{BAC}})$.
   \end{proof}
@@ -1036,7 +1032,7 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
 
   In this section, we use concatenated codes to obtain achievable rate pairs, and apply it to a noisy version of the BAC:
 
-  \begin{defi}[Concatenated Codes]
+  \begin{definition}[Concatenated Codes]
   Given a MAC $W$ and a non-signaling assisted code $P$, define $W[P] : [k_1] \times [k_2] \rightarrow [\ell]$ with $W[P](j|i_1i_2) := \sum_{x_1,x_2,y}W(y|x_1x_2)P(x_1x_2j|i_1i_2y)$:
 \begin{center}
   \begin{tikzpicture}[auto, node distance=2cm,>=latex']
@@ -1075,7 +1071,7 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
     
   \end{tikzpicture}
 \end{center}
-\end{defi}
+\end{definition}
 
  Note that $W[P]$ is a MAC since $W[P](j|i_1i_2) \geq 0$ and:
   \begin{equation}
@@ -1088,10 +1084,10 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
   
   The following proposition states that combining a classical code to a non-signaling strategy leads to inner bounds on the non-signaling assisted capacity region of a MAC:
   
-  \begin{prop}
+  \begin{proposition}
     \label{prop:concatCodes}
     If $P$ is a non-signaling assisted code for the MAC $W$, we have that $\mathcal{C}(W[P]) \subseteq \mathcal{C}^{\mathrm{NS}}(W)$.
-  \end{prop}
+  \end{proposition}
 
   \begin{proof}
     Let $(R_1,R_2) \in \mathcal{C}(W[P])$. Then, by definition, we have that:
@@ -1113,12 +1109,12 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
 
   
   Thanks to Proposition~\ref{prop:concatCodes}, we have for any non-signaling assisted code $P$, $\mathcal{C}(W^{\otimes n}[P]) \subseteq \mathcal{C}^{\mathrm{NS}}(W^{\otimes n})$. But if $(R_1,R_2) \in \mathcal{C}^{\mathrm{NS}}(W^{\otimes n})$, we have that $(\frac{R_1}{n},\frac{R_2}{n}) \in \mathcal{C}^{\mathrm{NS}}(W)$. Thus, applying Theorem~\ref{theo:capacity} on $W^{\otimes n}[P]$ leads to inner bounds on $\mathcal{C}^{\mathrm{NS}}(W)$:
-  \begin{prop}[Inner Bounds on $\mathcal{C}^{\mathrm{NS}}(W)$]
+  \begin{proposition}[Inner Bounds on $\mathcal{C}^{\mathrm{NS}}(W)$]
     \label{prop:NumericalMethod} For any number of copies $n$, number of inputs $k_1 \in [|\mathcal{X}_1|^n]$ and $k_2 \in [|\mathcal{X}_2|^n]$, non-signaling assisted codes $P$ on inputs in $[k_1],[k_2]$ for $W^{\otimes n}$, and distributions $q_1,q_2$ on $[k_1],[k_2]$, we have that the following $(R_1,R_2)$ are in $\mathcal{C}^{\mathrm{NS}}(W)$: 
   \[ R_1 \leq \frac{I(I_1:J|I_2)}{n}\ ,\ R_2 \leq \frac{I(I_2:J|I_1)}{n}\ ,\ R_1+R_2 \leq \frac{I((I_1,I_2):J)}{n} \ ,\]
   for $(I_1,I_2) \in [k_1] \times [k_2]$ following the product law $q_1 \times q_2$, and $J \in [\ell]$ the outcome of $W^{\otimes n }[P]$ on inputs $I_1,I_2$. In particular, the corner points of this capacity region are given by:
   \[ \left(\frac{I(I_1:J|I_2)}{n},\frac{I(I_2 : J)}{n} \right) \text{ and } \left(\frac{I(I_1 : J)}{n} ,\frac{I(I_2:J|I_1)}{n}\right) \ .\]
-  \end{prop}
+  \end{proposition}
 
   \begin{proof}
     The achievable region comes from the previous discussion. We just need to prove that the corner points are of the given form. If $R_1=\frac{I(I_1:J|I_2)}{n}$, constraints on $R_2$ and $R_1+R_2$ leads to a maximum $R_2 = \min\left(\frac{I(I_2:J|I_1)}{n}, \frac{I((I_1,I_2):J)}{n}-\frac{I(I_1:J|I_2)}{n}\right)$. However, $I((I_1,I_2):J)-I(I_1:J|I_2)=I(I_2 : J)$ by the chain rule. We only need to show that $I(I_2:J) \leq I(I_2:J|I_1)$ and the proof will be complete, since the other corner point is symmetric. We have:
@@ -1138,10 +1134,10 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
 
   First, let us note that the zero-error non-signaling assisted capacity region of $W_{\text{BAC},\varepsilon_1, \varepsilon_2}$ is trivial for $\varepsilon \in (0,1)$:
 
-  \begin{prop}
+  \begin{proposition}
     \label{prop:NScapaNoisy}
     If $\varepsilon_1,\varepsilon_2 \in (0,1)$, then $\mathcal{C}_0^{\mathrm{NS}}(W_{\text{BAC},\varepsilon_1, \varepsilon_2}) = \left\{ (0,0) \right\}$.
-  \end{prop}
+  \end{proposition}
   \begin{proof}
     If $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2) = 1$, then $\forall y^n,x_1^n,x_2^n : W^{\otimes n}(y^n|x_1^nx_2^n) > 0 \implies r_{x_1^n,x_2^n,y^n} = p_{x_1^n,x_2^n}$. Indeed, we have for an optimal $p,r$ that:
     \[ \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2) = \frac{1}{k_1k_2} \sum_{x_1^n,x_2^n,y^n} W^{\otimes n}(y^n|x_1^nx_2^n)r_{x_1^n,x_2^n,y^n} \leq \frac{1}{k_1k_2} \sum_{x_1^n,x_2^n,y^n} W^{\otimes n}(y^n|x_1^nx_2^n)p_{x_1^n,x_2^n} = 1 \ , \]
@@ -1208,7 +1204,7 @@ A natural question that arises when studying the strength of non-signaling assis
 
 We have not been able to show the equivalence between this region and the non-signaling assisted capacity region; however, it turns out to be equivalent to the capacity region defined by a slight relaxation of non-signaling assistance, which we call $\mathrm{S}^{\overline{\mathrm{NS}}}(W,k_1,k_2)$. In particular, this will give us the best known outer bound on the non-signaling capacity.
 
-  \begin{defi}
+  \begin{definition}
     \begin{equation}
       \begin{aligned}
         \mathrm{S}^{\overline{\mathrm{NS}}}(W,k_1,k_2) := &&\underset{r,p}{\maxi} &&& \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y}\\
@@ -1219,14 +1215,14 @@ We have not been able to show the equivalence between this region and the non-si
         &&&&& 0 \leq r_{x_1,x_2,y} \leq p_{x_1,x_2}\\
       \end{aligned}
     \end{equation}
-  \end{defi}
+  \end{definition}
 
 The following proposition shows that this is indeed a relaxation of the non-signaling constraint.
 
-  \begin{prop}
+  \begin{proposition}
     \label{prop:NSisrelaxed}
    $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq \mathrm{S}^{\overline{\mathrm{NS}}}(W,k_1,k_2)$.
-  \end{prop}
+  \end{proposition}
   \begin{proof}
     Let us take a solution $(p_{x_1,x_2}, r_{x_1,x_2,y}, r^1_{x_1,x_2,y}, r^2_{x_1,x_2,y})_{x_1 \in \mathcal{X}_1,x_2 \in \mathcal{X}_2,y \in \mathcal{Y}}$ of the linear program computing $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$. Let us show that $(p_{x_1,x_2}, r_{x_1,x_2,y})_{x_1 \in \mathcal{X}_1,x_2 \in \mathcal{X}_2,y \in \mathcal{Y}}$ is a solution of the linear program computing $\mathrm{S}^{\overline{\mathrm{NS}}}(W,k_1,k_2)$ with a same objective value, from which the proposition follows.
 
@@ -1244,30 +1240,30 @@ The following proposition shows that this is indeed a relaxation of the non-sign
   \end{proof}
 
   We can now introduce the relaxed non-signaling assisted capacity region $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$:
-  \begin{defi}[$\mathcal{C}^{\overline{\mathrm{NS}}}(W)$]
+  \begin{definition}[$\mathcal{C}^{\overline{\mathrm{NS}}}(W)$]
   A rate pair $(R_1,R_2)$ is achievable with relaxed non-signaling assistance if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\overline{\mathrm{NS}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   We define $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ as the closure of the convex hull of the set of all achievable rate pairs with relaxed non-signaling assistance.
-  \end{defi}
+  \end{definition}
 
   \begin{rk}
     One could show as in the non-relaxed case that $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ is convex without taking the convex hull in its definition.
   \end{rk}
 
   A direct property that follows from this definition and Proposition~\ref{prop:NSisrelaxed} is the fact that the non-signaling assisted capacity region is included in the relaxed non-signaling assisted capacity region.
-  \begin{cor}
+  \begin{corollary}
     \label{cor:NSisrelaxed}
       $\mathcal{C}^{\mathrm{NS}}(W) \subseteq \mathcal{C}^{\overline{\mathrm{NS}}}(W)$.
-  \end{cor}
+  \end{corollary}
 
   We present now the main result of this section, the characterization of $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ by a single-letter formula.
   
-  \begin{theo}[Characterization of $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$]
+  \begin{theorem}[Characterization of $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$]
         \label{theo:CharaNSrelaxed}
         $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ is the closure of the convex hull of all rate pairs $(R_1,R_2)$ satisfying:
         \[ R_1 < I(X_1:Y|X_2)\ ,\ R_2 < I(X_2:Y|X_1)\ ,\ R_1+R_2 < I((X_1,X_2):Y) \ ,\]
         for $(X_1,X_2)$ following some law $P_{X_1X_2}$ on $\mathcal{X}_1 \times \mathcal{X}_2$, and $Y \in \mathcal{Y}$ the outcome of $W$ on inputs $X_1,X_2$.
-  \end{theo}
+  \end{theorem}
 
   \begin{rk}
     Note that the only difference with the classical capacity region of MACs in Theorem~\ref{theo:capacity} is that the joint distribution of $X_1$ and $X_2$ does not have any product form constraints here.
@@ -1278,11 +1274,11 @@ The following proposition shows that this is indeed a relaxation of the non-sign
   \paragraph{Application to the Binary Adder Channel} 
   Let us determine the relaxed non-signaling assisted capacity of the binary adder channel which will be plotted in Figure~\ref{fig:BACNSrelaxed}.
   
-  \begin{prop}
+  \begin{proposition}
     \label{prop:BACcapacityNSrelaxed}
      $\mathcal{C}^{\overline{\mathrm{NS}}}(W_{\text{BAC}})$ has the following description:
    \[ \mathcal{C}^{\overline{\mathrm{NS}}}(W_{\text{BAC}}) =  \bigcup_{q \in \left[\frac{1}{2},\frac{2}{3}\right]} \{ (R_1,R_2) : R_1 \leq h\left(q\right), R_2 \leq h\left(q\right), R_1+R_2 \leq q+h\left(q\right)\} \ . \]
-  \end{prop}
+  \end{proposition}
 
   \begin{rk}
     Note that for $q=\frac{1}{2}$, the bound becomes $R_1 \leq 1, R_2 \leq 1, R_1+R_2 \leq \frac{3}{2}$ and when $q=\frac{2}{3}$ the bound becomes $R_1 \leq \log_2(3)-\frac{2}{3}, R_2 \leq \log_2(3)-\frac{2}{3}, R_1+R_2 \leq \log_2(3)$.
@@ -1410,7 +1406,7 @@ The first noticeable result coming from these curves is that the values $\mathrm
   \subsection{Outer Bound Part of Theorem~\ref{theo:CharaNSrelaxed}}
 In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection between hypothesis testing and relaxed non-signaling assisted codes as established in~\cite{Matthews12} for point-to-point channels.
 
-\begin{defi}[Hypothesis Testing]
+\begin{definition}[Hypothesis Testing]
   \label{defi:beta}
   Given distributions $P^{(0)}$ and  $P^{(1)}$ on the same space $C$, we define $\beta_{1-\varepsilon}(P^{(0)},P^{(1)})$ to be the minimum type II error $\sum_{r \in C} T_rP^{(1)}(r)$ that can be achieved by statistical tests $T$ which give a type I error no greater than $\varepsilon$, i.e. $\sum_{r \in C} T_rP^{(0)}(r) \geq 1-\varepsilon$.
 
@@ -1422,9 +1418,9 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
       &&&&& 0 \leq T_r \leq 1 \ .
     \end{aligned}
   \end{equation}
-\end{defi}
+\end{definition}
 
-\begin{lem}
+\begin{lemma}
   \label{lem:beta}
     For any relaxed non-signaling assisted code $(p_{x_1,x_2}, r_{x_1,x_2,y})_{x_1 \in \mathcal{X}_1,x_2 \in \mathcal{X}_2,y \in \mathcal{Y}}$ with $(k_1,k_2)$ messages and a probability of success $1-\varepsilon$, if $P_{X_1X_2}(x_1,x_2)=\frac{p_{x_1,x_2}}{k_1k_2}$ and $Y \in \mathcal{Y}$ is the outcome of $W$ on inputs $X_1,X_2$, we have:
     \begin{equation}
@@ -1434,7 +1430,7 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
         &\beta_{1-\varepsilon}\left(P_{X_1X_2Y},P_{X_1X_2} \times P_{Y}\right) \leq \frac{1}{k_1k_2}       \ .
       \end{aligned}
     \end{equation}
-  \end{lem}
+  \end{lemma}
 
 \begin{rk}
   These three bounds are actually achieved with the same statistical test.
@@ -1485,7 +1481,7 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
   In those three cases, we have respectively $P^{(1)}_{X_1X_2Y} = P_{X_1X_2} \times Q^{(1)}_{Y|X_2}; P_{X_1X_2} \times Q^{(2)}_{Y|X_1}; P_{X_1X_2} \times Q^{(0)}_{Y}$. Specializing those cases with $Q^{(1)}_{Y|X_2}:=P_{Y|X_2}; Q^{(2)}_{Y|X_1}:=P_{Y|X_1}; Q^{(0)}_{Y}:=P_Y$ and using the fact that ${\beta_{1-\varepsilon_0}\left(P^{(0)},P^{(1)}\right) \leq 1 - \varepsilon_1}$ concludes the proof.
   \end{proof}
 
-  \begin{lem}
+  \begin{lemma}
     \label{lem:oneshotOB}
     For any relaxed non-signaling assisted code $(p_{x_1,x_2}, r_{x_1,x_2,y})_{x_1 \in \mathcal{X}_1,x_2 \in \mathcal{X}_2,y \in \mathcal{Y}}$ with $(k_1,k_2)$ messages and a probability of success $1-\varepsilon$, if $P_{X_1X_2}(x_1,x_2)=\frac{p_{x_1,x_2}}{k_1k_2}$ and $Y \in \mathcal{Y}$ is the outcome of $W$ on inputs $X_1,X_2$, we have:
     \begin{equation}
@@ -1495,7 +1491,7 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
         \log(k_1)+\log(k_2) &\leq \frac{I((X_1,X_2):Y)+h(\varepsilon)}{1-\varepsilon} \ .
       \end{aligned}
     \end{equation}
-  \end{lem}
+  \end{lemma}
   
   \begin{proof}
     Thanks to Lemma~\ref{lem:beta}, with the fact that $P_{X_1X_2} = P_{X_1|X_2} \times P_{X_2} = P_{X_2|X_1} \times P_{X_1}$, we have already:
@@ -1536,7 +1532,7 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
 
 In order to show additivity of the outer bound, we use the following lemma.
 
-  \begin{lem}
+  \begin{lemma}
     \label{lem:multiletterOB}
      For any distribution $P_{X_1^nX_2^n}$ of $(X_1^n,X_2^n)$, if $Y^n \in \mathcal{Y}^n$ is the outcome of $W^n$ on inputs $X_1^n,X_2^n$, we have:
       \begin{equation}
@@ -1546,7 +1542,7 @@ In order to show additivity of the outer bound, we use the following lemma.
           I((X_1^n,X_2^n):Y^n) &\leq \sum_{i=1}^n I((X_{1,i},X_{2,i}):Y_i) \ .
         \end{aligned}
       \end{equation}
-  \end{lem}
+  \end{lemma}
   
   \begin{proof}
     Consider $n$ copies of the MAC $W$. Let us write $X_{1,-i} := X_{1,1} \ldots X_{1,i-1} X_{1,i+1} \ldots X_{1,n}$ and $Z^n := Z_1 \ldots Z_n$. We have:
@@ -1586,11 +1582,11 @@ In order to show additivity of the outer bound, we use the following lemma.
   
   We next prove a technical lemma that was used in the previous proof.
   
-      \begin{lem}
+      \begin{lemma}
         \label{lem:claim1}
         For any distribution $P_{X_1^nX_2^n}$ of $(X_1^n,X_2^n)$, if $Y^n \in \mathcal{Y}^n$ is the outcome of $W^n$ on inputs $X_1^n,X_2^n$, we have:
         \[ I(X_{1,-i}:Y_i|X_{1,i}X_2^nY^{i-1}) = 0 \ . \]
-      \end{lem}
+      \end{lemma}
       \begin{proof}
         Let us show that, conditioned on any particular instance of $X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}$, $X_{1,-i}$ and $Y_i$ are independent.
 
@@ -1627,12 +1623,12 @@ In order to show additivity of the outer bound, we use the following lemma.
 
 	Combining the previous results gives the desired outer bound.
 
-      \begin{prop}[Outer bound part of Theorem~\ref{theo:CharaNSrelaxed}]
+      \begin{proposition}[Outer bound part of Theorem~\ref{theo:CharaNSrelaxed}]
         \label{prop:OBNSrelaxed}
         If a rate pair is achievable with relaxed non-signaling assistance then it is in the closure of the convex hull of all $(R_1,R_2)$ satisfying:
         \[ R_1 < I(X_1:Y|X_2)\ ,\ R_2 < I(X_2:Y|X_1)\ ,\ R_1+R_2 < I((X_1,X_2):Y) \ ,\]
         for $(X_1,X_2)$ following some law $P_{X_1X_2}$ on $\mathcal{X}_1 \times \mathcal{X}_2$, and $Y \in \mathcal{Y}$ the outcome of $W$ on inputs $X_1,X_2$.
-      \end{prop}
+      \end{proposition}
       \begin{proof}
         Consider $(R_1,R_2)$ achievable with relaxed non-signaling assistance: we have a sequence of relaxed non-signaling assisted codes for $n$ copies of the MAC $W$ with $k_1 = 2^{nR_1}, k_2 = 2^{nR_2}$ messages and an error probability $\varepsilon_n \underset{n \rightarrow +\infty}{\rightarrow} 0$, along with associated distributions of $X_1^nX_2^nY^n$.
 
@@ -1676,34 +1672,34 @@ In order to show additivity of the outer bound, we use the following lemma.
 
       The main consequence of that outer bound on the relaxed non-signaling assisted capacity region is that it holds also for the non-signaling assisted capacity region thanks to Corollary~\ref{cor:NSisrelaxed}:
 
-      \begin{cor}[Outer Bound on the Non-Signaling Assisted Capacity Region]
+      \begin{corollary}[Outer Bound on the Non-Signaling Assisted Capacity Region]
         \label{cor:OB}
         If a rate pair is achievable with non-signaling assistance, then it is in the closure of the convex hull of all $(R_1,R_2)$ satisfying:
         \[ R_1 < I(X_1:Y|X_2)\ ,\ R_2 < I(X_2:Y|X_1)\ ,\ R_1+R_2 < I((X_1,X_2):Y) \ ,\]
         for $(X_1,X_2)$ following any law $P_{X_1X_2}$ on $\mathcal{X}_1 \times \mathcal{X}_2$, and $Y \in \mathcal{Y}$ the outcome of $W$ on inputs $X_1,X_2$.
-      \end{cor}
+      \end{corollary}
 
       \subsection{Achievability Part of Theorem~\ref{theo:CharaNSrelaxed}}
       In order to construct the relaxed non-signaling assisted code for achievability, we will need the notions of jointly and conditional typical sets. We will consider the following typical sets defined in Chapter 2.5 of~\cite{GK11}: $\mathcal{T}^n_{\varepsilon}(X_1,X_2,Y)$, $\mathcal{T}^n_{\varepsilon}(X_1,X_2)$, $\mathcal{T}^n_{\varepsilon}(Y)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n,y^n)$, $\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)$. Recall that:
-      \begin{defi}[Typical set and conditional typical set]
+      \begin{definition}[Typical set and conditional typical set]
         We have the following definitions:
         \begin{enumerate}
         \item $\mathcal{T}^n_{\varepsilon}(X_1,X_2) := \left\{(x_1^n,x_2^n) : |\pi(x_1,x_2|x_1^n,x_2^n) - P_{X_1X_2}(x_1,x_2)|\leq \varepsilon P_{X_1X_2}(x_1,x_2) \text{ for all } (x_1,x_2) \in \mathcal{X}_1 \times \mathcal{X}_2\right\}$
       where $\pi(x_1,x_2|x_1^n,x_2^n) := \frac{|\{i : (x_{1,i},x_{2,i}) = (x_1,x_2)\}|}{n}$. This definition generalizes for any $t$-uple of variables.
     \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), \mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n) := \{ (x_1^n,x_2^n) : (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \}$
         \end{enumerate}
-      \end{defi}
+      \end{definition}
 
       A crucial property of such typical sets is the typical average lemma:
 
-      \begin{lem}[Typical Average Lemma~\cite{GK11}]
+      \begin{lemma}[Typical Average Lemma~\cite{GK11}]
         Let $(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)$. Then for any nonnegative function $g$ on $\mathcal{X}_1\times\mathcal{X}_2$:
         \[ (1-\varepsilon)\mathbb{E}[g(X_1,X_2)] \leq \frac{1}{n}\sum_{i=1}^ng(x_{1,i},x_{2,i}) \leq (1+\varepsilon)\mathbb{E}[g(X_1,X_2)] \ . \]
-      \end{lem}
+      \end{lemma}
       
       In particular, with this tool, we can derive the following properties:
       
-      \begin{lem}[Properties of typical sets~\cite{GK11}]
+      \begin{lemma}[Properties of typical sets~\cite{GK11}]
         We have, among others, the following statements about typical sets:
         \begin{enumerate}
         \item $\forall (x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2), 2^{-n(1+\varepsilon)H(X_1,X_2)} \leq P_{X_1^nX_2^n}(x_1^n,x_2^n) \leq 2^{-n(1-\varepsilon)H(X_1,X_2)}$.
@@ -1716,7 +1712,7 @@ In order to show additivity of the outer bound, we use the following lemma.
         \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), |\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \leq 2^{n(1+\varepsilon)H(X_1,X_2|Y)}$.
         \item For $\varepsilon' < \varepsilon$ and $n$ sufficiently large, we get $\forall y^n \in \mathcal{T}^n_{\varepsilon'}(Y), |\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2|Y)}$.
         \end{enumerate}
-      \end{lem}
+      \end{lemma}
       \begin{proof}
         We reproduce the proof of the last statement here to emphasize on the fact that there is an $n_0$ such that for all $n \geq n_0$ and for all $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, the property holds.
 
@@ -1770,12 +1766,12 @@ In order to show additivity of the outer bound, we use the following lemma.
           Thus, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$.
       \end{proof}
 
-  \begin{prop}[Achievability part of Theorem~\ref{theo:CharaNSrelaxed}]      
+  \begin{proposition}[Achievability part of Theorem~\ref{theo:CharaNSrelaxed}]      
       \label{prop:AchievabilityNSrelaxed}
       If a rate pair is in the closure of the convex hull of $(R_1,R_2)$ satisfying:
       \[ R_1 < I(X_1:Y|X_2)\ ,\ R_2 < I(X_2:Y|X_1)\ ,\ R_1+R_2 < I((X_1,X_2):Y) \ ,\]
       for $(X_1,X_2)$ following some law $P_{X_1X_2}$ on $\mathcal{X}_1 \times \mathcal{X}_2$, and $Y \in \mathcal{Y}$ the outcome of $W$ on inputs $X_1,X_2$, then it is in $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$.
-  \end{prop}
+  \end{proposition}
   \begin{proof}
     Let us fix $\varepsilon,\varepsilon' \in (0,1)$ such that $\varepsilon' < \varepsilon \leq \frac{1}{2}$. Let $n \in \mathbb{N}$ which will be chosen large enough during the proof.
 
@@ -1787,7 +1783,7 @@ In order to show additivity of the outer bound, we use the following lemma.
         \end{aligned}
       \end{equation}
 
-      Thus, $\hat{Y}$ follows the product law of $Y_i$, ie.  $\hat{Y} = Y^n$.
+      Thus, $\hat{Y}$ follows the product law of $Y_i$, i.e.  $\hat{Y} = Y^n$.
       
   Let us consider $C_1,C_2,C_3$ some positive numbers independent from $n$ and $\varepsilon$ which we will define later,  $k_1 = 2^{nR_1}$, $k_2 = 2^{nR_2}$ integers with $(R_1,R_2)$ positive rates such that:
   \begin{equation}
@@ -1871,7 +1867,7 @@ In order to show additivity of the outer bound, we use the following lemma.
 
   \section{Independent Non-Signaling Assisted Capacity Region}
   \label{section:NSsr}
-The goal of this section is to show that independent non-signaling assistance does not change the capacity region of a MAC $W$, ie. that $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)=\mathcal{C}(W)$. In order to prove this result, we will need some properties in the one-sender one-receiver case from~\cite{BF18}. Specifically, let us first recall the definition of the maximum success probability $\mathrm{S}(W,k)$ of transmitting $k$ messages using the channel $W$:
+The goal of this section is to show that independent non-signaling assistance does not change the capacity region of a MAC $W$, i.e. that $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)=\mathcal{C}(W)$. In order to prove this result, we will need some properties in the one-sender one-receiver case from~\cite{BF18}. Specifically, let us first recall the definition of the maximum success probability $\mathrm{S}(W,k)$ of transmitting $k$ messages using the channel $W$:
 \begin{equation}
   \begin{aligned}
     \mathrm{S}(W,k) := &&\underset{e,d}{\maxi} &&& \frac{1}{k} \sum_{i,x,y} W(y|x)e(x|i)d(i|y)\\
@@ -1883,9 +1879,9 @@ The goal of this section is to show that independent non-signaling assistance do
 
 Then, the following characterization of $\mathrm{S}(W,k)$ can be derived:
 
-\begin{prop}[Proposition 2.1 of~\cite{BF18}]
+\begin{proposition}[Proposition 2.1 of~\cite{BF18}]
   $\mathrm{S}(W,k) = \frac{1}{k} \underset{S \subseteq X: |S| \leq k}{\max} f_W(S)$ with $f_W(S) := \sum_{y \in Y} \max_{x \in S} W(y|x)$.
-\end{prop}
+\end{proposition}
 
 As in the MAC scenario, one can consider non-signaling assistance shared between the sender and the receiver, which leads to the following maximum success probability $\mathrm{S}^{\mathrm{NS}}(W,k)$:
 
@@ -1901,7 +1897,7 @@ As in the MAC scenario, one can consider non-signaling assistance shared between
 
 A symmetrization can also be done to simplify the expression of the linear program defining $\mathrm{S}^{\mathrm{NS}}(W,k)$:
 
-\begin{prop}[Appendix A of~\cite{BF18}]
+\begin{proposition}[Appendix A of~\cite{BF18}]
   \label{prop:NSonewayLP}
   \begin{equation}
     \begin{aligned}
@@ -1911,30 +1907,30 @@ A symmetrization can also be done to simplify the expression of the linear progr
       &&&&& 0 \leq r_{x,y} \leq p_{x}
     \end{aligned}
   \end{equation}
-\end{prop}
+\end{proposition}
 
 Finally, the main tool we will use from~\cite{BF18} is the following random coding technique, which describes how to find a classical code with a success probability close to the non-signaling assisted one:
-\begin{theo}[Theorem 3.1 of~\cite{BF18}]
+\begin{theorem}[Theorem 3.1 of~\cite{BF18}]
   \label{theo:RandomCoding}
   Given a solution $r,p$ of the program computing $\mathrm{S}^{\mathrm{NS}}(W,k)$, we have that:
   \[ \mathbb{E}_S\left[\frac{f_W(S)}{\ell}\right] \geq \frac{k}{\ell}\left(1-\left(1-\frac{1}{k}\right)^{\ell}\right) \cdot \frac{1}{k} \sum_{x,y} W(y|x)r_{x,y} , \]
   for the multiset $S$ obtained by choosing $\ell$ elements of $\mathcal{X}$ independently according to the distribution $\left(\frac{p_{x}}{k}\right)_{x \in \mathcal{X}}$.
-\end{theo}
+\end{theorem}
 
 We can now state our result on independent non-signaling assistance, which says that even in one-shot scenarios, the success probability with and without that assistance are close:
 
-\begin{theo}
+\begin{theorem}
   \label{theo:NSsr}
   For any $\ell_1,k_1,\ell_2,k_2$:
   \[ \min\left(\frac{k_1}{\ell_1}\left(1-\left(1-\frac{1}{k_1}\right)^{\ell_1}\right),\frac{k_2}{\ell_2}\left(1-\left(1-\frac{1}{k_2}\right)^{\ell_2}\right)\right)\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2) \leq \mathrm{S}_{\text{sum}}(W,\ell_1,\ell_2)\ . \]
-\end{theo}
+\end{theorem}
 
 In particular, this will imply that the capacity regions are the same:
 
-\begin{cor}
+\begin{corollary}
   \label{cor:NSsr}
   $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)=\mathcal{C}(W)$.
-\end{cor}
+\end{corollary}
 \begin{proof}
   We will show that $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)=\mathcal{C}_{\text{sum}}(W)$, which is enough to conclude thanks to Proposition~\ref{prop:CapaSumJoint} and Proposition~\ref{prop:NSCapaSumJoint}. We apply Theorem~\ref{theo:NSsr} on the MAC $W^{\otimes n}$.
 
@@ -1957,12 +1953,12 @@ Since this is true for all $\varepsilon > 0$, we get in fact that $\underset{n \
 
 In order to prove Theorem~\ref{theo:NSsr}, we will need the following lemma:
 
-\begin{lem}
+\begin{lemma}
   \label{lem:DoubleOneWay}
   If $S_1,S_2$ are classical codes (i.e. multisets with elements in $\mathcal{X}_1,\mathcal{X}_2$) of size $\ell_1,\ell_2$:
   \[ \mathrm{S}_{\text{sum}}(W,\ell_1,\ell_2) \geq \frac{1}{2}\left(\frac{f_{W^1_{S_2,\ell_2}}(S_1)}{\ell_1} + \frac{f_{W^2_{S_1,\ell_1}}(S_2)}{\ell_2}\right) \ ,\]
   where $W^1_{S_2, \ell_2}$ is the channel defined by $W^1_{S_2, \ell_2}(y|x_1) = \frac{1}{\ell_2} \sum_{i_2 = 1}^{\ell_2} W(y|x_1S_2^{i_2})$ and similarly for $W^2_{S_1, \ell_1}$.
-\end{lem}
+\end{lemma}
 \begin{proof}
   Let us define $e_1(x_1|i_1) := \mathbbm{1}_{S_1^{i_1}=x_1}$ and $e_2(x_2|i_2) := \mathbbm{1}_{S_2^{i_2}=x_2}$. Then for fixed $y$, let us take $j_1^y \in \text{argmax}_{i_1} \{\sum_{i_2 = 1}^{\ell_2}W(y|S_1^{i_1}S_2^{i_2})\}$, $j_2^y \in \text{argmax}_{i_2}\{\sum_{i_1 = 1}^{\ell_1}W(y|S_1^{i_1}S_2^{i_2})\}$ and then define $d(j_1|y) := \mathbbm{1}_{j_1=j_1^y}$, $d(j_2|y) := \mathbbm{1}_{j_2=j_2^y}$. We have then:
 
@@ -2024,16 +2020,11 @@ We have now all the tools to prove Theorem~\ref{theo:NSsr}:
 \end{proof}
 
 \begin{rk}
-  In the whole proof of Theorem~\ref{theo:NSsr}, as well as the properties it depends on, we have never used the fact that the output of the channel $y$ was the same for both decoders $d_1$ and $d_2$. This implies that the result also holds for interference channels, ie. two-sender two-receiver channels $W(y_1y_2|x_2x_2)$. Specifically, non-signaling assistance shared between the first sender and the first receiver and independently shared between the second sender and the second receiver does not change the capacity region of interference channels.
+  In the whole proof of Theorem~\ref{theo:NSsr}, as well as the properties it depends on, we have never used the fact that the output of the channel $y$ was the same for both decoders $d_1$ and $d_2$. This implies that the result also holds for interference channels, i.e. two-sender two-receiver channels $W(y_1y_2|x_2x_2)$. Specifically, non-signaling assistance shared between the first sender and the first receiver and independently shared between the second sender and the second receiver does not change the capacity region of interference channels.
 \end{rk}
   
 \section{Conclusion}
-In this work, we have studied the impact of non-signaling assistance on the capacity of multiple-access channels. We have developed an efficient linear program computing the success probability of the best non-signaling assisted code for a finite number of copies of a multiple-access channel. In particular, this gives lower bounds on the zero-error non-signaling assisted capacity of multiple-access channels.
+In this chapter, we have studied the impact of non-signaling assistance on the capacity of multiple-access channels. We have developed an efficient linear program computing the success probability of the best non-signaling assisted code for a finite number of copies of a multiple-access channel. In particular, this gives lower bounds on the zero-error non-signaling assisted capacity of multiple-access channels.
 Applied to the binary adder channel, these results were used to prove that a sum-rate of $\frac{\log_2(72)}{4} \simeq 1.5425$ can be reached with zero error, which beats the maximum classical sum-rate capacity of $\frac{3}{2}$. For noisy channels, we have developed a technique giving lower bounds through the use of concatenated codes. Applied to the noisy binary adder channel, this technique was used to show that non-signaling assistance still improves the sum-rate capacity. We have also found an outer bound on the non-signaling assisted capacity region through a relaxed notion of non-signaling assistance, whose capacity region was characterized by a single-letter formula. Finally, we have shown that independent non-signaling assistance does not change the capacity region.
 
-Our results suggest that quantum entanglement may also increase the capacity of such channels. However, even for the binary adder channel, this question remains open. One could also ask if such efficient methods to compute the best non-signaling assisted codes can be extended to Gaussian multiple-access channels. Finally, establishing a single-letter formula for the non-signaling assisted capacity of multiple-access channels is the main open question left by this work. It remains open even for the binary adder channel. Proving that non-signaling assistance and relaxed non-signaling assistance coincide asymptotically would directly answer this question and show that the capacity region is described in Theorem~\ref{theo:CharaNSrelaxed}.
-
-\section*{Acknowledgements}
-We would like to thank Mario Berta and Andreas Winter for discussions about the use of non-signaling correlations for multiple access channels as well as the anonymous referees for their suggestions that improved the paper.
-This work is funded by the European Research Council (ERC Grant AlgoQIP, Agreement No. 851716). We also acknowledge funding from the European Union’s Horizon 2020 research and innovation programme under Grant Agreement No 101017733 within the QuantERA II Programme.
-
+Our results suggest that quantum entanglement may also increase the capacity of such channels. However, even for the binary adder channel, this question remains open. One could also ask if such efficient methods to compute the best non-signaling assisted codes can be extended to Gaussian multiple-access channels. Finally, establishing a single-letter formula for the non-signaling assisted capacity of multiple-access channels is the main open question left here. It remains open even for the binary adder channel. Proving that non-signaling assistance and relaxed non-signaling assistance coincide asymptotically would directly answer this question and show that the capacity region is described in Theorem~\ref{theo:CharaNSrelaxed}.

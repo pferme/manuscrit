@@ -1,82 +1,3 @@
-\documentclass[11pt]{article}
-
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{multicol}
-\usepackage{amsthm}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{mathtools}
-\usepackage{dsfont}
-\usepackage{bm}
-\usepackage{bbm}
-\usepackage{xparse}
-\usepackage{physics}
-\usepackage{empheq}
-\usepackage{url}
-\usepackage{hyperref}
-\usepackage[affil-it]{authblk}
-\usepackage{tikz}
-\usetikzlibrary{shapes,arrows,quotes,angles,calc}
-
-\tikzstyle{block} = [draw, fill=white, rectangle, 
-  minimum height=2em, minimum width=3em]
-\tikzstyle{bigblock} = [draw, fill=white, rectangle, 
-  minimum height=3em, minimum width=4em]
-\tikzstyle{Bigblock} = [draw, fill=white, rectangle, 
-    minimum height=5em, minimum width=6em]
-\tikzstyle{input} = [coordinate]
-\tikzstyle{output} = [coordinate]
-\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
-
-\usepackage{rotating}
-\usepackage{graphicx}
-\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
-
-\usepackage{pgfplots}
-\pgfplotsset{compat = newest}
-
-\usepackage[top=3cm,bottom=2cm,right=2cm,left=2cm]{geometry}
-
-\theoremstyle{definition}
-\newtheorem{theo}{Theorem}[section]
-\newtheorem{lem}[theo]{Lemma}
-\newtheorem{cor}[theo]{Corollary}
-\newtheorem{prop}[theo]{Proposition}
-\newtheorem{defi}[theo]{Definition}
-\newtheorem{conj}[theo]{Conjecture}
-
-\newtheorem{theo*}{Theorem}
-
-\theoremstyle{remark}
-\newtheorem*{rk}{Remark}
-
-\DeclareMathOperator{\Poi}{\text{Poi}}
-\DeclareMathOperator{\Ber}{\text{Ber}}
-\DeclareMathOperator{\Bin}{\text{Bin}}
-\DeclareMathOperator{\maxi}{\text{maximize}}
-\DeclareMathOperator{\mini}{\text{minimize}}
-\DeclareMathOperator{\st}{\text{subject to}}
-\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
-\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
-\DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
-
-\newcommand{\OF}[1]{\textcolor{blue}{OF: #1}}
-
-\title{\bfseries Broadcast Channel Coding:\\Algorithmic Aspects and Non-Signaling Assistance}
-\author{Omar Fawzi\footnote{Univ Lyon, ENS Lyon, UCBL, CNRS, Inria,  LIP, F-69342, Lyon Cedex 07, France. \href{mailto:omar.fawzi@ens-lyon.fr}{\texttt{omar.fawzi@ens-lyon.fr}}} \qquad Paul Fermé\footnote{Univ Lyon, ENS Lyon, UCBL, CNRS, Inria, LIP, F-69342, Lyon Cedex 07, France. \href{mailto:paul.ferme@ens-lyon.fr}{\texttt{paul.ferme@ens-lyon.fr}}}
-}
-\date{}
-
-\begin{document}
-\maketitle
-
-\abstract{We address the problem of coding for classical broadcast channels, which entails maximizing the success probability that can be achieved by sending a fixed number of messages over a broadcast channel. For point-to-point channels, Barman and Fawzi found in~\cite{BF18} an $(1-e^{-1})$-approximation algorithm running in polynomial time, and showed that it is \textrm{NP}-hard to achieve a strictly better approximation ratio. Furthermore, these algorithmic results were at the core of their proof that non-signaling assistance does not change the capacity of point-to-point channels. It is natural to if similar results hold for broadcast channels, exploiting links between approximation algorithms of the channel coding problem and the non-signaling assisted capacity region.
-  
-  In this work, we make several contributions on algorithmic aspects and non-signaling assisted capacity regions of broadcast channels.  We first show that when non-signaling assistance is shared only between the decoders, the capacity region does not change. For the class of deterministic broadcast channels, we describe a $(1-e^{-1})^2$-approximation algorithm running in polynomial time, and we show that the capacity region for that class is the same with or without non-signaling assistance. Finally, we show that in the value query model, we cannot achieve a better approximation ratio than $\Omega\left(\frac{1}{\sqrt{m}}\right)$ in polynomial time for the general broadcast channel coding problem, with $m$ the size of one of the outputs of the channel.}
-
-\section{Introduction}
-
 Broadcast channels, introduced by Cover in~\cite{Cover72}, describe the simple network communication setting where one sender aims to transmit individual messages to two receivers. Contrary to one-way channels~\cite{Shannon48} or multiple-access channels~\cite{Liao73,Ahlswede73}, the capacity region of broadcast channels is known only for particular classes such as the degraded~\cite{Bergmans73,Gallager74,AK75}, deterministic~\cite{Marton77,Pinsker78} and semi-deterministic~\cite{GIP80}. Only inner bounds~\cite{Cover75,Meulen75,Marton79} and outer bounds~\cite{Sato78,Marton79,NG07,GN20} on the capacity region are known in the general setting.
 
 On the one hand, from the point of view of quantum information, it is natural to ask whether additional resources, such as quantum entanglement or more generally non-signaling correlations between the parties, changes the capacity region. A non-signaling correlation is a multipartite input-output box shared between parties that, as the name suggests, cannot by itself be used to send information between parties. However, non-signaling correlations such as the ones generated by measurements of entangled quantum particles, can provide an advantage for various information processing tasks and nonlocal games. The study of such correlations has given rise to the quantum information area known as nonlocality~\cite{BCPSW14}. For example, in the context of channel coding, there exists classical point-to-point channels for which quantum entanglement between the sender and the receiver can increase the optimal success probability for sending one bit of information with a single use of the channel~\cite{PLMK11,BF18}. However, a well-known result~\cite{BSST99} states that for classical point-to-point channels, entanglement and even more generally non-signaling correlations do not change the capacity of the channel; see also~\cite{Matthews12,BF18}.
@@ -88,7 +9,7 @@ On the other hand, from an algorithmic point of view, a crucial question in info
 In the point-to-point scenario studied in~\cite{BF18}, the existence of a constant-ratio approximation algorithm is linked to the equality of the capacity regions with and without non-signaling assistance. This is due to the fact the channel coding problem with non-signaling assistance becomes a linear program, thus computable in polynomial time. It is even equal to the natural linear relaxation of the channel coding problem, which is very common strategy towards approximating an integer linear program. Therefore, showing that this approximation strategy guarantees a constant ratio is the main ingredient towards showing the equality of the capacity regions with and without non-signaling assistance. This link has not been studied yet for broadcast channels. This raises the following questions: Does the capacity region of the broadcast channel change when non-signaling resources between parties are allowed? What is the best approximability ratio of the broadcast channel coding problem? How those two questions are related?
 
 
-\paragraph{Our Results} In the current work, we first extend the result by~\cite{PDB21} in a natural way. We prove that non-signaling resource shared between the decoders does not change the capacity region; see Theorem~\ref{theo:NSdecoders}. More significantly, we study the influence of sharing a non-signaling resource between the three parties. Contrary to the previous case, this turns the broadcast channel coding problem, which is \textrm{NP}-hard, into a linear program, thus solvable in polynomial time.
+\paragraph{Our Results} In this chapter, we first extend the result by~\cite{PDB21} in a natural way. We prove that non-signaling resource shared between the decoders does not change the capacity region; see Theorem~\ref{theo:NSdecoders}. More significantly, we study the influence of sharing a non-signaling resource between the three parties. Contrary to the previous case, this turns the broadcast channel coding problem, which is \textrm{NP}-hard, into a linear program, thus solvable in polynomial time.
 
 We describe a $(1-e^{-1})^2$-approximation algorithm running in polynomial time for the broadcast channel coding problem limited to the class of deterministic channels. This is achieved through a graph interpretation of the problem, where one aims at partitioning a bipartite graph into $k_1$ and $k_2$ parts, such that the resulting quotient graph is the densest possible; see Proposition~\ref{prop:BCCisDQG} and Theorem~\ref{theo:DQGapprox}. Using the ideas coming from this algorithm, we show that for the class of deterministic channels, non-signaling resource shared between the three parties does not change the capacity region; see Theorem~\ref{theo:NSdet} and Corollary~\ref{cor:NSdet}.
 
@@ -127,7 +48,7 @@ The coding problem for a broadcast channel $W : \mathcal{X} \rightarrow \mathcal
 \caption{Coding for a broadcast channel $W$.}
 \end{figure}
 
-We will call $\mathrm{p}_1(W,e,d_1)$ (resp. $\mathrm{p}_2(W,e,d_2)$) the probability of successfully decoding the first (resp. second) message, i.e. that $j_1 = i_1$ (resp. $j_2 = i_2$), given that the encoder is $e$ and the decoder is $d_1$ (resp. $d_2$). We will also consider $\mathrm{p}(W,e,d_1,d_2)$, the probability of successfully decoding both messages, i.e. that $j_1 = i_1$ and  $j_2 = i_2$, given that the encoder is $e$ and the decoders are $d_1,d_2$.
+We will call $\mathrm{p}_1(W,e,d_1)$ (resp. $\mathrm{p}_2(W,e,d_2)$) the probability of successfully decoding the first (resp. second) message, ie. that $j_1 = i_1$ (resp. $j_2 = i_2$), given that the encoder is $e$ and the decoder is $d_1$ (resp. $d_2$). We will also consider $\mathrm{p}(W,e,d_1,d_2)$, the probability of successfully decoding both messages, ie. that $j_1 = i_1$ and  $j_2 = i_2$, given that the encoder is $e$ and the decoders are $d_1,d_2$.
 
 We aim to find the best encoder and decoders according to some figure of merit. However, to do so, we need a one dimensional real value objective to optimize. This leads to two different quantities.
 
@@ -160,7 +81,7 @@ and symmetrically for $\mathrm{p}_2(W,e,d_2)$, which leads to the announced obje
 \end{proof}
 
 One can rewrite this optimization program in a more convenient way, proving that $\mathrm{S}_{\text{sum}}(W,k_1,k_2)$ depends only on the marginals of $W$:
-\begin{prop}
+\begin{proposition}
   \begin{equation}
   \begin{aligned}
     \mathrm{S}_{\text{sum}}(W,k_1,k_2) = &&\underset{e,d_1,d_2}{\maxi} &&& \frac{1}{2k_1k_2}\sum_{i_1,x,y_1} W_1(y_1|x)d_1(i_1|y_1)\sum_{i_2} e(x|i_1i_2)\\
@@ -171,7 +92,7 @@ One can rewrite this optimization program in a more convenient way, proving that
     &&&&& e(x|i_1i_2), d_1(y_1|i_1), d_2(y_2|i_2) \geq 0
   \end{aligned}
   \end{equation}
-\end{prop}
+\end{proposition}
 
 \begin{proof}
   It follows from the definitions $W_1(y_1|x) := \sum_{y_2} W(y_1y_2|x)$ and $W_2(y_2|x) := \sum_{y_1} W(y_1y_2|x)$.
@@ -195,17 +116,17 @@ We will now focus on maximizing $\mathrm{p}(W,e,d_1,d_2)$ over all encoders $e$ 
 
 The proof is the same as in the sum probability scenario. The objective values of those two optimization programs are not the same, but $\mathrm{S}(W,k_1,k_2)$ and $\mathrm{S}_{\text{sum}}(W,k_1,k_2)$ still characterize the same capacity region~\cite{Willems90}. Let us recall first the definition of their capacity regions:
 
-\begin{defi}[Capacity Region $\mathcal{C}(W)$ (resp. $\mathcal{C}_{\text{sum}}(W)$) of a broadcast channel $W$]
+\begin{definition}[Capacity Region $\mathcal{C}(W)$ (resp. $\mathcal{C}_{\text{sum}}(W)$) of a broadcast channel $W$]
   A rate pair $(R_1,R_2)$ is achievable (resp. sum-achievable) if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   \[ \text{(resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 )\ . \]
   We define the joint (resp. sum) (classical) capacity region $\mathcal{C}(W)$ (resp. $\mathcal{C}_{\text{sum}}(W)$) as the closure of the set of all achievable (resp. sum-achievable) rate pairs.
-\end{defi}
+\end{definition}
 
-\begin{prop}
+\begin{proposition}
   \label{prop:capacitysum}
   For any broadcast channel $W$, $\mathcal{C}(W) = \mathcal{C}_{\text{sum}}(W)$.
-\end{prop}
+\end{proposition}
 \begin{proof}
   Let us focus on error probabilities rather than success ones. Call them respectively $\mathrm{E}(W,k_1,k_2) := 1-\mathrm{S}(W,k_1,k_2)$ and $\mathrm{E}_{\text{sum}}(W,k_1,k_2) := 1-\mathrm{S}_{\text{sum}}(W,k_1,k_2)$. Let us fix a solution $e,d_1,d_2$ of the optimization program computing $\mathrm{S}(W,k_1,k_2)$. Let us remark first that:
 
@@ -248,7 +169,7 @@ Thus, up to a multiplicative factor $2$, the error is the same. In particular, w
 In this section, we will consider the broadcast channel coding problem with additional resources, in order to determine how these resources affect its success probabilities as well as the capacity regions that can be defined from them.
 
 \subsection{Non-Signaling Assistance between the Decoders}
-Here, we consider the case where the receivers are given non-signaling assistance. This resource, which is a theoretical but easier to manipulate generalization of quantum entanglement, can be characterized as follows.  A non-signaling box $d(j_1j_2|y_1y_2)$ is any joint conditional probability distribution such that the marginal from one party is independent from the other party's input, i.e. we have:
+Here, we consider the case where the receivers are given non-signaling assistance. This resource, which is a theoretical but easier to manipulate generalization of quantum entanglement, can be characterized as follows.  A non-signaling box $d(j_1j_2|y_1y_2)$ is any joint conditional probability distribution such that the marginal from one party is independent from the other party's input, ie. we have:
 \begin{equation}
   \begin{aligned}
     &&\forall j_1,y_1,y_2,y'_2, &&&\sum_{j_2} d(j_1j_2|y_1y_2) = \sum_{j_1} d(j_1j_2|y_1y'_2) \ ,\\
@@ -273,19 +194,19 @@ Thus, when receivers are given non-signaling assistance, it means that the produ
 
 The corresponding capacity regions $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ and $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$ are defined as before:
 
-\begin{defi}[Capacity Region $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$) of a broadcast channel $W$]
+\begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$) of a broadcast channel $W$]
   A rate pair $(R_1,R_2)$ is achievable (resp. sum-achievable) with non-signaling assistance between the decoders if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\text{dec}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   \[ \text{(resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 )\ . \]
   We define the joint (resp. sum) capacity region with non-signaling assistance between the decoders $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$) as the closure of the set of all rate pairs achievable (resp. sum-achievable) with non-signaling assistance between the decoders.
-\end{defi}
+\end{definition}
 
 The objective of this section is to show that sharing non-signaling assistance between the decoders does not change the capacity regions of a broadcast channel. In order to do so, we will also show that sum and joint capacity regions with non-signaling assistance between the decoders are the same. This is an extension of the result by~\cite{PDB21} where it has been proved to be the case for the weaker resource that is quantum entanglement.
 
-\begin{prop}
+\begin{proposition}
   \label{prop:NSdecoderssum}
   For any broadcast channel $W$, $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W)= \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$
-\end{prop}
+\end{proposition}
 
 \begin{proof}
   Given an encoder $e$ and a non-signaling decoding box $d$, the maximum success probability of encoding and decoding correctly with those is given by:
@@ -315,10 +236,10 @@ and by maximizing over all $e$ and $d$:
 As before, this implies that the capacity regions are the same.
 \end{proof}
 
-\begin{theo}
+\begin{theorem}
     \label{theo:NSdecoders}
    For any broadcast channel $W$, $\mathcal{C}(W) = \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$
-\end{theo}
+\end{theorem}
 
 \begin{proof}
 In the sum scenario, since the objective function does not depend on the product $d_1(j_1|y_1)d_2(j_2|y_2)$ but only on the marginals $d_1(j_1|y_1)$ and $d_2(j_2|y_2)$, the non-signaling box won't give additional decoding power. Indeed, for any encoder $e$ and non-signaling decoding box $d$, we have that:
@@ -329,7 +250,7 @@ In the sum scenario, since the objective function does not depend on the product
   \end{aligned}
 \end{equation}
 
-Thus, by choosing $d_1(j_1|y_1) := \sum_{j_2}d(j_1j_2|y_1y_2)$ and $d_2(j_2|y_2) := \sum_{j_1}d(j_1j_2|y_1y_2)$, which are well-defined since $d$ is a non-signaling box, one gets that $\mathrm{S}_{\text{sum}}(W,k_1,k_2,e,d_1,d_2) = \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d)$. By optimizing over all $e$ and $d$, one gets $\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2) \leq \mathrm{S}_{\text{sum}}(W,k_1,k_2)$. Since the inequality is obvious in the other direction, as $d(j_1j_2|y_1y_2) := d_1(j_1|y_1)d_2(j_2|y_2)$ is always a non-signaling box, we have that $\mathrm{S}_{\text{sum}}(W,k_1,k_2)=\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2)$. This implies in particular that the capacity regions are the same, i.e. $\mathcal{C}_{\text{sum}}(W)=\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W)$
+Thus, by choosing $d_1(j_1|y_1) := \sum_{j_2}d(j_1j_2|y_1y_2)$ and $d_2(j_2|y_2) := \sum_{j_1}d(j_1j_2|y_1y_2)$, which are well-defined since $d$ is a non-signaling box, one gets that $\mathrm{S}_{\text{sum}}(W,k_1,k_2,e,d_1,d_2) = \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d)$. By optimizing over all $e$ and $d$, one gets $\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2) \leq \mathrm{S}_{\text{sum}}(W,k_1,k_2)$. Since the inequality is obvious in the other direction, as $d(j_1j_2|y_1y_2) := d_1(j_1|y_1)d_2(j_2|y_2)$ is always a non-signaling box, we have that $\mathrm{S}_{\text{sum}}(W,k_1,k_2)=\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2)$. This implies in particular that the capacity regions are the same, ie. $\mathcal{C}_{\text{sum}}(W)=\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W)$
 
 Finally, since $\mathcal{C}(W) = \mathcal{C}_{\text{sum}}(W)$ by Proposition~\ref{prop:capacitysum} and $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W)= \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ by Proposition~\ref{prop:NSdecoderssum}, we get that $\mathcal{C}(W) = \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$.
 \end{proof}
@@ -453,7 +374,7 @@ Similarly, we define the maximum joint success probability $\mathrm{S}^{\mathrm{
 
 We can rewrite both these programs in more convenient and smaller linear programs:
 
-\begin{prop}
+\begin{proposition}
 \begin{equation}
   \begin{aligned}
     \mathrm{S}_{\text{sum}}^{\mathrm{NS}}(W,k_1,k_2) = &&\underset{p,r,r^1,r^2}{\maxi} &&& \frac{1}{2k_1k_2}\left(\sum_{x,y_1} W_1(y_1|x)r^1_{x,y_1} + \sum_{x,y_2} W_2(y_2|x)r^2_{x,y_2}\right)\\
@@ -477,7 +398,7 @@ We can rewrite both these programs in more convenient and smaller linear program
     &&&&& p_x - r^1_{x,y_1} - r^2_{x,y_2} + r_{x,y_1,y_2} \geq 0\\
   \end{aligned}
 \end{equation}
-\end{prop}
+\end{proposition}
 \begin{proof}
   One can check that given a solution of the original program, the following choice of variables is a valid solution of the second program achieving the same objective value:
 \begin{equation}
@@ -502,16 +423,16 @@ For the other direction, given those variables, a non-signaling probability dist
 
 As before, one can define the capacity regions of broadcast channels with non-signaling assistance:
 
-\begin{defi}[Capacity Region $\mathcal{C}^{\mathrm{NS}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W)$) of a broadcast channel $W$]
+\begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{NS}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W)$) of a broadcast channel $W$]
   A rate pair $(R_1,R_2)$ is achievable with (full) non-signaling assistance if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   \[ \text{(resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 )\ . \]
   We define the joint (resp. sum) non-signaling assisted capacity region $\mathcal{C}^{\mathrm{NS}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W)$) as the closure of the set of all rate pairs achievable with (full) non-signaling assistance.
-\end{defi}
+\end{definition}
 
-\begin{prop}
+\begin{proposition}
     For any broadcast channel $W$, $\mathcal{C}^{\mathrm{NS}}(W) = \mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W)$.
-\end{prop}
+\end{proposition}
 \begin{proof}
 Let us show that:
 \[ 2 \mathrm{S}_{\text{sum}}^{\mathrm{NS}}(W,k_1,k_2)-1 \leq  \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq \mathrm{S}_{\text{sum}}^{\mathrm{NS}}(W,k_1,k_2) \ . \]
@@ -548,44 +469,44 @@ In this section, we will address the question of the approximability of $\mathrm
 
 We say that $W$ is deterministic if $\forall x,y_1,y_2, W(y_1y_2|x) \in \{0,1\}$. We can then define $(W_1(x),W_2(x))$ as the only pair $(y_1,y_2)$ such that $W(y_1y_2|x)=1$, which exists uniquely as $W$ is a conditional probability distribution. Thus, the deterministic broadcast channel coding problem can be defined in the following way:
 
-\begin{defi}[\textsc{DetBCC}]
+\begin{definition}[\textsc{DetBCC}]
   Given a deterministic channel $W$ and integers $k_1$ and $k_2$, the deterministic broadcast channel coding problem, which we call \textsc{DetBCC}, entails maximizing
   \[ \mathrm{S}(W,k_1,k_2,e,d_1,d_2) := \frac{1}{k_1k_2}\sum_{i_1,i_2}\mathbbm{1}_{d_1(W_1(e(i_1i_2)))=i_1}\mathbbm{1}_{d_2(W_2(e(i_1i_2)))=i_2}\]
   over all functions $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$,  $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$.
-\end{defi}
+\end{definition}
 
 \subsection{Reformulation as a Bipartite Graph Problem}
 In this subsection, we will reformulate \textsc{DetBCC} as a bipartite graph problem. But first, let us introduce some notations:
 
-\begin{defi}[Graph notations]
+\begin{definition}[Graph notations]
   Consider a bipartite graph $G = (V_1 \sqcup V_2, E \subseteq V_1 \times V_2)$:
   \begin{enumerate}
     \item $G^{\mathcal{P}_1,\mathcal{P}_2}$, the quotient of $G$ by partitions $\mathcal{P}_1,\mathcal{P}_2$ of respectively $V_1,V_2$, is defined by:
       \[ G^{\mathcal{P}_1,\mathcal{P}_2} := \left(\mathcal{P}_1 \sqcup \mathcal{P}_2, \{(p_1,p_2) \in \mathcal{P}_1 \times \mathcal{P}_2: E \cap (p_1 \times p_2) \not= \emptyset\}\right) \ .\]
     \item $e_G(\mathcal{P}_1,\mathcal{P}_2) := |E^{G^{\mathcal{P}_1,\mathcal{P}_2}}|$ is the number of edges of $G^{\mathcal{P}_1,\mathcal{P}_2}$.
     \item $N_G^{\mathcal{P}_1,\mathcal{P}_2}(p) := N_{G^{\mathcal{P}_1,\mathcal{P}_2}}(p)$ is the set of neighbors of $p$ in the graph $G^{\mathcal{P}_1,\mathcal{P}_2}$.
-    \item Similarly, $\deg_G^{\mathcal{P}_1,\mathcal{P}_2}(p) := \deg_{G^{\mathcal{P}_1,\mathcal{P}_2}}(p)$ is the degree, i.e. the number of neighbors, of $p$ in the graph $G^{\mathcal{P}_1,\mathcal{P}_2}$.
+    \item Similarly, $\deg_G^{\mathcal{P}_1,\mathcal{P}_2}(p) := \deg_{G^{\mathcal{P}_1,\mathcal{P}_2}}(p)$ is the degree, ie. the number of neighbors, of $p$ in the graph $G^{\mathcal{P}_1,\mathcal{P}_2}$.
     \item We will use $V_1,V_2$ in previous notations when we do not partition on the left and right part respectively (or identify those to trivial partitions in singletons). For instance, $G^{V_1,V_2}=G$.
     \item We will use the notations $e(\mathcal{P}_1,\mathcal{P}_2)$, $N_{\mathcal{P}_1,\mathcal{P}_2}(p)$  and $\deg_{\mathcal{P}_1,\mathcal{P}_2}(p)$ when the graph $G$ considered is clear from the context.
   \end{enumerate}
-\end{defi}
+\end{definition}
 
 Now, let us remark that a deterministic channel $W$, up to a permutation of elements of $\mathcal{X}$, is characterized by the following bipartite graph:
 
-\begin{defi}[Bipartite Graph $G_W$ associated to the deterministic channel $W$]
+\begin{definition}[Bipartite Graph $G_W$ associated to the deterministic channel $W$]
 \[ G_W:=(\mathcal{Y}_1 \sqcup \mathcal{Y}_2, E = \{(y_1,y_2) \in \mathcal{Y}_1 \times \mathcal{Y}_2: \exists x \in \mathcal{X}, y_1=W_1(x) \text{ and } y_2=W_2(x)\}) \ . \]
-\end{defi}
+\end{definition}
 
 Indeed, permuting the elements of $\mathcal{X}$ does not change $G_W$ nor $\mathrm{S}(W,k_1,k_2)$. As a consequence, up to a multiplicative factor $k_1k_2$, we will show that \textsc{DetBCC} is equivalent to the following bipartite graph problem:
 
-\begin{defi}[\textsc{DensestQuotientGraph}]
+\begin{definition}[\textsc{DensestQuotientGraph}]
 Given a bipartite graph $G  = (V_1 \sqcup V_2, E)$ and integers $k_1,k_2$, the problem \textsc{DensestQuotientGraph} entails maximizing $e_G(\mathcal{P}_1,\mathcal{P}_2)$, the number of edges of the quotient graph of $G$ by $\mathcal{P}_1,\mathcal{P}_2$, over all partitions $\mathcal{P}_1$ of $V_1$ in $k_1$ parts and $\mathcal{P}_2$ of $V_2$ in $k_2$ parts.
-\end{defi}
+\end{definition}
 
-\begin{prop}
+\begin{proposition}
   \label{prop:BCCisDQG}
   Given a deterministic channel $W$ and integers $k_1,k_2$, it is equivalent to solve \textsc{DetBCC} on $W,k_1,k_2$ or \textsc{DensestQuotientGraph} on $G_W,k_1,k_2$. That is to say, given an optimal solution of one of those problems, one can efficiently construct an optimal solution of the other. Furthermore, their optimal values satisfy $k_1k_2\textsc{DetBCC}(W,k_1,k_2) = \textsc{DensestQuotientGraph}(G_W,k_1,k_2)$.
-\end{prop}
+\end{proposition}
 \begin{proof}
  Consider an optimal solution $e,d_1,d_2$ of \textsc{DetBCC}. Note that $d_1$ defines a partition $\mathcal{P}_1$ of $\mathcal{Y}_1$ in $k_1$ parts and $d_2$ defines a partition $\mathcal{P}_2$ of $\mathcal{Y}_2$ in $k_2$ parts, with $\mathcal{P}_b^{i_b} := \{y_b \in \mathcal{Y}_b : d_b(y) = i_b \}$ for $b \in \{1,2\}$. Then we have:
 \begin{equation}
@@ -639,15 +560,15 @@ In particular, this implies that their optimal objective values satisfy $k_1k_2\
 \subsection{Approximation Algorithm for \textsc{DensestQuotientGraph}}
 In this section, we will sort out how hard is \textsc{DensestQuotientGraph}, and thanks to Proposition~\ref{prop:BCCisDQG}, how hard is it to solve \textsc{DetBCC}.
 
-\begin{theo}
+\begin{theorem}
   \label{theo:DQGapprox}
   There exists a polynomial-time $(1-e^{-1})^2$-approximation algorithm for \textsc{DensestQuotientGraph}. Furthermore, it is \textrm{NP}-hard to solve exactly \textsc{DensestQuotientGraph}.
-\end{theo}
+\end{theorem}
 
-\begin{cor}
+\begin{corollary}
   \label{theo:DetBCCapprox}
   There exists a polynomial-time $(1-e^{-1})^2$-approximation algorithm for \textsc{DetBCC}.
-\end{cor}
+\end{corollary}
 
 The approximation algorithm is a two-step process. First, we consider the problem of maximizing $\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)$ over all partitions $\mathcal{P}_2$ of $V_2$ in $k_2$ parts. We will show that this is a special case of the submodular welfare problem, which can be approximated within a factor $1-e^{-1}$ in polynomial time~\cite{Vondrak08}. We then choose the partition $\mathcal{P}_1$ on $V_1$ in $k_1$ parts uniformly at random. This partition couple will give an objective value $e(\mathcal{P}_1,\mathcal{P}_2)$ within a $(1-e^{-1})^2$ factor from the optimal solution in expectation.
 
@@ -718,18 +639,18 @@ Thanks to Theorem~\ref{theo:DQGapprox} and Proposition~\ref{prop:BCCisDQG}, ther
 
 This turns out to be true, and will be proved through the following theorem:
 
-\begin{theo}
+\begin{theorem}
   \label{theo:NSdet}
   If $W$ is a deterministic broadcast channel, then for all $\ell_1 \leq k_1$ and $\ell_2 \leq k_2$:
   \[ \left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq \mathrm{S}(W,\ell_1,\ell_2)\ . \]
   
   
-\end{theo}
+\end{theorem}
 
-\begin{cor}
+\begin{corollary}
   \label{cor:NSdet}
   For any deterministic broadcast channel $W$, $\mathcal{C}^{\mathrm{NS}}(W)=\mathcal{C}(W)$.
-\end{cor}
+\end{corollary}
 \begin{proof}
   We apply Theorem~\ref{theo:NSdet} on the deterministic broadcast channel $W^{\otimes n}$.
 
@@ -808,11 +729,11 @@ which concludes the first part of the proof.
   \[ \frac{\ell_2}{k_2}\left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\min\left(k_1k_2,\sum_{y_1}\min(k_2,\deg(y_1))\right) \ . \]
 
   First, $\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right) = \sum_{i_2=1}^{\ell_2}\varphi(\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))$ with $\varphi(j):=\min(k_1,j)$ which is a concave function. We will use several tools introduced in~\cite{BFF21} to handle those concave functions in approximation algorithms. Specifically, we have that the Poisson concavity ratio $\alpha_{\varphi} := \inf_{x \in \mathbb{R}^+} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x))} = 1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}$ for that particular function. We will also need the following lemma, whose proof is based on convex order:
-  \begin{lem}[Lemma 2.2 of~\cite{BFF21}]
+  \begin{lemma}[Lemma 2.2 of~\cite{BFF21}]
     For $\varphi$ concave, and $p \in [0,1]^m$, we have:
     \[\mathbb{E}\Big[\varphi\Big(\sum_{i=1}^m\Ber(p_i)\Big)\Big] \geq \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i=1}^m p_i\Big)\Big)\Big]\ .\]
   \label{lem:ConvexOrder}
-\end{lem}
+\end{lemma}
   
 Let us find the law of $\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})$:
   \begin{equation}
@@ -892,18 +813,18 @@ The goal of this section is to show that the general broadcast channel coding pr
 Formally, one would want to show that it is \textrm{NP}-hard to approximate this problem within a $\Omega(1)$ factor in polynomial time. As a first step towards this goal, we will prove a $\Omega\left(\frac{1}{\sqrt{m}}\right)$-approximation hardness in the value query model.
 
 First, let us introduce formally the problem:
-\begin{defi}[\textsc{BCC}]
+\begin{definition}[\textsc{BCC}]
   Given a channel $W$ and integers $k_1$ and $k_2$, the broadcast channel coding problem, which we call \textsc{BCC}, entails maximizing
   \[ \mathrm{S}(W,k_1,k_2,e,d_1,d_2) := \frac{1}{k_1k_2}\sum_{y_1,y_2,i_1,i_2} W(y_1y_2|e(i_1,i_2))\mathbbm{1}_{d_1(y_1)=i_1, d_2(y_2)=i_2}\]
   over all functions $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$,  $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$.
-\end{defi}
+\end{definition}
 
 As in the deterministic case, we restrict ourselves to deterministic encoders and decoders, which does not change the value nor the hardness of the problem. Also, it can be equivalently stated in terms of partitions corresponding to $d_1,d_2$ as:
-\begin{prop}[Equivalent formulation of \textsc{BCC}]
+\begin{proposition}[Equivalent formulation of \textsc{BCC}]
   Given a channel $W$ and integers $k_1$ and $k_2$, the broadcast channel coding problem, which we call \textsc{BCC}, entails maximizing:
   \[ \frac{1}{k_1k_2}\sum_{i_1,i_2} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}, y_2 \in \mathcal{P}_1^{i_2}} W(y_1y_2|x) \ , \]
   over all partitions $\mathcal{P}_1$ of $\mathcal{Y}_1$ in $k_1$ parts and $\mathcal{P}_2$ of $\mathcal{Y}_2$ in $k_2$ parts.
-\end{prop}
+\end{proposition}
 
 
 \subsection{Social Welfare Reformulation}
@@ -930,19 +851,19 @@ Let us first introduce the value query model. As described in~\cite{DS06,MSV08},
 
 This is more restricted than using any algorithm, but in such a model, it is possible to show unconditional lower bounds on the number of queries needed to solve a given problem within an approximation rate. In the case of the social welfare maximization problem with \textrm{XOS} utility functions, the approximation rate achievable in polynomial time has been proved in~\cite{DS06,MSV08} to be of the order of $\Theta\left(\frac{1}{\sqrt{m}}\right)$. Specifically, in~\cite{DS06}, a $\Omega\left(\frac{1}{m^{\frac{1}{2}}}\right)$-approximation in polynomial time was given, and in~\cite{MSV08}, it has been shown that any $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation for $\varepsilon > 0$ requires an exponential number of value queries. We will adapt their proof in the particular case of one common \textrm{XOS} utility function of the form $f_W^1$ for some broadcast channel $W$. But first, let us introduce the definition of \textrm{XOS} functions and prove that $f_W^1$ is one of those.
 
-\begin{defi}
+\begin{definition}
   A linear valuation function (also known as additive) is a set function $a : 2^M \rightarrow \mathbb{R}_+$ that assigns a non-negative value to every singleton $\{ j\}$ for $j \in M$, and for all $S \subseteq M$ it holds that $a(S) = \sum_{j \in S} a(\{ j\})$.
 
   A fractionally sub-additive function (\textrm{XOS}) is a set function $f : 2^M \rightarrow \mathbb{R}_+$, for which there is a finite set of linear valuation functions $A = \{ a_1, \ldots, a_{\ell} \}$ such that $f(S) = \max_{i \in [\ell]} a_i(S)$ for every $S \subseteq M$.
-\end{defi}
+\end{definition}
 
 \begin{rk}
   Note that the size of $A$ is not bounded in the definition. 
 \end{rk}
 
-\begin{prop}
+\begin{proposition}
   $f_W^1$ is \textrm{XOS}.
-\end{prop}
+\end{proposition}
 \begin{proof}
   \begin{equation}
     \begin{aligned}
@@ -956,11 +877,11 @@ This is more restricted than using any algorithm, but in such a model, it is pos
 \end{proof}
 
 In order to prove our hardness result, we will need the following version of the Chernoff-Hoeffding bound with negatively associated random variables, which is a weaker notion of independence where tail bounds are still valid (see~\cite{DR98} for further discussion on negatively associated random variables):
-\begin{prop}[Chernoff-Hoeffding bound]
+\begin{proposition}[Chernoff-Hoeffding bound]
   \label{prop:chernoff}
   Let $X_1, \ldots, X_m$ be negatively associated Bernouilli random variables of parameter $p$. Then for $0 < \varepsilon \leq \frac{1}{2}$:
   \[ \mathbb{P}\left(\frac{1}{m}\sum_{i=1}^m X_i > (1+\varepsilon)p \right) \leq e^{-\frac{pm\varepsilon^2}{4}} \ . \]
-\end{prop}
+\end{proposition}
 \begin{proof}
   Usual proofs of the Chernoff-Hoeffding bound work in the same way with negatively associated variables as pointed out by~\cite{DR98}. So, one obtain as in the original proof~\cite{Hoeffding63} that:
 
@@ -969,10 +890,10 @@ In order to prove our hardness result, we will need the following version of the
 \end{proof}
 
 Let us now state the value query hardness of approximation of the broadcast channel problem:
-\begin{theo}
+\begin{theorem}
   \label{theo:VQhardnessBC}
   In the value query model, for any fixed $\varepsilon > 0$, a $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm for the broadcast channel coding problem on $W,k_1,k_2$, restricted to the case of $|\mathcal{Y}_2| = k_2$ and $m = |\mathcal{Y}_1| = k_1^2$, requires exponentially many value queries to $f_W^1$.
-\end{theo}
+\end{theorem}
 
 \begin{rk}
   As our problem is a particular instance of the social welfare maximization problem with \textrm{XOS} functions, the polynomial-time $\Omega\left(\frac{1}{m^{\frac{1}{2}}}\right)$-approximation from~\cite{DS06} works also here.
@@ -1100,7 +1021,7 @@ Let us now state the value query hardness of approximation of the broadcast chan
 
     \[ \mathbb{P}\left( \forall i \in [n] : v(S_i) = v'(S_i) \right) \geq 1 - np_{\text{leak}} \ . \]
 
-    So, if $1 - np_{\text{leak}} > 0$, i.e. $n < \frac{1}{p_{\text{leak}}}$, then there exists some equi-partition $T_1, \ldots T_{k_1}$ such that our algorithm outputs a sequence $L$ of queries of length $n$ before being able to distinguish between $v$ and $v'$. In particular, we can take $n = \frac{1}{2p_{\text{leak}}}$ so that $L$ is of exponential size. Hence, for any algorithm $\mathcal{A}$, there exists some equi-partition $T_1, \ldots T_{k_1}$ such that $\mathcal{A}$ needs an exponential number of value queries to distinguish between $v$ and $v'$. This concludes the proof of the theorem for any deterministic algorithm.
+    So, if $1 - np_{\text{leak}} > 0$, ie. $n < \frac{1}{p_{\text{leak}}}$, then there exists some equi-partition $T_1, \ldots T_{k_1}$ such that our algorithm outputs a sequence $L$ of queries of length $n$ before being able to distinguish between $v$ and $v'$. In particular, we can take $n = \frac{1}{2p_{\text{leak}}}$ so that $L$ is of exponential size. Hence, for any algorithm $\mathcal{A}$, there exists some equi-partition $T_1, \ldots T_{k_1}$ such that $\mathcal{A}$ needs an exponential number of value queries to distinguish between $v$ and $v'$. This concludes the proof of the theorem for any deterministic algorithm.
 
     Finally, the hardness result holds also for randomized algorithms. Indeed, let us call $\mathcal{A}_s$, the running algorithm conditioned on its random bits being $s$. $\mathcal{A}_s$ is deterministic so the previous proof holds: with high probability $p$, the sequence of $\lfloor\frac{1-p}{p_{leak}}\rfloor$ queries does not reveal anything to distinguish between $v$ and $v'$, although it is of exponential size in $m$. Then, averaging over all its random bitstrings, the same result holds, as $p_{leak}$ is independent from the equi-partition $T_1, \ldots, T_{k_1}$.
 \end{proof}
@@ -1111,14 +1032,6 @@ The main weakness of the previous result is that it highly relies on the restric
 On the other hand, one can also remark that when $f_W^1$ is written as a maximum of linear valuation functions, then that defining set of linear valuation functions is of exponential size. Hence, we think that it is still relevant to study the value query complexity of such a family of functions, as it is not clear how one could recover the partition in polynomial time from this exponential-size set of linear valuations without any additional information.
 
 \section{Conclusion}
-In this work, we have studied several algorithmic aspects and non-signaling assisted capacity regions of broadcast channels. We have shown that when non-signaling assistance is shared only between the decoders, the capacity region does not change. For the class of deterministic broadcast channels, we have described a $(1-e^{-1})^2$-approximation algorithm running in polynomial time, and we have shown that the capacity region for that class is the same with or without non-signaling assistance. Finally, we have shown that in the value query model, we cannot achieve a better approximation ratio than $\Omega\left(\frac{1}{\sqrt{m}}\right)$ in polynomial time for the general broadcast channel coding problem, with $m$ the size of one of the outputs of the channel.
+In this chapter, we have studied several algorithmic aspects and non-signaling assisted capacity regions of broadcast channels. We have shown that when non-signaling assistance is shared only between the decoders, the capacity region does not change. For the class of deterministic broadcast channels, we have described a $(1-e^{-1})^2$-approximation algorithm running in polynomial time, and we have shown that the capacity region for that class is the same with or without non-signaling assistance. Finally, we have shown that in the value query model, we cannot achieve a better approximation ratio than $\Omega\left(\frac{1}{\sqrt{m}}\right)$ in polynomial time for the general broadcast channel coding problem, with $m$ the size of one of the outputs of the channel.
 
 Our results suggest that non-signaling assistance could improve the capacity region of general broadcast channels, which is left as a major open question. An intermediate result would be to show that it is \textrm{NP}-hard to approximate the broadcast channel coding problem within any constant, strengthening our hardness result without relying on the value query model. Finally, one could also try to develop approximations algorithms for other sub-classes of broadcast channels, such as semi-deterministic or degraded ones. This could be a crucial step towards showing that the capacity region for those classes is the same with or without non-signaling assistance.
-
-\section*{Acknowledgements}
-We would like to thank Stéphan Thomassé and Siddharth Barman for discussions on graph algorithms and social welfare problems respectively.
-  
-%%%   BIBLIOGRAPHY   %%%
-\bibliographystyle{unsrturl}
-\bibliography{Broadcast}
-\end{document}

@@ -123,7 +123,7 @@ The coding problem for a MAC $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow
 \caption{Coding for a MAC $W$.}
 \end{figure}
 
-We want to maximize over all encoders $e_1,e_2$ and decoders $d$ the probability of successfully encoding and decoding the messages through $W$, ie. the probability that $j_1 = i_1$ and  $j_2 = i_2$, given that the input messages are taken uniformly in $[k_1]$ and $[k_2]$. We call this quantity $\mathrm{S}(W,k_1,k_2)$, which is characterized by the following optimization program:
+We want to maximize over all encoders $e_1,e_2$ and decoders $d$ the probability of successfully encoding and decoding the messages through $W$, i.e. the probability that $j_1 = i_1$ and  $j_2 = i_2$, given that the input messages are taken uniformly in $[k_1]$ and $[k_2]$. We call this quantity $\mathrm{S}(W,k_1,k_2)$, which is characterized by the following optimization program:
 
 \begin{equation}
 \label{eq:def-succ-prob-mac}
@@ -327,7 +327,7 @@ The cyclicity of Figure~\ref{fig:MACNScoding} is at first sight counter-intuitiv
           so we recover globally $P((j_1 j_2)|i_1 i_2 y x_1 x_2) \times P(x_1 x_2 |i_1 i_2) = P(x_1 x_2 (j_1 j_2)|i_1 i_2 y)$ the prescribed conditional probability. 
           The non-signaling condition ensures that it is possible to consider the conditional probabilities of each party independently. This clarifies how one can effectively encode and then decode messages through a non-signaling box.
 
-As in the unassisted case, we want to maximize over all non-signaling box $P$ the probability of successfully encoding and decoding the messages through $W$, ie. the probability that $j_1 = i_1$ and  $j_2 = i_2$, given that the input messages are taken uniformly in $[k_1]$ and $[k_2]$. We call this quantity $\mathrm{S^{\mathrm{NS}}}(W,k_1,k_2)$, which is characterized by the following optimization program:
+As in the unassisted case, we want to maximize over all non-signaling box $P$ the probability of successfully encoding and decoding the messages through $W$, i.e. the probability that $j_1 = i_1$ and  $j_2 = i_2$, given that the input messages are taken uniformly in $[k_1]$ and $[k_2]$. We call this quantity $\mathrm{S^{\mathrm{NS}}}(W,k_1,k_2)$, which is characterized by the following optimization program:
 
 \begin{equation}
   \begin{aligned}
@@ -1861,7 +1861,7 @@ In order to show additivity of the outer bound, we use the following lemma.
         \end{aligned}
       \end{equation}
 
-      Thus, $\hat{Y}$ follows the product law of $Y_i$, ie.  $\hat{Y} = Y^n$.
+      Thus, $\hat{Y}$ follows the product law of $Y_i$, i.e.  $\hat{Y} = Y^n$.
       
   Let us consider $C_1,C_2,C_3$ some positive numbers independent from $n$ and $\varepsilon$ which we will define later,  $k_1 = 2^{nR_1}$, $k_2 = 2^{nR_2}$ integers with $(R_1,R_2)$ positive rates such that:
   \begin{equation}
@@ -1945,7 +1945,7 @@ In order to show additivity of the outer bound, we use the following lemma.
 
   \section{Independent Non-Signaling Assisted Capacity Region}
   \label{section:NSsr}
-The goal of this section is to show that independent non-signaling assistance does not change the capacity region of a MAC $W$, ie. that $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)=\mathcal{C}(W)$. In order to prove this result, we will need some properties in the one-sender one-receiver case from~\cite{BF18}. Specifically, let us first recall the definition of the maximum success probability $\mathrm{S}(W,k)$ of transmitting $k$ messages using the channel $W$:
+The goal of this section is to show that independent non-signaling assistance does not change the capacity region of a MAC $W$, i.e. that $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)=\mathcal{C}(W)$. In order to prove this result, we will need some properties in the one-sender one-receiver case from~\cite{BF18}. Specifically, let us first recall the definition of the maximum success probability $\mathrm{S}(W,k)$ of transmitting $k$ messages using the channel $W$:
 \begin{equation}
   \begin{aligned}
     \mathrm{S}(W,k) := &&\underset{e,d}{\maxi} &&& \frac{1}{k} \sum_{i,x,y} W(y|x)e(x|i)d(i|y)\\
@@ -2098,7 +2098,7 @@ We have now all the tools to prove Theorem~\ref{theo:NSsr}:
 \end{proof}
 
 \begin{rk}
-  In the whole proof of Theorem~\ref{theo:NSsr}, as well as the properties it depends on, we have never used the fact that the output of the channel $y$ was the same for both decoders $d_1$ and $d_2$. This implies that the result also holds for interference channels, ie. two-sender two-receiver channels $W(y_1y_2|x_2x_2)$. Specifically, non-signaling assistance shared between the first sender and the first receiver and independently shared between the second sender and the second receiver does not change the capacity region of interference channels.
+  In the whole proof of Theorem~\ref{theo:NSsr}, as well as the properties it depends on, we have never used the fact that the output of the channel $y$ was the same for both decoders $d_1$ and $d_2$. This implies that the result also holds for interference channels, i.e. two-sender two-receiver channels $W(y_1y_2|x_2x_2)$. Specifically, non-signaling assistance shared between the first sender and the first receiver and independently shared between the second sender and the second receiver does not change the capacity region of interference channels.
 \end{rk}
   
 \section{Conclusion}

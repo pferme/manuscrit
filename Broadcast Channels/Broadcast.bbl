@@ -281,18 +281,12 @@ F.M.J. Willems.
 \newblock URL:
   \url{https://research.tue.nl/nl/publications/the-maximal-error-and-average-error-capacity-region-of-the-broadc}.
 
-\bibitem{LinearProgramming}
+\bibitem{GM07}
 Bernd G{\"{a}}rtner and Jir{\'{\i}} Matousek.
 \newblock {\em Understanding and using linear programming}.
 \newblock Universitext. Springer, 2007.
 \newblock \href {https://doi.org/10.1007/978-3-540-30717-4}
   {\path{doi:10.1007/978-3-540-30717-4}}.
-
-\bibitem{GJ79}
-M.~R. Garey and David~S. Johnson.
-\newblock {\em Computers and Intractability: {A} Guide to the Theory of
-  {NP}-Completeness}.
-\newblock W. H. Freeman, 1979.
 
 \bibitem{Vondrak08}
 Jan Vondr{\'{a}}k.
@@ -303,6 +297,12 @@ Jan Vondr{\'{a}}k.
   17-20, 2008}, pages 67--74. {ACM}, 2008.
 \newblock \href {https://doi.org/10.1145/1374376.1374389}
   {\path{doi:10.1145/1374376.1374389}}.
+
+\bibitem{GJ79}
+M.~R. Garey and David~S. Johnson.
+\newblock {\em Computers and Intractability: {A} Guide to the Theory of
+  {NP}-Completeness}.
+\newblock W. H. Freeman, 1979.
 
 \bibitem{BFF21}
 Siddharth Barman, Omar Fawzi, and Paul Ferm{\'{e}}.
