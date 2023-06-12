@@ -34,7 +34,7 @@
 \backcite {DMMS20}{{9}{1}{section*.12}}
 \backcite {BFGG20}{{9}{1}{section*.12}}
 \backcite {DMMS20}{{9}{1}{section*.12}}
-\backcite {BFGG20}{{10}{3.1}{section.3.1}}
+\backcite {BFGG20}{{9}{3.1}{section.3.1}}
 \backcite {AS04, Vondrak07, CCPV11}{{10}{3.1}{section*.13}}
 \backcite {Vondrak07}{{10}{3.1}{section*.13}}
 \backcite {SS07}{{11}{3.1}{lemma.3.3}}
@@ -48,7 +48,6 @@
 \backcite {CT01}{{18}{3.3}{section.3.3}}
 \backcite {BCE16}{{18}{3.3}{section.3.3}}
 \backcite {NRTV07}{{18}{3.3}{section.3.3}}
-\backcite {BFGG20}{{18}{3.3.1}{subsection.3.3.1}}
 \backcite {DMMS20}{{20}{3.3.2}{subsection.3.3.2}}
 \backcite {DMMS20}{{20}{3.3.2}{subsection.3.3.2}}
 \backcite {DMMS20}{{20}{3.3.2}{subsection.3.3.2}}
@@ -58,12 +57,12 @@
 \backcite {PM19}{{21}{3.3.4}{figure.3.1}}
 \backcite {PM19}{{21}{3.3.4}{figure.3.1}}
 \backcite {PM19}{{21}{3.3.4}{figure.3.1}}
-\backcite {CPM19}{{21}{3.3.4}{figure.3.1}}
+\backcite {CPM19}{{22}{3.3.4}{figure.3.1}}
 \backcite {PM19}{{22}{3.3.4}{figure.3.1}}
+\backcite {PM19}{{22}{3.2}{figure.3.2}}
+\backcite {SVW17}{{22}{3.2}{figure.3.2}}
 \backcite {NRTV07}{{22}{3.3.5}{subsection.3.3.5}}
 \backcite {Vondrak07}{{22}{3.3.5}{subsection.3.3.5}}
-\backcite {PM19}{{23}{3.2}{figure.3.2}}
-\backcite {SVW17}{{23}{3.2}{figure.3.2}}
 \backcite {PM19}{{23}{3.3}{figure.3.3}}
 \backcite {SVW17}{{23}{3.3}{figure.3.3}}
 \backcite {BFGG20}{{24}{3.4}{section.3.4}}

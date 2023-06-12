@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {3.1}Approximation Algorithm for $\varphi $-\textsc {MaxCoverage}}{9}{section.3.1}
 \contentsline {paragraph}{Rounding}{10}{section*.13}
 \contentsline {subsection}{\numberline {3.1.1}Generalization to Matroid Constraints}{12}{subsection.3.1.1}
-\contentsline {section}{\numberline {3.2}Hardness of Approximation for $\varphi $-\textsc {MaxCoverage}}{13}{section.3.2}
+\contentsline {section}{\numberline {3.2}Hardness of Approximation for $\varphi $-\textsc {MaxCoverage}}{12}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Partitioning System}{13}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}The Reduction}{14}{subsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.2.1}Completeness}{15}{subsubsection.3.2.2.1}
@@ -39,7 +39,7 @@
 \contentsline {subsection}{\numberline {3.3.3}Resource Allocation in Multiagent Systems}{20}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Vehicle-Target Assignment}{21}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}Welfare Maximization for $\varphi $-Coverage}{22}{subsection.3.3.5}
-\contentsline {section}{\numberline {3.4}Conclusion}{24}{section.3.4}
+\contentsline {section}{\numberline {3.4}Conclusion}{23}{section.3.4}
 \contentsline {section}{\numberline {3.5}Appendix}{25}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}General Properties}{25}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Calculations of $\alpha _{\varphi }$}{36}{subsection.3.5.2}
