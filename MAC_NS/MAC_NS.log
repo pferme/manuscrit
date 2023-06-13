@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  12 JUN 2023 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  13 JUN 2023 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2489,12 +2489,128 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [1
+)
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+LaTeX Warning: Citation `FF22' on page 1 undefined on input line 69.
+
+
+LaTeX Warning: Citation `Liao73' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Citation `Ahlswede73' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Citation `BCPSW14' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Citation `PLMK11' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Citation `BF18' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Citation `BSST99' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Citation `Matthews12' on page 1 undefined on input line 78.
+
+
+LaTeX Warning: Citation `BF18' on page 1 undefined on input line 78.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `QS17' on page 2 undefined on input line 80.
+
+
+LaTeX Warning: Citation `LALS20' on page 2 undefined on input line 80.
+
+
+LaTeX Warning: Citation `SLSS22' on page 2 undefined on input line 80.
+
+
+LaTeX Warning: Citation `Mermin90' on page 2 undefined on input line 80.
+
+
+LaTeX Warning: Citation `Peres90' on page 2 undefined on input line 80.
+
+
+LaTeX Warning: Citation `Aravind02' on page 2 undefined on input line 80.
+
+
+LaTeX Warning: Citation `BBT05' on page 2 undefined on input line 80.
+
+
+LaTeX Warning: Citation `Noetzel20' on page 2 undefined on input line 80.
+
+
+LaTeX Warning: Citation `ND20' on page 2 undefined on input line 80.
+
+
+LaTeX Warning: Citation `JNWY20' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Citation `PDB23' on page 2 undefined on input line 82.
+
+
+LaTeX Warning: Reference `theo:polyLP' on page 2 undefined on input line 84.
+
+
+LaTeX Warning: Reference `cor:poly' on page 2 undefined on input line 84.
+
+
+LaTeX Warning: Reference `prop:IB' on page 2 undefined on input line 84.
+
+
+LaTeX Warning: Reference `theo:BAC' on page 2 undefined on input line 84.
+
+
+LaTeX Warning: Reference `prop:NumericalMethod' on page 2 undefined on input li
+ne 84.
+
+
+LaTeX Warning: Reference `theo:CharaNSrelaxed' on page 2 undefined on input lin
+e 86.
+
+
+LaTeX Warning: Reference `cor:OB' on page 2 undefined on input line 86.
+
+
+LaTeX Warning: Reference `theo:NSsr' on page 2 undefined on input line 88.
+
+
+LaTeX Warning: Reference `cor:NSsr' on page 2 undefined on input line 88.
+
+
+LaTeX Warning: Citation `HDW08' on page 2 undefined on input line 88.
+
+[2]
+
+LaTeX Warning: Reference `section:IB' on page 3 undefined on input line 90.
+
+
+LaTeX Warning: Reference `section:OB' on page 3 undefined on input line 90.
+
+
+LaTeX Warning: Reference `section:NSsr' on page 3 undefined on input line 90.
+
+[3]
 Overfull \hbox (5.7792pt too wide) detected at line 149
 [][]
  []
+
+
+LaTeX Warning: Citation `BF18' on page 4 undefined on input line 152.
+
+
+LaTeX Warning: Citation `CT01' on page 4 undefined on input line 154.
+
+
+LaTeX Warning: Citation `Liao73' on page 4 undefined on input line 163.
+
+
+LaTeX Warning: Citation `Ahlswede73' on page 4 undefined on input line 163.
 
 [4]
 Overfull \hbox (23.2908pt too wide) in paragraph at lines 177--178
@@ -2590,41 +2706,278 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 620.
 
 [14]
-Overfull \hbox (1.32515pt too wide) in paragraph at lines 672--673
+Overfull \hbox (1.32515pt too wide) in paragraph at lines 670--671
 []\T1/cmr/m/n/10.95 Furthermore, in or-der to show that it is at most $\OT1/cmr
 /m/n/10.95 1$\T1/cmr/m/n/10.95 , let us con-sider an op-ti-mal so-lu-tion of $\
 OT1/cmr/m/n/10.95 S[](\OML/cmm/m/it/10.95 W; k[]; k[]\OT1/cmr/m/n/10.95 )$\T1/c
 mr/m/n/10.95 .
  []
 
-[15] [16] [17] [18]
-Overfull \hbox (0.11981pt too wide) in paragraph at lines 825--826
-\T1/cmr/m/n/10.95 erty of Propo-si-tion []3.6[], we have that $\OT1/cmr/m/n/10.
-95 S[]([][] \OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 d\OT1/cmr/m/n/10.95 2[]\O
-MS/cmsy/m/n/10.95 e[]\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 d\OT1/cmr/m/n/10
-.95 2[]\OMS/cmsy/m/n/10.95 e[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U [][]
- \OT1/cmr/m/n/10.95 =
- []
+[15] [16]
+
+LaTeX Warning: Reference `lem:NStensor' on page 17 undefined on input line 763.
+
+
+[17]
+
+LaTeX Warning: Reference `prop:oneShot' on page 18 undefined on input line 773.
+
+
+
+LaTeX Warning: Reference `prop:oneShot' on page 18 undefined on input line 792.
+
+
+
+LaTeX Warning: Reference `prop:oneShot' on page 18 undefined on input line 802.
+
+
+
+LaTeX Warning: Reference `prop:oneShot' on page 18 undefined on input line 804.
+
+
+[18]
+
+LaTeX Warning: Reference `prop:oneShot' on page 19 undefined on input line 806.
+
+
+
+LaTeX Warning: Reference `prop:oneShot' on page 19 undefined on input line 823.
+
+
+
+LaTeX Warning: Reference `prop:oneShot' on page 19 undefined on input line 823.
+
+
+
+LaTeX Warning: Reference `prop:oneShot' on page 19 undefined on input line 823.
+
+
+
+LaTeX Warning: Reference `prop:oneShot' on page 19 undefined on input line 825.
+
 
 [19]
 
-LaTeX Warning: Citation `GM07' on page 20 undefined on input line 880.
+LaTeX Warning: Reference `theo:polyLP' on page 20 undefined on input line 873.
 
-[20] [21] [22] [23] [24]
 
-LaTeX Warning: Citation `Mosek' on page 25 undefined on input line 1032.
+LaTeX Warning: Citation `GM07' on page 20 undefined on input line 878.
+
+[20]
+
+LaTeX Warning: Reference `theo:polyLP' on page 21 undefined on input line 881.
+
+
+LaTeX Warning: Reference `lem:orbitProjCard' on page 21 undefined on input line
+ 910.
+
+[21]
+
+LaTeX Warning: Reference `theo:polyLP' on page 22 undefined on input line 927.
+
+
+Overfull \hbox (2.95326pt too wide) in paragraph at lines 928--929
+[]\T1/cmr/m/n/10.95 Let $\OML/cmm/m/it/10.95 r[]; r[]; r[]; p[]$ \T1/cmr/m/n/10
+.95 a fea-si-ble so-lu-tion of the pro-gram de-fined in Propo-
+ []
+
+
+LaTeX Warning: Reference `theo:polyLP' on page 22 undefined on input line 935.
+
+
+LaTeX Warning: Reference `lem:fromEleToOrbit' on page 22 undefined on input lin
+e 946.
+
+
+LaTeX Warning: Reference `lem:orbitProjCard' on page 22 undefined on input line
+ 956.
+
+[22]
+
+LaTeX Warning: Reference `theo:polyLP' on page 23 undefined on input line 968.
+
+
+LaTeX Warning: Reference `lem:fromOrbitToEle' on page 23 undefined on input lin
+e 987.
+
+[23]
+
+LaTeX Warning: Reference `cor:poly' on page 24 undefined on input line 1013.
+
+
+LaTeX Warning: Reference `prop:ZENScapacity' on page 24 undefined on input line
+ 1013.
+
+
+LaTeX Warning: Citation `Lindstrom69' on page 24 undefined on input line 1028.
+
+
+LaTeX Warning: Citation `Tilborg78' on page 24 undefined on input line 1028.
+
+
+LaTeX Warning: Citation `KL78' on page 24 undefined on input line 1028.
+
+
+LaTeX Warning: Citation `Weldon78' on page 24 undefined on input line 1028.
+
+
+LaTeX Warning: Citation `KLWY83' on page 24 undefined on input line 1028.
+
+
+LaTeX Warning: Citation `BT85' on page 24 undefined on input line 1028.
+
+
+LaTeX Warning: Citation `BB98' on page 24 undefined on input line 1028.
+
+
+LaTeX Warning: Citation `UL98' on page 24 undefined on input line 1028.
+
+
+LaTeX Warning: Citation `AB99' on page 24 undefined on input line 1028.
+
+
+LaTeX Warning: Citation `MO05' on page 24 undefined on input line 1028.
+
+
+LaTeX Warning: Citation `OS15' on page 24 undefined on input line 1028.
+
+
+LaTeX Warning: Citation `MO05' on page 24 undefined on input line 1028.
+
+[24]
+
+LaTeX Warning: Reference `prop:IB' on page 25 undefined on input line 1030.
+
+
+LaTeX Warning: Reference `fig:BAC' on page 25 undefined on input line 1030.
+
+
+LaTeX Warning: Citation `Mosek' on page 25 undefined on input line 1030.
+
+
+LaTeX Warning: Reference `theo:polyLP' on page 25 undefined on input line 1032.
+
 
 PGFPlots: reading {Data_BAC/ZEBorder2.csv}
 PGFPlots: reading {Data_BAC/ZEBorder3.csv}
 PGFPlots: reading {Data_BAC/ZEBorder7.csv}
-[25] [26] [27]
+
+LaTeX Warning: Citation `MO05' on page 25 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `BT85' on page 25 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `KLWY83' on page 25 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `MO05' on page 25 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `MO05' on page 25 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `BT85' on page 25 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `KLWY83' on page 25 undefined on input line 1092.
+
+
+LaTeX Warning: Citation `MO05' on page 25 undefined on input line 1092.
+
+
+LaTeX Warning: Reference `prop:ZENScapacity' on page 25 undefined on input line
+ 1097.
+
+
+LaTeX Warning: Reference `theo:polyLP' on page 25 undefined on input line 1097.
+
+
+
+LaTeX Warning: Reference `prop:BACcapacityNSrelaxed' on page 25 undefined on in
+put line 1097.
+
+[25]
+
+LaTeX Warning: Citation `MO05' on page 26 undefined on input line 1099.
+
+
+LaTeX Warning: Reference `cor:poly' on page 26 undefined on input line 1106.
+
+
+LaTeX Warning: Reference `prop:ZENScapacity' on page 26 undefined on input line
+ 1106.
+
+
+LaTeX Warning: Reference `prop:NScapaNoisy' on page 26 undefined on input line 
+1110.
+
+[26]
+
+LaTeX Warning: Reference `prop:concatCodes' on page 27 undefined on input line 
+1190.
+
+[27]
+
+LaTeX Warning: Reference `prop:NumericalMethod' on page 28 undefined on input l
+ine 1226.
+
+
+LaTeX Warning: Reference `fig:noisyBAC' on page 28 undefined on input line 1226
+.
+
 PGFPlots: reading {Data_Capacity_BACwithSmallBitFlipNoise/Capacity3.csv}
 PGFPlots: reading {Data_Capacity_BACwithSmallBitFlipNoise/Capacity5.csv}
+
+LaTeX Warning: Reference `prop:NScapaNoisy' on page 28 undefined on input line 
+1271.
+
+
+LaTeX Warning: Reference `prop:NumericalMethod' on page 28 undefined on input l
+ine 1271.
+
+
+LaTeX Warning: Reference `prop:NScapaNoisy' on page 28 undefined on input line 
+1271.
+
+
+LaTeX Warning: Reference `prop:NumericalMethod' on page 28 undefined on input l
+ine 1271.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[28] [29] [30] [31]
+[28] [29]
+
+LaTeX Warning: Reference `prop:NSisrelaxed' on page 30 undefined on input line 
+1331.
+
+
+LaTeX Warning: Reference `theo:CharaNSrelaxed' on page 30 undefined on input li
+ne 1350.
+
+
+LaTeX Warning: Reference `prop:OBNSrelaxed' on page 30 undefined on input line 
+1350.
+
+
+LaTeX Warning: Reference `prop:AchievabilityNSrelaxed' on page 30 undefined on 
+input line 1350.
+
+
+LaTeX Warning: Reference `fig:BACNSrelaxed' on page 30 undefined on input line 
+1353.
+
+[30]
+
+LaTeX Warning: Reference `theo:CharaNSrelaxed' on page 31 undefined on input li
+ne 1366.
+
+[31]
+
+LaTeX Warning: Reference `fig:BACNSrelaxed' on page 32 undefined on input line 
+1408.
+
 Missing character: There is no ( in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -2683,11 +3036,36 @@ Missing character: There is no ; in font nullfont!
 PGFPlots: reading {Data_BAC/ZEBorder7.csv}
 PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
 
+LaTeX Warning: Reference `prop:BACcapacityNSrelaxed' on page 32 undefined on in
+put line 1475.
+
+
+LaTeX Warning: Reference `prop:BACcapacityNSrelaxed' on page 32 undefined on in
+put line 1475.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[32] [33]
-Overfull \hbox (12.02068pt too wide) in paragraph at lines 1530--1531
+
+LaTeX Warning: Reference `theo:CharaNSrelaxed' on page 32 undefined on input li
+ne 1482.
+
+
+LaTeX Warning: Reference `prop:OBNSrelaxed' on page 32 undefined on input line 
+1483.
+
+
+LaTeX Warning: Citation `Matthews12' on page 32 undefined on input line 1483.
+
+[32]
+
+LaTeX Warning: Citation `Matthews12' on page 33 undefined on input line 1516.
+
+
+LaTeX Warning: Citation `PPV10' on page 33 undefined on input line 1516.
+
+[33]
+Overfull \hbox (12.02068pt too wide) in paragraph at lines 1528--1529
 []\T1/cmr/m/n/10.95 If now $\OML/cmm/m/it/10.95 Y$ \T1/cmr/m/n/10.95 is the out
 -put of the chan-nel $\OML/cmm/m/it/10.95 W[]$\T1/cmr/m/n/10.95 , the joint dis
 -tri-bu-tion of $\OML/cmm/m/it/10.95 X[]; X[]; Y$ \T1/cmr/m/n/10.95 is given by
@@ -2695,29 +3073,93 @@ Overfull \hbox (12.02068pt too wide) in paragraph at lines 1530--1531
 1/cmr/m/n/10.95 ) =
  []
 
-[34] [35]
-Overfull \hbox (2.28703pt too wide) detected at line 1643
+[34]
+
+LaTeX Warning: Reference `lem:beta' on page 35 undefined on input line 1573.
+
+
+LaTeX Warning: Citation `PPV10' on page 35 undefined on input line 1582.
+
+[35]
+
+LaTeX Warning: Reference `lem:claim1' on page 36 undefined on input line 1634.
+
+
+Overfull \hbox (2.28703pt too wide) detected at line 1641
 [][][][]
  []
 
+
+LaTeX Warning: Reference `lem:multiletterOB' on page 36 undefined on input line
+ 1643.
+
 [36]
-Overfull \hbox (15.08907pt too wide) detected at line 1686
+Overfull \hbox (15.08907pt too wide) detected at line 1684
 \U/msb/m/n/10.95 P [] \OT1/cmr/m/n/10.95 = [] \OML/cmm/m/it/10.95 :
  []
 
-[37] [38]
-Overfull \hbox (23.37407pt too wide) in paragraph at lines 1765--1767
+[37]
+
+LaTeX Warning: Reference `theo:CharaNSrelaxed' on page 38 undefined on input li
+ne 1702.
+
+
+LaTeX Warning: Reference `lem:oneshotOB' on page 38 undefined on input line 171
+1.
+
+
+LaTeX Warning: Reference `lem:multiletterOB' on page 38 undefined on input line
+ 1711.
+
+[38]
+
+LaTeX Warning: Reference `cor:NSisrelaxed' on page 39 undefined on input line 1
+749.
+
+
+LaTeX Warning: Reference `theo:CharaNSrelaxed' on page 39 undefined on input li
+ne 1758.
+
+
+LaTeX Warning: Citation `GK11' on page 39 undefined on input line 1759.
+
+
+Overfull \hbox (23.37407pt too wide) in paragraph at lines 1763--1765
 []$\OMS/cmsy/m/n/10.95 T[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/
 cmr/m/n/10.95 ) := []$
  []
 
-[39] [40]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 1825.
+
+LaTeX Warning: Citation `GK11' on page 39 undefined on input line 1771.
+
+[39]
+
+LaTeX Warning: Citation `GK11' on page 40 undefined on input line 1778.
+
+
+LaTeX Warning: Citation `GK11' on page 40 undefined on input line 1807.
+
+
+LaTeX Warning: Citation `GK11' on page 40 undefined on input line 1815.
+
+[40]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 1823.
  (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [41]
-[42] [43]
-Overfull \hbox (11.41893pt too wide) in paragraph at lines 1961--1962
+)
+
+LaTeX Warning: Reference `theo:CharaNSrelaxed' on page 41 undefined on input li
+ne 1845.
+
+[41] [42] [43]
+
+LaTeX Warning: Citation `BF18' on page 44 undefined on input line 1946.
+
+
+LaTeX Warning: Citation `BF18' on page 44 undefined on input line 1958.
+
+
+Overfull \hbox (11.88246pt too wide) in paragraph at lines 1959--1960
 [][]\T1/cmr/bx/n/10.95 Proposition 6.1 \T1/cmr/m/n/10.95 (Propo-si-tion 2.1 of 
 [[]])\T1/cmr/bx/n/10.95 . []$\OT1/cmr/m/n/10.95 S(\OML/cmm/m/it/10.95 W; k\OT1/
 cmr/m/n/10.95 ) = [][]\OML/cmm/m/it/10.95 f[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/
@@ -2727,37 +3169,91 @@ m/m/it/10.95 W\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 y\OMS/cmsy/m/n/10.95 j\OM
 L/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95 )$\T1/cmr/m/n/10.95 . 
  []
 
-[44] [45] [46] [47] (./MAC_NS.bbl [48] [49] [50]) [51]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2117.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2117.
+
+LaTeX Warning: Citation `BF18' on page 44 undefined on input line 1976.
+
+[44]
+
+LaTeX Warning: Citation `BF18' on page 45 undefined on input line 1988.
+
+
+LaTeX Warning: Citation `BF18' on page 45 undefined on input line 1989.
+
+
+LaTeX Warning: Reference `theo:NSsr' on page 45 undefined on input line 2011.
+
+[45]
+
+LaTeX Warning: Reference `theo:NSsr' on page 46 undefined on input line 2030.
+
+
+LaTeX Warning: Reference `theo:NSsr' on page 46 undefined on input line 2054.
+
+
+LaTeX Warning: Reference `theo:NSsr' on page 46 undefined on input line 2056.
+
+
+LaTeX Warning: Reference `prop:NSonewayLP' on page 46 undefined on input line 2
+059.
+
+
+LaTeX Warning: Reference `theo:RandomCoding' on page 46 undefined on input line
+ 2059.
+
+[46]
+
+LaTeX Warning: Reference `lem:DoubleOneWay' on page 47 undefined on input line 
+2086.
+
+
+LaTeX Warning: Reference `theo:NSsr' on page 47 undefined on input line 2099.
+
+[47]
+
+LaTeX Warning: Reference `theo:CharaNSrelaxed' on page 48 undefined on input li
+ne 2106.
+
+(./MAC_NS.bbl [48] [49] [50]) [51]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2115.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2115.
  (./MAC_NS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2117.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2117.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2115.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2115.
 
-Package rerunfilecheck Info: File `MAC_NS.out' has not changed.
-(rerunfilecheck)             Checksum: 8AF5C03345E53E8A5DC508AE18F20B79;1297.
 
+
+Package rerunfilecheck Warning: File `MAC_NS.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `MAC_NS.out':
+(rerunfilecheck)             Before: 0209213F742BBE8DE900B837F7590F6B;408
+(rerunfilecheck)             After:  B2C6B6C3791ECFAD7A1E01BD99EF9289;1295.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2117.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2115.
  ) 
 Here is how much of TeX's memory you used:
- 41288 strings out of 494821
- 946868 string characters out of 6177891
- 1196062 words of memory out of 5000000
- 43738 multiletter control sequences out of 15000+600000
- 558934 words of font info for 104 fonts, out of 8000000 for 9000
+ 41314 strings out of 494821
+ 947276 string characters out of 6177891
+ 1189327 words of memory out of 5000000
+ 43759 multiletter control sequences out of 15000+600000
+ 569436 words of font info for 135 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 74i,22n,128p,10377b,2304s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 74i,22n,128p,10377b,2306s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk> <
 /home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> <
 /home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> <
 /home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> <
-/home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> <
+/home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0900.600pk> <
 /home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> <
 /home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> <
+/home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> <
 /home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> <
 /home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> <
 /home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <
@@ -2779,10 +3275,10 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MAC_NS.pdf (51 pages, 547561 bytes).
+Output written on MAC_NS.pdf (51 pages, 543137 bytes).
 PDF statistics:
- 1371 PDF objects out of 1440 (max. 8388607)
- 806 compressed objects within 9 object streams
+ 1197 PDF objects out of 1200 (max. 8388607)
+ 649 compressed objects within 7 object streams
  272 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

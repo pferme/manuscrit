@@ -15,8 +15,8 @@ We also study the case where non-signaling assistance is shared only between eac
 \section{Multiple Access Channels Capacities}
 \label{section:capacity}
 \subsection{Classical Capacities}
-Formally, a MAC $W$ is a conditional probability distribution depending on two inputs in $\mathcal{X}_1$ and $\mathcal{X}_2$, and an output in $\mathcal{Y}$, so $W := \left(W(y|x_1x_2)\right)_{x_1 \in \mathcal{X}_1,x_2  \in \mathcal{X}_2, y \in \mathcal{Y}}$ such that $W(y|x_1x_2) \geq 0$ and $\sum_{y \in \mathcal{Y}} W(y|x_1x_2) = 1$. We will denote such a MAC by $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$. The tensor product of two MACs $W: \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ and $W': \mathcal{X}'_1 \times \mathcal{X}'_2 \rightarrow \mathcal{Y}'$ is denoted by $W \otimes W' : (\mathcal{X}_1 \times \mathcal{X}'_1) \times (\mathcal{X}_2 \times \mathcal{X}'_2) \to \mathcal{Y} \times \mathcal{Y}'$ and defined by $(W \otimes W')(yy'|x_1x_1'x_2x_2') := W(y|x_1x_2) \cdot W'(y'|x_1'x_2')$. We denote by $W^{\otimes n}(y^n|x_1^nx_2^n) := \prod_{i=1}^nW(y_i|x_{1,i}x_{2,i})$, for $y^n := y_1 \ldots y_n \in \mathcal{Y}^n$, $x_1^n := x_{1,1} \ldots x_{1,n} \in \mathcal{X}_1^n$ and $x_2^n := x_{2,1} \ldots x_{2,n} \in \mathcal{X}_2^n$. We will use the notation $[k]:=\{1,\ldots,k\}$.
-
+Formally, a MAC $W$ is a conditional probability distribution depending on two inputs in $\mathcal{X}_1$ and $\mathcal{X}_2$, and an output in $\mathcal{Y}$, so $W := \left(W(y|x_1x_2)\right)_{x_1 \in \mathcal{X}_1,x_2  \in \mathcal{X}_2, y \in \mathcal{Y}}$ with $W(y|x_1x_2) \geq 0$ and $\sum_{y \in \mathcal{Y}} W(y|x_1x_2) = 1$. We will denote such a MAC by $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$. The tensor product of two MACs $W: \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ and $W': \mathcal{X}'_1 \times \mathcal{X}'_2 \rightarrow \mathcal{Y}'$ is denoted by $W \otimes W' : (\mathcal{X}_1 \times \mathcal{X}'_1) \times (\mathcal{X}_2 \times \mathcal{X}'_2) \to \mathcal{Y} \times \mathcal{Y}'$ and defined by $(W \otimes W')(yy'|x_1x_1'x_2x_2') := W(y|x_1x_2) \cdot W'(y'|x_1'x_2')$. We denote by $W^{\otimes n}(y^n|x_1^nx_2^n) := \prod_{i=1}^nW(y_i|x_{1,i}x_{2,i})$, for $y^n := y_1 \ldots y_n \in \mathcal{Y}^n$, $x_1^n := x_{1,1} \ldots x_{1,n} \in \mathcal{X}_1^n$ and $x_2^n := x_{2,1} \ldots x_{2,n} \in \mathcal{X}_2^n$. We will use the notation $[k]:=\{1,\ldots,k\}$.
+ 
 
 The coding problem for a MAC $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ is the following: one wants to encode messages in $[k_1]$ into $\mathcal{X}_1$ and messages in $[k_2]$ into $\mathcal{X}_2$ independently, which will be given as input to the channel $W$. This results in a random output in $\mathcal{Y}$, which one needs to decode back into the corresponding messages in $[k_1]$ and $[k_2]$. We will call $e_1 : [k_1] \rightarrow \mathcal{X}_1$ the first encoder, $e_2 : [k_2] \rightarrow \mathcal{X}_2$ the second encoder and $d : \mathcal{Y} \rightarrow [k_1] \times [k_2]$ the decoder. This is depicted in Figure~\ref{fig:MACcoding}.
 
@@ -42,12 +42,11 @@ The coding problem for a MAC $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow
     \draw [draw,->] (d) -- node {$(j_1,j_2)$} (j1j2);
   \end{tikzpicture}
 \end{center}
-\label{fig:MACcoding}
 \caption{Coding for a MAC $W$.}
+\label{fig:MACcoding}
 \end{figure}
 
 We want to maximize over all encoders $e_1,e_2$ and decoders $d$ the probability of successfully encoding and decoding the messages through $W$, i.e. the probability that $j_1 = i_1$ and  $j_2 = i_2$, given that the input messages are taken uniformly in $[k_1]$ and $[k_2]$. We call this quantity $\mathrm{S}(W,k_1,k_2)$, which is characterized by the following optimization program:
-
 \begin{equation}
 \label{eq:def-succ-prob-mac}
   \begin{aligned}
@@ -61,7 +60,6 @@ We want to maximize over all encoders $e_1,e_2$ and decoders $d$ the probability
 
 \begin{proof}
 One should note that we allow randomized encoders and decoders for generality reasons, although the value of the program is not changed as it is convex. Besides that remark, let us name $I_1,I_2,J_1,J_2,X_1,X_2,Y$ the random variables corresponding to $i_1,i_2,j_1,j_2,x_1,x_2,y$ in the coding and decoding process. Then, for given $e_1,e_2,d$ and $W$, the objective value of the previous program is:
-
 \begin{equation*}
   \begin{aligned}
     &\mathbb{P}\left(J_1 = I_1, J_2 = I_2\right) = \frac{1}{k_1k_2}\sum_{i_1,i_2} \mathbb{P}\left(J_1 = I_1, J_2 = I_2|I_1=i_1,I_2=i_2\right)\\
@@ -127,11 +125,8 @@ However, it turns out those two notions of success define the same capacity regi
 \end{proposition}
 \begin{proof}
   Let us focus on error probabilities rather than success ones. Call them respectively $\mathrm{E}(W,k_1,k_2) := 1-\mathrm{S}(W,k_1,k_2)$ and $\mathrm{E}_{\text{sum}}(W,k_1,k_2) := 1-\mathrm{S}_{\text{sum}}(W,k_1,k_2)$. Let us fix a solution $e_1,d_1,e_2,d_2$ of the optimization program computing $\mathrm{S}(W,k_1,k_2)$. Let us remark first that:
-
   \[ \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2) = k_1k_2\ , \]
-
   thus, the value of the maximum error for those encoders and decoders, which we call $\mathrm{E}(W,k_1,k_2,e_1,d_1,e_2,d_2)$, is:
-
 \begin{equation}
   \begin{aligned}
     & 1 -  \frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)d_1(i_1|y)d_2(i_2|y)\right)\\
@@ -150,13 +145,14 @@ Similarly, the value of the sum error for those encoder and decoders, which we c
 \end{equation}
 
 However, for $x,y \in [0,1]$, we have that:
-
 \[1-xy \geq \max\left(1-x,1-y\right) \geq 1-\frac{x+y}{2} \ , \]
 and:
 \[1-xy \leq (1-x) + (1-y) = 2  \left(1-\frac{x+y}{2}\right) \ . \]
 
 This means that, for all $e_1,d_1,e_2,d_2$, we have:
-\[ \mathrm{E}_{\text{sum}}(W,k_1,k_2,e_1,d_1,e_2,d_2) \leq \mathrm{E}(W,k_1,k_2,e_1,d_1,e_2,d_2) \leq 2\mathrm{E}_{\text{sum}}(W,k_1,k_2,e_1,d_1,e_2,d_2) \ ,\]
+\[ \mathrm{E}_{\text{sum}}(W,k_1,k_2,e_1,d_1,e_2,d_2) \leq \mathrm{E}(W,k_1,k_2,e_1,d_1,e_2,d_2) \ ,\]
+and:
+\[ \mathrm{E}(W,k_1,k_2,e_1,d_1,e_2,d_2) \leq 2\mathrm{E}_{\text{sum}}(W,k_1,k_2,e_1,d_1,e_2,d_2) \ ,\]
 so, maximizing over all $e_1,d_1,e_2,d_2$, we get:
 \[ \mathrm{E}_{\text{sum}}(W,k_1,k_2) \leq \mathrm{E}(W,k_1,k_2) \leq 2\mathrm{E}_{\text{sum}}(W,k_1,k_2) \ .\]
 
@@ -249,7 +245,6 @@ The cyclicity of Figure~\ref{fig:MACNScoding} is at first sight counter-intuitiv
           The non-signaling condition ensures that it is possible to consider the conditional probabilities of each party independently. This clarifies how one can effectively encode and then decode messages through a non-signaling box.
 
 As in the unassisted case, we want to maximize over all non-signaling box $P$ the probability of successfully encoding and decoding the messages through $W$, i.e. the probability that $j_1 = i_1$ and  $j_2 = i_2$, given that the input messages are taken uniformly in $[k_1]$ and $[k_2]$. We call this quantity $\mathrm{S^{\mathrm{NS}}}(W,k_1,k_2)$, which is characterized by the following optimization program:
-
 \begin{equation}
   \begin{aligned}
     \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) := &&\underset{P}{\maxi} &&& \frac{1}{k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P(x_1x_2(i_1i_2)|i_1i_2y)\\
@@ -282,7 +277,7 @@ We have then the same definitions of capacity and zero-error capacity:
   \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [input, name=i1] {};
     \node [input, name=i2] {};
-    \node [Bigblock, below of=i2] (P) {$\ \ \ e_1\ \ \ \ \ \ d_1\ \ \ \ \ \ e_2\ \ \ \ \ \ d_2\ \ \ $};
+    \node [Bigblock, below of=i2] (P) {$\ \ \ e_1\ \ \ \ \ \ \ d_1\ \ \ \ \ \ \ e_2\ \ \ \ \ \ \ d_2\ \ \ $};
 
     \draw (P.140) -- (P.220);
     \draw (P.90) -- (P.270);
@@ -408,38 +403,42 @@ However, it turns out those two notions of success define the same capacity regi
 \[ \mathrm{S}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2,P^1,P^2) := \frac{1}{k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P^1(x_1i_1|i_1y)P^2(x_2i_2|i_2y) \ . \]
 
 This should be compared to the sum success probability of encoding and decoding correctly with those, which we call $\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2,P^1,P^2)$ and is equal to:
-\[   \frac{1}{k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)\frac{P^1(x_1i_1|i_1y)\sum_{j_2}P^2(x_2j_2|i_2y) + P^2(x_2i_2|i_2y)\sum_{j_1}P^1(x_1j_1|i_1y)}{2} \ . \]
-
-Similarly to what was done in Proposition~\ref{prop:CapaSumJoint}, we focus on error probabilities rather than success probabilities. We have that:
-
-\[ \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y}W(y|x_1x_2)\sum_{j_1,j_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) = 1 \ ,\]
-
-so we get that $\mathrm{E}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2,P^1,P^2)$ is equal to:
-
-\[\frac{1}{k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)\left[\sum_{j_1,j_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) - P^1(x_1i_1|i_1y)P^2(x_2i_2|i_2y)\right] \ , \]
-
-and thus:
-
-\[\mathrm{E}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2,P^1,P^2) = \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)\sum_{(j_1,j_2) \not= (i_1,i_2)}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)\ .\]
-
-On the other hand, since:
-
-\[ \sum_{j_1,j_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) - P^1(x_1i_1|i_1y)\sum_{j_2}P^2(x_2j_2|i_2y)= \sum_{j_1\not=i_1,j_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) \ ,\]
-
-and:
-
-\[ \sum_{j_1,j_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) - P^2(x_2i_2|i_2y)\sum_{j_1}P^1(x_1j_1|i_1y)= \sum_{j_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) \ ,\]
-
-we get that $\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2,P^1,P^2)$ is equal to:
 \begin{equation}
   \begin{aligned}
-    &\frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)\left[\frac{\sum_{j_1\not=i_1,j_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) + \sum_{j_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)}{2}\right]\\
-    &=\frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)\left[\sum_{j_1\not=i_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) + \frac{\sum_{(j_1,j_2) \in S}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)}{2}\right]\ ,
+    &&&\frac{1}{2k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P^1(x_1i_1|i_1y)\sum_{j_2}P^2(x_2j_2|i_2y)\\
+    + &&&\frac{1}{2k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P^2(x_2i_2|i_2y)\sum_{j_1}P^1(x_1j_1|i_1y) \ .
+  \end{aligned}
+\end{equation}
+
+Similarly to what was done in Proposition~\ref{prop:CapaSumJoint}, we focus on error probabilities rather than success probabilities. We have that:
+\[ \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y}W(y|x_1x_2)\sum_{j_1,j_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) = 1 \ ,\]
+so we get that $\mathrm{E}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2,P^1,P^2)$ is equal to:
+\begin{equation}
+  \begin{aligned}
+    &&&\frac{1}{k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)\sum_{j_1,j_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)\\
+    - &&&\frac{1}{k_1k_2} \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P^1(x_1i_1|i_1y)P^2(x_2i_2|i_2y)\\
+      = &&& \sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)\sum_{(j_1,j_2) \not= (i_1,i_2)}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) \ .
+  \end{aligned}
+\end{equation}
+
+On the other hand, since:
+\begin{equation}
+  \begin{aligned}
+    &&&\sum_{j_1,j_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) - P^1(x_1i_1|i_1y)\sum_{j_2}P^2(x_2j_2|i_2y)\\
+    = &&&\sum_{j_1\not=i_1,j_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) \ ,
+  \end{aligned}
+\end{equation}
+and symetrically, we get that $\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2,P^1,P^2)$ is equal to:
+\begin{equation}
+  \begin{aligned}
+    &&&\frac{1}{2k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)\sum_{j_1\not=i_1,j_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)\\
+    + &&& \frac{1}{2k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)\sum_{j_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)\\
+    = &&&\frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)\sum_{j_1\not=i_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)\\
+    + &&& \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)\frac{\sum_{(j_1,j_2) \in S}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)}{2} \ ,
   \end{aligned}
 \end{equation}
 
 with $S := \{(j_1,i_2) : j_1 \in [k_1]-\{i_1\}\} \cup \{(i_1,j_2) : j_2 \in [k_2]-\{i_2\}\}$. However, we have that:
-
 \begin{equation}
   \begin{aligned}
     &\sum_{j_1\not=i_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) + \frac{\sum_{(j_1,j_2) \in S}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)}{2}\\
@@ -505,7 +504,7 @@ This symmetrization can also be done for the program computing $\mathrm{S}_{\tex
   \begin{equation}
     \begin{aligned}
       \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2) = &&\underset{r^1,r^2,p^1,p^2}{\maxi} &&& \frac{1}{2k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)\left(p^2_{x_2}r^1_{x_1,y} + p^1_{x_1}r^2_{x_2,y}\right)\\
-      && = &&& \frac{1}{2}\left[ \frac{1}{k_1}\sum_{x_1,y} W^1_{p^2,k_2}(y|x_1)r^1_{x_1,y} + \frac{1}{k_2}\sum_{x_2,y}W^2_{p^1,k_1}(y|x_2)r^2_{x_2,y} \right]\\
+      && = &&& \frac{1}{2k_1}\sum_{x_1,y} W^1_{p^2,k_2}(y|x_1)r^1_{x_1,y} + \frac{1}{2k_2}\sum_{x_2,y}W^2_{p^1,k_1}(y|x_2)r^2_{x_2,y}\\
       && \text{with} &&& W^1_{p^2,k_2}(y|x_1) := \frac{1}{k_2}\sum_{x_2} W(y|x_1x_2)p^2_{x_2}\\
       && \text{and} &&& W^2_{p^1,k_1}(y|x_2) := \frac{1}{k_1}\sum_{x_1} W(y|x_1x_2)p^1_{x_1}\\
       &&\st &&& \sum_{x_1} r^1_{x_1,y} = 1, \sum_{x_2} r^2_{x_2,y} = 1\\
@@ -538,12 +537,12 @@ For the other direction, given those variables, non-signaling probability distri
 
 \subsection{Properties of $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$, $\mathcal{C}^{\mathrm{NS}}(W)$ and $\mathcal{C}^{\mathrm{NS}}_0(W)$}
 \begin{definition}
-  We say that a conditional probability distribution $Q(a^n|x^n)$ defined on $\left(\mathcal{A}_1 \times \ldots \times \mathcal{A}_n\right) \times \left(\mathcal{X}_1 \times \ldots \times \mathcal{X}_n\right)$ and $Q'(a'^n|x'^n)$ is \emph{non-signaling} if for all $a^n, x^n, \hat{x}^n$, we have
-    \[ \forall i \in [n], \sum_{a_i}Q(a_1\ldots a_i \ldots a_n|x_1\ldots x_i \ldots x_n) = \sum_{a_i}Q(a_1\ldots a_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n) \ .\]
+  We say that a conditional probability distribution $Q(a^n|x^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ is \emph{non-signaling} if for all $a^n, x^n, \hat{x}^n$, we have
+    \[ \forall i \in [n], \sum_{\hat{a}_i}Q(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) = \sum_{\hat{a}_i}Q(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n) \ .\]
 \end{definition}
 
 \begin{definition}
-  Let $Q(a^n|x^n)$ be a conditional probability distribution defined on $\left(\mathcal{A}_1 \times \ldots \times \mathcal{A}_n\right) \times \left(\mathcal{X}_1 \times \ldots \times \mathcal{X}_n\right)$ and $Q'(a'^n|x'^n)$ defined on $\left(\mathcal{A}'_1 \times \ldots \times \mathcal{A}'_n\right) \times \left(\mathcal{X}'_1 \times \ldots \times \mathcal{X}'_n\right)$. We define $P := Q \otimes Q'$ the tensor product conditional probability distribution defined on $\left(\left(\mathcal{A}_1 \times \mathcal{A}'_1\right) \times \ldots \times \left(\mathcal{A}_n \times \mathcal{A}'_n\right) \right) \times \left(\left(\mathcal{X}_1 \times \mathcal{X}'_1\right) \times \ldots \times \left(\mathcal{X}_n \times \mathcal{X}'_n\right) \right) $ by $P(a_1a'_1\ldots a_na'_n|x_1x'_1\ldots x_nx'_n) := Q(a^n|x^n) \cdot Q'(a'^n|x'^n)$.
+  Let $Q(a^n|x^n)$ a conditional probability distribution defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ and $Q'(a'^n|x'^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}'_i \times \bigtimes_{i=1}^n \mathcal{X}'_i$. We define $P := Q \otimes Q'$ the tensor product conditional probability distribution defined on $\bigtimes_{i=1}^n(\mathcal{A}_i \times \mathcal{A}'_i) \times \bigtimes_{i=1}^n (\mathcal{X}_i \times \mathcal{X}'_i)$ by $P(a_1a'_1\ldots a_na'_n|x_1x'_1\ldots x_nx'_n) := Q(a^n|x^n) \cdot Q'(a'^n|x'^n)$.
 \end{definition}
 
 \begin{lemma}
@@ -551,16 +550,14 @@ For the other direction, given those variables, non-signaling probability distri
   If both $Q$ and $Q'$ are non-signaling, then $P = Q \otimes Q'$ is non-signaling.
 \end{lemma}
 \begin{proof}
-  Let $a_1, \ldots, a_{i-1}, a_{i+1}, \ldots, a_n \in \mathcal{A}_1 \times \ldots \times \mathcal{A}_{i-1} \times \mathcal{A}_{i+1} \times \ldots \times \mathcal{A}_n$, $a'_1, \ldots, a'_{i-1}, a'_{i+1}, \ldots, a'_n \in \mathcal{A}'_1 \times \ldots \times \mathcal{A}'_{i-1} \times \mathcal{A}'_{i+1} \times \ldots \times \mathcal{A}'_n$, $x_1, \ldots, x_n \in \mathcal{X}_1 \times \ldots \times \mathcal{X}_n$ and $x'_1, \ldots, x'_n \in \mathcal{X}'_1 \times \ldots \times \mathcal{X}'_n$. We have:
-
+  Let $a^n \in \bigtimes_{j=1}^n\mathcal{A}_j$, $a'^n \in \bigtimes_{j=1}^n\mathcal{A}'_j$, $x^n \in \bigtimes_{j=1}^n \mathcal{X}_j$, $x'^n \in \bigtimes_{j=1}^n \mathcal{X}'_j$ and $\hat{x}_i \in \mathcal{X}_i$, $\hat{x}'_i \in \mathcal{X}'_i$. Using the fact that $Q,Q'$ are non-signaling, we have:
   \begin{equation}
     \begin{aligned}
-      &\sum_{a_ia_i'}P(a_1a'_1\ldots a_ia'_i \ldots a_na'_n|x_1x'_1\ldots x_ix'_i \ldots x_nx'_n)\\
-      &= \sum_{a_ia'_i}  Q(a_1\ldots a_i \ldots a_n|x_1\ldots x_i \ldots x_n) \cdot Q'(a'_1\ldots a'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\\
-      &= \left(\sum_{a_i}  Q(a_1\ldots a_i \ldots a_n|x_1\ldots x_i \ldots x_n)\right) \cdot \left(\sum_{a_i}  Q'(a'_1\ldots a'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\right)\\
-      &= \left(\sum_{a_i}  Q(a_1\ldots a_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n)\right) \cdot \left(\sum_{a_i}  Q'(a'_1\ldots a'_i \ldots a'_n|x'_1\ldots \hat{x}'_i \ldots x'_n)\right)\\
-      &\quad \text{since $Q$ and $Q'$ are non-signaling} \\
-      &\sum_{a_ia_i'}P(a_1a'_1\ldots a_ia'_i \ldots a_na'_n|x_1x'_1\ldots \hat{x}_i\hat{x}'_i \ldots x_nx'_n) \ ,
+      &\sum_{\hat{a}_i\hat{a}_i'}P(a_1a'_1\ldots \hat{a}_i\hat{a}_i' \ldots a_na'_n|x_1x'_1\ldots x_ix'_i \ldots x_nx'_n)\\
+      = &\sum_{\hat{a}_i\hat{a}_i'}  Q(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) \cdot Q'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\\
+      = &\left(\sum_{\hat{a}_i}  Q(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  Q'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\right)\\
+      = &\left(\sum_{\hat{a}_i}  Q(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  Q'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots \hat{x}'_i \ldots x'_n)\right)\\
+      = &\sum_{\hat{a}_i\hat{a}_i'}P(a_1a'_1\ldots \hat{a}_i\hat{a}'_i \ldots a_na'_n|x_1x'_1\ldots \hat{x}_i\hat{x}'_i \ldots x_nx'_n) \ ,
     \end{aligned}
   \end{equation}
   so $P$ is non-signaling.
@@ -575,15 +572,16 @@ For the other direction, given those variables, non-signaling probability distri
   \item $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq \min\left(\frac{|\mathcal{X}_1|}{k_1}, \frac{|\mathcal{X}_2|}{k_2}, \frac{|\mathcal{Y}|}{k_1k_2} \right)$.
   \item If $k_1' \leq k_1$ and $k_2' \leq k_2$, then $\mathrm{S}^{\mathrm{NS}}(W,k_1',k_2') \geq \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$.
     
-  \item For any MAC $W': \mathcal{X}'_1 \times \mathcal{X}'_2 \rightarrow \mathcal{Y}'$ and $k_1,k_2 \in \mathbb{N}^*$, we have $\mathrm{S}^{\mathrm{NS}}(W \otimes W',k_1k_1',k_2k_2') \geq \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \cdot \mathrm{S}^{\mathrm{NS}}(W',k'_1,k'_2)$. In particular, for any positive integer $n$, $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \geq \left[\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)\right]^n$ and $\mathrm{S}^{\mathrm{NS}}(W \otimes W',k_1,k_2) \geq \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$.
+  \item For $W': \mathcal{X}'_1 \times \mathcal{X}'_2 \rightarrow \mathcal{Y}'$ and $k_1,k_2 \in \mathbb{N}^*$, we have $\mathrm{S}^{\mathrm{NS}}(W \otimes W',k_1k_1',k_2k_2') \geq \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \cdot \mathrm{S}^{\mathrm{NS}}(W',k'_1,k'_2)$. In particular, for any positive integer $n$, we have $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \geq \left[\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)\right]^n$ and $\mathrm{S}^{\mathrm{NS}}(W \otimes W',k_1,k_2) \geq \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$.
   \end{enumerate}
 \end{proposition}
 \begin{proof}
   \begin{enumerate}
-  \item Let us first show that $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \geq \frac{1}{k_1k_2}$. Take $p_{x_1,x_2} := \frac{k_1k_2}{|\mathcal{X}_1||\mathcal{X}_2|}$, $r^1_{x_1,x_2,y} := \frac{p_{x_1,x_2}}{k_2}$, $r^2_{x_1,x_2,y} := \frac{p_{x_1,x_2}}{k_1}$ and $r_{x_1,x_2,y} := \frac{p_{x_1,x_2}}{k_1k_2} = \frac{1}{|\mathcal{X}_1||\mathcal{X}_2|}$. One can easily check that it is indeed a valid solution of the linear program computing $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$. Thus we have:
+  \item We will start by proving that $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \geq \frac{1}{k_1k_2}$. Take $p_{x_1,x_2} := \frac{k_1k_2}{|\mathcal{X}_1||\mathcal{X}_2|}$, $r^1_{x_1,x_2,y} := \frac{p_{x_1,x_2}}{k_2}$, $r^2_{x_1,x_2,y} := \frac{p_{x_1,x_2}}{k_1}$ and $r_{x_1,x_2,y} := \frac{p_{x_1,x_2}}{k_1k_2} = \frac{1}{|\mathcal{X}_1||\mathcal{X}_2|}$. One can easily check that it is indeed a valid solution of the linear program computing $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$. Thus we have:
     \begin{equation}
       \begin{aligned}
-        \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) &\geq \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y} = \frac{1}{k_1k_2} \sum_{x_1,x_2} \frac{1}{|\mathcal{X}_1||\mathcal{X}_2|} \sum_y W(y|x_1x_2)\\
+        \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) &\geq \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y}\\
+        &= \frac{1}{k_1k_2} \sum_{x_1,x_2} \frac{1}{|\mathcal{X}_1||\mathcal{X}_2|} \sum_y W(y|x_1x_2)\\
         &= \frac{1}{k_1k_2} \sum_{x_1,x_2} \frac{1}{|\mathcal{X}_1||\mathcal{X}_2|} = \frac{1}{k_1k_2} \ .
       \end{aligned}
     \end{equation}
@@ -601,16 +599,18 @@ For the other direction, given those variables, non-signaling probability distri
     \begin{equation}
       \begin{aligned}
         \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) &= \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y} \leq \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r^2_{x_1,x_2,y}\\
-        &\leq \frac{1}{k_1k_2} \sum_{x_2,y} \left(\sum_{x_1'} W(y|x_1'x_2)\right)\cdot\left(\sum_{x_1} r^2_{x_1,x_2,y} \right) \quad \text{since nonnegative terms.}\\
+        &\leq \frac{1}{k_1k_2} \sum_{x_2,y} \left(\sum_{x_1'} W(y|x_1'x_2)\right)\cdot\left(\sum_{x_1} r^2_{x_1,x_2,y} \right)\\
         &=  \frac{1}{k_1k_2} \sum_{x_2,y} \left(\sum_{x_1'} W(y|x_1'x_2)\right)\cdot\left(\frac{1}{k_1} \sum_{x_1} p_{x_1,x_2} \right)\\
-        &= \frac{1}{k_1^2k_2} \sum_{x_1,x_2} p_{x_1,x_2} \sum_{x_1'}\left(\sum_y W(y|x_1'x_2)\right) = \frac{|\mathcal{X}_1|}{k_1^2k_2} \sum_{x_1,x_2} p_{x_1,x_2} = \frac{|\mathcal{X}_1|}{k_1} \ .
+        &= \frac{1}{k_1^2k_2} \sum_{x_1,x_2} p_{x_1,x_2} \sum_{x_1'}\left(\sum_y W(y|x_1'x_2)\right)\\
+        &= \frac{|\mathcal{X}_1|}{k_1^2k_2} \sum_{x_1,x_2} p_{x_1,x_2} = \frac{|\mathcal{X}_1|}{k_1} \ .
       \end{aligned}
     \end{equation}
 
     Let us show now that $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq \frac{|\mathcal{Y}|}{k_1k_2}$:
     \begin{equation}
       \begin{aligned}
-        \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) &= \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y} \leq \frac{1}{k_1k_2} \sum_{y} \left(\max_{x_1,x_2} W(y|x_1x_2)\right) \sum_{x_1,x_2} r_{x_1,x_2,y}\\
+        \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) &= \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y}\\
+        &\leq \frac{1}{k_1k_2} \sum_{y} \left(\max_{x_1,x_2} W(y|x_1x_2)\right) \sum_{x_1,x_2} r_{x_1,x_2,y}\\
         &\leq \frac{1}{k_1k_2} \sum_{y} \sum_{x_1,x_2} r_{x_1,x_2,y} = \frac{|\mathcal{Y}|}{k_1k_2} \ .
       \end{aligned}
     \end{equation}
@@ -626,10 +626,10 @@ For the other direction, given those variables, non-signaling probability distri
       \end{aligned}
     \end{equation}
 
-    $P'$ is a correct conditional probability distribution. Indeed, it is nonnegative by construction, and we have that:
+    $P'$ is a correct conditional probability distribution. Indeed, it is nonnegative by construction, and we have that $\sum_{x_1,x_2,j_1 \in S,j_2} P'(x_1x_2(j_1j_2)|i_1i_2y)$ is equal to:
     \begin{equation}
       \begin{aligned}
-      &\sum_{x_1,x_2,j_1 \in S,j_2} P'(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{x_1,x_2,j_1 \in S,j_2} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{x_1,x_2,j_1 \in S,j_2} C(x_1x_2j_2|i_1i_2y)\\
+      &\sum_{x_1,x_2,j_1 \in S,j_2} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{x_1,x_2,j_1 \in S,j_2} C(x_1x_2j_2|i_1i_2y)\\
       &= \sum_{x_1,x_2j_2} \sum_{j_1 \in S} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{x_1,x_2,j_2}\sum_{j_1 \in S} \frac{1}{k'_1}\sum_{j'_1 \in [k_1]-S}P(x_1x_2(j'_1j_2)|i_1i_2y)\\
         &= \sum_{x_1,x_2,j_2}\sum_{j_1 \in S} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{x_1,x_2,j_2} \sum_{j'_1 \in [k_1]-S}P(x_1x_2(j'_1j_2)|i_1i_2y)\\
       &= \sum_{x_1,x_2,j_1,j_2} P(x_1x_2(j_1j_2)|i_1i_2y) = 1 \ .
@@ -641,7 +641,7 @@ For the other direction, given those variables, non-signaling probability distri
     \item First with $x_1$:
     \begin{equation}
       \begin{aligned}
-      \sum_{x_1} P'(x_1x_2(j_1j_2)|i_1i_2y) &= \sum_{x_1} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{x_1} C(x_1x_2j_2|i_1i_2y)\\
+      &\sum_{x_1} P'(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{x_1} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{x_1} C(x_1x_2j_2|i_1i_2y)\\
       &= \sum_{x_1} P(x_1x_2(j_1j_2)|i_1i_2y) + \frac{1}{k'_1}\sum_{j'_1 \in [k_1]-S}\sum_{x_1}P(x_1x_2(j'_1j_2)|i_1i_2y)\\
       &= \sum_{x_1} P(x_1x_2(j_1j_2)|i'_1i_2y) + \frac{1}{k'_1}\sum_{j'_1 \in [k_1]-S}\sum_{x_1}P(x_1x_2(j'_1j_2)|i'_1i_2y)\\
       &\text{since $P$ is non-signaling.}\\
@@ -652,17 +652,17 @@ For the other direction, given those variables, non-signaling probability distri
     \item Then with $x_2$:
     \begin{equation}
       \begin{aligned}
-      \sum_{x_2} P'(x_1x_2(j_1j_2)|i_1i_2y) &= \sum_{x_2} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{x_2} C(x_1x_2j_2|i_1i_2y)\\
+      &\sum_{x_2} P'(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{x_2} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{x_2} C(x_1x_2j_2|i_1i_2y)\\
       &= \sum_{x_2} P(x_1x_2(j_1j_2)|i_1i_2y) + \frac{1}{k'_1}\sum_{j'_1 \in [k_1]-S}\sum_{x_2}P(x_1x_2(j'_1j_2)|i_1i_2y)\\
       &= \sum_{x_2} P(x_1x_2(j_1j_2)|i_1i'_2y) + \frac{1}{k'_1}\sum_{j'_1 \in [k_1]-S}\sum_{x_2}P(x_1x_2(j'_1j_2)|i_1i'_2y)\\
       &\text{since $P$ is non-signaling.}\\
       &= \sum_{x_2} P'(x_1x_2(j_1j_2)|i_1i'_2y) \ .
       \end{aligned}
     \end{equation}
-    \item Finally with $(j_1j_2)$:
+    \item Finally with $(j_1j_2)$, we have that $\sum_{j_1 \in S,j_2} P'(x_1x_2(j_1j_2)|i_1i_2y)$ is equal to:
     \begin{equation}
       \begin{aligned}
-      &\sum_{j_1 \in S,j_2} P'(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{j_2}\sum_{j_1 \in S} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{j_2}\sum_{j_1 \in S} C(x_1x_2j_2|i_1i_2y)\\
+      &\sum_{j_2}\sum_{j_1 \in S} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{j_2}\sum_{j_1 \in S} C(x_1x_2j_2|i_1i_2y)\\
       &= \sum_{j_2}\sum_{j_1 \in S} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{j_2}\sum_{j_1 \in S}\frac{1}{k'_1}\sum_{j'_1 \in [k_1]-S}P(x_1x_2(j'_1j_2)|i_1i_2y)\\
       &= \sum_{j_2}\sum_{j_1 \in S} P(x_1x_2(j_1j_2)|i_1i_2y) + \sum_{j_2}\sum_{j'_1 \in [k_1]-S}P(x_1x_2(j'_1j_2)|i_1i_2y)\\
       &= \sum_{j_1,j_2} P(x_1x_2(j_1j_2)|i_1i_2y)\\
@@ -681,13 +681,14 @@ For the other direction, given those variables, non-signaling probability distri
     \end{equation}
     \end{enumerate}
 
-  \item Consider optimal non-signaling probability distributions $P$ and $P'$ reaching respectively the values $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ and $\mathrm{S}^{\mathrm{NS}}(W',k'_1,k'_2)$. Then by Lemma~\ref{lem:NStensor}, $P \otimes P'$ is a non-signaling probability distribution on $\left(\mathcal{X}_1 \times \mathcal{X}'_1\right) \times \left(\mathcal{X}_2 \times \mathcal{X}'_2\right) \times \left(([k_1]\times[k'_1]) \times ([k_2]\times[k'_2])\right) \times ([k_1]\times[k'_1]) \times ([k_2]\times[k'_2]) \times \left(\mathcal{Y} \times \mathcal{Y}'\right)$, which is trivially in bijection with $\left(\mathcal{X}_1 \times \mathcal{X}'_1\right) \times \left(\mathcal{X}_2 \times \mathcal{X}'_2\right) \times \left([k_1k'_1] \times [k_2k'_2]\right) \times [k_1k'_1] \times [k_2k'_2] \times \left(\mathcal{Y} \times \mathcal{Y}'\right)$. This gives a valid solution of the program computing $\mathrm{S}^{\mathrm{NS}}(W \otimes W',k_1k'_1,k_2k'_2)$. Thus, we get that $\mathrm{S}^{\mathrm{NS}}(W \otimes W',k_1k'_1,k_2k'_2)$ is larger than or equal to:
+  \item Consider optimal non-signaling probability distributions $P$ and $P'$ reaching respectively the values $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ and $\mathrm{S}^{\mathrm{NS}}(W',k'_1,k'_2)$. Then by Lemma~\ref{lem:NStensor}, $P \otimes P'$ is a non-signaling probability distribution on $\left(\mathcal{X}_1 \times \mathcal{X}'_1\right) \times \left(\mathcal{X}_2 \times \mathcal{X}'_2\right) \times \left(([k_1]\times[k'_1]) \times ([k_2]\times[k'_2])\right) \times ([k_1]\times[k'_1]) \times ([k_2]\times[k'_2]) \times \left(\mathcal{Y} \times \mathcal{Y}'\right)$, which is trivially in bijection with $\left(\mathcal{X}_1 \times \mathcal{X}'_1\right) \times \left(\mathcal{X}_2 \times \mathcal{X}'_2\right) \times \left([k_1k'_1] \times [k_2k'_2]\right) \times [k_1k'_1] \times [k_2k'_2] \times \left(\mathcal{Y} \times \mathcal{Y}'\right)$. This will be a feasible solution of the program computing $\mathrm{S}^{\mathrm{NS}}(W \otimes W',k_1k'_1,k_2k'_2)$. Thus, we get that $\mathrm{S}^{\mathrm{NS}}(W \otimes W',k_1k'_1,k_2k'_2)$ is larger than or equal to (where the first sums are over all indices $x_1x_1',x_2x_2',yy',i_1i_1',i_2i_2'$):
     \begin{equation}
       \begin{aligned}
-        &\sum_{x_1x_1',x_2x_2',yy',i_1i_1',i_2i_2'} \left(W \otimes W'\right)(yy'|x_1x_1'x_2x_2')\left(P \otimes P'\right)(x_1x_1'x_2x_2'(i_1i_1'i_2i_2')|i_1i_1',i_2i_2'yy')\\
-        &= \sum_{x_1x_1',x_2x_2',yy',i_1i_1',i_2i_2'} \left(W(y|x_1x_2) \cdot W'(y'|x'_1x'_2)\right)\left( P(x_1x_2(i_1i_2)|i_1i_2y) \cdot P'(x'_1x'_2(i'_1i'_2)|i'_1i'_2y') \right)\\
-        &= \left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P(x_1x_2(i_1i_2)|i_1i_2y)\right)\cdot\left(\sum_{x'_1,x'_2,y',i'_1,i'_2} W'(y'|x'_1x'_2)P'(x'_1x'_2(i'_1i'_2)|i'_1i'_2y')\right)\\
-        &= \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \cdot \mathrm{S}^{\mathrm{NS}}(W',k'_1,k'_2) \ .
+        &\sum \left(W \otimes W'\right)(yy'|x_1x_1'x_2x_2')\left(P \otimes P'\right)(x_1x_1'x_2x_2'(i_1i_1'i_2i_2')|i_1i_1',i_2i_2'yy')\\
+        = &\sum \left(W(y|x_1x_2) \cdot W'(y'|x'_1x'_2)\right)\left( P(x_1x_2(i_1i_2)|i_1i_2y) \cdot P'(x'_1x'_2(i'_1i'_2)|i'_1i'_2y') \right)\\
+        = &\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)P(x_1x_2(i_1i_2)|i_1i_2y)\right)\\
+        \times &\left(\sum_{x'_1,x'_2,y',i'_1,i'_2} W'(y'|x'_1x'_2)P'(x'_1x'_2(i'_1i'_2)|i'_1i'_2y')\right)\\
+        = &\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \cdot \mathrm{S}^{\mathrm{NS}}(W',k'_1,k'_2) \ .
       \end{aligned}
     \end{equation}
 
@@ -699,7 +700,7 @@ For the other direction, given those variables, non-signaling probability distri
   \label{cor:asymptotic}
   \begin{enumerate}
       \item $\mathcal{C}^{\mathrm{NS}}(W)$ is convex.
-      \item If $(R_1,R_2)$ is achievable with non-signaling assistance, then $R_1 \leq \log_2|\mathcal{X}_1|$, $R_2 \leq \log_2|\mathcal{X}_2|$ and $R_1 + R_2 \leq \log_2|\mathcal{Y}|$.
+      \item If $(R_1,R_2)$ is achievable with non-signaling assistance, then we have $R_1 \leq \log_2|\mathcal{X}_1|$, $R_2 \leq \log_2|\mathcal{X}_2|$ and $R_1 + R_2 \leq \log_2|\mathcal{Y}|$.
       \item If $(R_1,R_2)$ is achievable with non-signaling assistance, then for all $R_i' \leq R_i$, $(R_1',R_2')$ is achievable with non-signaling assistance.
   \end{enumerate}
 \end{corollary}
@@ -710,21 +711,16 @@ For the other direction, given those variables, non-signaling probability distri
     \[ \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) \underset{n \rightarrow +\infty}{\rightarrow} 1 \text{ and }\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{\tilde{R}_1n}},\ceil{2^{\tilde{R}_2n}}) \underset{n \rightarrow +\infty}{\rightarrow} 1 \ . \]
     Let $\lambda \in (0,1)$ rational and define $R_{\lambda,i} := \lambda \cdot R_i + (1-\lambda) \cdot \tilde{R}_i$, let us show that $(R_{\lambda,1},R_{\lambda,2})$ is achievable with non-signaling assistance. Let us call respectively $k_i:=2^{R_i}, \tilde{k}_i := 2^{\tilde{R}_i}, k_{\lambda,i} := 2^{R_{\lambda,i}} = k_i^{\lambda}\cdot k_i^{(1-\lambda)}$.
 
-    We have $R_{\lambda,i}n = \lambda \cdot R_in + (1-\lambda) \cdot \tilde{R}_in = (\lambda n) \cdot R_i + (1-\lambda)n \cdot \tilde{R}_i$. This is the idea of \emph{time-sharing}: for $\lambda n$ copies of the MAC, we use the strategy with rate $(R_1,R_2)$ and for the $(1-\lambda)n$ other copies of the MAC, we use the strategy with rate $(\tilde{R}_1,\tilde{R}_2)$. There exists some $n$ such that $\lambda n,(1-\lambda)n,\lambda n R_i,(1-\lambda)n \tilde{R}_i$ are integers, since everything is rational. This implies that $k_i^{\lambda n},\tilde{k}_i^{(1-\lambda)n},k_{\lambda,i}^n$ are integers. Thus, thanks to the fourth property of Proposition~\ref{prop:oneShot}, we have:
-    \begin{equation}
-      \begin{aligned}
-        \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda, 2}) &\geq \mathrm{S}^{\mathrm{NS}}(W^{\otimes (\lambda n)}, k_1^{\lambda n}, k_2^{\lambda n}) \cdot \mathrm{S}^{\mathrm{NS}}(W^{\otimes ((1-\lambda) n)}, \tilde{k}_1^{(1-\lambda) n}, \tilde{k}_2^{(1-\lambda) n})\\
-        &\underset{n \rightarrow +\infty}{\rightarrow} 1 \cdot 1 = 1 \ .
-      \end{aligned}
-    \end{equation}
+    We have $R_{\lambda,i}n = \lambda \cdot R_in + (1-\lambda) \cdot \tilde{R}_in = (\lambda n) \cdot R_i + (1-\lambda)n \cdot \tilde{R}_i$. This is the idea of \emph{time-sharing}: for $\lambda n$ copies of the MAC, we use the strategy with rate $(R_1,R_2)$ and for the $(1-\lambda)n$ other copies of the MAC, we use the strategy with rate $(\tilde{R}_1,\tilde{R}_2)$. There exists some $n$ such that $\lambda n,(1-\lambda)n,\lambda n R_i,(1-\lambda)n \tilde{R}_i$ are integers, since everything is rational. This implies that $k_i^{\lambda n},\tilde{k}_i^{(1-\lambda)n},k_{\lambda,i}^n$ are integers. Thus, thanks to the fourth property of Proposition~\ref{prop:oneShot}, we have that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda, 2})$ is larger than or equal to:
+\[ \mathrm{S}^{\mathrm{NS}}(W^{\otimes (\lambda n)}, k_1^{\lambda n}, k_2^{\lambda n}) \cdot \mathrm{S}^{\mathrm{NS}}(W^{\otimes ((1-\lambda) n)}, \tilde{k}_1^{(1-\lambda) n}, \tilde{k}_2^{(1-\lambda) n}) \underset{n \rightarrow +\infty}{\rightarrow} 1 \cdot 1 = 1  \ .\]
 
-    Thus in particular, since we have $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we get that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \underset{n \rightarrow +\infty}{\rightarrow} 1$, so $(R_{\lambda,1},R_{\lambda,2})$ is achievable with non-signaling assistance. Finally, since $\mathcal{C}^{\mathrm{NS}}(W)$ is defined as the closure of achievable rates with non-signaling assistance, we get that $\mathcal{C}^{\mathrm{NS}}(W)$ is convex.
+    Thus in particular, since we have $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we get the result $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \underset{n \rightarrow +\infty}{\rightarrow} 1$, so $(R_{\lambda,1},R_{\lambda,2})$ is achievable with non-signaling assistance. Finally, since $\mathcal{C}^{\mathrm{NS}}(W)$ is defined as the closure of achievable rates with non-signaling assistance, we get that $\mathcal{C}^{\mathrm{NS}}(W)$ is convex.
     
-  \item By the second property of Proposition~\ref{prop:oneShot}, we have that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \frac{|\mathcal{X}_1^n|}{k_1^n}$. In particular, if one takes $R_1 > \log_2 |\mathcal{X}_1|$, then $k_1 > |\mathcal{X}_1|$ and we get that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \left(\frac{|\mathcal{X}_1|}{k_1}\right)^n \underset{n \rightarrow +\infty}{\rightarrow} 0$, so $R_1 > \log_2 |\mathcal{X}_1|$ is not achievable with non-signaling assistance. Symmetrically, $R_2 > \log_2 |\mathcal{X}_2|$ is not achievable with non-signaling assistance.
+  \item By the second property of Proposition~\ref{prop:oneShot}, we have$\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \frac{|\mathcal{X}_1^n|}{k_1^n}$. In particular, if $R_1 > \log_2 |\mathcal{X}_1|$, then $k_1 > |\mathcal{X}_1|$ and we get that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \left(\frac{|\mathcal{X}_1|}{k_1}\right)^n \underset{n \rightarrow +\infty}{\rightarrow} 0$, so $R_1 > \log_2 |\mathcal{X}_1|$ is not achievable with non-signaling assistance. Symmetrically, $R_2 > \log_2 |\mathcal{X}_2|$ is not achievable with non-signaling assistance.
 
     Furthermore, if one takes $R_1+R_2 > \log_2|\mathcal{Y}|$, then in particular $k_1k_2 > |\mathcal{Y}|$, so by the second property of Proposition~\ref{prop:oneShot}, $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \frac{|\mathcal{Y}^n|}{k_1^nk_2^n} = \left(\frac{|\mathcal{Y}|}{k_1k_2}\right)^n \underset{n \rightarrow +\infty}{\rightarrow} 0$. Thus, $R_1+R_2 > \log_2|\mathcal{Y}|$ is not achievable with non-signaling assistance.
     
-  \item Since $(R_1,R_2)$ is achievable with non-signaling assistance, we have $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR_1}},\ceil{2^{nR_2}}) \underset{n \rightarrow +\infty}{\rightarrow} 1$. But, for all positive integer $n$, we have that $\ceil{2^{nR'_1}} \leq \ceil{2^{nR_1}}$ and $\ceil{2^{nR'_2}}\leq \ceil{2^{nR_2}}$, so by the third property of Proposition~\ref{prop:oneShot}, we have that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR'_1}},\ceil{2^{nR'_2}}) \geq \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR_1}},\ceil{2^{nR_2}})$. Thus $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR'_1}},\ceil{2^{nR'_2}} \underset{n \rightarrow +\infty}{\rightarrow} 1$ since it is upper bounded by $1$, and so $(R'_1,R'_2)$ is achievable with non-signaling assistance.
+  \item Since $(R_1,R_2)$ is achievable with non-signaling assistance, we have by definition that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR_1}},\ceil{2^{nR_2}}) \underset{n \rightarrow +\infty}{\rightarrow} 1$. But, for all positive integer $n$, we have that $\ceil{2^{nR'_1}} \leq \ceil{2^{nR_1}}$ and $\ceil{2^{nR'_2}}\leq \ceil{2^{nR_2}}$, so by the third property of Proposition~\ref{prop:oneShot}, we have that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR'_1}},\ceil{2^{nR'_2}}) \geq \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR_1}},\ceil{2^{nR_2}})$. Thus $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR'_1}},\ceil{2^{nR'_2}} \underset{n \rightarrow +\infty}{\rightarrow} 1$ since it is upper bounded by $1$, and so $(R'_1,R'_2)$ is achievable with non-signaling assistance.
   \end{enumerate}
 \end{proof}
 
@@ -735,7 +731,7 @@ For the other direction, given those variables, non-signaling probability distri
   \[ \exists n \in \mathbb{N}^*, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
 \end{proposition}
 \begin{proof}
-  It is clear that if $(R_1,R_2)$ is such that $\exists n_0 \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1$, then in particular $\exists n \in \mathbb{N}^*, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1$. So, $\mathcal{C}^{\mathrm{NS}}_0(W)$, which is the closure of the former rate pairs, is in particular included in the closure of the latter rate pairs.
+  If $(R_1,R_2)$ is such that $\exists n_0 \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1$, then in particular $\exists n \in \mathbb{N}^*, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1$. So, $\mathcal{C}^{\mathrm{NS}}_0(W)$, which is the closure of the former rate pairs, is in particular included in the closure of the latter rate pairs.
   
   For the other inclusion, consider a rate pair $(R_1,R_2)$ and let us assume that there exists some positive integer $n$ such that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1$. Let us show that for any $(R_1',R_2')$ such that $R'_1 < R_1$ and $R'_2 < R_2$:
   \[ \exists n_0 \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1'n}},\ceil{2^{R_2'n}}) = 1 \ , \]
@@ -750,7 +746,9 @@ For the other direction, given those variables, non-signaling probability distri
       &\geq \mathrm{S}^{\mathrm{NS}}(W^{\otimes nm},\ceil{2^{R_1nm}},\ceil{2^{R_2nm}}) = 1 \ ,
     \end{aligned}
   \end{equation}
-  so $\mathrm{S}^{\mathrm{NS}}(W^{\otimes (nm+r)},\ceil{2^{R_1nm}},\ceil{2^{R_2nm}}) = 1$. But $\ceil{2^{R_1nm}} = \ceil{2^{\frac{R_1nm}{nm+r}(nm+r)}} = \ceil{2^{\frac{R_1}{1+\delta}(nm+r)}}$ with $\delta = \frac{r}{nm} \leq \frac{1}{m}$, and symmetrically $\ceil{2^{R_1nm}} = \ceil{2^{\frac{R_1}{1+\delta}(nm+r)}}$. Thus in particular, for all $R'_1 \leq \frac{R_1}{1+\frac{1}{m}}$ and $R'_2 \leq \frac{R_2}{1+\frac{1}{m}}$, we have that for all $n'\geq nm, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n'},\ceil{2^{R_1'n'}},\ceil{2^{R_2'n'}}) = 1$. So for any $(R_1',R_2')$ such that $R'_1 < R_1$ and $R'_2 < R_2$, there is large enough $m$ such that $R'_1 \leq \frac{R_1}{1+\frac{1}{m}}$ and $R'_2 \leq \frac{R_2}{1+\frac{1}{m}}$, and thus we get the expected property on $(R_1',R_2')$ for $n_0:=nm$.
+  so $\mathrm{S}^{\mathrm{NS}}(W^{\otimes (nm+r)},\ceil{2^{R_1nm}},\ceil{2^{R_2nm}}) = 1$.
+
+  But $\ceil{2^{R_1nm}} = \ceil{2^{\frac{R_1nm}{nm+r}(nm+r)}} = \ceil{2^{\frac{R_1}{1+\delta}(nm+r)}}$ with $\delta = \frac{r}{nm} \leq \frac{1}{m}$, and symmetrically $\ceil{2^{R_1nm}} = \ceil{2^{\frac{R_1}{1+\delta}(nm+r)}}$. Thus in particular, for all $R'_1 \leq \frac{R_1}{1+\frac{1}{m}}$ and $R'_2 \leq \frac{R_2}{1+\frac{1}{m}}$, we have that for all $n'\geq nm, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n'},\ceil{2^{R_1'n'}},\ceil{2^{R_2'n'}}) = 1$. So for any $(R_1',R_2')$ such that $R'_1 < R_1$ and $R'_2 < R_2$, there is large enough $m$ such that $R'_1 \leq \frac{R_1}{1+\frac{1}{m}}$ and $R'_2 \leq \frac{R_2}{1+\frac{1}{m}}$, and thus we get the expected property on $(R_1',R_2')$ for $n_0:=nm$.
 \end{proof}
 
 \subsection{Linear Program with Reduced Size for Structured Channels}
@@ -763,7 +761,12 @@ Although $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ can be computed in polynomial tim
 \end{definition}
 
 In particular, for  $W^{\otimes n}: \mathcal{X}_1^n \times \mathcal{X}_2^n \rightarrow \mathcal{Y}^n$, the symmetric group $G:=S_n$ acts in a natural way in any set $\mathcal{A}$ raised to power $n$. So for $\sigma \in S_n$, we have that:
-\[ W^{\otimes n}(\sigma \cdot y^n|\sigma \cdot x_1^n \sigma \cdot x_2^n) =\prod_{i=1}^n W(y_{\sigma(i)}|x_{1,\sigma(i)}x_{2,\sigma(i)}) = \prod_{i=1}^n W(y_{i}|x_{1,i}x_{2,i}) = W^{\otimes n}(y^n|x_1^nx_2^n) \ ,\]
+\begin{equation}
+  \begin{aligned}
+    W^{\otimes n}(\sigma \cdot y^n|\sigma \cdot x_1^n \sigma \cdot x_2^n) &= \prod_{i=1}^n W(y_{\sigma(i)}|x_{1,\sigma(i)}x_{2,\sigma(i)}) = \prod_{i=1}^n W(y_{i}|x_{1,i}x_{2,i})\\
+    &= W^{\otimes n}(y^n|x_1^nx_2^n) \ ,
+  \end{aligned}
+\end{equation}
 and so $W^{\otimes n}$ is invariant under the action of $S_n$.
 
 Let $\mathcal{Z} := \{\mathcal{X}_1, \mathcal{X}_2, \mathcal{Y}, \mathcal{X}_1 \times \mathcal{Y}, \mathcal{X}_2 \times \mathcal{Y}, \mathcal{X}_1 \times \mathcal{X}_2,  \mathcal{X}_1 \times \mathcal{X}_2 \times \mathcal{Y} \}$. Let us call $\mathcal{O}_G(\mathcal{A})$ the set of orbits of $\mathcal{A}$ under the action of $G$. Then, one can find an equivalent smaller linear program for $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$:
@@ -773,7 +776,7 @@ Let $\mathcal{Z} := \{\mathcal{X}_1, \mathcal{X}_2, \mathcal{Y}, \mathcal{X}_1 \
   We have that $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ is the solution of the following linear program:
   \begin{equation}
   \begin{aligned}
-    \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) = &&\underset{r,r^1,r^2,p}{\maxi} &&& \frac{1}{k_1k_2}\sum_{w \in \mathcal{O}_G(\mathcal{X}_1 \times \mathcal{X}_2 \times \mathcal{Y})} W(w)r_w\\
+    &&\underset{r,r^1,r^2,p}{\maxi} &&& \frac{1}{k_1k_2}\sum_{w \in \mathcal{O}_G(\mathcal{X}_1 \times \mathcal{X}_2 \times \mathcal{Y})} W(w)r_w\\
     &&\st &&& \sum_{w:w_{\mathcal{Y}}=v} r_w = |v|, \forall v \in \mathcal{O}_G(\mathcal{Y})\\
     &&&&& \sum_{w:w_{\mathcal{X}_2\mathcal{Y}}=v^2} r^1_{w} = k_1 \sum_{w:w_{\mathcal{X}_2\mathcal{Y}}=v^2} r_w, \: \forall v^2 \in \mathcal{O}_G(\mathcal{X}_2 \times \mathcal{Y})\\
     &&&&& \sum_{w:w_{\mathcal{X}_1\mathcal{Y}}=v^1} r^2_{w} = k_2 \sum_{w:w_{\mathcal{X}_1\mathcal{Y}}=v^1} r_w, \: \forall v^1 \in \mathcal{O}_G(\mathcal{X}_1 \times \mathcal{Y})\\
@@ -792,8 +795,7 @@ Let $\mathcal{Z} := \{\mathcal{X}_1, \mathcal{X}_2, \mathcal{Y}, \mathcal{X}_1 \
 \end{corollary}
 \begin{proof}
   We use the linear program obtained in Theorem~\ref{theo:polyLP} with $G:=S_n$ acting on $W^{\otimes n}$ as described before. 
-  The number of variables and constraints is linear in the number of orbits of the action of $S^n$ on the different sets $\mathcal{A} \in \mathcal{Z}$, where here $\mathcal{Z} = \{\mathcal{X}_1^n, \mathcal{X}_2^n, \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{Y}^n, \mathcal{X}^n_2 \times \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{X}^n_2,  \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n \}$. For example, for $\mathcal{A} \in \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n$, we have that:
-
+  The number of variables and constraints is linear in the number of orbits of the action of $S^n$ on the different sets $\mathcal{A} \in \mathcal{Z}$, where here $\mathcal{Z} := \{\mathcal{X}_1^n, \mathcal{X}_2^n, \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{Y}^n, \mathcal{X}^n_2 \times \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{X}^n_2,  \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n \}$. For example, for $\mathcal{A} \in \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n$, we have that:
 \[ |\mathcal{O}_{S_n}(\mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n)| = \binom{n + |\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}|   - 1}{|\mathcal{X}_1| |\mathcal{X}_2| |\mathcal{Y}| - 1} \leq (n+|\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}|-1)^{|\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}| - 1} \ .\]
 
 So the number of variables and constraints is $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$. Note also that all the numbers occurring this linear program are integers or fractions of integers, with those integers ranging in $\left[\left(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|\right)^n\right]$, thus of size $O(n\log(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|))$. So the size of this linear program is bounded by $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$, and thus $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ can be computed in polynomial time in $n$; see for instance Section 7.1 of~\cite{GM07}.
@@ -812,14 +814,13 @@ In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For al
     f & : & B_{\tau}^x  & \to & B_{\tau}^{x'} \\
     & & y & \mapsto & g \cdot y \ .\\
   \end{array}\]
-  First, $f$ is well defined. Indeed, if $y \in B_{\tau}^x = \left\{y:(x,y)\in\tau\right\}$, then $g \cdot y \in \left\{y:(g \cdot x,y)\in\tau\right\} = B_{\tau}^{x'}$, since $\tau \in \mathcal{O}_G(\mathcal{A} \times \mathcal{B})$. Let us show that $f$ is injective. If $g \cdot y = g \cdot y'$, then $g^{-1} \cdot (g \cdot y) = (g^{-1}g) \cdot y = y$, $g^{-1} \cdot (g \cdot y') = y'$, so $y=y'$. Thus we get that $|B_{\tau}^x|\leq|B_{\tau}^{x'}|$. By a symmetric argument with $x'$ replacing $x$ and $g^{-1}$ replacing $g$, we get that $|B_{\tau}^{x'}|\leq|B_{\tau}^x|$, and so $|B_{\tau}^x|=|B_{\tau}^{x'}|=:c_{\tau}^{\nu}$.
+  First, $f$ is well defined. Indeed, if $y \in B_{\tau}^x = \left\{y:(x,y)\in\tau\right\}$, then we have that $g \cdot y \in \left\{y:(g \cdot x,y)\in\tau\right\} = B_{\tau}^{x'}$, since $\tau \in \mathcal{O}_G(\mathcal{A} \times \mathcal{B})$. Let us show that $f$ is injective. If $g \cdot y = g \cdot y'$, then $g^{-1} \cdot (g \cdot y) = (g^{-1}g) \cdot y = y$, $g^{-1} \cdot (g \cdot y') = y'$, so $y=y'$. Thus we get that $|B_{\tau}^x|\leq|B_{\tau}^{x'}|$. By a symmetric argument with $x'$ replacing $x$ and $g^{-1}$ replacing $g$, we get that $|B_{\tau}^{x'}|\leq|B_{\tau}^x|$, and so $|B_{\tau}^x|=|B_{\tau}^{x'}|=:c_{\tau}^{\nu}$.
 
-  Furthermore, $\{ B_{\tau}^x \}_{x \in \nu}$ is a partition of $\tau$, so $\sum_{x \in \nu} |B_{\tau}^x| = |\nu| c_{\tau}^{\nu} = |\tau|$, and thus $c_{\tau}^{\nu}=\frac{|\tau|}{|\nu|}$.
+  Furthermore, $\{ B_{\tau}^x \}_{x \in \nu}$ is a partition of $\tau$, so $\sum_{x \in \nu} |B_{\tau}^x| = |\nu| c_{\tau}^{\nu} = |\tau|$, and $c_{\tau}^{\nu}=\frac{|\tau|}{|\nu|}$.
 \end{proof}
 
 \begin{lemma}
   \label{lem:fromOrbitToEle} For any $(x,y) \in \mathcal{A} \times \mathcal{B}$ and $v_{(x,y)^G}$ variable indexed by orbits of $\mathcal{A} \times \mathcal{B}$, let us define the variable $v_{x,y} := \frac{v_{(x,y)^G}}{|(x,y)^G|}$. We have:
-
   \[ \sum_{x \in \mathcal{A}} v_{x,y} = \frac{1}{|y^G|}\sum_{\tau \in \mathcal{O}_G(\mathcal{A} \times \mathcal{B}): \tau_{\mathcal{B}}=y^G} v_{\tau}, \forall y \in \mathcal{B} \ .\]
 \end{lemma}
 
@@ -837,7 +838,6 @@ In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For al
 \begin{lemma}
   \label{lem:fromEleToOrbit}
   For any $\tau \in \mathcal{O}_G(\mathcal{A} \times \mathcal{B})$, $\mu \in \mathcal{O}_G(\mathcal{B})$ and $v_{x,y}$ variable indexed by elements of $\mathcal{A} \times \mathcal{B}$, let us define $v_{\tau} := \sum_{(x,y) \in \tau} v_{x,y}$. We have:
-
   \[ \sum_{\tau  \in \mathcal{O}_G(\mathcal{A} \times \mathcal{B}): \tau_{\mathcal{B}}=\mu} v_{\tau} = \sum_{y \in \mu} \sum_{x \in \mathcal{A}} v_{x,y} \ .\]
 \end{lemma}
 
@@ -859,7 +859,7 @@ In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For al
    \begin{equation}
      \begin{aligned}
        S^*&=\frac{1}{k_1k_2}\sum_{w} W(w)r_w =\frac{1}{k_1k_2}\sum_{w} W(w) \sum_{(x_1,x_2,y) \in w} r_{x_1,x_2,y}\\
-       &=\frac{1}{k_1k_2}\sum_{w} \sum_{(x_1,x_2,y) \in w} W(y|x_1x_2) r_{x_1,x_2,y} \quad \text{since $W(w)= W(y|x_1x_2)$ for all $(x_1,x_2,y) \in w$}\\
+       &=\frac{1}{k_1k_2}\sum_{w} \sum_{(x_1,x_2,y) \in w} W(y|x_1x_2) r_{x_1,x_2,y}\\
        &= \frac{1}{k_1k_2}\sum_{x_1,x_2,y} W(y|x_1x_2) r_{x_1,x_2,y} = S \ .
      \end{aligned}
   \end{equation}
@@ -873,15 +873,20 @@ In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For al
    For the fourth (and symmetrically for the fifth), we have:
    \begin{equation}
      \begin{aligned}
-       \sum_{w:w_{\mathcal{X}_2\mathcal{Y}}=v^2} r^2_w &= \sum_{(x_2,y) \in v^2} \sum_{x_1} r^2_{x_1,x_2,y} = \sum_{(x_2,y) \in v^2} \frac{1}{k_1} \sum_{x_1} p_{x_1,x_2} = \frac{1}{k_1} \sum_{x_2 \in v^2_{\mathcal{X}_2}} \sum_{y: (x_2,y) \in v^2} \sum_{x_1} p_{x_1,x_2}\\
+       \sum_{w:w_{\mathcal{X}_2\mathcal{Y}}=v^2} r^2_w &= \sum_{(x_2,y) \in v^2} \sum_{x_1} r^2_{x_1,x_2,y} = \sum_{(x_2,y) \in v^2} \frac{1}{k_1} \sum_{x_1} p_{x_1,x_2}\\
+       &= \frac{1}{k_1} \sum_{x_2 \in v^2_{\mathcal{X}_2}} \sum_{y: (x_2,y) \in v^2} \sum_{x_1} p_{x_1,x_2}\\
        &= \frac{1}{k_1} \sum_{x_2 \in v^2_{\mathcal{X}_2}} \frac{|v^2|}{|v^2_{\mathcal{X}_2}|} \sum_{x_1} p_{x_1,x_2} \quad \text{thanks to Lemma~\ref{lem:orbitProjCard}}\\
        &= \frac{1}{k_1}\frac{|v^2|}{|v^2_{\mathcal{X}_2}|} \sum_{u:u_{\mathcal{X}_2}=v^2_{\mathcal{X}_2}} p_u \ .
      \end{aligned}
    \end{equation}
 
    Finally for the last constraints, we only need to compute:
-
-   \[ \sum_{(x_1,x_2,y) \in w} p_{x_1,x_2} = \sum_{(x_1,x_2) \in w_{\mathcal{X}_1\mathcal{X}_2}} \sum_{y : (x_1,x_2,y) \in w} p_{x_1,x_2} = \sum_{(x_1,x_2) \in w_{\mathcal{X}_1\mathcal{X}_2}} \frac{|w|}{|w_{\mathcal{X}_1\mathcal{X}_2}|} p_{x_1,x_2} = \frac{|w|}{|w_{\mathcal{X}_1\mathcal{X}_2}|} p_{w_{\mathcal{X}_1\mathcal{X}_2}} \ ,\]
+   \begin{equation}
+     \begin{aligned}
+       \sum_{(x_1,x_2,y) \in w} p_{x_1,x_2} &= \sum_{(x_1,x_2) \in w_{\mathcal{X}_1\mathcal{X}_2}} \sum_{y : (x_1,x_2,y) \in w} p_{x_1,x_2} = \sum_{(x_1,x_2) \in w_{\mathcal{X}_1\mathcal{X}_2}} \frac{|w|}{|w_{\mathcal{X}_1\mathcal{X}_2}|} p_{x_1,x_2}\\
+       &= \frac{|w|}{|w_{\mathcal{X}_1\mathcal{X}_2}|} p_{w_{\mathcal{X}_1\mathcal{X}_2}} \ ,
+     \end{aligned}
+   \end{equation}
    which implies that the linear inequalities on $p_{x_1,x_2}, r_{x_1,x_2,y}, r^1_{x_1,x_2,y}, r^2_{x_1,x_2,y}$ get transposed respectively to the values $\frac{|w|}{|w_{\mathcal{X}_1\mathcal{X}_2}|} p_{w_{\mathcal{X}_1\mathcal{X}_2}}, r_w, r^1_w, r^2_w$. Indeed, for instance, one has for any $x_1,x_2,y$ that $p_{x_1,x_2}- r^1_{x_1,x_2,y}- r^2_{x_1,x_2,y} + r_{x_1,x_2,y} \geq 0$. Thus for some orbit $w$:
    \[\sum_{(x_1,x_2,y) \in w}\left(p_{x_1,x_2}- r^1_{x_1,x_2,y}- r^2_{x_1,x_2,y} + r_{x_1,x_2,y}\right) \geq 0 \ ,\]
    and then $ \frac{|w|}{|w_{\mathcal{X}_1\mathcal{X}_2}|} p_{w_{\mathcal{X}_1\mathcal{X}_2}}- r^1_w- r^2_w + r_w \geq 0$, which was what we wanted to show.
@@ -905,18 +910,23 @@ In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For al
      \end{aligned}
   \end{equation}
 
-   Then, all the constraints are satisfied. Indeed, thanks to Lemma~\ref{lem:fromOrbitToEle}, we have for the first constraint:
-   
+   Then, all the constraints are satisfied. Indeed, thanks to Lemma~\ref{lem:fromOrbitToEle}, we have for the first constraint:  
    \[\sum_{x_1,x_2} r_{x_1,x_2,y} = \frac{1}{|y^G|} \sum_{w:w_{\mathcal{Y}}=y^G} r_w = \frac{|y^G|}{|y^G|} = 1 \ .\]
+   
    For the second constraint (and symmetrically for the third constraint), we have:
-
-   \[\sum_{x_1} r^1_{x_1,x_2,y} = \frac{1}{|(x_2,y)^G|} \sum_{w:w_{\mathcal{X}_2\mathcal{Y}}=(x_2,y)^G} r^1_w = \frac{k_1}{|(x_2,y)^G|}\sum_{w:w_{\mathcal{X}_2\mathcal{Y}}=(x_2,y)^G} r_w = k_1 \sum_{x_1} r_{x_1,x_2,y} \ .\]
-
+   \begin{equation}
+     \begin{aligned}
+       \sum_{x_1} r^1_{x_1,x_2,y} &= \frac{1}{|(x_2,y)^G|} \sum_{w:w_{\mathcal{X}_2\mathcal{Y}}=(x_2,y)^G} r^1_w = \frac{k_1}{|(x_2,y)^G|}\sum_{w:w_{\mathcal{X}_2\mathcal{Y}}=(x_2,y)^G} r_w\\
+       &= k_1 \sum_{x_1} r_{x_1,x_2,y} \ .
+     \end{aligned}
+   \end{equation}
+  
    For the fourth (and symmetrically for the fifth), we have:
    \begin{equation}
      \begin{aligned}
        \sum_{x_1} r^2_{x_1,x_2,y} &= \frac{1}{|(x_2,y)^G|} \sum_{w:w_{\mathcal{X}_2\mathcal{Y}}=(x_2,y)^G} r^2_w = \frac{1}{|(x_2,y)^G|} \frac{1}{k_1}\frac{|(x_2,y)^G|}{|(x_2,y)^G_{\mathcal{X}_2}|} \sum_{u:u_{\mathcal{X}_2}=(x_2,y)^G_{\mathcal{X}_2}} p_u \\
-       &= \frac{1}{k_1}\frac{1}{|(x_2,y)^G_{\mathcal{X}_2}|} \sum_{u:u_{\mathcal{X}_2}=(x_2,y)^G_{\mathcal{X}_2}} p_u = \frac{1}{k_1} \frac{1}{|x_2^G|}\sum_{u:u_{\mathcal{X}_2}=x_2^G} p_u \text{ since $(x_2,y)^G_{\mathcal{X}_2} = x_2^{G}$}\\
+       &= \frac{1}{k_1}\frac{1}{|(x_2,y)^G_{\mathcal{X}_2}|} \sum_{u:u_{\mathcal{X}_2}=(x_2,y)^G_{\mathcal{X}_2}} p_u\\
+       &= \frac{1}{k_1} \frac{1}{|x_2^G|}\sum_{u:u_{\mathcal{X}_2}=x_2^G} p_u \text{ since $(x_2,y)^G_{\mathcal{X}_2} = x_2^{G}$}\\
        &= \frac{1}{k_1} \sum_{x_1} p_{x_1,x_2} \ .
      \end{aligned}
    \end{equation}
@@ -1033,7 +1043,7 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
   In this section, we use concatenated codes to obtain achievable rate pairs, and apply it to a noisy version of the BAC:
 
   \begin{definition}[Concatenated Codes]
-  Given a MAC $W$ and a non-signaling assisted code $P$, define $W[P] : [k_1] \times [k_2] \rightarrow [\ell]$ with $W[P](j|i_1i_2) := \sum_{x_1,x_2,y}W(y|x_1x_2)P(x_1x_2j|i_1i_2y)$:
+  Given a MAC$W$ and a non-signaling assisted code $P$, let $W[P] : [k_1] \times [k_2] \rightarrow [\ell]$ with $W[P](j|i_1i_2) := \sum_{x_1,x_2,y}W(y|x_1x_2)P(x_1x_2j|i_1i_2y)$:
 \begin{center}
   \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [input, name=i1] {};
@@ -1101,7 +1111,6 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
 
 
     Let us define $\hat{P}(x_1x_2(b_1b_2)|a_1a_2y) := \sum_{i_1,i_2,j}P(x_1x_2j|i_1i_2y)e_1(i_1|a_1)e_2(i_2|a_2)d(b_1b_2|j)$. Then, one can easily check that $\hat{P}$ is non-signaling, and thus:
-
     \[ \mathrm{S}^{\mathrm{NS}}(W^{\otimes N},\ell_1,\ell_2) \geq \frac{1}{\ell_1\ell_2} \sum_{x_1,x_2,y} W(y|x_1x_2)\sum_{a_1,a_2}\hat{P}(x_1x_2(a_1,a_2)|a_1a_2y) \geq 1 - \varepsilon \ .  \]
 
     This implies that $\underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1$, i.e. $(R_1,R_2) \in \mathcal{C}^{\mathrm{NS}}(W)$.
@@ -1118,7 +1127,12 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
 
   \begin{proof}
     The achievable region comes from the previous discussion. We just need to prove that the corner points are of the given form. If $R_1=\frac{I(I_1:J|I_2)}{n}$, constraints on $R_2$ and $R_1+R_2$ leads to a maximum $R_2 = \min\left(\frac{I(I_2:J|I_1)}{n}, \frac{I((I_1,I_2):J)}{n}-\frac{I(I_1:J|I_2)}{n}\right)$. However, $I((I_1,I_2):J)-I(I_1:J|I_2)=I(I_2 : J)$ by the chain rule. We only need to show that $I(I_2:J) \leq I(I_2:J|I_1)$ and the proof will be complete, since the other corner point is symmetric. We have:
-    \[ I(I_2:J) = H(I_2)-H(I_2|J) = H(I_2|I_1) - H(I_2|J) \leq H(I_2|I_1) - H(I_2|JI_1) = I(I_2:J|I_1) \ ,\]
+    \begin{equation}
+      \begin{aligned}
+        I(I_2:J) &= H(I_2)-H(I_2|J) = H(I_2|I_1) - H(I_2|J)\\
+        &\leq H(I_2|I_1) - H(I_2|JI_1) = I(I_2:J|I_1) \ ,
+      \end{aligned}
+    \end{equation}
     the second equality coming from the fact that $I_1$ and $I_2$ are independent, and the inequality coming from the fact that $H(A|BC) \leq H(A|B)$ for any $A,B,C$.
   \end{proof}
   
@@ -1140,7 +1154,12 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
   \end{proposition}
   \begin{proof}
     If $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2) = 1$, then $\forall y^n,x_1^n,x_2^n : W^{\otimes n}(y^n|x_1^nx_2^n) > 0 \implies r_{x_1^n,x_2^n,y^n} = p_{x_1^n,x_2^n}$. Indeed, we have for an optimal $p,r$ that:
-    \[ \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2) = \frac{1}{k_1k_2} \sum_{x_1^n,x_2^n,y^n} W^{\otimes n}(y^n|x_1^nx_2^n)r_{x_1^n,x_2^n,y^n} \leq \frac{1}{k_1k_2} \sum_{x_1^n,x_2^n,y^n} W^{\otimes n}(y^n|x_1^nx_2^n)p_{x_1^n,x_2^n} = 1 \ , \]
+    \begin{equation}
+      \begin{aligned}
+        \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2) &= \frac{1}{k_1k_2} \sum_{x_1^n,x_2^n,y^n} W^{\otimes n}(y^n|x_1^nx_2^n)r_{x_1^n,x_2^n,y^n}\\
+        &\leq \frac{1}{k_1k_2} \sum_{x_1^n,x_2^n,y^n} W^{\otimes n}(y^n|x_1^nx_2^n)p_{x_1^n,x_2^n} = 1 \ ,
+      \end{aligned}
+    \end{equation}
     which implies the previous statement. But, for $W_{\text{BAC},\varepsilon_1, \varepsilon_2}^{\otimes n}$, one can easily check that for all $y^n,x_1^n,x_2^n$, $W^{\otimes n}(y^n|x_1^nx_2^n) > 0$ since $\varepsilon_1,\varepsilon_2 \in (0,1)$. Indeed, you just have to flip the inputs to a valid preimage of the output. Thus if $\mathrm{S}^{NS}(W_{\text{BAC},\varepsilon_1, \varepsilon_2}^{\otimes n},k_1,k_2) = 1$, we have that $\forall y^n,x_1^n,x_2^n, r_{x_1^n,x_2^n,y^n} = p_{x_1^n,x_2^n}$. In particular, this implies that $\sum_{x_1^n,x_2^n} r_{x_1^n,x_2^n,y^n} = \sum_{x_1^n,x_2^n} p_{x_1^n,x_2^n}$, therefore $1 = k_1k_2$, so $k_1 = 1$ and $k_2 = 1$. Thus $\mathrm{S}^{NS}(W^{\otimes n},2^{nR_1},2^{nR_2}) = 1$ implies that $(R_1,R_2)=(0,0)$. 
   \end{proof}
 
@@ -1226,14 +1245,13 @@ The following proposition shows that this is indeed a relaxation of the non-sign
   \begin{proof}
     Let us take a solution $(p_{x_1,x_2}, r_{x_1,x_2,y}, r^1_{x_1,x_2,y}, r^2_{x_1,x_2,y})_{x_1 \in \mathcal{X}_1,x_2 \in \mathcal{X}_2,y \in \mathcal{Y}}$ of the linear program computing $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$. Let us show that $(p_{x_1,x_2}, r_{x_1,x_2,y})_{x_1 \in \mathcal{X}_1,x_2 \in \mathcal{X}_2,y \in \mathcal{Y}}$ is a solution of the linear program computing $\mathrm{S}^{\overline{\mathrm{NS}}}(W,k_1,k_2)$ with a same objective value, from which the proposition follows.
 
-    They have indeed the same value, since the definition which is the same for both programs depends only on $r_{x_1,x_2,y}$. Let us show that all constraints are satisfied for $(p_{x_1,x_2}, r_{x_1,x_2,y})_{x_1 \in \mathcal{X}_1,x_2 \in \mathcal{X}_2,y \in \mathcal{Y}}$.
+    They have indeed the same value, since the definition which is the same for both programs depends only on $r_{x_1,x_2,y}$. Let us show that all constraints are satisfied for the solution $(p_{x_1,x_2}, r_{x_1,x_2,y})_{x_1 \in \mathcal{X}_1,x_2 \in \mathcal{X}_2,y \in \mathcal{Y}}$.
 
     We have $\sum_{x_1,x_2} r_{x_1,x_2,y} = 1 \leq 1$ so the first constraint is satisfied. We have then that:
     \[\sum_{x_1,x_2} p_{x_1,x_2} = k_1\sum_{x_1,x_2} r^2_{x_1,x_2,y} = k_1k_2\sum_{x_1,x_2} r_{x_1,x_2,y} = k_1k_2 \ ,\]
     so the second constraint is satisfied.
 
     For the third constraint (and symmetrically the fourth constraint), we have:
-
     \[\sum_{x_1} p_{x_1,x_2} = k_1\sum_{x_1} r^2_{x_1,x_2,y} \geq  k_1\sum_{x_1} r_{x_1,x_2,y} \ .\]
 
     Finally, we have directly $0 \leq r_{x_1,x_2,y} \leq p_{x_1,x_2}$, so the last constraint is satisfied.
@@ -1287,10 +1305,10 @@ The following proposition shows that this is indeed a relaxation of the non-sign
   \begin{proof}
     We use the characterization of $\mathcal{C}^{\overline{\mathrm{NS}}}$ provided by Theorem~\ref{theo:CharaNSrelaxed}.
 
-    Let us consider an arbitrary $P_{X_1X_2}=(p_{00},p_{01},p_{10},p_{11})$. First, we have that $I((X_1,X_2):Y) = H(Y) - H(Y|X_1X_2) = H(Y)$ since $Y$ is a deterministic function of $(X_1,X_2)$. Then, we have that $I(X_1:Y|X_2) = H(Y|X_2) - H(Y|X_1X_2) = H(Y|X_2)$ for the same  reason. Furthermore, given $X_2$, $Y$  is a deterministic function of $X_1$, so we have $I(X_1:Y|X_2) = H(Y|X_2) - H(Y|X_1X_2) = H(X_1|X_2)$. Symmetrically we have as well $I(X_2:Y|X_1) = H(X_2|X_1)$. In all:
-    \[ \mathcal{C}^{\overline{\mathrm{NS}}}(W_{\text{BAC}}) =  \bigcup_{P_{X_1X_2}}\left\{ (R_1,R_2) : R_1 \leq H(X_1|X_2), R_2 \leq H(X_2|X_1), R_1+R_2 \leq H(X_1+X_2)\right\} \]
+    Let us consider an arbitrary $P_{X_1X_2}=(p_{00},p_{01},p_{10},p_{11})$. First, we have that $I((X_1,X_2):Y) = H(Y) - H(Y|X_1X_2) = H(Y)$ since $Y$ is a deterministic function of $(X_1,X_2)$. Then, we have that $I(X_1:Y|X_2) = H(Y|X_2) - H(Y|X_1X_2) = H(Y|X_2)$ for the same  reason. Furthermore, given $X_2$, $Y$  is a deterministic function of $X_1$, so we have $I(X_1:Y|X_2) = H(Y|X_2) - H(Y|X_1X_2) = H(X_1|X_2)$. Symmetrically we have as well $I(X_2:Y|X_1) = H(X_2|X_1)$. In all, $\mathcal{C}^{\overline{\mathrm{NS}}}(W_{\text{BAC}})$ is equal to:
+    \[ \bigcup_{P_{X_1X_2}}\left\{ (R_1,R_2) : R_1 \leq H(X_1|X_2), R_2 \leq H(X_2|X_1), R_1+R_2 \leq H(X_1+X_2)\right\} \ . \]
     
-    Let us call $B_1(P_{X_1X_2}):=H(X_1|X_2),B_2(P_{X_1X_2}):=H(X_2|X_1),B_{12}(P_{X_1X_2}):=H(X_1+X_2)$ the three bounds. Let us call $P_{\overline{X}_1\overline{X}_2}=(p_{11},p_{10},p_{01},p_{00})$. One can notice that:
+    Let us call $B_1(P_{X_1X_2}):=H(X_1|X_2),B_2(P_{X_1X_2}):=H(X_2|X_1)$ and $B_{12}(P_{X_1X_2}):=H(X_1+X_2)$ the three bounds. Let us call $P_{\overline{X}_1\overline{X}_2}=(p_{11},p_{10},p_{01},p_{00})$. One can notice that:
     \begin{equation}
       \begin{aligned}
         B_1(P_{\overline{X}_1\overline{X}_2}) &= H(\overline{X}_1|\overline{X}_2) = H(1-X_1|1-X_2) = H(X_1|X_2) = B_1(P_{X_1X_2}) \ ,\\
@@ -1301,11 +1319,15 @@ The following proposition shows that this is indeed a relaxation of the non-sign
     \end{equation}   
     
     Since $B_{12}(P_{X_1X_2}) = H(X_1+X_2) = H(p_{00},p_{11},p_{01}+p_{10})$, it is concave in $P_{X_1X_2}$ as $H$ is concave and $(p_{00},p_{11},p_{01}+p_{10})$ is linear in $P_{X_1X_2}$. Also, $B_1(P_{X_1X_2}) = H(X_1|X_2) = -D(P_{X_1X_2} ||I \otimes P_{X_2})$ is concave in $P_{X_1X_2}$  as the divergence $D$ is jointly convex and $I \otimes P_{X_2}$ is linear in $P_{X_1X_2}$. By symmetry, $B_2(P_{X_1X_2})$ is as well concave in $P_{X_1X_2}$. Let us consider any of those three bounds, which we call $B$. We have by concavity of $B$ and the fact that $B(P_{X_1X_2})=B(P_{\overline{X}_1\overline{X}_2})$:
-    \[B(P_{X_1X_2}) = \frac{B(P_{X_1X_2})+B(P_{\overline{X}_1\overline{X}_2})}{2} \leq B\left(\frac{P_{X_1X_2}+P_{\hat{X}_1\hat{X}_2}}{2}\right) = B\left(\frac{q}{2},\frac{1-q}{2},\frac{1-q}{2},\frac{q}{2}\right) \ , \]
+    \begin{equation}
+      \begin{aligned}
+        B(P_{X_1X_2})& = \frac{B(P_{X_1X_2})+B(P_{\overline{X}_1\overline{X}_2})}{2} \leq B\left(\frac{P_{X_1X_2}+P_{\hat{X}_1\hat{X}_2}}{2}\right)\\
+        &= B\left(\frac{q}{2},\frac{1-q}{2},\frac{1-q}{2},\frac{q}{2}\right) \ ,
+      \end{aligned}
+    \end{equation}
     with $q=p_{00}+p_{11}$. This holds for the three bounds at the same time, so we can restrict ourselves to the distributions of the form $\left(\frac{q}{2},\frac{1-q}{2},\frac{1-q}{2},\frac{q}{2}\right)$ for some $q \in [0,1]$, i.e., $P_{X_1X_2}(0,0) = P_{X_1X_2}(1,1) = \frac{q}{2}$ and $P_{X_1X_2}(0,1) = P_{X_1X_2}(1,0) = \frac{1-q}{2}$.
 
      We have $P_{Y}(0) = P_{Y}(2) = \frac{q}{2}$ and $P_{Y}(1) = 1-q$, so:
-
     \begin{equation}
       \begin{aligned}
         B_{12}(P_{X_1X_2}) &= H(Y) = -q\log(\frac{q}{2})-\left(1-q\right)\log(1-q)\\
@@ -1321,7 +1343,6 @@ The following proposition shows that this is indeed a relaxation of the non-sign
     \[\bigcup_{q \in [0,1]}\{ (R_1,R_2) : R_1 < h\left(q\right), R_2 < h\left(q\right), R_1+R_2 < q+h\left(q\right)\} \ .\]
 
     However this set is already convex, so we have:
-
     \[\mathcal{C}^{\overline{\mathrm{NS}}}(W_{\text{BAC}}) = \bigcup_{q \in [0,1]}\{ (R_1,R_2) : R_1 \leq h\left(q\right), R_2 \leq h\left(q\right), R_1+R_2 \leq q+h\left(q\right)\} \ .\]
     
     Finally, we can restrict ourselves to $q \in \left[\frac{1}{2},\frac{2}{3}\right]$, since $h$ is increasing from $0$ to $\frac{1}{2}$ (thus $q \mapsto q+h\left(q\right)$ as well), and the fact that $q \mapsto q+h\left(q\right)$ achieves its maximum for $q=\frac{2}{3}$ with $\frac{2}{3}+h\left(\frac{2}{3}\right)=\log_2(3)$ and then decreases (whereas $h$ is decreasing from $\frac{1}{2}$ to $1$), which completes the proof.
@@ -1452,7 +1473,6 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
   If now $Y$ is the output of the channel $W_i$, the joint distribution of $X_1,X_2,Y$ is given by $P^{(i)}_{X_1X_2Y}(x_1,x_2,y) = W_i(y|x_1x_2)P_{X_1X_2}(x_1,x_2)= W_i(y|x_1x_2)\frac{p_{x_1,x_2}}{k_1k_2}$.
 
   On the other hand, we have that for all $x_1,x_2,y$, $0 \leq T_{x_1,x_2,y} \leq 1$ since $0 \leq r_{x_1,x_2,y} \leq p_{x_1,x_2}$. So we get that:
-
   \[ 1 - \varepsilon_i = \sum_{x_1,x_2,y} T_{x_1,x_2,y}P^{(i)}_{X_1X_2Y}(x_1,x_2,y) \ . \]
 
   Since $\sum_{x_1,x_2,y} T_{x_1,x_2,y}P^{(0)}_{X_1X_2Y}(x_1,x_2,y) \geq 1 - \varepsilon_0$ and $0 \leq T_{x_1,x_2,y} \leq 1$, we have:
@@ -1461,7 +1481,6 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
   Let us now consider three general cases, depending on the fact that $W_1$ does not depend on $x_1$, $x_2$ or both: $W_1(y|x_1x_2) := Q^{(1)}(y|x_2)$; $W_1(y|x_1x_2) := Q^{(2)}(y|x_1)$;  $W_1(y|x_1x_2) := Q^{(0)}(y)$. These will give respectively the three bounds we want.
  
   First, let us consider the case where $W_1(y|x_1x_2) := Q^{(1)}(y|x_2)$ (the second case where $W_1(y|x_1x_2) := Q^{(2)}(y|x_1)$ being symmetric), we have that:
-
   \begin{equation}
     \begin{aligned}
       1 - \varepsilon_1 &= \sum_{x_1,x_2,y} T_{x_1,x_2,y}Q^{(1)}(y|x_2)\frac{p_{x_1,x_2}}{k_1k_2} = \frac{1}{k_1k_2} \sum_{x_2,y} Q^{(1)}(y|x_2) \sum_{x_1}T_{x_1,x_2,y}p_{x_1,x_2}\\
@@ -1478,7 +1497,7 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
     \end{aligned}
   \end{equation}
   
-  In those three cases, we have respectively $P^{(1)}_{X_1X_2Y} = P_{X_1X_2} \times Q^{(1)}_{Y|X_2}; P_{X_1X_2} \times Q^{(2)}_{Y|X_1}; P_{X_1X_2} \times Q^{(0)}_{Y}$. Specializing those cases with $Q^{(1)}_{Y|X_2}:=P_{Y|X_2}; Q^{(2)}_{Y|X_1}:=P_{Y|X_1}; Q^{(0)}_{Y}:=P_Y$ and using the fact that ${\beta_{1-\varepsilon_0}\left(P^{(0)},P^{(1)}\right) \leq 1 - \varepsilon_1}$ concludes the proof.
+  In those three cases, we have respectively $P^{(1)}_{X_1X_2Y} = P_{X_1X_2} \times Q^{(1)}_{Y|X_2}; P_{X_1X_2} \times Q^{(2)}_{Y|X_1};$ and $P_{X_1X_2} \times Q^{(0)}_{Y}$. Specializing those cases with $Q^{(1)}_{Y|X_2}:=P_{Y|X_2}; Q^{(2)}_{Y|X_1}:=P_{Y|X_1}; Q^{(0)}_{Y}:=P_Y$ and using the fact that ${\beta_{1-\varepsilon_0}\left(P^{(0)},P^{(1)}\right) \leq 1 - \varepsilon_1}$ concludes the proof.
   \end{proof}
 
   \begin{lemma}
@@ -1504,7 +1523,6 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
     \end{equation}
 
     Following the steps of section G in~\cite{PPV10}, since any hypothesis test is a binary-output transformation, by data-processing inequality for divergence, we have that:
-
     \begin{equation}
       \begin{aligned}
         &d\left(1-\varepsilon||\beta_{1-\varepsilon}\left(P_{X_1X_2Y},\left(P_{X_1|X_2} \times P_{Y|X_2} \right) \times P_{X_2}\right)\right)\\
@@ -1515,7 +1533,7 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
       
 
     where the binary divergence $d(a||b):= a\log\left(\frac{a}{b}\right) + (1-a)\log\left(\frac{1-a}{1-b}\right)$ and satisfies, $d(a||b) \geq -h(a) - a\log(b)$ and thus:
-    \[ \log(\frac{1}{b}) \leq \frac{d(a||b) + h(a)}{a} = \frac{d(a||b) + h(1-a)}{a} \ , \]
+    \[ \log(\frac{1}{b}) \leq \frac{d(a||b) + h(a)}{a} = \frac{d(a||b) + h(1-a)}{a} \ . \]
 
     This leads to:
     \[\log(k_1) \leq \frac{1}{\log\left(\left(\beta_{1-\varepsilon}\left(P_{X_1X_2Y},\left(P_{X_1|X_2} \times P_{Y|X_2} \right) \times P_{X_2}\right)\right)\right)} \leq \frac{I(X_1:Y|X_2) + h(\varepsilon)}{1-\varepsilon} \ .\]
@@ -1545,8 +1563,7 @@ In order to show additivity of the outer bound, we use the following lemma.
   \end{lemma}
   
   \begin{proof}
-    Consider $n$ copies of the MAC $W$. Let us write $X_{1,-i} := X_{1,1} \ldots X_{1,i-1} X_{1,i+1} \ldots X_{1,n}$ and $Z^n := Z_1 \ldots Z_n$. We have:
-
+    Consider $n$ copies of $W$. Let us write $X_{1,-i} := X_{1,1} \ldots X_{1,i-1} X_{1,i+1} \ldots X_{1,n}$ and $Z^n := Z_1 \ldots Z_n$. We have:
     \begin{equation}
       \begin{aligned}
         I(X_1^n:Y^n|X_2^n) &= I(X_1^n:Y^n|X_2^n)\\
@@ -1559,62 +1576,63 @@ In order to show additivity of the outer bound, we use the following lemma.
      \begin{equation}
      \begin{aligned}
         I(X_1^n:Y^n|X_2^n) &= \sum_{i=1}^n H(Y_i|X_2^nY^{i-1}) - H(Y_i|X_2^nY^{i-1}X_{1,i})\\
-        &= \sum_{i=1}^n H(Y_i|X_2^nY^{i-1}) - H(Y_i|X_{2,i}X_{1,i}) \text{ since $X_{2,-i} Y^{i-1} \rightarrow (X_{1,i},X_{2,i}) \rightarrow Y_i$ Markov chain.}\\
+        &= \sum_{i=1}^n H(Y_i|X_2^nY^{i-1}) - H(Y_i|X_{2,i}X_{1,i})\\
+        &\text{ since $X_{2,-i} Y^{i-1} \rightarrow (X_{1,i},X_{2,i}) \rightarrow Y_i$ Markov chain.}\\
         &\leq \sum_{i=1}^n H(Y_i|X_{2,i}) - H(Y_i|X_{2,i}X_{1,i}) = \sum_{i=1}^n I(X_{1,i}:Y_i|X_{2,i}) \ .
       \end{aligned}
     \end{equation}
     
-      Symmetrically by switching the roles of $X_1$ and $X_2$, we get the second part of Lemma~\ref{lem:multiletterOB}.
-      
-      For the sum-rate case:
+      Symmetrically, by switching the roles of $X_1$ and $X_2$, we get the second part of Lemma~\ref{lem:multiletterOB}. For the sum-rate case:
       \begin{equation*}
         \begin{aligned}
-          I((X_1^n,X_2^n):Y^n) &= \sum_{i=1}^n I((X_1^n,X_2^n):Y_i|Y^{i-1}) \text{ by the chain rule}\\
-          &= \sum_{i=1}^n I((X_{1,i},X_{2,i}):Y_i|Y^{i-1}) + \sum_{i=1}^n I((X_{1,-i},X_{2,-i}):Y_i|Y^{i-1}X_{1,i}X_{2,i})\\
-          &= \sum_{i=1}^n I((X_{1,i},X_{2,i}):Y_i|Y^{i-1}) \text{ since $(X_{1,-i},X_{2,-i}) \rightarrow Y^{i-1}X_{1,i}X_{2,i} \rightarrow Y_i$ Markov chain.}\\
-          &= \sum_{i=1}^n H(Y_i|Y^{i-1}) - H(Y_i|Y^{i-1}X_{1,i}X_{2,i})\\
-          &= \sum_{i=1}^n H(Y_i|Y^{i-1}) - H(Y_i|X_{1,i}X_{2,i}) \text{ since $Y^{i-1} \rightarrow (X_{1,i},X_{2,i}) \rightarrow Y_i$ Markov chain.}\\
-          &\leq \sum_{i=1}^n H(Y_i) - H(Y_i|X_{2,i}X_{1,i}) = \sum_{i=1}^n I((X_{1,i},X_{2,i}):Y_i) \ .
+          &I((X_1^n,X_2^n):Y^n) = \sum_{i=1}^n I((X_1^n,X_2^n):Y_i|Y^{i-1}) \text{ by the chain rule}\\
+          = &\sum_{i=1}^n I((X_{1,i},X_{2,i}):Y_i|Y^{i-1}) + \sum_{i=1}^n I((X_{1,-i},X_{2,-i}):Y_i|Y^{i-1}X_{1,i}X_{2,i})\\
+          = &\sum_{i=1}^n I((X_{1,i},X_{2,i}):Y_i|Y^{i-1})\\
+          &\text{ since $(X_{1,-i},X_{2,-i}) \rightarrow Y^{i-1}X_{1,i}X_{2,i} \rightarrow Y_i$ Markov chain.}\\
+          = &\sum_{i=1}^n H(Y_i|Y^{i-1}) - H(Y_i|Y^{i-1}X_{1,i}X_{2,i})\\
+          = &\sum_{i=1}^n H(Y_i|Y^{i-1}) - H(Y_i|X_{1,i}X_{2,i}) \text{ since $Y^{i-1} \rightarrow (X_{1,i},X_{2,i}) \rightarrow Y_i$ Markov chain.}\\
+          \leq &\sum_{i=1}^n H(Y_i) - H(Y_i|X_{2,i}X_{1,i}) = \sum_{i=1}^n I((X_{1,i},X_{2,i}):Y_i) \ .
         \end{aligned}
       \end{equation*}
-      
   \end{proof}
   
-  We next prove a technical lemma that was used in the previous proof.
-  
+  We next prove a technical lemma that was used in the previous proof.  
       \begin{lemma}
         \label{lem:claim1}
-        For any distribution $P_{X_1^nX_2^n}$ of $(X_1^n,X_2^n)$, if $Y^n \in \mathcal{Y}^n$ is the outcome of $W^n$ on inputs $X_1^n,X_2^n$, we have:
-        \[ I(X_{1,-i}:Y_i|X_{1,i}X_2^nY^{i-1}) = 0 \ . \]
+        For any distribution $P_{X_1^nX_2^n}$ of $(X_1^n,X_2^n)$, if $Y^n \in \mathcal{Y}^n$ is the outcome of $W^n$ on inputs $X_1^n,X_2^n$, we have $I(X_{1,-i}:Y_i|X_{1,i}X_2^nY^{i-1}) = 0$.
       \end{lemma}
       \begin{proof}
-        Let us show that, conditioned on any particular instance of $X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}$, $X_{1,-i}$ and $Y_i$ are independent.
+        Let us show that, conditioned on any particular instance of $X_{1,i}=x_{i,1}$, $X_2^n=x_2^n$, $Y_1^{i-1}=y^{i-1}$, $X_{1,-i}$ and $Y_i$ are independent.
 
         We have:
-        \[ \mathbb{P}\left(Y_i = y_i |  X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right) = \mathbb{P}\left(Y_i = y_i |  X_{1,i}=x_{i,1}, X_{2,i}=x_{2,i}\right) = W(y_i|x_{1,i}x_{2,i}) \ , \]
-        by definition of the law of $Y_i$. On the other hand, we have that:
-        \[ \mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n,Y^n=y_n\right) = \mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^n W(y_j|x_{1,j}x_{2,j}) \ . \]
-        Thus, we have:
         \begin{equation}
           \begin{aligned}
-            &\mathbb{P}\left(X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right) = \sum_{x_{1,-i},x_2^n,y_i,\ldots, y_n}\mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^n W(y_j|x_{1,j}x_{2,j})\\
-            &= \sum_{x_{1,-i},x_2^n} \mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^{i-1}W(y_j|x_{1,j}x_{2,j})\prod_{j=i}^n\left(\sum_{y_j}W(y_j|x_{1,j}x_{2,j})\right)\\
-            &= \sum_{x_{1,-i},x_2^n} \mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^{i-1}W(y_j|x_{1,j}x_{2,j}) \ .
+            \mathbb{P}\left(Y_i = y_i |  X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right) &= \mathbb{P}\left(Y_i = y_i |  X_{1,i}=x_{i,1}, X_{2,i}=x_{2,i}\right)\\
+            &= W(y_i|x_{1,i}x_{2,i}) \ ,
+          \end{aligned}
+        \end{equation}
+        by definition of the law of $Y_i$. On the other hand, we have that:
+        \[ \mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n,Y^n=y_n\right) = \mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^n W(y_j|x_{1,j}x_{2,j}) \ . \]
+        Thus, we have that $\mathbb{P}\left(X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right)$ is equal to:
+        \begin{equation}
+          \begin{aligned}
+            &\sum_{x_{1,-i},x_2^n,y_i,\ldots, y_n}\mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^n W(y_j|x_{1,j}x_{2,j})\\
+            = &\sum_{x_{1,-i},x_2^n} \mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^{i-1}W(y_j|x_{1,j}x_{2,j})\prod_{j=i}^n\left(\sum_{y_j}W(y_j|x_{1,j}x_{2,j})\right)\\
+            = &\sum_{x_{1,-i},x_2^n} \mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^{i-1}W(y_j|x_{1,j}x_{2,j}) \ .
           \end{aligned}
         \end{equation}
 
-
-        And then:
-        \[ \mathbb{P}\left(X_{1,-i}=x_{1,-i}|X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right) = \frac{\sum_{x_2^n}\mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^{i-1} W(y_j|x_{1,j}x_{2,j})}{\sum_{x_{1,-i},x_2^n}\mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^{i-1} W(y_j|x_{1,j}x_{2,j})} \ . \]
-
+        And then, $\mathbb{P}\left(X_{1,-i}=x_{1,-i}|X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right)$ is equal to:
+        \[ \frac{\sum_{x_2^n}\mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^{i-1} W(y_j|x_{1,j}x_{2,j})}{\sum_{x_{1,-i},x_2^n}\mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^{i-1} W(y_j|x_{1,j}x_{2,j})} \ . \]
+        
         But:
-
         \begin{equation}
           \begin{aligned}
             &\mathbb{P}\left(X_{1,-i}=x_{1,-i},Y_i=y_i|X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right)\\
             &= \frac{\sum_{x_2^n}\mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^{i} W(y_j|x_{1,j}x_{2,j})}{\sum_{x_{1,-i},x_2^n}\mathbb{P}\left(X_1^n=x_1^n,X_2^n=x_2^n\right)\prod_{j=1}^{i-1} W(y_j|x_{1,j}x_{2,j})} \\
             &= \mathbb{P}\left(X_{1,-i}=x_{1,-i}|X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right) W(y_i|x_{1,i}x_{2,i})\\
-            &= \mathbb{P}\left(X_{1,-i}=x_{1,-i}|X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right) \mathbb{P}\left(Y_i=y_i|X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right) \ .
+            &= \mathbb{P}\left(X_{1,-i}=x_{1,-i}|X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right)\\
+            &\times \mathbb{P}\left(Y_i=y_i|X_{1,i}=x_{i,1}, X_2^n=x_2^n, Y_1^{i-1}=y^{i-1}\right) \ .
           \end{aligned}
         \end{equation}
 
@@ -1648,7 +1666,6 @@ In order to show additivity of the outer bound, we use the following lemma.
     \[ R_1 \leq \frac{I(X_1:Y|X_2,Q)+\frac{h(\varepsilon_n)}{n}}{1-\varepsilon_n} \ .\]
     
     Doing this similarly on the other conditional mutual informations, we get:
-
     \begin{equation}
       \begin{aligned}
         R_1 &\leq \frac{I(X_1:Y|X_2,Q)+\frac{h(\varepsilon_n)}{n}}{1-\varepsilon_n}\ ,\\
@@ -1684,8 +1701,7 @@ In order to show additivity of the outer bound, we use the following lemma.
       \begin{definition}[Typical set and conditional typical set]
         We have the following definitions:
         \begin{enumerate}
-        \item $\mathcal{T}^n_{\varepsilon}(X_1,X_2) := \left\{(x_1^n,x_2^n) : |\pi(x_1,x_2|x_1^n,x_2^n) - P_{X_1X_2}(x_1,x_2)|\leq \varepsilon P_{X_1X_2}(x_1,x_2) \text{ for all } (x_1,x_2) \in \mathcal{X}_1 \times \mathcal{X}_2\right\}$
-      where $\pi(x_1,x_2|x_1^n,x_2^n) := \frac{|\{i : (x_{1,i},x_{2,i}) = (x_1,x_2)\}|}{n}$. This definition generalizes for any $t$-uple of variables.
+        \item $\mathcal{T}^n_{\varepsilon}(X_1,X_2) := \{(x_1^n,x_2^n) : |\pi(x_1,x_2|x_1^n,x_2^n) - P_{X_1X_2}(x_1,x_2)|\leq \varepsilon P_{X_1X_2}(x_1,x_2)$ for all $(x_1,x_2) \in \mathcal{X}_1 \times \mathcal{X}_2\}$, where $\pi(x_1,x_2|x_1^n,x_2^n) := \frac{|\{i : (x_{1,i},x_{2,i}) = (x_1,x_2)\}|}{n}$. This definition generalizes for any $t$-uple of variables.
     \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), \mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n) := \{ (x_1^n,x_2^n) : (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \}$
         \end{enumerate}
       \end{definition}
@@ -1710,17 +1726,15 @@ In order to show additivity of the outer bound, we use the following lemma.
         \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), \mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n) \subseteq \mathcal{T}^n_{\varepsilon}(X_1,X_2)$.
         \item $\forall (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y), 2^{-n(1+\varepsilon)H(X_1,X_2|Y)} \leq P_{X_1^nX_2^nY^n}(x_1^n,x_2^n|y^n) \leq 2^{-n(1-\varepsilon)H(X_1,X_2|Y)}$.
         \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), |\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \leq 2^{n(1+\varepsilon)H(X_1,X_2|Y)}$.
-        \item For $\varepsilon' < \varepsilon$ and $n$ sufficiently large, we get $\forall y^n \in \mathcal{T}^n_{\varepsilon'}(Y), |\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2|Y)}$.
+        \item For $\varepsilon' < \varepsilon$ and $n$ sufficiently large, we have that $\forall y^n \in \mathcal{T}^n_{\varepsilon'}(Y), |\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2|Y)}$.
         \end{enumerate}
       \end{lemma}
       \begin{proof}
         We reproduce the proof of the last statement here to emphasize on the fact that there is an $n_0$ such that for all $n \geq n_0$ and for all $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, the property holds.
 
         For any $\varepsilon > \varepsilon' > 0$, let us show that there exists $n$ such that we have:
-        \[ \forall y^n \in \mathcal{T}^n_{\varepsilon'}(Y), \mathbb{P}\left((X_1^n,X_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right) \geq 1-\varepsilon \ , \]
-        
+        \[ \forall y^n \in \mathcal{T}^n_{\varepsilon'}(Y), \mathbb{P}\left((X_1^n,X_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right) \geq 1-\varepsilon \ , \]        
         where $X_1^n, X_2^n$ are drawn from the distribution $P_{X_1^nX_2^n|Y^n=y^n}$. This will imply the statement. Indeed, we have that:
-
         \begin{equation}
           \begin{aligned}
             \mathbb{P}\left((X_1^n,X_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right) &= \sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)} P_{X_1^nX_2^n|Y^n}(x_1^n,x_2^n|y^n) \\
@@ -1728,26 +1742,21 @@ In order to show additivity of the outer bound, we use the following lemma.
           \end{aligned}
         \end{equation}
       
-        since $P_{X_1^nX_2^n|Y^n}(x_1^n,x_2^n|y^n) \leq 2^{-n(1-\varepsilon)H(X_1,X_2|Y)}$ as $(x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y)$. Thus, we have that $|\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2|Y)}$. In order to prove our result, we take the proof in Appendix 2A of~\cite{GK11}. We take $y^n \in \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and $(X_1^n,X_2^n) \sim P_{X_1^nX_2^n|Y^n}(x_1^n,x_2^n|y^n) = \prod_{i=1}^nP_{X_1X_2|Y}(x_{1,i},x_{2,i}|y_i)$. Applied to our choice of variables, we have the following result :
-
+        since $P_{X_1^nX_2^n|Y^n}(x_1^n,x_2^n|y^n) \leq 2^{-n(1-\varepsilon)H(X_1,X_2|Y)}$ as $(x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y)$. Thus, we have that $|\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2|Y)}$. In order to prove our result, we take the proof in Appendix 2A of~\cite{GK11}. We take $y^n \in \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and $(X_1^n,X_2^n) \sim P_{X_1^nX_2^n|Y^n}(x_1^n,x_2^n|y^n) = \prod_{i=1}^nP_{X_1X_2|Y}(x_{1,i},x_{2,i}|y_i)$. Applied to our choice of variables, we have that $\mathbb{P}\left((X_1^n,X_2^n,y^n) \notin \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right)$ is equal to:
         \begin{equation}
           \begin{aligned}
-            &\mathbb{P}\left((X_1^n,X_2^n,y^n) \notin \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right)\\
-            &= \mathbb{P}\left(\exists (x_1,x_2,y) : |\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \\
-            &\leq \sum_{x_1,x_2,y} \mathbb{P}\left(|\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \text{ by union bound,} \\
+            &\mathbb{P}\left(\exists (x_1,x_2,y) : |\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \\
+            &\leq \sum_{x_1,x_2,y} \mathbb{P}\left(|\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \\
             &\leq \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} > \frac{1+\varepsilon}{1+\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right)\\
-            &+ \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} < \frac{1-\varepsilon}{1-\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right)  \text{ by calculations of~\cite{GK11}.}\\
+            &+ \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} < \frac{1-\varepsilon}{1-\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right) \ ,
           \end{aligned}
         \end{equation}
-
-        However, since $\varepsilon' < \varepsilon$, we have $\frac{1+\varepsilon}{1+\varepsilon'} > 1$ and $\frac{1-\varepsilon}{1-\varepsilon'} < 1$. We will show that for all $x_1,x_2,y$ with $P_Y(y) > 0$, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability, with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, which will be enough to conclude the proof.
+        by calculations of~\cite{GK11}. However, since $\varepsilon' < \varepsilon$, we have $\frac{1+\varepsilon}{1+\varepsilon'} > 1$ and $\frac{1-\varepsilon}{1-\varepsilon'} < 1$. We will show that for all $x_1,x_2,y$ with $P_Y(y) > 0$, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability, with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, which will be enough to conclude the proof.
 
         Let us fix some $x_1,x_2,y$ with $P_Y(y) > 0$. Since $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, we have in particular $(1-\varepsilon')P_Y(y) \leq \pi(y|y^n) \leq (1+\varepsilon')P_Y(y)$. Thus $N := |\{i:y_i=y\}| = n\pi(y|y^n) \geq (1-\varepsilon')P_Y(y)n$. Then we have:
-
         \[ \frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} = \frac{1}{N}\sum_{i \in S}Z_i \text{ with }Z_i := \mathbbm{1}_{(X_{1,i},X_{2,i})=(x_1,x_2)} \text{ and } S := \{i:y_i=y\}\ . \]
 
-        Thus, all $Z_i$ with $i \in S$ are independent and follow the same law:
-        
+        Thus, all $Z_i$ with $i \in S$ are independent and follow the same law:      
           \[ Z_i := \begin{cases}
             1 & \text{ with probability } P_{X_1X_2|Y}(x_1,x_2|y) \\
             0 & \text{ otherwise}
@@ -1756,11 +1765,9 @@ In order to show additivity of the outer bound, we use the following lemma.
 
 
           Furthermore, we have $\mathbb{E}[Z_i] = P_{X_1X_2|Y}(x_1,x_2|y)$, and all $Z_i$ have the same variance $\sigma_{x_1,x_2|y}^2 < +\infty$ (depending only on $X_1,X_2,Y,x_1,x_2,y$). Thus we can apply Chebyshev inequality:
-
           \[ \mathbb{P}\left( \left|\frac{1}{N}\sum_{i \in S} Z_i - P_{X_1X_2|Y}(x_1,x_2|y) \right| \geq \eta \right) \leq \frac{\sigma_{x_1,x_2|y}^2}{N\eta^2} \ .\]
 
           However, since $N \geq (1-\varepsilon')P_Y(y)n$, we get:
-
           \[ \mathbb{P}\left( \left|\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} - P_{X_1X_2|Y}(x_1,x_2|y) \right| \geq \eta \right) \leq \frac{\sigma_{x_1,x_2|y}^2}{\eta^2(1-\varepsilon')P_Y(y)n} \underset{n \rightarrow +\infty}{\rightarrow} 0 \ .\]
 
           Thus, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$.
@@ -1775,11 +1782,13 @@ In order to show additivity of the outer bound, we use the following lemma.
   \begin{proof}
     Let us fix $\varepsilon,\varepsilon' \in (0,1)$ such that $\varepsilon' < \varepsilon \leq \frac{1}{2}$. Let $n \in \mathbb{N}$ which will be chosen large enough during the proof.
 
-    We consider $n$ independent random variables $(X_{1,i}X_{2,i}Y_i) \sim P_{X_1X_2Y}$, with $P_{X_1X_2Y}(x_{1,i},x_{2,i},y_i) = W(y_i|x_{1,i}x_{2,i})P_{X_1X_2}(x_{1,i},x_{2,i})$. We call $P_{X_1^nX_2^nY^n} $ the law of their product. We have then $P_{X_1^nX_2^n}(x_1^n,x_2^n) := \prod_{i=1}^n P_{X_1X_2}(x_{1,i},x_{2,i})$. If $\hat{Y}$ is the output of $W^{\otimes n}$ on $X_1^nX_2^n$, we have that:
+    We consider $n$ independent random variables $(X_{1,i}X_{2,i}Y_i) \sim P_{X_1X_2Y}$, following the distribution $P_{X_1X_2Y}(x_{1,i},x_{2,i},y_i) = W(y_i|x_{1,i}x_{2,i})P_{X_1X_2}(x_{1,i},x_{2,i})$. We call $P_{X_1^nX_2^nY^n} $ the law of their product. We have then $P_{X_1^nX_2^n}(x_1^n,x_2^n) := \prod_{i=1}^n P_{X_1X_2}(x_{1,i},x_{2,i})$. If $\hat{Y}$ is the output of $W^{\otimes n}$ on $X_1^nX_2^n$, we have that:
       \begin{equation}
         \begin{aligned}
-          P_{X_1^nX_2^n\hat{Y}}(x_1^n,x_2^n,y^n) &= W^{\otimes n}(y^n|x_1^nx_2^n)P_{X_1^nX_2^n}(x_1^n,x_2^n) = W^{\otimes n}(y^n|x_1^nx_2^n)\prod_{i=1}^n P_{X_1X_2}(x_{1,i},x_{2,i})\\
-          &= \prod_{i=1}^n W(y_i|x_{1,i}x_{2,i})P_{X_1X_2}(x_{1,i},x_{2,i}) = \prod_{i=1}^n P_{X_1X_2Y}(x_{1,i},x_{2,i},y_i) \ .
+          P_{X_1^nX_2^n\hat{Y}}(x_1^n,x_2^n,y^n) &= W^{\otimes n}(y^n|x_1^nx_2^n)P_{X_1^nX_2^n}(x_1^n,x_2^n)\\
+          &= W^{\otimes n}(y^n|x_1^nx_2^n)\prod_{i=1}^n P_{X_1X_2}(x_{1,i},x_{2,i})\\
+          &= \prod_{i=1}^n W(y_i|x_{1,i}x_{2,i})P_{X_1X_2}(x_{1,i},x_{2,i})\\
+          &= \prod_{i=1}^n P_{X_1X_2Y}(x_{1,i},x_{2,i},y_i) \ .
         \end{aligned}
       \end{equation}
 
@@ -1794,15 +1803,13 @@ In order to show additivity of the outer bound, we use the following lemma.
       \end{aligned}
     \end{equation}
   We define a solution of $\mathrm{S}^{\overline{\mathrm{NS}}}(W^{\otimes n},2^{nR_1},2^{nR_2})$ in the following way:
-      
   \[ p_{x_1^n,x_2^n} := \begin{cases}
     \frac{2^{n(R_1+R_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)} & \text{ if } (x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2) \\
     0 & \text{ otherwise}
   \end{cases}
   \]
 
-  and
-
+  and:
   \[ r_{x_1^n,x_2^n,y^n} := \begin{cases}
     p_{x_1^n,x_2^n} & \text{ if } (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y) \\
     0 & \text{ otherwise}
@@ -1810,9 +1817,8 @@ In order to show additivity of the outer bound, we use the following lemma.
     \]
 
     By construction, the constraint $0 \leq r_{x_1^n,x_2^n,y^n} \leq p_{x_1^n,x_2^n}$ is satisfied. We have also that:
-    \[\sum_{x_1^n,x_2^n} p_{x_1^n,x_2^n} = \sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)} \frac{2^{n(R_1+R_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)} = 2^{n(R_1+R_2)} = k_1k_2 \ . \]
-
-    If $(x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y)$, we have that $(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2) \subseteq \mathcal{T}^n_{\varepsilon}(X_1,X_2)$, so in that case:
+    \[\sum_{x_1^n,x_2^n} p_{x_1^n,x_2^n} = \sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)} \frac{2^{n(R_1+R_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)} = 2^{n(R_1+R_2)} \ , \]
+    which is equal to $k_1k_2$. If $(x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y)$, we have that $(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2) \subseteq \mathcal{T}^n_{\varepsilon}(X_1,X_2)$, so in that case:
     \[ r_{x_1^n,x_2^n,y^n} = \frac{2^{n(R_1+R_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)} \ . \]
 
     If $y^n \not\in \mathcal{T}^n_{\varepsilon'}(Y)$, then for all $(x_1^n,x_2^n)$, $(x_1^n,x_2^n,y^n) \notin \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y)$, so $\sum_{x_1^n,x_2^n} r_{x_1^n,x_2^n,y^n}  = 0 \leq 1$ in that case.
@@ -1820,48 +1826,55 @@ In order to show additivity of the outer bound, we use the following lemma.
     Otherwise, if $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, then:
     \begin{equation}
       \begin{aligned}
-        \sum_{x_1^n,x_2^n} r_{x_1^n,x_2^n,y^n} &= 2^{n(R_1+R_2)} \frac{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2|y^n)} P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}\\
+        &\sum_{x_1^n,x_2^n} r_{x_1^n,x_2^n,y^n} = 2^{n(R_1+R_2)} \frac{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2|y^n)} P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}\\
         &\leq 2^{n(R_1+R_2)} \frac{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)} P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}\\
         &\leq 2^{n(R_1+R_2)}\frac{2^{-n(1-\varepsilon)H(X_1,X_2)}}{2^{-n(1+\varepsilon)H(X_1,X_2)}} \frac{|\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)|}{|\mathcal{T}^n_{\varepsilon}(X_1,X_2)|} \text{ since $(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)$} \\
         &= 2^{n(R_1+R_2 + 2\varepsilon H(X_1,X_2))}\frac{|\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)|}{|\mathcal{T}^n_{\varepsilon}(X_1,X_2)|} \ .
       \end{aligned}
     \end{equation}
 
-    But $|\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \leq 2^{n(1+\varepsilon)H(X_1,X_2|Y)}$ and for a large enough $n$ we have that $|\mathcal{T}^n_{\varepsilon}(X_1,X_2)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2)} \geq 2^{n\left((1-\varepsilon)H(X_1,X_2) - \frac{1}{n}\right)}$, so in that case:
-
-    \[ \sum_{x_1^n,x_2^n} r_{x_1^n,x_2^n,y^n} \leq 2^{n(R_1+R_2 + 2\varepsilon H(X_1,X_2))}\frac{2^{n(1+\varepsilon)H(X_1,X_2|Y)}}{2^{n\left((1-\varepsilon)H(X_1,X_2) - \frac{1}{n}\right)}} = 2^{n\left(R_1+R_2 - I(X_1,X_2:Y) + \frac{1}{n} + C_3\varepsilon\right)} \leq 1 \ ,\]
-
+    But $|\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \leq 2^{n(1+\varepsilon)H(X_1,X_2|Y)}$ and for a large enough $n$, $|\mathcal{T}^n_{\varepsilon}(X_1,X_2)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2)} \geq 2^{n\left((1-\varepsilon)H(X_1,X_2) - \frac{1}{n}\right)}$, so in that case:
+    \begin{equation}
+      \begin{aligned}
+        \sum_{x_1^n,x_2^n} r_{x_1^n,x_2^n,y^n} &\leq 2^{n(R_1+R_2 + 2\varepsilon H(X_1,X_2))}\frac{2^{n(1+\varepsilon)H(X_1,X_2|Y)}}{2^{n\left((1-\varepsilon)H(X_1,X_2) - \frac{1}{n}\right)}}\\
+        &= 2^{n\left(R_1+R_2 - I(X_1,X_2:Y) + \frac{1}{n} + C_3\varepsilon\right)} \leq 1 \ ,
+      \end{aligned}
+    \end{equation}
     since $I(X_1,X_2:Y) = H(X_1,X_2) - H(X_1,X_2|Y)$ and $R_1+R_2 \leq I(X_1,X_2:Y) - \frac{1}{n} - C_3\varepsilon$, with $C_3 := H(X_1,X_2|Y) + 3H(X_1,X_2)$.
 
     Let us focus on the constraint $\sum_{x_1^n} p_{x_1^n,x_2^n} \geq k_1 \sum_{x_1^n} r_{x_1^n,x_2^n,y^n}$ (the symmetric constraint $\sum_{x_2^n} p_{x_1^n,x_2^n} \geq k_2 \sum_{x_2^n} r_{x_1^n,x_2^n,y^n}$ will be achieved for symmetric reasons).
 
     Let us fix $(x_2^n,y^n)$. If $(x_2^n,y^n) \not\in \mathcal{T}^n_{\varepsilon'}(X_2,Y)$, then for all $x_1^n$, $(x_1^n,x_2^n,y^n) \not\in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y)$, thus $r_{x_1^n,x_2^n,y^n} = 0$ and the constraint is fulfilled. Let us assume that $(x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_2,Y)$. Since $r_{x_1^n,x_2^n,y^n} > 0$ implies that $(x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y)$, we have that:
-
     \[ \sum_{x_1^n} r_{x_1^n,x_2^n,y^n} = \sum_{x_1^n \in \mathcal{T}^n_{\varepsilon'}(X_1|x_2^n,y^n)} r_{x_1^n,x_2^n,y^n} = \sum_{x_1^n \in \mathcal{T}^n_{\varepsilon'}(X_1|x_2^n,y^n)} p_{x_1^n,x_2^n} \ .\]
     
     Thus:
      \begin{equation}
       \begin{aligned}
-        \frac{\sum_{x_1^n} p_{x_1^n,x_2^n}}{k_1\sum_{x_1^n} r_{x_1^n,x_2^n,y^n}} &\geq \frac{1}{k_1} \frac{ \sum_{x_1 \in \mathcal{T}^n_{\varepsilon}(X_1|x_2^n)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{x_1 \in \mathcal{T}^n_{\varepsilon'}(X_1|x_2^n,y^n)} P_{X_1^nX_2^n}(x_1^n,x_2^n)} \geq \frac{1}{k_1} \frac{ \sum_{x_1 \in \mathcal{T}^n_{\varepsilon}(X_1|x_2^n)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{x_1 \in \mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)} P_{X_1^nX_2^n}(x_1^n,x_2^n)}\\
-        &\geq \frac{1}{k_1}\frac{2^{-n(1+\varepsilon)H(X_1,X_2)}}{2^{-n(1-\varepsilon)H(X_1,X_2)}}\frac{|\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)|}{|\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)|} \geq 2^{n(-R_1-2\varepsilon H(X_1,X_2))}\frac{|\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)|}{|\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)|}\ .
+        \frac{\sum_{x_1^n} p_{x_1^n,x_2^n}}{k_1\sum_{x_1^n} r_{x_1^n,x_2^n,y^n}} &\geq \frac{1}{k_1} \frac{ \sum_{x_1 \in \mathcal{T}^n_{\varepsilon}(X_1|x_2^n)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{x_1 \in \mathcal{T}^n_{\varepsilon'}(X_1|x_2^n,y^n)} P_{X_1^nX_2^n}(x_1^n,x_2^n)}\\
+        &\geq \frac{1}{k_1} \frac{ \sum_{x_1 \in \mathcal{T}^n_{\varepsilon}(X_1|x_2^n)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{x_1 \in \mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)} P_{X_1^nX_2^n}(x_1^n,x_2^n)}\\
+        &\geq \frac{1}{k_1}\frac{2^{-n(1+\varepsilon)H(X_1,X_2)}}{2^{-n(1-\varepsilon)H(X_1,X_2)}}\frac{|\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)|}{|\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)|}\\
+        &\geq 2^{n(-R_1-2\varepsilon H(X_1,X_2))}\frac{|\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)|}{|\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)|}\ .
       \end{aligned}
     \end{equation}
 
-     But$|\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)| \leq 2^{n(1+\varepsilon)H(X_1|X_2Y)}$ and for a large enough $n$ we have $\forall x_2^n \in \mathcal{T}^n_{\varepsilon'}(X_2), |\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1|X_2)} \geq 2^{n\left((1-\varepsilon)H(X_1|X_2)-\frac{1}{n}\right)}$, so we get with $C_1 := 2 H(X_1,X_2) + H(X_1|X_2Y) + H(X_1|X_2)$ (symmetrically $C_2 := 2 H(X_1,X_2) + H(X_2|X_1Y) + H(X_2|X_1)$):
-
-     \[ \frac{\sum_{x_1^n} p_{x_1^n,x_2^n}}{k_1\sum_{x_1^n} r_{x_1^n,x_2^n,y^n}} \geq 2^{n\left(H(X_1|X_2) - \frac{1}{n} -H(X_1|X_2Y)-R_1-C_1\varepsilon\right)} = 2^{n\left(I(X_1: Y | X_2)-\frac{1}{n}-C_1\varepsilon-R_1\right)} \geq 1 \ .\]
+     But $|\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)| \leq 2^{n(1+\varepsilon)H(X_1|X_2Y)}$ and for a large enough $n$ we have $\forall x_2^n \in \mathcal{T}^n_{\varepsilon'}(X_2), |\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1|X_2)} \geq 2^{n\left((1-\varepsilon)H(X_1|X_2)-\frac{1}{n}\right)}$, so we get with $C_1 := 2 H(X_1,X_2) + H(X_1|X_2Y) + H(X_1|X_2)$ (symmetrically $C_2 := 2 H(X_1,X_2) + H(X_2|X_1Y) + H(X_2|X_1)$):
+     \begin{equation}
+       \begin{aligned}
+         \frac{\sum_{x_1^n} p_{x_1^n,x_2^n}}{k_1\sum_{x_1^n} r_{x_1^n,x_2^n,y^n}} &\geq 2^{n\left(H(X_1|X_2) - \frac{1}{n} -H(X_1|X_2Y)-R_1-C_1\varepsilon\right)}\\
+         &= 2^{n\left(I(X_1: Y | X_2)-\frac{1}{n}-C_1\varepsilon-R_1\right)} \geq 1 \ .
+      \end{aligned}
+    \end{equation}         
      
     For a large enough $n$, all constraints are satisfied, thus $(p_{x_1^n,x_2^n},r_{x_1^n,x_2^n,y^n})$ is a valid solution. Then:
-
     \begin{equation}
       \begin{aligned}
         &\mathrm{S}^{\overline{\mathrm{NS}}}(W^{\otimes n},2^{nR_1},2^{nR_2}) \geq \frac{1}{2^{n(R_1+R_2)}} \sum_{(x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y)} W^{\otimes n}(y^n|x_1^nx_2^n)r_{x_1^n,x_2^n,y^n}\\
-        &= \frac{1}{2^{n(R_1+R_2)}} \sum_{(x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y)} \frac{P_{X_1^nX_2^nY^n}(x_1^n,x_2^n,y^n)}{P_{X_1^nX_2^n}(x_1^n,x_2^n)}\frac{2^{n(R_1+R_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}\\
+        &= \sum_{(x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y)} \frac{P_{X_1^nX_2^nY^n}(x_1^n,x_2^n,y^n)}{P_{X_1^nX_2^n}(x_1^n,x_2^n)}\frac{P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}\\
         &= \frac{\sum_{(x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y)} P_{X_1^nX_2^nY^n}(x_1^n,x_2^n,y^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n) } \underset{n \rightarrow +\infty}{\rightarrow} 1\ ,
       \end{aligned}
     \end{equation}
 
-    since typical sets cover asymptotically the whole probability mass. Thus, since $\mathrm{S}^{\overline{\mathrm{NS}}}(W^{\otimes n},2^{nR_1},2^{nR_2}) \leq 1$, we get that $\mathrm{S}^{\overline{\mathrm{NS}}}(W^{\otimes n},2^{nR_1},2^{nR_2}) \underset{n \rightarrow +\infty}{\rightarrow} 1$. Thus for sufficiently large $n$ we can achieve a rate pair arbitrarily close to the outer bound. Finally, since $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ is closed and convex, a rate pair that is in the closure of the convex hull of the initial region is also in $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$, and thus the proof is completed.
+    since typical sets cover asymptotically the whole probability mass. Thus, we get that $\mathrm{S}^{\overline{\mathrm{NS}}}(W^{\otimes n},2^{nR_1},2^{nR_2}) \underset{n \rightarrow +\infty}{\rightarrow} 1$ since $\mathrm{S}^{\overline{\mathrm{NS}}}(W^{\otimes n},2^{nR_1},2^{nR_2}) \leq 1$. Therefore, for sufficiently large $n$ we can achieve a rate pair arbitrarily close to the outer bound. Finally, since $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ is closed and convex, a rate pair that is in the closure of the convex hull of the initial region is also in $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$, and thus the proof is completed.
   \end{proof}
 
 
@@ -1883,8 +1896,7 @@ Then, the following characterization of $\mathrm{S}(W,k)$ can be derived:
   $\mathrm{S}(W,k) = \frac{1}{k} \underset{S \subseteq X: |S| \leq k}{\max} f_W(S)$ with $f_W(S) := \sum_{y \in Y} \max_{x \in S} W(y|x)$.
 \end{proposition}
 
-As in the MAC scenario, one can consider non-signaling assistance shared between the sender and the receiver, which leads to the following maximum success probability $\mathrm{S}^{\mathrm{NS}}(W,k)$:
-
+As in the MAC scenario, one can consider non-signaling assistance shared between the sender and the receiver, which leads to the following maximum success probability:
 \begin{equation}
   \begin{aligned}
     \mathrm{S}^{\mathrm{NS}}(W,k) := &&\underset{P}{\maxi} &&& \frac{1}{k} \sum_{i,x,y} W(y|x)P(xi|iy)\\
@@ -1921,8 +1933,8 @@ We can now state our result on independent non-signaling assistance, which says 
 
 \begin{theorem}
   \label{theo:NSsr}
-  For any $\ell_1,k_1,\ell_2,k_2$:
-  \[ \min\left(\frac{k_1}{\ell_1}\left(1-\left(1-\frac{1}{k_1}\right)^{\ell_1}\right),\frac{k_2}{\ell_2}\left(1-\left(1-\frac{1}{k_2}\right)^{\ell_2}\right)\right)\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2) \leq \mathrm{S}_{\text{sum}}(W,\ell_1,\ell_2)\ . \]
+  For any $\ell_1,k_1,\ell_2,k_2$, $\mathrm{S}_{\text{sum}}(W,\ell_1,\ell_2)$ is larger than or equal to:
+  \[ \min\left(\frac{k_1}{\ell_1}\left(1-\left(1-\frac{1}{k_1}\right)^{\ell_1}\right),\frac{k_2}{\ell_2}\left(1-\left(1-\frac{1}{k_2}\right)^{\ell_2}\right)\right)\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2)\ . \]
 \end{theorem}
 
 In particular, this will imply that the capacity regions are the same:
@@ -1936,16 +1948,13 @@ In particular, this will imply that the capacity regions are the same:
 
   Let us fix $k_1=2^{nR_1},k_2=2^{nR_2}$ and $\ell_1=\frac{2^{nR_1}}{n},\ell_2=\frac{2^{nR_2}}{n}$. Since:
   \[ \frac{k}{\ell}\left(1-\left(1-\frac{1}{k}\right)^{\ell}\right) \geq \frac{k}{\ell}\left(1-e^{-\frac{\ell}{k}}\right) \geq 1 - \frac{\ell}{2k} \ ,\]
-
   and $1 - \frac{\ell_1}{2k_1} = 1 - \frac{\ell_2}{2k_2} = 1 - \frac{1}{2n}$, we get:
 \[ \left(1-\frac{1}{2n}\right)\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},2^{nR_1},2^{nR_1}) \leq \mathrm{S}_{\text{sum}}\left(W^{\otimes n},\frac{2^{nR_1}}{n},\frac{2^{nR_2}}{n}\right)\ . \]
 
   As $1-\frac{1}{2n}$ tends to $1$ when $n$ tends to infinity, we get that $\forall \varepsilon > 0, \exists N \in \mathbb{N}, \forall n\geq N$:
-
   \[(1-\varepsilon)\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},2^{nR_1},2^{nR_1}) \leq \mathrm{S}_{\text{sum}}(W^{\otimes n},2^{n(R_1-\frac{\log(n)}{n})},2^{n(R_2-\frac{\log(n)}{n})}) \ . \]
 
 Thus, if $\underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},2^{nR_1},2^{nR_1})  = 1$, we have that for all $R_1'<R_1$ and $R_2'<R_2$:
-
 \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}(W^{\otimes n},2^{nR_1'},2^{nR_1'}) \geq 1-\varepsilon \ . \]
 
 Since this is true for all $\varepsilon > 0$, we get in fact that $\underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}(W^{\otimes n},2^{nR_1'},2^{nR_1'}) = 1$. This implies that $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W) \subseteq \mathcal{C}_{\text{sum}}(W)$, and thus that the capacity regions are equal as the other inclusion is always satisfied.
@@ -1961,16 +1970,15 @@ In order to prove Theorem~\ref{theo:NSsr}, we will need the following lemma:
 \end{lemma}
 \begin{proof}
   Let us define $e_1(x_1|i_1) := \mathbbm{1}_{S_1^{i_1}=x_1}$ and $e_2(x_2|i_2) := \mathbbm{1}_{S_2^{i_2}=x_2}$. Then for fixed $y$, let us take $j_1^y \in \text{argmax}_{i_1} \{\sum_{i_2 = 1}^{\ell_2}W(y|S_1^{i_1}S_2^{i_2})\}$, $j_2^y \in \text{argmax}_{i_2}\{\sum_{i_1 = 1}^{\ell_1}W(y|S_1^{i_1}S_2^{i_2})\}$ and then define $d(j_1|y) := \mathbbm{1}_{j_1=j_1^y}$, $d(j_2|y) := \mathbbm{1}_{j_2=j_2^y}$. We have then:
-
   \begin{equation}
     \begin{aligned}
       &\mathrm{S}_{\text{sum}}(W,\ell_1,\ell_2) \geq \frac{1}{\ell_1\ell_2}\sum_{i_1,i_2,x_1,x_2,y}W(y|x_1x_2)\mathbbm{1}_{S_1^{i_1}=x_1}\mathbbm{1}_{S_2^{i_2}=x_2}\frac{\mathbbm{1}_{i_1=i_1^y}+\mathbbm{1}_{i_2=i_2^y}}{2}\\
-      &= \frac{1}{\ell_1\ell_2}\sum_{i_1,i_2,y}W(y|S_1^{i_1}S_2^{i_2})\frac{\mathbbm{1}_{i_1=i_1^y}+\mathbbm{1}_{i_2=i_2^y}}{2}
-      = \frac{1}{\ell_1\ell_2}\sum_{y}\frac{1}{2}\left(\sum_{i_2}W(y|S_1^{i_1^y}S_2^{i_2}) + \sum_{i_1}W(y|S_1^{i_1}S_2^{i_2^y})\right)\\
+      &= \frac{1}{\ell_1\ell_2}\sum_{i_1,i_2,y}W(y|S_1^{i_1}S_2^{i_2})\frac{\mathbbm{1}_{i_1=i_1^y}+\mathbbm{1}_{i_2=i_2^y}}{2}\\
+      &= \frac{1}{\ell_1\ell_2}\sum_{y}\frac{1}{2}\left(\sum_{i_2}W(y|S_1^{i_1^y}S_2^{i_2}) + \sum_{i_1}W(y|S_1^{i_1}S_2^{i_2^y})\right)\\
       &= \frac{1}{\ell_1\ell_2}\sum_{y}\frac{1}{2}\left(\max_{i_1}\sum_{i_2}W(y|S_1^{i_1}S_2^{i_2}) + \max_{i_2}\sum_{i_1}W(y|S_1^{i_1}S_2^{i_2})\right)\\
       &= \frac{1}{2}\left(\frac{\sum_{y}\max_{i_1}\left[\frac{1}{\ell_2}\sum_{i_2} W(y|S_1^{i_1}S_2^{i_2})\right]}{\ell_1} + \frac{\sum_{y}\max_{i_2}\left[\frac{1}{\ell_1}\sum_{i_1} W(y|S_1^{i_1}S_2^{i_2})\right]}{\ell_2} \right)\\
-      &= \frac{1}{2}\left(\frac{\sum_{y}\max_{i_1}W^1_{S_2,\ell_2}(y|S_1^{i_1})}{\ell_1} + \frac{\sum_{y}\max_{i_2}W^2_{S_1,\ell_1}(y|S_2^{i_2})}{\ell_2} \right)
-      = \frac{1}{2}\left(\frac{f_{W^1_{S_2,\ell_2}}(S_1)}{\ell_1} + \frac{f_{W^2_{S_1,\ell_1}}(S_2)}{\ell_2}\right) \ .
+      &= \frac{1}{2}\left(\frac{\sum_{y}\max_{i_1}W^1_{S_2,\ell_2}(y|S_1^{i_1})}{\ell_1} + \frac{\sum_{y}\max_{i_2}W^2_{S_1,\ell_1}(y|S_2^{i_2})}{\ell_2} \right)\\
+      &= \frac{1}{2}\left(\frac{f_{W^1_{S_2,\ell_2}}(S_1)}{\ell_1} + \frac{f_{W^2_{S_1,\ell_1}}(S_2)}{\ell_2}\right) \ .
     \end{aligned}
   \end{equation}
 \end{proof}
@@ -1981,7 +1989,6 @@ We have now all the tools to prove Theorem~\ref{theo:NSsr}:
   Let us consider an optimal solution $r^1,r^2,p^1,p^2$ of the program of Proposition~\ref{prop:NSsrProgram} computing $\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2)$.
 
   Let us fix some multiset $S_2$ with elements in $\mathcal{X}_2$ of size $\ell_2$. Note that $r^1$ and $p^1$ are a feasible solution of the program of Proposition~\ref{prop:NSonewayLP} computing $\mathrm{S}^{\mathrm{NS}}(W^1_{S_2,\ell_2},k_1)$. As a result, we can apply Theorem \ref{theo:RandomCoding} and get the following statement. For the multiset $S_1$ obtained by choosing $\ell_1$ elements of $\mathcal{X}_1$ independently according to the distribution $\left(\frac{p^1_{x_1}}{k_1}\right)_{x_1 \in \mathcal{X}_1}$, we have:
-
   \[ \mathbb{E}_{S_1}\left[ \frac{f_{W^1_{S_2,\ell_2}}(S_1)}{\ell_1}\right] \geq \frac{k_1}{\ell_1}\left(1-\left(1-\frac{1}{k_1}\right)^{\ell_1}\right) \cdot \frac{1}{k_1}\sum_{x_1,y} W^1_{S_2,\ell_2}(y|x_1)r^1_{x_1,y} \ .\]
 
   Now, let $S_2$ be the multiset obtained by choosing $\ell_2$ elements of $\mathcal{X}_2$ independently according to the distribution $\left(\frac{p^2_{x_2}}{k_2}\right)_{x_2 \in \mathcal{X}_2}$. We have:
@@ -1994,7 +2001,6 @@ We have now all the tools to prove Theorem~\ref{theo:NSsr}:
   \end{equation}
 
   Thus in all, we have:
-
   \begin{equation}
     \begin{aligned}
       \mathbb{E}_{S_2}\left[\mathbb{E}_{S_1}\left[ \frac{f_{W^1_{S_2,\ell_2}}(S_1)}{\ell_1}\right]\right] &\geq  \mathbb{E}_{S_2}\left[\frac{k_1}{\ell_1}\left(1-\left(1-\frac{1}{k_1}\right)^{\ell_1}\right) \cdot \frac{1}{k_1}\sum_{x_1,y} W^1_{S_2,\ell_2}(y|x_1)r^1_{x_1,y}\right]\\
@@ -2002,21 +2008,20 @@ We have now all the tools to prove Theorem~\ref{theo:NSsr}:
       &\geq \frac{k_1}{\ell_1}\left(1-\left(1-\frac{1}{k_1}\right)^{\ell_1}\right) \cdot \frac{1}{k_1}\sum_{x_1,y} W^1_{p^2,k_2}(y|x_1)r^1_{x_1,y} \ ,
     \end{aligned}
   \end{equation}
-
-  and symmetrically for $\mathbb{E}_{S_1}\left[\mathbb{E}_{S_2}\left[ \frac{f_{W^2_{S_1,\ell_1}}(S_2)}{\ell_2}\right]\right]$. Since there exists classical codes $S_1^*,S_2^*$ such that:
-
-  \[ \frac{1}{2}\left(\frac{f_{W^1_{S_2^*,\ell_2}}(S_1^*)}{\ell_1} + \frac{f_{W^2_{S_1^*,\ell_1}}(S_2^*)}{\ell_2}\right) \geq \mathbb{E}_{S_1,S_2}\left[\frac{1}{2}\left(\frac{f_{W^1_{S_2,\ell_2}}(S_1)}{\ell_1} + \frac{f_{W^2_{S_1,\ell_1}}(S_2)}{\ell_2}\right)\right]\ , \]
-  
-  by applying Lemma~\ref{lem:DoubleOneWay}, we get:
-  
+  and symmetrically for $\mathbb{E}_{S_1}\left[\mathbb{E}_{S_2}\left[ \frac{f_{W^2_{S_1,\ell_1}}(S_2)}{\ell_2}\right]\right]$. Since there exists codes $S_1^*,S_2^*$ such that:
+  \[ \frac{1}{2}\left(\frac{f_{W^1_{S_2^*,\ell_2}}(S_1^*)}{\ell_1} + \frac{f_{W^2_{S_1^*,\ell_1}}(S_2^*)}{\ell_2}\right) \geq \mathbb{E}_{S_1,S_2}\left[\frac{1}{2}\left(\frac{f_{W^1_{S_2,\ell_2}}(S_1)}{\ell_1} + \frac{f_{W^2_{S_1,\ell_1}}(S_2)}{\ell_2}\right)\right]\ , \]  
+  and by applying Lemma~\ref{lem:DoubleOneWay}, we get:  
   \begin{equation}
     \begin{aligned}
-      &\mathrm{S}_{\text{sum}}(W,\ell_1,\ell_2) \geq \frac{1}{2}\left(\frac{f_{W^1_{S_2^*,\ell_2}}(S_1^*)}{\ell_1} + \frac{f_{W^2_{S_1^*,\ell_1}}(S_2^*)}{\ell_2}\right) \geq  \mathbb{E}_{S_1,S_2}\left[\frac{1}{2}\left(\frac{f_{W^1_{S_2,\ell_2}}(S_1)}{\ell_1} + \frac{f_{W^2_{S_1,\ell_1}}(S_2)}{\ell_2}\right)\right]\\
+      &\mathrm{S}_{\text{sum}}(W,\ell_1,\ell_2) \geq \frac{1}{2}\left(\frac{f_{W^1_{S_2^*,\ell_2}}(S_1^*)}{\ell_1} + \frac{f_{W^2_{S_1^*,\ell_1}}(S_2^*)}{\ell_2}\right)\\
+      &\geq  \mathbb{E}_{S_1,S_2}\left[\frac{1}{2}\left(\frac{f_{W^1_{S_2,\ell_2}}(S_1)}{\ell_1} + \frac{f_{W^2_{S_1,\ell_1}}(S_2)}{\ell_2}\right)\right]\\
       &= \frac{1}{2} \left(\mathbb{E}_{S_2}\left[\mathbb{E}_{S_1}\left[ \frac{f_{W^1_{S_2,\ell_2}}(S_1)}{\ell_1}\right]\right] + \mathbb{E}_{S_1}\left[\mathbb{E}_{S_2}\left[ \frac{f_{W^2_{S_1,\ell_1}}(S_2)}{\ell_2}\right]\right]\right)\\
-      &\geq \frac{1}{2}\left(\frac{k_1}{\ell_1}\left(1-\left(1-\frac{1}{k_1}\right)^{\ell_1}\right) \cdot \frac{1}{k_1}\sum_{x_1,y} W^1_{p^2}(y|x_1)r^1_{x_1,y} + \frac{k_2}{\ell_2}\left(1-\left(1-\frac{1}{k_2}\right)^{\ell_2}\right) \cdot \frac{1}{k_2}\sum_{x_2,y}W^2_{p^1}(y|x_2)r^2_{x_2,y} \right)\\
-      &\geq  \min\left(\frac{k_1}{\ell_1}\left(1-\left(1-\frac{1}{k_1}\right)^{\ell_1}\right),\frac{k_2}{\ell_2}\left(1-\left(1-\frac{1}{k_2}\right)^{\ell_2}\right)\right)\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2) \ .
+      &\geq \frac{k_1}{2\ell_1}\left(1-\left(1-\frac{1}{k_1}\right)^{\ell_1}\right) \cdot \frac{1}{k_1}\sum_{x_1,y} W^1_{p^2}(y|x_1)r^1_{x_1,y}\\
+      &+ \frac{k_2}{2\ell_2}\left(1-\left(1-\frac{1}{k_2}\right)^{\ell_2}\right) \cdot \frac{1}{k_2}\sum_{x_2,y}W^2_{p^1}(y|x_2)r^2_{x_2,y}\\
+      &\geq  \min\left(\frac{k_1}{\ell_1}\left(1-\left(1-\frac{1}{k_1}\right)^{\ell_1}\right),\frac{k_2}{\ell_2}\left(1-\left(1-\frac{1}{k_2}\right)^{\ell_2}\right)\right)\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W,k_1,k_2) \ ,
     \end{aligned}
   \end{equation}
+  which concludes the proof.
 \end{proof}
 
 \begin{rk}

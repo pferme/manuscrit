@@ -619,12 +619,12 @@ For the other direction, given those variables, non-signaling probability distri
 
 \subsection{Properties of $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$, $\mathcal{C}^{\mathrm{NS}}(W)$ and $\mathcal{C}^{\mathrm{NS}}_0(W)$}
 \begin{defi}
-  We say that a conditional probability distribution $Q(a^n|x^n)$ defined on $\left(\mathcal{A}_1 \times \ldots \times \mathcal{A}_n\right) \times \left(\mathcal{X}_1 \times \ldots \times \mathcal{X}_n\right)$ and $Q'(a'^n|x'^n)$ is \emph{non-signaling} if for all $a^n, x^n, \hat{x}^n$, we have
-    \[ \forall i \in [n], \sum_{a_i}Q(a_1\ldots a_i \ldots a_n|x_1\ldots x_i \ldots x_n) = \sum_{a_i}Q(a_1\ldots a_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n) \ .\]
+  We say that a conditional probability distribution $Q(a^n|x^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ is \emph{non-signaling} if for all $a^n, x^n, \hat{x}^n$, we have
+    \[ \forall i \in [n], \sum_{\hat{a}_i}Q(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) = \sum_{\hat{a}_i}Q(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n) \ .\]
 \end{defi}
 
 \begin{defi}
-  Let $Q(a^n|x^n)$ be a conditional probability distribution defined on $\left(\mathcal{A}_1 \times \ldots \times \mathcal{A}_n\right) \times \left(\mathcal{X}_1 \times \ldots \times \mathcal{X}_n\right)$ and $Q'(a'^n|x'^n)$ defined on $\left(\mathcal{A}'_1 \times \ldots \times \mathcal{A}'_n\right) \times \left(\mathcal{X}'_1 \times \ldots \times \mathcal{X}'_n\right)$. We define $P := Q \otimes Q'$ the tensor product conditional probability distribution defined on $\left(\left(\mathcal{A}_1 \times \mathcal{A}'_1\right) \times \ldots \times \left(\mathcal{A}_n \times \mathcal{A}'_n\right) \right) \times \left(\left(\mathcal{X}_1 \times \mathcal{X}'_1\right) \times \ldots \times \left(\mathcal{X}_n \times \mathcal{X}'_n\right) \right) $ by $P(a_1a'_1\ldots a_na'_n|x_1x'_1\ldots x_nx'_n) := Q(a^n|x^n) \cdot Q'(a'^n|x'^n)$.
+  Let $Q(a^n|x^n)$ a conditional probability distribution defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ and $Q'(a'^n|x'^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}'_i \times \bigtimes_{i=1}^n \mathcal{X}'_i$. We define $P := Q \otimes Q'$ the tensor product conditional probability distribution defined on $\bigtimes_{i=1}^n(\mathcal{A}_i \times \mathcal{A}'_i) \times \bigtimes_{i=1}^n (\mathcal{X}_i \times \mathcal{X}'_i)$ by $P(a_1a'_1\ldots a_na'_n|x_1x'_1\ldots x_nx'_n) := Q(a^n|x^n) \cdot Q'(a'^n|x'^n)$.
 \end{defi}
 
 \begin{lem}
@@ -632,21 +632,19 @@ For the other direction, given those variables, non-signaling probability distri
   If both $Q$ and $Q'$ are non-signaling, then $P = Q \otimes Q'$ is non-signaling.
 \end{lem}
 \begin{proof}
-  Let $a_1, \ldots, a_{i-1}, a_{i+1}, \ldots, a_n \in \mathcal{A}_1 \times \ldots \times \mathcal{A}_{i-1} \times \mathcal{A}_{i+1} \times \ldots \times \mathcal{A}_n$, $a'_1, \ldots, a'_{i-1}, a'_{i+1}, \ldots, a'_n \in \mathcal{A}'_1 \times \ldots \times \mathcal{A}'_{i-1} \times \mathcal{A}'_{i+1} \times \ldots \times \mathcal{A}'_n$, $x_1, \ldots, x_n \in \mathcal{X}_1 \times \ldots \times \mathcal{X}_n$ and $x'_1, \ldots, x'_n \in \mathcal{X}'_1 \times \ldots \times \mathcal{X}'_n$. We have:
+  Let $a^n \in \bigtimes_{j=1}^n\mathcal{A}_j$, $a'^n \in \bigtimes_{j=1}^n\mathcal{A}'_j$, $x^n \in \bigtimes_{j=1}^n \mathcal{X}_j$, $x'^n \in \bigtimes_{j=1}^n \mathcal{X}'_j$ and $\hat{x}_i \in \mathcal{X}_i$, $\hat{x}'_i \in \mathcal{X}'_i$. Using the fact that $Q,Q'$ are non-signaling, we have:
 
   \begin{equation}
     \begin{aligned}
-      &\sum_{a_ia_i'}P(a_1a'_1\ldots a_ia'_i \ldots a_na'_n|x_1x'_1\ldots x_ix'_i \ldots x_nx'_n)\\
-      &= \sum_{a_ia'_i}  Q(a_1\ldots a_i \ldots a_n|x_1\ldots x_i \ldots x_n) \cdot Q'(a'_1\ldots a'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\\
-      &= \left(\sum_{a_i}  Q(a_1\ldots a_i \ldots a_n|x_1\ldots x_i \ldots x_n)\right) \cdot \left(\sum_{a_i}  Q'(a'_1\ldots a'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\right)\\
-      &= \left(\sum_{a_i}  Q(a_1\ldots a_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n)\right) \cdot \left(\sum_{a_i}  Q'(a'_1\ldots a'_i \ldots a'_n|x'_1\ldots \hat{x}'_i \ldots x'_n)\right)\\
-      &\quad \text{since $Q$ and $Q'$ are non-signaling} \\
-      &\sum_{a_ia_i'}P(a_1a'_1\ldots a_ia'_i \ldots a_na'_n|x_1x'_1\ldots \hat{x}_i\hat{x}'_i \ldots x_nx'_n) \ ,
+      &\sum_{\hat{a}_i\hat{a}_i'}P(a_1a'_1\ldots \hat{a}_i\hat{a}_i' \ldots a_na'_n|x_1x'_1\ldots x_ix'_i \ldots x_nx'_n)\\
+      = &\sum_{\hat{a}_i\hat{a}_i'}  Q(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) \cdot Q'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\\
+      = &\left(\sum_{\hat{a}_i}  Q(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  Q'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\right)\\
+      = &\left(\sum_{\hat{a}_i}  Q(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  Q'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots \hat{x}'_i \ldots x'_n)\right)\\
+      = &\sum_{\hat{a}_i\hat{a}_i'}P(a_1a'_1\ldots \hat{a}_i\hat{a}'_i \ldots a_na'_n|x_1x'_1\ldots \hat{x}_i\hat{x}'_i \ldots x_nx'_n) \ ,
     \end{aligned}
   \end{equation}
   so $P$ is non-signaling.
 \end{proof}
-
 
 \begin{prop}
   \label{prop:oneShot}

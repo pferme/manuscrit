@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  12 JUN 2023 17:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  13 JUN 2023 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3244,95 +3244,61 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [9]
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
 nput line 82.
-
-Overfull \hbox (13.36247pt too wide) in paragraph at lines 96--97
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Also ob-serve that the pro-gram from 
-Def-i-ni-tion [][]3.1[][] is in-deed a re-lax-ation of the $\OML/lmm/m/it/10.95
- '$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) -\T1/LinuxLibertineT-TLF/m/sc/10.95 
-(-20) MaxCoverage
- []
-
-[10]
+ [10]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 110.
+(Font)              scaled to size 8.0pt on input line 108.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 110.
+(Font)              scaled to size 6.0pt on input line 108.
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 120.
+line 118.
  [11]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 177.
+(hyperref)                removing `math shift' on input line 175.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 177.
+(hyperref)                removing `\varphi' on input line 175.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 177.
+(hyperref)                removing `math shift' on input line 175.
 
 [12]
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
- input line 192.
+ input line 190.
 
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
 File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 192.
+(Font)              scaled to size 10.95pt on input line 190.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 199.
+input line 197.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
-(Font)              scaled to size 10.95pt on input line 203.
-
-Overfull \hbox (0.67325pt too wide) in paragraph at lines 212--214
-\OT1/lmr/m/n/10.95 2[]$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) , we over-load t
-he def-i-ni-tion $\OML/lmm/m/it/10.95 C[]\OT1/lmr/m/n/10.95 (\OMS/lmsy/m/n/10.9
-5 Q\OT1/lmr/m/n/10.95 ) := [][] \OML/lmm/m/it/10.95 '\OT1/lmr/m/n/10.95 ([][])$
- \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) with $[][] \OT1/lmr/m/n/10.95 := []$
- []
-
+(Font)              scaled to size 10.95pt on input line 201.
 Package hyperref Info: bookmark level for unknown rk defaults to 0 on input lin
-e 231.
-[13] [14] [15] [16]
-Overfull \hbox (3.27188pt too wide) in paragraph at lines 360--361
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) To see this, fix any $\OML/lmm/m/it/1
-0.95 e \OT1/lmr/m/n/10.95 = (\OML/lmm/m/it/10.95 v[]; [] ; v[]\OT1/lmr/m/n/10.9
-5 ) \OMS/lmsy/m/n/10.95 2 \OML/lmm/m/it/10.95 N$\T1/LinuxLibertineT-TLF/m/n/10.
-95 (-20) . Thus $\OMS/lmsy/m/n/10.95 9\OML/lmm/m/it/10.95 x \OMS/lmsy/m/n/10.95
- 6\OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 y \OMS/lmsy/m/n/10.95 2 \OT1/lmr/m/n
-/10.95 [\OML/lmm/m/it/10.95 h\OT1/lmr/m/n/10.95 ]\OML/lmm/m/it/10.95 ; ^^Y[]\OT
-1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 L\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 v
-[]\OT1/lmr/m/n/10.95 )) \OMS/lmsy/m/n/10.95 \ \OML/lmm/m/it/10.95 ^^Y[]\OT1/lmr
-/m/n/10.95 (\OML/lmm/m/it/10.95 L\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 v[]\OT
-1/lmr/m/n/10.95 )) \OMS/lmsy/m/n/10.95 6\OT1/lmr/m/n/10.95 =
+e 229.
+
+[13]
+Overfull \hbox (0.41968pt too wide) in paragraph at lines 259--260
+[] \OMS/lmsy/m/n/10.95 2 \OML/lmm/m/it/10.95 E; j \OMS/lmsy/m/n/10.95 2 \OT1/lm
+r/m/n/10.95 [\OML/lmm/m/it/10.95 h\OT1/lmr/m/n/10.95 ]\OML/lmm/m/it/10.95 ; ^^L
+ \OMS/lmsy/m/n/10.95 2 \OT1/lmr/m/n/10.95 [\OML/lmm/m/it/10.95 L\OT1/lmr/m/n/10
+.95 ]$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) . Then, take as cover sets $\OML/
+lmm/m/it/10.95 F[] \OT1/lmr/m/n/10.95 := [][] \OML/lmm/m/it/10.95 T[]$
  []
 
-[17]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 402.
+[14] [15] [16] [17]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 403.
  (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [18]
-! Undefined control sequence.
-l.413 ...varphi$ is concave, we have for all $0 \x
-                                                   \leq y$:
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \vbox (badness 1033) has occurred while \output is active []
-
- [19]
-[20]
+) [18] [19] [20]
 PGFPlots: reading {Data/VTATruncPlot.csv}
 PGFPlots: reading {Data/VTATruncPlot.csv}
 PGFPlots: reading {Data/VTATruncPlot.csv}
@@ -3365,114 +3331,77 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 607.
 
 [22] [23] [24] [25] [26] [27] [28] [29] [30] [31]
-Overfull \hbox (6.13312pt too wide) in paragraph at lines 916--917
+Overfull \hbox (6.13312pt too wide) in paragraph at lines 913--914
 []\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Thanks to [[], []][], we have that th
 e to-tal vari-a-tion dis-tance be-tween $[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10
 .95 n; x=n\OT1/lmr/m/n/10.95 )$
  []
 
-[32]
-Overfull \hbox (2.96739pt too wide) in paragraph at lines 964--965
-[]$[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 n; q\OT1/lmr/m/n/10.95 ) \OMS/lmsy
-/m/n/10.95 ^^T[] []\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 n \OT1/lmr/m/n/10.95
- + 1\OML/lmm/m/it/10.95 ; q\OT1/lmr/m/n/10.95 )$ \T1/LinuxLibertineT-TLF/m/n/10
-.95 (-20) and we have that $\OML/lmm/m/it/10.95 '$ \T1/LinuxLibertineT-TLF/m/n/
-10.95 (-20) is non-de-creas-ing, so $\U/msb/m/n/10.95 E\OT1/lmr/m/n/10.95 [\OML
-/lmm/m/it/10.95 '\OT1/lmr/m/n/10.95 ([](\OML/lmm/m/it/10.95 n; q\OT1/lmr/m/n/10
-.95 ))] \OMS/lmsy/m/n/10.95 ^^T
- []
-
-[33] [34] [35]
+[32] [33] [34]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1079.
+(hyperref)                removing `math shift' on input line 1067.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 1079.
+(hyperref)                removing `\alpha' on input line 1067.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1079.
+(hyperref)                removing `subscript' on input line 1067.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 1079.
+(hyperref)                removing `\varphi' on input line 1067.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1079.
+(hyperref)                removing `math shift' on input line 1067.
 
-
+[35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36]
 [37]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/sc' will be
-(Font)              scaled to size 12.0pt on input line 1164.
+(Font)              scaled to size 12.0pt on input line 1149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1164.
+(hyperref)                removing `math shift' on input line 1149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delta' on input line 1164.
+(hyperref)                removing `\delta' on input line 1149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1164.
+(hyperref)                removing `math shift' on input line 1149.
 
-[38] [39] [40]) [41] [42
-
-] (./chap-MAC.tex
+[38] [39]) [40] (./chap-MAC.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43
+ [41
+
 
 ]
-[44]
-
-Package caption Warning: \label without proper reference on input line 45.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:MACcoding' on page 45 undefined on input line 21.
-
-
-
+[42]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
-Overfull \hbox (2.75497pt too wide) detected at line 72
+ [43]
+Overfull \hbox (2.75497pt too wide) detected at line 70
 [][]
  []
 
-[46] [47]
-Overfull \hbox (19.6892pt too wide) detected at line 159
-\OT1/lmr/m/n/10.95 E[](\OML/lmm/m/it/10.95 W; k[]; k[]; e[]; d[]; e[]; d[]\OT1/
-lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 E(\OML/lmm/m/it/10.9
-5 W; k[]; k[]; e[]; d[]; e[]; d[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^T \
-OT1/lmr/m/n/10.95 2E[](\OML/lmm/m/it/10.95 W; k[]; k[]; e[]; d[]; e[]; d[]\OT1/
-lmr/m/n/10.95 ) \OML/lmm/m/it/10.95 ;
- []
-
-[48]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[49] [50]
+[44] [45] [46] [47] [48]
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (7.19527pt too wide) in paragraph at lines 320--360
+Overfull \hbox (7.19527pt too wide) in paragraph at lines 315--355
 [][] [] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [51]
-Overfull \hbox (0.58092pt too wide) in paragraph at lines 397--399
+[49]
+Overfull \hbox (0.58092pt too wide) in paragraph at lines 392--394
 \OMS/lmsy/m/n/10.95 C[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10
 .95 )$ \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) (resp. $\OMS/lmsy/m/n/10.95 C[]\
 OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10.95 )$\T1/LinuxLibertine
@@ -3480,342 +3409,98 @@ T-TLF/m/n/10.95 (-20) ) as the clo-sure of the set of all achiev-able (resp. su
 m-achievable)
  []
 
-[52]
-Overfull \hbox (27.20816pt too wide) detected at line 411
-[] [] \OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 y\OMS/lmsy/m
-/n/10.95 j\OML/lmm/m/it/10.95 x[]x[]\OT1/lmr/m/n/10.95 )[] \OML/lmm/m/it/10.95 
-:
- []
-
-
-Overfull \hbox (16.56635pt too wide) detected at line 419
-[] [] \OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 y\OMS/lmsy/m
-/n/10.95 j\OML/lmm/m/it/10.95 x[]x[]\OT1/lmr/m/n/10.95 ) []  \OML/lmm/m/it/10.9
-5 ;
- []
-
-
-Overfull \hbox (10.94421pt too wide) detected at line 423
-\OT1/lmr/m/n/10.95 E[](\OML/lmm/m/it/10.95 W; k[]; k[]; P[]; P[]\OT1/lmr/m/n/10
-.95 ) = [] \OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 y\OMS/l
-msy/m/n/10.95 j\OML/lmm/m/it/10.95 x[]x[]\OT1/lmr/m/n/10.95 ) [] \OML/lmm/m/it/
-10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]j[]\OMS/lmsy/m/n/10.95 j\OM
-L/lmm/m/it/10.95 i[]y\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10
-.95 (\OML/lmm/m/it/10.95 x[]j[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 i[]y\OT
-1/lmr/m/n/10.95 ) \OML/lmm/m/it/10.95 :
- []
-
-
-Overfull \hbox (55.92831pt too wide) detected at line 427
-[] \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]j[]\OMS/lm
-sy/m/n/10.95 j\OML/lmm/m/it/10.95 i[]y\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 P
-[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]j[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m
-/it/10.95 i[]y\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 
-P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]i[]\OMS/lmsy/m/n/10.95 j\OML/lmm/
-m/it/10.95 i[]y\OT1/lmr/m/n/10.95 ) [] \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.9
-5 (\OML/lmm/m/it/10.95 x[]j[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 i[]y\OT1/
-lmr/m/n/10.95 ) = [] \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/1
-0.95 x[]j[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 i[]y\OT1/lmr/m/n/10.95 )\OM
-L/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]j[]\OMS/lmsy/m/n
-/10.95 j\OML/lmm/m/it/10.95 i[]y\OT1/lmr/m/n/10.95 ) \OML/lmm/m/it/10.95 ;
- []
-
-
-Overfull \hbox (55.92831pt too wide) detected at line 431
-[] \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]j[]\OMS/lm
-sy/m/n/10.95 j\OML/lmm/m/it/10.95 i[]y\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 P
-[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]j[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m
-/it/10.95 i[]y\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 
-P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]i[]\OMS/lmsy/m/n/10.95 j\OML/lmm/
-m/it/10.95 i[]y\OT1/lmr/m/n/10.95 ) [] \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.9
-5 (\OML/lmm/m/it/10.95 x[]j[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 i[]y\OT1/
-lmr/m/n/10.95 ) = [] \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/1
-0.95 x[]j[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 i[]y\OT1/lmr/m/n/10.95 )\OM
-L/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]j[]\OMS/lmsy/m/n
-/10.95 j\OML/lmm/m/it/10.95 i[]y\OT1/lmr/m/n/10.95 ) \OML/lmm/m/it/10.95 ;
- []
-
-
-Overfull \hbox (111.64058pt too wide) detected at line 439
+[50] [51] [52]
+Overfull \hbox (1.43102pt too wide) detected at line 514
 [][]
  []
 
-[53] [54]
-Overfull \hbox (11.8477pt too wide) detected at line 515
+[53]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 538.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 538.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 538.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 538.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 538.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 538.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 538.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 538.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 538.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 538.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 538.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 538.
+
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 20.74pt on input line 540.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20.74> on input line 540.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 17.28pt on input line 540.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <17.28> on input line 540.
+[54]
+Overfull \hbox (3.22064pt too wide) in paragraph at lines 575--576
+\OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \O
+MS/lmsy/m/n/10.95 ^^U [][]$ \T1/LinuxLibertineT-TLF/m/it/10.95 (-20) and $\OT1/
+lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W \OMS/lmsy/m/n/10.95 
+ \OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^U 
+\OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W; k[]; k[]\OT1/lmr/m/n/10.95 )$\T1/
+LinuxLibertineT-TLF/m/it/10.95 (-20) . 
+ []
+
+
+Overfull \hbox (0.73314pt too wide) detected at line 607
 [][]
  []
 
 [55]
+Underfull \vbox (badness 3281) has occurred while \output is active []
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 539.
+ [56]
+Underfull \vbox (badness 4872) has occurred while \output is active []
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 539.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 539.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 539.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 539.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 539.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 539.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 539.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 539.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 539.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 539.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 539.
-
-[56]
-Overfull \hbox (40.67744pt too wide) in paragraph at lines 546--547
-[]\T1/LinuxLibertineT-TLF/b/n/10.95 Definition 4.8. []\T1/LinuxLibertineT-TLF/m
-/n/10.95 (-20) Let $\OML/lmm/m/it/10.95 Q\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.9
-5 a[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 x[]\OT1/lmr/m/n/10.95 )$ \T1/Linu
-xLibertineT-TLF/m/n/10.95 (-20) be a con-di-tional prob-a-bil-ity dis-tri-bu-ti
-on de-fined on $[] \OMS/lmsy/m/n/10.95 ^^B
- []
-
-
-Overfull \hbox (72.30167pt too wide) in paragraph at lines 546--547
-[] \OMS/lmsy/m/n/10.95 ^^B []$ \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) by $\OML
-/lmm/m/it/10.95 P\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 a[]a[] [] a[]a[]\OMS/l
-msy/m/n/10.95 j\OML/lmm/m/it/10.95 x[]x[] [] x[]x[]\OT1/lmr/m/n/10.95 ) :=
- []
-
-
-Overfull \hbox (49.12634pt too wide) in paragraph at lines 554--555
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Let $\OML/lmm/m/it/10.95 a[]; [] ; a[
-]; a[]; [] ; a[] \OMS/lmsy/m/n/10.95 2 A[] ^^B [] ^^B A[] ^^B A[] ^^B [] ^^B A[
-]$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) , $\OML/lmm/m/it/10.95 a[]; [] ; a[];
- a[]; [] ; a[] \OMS/lmsy/m/n/10.95 2
- []
-
-
-Overfull \hbox (7.21107pt too wide) in paragraph at lines 578--579
-[]\T1/LinuxLibertineT-TLF/m/it/10.95 (-20) For any MAC $\OML/lmm/m/it/10.95 W[]
- \OT1/lmr/m/n/10.95 : \OMS/lmsy/m/n/10.95 X[] ^^B X[] ! Y[]$ \T1/LinuxLibertine
-T-TLF/m/it/10.95 (-20) and $\OML/lmm/m/it/10.95 k[]; k[] \OMS/lmsy/m/n/10.95 2 
-\U/msb/m/n/10.95 N[]$\T1/LinuxLibertineT-TLF/m/it/10.95 (-20) , we have $\OT1/l
-mr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W \OMS/lmsy/m/n/10.95 
- \OML/lmm/m/it/10.95 W[]; k[]k[]; k[]k[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.9
-5 ^^U
- []
-
-
-Overfull \hbox (35.18463pt too wide) in paragraph at lines 578--579
-\OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W; k[]; k[]\OT1/lmr/m/n/10.95 ) \OMS
-/lmsy/m/n/10.95 ^^A \OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT
-1/lmr/m/n/10.95 )$\T1/LinuxLibertineT-TLF/m/it/10.95 (-20) . In par-tic-u-lar, 
-for any pos-i-tive in-te-ger $\OML/lmm/m/it/10.95 n$\T1/LinuxLibertineT-TLF/m/i
-t/10.95 (-20) , $\OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/l
-mr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^U
- []
-
-
-Overfull \hbox (7.61086pt too wide) in paragraph at lines 583--584
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Let us first show that $\OT1/lmr/m/n/
-10.95 S[](\OML/lmm/m/it/10.95 W; k[]; k[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.
-95 ^^U []$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) . Take $\OML/lmm/m/it/10.95 p
-[] \OT1/lmr/m/n/10.95 := []$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) , $\OML/lmm
-/m/it/10.95 r[] \OT1/lmr/m/n/10.95 :=
- []
-
-
-Overfull \hbox (19.11197pt too wide) detected at line 589
-[][]
- []
-
-[57]
-Overfull \hbox (34.9196pt too wide) detected at line 608
-[][]
- []
-
-
-Overfull \hbox (49.07939pt too wide) detected at line 616
-[][]
- []
-
-[58]
-Overfull \hbox (78.3285pt too wide) detected at line 637
-[][]
- []
-
-
-Overfull \hbox (63.97034pt too wide) detected at line 650
-[][]
- []
-
-
-Overfull \hbox (63.97034pt too wide) detected at line 661
-[][]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [59]
-Overfull \hbox (48.09575pt too wide) detected at line 672
-[][]
- []
-
-
-Overfull \hbox (79.41159pt too wide) detected at line 692
-[][]
- []
-
-[60]
+ [57]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 699.
+put line 700.
 
-Overfull \hbox (9.44868pt too wide) detected at line 719
-[][]
- []
+[58] [59] [60] [61] [62] [63]
+Underfull \vbox (badness 3679) has occurred while \output is active []
 
-
-Overfull \hbox (67.5291pt too wide) in paragraph at lines 721--722
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Thus in par-tic-u-lar, since we have 
-$\OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \
-OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 1$\T1/LinuxLibertineT-TLF/m/n/10.95 (
--20) , we get that $\OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT
-1/lmr/m/n/10.95 ) []
- []
-
-[61]
-Overfull \hbox (76.78185pt too wide) in paragraph at lines 727--728
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Since $\OT1/lmr/m/n/10.95 (\OML/lmm/m
-/it/10.95 R[]; R[]\OT1/lmr/m/n/10.95 )$ \T1/LinuxLibertineT-TLF/m/n/10.95 (-20)
- is achiev-able with non-signaling as-sis-tance, we have $\OT1/lmr/m/n/10.95 S[
-](\OML/lmm/m/it/10.95 W[]; \OMS/lmsy/m/n/10.95 d\OT1/lmr/m/n/10.95 2[]\OMS/lmsy
-/m/n/10.95 e\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 d\OT1/lmr/m/n/10.95 2[]\O
-MS/lmsy/m/n/10.95 e\OT1/lmr/m/n/10.95 ) []
- []
-
-
-Overfull \hbox (2.921pt too wide) in paragraph at lines 727--728
-\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) so by the third prop-erty of Propo-si-t
-ion [][]4.7[][], we have that $\OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; 
-\OMS/lmsy/m/n/10.95 d\OT1/lmr/m/n/10.95 2[]\OMS/lmsy/m/n/10.95 e\OML/lmm/m/it/1
-0.95 ; \OMS/lmsy/m/n/10.95 d\OT1/lmr/m/n/10.95 2[]\OMS/lmsy/m/n/10.95 e\OT1/lmr
-/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^U
- []
-
-
-Overfull \hbox (17.59041pt too wide) in paragraph at lines 738--739
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) It is clear that if $\OT1/lmr/m/n/10.
-95 (\OML/lmm/m/it/10.95 R[]; R[]\OT1/lmr/m/n/10.95 )$ \T1/LinuxLibertineT-TLF/m
-/n/10.95 (-20) is such that $\OMS/lmsy/m/n/10.95 9\OML/lmm/m/it/10.95 n[] \OMS/
-lmsy/m/n/10.95 2 \U/msb/m/n/10.95 N[]\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 
-8\OML/lmm/m/it/10.95 n \OMS/lmsy/m/n/10.95 ^^U \OML/lmm/m/it/10.95 n[]; \OT1/lm
-r/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; \OMS/lmsy/m/n/10.95 d\OT1/lmr/m/n/10.9
-5 2[]\OMS/lmsy/m/n/10.95 e\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 d\OT1/lmr/m
-/n/10.95 2[]\OMS/lmsy/m/n/10.95 e\OT1/lmr/m/n/10.95 ) =
- []
-
-
-Overfull \hbox (16.47565pt too wide) in paragraph at lines 752--754
-\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) so $\OT1/lmr/m/n/10.95 S[](\OML/lmm/m/i
-t/10.95 W[]; \OMS/lmsy/m/n/10.95 d\OT1/lmr/m/n/10.95 2[]\OMS/lmsy/m/n/10.95 e\O
-ML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 d\OT1/lmr/m/n/10.95 2[]\OMS/lmsy/m/n/10
-.95 e\OT1/lmr/m/n/10.95 ) = 1$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) . But $\O
-MS/lmsy/m/n/10.95 d\OT1/lmr/m/n/10.95 2[]\OMS/lmsy/m/n/10.95 e \OT1/lmr/m/n/10.
-95 = \OMS/lmsy/m/n/10.95 d\OT1/lmr/m/n/10.95 2[]\OMS/lmsy/m/n/10.95 e \OT1/lmr/
-m/n/10.95 = \OMS/lmsy/m/n/10.95 d\OT1/lmr/m/n/10.95 2[]\OMS/lmsy/m/n/10.95 e$
- []
-
-[62]
-Overfull \hbox (17.13135pt too wide) detected at line 766
-\OML/lmm/m/it/10.95 W[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 ^^[ \OMS/lmsy/m/
-n/10.95 ^^A \OML/lmm/m/it/10.95 y[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 ^^[
- \OMS/lmsy/m/n/10.95 ^^A \OML/lmm/m/it/10.95 x[]^^[ \OMS/lmsy/m/n/10.95 ^^A \OM
-L/lmm/m/it/10.95 x[]\OT1/lmr/m/n/10.95 ) = [] \OML/lmm/m/it/10.95 W\OT1/lmr/m/n
-/10.95 (\OML/lmm/m/it/10.95 y[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 x[]x[]\
-OT1/lmr/m/n/10.95 ) = [] \OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10.95 (\OML/lmm/m/it
-/10.95 y[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 x[]x[]\OT1/lmr/m/n/10.95 ) =
- \OML/lmm/m/it/10.95 W[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 y[]\OMS/lmsy/m/
-n/10.95 j\OML/lmm/m/it/10.95 x[]x[]\OT1/lmr/m/n/10.95 ) \OML/lmm/m/it/10.95 ;
- []
-
-
-Overfull \hbox (32.39906pt too wide) detected at line 785
-[][]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [63]
-[64]
-Overfull \hbox (10.89386pt too wide) in paragraph at lines 814--816
-\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) First, $\OML/lmm/m/it/10.95 f$ \T1/Linu
-xLibertineT-TLF/m/n/10.95 (-20) is well de-fined. In-deed, if $\OML/lmm/m/it/10
-.95 y \OMS/lmsy/m/n/10.95 2 \OML/lmm/m/it/10.95 B[] \OT1/lmr/m/n/10.95 = []$\T1
-/LinuxLibertineT-TLF/m/n/10.95 (-20) , then $\OML/lmm/m/it/10.95 g \OMS/lmsy/m/
-n/10.95 ^^A \OML/lmm/m/it/10.95 y \OMS/lmsy/m/n/10.95 2 [] \OT1/lmr/m/n/10.95 =
-
- []
-
+ [64]
 [65]
-Overfull \hbox (31.3213pt too wide) detected at line 865
-[][]
- []
-
-
-Overfull \hbox (20.59044pt too wide) detected at line 880
-[][]
- []
-
-
-Overfull \hbox (56.93028pt too wide) detected at line 884
-[] \OML/lmm/m/it/10.95 p[] \OT1/lmr/m/n/10.95 = [] [] \OML/lmm/m/it/10.95 p[] \
-OT1/lmr/m/n/10.95 = [] []\OML/lmm/m/it/10.95 p[] \OT1/lmr/m/n/10.95 = []\OML/lm
-m/m/it/10.95 p[] ;
- []
-
-[66]
-Overfull \hbox (13.45209pt too wide) detected at line 913
-[] \OML/lmm/m/it/10.95 r[] \OT1/lmr/m/n/10.95 = [] [] \OML/lmm/m/it/10.95 r[] \
-OT1/lmr/m/n/10.95 = [] [] \OML/lmm/m/it/10.95 r[] \OT1/lmr/m/n/10.95 = \OML/lmm
-/m/it/10.95 k[] [] r[] :
- []
-
-
-Overfull \hbox (3.79778pt too wide) detected at line 922
-[][]
- []
-
-
-Underfull \vbox (badness 3514) has occurred while \output is active []
-
- [67]
-[68]
 PGFPlots: reading {Data/Data_BAC/ZEBorder2.csv}
 PGFPlots: reading {Data/Data_BAC/ZEBorder3.csv}
 PGFPlots: reading {Data/Data_BAC/ZEBorder7.csv}
@@ -3823,27 +3508,11 @@ PGFPlots: reading {Data/Data_BAC/ZEBorder7.csv}
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[69]
-Overfull \hbox (12.53293pt too wide) in paragraph at lines 1036--1037
-\OML/lmm/m/it/10.95 P$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) , de-fine $\OML/l
-mm/m/it/10.95 W\OT1/lmr/m/n/10.95 [\OML/lmm/m/it/10.95 P\OT1/lmr/m/n/10.95 ] : 
-[\OML/lmm/m/it/10.95 k[]\OT1/lmr/m/n/10.95 ] \OMS/lmsy/m/n/10.95 ^^B \OT1/lmr/m
-/n/10.95 [\OML/lmm/m/it/10.95 k[]\OT1/lmr/m/n/10.95 ] \OMS/lmsy/m/n/10.95 ! \OT
-1/lmr/m/n/10.95 [\OML/lmm/m/it/10.95 `\OT1/lmr/m/n/10.95 ]$ \T1/LinuxLibertineT
--TLF/m/n/10.95 (-20) with $\OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10.95 [\OML/lmm/m/
-it/10.95 P\OT1/lmr/m/n/10.95 ](\OML/lmm/m/it/10.95 j\OMS/lmsy/m/n/10.95 j\OML/l
-mm/m/it/10.95 i[]i[]\OT1/lmr/m/n/10.95 ) := [][] \OML/lmm/m/it/10.95 W\OT1/lmr/
-m/n/10.95 (\OML/lmm/m/it/10.95 y\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 x[]x[]
-\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 P\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.9
-5 x[]x[]j\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 i[]i[]y\OT1/lmr/m/n/10.95 )$\
-T1/LinuxLibertineT-TLF/m/n/10.95 (-20) : 
- []
-
-
+[66]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [70]
-Overfull \hbox (0.33768pt too wide) in paragraph at lines 1103--1104
+ [67]
+Overfull \hbox (0.33768pt too wide) in paragraph at lines 1113--1114
 []\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Let us de-fine $[]\OT1/lmr/m/n/10.95 
 (\OML/lmm/m/it/10.95 x[]x[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 b[]b[]\OT1/l
 mr/m/n/10.95 )\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 a[]a[]y\OT1/lmr/m/n/10.9
@@ -3857,68 +3526,14 @@ r/m/n/10.95 )\OML/lmm/m/it/10.95 d\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 b[]b[
 ineT-TLF/m/n/10.95 (-20) .
  []
 
-[71]
-Overfull \hbox (16.79709pt too wide) detected at line 1121
-\OML/lmm/m/it/10.95 I\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 I[] \OT1/lmr/m/n/1
-0.95 : \OML/lmm/m/it/10.95 J\OT1/lmr/m/n/10.95 ) = \OML/lmm/m/it/10.95 H\OT1/lm
-r/m/n/10.95 (\OML/lmm/m/it/10.95 I[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^
-@ \OML/lmm/m/it/10.95 H\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 I[]\OMS/lmsy/m/n
-/10.95 j\OML/lmm/m/it/10.95 J\OT1/lmr/m/n/10.95 ) = \OML/lmm/m/it/10.95 H\OT1/l
-mr/m/n/10.95 (\OML/lmm/m/it/10.95 I[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 I
-[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 H\OT1/lmr/m/
-n/10.95 (\OML/lmm/m/it/10.95 I[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 J\OT1/
-lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 H\OT1/lmr/m/n/10.95
- (\OML/lmm/m/it/10.95 I[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 I[]\OT1/lmr/m
-/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 H\OT1/lmr/m/n/10.95 (\OM
-L/lmm/m/it/10.95 I[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 JI[]\OT1/lmr/m/n/1
-0.95 ) = \OML/lmm/m/it/10.95 I\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 I[] \OT1/
-lmr/m/n/10.95 : \OML/lmm/m/it/10.95 J\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 I
-[]\OT1/lmr/m/n/10.95 ) \OML/lmm/m/it/10.95 ;
- []
-
-
-Overfull \hbox (68.56053pt too wide) detected at line 1143
-\OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) = 
-[] [] \OML/lmm/m/it/10.95 W[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 y[]\OMS/lm
-sy/m/n/10.95 j\OML/lmm/m/it/10.95 x[]x[]\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95
- r[] \OMS/lmsy/m/n/10.95 ^^T [] [] \OML/lmm/m/it/10.95 W[]\OT1/lmr/m/n/10.95 (\
-OML/lmm/m/it/10.95 y[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 x[]x[]\OT1/lmr/m
-/n/10.95 )\OML/lmm/m/it/10.95 p[] \OT1/lmr/m/n/10.95 = 1 \OML/lmm/m/it/10.95 ;
- []
-
-[72]
+[68] [69]
 PGFPlots: reading {Data/Data_Capacity_BACwithSmallBitFlipNoise/Capacity3.csv}
 PGFPlots: reading {Data/Data_Capacity_BACwithSmallBitFlipNoise/Capacity5.csv}
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \vbox (badness 2875) has occurred while \output is active []
-
- [73]
-[74]
-Overfull \hbox (58.40543pt too wide) in paragraph at lines 1229--1230
-\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) de-pends only on $\OML/lmm/m/it/10.95 r
-[]$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) . Let us show that all con-straints 
-are sat-is-fied for $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 p[]; r[]\OT1/lmr/m
-/n/10.95 )[]$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) . 
- []
-
-[75]
-Overfull \hbox (33.52142pt too wide) detected at line 1291
-\OMS/lmsy/m/n/10.95 C[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 W[]\OT1/lmr/m/n/
-10.95 ) = [] []
- []
-
-
-Overfull \hbox (21.6567pt too wide) detected at line 1304
-\OML/lmm/m/it/10.95 B\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10
-.95 ) = [] \OMS/lmsy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 B [] \OT1/lmr/m/n/10.95 
-= \OML/lmm/m/it/10.95 B []  ;
- []
-
-[76]
+[70] [71] [72] [73]
 Missing character: There is no ( in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -3980,69 +3595,13 @@ PGFPlots: reading {Data/Data_BAC_relaxed/ZEBorderINEQ7.csv}
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[77] [78] [79]
-Overfull \hbox (16.14937pt too wide) in paragraph at lines 1481--1482
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) In those three cases, we have re-spec
--tively $\OML/lmm/m/it/10.95 P[] \OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 P[] \
-OMS/lmsy/m/n/10.95 ^^B \OML/lmm/m/it/10.95 Q[]\OT1/lmr/m/n/10.95 ; \OML/lmm/m/i
-t/10.95 P[] \OMS/lmsy/m/n/10.95 ^^B \OML/lmm/m/it/10.95 Q[]\OT1/lmr/m/n/10.95 ;
- \OML/lmm/m/it/10.95 P[] \OMS/lmsy/m/n/10.95 ^^B
- []
-
-[80]
-Overfull \hbox (3.82483pt too wide) detected at line 1521
+[74] [75] [76] [77]
+Overfull \hbox (3.82483pt too wide) detected at line 1539
 [][][] \OMS/lmsy/m/n/10.95 ^^T [] ^^T [] \OML/lmm/m/it/10.95 :
  []
 
-
-Overfull \hbox (9.55353pt too wide) in paragraph at lines 1548--1549
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Consider $\OML/lmm/m/it/10.95 n$ \T1/
-LinuxLibertineT-TLF/m/n/10.95 (-20) copies of the MAC $\OML/lmm/m/it/10.95 W$\T
-1/LinuxLibertineT-TLF/m/n/10.95 (-20) . Let us write $\OML/lmm/m/it/10.95 X[] \
-OT1/lmr/m/n/10.95 := \OML/lmm/m/it/10.95 X[] [] X[]X[] [] X[]$
- []
-
-[81]
-Overfull \hbox (96.72688pt too wide) detected at line 1565
-[][]
- []
-
-
-Overfull \hbox (90.67285pt too wide) detected at line 1579
-[][]
- []
-
-[82]
-Overfull \hbox (74.43172pt too wide) detected at line 1594
-\U/msb/m/n/10.95 P [] \OT1/lmr/m/n/10.95 = \U/msb/m/n/10.95 P [] \OT1/lmr/m/n/1
-0.95 = \OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 y[]\OMS/lms
-y/m/n/10.95 j\OML/lmm/m/it/10.95 x[]x[]\OT1/lmr/m/n/10.95 ) \OML/lmm/m/it/10.95
- ;
- []
-
-
-Overfull \hbox (53.03615pt too wide) detected at line 1604
-[][]
- []
-
-
-Overfull \hbox (116.64622pt too wide) detected at line 1608
-\U/msb/m/n/10.95 P [] \OT1/lmr/m/n/10.95 = [] \OML/lmm/m/it/10.95 :
- []
-
-
-Overfull \hbox (87.85292pt too wide) detected at line 1619
-[][]
- []
-
-[83] [84]
-Overfull \hbox (122.11017pt too wide) in paragraph at lines 1687--1689
-[]$\OMS/lmsy/m/n/10.95 T[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 X[]; X[]\OT1/
-lmr/m/n/10.95 ) := []$
- []
-
-
-Overfull \hbox (2.63985pt too wide) in paragraph at lines 1705--1706
+[78] [79] [80] [81]
+Overfull \hbox (2.63985pt too wide) in paragraph at lines 1721--1722
 []$\OMS/lmsy/m/n/10.95 8\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]; x[]\OT1/lm
 r/m/n/10.95 ) \OMS/lmsy/m/n/10.95 2 T[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 
 X[]; X[]\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 2[] \OMS/l
@@ -4051,13 +3610,8 @@ msy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.9
 T1/LinuxLibertineT-TLF/m/it/10.95 (-20) . 
  []
 
-[85]
-Overfull \hbox (52.78879pt too wide) detected at line 1741
-[][]
- []
-
-[86]
-Overfull \hbox (9.09203pt too wide) detected at line 1747
+[82]
+Overfull \hbox (9.09203pt too wide) detected at line 1757
 [] \OT1/lmr/m/n/10.95 = [] [] \OML/lmm/m/it/10.95 Z[][]Z[] \OT1/lmr/m/n/10.95 :
 = \U/bbm/m/n/10.95 1[][]\OML/lmm/m/it/10.95 S \OT1/lmr/m/n/10.95 := \OMS/lmsy/m
 /n/10.95 f\OML/lmm/m/it/10.95 i \OT1/lmr/m/n/10.95 : \OML/lmm/m/it/10.95 y[] \O
@@ -4065,108 +3619,17 @@ T1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 y\OMS/lmsy/m/n/10.95 g \OML/lmm/m/it/10.
 95 :
  []
 
-
-Overfull \hbox (2.29578pt too wide) detected at line 1764
+[83]
+Overfull \hbox (2.29578pt too wide) detected at line 1771
 \U/msb/m/n/10.95 P [] \OMS/lmsy/m/n/10.95 ^^T [] [] \OT1/lmr/m/n/10.95 0 \OML/l
 mm/m/it/10.95 :
  []
 
+[84] [85]
+Underfull \vbox (badness 3623) has occurred while \output is active []
 
-Overfull \hbox (39.4575pt too wide) in paragraph at lines 1778--1779
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) We con-sider $\OML/lmm/m/it/10.95 n$ 
-\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) in-de-pen-dent ran-dom vari-ables $\OT1
-/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 X[]X[]Y[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n
-/10.95 ^^X \OML/lmm/m/it/10.95 P[]$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) , wi
-th $\OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]; x[]; y[
-]\OT1/lmr/m/n/10.95 ) =
- []
-
-
-Overfull \hbox (29.42683pt too wide) detected at line 1784
-[][]
- []
-
-[87]
-Overfull \hbox (11.43936pt too wide) detected at line 1813
-[] \OML/lmm/m/it/10.95 p[] \OT1/lmr/m/n/10.95 = [] [] = 2[] = \OML/lmm/m/it/10.
-95 k[]k[] :
- []
-
-
-Overfull \hbox (18.38142pt too wide) detected at line 1828
-[][]
- []
-
-[88]
-Overfull \hbox (27.38834pt too wide) in paragraph at lines 1830--1831
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) But $\OMS/lmsy/m/n/10.95 jT[]\OT1/lmr
-/m/n/10.95 (\OML/lmm/m/it/10.95 X[]; X[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.9
-5 y[]\OT1/lmr/m/n/10.95 )\OMS/lmsy/m/n/10.95 j ^^T \OT1/lmr/m/n/10.95 2[]$ \T1/
-LinuxLibertineT-TLF/m/n/10.95 (-20) and for a large enough $\OML/lmm/m/it/10.95
- n$ \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) we have that $\OMS/lmsy/m/n/10.95 j
-T[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 X[]; X[]\OT1/lmr/m/n/10.95 )\OMS/lms
-y/m/n/10.95 j ^^U
- []
-
-
-Overfull \hbox (47.66943pt too wide) detected at line 1832
-[] \OML/lmm/m/it/10.95 r[] \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 2[][] = 2
-[] \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 1 \OML/lmm/m/it/10.95 ;
- []
-
-
-Overfull \hbox (48.48749pt too wide) detected at line 1848
-[][]
- []
-
-
-Overfull \hbox (71.27208pt too wide) in paragraph at lines 1850--1851
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) But$\OMS/lmsy/m/n/10.95 jT[]\OT1/lmr/
-m/n/10.95 (\OML/lmm/m/it/10.95 X[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 x[];
- y[]\OT1/lmr/m/n/10.95 )\OMS/lmsy/m/n/10.95 j ^^T \OT1/lmr/m/n/10.95 2[]$ \T1/L
-inuxLibertineT-TLF/m/n/10.95 (-20) and for a large enough $\OML/lmm/m/it/10.95 
-n$ \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) we have $\OMS/lmsy/m/n/10.95 8\OML/l
-mm/m/it/10.95 x[] \OMS/lmsy/m/n/10.95 2 T[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10
-.95 X[]\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 jT[]\OT1/l
-mr/m/n/10.95 (\OML/lmm/m/it/10.95 X[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 x
-[]\OT1/lmr/m/n/10.95 )\OMS/lmsy/m/n/10.95 j ^^U
- []
-
-
-Overfull \hbox (1.87976pt too wide) in paragraph at lines 1850--1851
-\OML/lmm/m/it/10.95 H\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 X[]\OMS/lmsy/m/n/1
-0.95 j\OML/lmm/m/it/10.95 X[]Y\OT1/lmr/m/n/10.95 ) + \OML/lmm/m/it/10.95 H\OT1/
-lmr/m/n/10.95 (\OML/lmm/m/it/10.95 X[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 
-X[]\OT1/lmr/m/n/10.95 )$ \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) (sym-met-ri-ca
-lly $\OML/lmm/m/it/10.95 C[] \OT1/lmr/m/n/10.95 := 2\OML/lmm/m/it/10.95 H\OT1/l
-mr/m/n/10.95 (\OML/lmm/m/it/10.95 X[]; X[]\OT1/lmr/m/n/10.95 ) + \OML/lmm/m/it/
-10.95 H\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 X[]\OMS/lmsy/m/n/10.95 j\OML/lmm
-/m/it/10.95 X[]Y\OT1/lmr/m/n/10.95 ) + \OML/lmm/m/it/10.95 H\OT1/lmr/m/n/10.95 
-(\OML/lmm/m/it/10.95 X[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 X[]\OT1/lmr/m/
-n/10.95 )$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) ): 
- []
-
-
-Overfull \hbox (11.24959pt too wide) detected at line 1852
-[] \OMS/lmsy/m/n/10.95 ^^U \OT1/lmr/m/n/10.95 2[] = 2[] \OMS/lmsy/m/n/10.95 ^^U
- \OT1/lmr/m/n/10.95 1 \OML/lmm/m/it/10.95 :
- []
-
-
-Overfull \hbox (30.50308pt too wide) detected at line 1862
-[][]
- []
-
-[89]
-Overfull \hbox (54.54991pt too wide) in paragraph at lines 1864--1865
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) since typ-i-cal sets cover asymp-tot-
-i-cally the whole prob-a-bil-ity mass. Thus, since $\OT1/lmr/m/n/10.95 S[](\OML
-/lmm/m/it/10.95 W[]; \OT1/lmr/m/n/10.95 2[]\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/1
-0.95 2[]) \OMS/lmsy/m/n/10.95 ^^T
- []
-
-
-Overfull \hbox (3.39345pt too wide) in paragraph at lines 1883--1884
+ [86]
+Overfull \hbox (3.39345pt too wide) in paragraph at lines 1896--1897
 []\T1/LinuxLibertineT-TLF/b/n/10.95 Proposition 4.33 \T1/LinuxLibertineT-TLF/m/
 n/10.95 (-20) (Propo-si-tion 2.1 of [[]][])\T1/LinuxLibertineT-TLF/b/n/10.95 . 
 []$\OT1/lmr/m/n/10.95 S(\OML/lmm/m/it/10.95 W; k\OT1/lmr/m/n/10.95 ) = [][]\OML
@@ -4176,56 +3639,27 @@ mr/m/n/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 ) :=
  []
 
 
-Overfull \hbox (6.26141pt too wide) in paragraph at lines 1886--1887
-\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) sender and the re-ceiver, which leads t
-o the fol-low-ing max-i-mum suc-cess prob-a-bil-ity $\OT1/lmr/m/n/10.95 S[](\OM
-L/lmm/m/it/10.95 W; k\OT1/lmr/m/n/10.95 )$\T1/LinuxLibertineT-TLF/m/n/10.95 (-2
-0) : 
- []
+Underfull \vbox (badness 6842) has occurred while \output is active []
 
+ [87]
+[88]
+Underfull \vbox (badness 1430) has occurred while \output is active []
 
-Underfull \vbox (badness 1577) has occurred while \output is active []
+ [89]
+Underfull \vbox (badness 6961) has occurred while \output is active []
 
  [90]
-Overfull \hbox (17.03201pt too wide) detected at line 1925
-[] [] \OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W; k[]; k[]\OT1/lmr/m/n/10.95 
-) \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W; `[]; `[
-]\OT1/lmr/m/n/10.95 ) \OML/lmm/m/it/10.95 :
- []
-
-[91]
-Overfull \hbox (52.24059pt too wide) detected at line 1975
-[][]
- []
-
-
-Underfull \vbox (badness 1331) has occurred while \output is active []
-
- [92]
-[93]
-Overfull \hbox (81.18549pt too wide) detected at line 2019
-[][]
- []
-
-[94]) [95] [96
-
-] (./chap-Broadcast.tex
+[91]) [92] (./chap-Broadcast.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [97
+ [93
+
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [98]
-
-Package caption Warning: \label without proper reference on input line 47.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:BCcoding' on page 99 undefined on input line 25.
-
-[99]
+ [94]
+[95]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 8.0pt on input line 55.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
@@ -4256,7 +3690,7 @@ Overfull \hbox (8.01376pt too wide) detected at line 67
 [][]
  []
 
-[100]
+[96]
 Overfull \hbox (74.14409pt too wide) detected at line 79
 [][]
  []
@@ -4277,7 +3711,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 104.
 
-[101]
+[97]
 Overfull \hbox (27.14568pt too wide) detected at line 143
 [][]
  []
@@ -4285,12 +3719,12 @@ Overfull \hbox (27.14568pt too wide) detected at line 143
 
 Underfull \vbox (badness 4543) has occurred while \output is active []
 
- [102]
+ [98]
 Overfull \hbox (33.72655pt too wide) detected at line 151
 [][]
  []
 
-[103]
+[99]
 Overfull \hbox (37.80939pt too wide) in paragraph at lines 180--181
 []\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Thus, when re-ceivers are given non-s
 ignaling as-sis-tance, it means that the prod-uct $\OML/lmm/m/it/10.95 d[]\OT1/
@@ -4304,7 +3738,7 @@ Overfull \hbox (32.27997pt too wide) detected at line 193
 [][]
  []
 
-[104]
+[100]
 Overfull \hbox (64.92857pt too wide) detected at line 216
 \OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W; k[]; k[]; e; d\OT1/lmr/m/n/10.95 
 ) := [] [] \OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 y[]y[]\
@@ -4346,7 +3780,7 @@ ML/lmm/m/it/10.95 i[]i[]\OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 y[]y[]\OT1/lmr
 /m/n/10.95 ) \OML/lmm/m/it/10.95 ;
  []
 
-[105]
+[101]
 Overfull \hbox (10.33586pt too wide) in paragraph at lines 253--254
 \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) which are well-defined since $\OML/lmm/
 m/it/10.95 d$ \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) is a non-signaling box, o
@@ -4368,11 +3802,11 @@ xLibertineT-TLF/m/n/10.95 (-20) .
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[106] [107]
+[102] [103]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [108]
-[109]
+ [104]
+[105]
 Overfull \hbox (84.19644pt too wide) detected at line 453
 [][]
  []
@@ -4382,7 +3816,7 @@ Overfull \hbox (24.98677pt too wide) detected at line 462
 [][]
  []
 
-[110] [111] [112]
+[106] [107] [108]
 Overfull \hbox (67.33177pt too wide) detected at line 540
 [] \U/bbm/m/n/10.95 1[]1[] \OT1/lmr/m/n/10.95 = \U/bbm/m/n/10.95 1[]1[] \OT1/lm
 r/m/n/10.95 = \U/bbm/m/n/10.95 1[]1[] \OML/lmm/m/it/10.95 ;
@@ -4395,7 +3829,7 @@ their op-ti-mal ob-jec-tive val-ues sat-isfy $\OML/lmm/m/it/10.95 k[]k[][]\OT1/
 lmr/m/n/10.95 (\OML/lmm/m/it/10.95 W; k[]; k[]\OT1/lmr/m/n/10.95 ) =
  []
 
-[113]
+[109]
 Overfull \hbox (40.22989pt too wide) in paragraph at lines 580--581
 []\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) First, one can note that the max-i-mu
 m value we can get is up-per bounded by $[][] [] []$.
@@ -4426,7 +3860,7 @@ Overfull \hbox (14.4364pt too wide) detected at line 595
 [][]
  []
 
-[114]
+[110]
 Overfull \hbox (36.23409pt too wide) in paragraph at lines 634--635
 \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) u-lar wel-fare prob-lem dis-cussed in [
 []][]. Note first that $[][]\OT1/lmr/m/n/10.95 (\OMS/lmsy/m/n/10.95 P[]\OT1/lmr
@@ -4434,7 +3868,7 @@ Overfull \hbox (36.23409pt too wide) in paragraph at lines 634--635
 ineT-TLF/m/n/10.95 (-20) ,
  []
 
-[115] [116]
+[111] [112]
 Overfull \hbox (117.7045pt too wide) detected at line 680
 [] \OMS/lmsy/m/n/10.95 ^^U [] [] [] \OML/lmm/m/it/10.95 ;
  []
@@ -4462,7 +3896,7 @@ Overfull \hbox (86.34521pt too wide) detected at line 708
 [][]
  []
 
-[117]
+[113]
 Overfull \hbox (23.50587pt too wide) detected at line 711
 \U/msb/m/n/10.95 E[]\OT1/lmr/m/n/10.95 [\OML/lmm/m/it/10.95 e[]\OT1/lmr/m/n/10.
 95 (\OMS/lmsy/m/n/10.95 P[]\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 P[]\OT1/lm
@@ -4477,7 +3911,7 @@ LibertineT-TLF/m/n/10.95 (-20) which is a con-cave func-tion. We will use sev-e
 ral tools in-tro-duced in [[]][]
  []
 
-[118]
+[114]
 Overfull \hbox (51.85179pt too wide) detected at line 744
 [][]
  []
@@ -4492,12 +3926,12 @@ Overfull \hbox (26.49493pt too wide) detected at line 770
 [][]
  []
 
-[119]
+[115]
 Overfull \hbox (83.73842pt too wide) detected at line 779
 [][]
  []
 
-[120] [121] [122] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+[116] [117] [118] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
 Overfull \hbox (33.45947pt too wide) in paragraph at lines 888--890
@@ -4507,12 +3941,12 @@ es with pa-ram-e-ters $\OML/lmm/m/it/10.95 x$ \T1/LinuxLibertineT-TLF/m/n/10.95
 ing the bound $\OML/lmm/m/it/10.95 D [] \OMS/lmsy/m/n/10.95 ^^U
  []
 
-[123]
+[119]
 Overfull \hbox (17.51637pt too wide) detected at line 926
 [][]
  []
 
-[124] [125]
+[120] [121]
 Overfull \hbox (27.39735pt too wide) detected at line 984
 [][]
  []
@@ -4520,14 +3954,14 @@ Overfull \hbox (27.39735pt too wide) detected at line 984
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [126]
-[127]) [128] (./chap-conclusion.tex) (./main.bbl (./main.brf)
+ [122]
+[123]) [124] (./chap-conclusion.tex) (./main.bbl (./main.brf)
 \tf@brf=\write8
 \openout8 = `main.brf'.
 
- [129
+ [125
 
-] [130
+] [126
 
 ]
 bibitemlist
@@ -4551,7 +3985,7 @@ Package microtype Info: Character `textendash ' is missing
 Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [131]
+ [127]
 Underfull \hbox (badness 1389) in paragraph at lines 160--160
 []\T1/LinuxLibertineT-TLF/m/n/10 (+20) Charles H Ben-nett, Pe-ter W Shor, John 
 A Smolin, and Ashish V Thap-liyal.
@@ -4561,19 +3995,19 @@ A Smolin, and Ashish V Thap-liyal.
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
 (Font)              using `T1/zi4/m/n' instead on input line 171.
 
-[132] [133] [134] [135] [136]
+[128] [129] [130] [131] [132]
 Underfull \hbox (badness 1383) in paragraph at lines 718--718
 \T1/zi4/m/n/10 the-[]maximal-[]error-[]and-[]average-[]error-[]capacity-[]regio
 n-[]of-[]the-[]broadc$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) .  Ci-ta-tions:
  []
 
-) [137] [138
+) [133] [134
 
 ] (./main.lof
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [139])
-[140] (./main.lot) [141
+ [135])
+[136] (./main.lot) [137
 
 ]
 \tf@toc=\write9
@@ -4593,13 +4027,10 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 222.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FB831DB318FE9DA5080C77D5E91D611A;5121.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: EAAF872575CECB40C2999CA499327F65;8133.
+(rerunfilecheck)             Checksum: 7E1DC9426C417EABE6A1CAC6C4B1DC50;8133.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -4607,11 +4038,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 222.
  ) 
 Here is how much of TeX's memory you used:
- 58479 strings out of 494821
- 1269807 string characters out of 6177891
- 1594647 words of memory out of 5000000
- 59406 multiletter control sequences out of 15000+600000
- 809716 words of font info for 520 fonts, out of 8000000 for 9000
+ 58537 strings out of 494821
+ 1271037 string characters out of 6177891
+ 1595600 words of memory out of 5000000
+ 59454 multiletter control sequences out of 15000+600000
+ 835237 words of font info for 542 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10467b,2448s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist
@@ -4646,9 +4077,9 @@ share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public
 mf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
 8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (155 pages, 1677327 bytes).
+Output written on main.pdf (151 pages, 1675951 bytes).
 PDF statistics:
- 2879 PDF objects out of 2984 (max. 8388607)
- 789 named destinations out of 1000 (max. 500000)
- 57385 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 2874 PDF objects out of 2984 (max. 8388607)
+ 796 named destinations out of 1000 (max. 500000)
+ 60457 words of extra memory for PDF output out of 61914 (max. 10000000)
 

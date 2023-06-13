@@ -24,7 +24,7 @@ Before detailing the proof of the theorem, we provide a few remarks and connecti
 \paragraph{Applications and related work}
 We can directly reduce the standard maximum coverage problem to $\varphi$-\textsc{MaxCoverage} by setting $\varphi(j) = \min\{ j,1\}$. In this case $\alpha_{\varphi} = 1 - e^{-1}$. One can also encapsulate, within our framework, the $\ell$-\textsc{MultiCoverage} problem studied in~\cite{BFGG20} by instantiating $\varphi(j) = \min\{ j,\ell\}$. In this setting, we recover the approximation ratio $\alpha_{\varphi} = 1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$, which matches the approximation guarantee obtained in~\cite{BFGG20} (see Proposition~\ref{prop:lCover}). Note that the hardness result in~\cite{BFGG20} was based on the Unique Games Conjecture, whereas here we prove that this guarantee is tight under $\textrm{P} \not= \textrm{NP}$.
 
-The initial motivation for studying $\varphi$-\textsc{MaxCoverage} was to generalize the list-decoding problem interpretation studied in~\cite{BFGG20}. In the channel coding problem~\cite{BF18}, we are given a noisy channel $W(y|x)$, defined as a conditional probability distribution, and the goal is to send a message chosen uniformly in $[k]$ through this channel. In order to do so, the sender encodes the input message in $\mathcal{X}$, and the receiver decodes back the output of the channel from $\mathcal{Y}$ to $[k]$. The objective is to find a code that maximize the probability of successfully decoding the message. In the list-decoding setting, instead of decoding the output into a single message, the decoder outputs a list of size $\ell$ of possible messages, where $\ell$ is some fixed parameter common to all lists. We consider that the decoding is successful if the initial message belongs to that list. The generalization of that problem, which we call the $\varphi$-list-decoding problem, allows decoding lists of any size.  However, the decoding will be successful only with probability $\frac{\varphi(\ell)}{\ell}$ when the initial message belongs to that list, where $\ell$ is the size of that list. One can see that with a coverage function $\varphi(j) = \min\{ j,\ell\}$, we recover the list-decoding problem. When the channel is of the form $W(y|x) = \frac{1}{t}$ for $y \in T_x$ with $\abs{T_x}=t$ and $W(y|x) = 0$ elsewhere, the success probability of the $\varphi$-list-decoding problem for a code $S\subseteq \mathcal{X}$ can be written as $\frac{1}{kt}\sum_{y \in \mathcal{Y}}\varphi(\abs{S}_y)$, with $\abs{S}_y = \abs{\set{x \in S : y \in T_x}}$, which is a particular instance of the $\varphi$-\textsc{MaxCoverage} problem. Therefore, for that class of channels, a tight approximation ratio $\alpha_{\varphi}$ follows from Theorem~\ref{theo:main}.
+The motivation for studying $\varphi$-\textsc{MaxCoverage} was to generalize the $\ell$-\textsc{MultiCoverage} problem studied in~\cite{BFGG20} as well as its $\ell$-list-decoding interpretation. In the channel coding problem~\cite{BF18}, we are given a noisy channel $W(y|x)$, defined as a conditional probability distribution, and the goal is to send a message chosen uniformly in $[k]$ through this channel. In order to do so, the sender encodes the input message in $\mathcal{X}$, and the receiver decodes back the output of the channel from $\mathcal{Y}$ to $[k]$. The objective is to find a code that maximize the probability of successfully decoding the message. In the $\ell$-list-decoding problem, instead of decoding the output into a single message, the decoder outputs a list of size $\ell$ of possible messages, where $\ell$ is some fixed parameter common to all lists. We consider that the decoding is successful if the initial message belongs to that list. The generalization of that problem, which we call the $\varphi$-list-decoding problem, allows decoding lists of any size.  However, the decoding will be successful only with probability $\frac{\varphi(\ell)}{\ell}$ when the initial message belongs to that list, where $\ell$ is the size of that list. One can see that with a coverage function $\varphi(j) = \min\{ j,\ell\}$, we recover the $\ell$-list-decoding problem. When the channel is of the form $W(y|x) = \frac{1}{t}$ for $y \in T_x$ with $\abs{T_x}=t$ and $W(y|x) = 0$ elsewhere, the success probability of the $\varphi$-list-decoding problem for a code $S\subseteq \mathcal{X}$ can be written as $\frac{1}{kt}\sum_{y \in \mathcal{Y}}\varphi(\abs{S}_y)$, with $\abs{S}_y = \abs{\set{x \in S : y \in T_x}}$, which is a particular instance of the $\varphi$-\textsc{MaxCoverage} problem. Therefore, for that class of channels, a tight approximation ratio $\alpha_{\varphi}$ follows from Theorem~\ref{theo:main}.
 
 Another application of $\varphi$-\textsc{MaxCoverage} is in the context of multiwinner elections that entail selecting $k$ (out of $m$) candidates with the objective of maximizing the cumulative utility of $n$ voters; here, the utility of each voter $a \in [n]$ increases as more and more approved (by $a$) candidates get selected. One can reduce multiwinner elections to a coverage problem by considering subset $T_i \subseteq [n]$ as the set of voters that approve of candidate $i \in [m]$ and $\varphi(j)$ as the utility that an agent achieves from $j$ approved selections.\footnote{Indeed, for a subset of candidates $S \subseteq [m]$, the utility of a voter $a \in [n]$ is equal to $\varphi ( \abs{S}_a)$, with $\abs{S}_a = \abs{\set{i \in S : a \in T_i}}$.} Addressing multiwinner elections in this standard utilitarian model, Dudycz et al.~\cite{DMMS20} obtain tight approximation guarantees for some well-studied classes of utilities. Specifically, the result in~\cite{DMMS20} applies to the classic \emph{proportional approval voting rule}, which assigns a utility of $\sum_{i=1}^j \frac{1}{i}$ for $j$ approved selections. This voting rule corresponds to the coverage problem with $\varphi(j) = \sum_{i=1}^j \frac{1}{i}$, which we denote as the \textsc{Proportional Approval Voting} problem (\textsc{PAV} for short). Section~\ref{subsection:multiwinner-election} shows that Theorem~\ref{theo:main} holds for all the settings considered in~\cite{DMMS20} and, in fact, applies more generally. In particular, the voting version of $\ell$-\textsc{MultiCoverage} (studied in~\cite{SFL16}) can be addressed by Theorem~\ref{theo:main}, but not by the result in~\cite{DMMS20}. Such a separation also arises when one truncates the proportional approval voting rule to, say, $\ell$ candidates, i.e., upon setting $\varphi(j) = \sum_{i=1}^{\min \{ j, \ell\}} \frac{1}{i}$. Given that multiwinner elections model multiple real-world settings (e.g., committee selection~\cite{SFL16} and parliamentary proceedings~\cite{Brill2018}), instantiations of $\varphi$-\textsc{MaxCoverage} in such social-choice contexts substantiate the applicability of our algorithmic result.
 
@@ -93,21 +93,19 @@ We now describe the approximation algorithm for $\varphi$-\textsc{MaxCoverage} t
 
 As previously mentioned, $\varphi$ is defined on $\mathbb{R}_+$ by extending it in a piecewise linear fashion on non-integral points. As such, the constraint $c_a \leq \varphi(\abs{x}_a)$ is equivalent to $m$ linear constraints. In fact, we can define $\varphi_j$ to be the linear function $\varphi_j(t) = (\varphi(j) - \varphi(j-1)) t  - (j-1) \varphi(j) + j \varphi(j-1)$ for $j \in [m]$. Since $\varphi$ is concave, we have that for all $t \in [0, m]$, $\varphi(t) = \min_{j \in [m]} \varphi_j(t)$. As such, the constraint $c_a \leq \varphi(\abs{x}_a)$ is equivalent to $c_a \leq \varphi_j(\abs{x}_a)$ for all $j\in [m]$ and so the program from Definition~\ref{defi:relaxedProg} is a linear program. Overall there are $n+m$ variables and $(n+1)m + 1$ linear constraints, and by assumptions all the coefficients can be described using a number of bits that is polynomial in $n$ and $m$. Hence an optimal solution of this linear program can be found in polynomial time.
 
-Also observe that the program from Definition~\ref{defi:relaxedProg} is indeed a relaxation of the $\varphi$-\textsc{MaxCoverage} problem. To see this, given a set $S$ of size $k$, consider the characteristic vector $x \in \{0,1\}^m$ defined by $x_i = 1$ if and only if $i \in S$. Then for all $a \in [n]$, we can set $c_a = \varphi(\abs{x}_a) = \varphi(\abs{S}_a)$, and we get an objective value of $\sum_{a \in [n]}w_a\varphi(\abs{S}_a)$ which is exactly $C^{\varphi}(S)$. When solving the program from Definition~\ref{defi:relaxedProg}, we get an optimal $x^* \in [0,1]^m$ which is in general not integral. Next, we describe a method to round it to an integral vector $x^{\text{int}} \in \set{0,1}^m$.
+Observe that the program from Definition~\ref{defi:relaxedProg} is indeed a relaxation of the $\varphi$-\textsc{MaxCoverage} problem. To see this, given a set $S$ of size $k$, consider the characteristic vector $x \in \{0,1\}^m$ defined by $x_i = 1$ if and only if $i \in S$. Then for all $a \in [n]$, we can set $c_a = \varphi(\abs{x}_a) = \varphi(\abs{S}_a)$, and we get an objective value of $\sum_{a \in [n]}w_a\varphi(\abs{S}_a)$ which is exactly $C^{\varphi}(S)$. When solving the program from Definition~\ref{defi:relaxedProg}, we get an optimal $x^* \in [0,1]^m$ which is in general not integral. Next, we describe a method to round it to an integral vector $x^{\text{int}} \in \set{0,1}^m$.
 
 \paragraph{Rounding} 
 For a submodular function $f : \{0,1\}^m \to \mathbb{R}$ , one can use pipage rounding~\cite{AS04, Vondrak07, CCPV11} to transform, in polynomial time, any fractional solution $x \in [0,1]^m$ satisfying $\sum_{i=1}^m x_i = k$ into an integral vector $x^{\text{int}} \in \set{0,1}^m$ such that $\sum_{i=1}^m x^{\text{int}}_i = k$ and $F(x^{\text{int}}) \geq F(x)$, where $F$ corresponds to the multilinear extension of $f$, provided that $F(x)$ is computable in polynomial time for a given $x$; see e.g.,~\cite[Lemma 3.4]{Vondrak07}. The multilinear extension $F : [0, 1]^m \rightarrow \mathbb{R}$ of $f$ is defined by $F(x_1,\ldots,x_m): = \mathbb{E}[f(X_1,\ldots,X_m)]$, where $X_i$ are independent random variables with $X_i \sim \Ber(x_i)$, i.e., $X_i \in \set{0,1}$ with $\mathbb{P}(X_i = 1) = x_i$. Note that $F(x) = f(x)$ for an integral vector $x \in \{0,1\}^m$.
 
 We apply this strategy to $C^{\varphi}$, which is shown to be submodular in Proposition~\ref{prop:SubCurv}, and the solution $x^*$ of the LP relaxation from Definition~\ref{defi:relaxedProg}. Note that overall the algorithm is polynomial time, since here $F(x)$ is computable in polynomial time for a given $x$ (see Proposition~\ref{prop:Fpoly}). We now analyze the value returned by the algorithm. Using the property of pipage rounding, with the notation $X = (X_1,\ldots,X_m)$ and $\Ber(x) = (\Ber(x_1),\ldots,\Ber(x_m))$, we get
+\[ C^{\varphi}(x^{\text{int}}) = \mathbb{E}_{X \sim \Ber(x^{\text{int}})}[C^{\varphi}(X)] \geq \mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)] \ . \]
 
-\[
-C^{\varphi}(x^{\text{int}}) = \mathbb{E}_{X \sim \Ber(x^{\text{int}})}[C^{\varphi}(X)] \geq \mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)] \ .
-\]
 Then it suffices to relate $\mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]$ to the optimal value of the LP relaxation~\ref{defi:relaxedProg}, which can only be larger than the optimal value of the $\varphi$-\textsc{MaxCoverage} problem. 
 
 
 \begin{theorem}
-  Let $x,c$ be a feasible solution of the program from Definition~\ref{defi:relaxedProg} and $X \sim \Ber(x)$. Recalling the definition of $\alpha_{\varphi}$ and $\alpha_{\varphi}(j)$ from~\eqref{eq:def-alpha-varphi}, we have
+  Let $x,c$ be a feasible solution of the program from Definition~\ref{defi:relaxedProg} and let $X \sim \Ber(x)$. Recalling the definition of $\alpha_{\varphi}$ and $\alpha_{\varphi}(j)$ from~\eqref{eq:def-alpha-varphi}, we have
   \[\mathbb{E}_{X \sim \Ber(x)}[C^{\varphi}(X)] \geq \left(\min_{j \in [m]} \alpha_{\varphi}(j)\right) \sum_{a \in [n]} w_ac_a\ .\]
   In particular, this implies that the described polynomial time algorithm has an approximation ratio of $\alpha_{\varphi}$:
   \[C^{\varphi}(x^{\text{int}}) \geq \alpha_{\varphi} \sum_{a \in [n]} w_ac^*_a \geq \alpha_{\varphi} \max_{S \subseteq [m] : \abs{S} = k} C^{\varphi}(S)\ .\]
@@ -151,7 +149,7 @@ In order to prove this theorem, we need the following lemma:
 
 Instead of taking a cardinality constraint $k$ on the size of the subset $S$, we look now at general matroid constraints on $S$. Specifically, as input, instead of $k$, we take a matroid $\mathcal{M}$ defined on $[m]$ and given by a set of linear constraints describing its base polytope $B(\mathcal{M})$. The output is a set $S \in \mathcal{M}$ that maximizes $C^{\varphi}(S)$. Note that the cardinality constraint considered above is the special case where $\mathcal{M}$ is the uniform matroid of all subsets of size at most $k$ and the base polytope $B(\mathcal{M}) = \{ x \in [0,1]^m : \sum_{i=1}^m x_i = k\}$.
 
-We first note that in the order to establish Theorem~\ref{theo:AlgoCard}, the cardinality constraint $\sum_{i=1}^m x_i = k$ is not used. Thus, since the pipage rounding strategy applies to matroid constraints $\mathcal{M}$ (see~\cite[Lemma 3.4]{Vondrak07}), the strategy and the analysis of its efficiency generalize immediately when applied to the following linear program:
+We note that in the order to establish Theorem~\ref{theo:AlgoCard}, the cardinality constraint $\sum_{i=1}^m x_i = k$ is not used. Thus, since the pipage rounding strategy applies to matroid constraints $\mathcal{M}$ (see~\cite[Lemma 3.4]{Vondrak07}), the strategy and the analysis of its efficiency generalize immediately when applied to the following linear program:
 
 \begin{definition}[Relaxed program for matroid constraints]
   \begin{equation}
@@ -198,7 +196,7 @@ Our reduction is based on a problem called $h$-\textsc{AryLabelCover}, which is 
 
 \begin{proposition}[$\delta,h$-\textsc{AryGapLabelCover}]
 \label{prop:hardness-ary-lc}
-  For any fixed integer $h \geq 2$ and fixed $\delta > 0$, there exists an $R_0$ such that for any integer $R \geq R_0$, it is \textrm{NP}-hard for instances $\mathcal{G} = (V,E,[L],[R],\set{\pi_{e,v}}_{e \in E, v \in e})$ of $h$-\textsc{AryLabelCover} with right alphabet $[R]$ to distinguish between: 
+  For any fixed integer $h \geq 2$ and fixed $\delta > 0$, there exists an $R_0$ such that for any integer $R \geq R_0$, it is \textrm{NP}-hard for all instances ${\mathcal{G} = (V,E,[L],[R],\set{\pi_{e,v}}_{e \in E, v \in e})}$ of $h$-\textsc{AryLabelCover} with right alphabet $[R]$ to distinguish between: 
   \begin{itemize}
   \item[\textbf{YES:}] There exists a labeling $\sigma$ that \emph{strongly satisfies} all the edges.
   \item[\textbf{NO:}] No labeling \emph{weakly satisfies} more than $\delta$ fraction of the edges.
@@ -210,7 +208,7 @@ Our reduction is based on a problem called $h$-\textsc{AryLabelCover}, which is 
 \subsection{Partitioning System}
 
 The key ingredient to prove Theorem~\ref{theo:Hardness} is a constant size combinatorial object called partitioning system, generalizing the work of Feige~\cite{Feige98} and~\cite{BFGG20}.
-For any set $[n]$, $\mathcal{Q} \subseteq 2^{[n]}$, we overload the definition $C^{\varphi}(\mathcal{Q}) := \sum_{a \in [n]} \varphi(\abs{\mathcal{Q}}_a)$ with $\abs{\mathcal{Q}}_a:=\abs{\set{P \in \mathcal{Q} : a \in P}}$ and $C_a^{\varphi}(\mathcal{Q}) := \varphi(\abs{\mathcal{Q}}_a)$. Let us take $x_{\varphi} \in \text{argmin}_{x \in \mathbb{N}^*} \alpha_{\varphi}(x)$, thus $\alpha_{\varphi} = \alpha_{\varphi}(x_{\varphi})$.
+For any set $[n]$ and $\mathcal{Q} \subseteq 2^{[n]}$, we overload the definition $C^{\varphi}(\mathcal{Q}) := \sum_{a \in [n]} \varphi(\abs{\mathcal{Q}}_a)$ with the notations $\abs{\mathcal{Q}}_a:=\abs{\set{P \in \mathcal{Q} : a \in P}}$ and $C_a^{\varphi}(\mathcal{Q}) := \varphi(\abs{\mathcal{Q}}_a)$. Let us take $x_{\varphi} \in \text{argmin}_{x \in \mathbb{N}^*} \alpha_{\varphi}(x)$, thus $\alpha_{\varphi} = \alpha_{\varphi}(x_{\varphi})$.
 
 We say that $\mathcal{Q}$ is an \emph{$x$-cover} of $x \in \mathbb{N}$ if every element of $[n]$ is covered $x$ times, so $C^{\varphi}(\mathcal{Q}) = n\varphi(x)$.
 
@@ -242,7 +240,7 @@ The proof can be found in Appendix~\ref{app:Partitioning}.
   
 \subsection{The Reduction}
   \begin{proof}[Proof of Theorem~\ref{theo:Hardness}]
-    Let $\varepsilon > 0$. Without loss of generality, we can assume that $\varepsilon < 1$. We show that it is NP-hard to reach an approximation greater than $\alpha_{\varphi} + \varepsilon$ for the $\varphi$-\textsc{MaxCoverage} problem, via a reduction from $\delta,h$-\textsc{AryGapLabelCover}.
+    Let $\varepsilon > 0$. Without loss of generality, we can assume that $\varepsilon < 1$. We show that it is NP-hard to reach an approximation ratio greater than $\alpha_{\varphi} + \varepsilon$ for the $\varphi$-\textsc{MaxCoverage} problem, via a reduction from $\delta,h$-\textsc{AryGapLabelCover}.
   \begin{itemize}
     \item $\eta = \frac{\varphi(x_{\varphi})}{4x_{\varphi}} \varepsilon$, so $0 < \eta \leq \varepsilon < 1$,
     \item $h \geq x_{\varphi}$ such that $\abs{\psi^{\varphi}_{h,h} - \alpha_{\varphi}\varphi(x_{\varphi})} \leq \eta$ (see~\eqref{eq:def-phi} for the definition of $\psi^{\varphi}$); such a choice exists thanks to Proposition~\ref{prop:UnboundBinPoi},
@@ -258,25 +256,25 @@ Then, given an instance  $\mathcal{G} = (V,E,[L],[R], \Sigma, \set{\pi_{e,v}}_{e
     \item $n$ a large enough integer to have the existence of $([n],h,R,\varphi,\eta)$-partitioning systems using Proposition~\ref{prop:Partitioning}. Note that the size of these partitioning systems is independent of the size of the instance $\mathcal{G}$, and that one can find one of those in constant time, with relation to the size of the instance $\mathcal{G}$, thanks to Proposition~\ref{prop:Partitioning}.
     \item $\Gamma = [n] \times E$,
     \item $k =\abs{V}$,
-    \item Consider a  $([n],h,R,\varphi,\eta)$-partitioning system, and call $\mathcal{P} =\set{\mathcal{P}_1,\ldots,\mathcal{P}_R}$ the corresponding set of collections. Define sets $T_{\beta}^{e,v_j} = P_{\pi_{e,v_j}(\beta),j} \times \set{e}$ for $e = (v_1,\ldots,v_h) \in E, j \in [h], \beta \in [L]$. Then, choose as cover sets $F^v_{\beta} := \bigsqcup_{e \in E:v \in e} T^{e,v}_{\beta}$ and take $\mathcal{F} := \set{F^v_{\beta}, v \in V, \beta \in [L]}$.
+    \item Consider a  $([n],h,R,\varphi,\eta)$-partitioning system, and call $\mathcal{P} =\set{\mathcal{P}_1,\ldots,\mathcal{P}_R}$ the corresponding set of collections. Define sets $T_{\beta}^{e,v_j} := P_{\pi_{e,v_j}(\beta),j} \times \set{e}$ where ${e = (v_1,\ldots,v_h)} \in E, j \in [h], \beta \in [L]$. Then, take as cover sets $F^v_{\beta} := \bigsqcup_{e \in E:v \in e} T^{e,v}_{\beta}$ and $\mathcal{F} := \set{F^v_{\beta}, v \in V, \beta \in [L]}$.
   \end{itemize}
 
 We will now prove that if we are in a YES instance, we have that there exists $\mathcal{T}$ of size $k$ such that $C^{\varphi}(\mathcal{T}) \geq \varphi(x_{\varphi})\abs{\Gamma}$ (completeness). Moreover, if we are in a NO instance, then we have that for all $\mathcal{T}$ of size $k = \abs{V}$, $C^{\varphi}(\mathcal{T}) \leq (\alpha_{\varphi} + \varepsilon)\varphi(x_{\varphi})\abs{\Gamma}$ (soundness). Establishing these two properties would conclude the proof. 
 In fact, an algorithm for $\varphi$-\textsc{MaxCoverage} achieving a factor strictly greater than $\alpha_{\varphi} + \varepsilon$ would allow us to decide whether we have YES or a NO instance of the \textrm{NP}-hard problem $\delta,h$-\textsc{AryGapLabelCover}.
 
-In order to achieve this, let us define $C^{\varphi,e} := \sum_{a \in [n] \times \set{e}} C^{\varphi}_a$. In particular, $C^{\varphi} = \sum_{a \in  \Gamma} C^{\varphi}_a = \sum_{e \in E}C^{\varphi,e}$. For $\mathcal{T} \subseteq \mathcal{F}$, we define the relevant part of $\mathcal{T}$ on $e$ by:
+In order to achieve this, let us define $C^{\varphi,e} := \sum_{a \in [n] \times \set{e}} C^{\varphi}_a$. In particular, we have $C^{\varphi} = \sum_{a \in  \Gamma} C^{\varphi}_a = \sum_{e \in E}C^{\varphi,e}$. For $\mathcal{T} \subseteq \mathcal{F}$, we define the relevant part of $\mathcal{T}$ on $e$ by:
 \[\mathcal{T}_e := \set{T_{\beta}^{e,v} : v \in e, \beta \in [L], F^v_{\beta} \in \mathcal{T}} = \set{F^v_{\beta} \cap ([n] \times \set{e}), F^v_{\beta} \in \mathcal{T}}\ .\]
 Note that $C^{\varphi,e}(\mathcal{T}) = C^{\varphi,e}(\mathcal{T}_e)$, and in particular $C^{\varphi}(\mathcal{T}) = \sum_{e \in E} C^{\varphi,e}(\mathcal{T}_e)$. 
 
 \subsubsection{Completeness}
-Suppose the given $h$-\textsc{AryLabelCover} instance $\mathcal{G}$ is a YES instance. Then, there exists a labeling $\sigma : V \mapsto [L]$ which strongly satisfies all edges. Consider the collection of $\abs{V}$ subsets $\mathcal{T} := \set{F_{\sigma(v)}^v : v \in V}$. Fix $e = (v_1,\ldots,v_h) \in E$. Since $e$ is strongly satisfied by $\sigma$, there exists $r \in [R]$ such that $\pi_{e,v_i}(\sigma(v_i)) = r$ for all $i \in [h]$. Thus, $\mathcal{T}_e = \set{T_{\sigma(v_i)}^{e,v_i}}_{i \in [h]} = \set{P_{r,i} \times \set{e}}_{i \in [h]}$ is an $x_{\varphi}$-cover of $[n] \times \set{e}$, and so $C^{\varphi,e}(\mathcal{T}_e) = n\varphi(x_{\varphi})$. Thus $C^{\varphi}(\mathcal{T}) = \sum_{e \in E}C^{\varphi,e}(\mathcal{T}_e) = \abs{E}\varphi(x_{\varphi})n = \varphi(x_{\varphi})\abs{\Gamma}$.
+Suppose the given $h$-\textsc{AryLabelCover} instance $\mathcal{G}$ is a YES instance. Then, there exists a labeling $\sigma : V \mapsto [L]$ which strongly satisfies all edges. Consider the collection of $\abs{V}$ subsets $\mathcal{T} := \set{F_{\sigma(v)}^v : v \in V}$. Fix $e = (v_1,\ldots,v_h) \in E$. Since $e$ is strongly satisfied by $\sigma$, there exists $r \in [R]$ such that $\pi_{e,v_i}(\sigma(v_i)) = r$ for all $i \in [h]$. Therefore, we get that $\mathcal{T}_e = \set{T_{\sigma(v_i)}^{e,v_i}}_{i \in [h]} = \set{P_{r,i} \times \set{e}}_{i \in [h]}$ is an $x_{\varphi}$-cover of $[n] \times \set{e}$, and so $C^{\varphi,e}(\mathcal{T}_e) = n\varphi(x_{\varphi})$. Thus $C^{\varphi}(\mathcal{T}) = \sum_{e \in E}C^{\varphi,e}(\mathcal{T}_e) = \abs{E}\varphi(x_{\varphi})n = \varphi(x_{\varphi})\abs{\Gamma}$.
 
 \subsubsection{Soundness}
 Suppose the given $h$-\textsc{AryLabelCover} instance $\mathcal{G}$ is a NO instance. Let us prove the contrapositive of the soundness: we suppose that there exists $\mathcal{T}$ of size $k = \abs{V}$ such that  $C^{\varphi}(\mathcal{T}) > (\alpha_{\varphi} + \varepsilon)\varphi(x_{\varphi})\abs{\Gamma}$. Let us show that there exists a labeling $\sigma$ that weakly satisfies a strictly larger fraction of the edges than $\delta$.
 
 For every vertex $v \in V$, we define $L(v) := \set{\beta \in [L] : F_{\beta}^v \in \mathcal{T}}$ to be the candidate set of labels that can be associated with the vertex $v$. We extend this definition to hyperedges $e = (v_1,\ldots,v_h)$ where we define $L(e) := \bigcup_{i \in [h]} L(v_i)$ to be the \emph{multiset} of all labels associated with the edge. Note that $\abs{\mathcal{T}_e}=\abs{L(e)}$.
 
-We say that $e = (v_1,\ldots,v_h) \in E$ is \emph{consistent} if and only if $\exists x \not= y \in [h], \pi_{e,v_x}(L(v_x)) \cap \pi_{e,v_y}(L(v_y)) \not= \emptyset$. We then decompose $E$ in three parts:
+We say that $e = (v_1,\ldots,v_h) \in E$ is \emph{consistent} if and only if there exists $x \not= y \in [h]$ such that $\pi_{e,v_x}(L(v_x)) \cap \pi_{e,v_y}(L(v_y)) \not= \emptyset$. We then decompose $E$ in three parts:
 \begin{itemize}
 \item $B$ is the set of edges $e \in E$ with $\abs{L(e)} \geq \frac{h}{\xi}$.
 \item $N$ is the set of consistent edges $e \in E$ with $\abs{L(e)} < \frac{h}{\xi}$.
@@ -312,7 +310,8 @@ Next, we bound the contribution of $B$:
     \end{aligned}
   \end{equation}
 
-We have seen that $\sum_{e \in B} \abs{L(e)} \leq \abs{E} h$, but $\sum_{e \in B} \abs{L(e)} \geq \abs{B} \frac{h}{\xi}$ by definition of $B$, so we have that $\frac{\abs{B}}{\abs{E}} \leq \xi$. Thus $\frac{\abs{E}x_{\varphi}}{\abs{B}} \geq \frac{x_{\varphi}}{\xi} = \theta$. By definition of $\theta$, we get that $\sum_{e \in B} C^{\varphi,e}(\mathcal{T}_e) \leq \eta x_{\varphi} \abs{\Gamma} = \frac{\varepsilon}{4} \varphi(x_{\varphi})\abs{\Gamma}$.
+  We have seen that $\sum_{e \in B} \abs{L(e)} \leq \abs{E} h$, but $\sum_{e \in B} \abs{L(e)} \geq \abs{B} \frac{h}{\xi}$ by definition of $B$, so we have that $\frac{\abs{B}}{\abs{E}} \leq \xi$. Thus $\frac{\abs{E}x_{\varphi}}{\abs{B}} \geq \frac{x_{\varphi}}{\xi} = \theta$. By definition of $\theta$, we get that:
+  \[ \sum_{e \in B} C^{\varphi,e}(\mathcal{T}_e) \leq \eta x_{\varphi} \abs{\Gamma} = \frac{\varepsilon}{4} \varphi(x_{\varphi})\abs{\Gamma} \ . \]
 \end{proof}
 
 In order to bound the contribution of $I$, we will prove a property on inconsistent edges:
@@ -336,9 +335,13 @@ Now, we can bound the contribution of $I$:
 \begin{proof}
 Thanks to Proposition~\ref{prop:inconsistent}, we have:
   \[ \sum_{e \in I} C^{\varphi,e}(\mathcal{T}_e) \leq \sum_{e \in I} (\psi^{\varphi}_{\abs{L(e)},h} +\eta)n \leq \sum_{e \in E} (\psi^{\varphi}_{\abs{L(e)},h} +\eta)n \ ,\]
-  since $I \subseteq E$ and $\psi^{\varphi}_{\abs{L(e)},h} \geq 0$. But $\sum_{e \in E} \abs{L(e)} = \abs{E}h$ by Lemma~\ref{lem:labelBound} and $x \mapsto \psi^{\varphi}_{x,h}$ is concave thanks to Proposition~\ref{prop:BinCon}, so we can use Jensen's inequality to get $\sum_{e \in E} \psi^{\varphi}_{\abs{L(e)},h} \leq \abs{E} \psi^{\varphi}_{\frac{\sum_{e \in E} \abs{L(e)}}{\abs{E}},h} = \abs{E}\psi^{\varphi}_{h,h}$ and thus:
+  since $I \subseteq E$ and $\psi^{\varphi}_{\abs{L(e)},h} \geq 0$. But $\sum_{e \in E} \abs{L(e)} = \abs{E}h$ by Lemma~\ref{lem:labelBound} and $x \mapsto \psi^{\varphi}_{x,h}$ is concave thanks to Proposition~\ref{prop:BinCon}, so we can use Jensen's inequality to get:
+  \[ \sum_{e \in E} \psi^{\varphi}_{\abs{L(e)},h} \leq \abs{E} \psi^{\varphi}_{\frac{\sum_{e \in E} \abs{L(e)}}{\abs{E}},h} = \abs{E}\psi^{\varphi}_{h,h} \ ,\]
+  and thus:
   \[  \sum_{e \in I} C^{\varphi,e}(\mathcal{T}_e) \leq (\psi^{\varphi}_{h,h} +\eta)n\abs{E} \leq (\alpha_{\varphi}\varphi(x_{\varphi}) + 2\eta)\abs{\Gamma} \ ,\]
-  by definition of $h$. This implies that the total contribution of inconsistent edges $I$ is at most $\sum_{e \in I} C^{\varphi,e}(\mathcal{T}_e) \leq (\alpha_{\varphi}\varphi(x_{\varphi}) + 2\eta)\abs{\Gamma} \leq (\alpha_{\varphi}+ \frac{\varepsilon}{2})\varphi(x_{\varphi})\abs{\Gamma}$ by definition of $\eta$.
+  by definition of $h$. This implies that the total contribution of inconsistent edges $I$ is at most:
+  \[ \sum_{e \in I} C^{\varphi,e}(\mathcal{T}_e) \leq (\alpha_{\varphi}\varphi(x_{\varphi}) + 2\eta)\abs{\Gamma} \leq (\alpha_{\varphi}+ \frac{\varepsilon}{2})\varphi(x_{\varphi})\abs{\Gamma} \ ,\]
+  by definition of $\eta$.
 \end{proof}
 
 \begin{lemma}
@@ -348,23 +351,21 @@ Thanks to Proposition~\ref{prop:inconsistent}, we have:
 
 \begin{proof}
 Since we have supposed that $\sum_{e \in E} C^{\varphi,e}(\mathcal{T}_e) = C^{\varphi}(\mathcal{T}) > (\alpha_{\varphi} + \varepsilon)\varphi(x_{\varphi})\abs{\Gamma}$, and with the help of Lemmas~\ref{lem:contribB} and~\ref{lem:contribI}, we have that the contribution of $N$ is:
-
 \[\sum_{e \in N}  C^{\varphi,e}(\mathcal{T}_e) > \frac{\varepsilon}{4}\varphi(x_{\varphi})\abs{\Gamma}\ .\]
 
-However, we have that for $e \in N$ that $C^{\varphi,e}(\mathcal{T}_e) \leq  n\varphi\Big(\abs{\mathcal{T}_e}\frac{x_{\varphi}}{h}\Big) = n\varphi\Big(\abs{L(e)}\frac{x_{\varphi}}{h}\Big) \leq n \varphi\Big(\frac{x_{\varphi}}{\xi}\Big) \leq \frac{nx_{\varphi}}{\xi}$ thanks to the remark on Definition~\ref{defi:PartSystem} and the bound $\abs{L(e)} < \frac{h}{\xi}$. This implies that:
+However, we have that for $e \in N$ that:
+\[ C^{\varphi,e}(\mathcal{T}_e) \leq  n\varphi\Big(\abs{\mathcal{T}_e}\frac{x_{\varphi}}{h}\Big) = n\varphi\Big(\abs{L(e)}\frac{x_{\varphi}}{h}\Big) \leq n \varphi\Big(\frac{x_{\varphi}}{\xi}\Big) \leq \frac{nx_{\varphi}}{\xi} \ ,\]
+thanks to the remark on Definition~\ref{defi:PartSystem} and the bound $\abs{L(e)} < \frac{h}{\xi}$. This implies that:
 \[\frac{\abs{N}}{\abs{E}} \geq \frac{\xi}{x_{\varphi}}\frac{\varepsilon \varphi(x_{\varphi})}{4} = \xi \eta \ .\]
 \end{proof}
 
 Finally, we construct a randomized labeling $\sigma : V \mapsto [L]$ as follows: for $v \in V$, if $L(v) \not= \emptyset$, set $\sigma(v)$ uniformly from $L(v)$, otherwise set it arbitrarily. We claim that in expectation, this labeling must weakly satisfy $\delta$ fraction of the hyperedges.
 
-To see this, fix any $e = (v_1,\ldots,v_h) \in N$. Thus $\exists x \not= y \in [h], \pi_{e,v_x}(L(v_x)) \cap \pi_{e,v_y}(L(v_y)) \not= \emptyset$. Furthermore $\abs{L(v_x)},\abs{L(v_y)} \leq \frac{h}{\xi}$. Thus, we have that $\pi_{e,v_x}(L(v_x)) = \pi_{e,v_y}(L(v_y))$ with probability at least $\frac{1}{\abs{L(v_x)}\abs{L(v_y)}} \geq \Big(\frac{\xi}{h}\Big)^2$.
-
-Therefore:
+To see this, fix any $e = (v_1,\ldots,v_h) \in N$. Thus, ther exists $\exists x \not= y \in [h]$ such that $\pi_{e,v_x}(L(v_x)) \cap \pi_{e,v_y}(L(v_y)) \not= \emptyset$. Furthermore $\abs{L(v_x)},\abs{L(v_y)} \leq \frac{h}{\xi}$. Thus, we have that $\pi_{e,v_x}(L(v_x)) = \pi_{e,v_y}(L(v_y))$ with probability at least $\frac{1}{\abs{L(v_x)}\abs{L(v_y)}} \geq \Big(\frac{\xi}{h}\Big)^2$. Therefore:
 \begin{equation}
   \begin{aligned}
-    &&& \mathbb{E}_{\sigma}\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e]\\
-    &\geq&& \xi \eta \mathbb{E}_{\sigma}\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e | e \in N] \quad \text{by Lemma~\ref{lem:nice}}\\
-    &>&& \frac{\eta}{2} \frac{\xi^3}{h^2} = \delta \ .
+    \mathbb{E}_{\sigma}\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e] &\geq \xi \eta \mathbb{E}_{\sigma}\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e | e \in N] \quad \text{by Lemma~\ref{lem:nice}}\\
+    &> \frac{\eta}{2} \frac{\xi^3}{h^2} = \delta \ .
   \end{aligned}
 \end{equation}
 
@@ -382,7 +383,7 @@ In particular there exists some labeling $\sigma$ such that $\mathbb{E}_{e \sim 
 
   Such a statement can be made in terms of the $(\delta,h)$-\textsc{AryGapLabelCover} problem, since it can be shown to be equivalent to $\delta$-Gap-Label-Cover$(t,R)$ (see Appendix~\ref{app:NPhardnessGap} for more details).
 
-  Furthermore, in the previous reduction, the constructed instance $(\Gamma,k,\mathcal{F})$ sizes are $\abs{\Gamma} = n\abs{E}$ (with $n$ a constant independent of the size of the instance), $k=\abs{V}$, and $\abs{\mathcal{F}} = k \cdot L$. Therefore, plugin Theorem~\ref{theo:GapETH} in the previous reduction leads to the following hardness result:
+  Furthermore, in the previous reduction, the constructed instance $(\Gamma,k,\mathcal{F})$ sizes satisfy $\abs{\Gamma} = n\abs{E}$ (with $n$ a constant independent of the size of the instance), $k=\abs{V}$, and $\abs{\mathcal{F}} = k \cdot L$. Therefore, plugin Theorem~\ref{theo:GapETH} in the previous reduction leads to the following hardness result:
 
   \begin{theorem}
     \label{theo:GapHardness}
@@ -397,12 +398,11 @@ This section shows that instantiations of $\varphi$-\textsc{MaxCoverage} encapsu
 \subsection{Generalized List-Decoding}
 \label{subsection:generalized-list-decoding}
 
-In the usual list-decoding problem, we are given a noisy channel $W(y|x)$ and a list size $\ell$, and the goal is to send a message chosen uniformly in $[k]$ through this channel. In order to do so, the sender encodes the input message in $\mathcal{X}$, and the receiver decodes a list of size $\ell$ of possible messages in $[k]$ from the output of the channel in $\mathcal{Y}$. The goal is to maximize the probability of successfully decoding the message, which happens when the initial message belongs to the decoded list. We consider the generalization of the list-decoding problem that allows decoding lists of any size, with an associated cost function $\varphi$, which we call the $\varphi$-list-decoding problem. Now, the decoding will be successful only with probability $\frac{\varphi(\ell)}{\ell}$ when the initial message belongs to a decoding list of size $\ell$. 
+In the usual $\ell$-list-decoding problem, we are given a noisy channel $W(y|x)$, and the goal is to send a message chosen uniformly in $[k]$ through this channel. In order to do so, the sender encodes the input message in $\mathcal{X}$, and the receiver decodes a list of size $\ell$ of possible messages in $[k]$ from the output of the channel in $\mathcal{Y}$. The goal is to maximize the probability of successfully decoding the message, which happens when the initial message belongs to the decoded list. We consider the generalization of the $\ell$-list-decoding problem that allows decoding lists of any size, with an associated cost function $\varphi$, which we call the $\varphi$-list-decoding problem. Now, the decoding will be successful only with probability $\frac{\varphi(\ell)}{\ell}$ when the initial message belongs to a decoding list of size $\ell$. 
 
-Let us show that with a coverage function $\varphi(j) = \min\{ j,\ell\}$, we recover the list-decoding problem. Indeed, let us consider an optimal solution $S \subseteq \mathcal{X},\set{L_y}_{y \in \mathcal{Y}}$ of the $\varphi$-list-decoding, with $L_y$ the list of possible messages when the output of the channel is $y$. If all lists $L_y$ are of size $\ell$, then as $\frac{\varphi(\ell)}{\ell} = 1$, we recover a solution of the list-decoding problem with the same objective value. This shows in particular that the $\varphi$-list-decoding problem has an objective optimal value at least as large as the usual list-decoding problem. Let us now consider on an arbitrary set $\set{L_y}_{y \in \mathcal{Y}}$, and let us look at a particular list $L_y$ with $L_y \not= \ell$. Let us show that we can efficiently build another list of size $\ell$ with an objective value at least as good as with $L_y$. If $\abs{L_y} \leq \ell$, then $\frac{\varphi(\abs{L_y})}{\abs{L_y}} = 1$. Therefore, adding elements in $L_y$ can only increase the success probability, so we can transform all the lists $L_y$ with $\abs{L_y} < \ell$ into lists of size $\ell$ without decreasing the value of that solution. If $\abs{L_y} > \ell$, then $\frac{\varphi(\abs{L_y})}{\abs{L_y}} = \frac{\ell}{\abs{L_y}}$. Now, let us sort the elements $x \in L_y$ in a increasing order according to $\mathbbm{1}_{x \in S}W(y|x)$. Let us remove the first $\abs{L_y} - \ell$ elements of that list, and call $L_y'$ the resulting list. We claim that replacing $L_y$ by this reduced size list $L_y'$ will not decrease the objective value. Indeed, we have kept the $\ell$ elements that contribute the most to the success probability. Therefore, the remaining success probability of having the input message in $L_y'$ is larger than or equal to $\frac{\ell}{\abs{L_y}}\sum_{y \in L_y}\mathbbm{1}_{x \in S}W(y|x) = \frac{\varphi(\abs{L_y})}{\abs{L_y}}\sum_{y \in L_y}\mathbbm{1}_{x \in S}W(y|x)$.  As $\frac{\varphi(|L_y'|)}{|L_y'|} = 1$, replacing $L_y$ by $L_y'$ does not decrease the objective value. This concludes the equivalence of the list-decoding problem with the $\varphi$-list-decoding with $\varphi(j) = \min\{ j,\ell\}$.
+Let us show that with a coverage function $\varphi(j) = \min\{ j,\ell\}$, we recover the $\ell$-list-decoding problem. Indeed, let us consider an optimal solution $S \subseteq \mathcal{X},\set{L_y}_{y \in \mathcal{Y}}$ of the $\varphi$-list-decoding, with $L_y$ the list of possible messages when the output of the channel is $y$. If all lists $L_y$ are of size $\ell$, then as $\frac{\varphi(\ell)}{\ell} = 1$, we recover a solution of the $\ell$-list-decoding problem with the same objective value. This shows in particular that the $\varphi$-list-decoding problem has an objective optimal value at least as large as the usual $\ell$-list-decoding problem. Let us now consider on an arbitrary set $\set{L_y}_{y \in \mathcal{Y}}$, and let us look at a particular list $L_y$ with $L_y \not= \ell$. Let us show that we can efficiently build another list of size $\ell$ with an objective value at least as good as with $L_y$. If $\abs{L_y} \leq \ell$, then $\frac{\varphi(\abs{L_y})}{\abs{L_y}} = 1$. Therefore, adding elements in $L_y$ can only increase the success probability, so we can transform all the lists $L_y$ with $\abs{L_y} < \ell$ into lists of size $\ell$ without decreasing the value of that solution. If $\abs{L_y} > \ell$, then $\frac{\varphi(\abs{L_y})}{\abs{L_y}} = \frac{\ell}{\abs{L_y}}$. Now, let us sort the elements $x \in L_y$ in a nondecreasing order according to $\mathbbm{1}_{x \in S}W(y|x)$. Let us remove the first $\abs{L_y} - \ell$ elements of that list, and call $L_y'$ the resulting list. We claim that replacing $L_y$ by this reduced size list $L_y'$ will not decrease the objective value. Indeed, we have kept the $\ell$ elements that contribute the most to the success probability. Therefore, the remaining success probability of having the input message in $L_y'$ is larger than or equal to $\frac{\ell}{\abs{L_y}}\sum_{y \in L_y}\mathbbm{1}_{x \in S}W(y|x) = \frac{\varphi(\abs{L_y})}{\abs{L_y}}\sum_{y \in L_y}\mathbbm{1}_{x \in S}W(y|x)$.  As $\frac{\varphi(|L_y'|)}{|L_y'|} = 1$, replacing $L_y$ by $L_y'$ does not decrease the objective value. This concludes the equivalence of the $\ell$-list-decoding problem with the $\varphi$-list-decoding with $\varphi(j) = \min\{ j,\ell\}$.
 
 When the channel is of the form $W(y|x) = \frac{1}{t}$ for $y \in T_x$ with $\abs{T_x}=t$ and $W(y|x) = 0$ elsewhere, the success probability of the $\varphi$-list-decoding problem for a code $S\subseteq \mathcal{X}$ can be written as $\frac{1}{kt}\sum_{y \in \mathcal{Y}}\varphi(\abs{S}_y)$, with $\abs{S}_y = \abs{\set{x \in S : y \in T_x}}$, which is a particular instance of the $\varphi$-\textsc{MaxCoverage} problem. Indeed, for a fixed code $S$, the best decoding strategy $\set{L_y}_{y \in \mathcal{Y}}$ leads to the following objective value:
-
 \begin{equation}
   \begin{aligned}
     &\max_{\set{L_y}_{y \in \mathcal{Y}}}\frac{1}{k}\sum_{x \in S}\sum_{y \in \mathcal{Y}}\frac{\varphi(\abs{L_y})}{\abs{L_y}}\mathbbm{1}_{x \in L_y}W(y|x) = \max_{\set{L_y}_{y \in \mathcal{Y}}}\frac{1}{k}\sum_{y \in \mathcal{Y}}\frac{\varphi(\abs{L_y})}{\abs{L_y}}\sum_{x \in S}\mathbbm{1}_{x \in L_y}W(y|x)\\
@@ -410,7 +410,7 @@ When the channel is of the form $W(y|x) = \frac{1}{t}$ for $y \in T_x$ with $\ab
     \end{aligned}
 \end{equation}
 
-We will show that $\max_{L_y}\frac{\varphi(\abs{L_y})}{\abs{L_y}}\abs{S_y \cap L_y} = \varphi(\abs{S_y})$, which will prove the claimed rewriting of the $\varphi$-list-decoding for those particular channels. As $\varphi(0)=0$ and $\varphi$ is concave, we have for all $0 \x \leq y$:
+We will show that $\max_{L_y}\frac{\varphi(\abs{L_y})}{\abs{L_y}}\abs{S_y \cap L_y} = \varphi(\abs{S_y})$, which will prove the claimed rewriting of the $\varphi$-list-decoding for those particular channels. As $\varphi(0)=0$ and $\varphi$ is concave, we have for all $y \geq x \geq 0$:
 \[ \frac{\varphi(y) - \varphi(0)}{y-0} \leq \frac{\varphi(x) - \varphi(0)}{x-0}  \ , \]
 i.e. $\frac{x}{y}\varphi(y) \leq \varphi(x)$. Therfore, we have that:
 \[ \frac{\varphi(\abs{L_y})}{\abs{L_y}}\abs{S_y \cap L_y} \leq \varphi(\abs{S_y \cap L_y}) \leq \varphi(\abs{S_y}) \ , \]
@@ -429,7 +429,7 @@ Dudycz et al.~\cite{DMMS20} show that if the weights satisfy $w_1 \geq w_2 \geq 
 \label{subsection:welfare-maximization}
 A significant body of prior work in algorithmic game theory has addressed game-theoretic aspects of maximizing welfare among multiple (strategic) agents; see, e.g.,~\cite{PM19}. Complementing such results, this section shows that the optimization problem underlying multiple welfare-maximization games can be expressed in terms of $\varphi$-\textsc{MaxCoverage}. 
 
-Specifically, consider a setting with $n$ resources, $k$ agents, and a (counting) function $\varphi: \mathbb{N} \mapsto \mathbb{R}_+$. Every agent $i$ is endowed with a collection of resource subsets $\mathcal{A}_i = \set{T^i_1, \ldots, T^i_{m_i}}  \subseteq 2^{[n]}$ (i.e., each $T^i_j \subseteq [n]$). The objective is to select a subset $A_i \in \mathcal{A}_i$, for all $i \in [k]$, so as to maximize $W^{\varphi}(A_1, A_2, \ldots, A_k)  \coloneqq \sum_{a \in [n]} w_a \ \varphi(\abs{A}_a)$. Here, $w_a \in \mathbb{R}_+$ is a weight associated with $a \in [n]$ and $\abs{A}_a \coloneqq  \abs{\set{i \in [k] : a \in A_i}}$. We will refer to this problem as the $\varphi$-\textsc{Resource Allocation} problem.
+Specifically, consider a setting with $n$ resources, $k$ agents, and a function $\varphi: \mathbb{N} \mapsto \mathbb{R}_+$. Every agent $i$ is endowed with a collection of resource subsets $\mathcal{A}_i = \set{T^i_1, \ldots, T^i_{m_i}}  \subseteq 2^{[n]}$ (i.e., each $T^i_j \subseteq [n]$). The objective is to select a subset $A_i \in \mathcal{A}_i$, for all $i \in [k]$, so as to maximize $W^{\varphi}(A_1, A_2, \ldots, A_k)  \coloneqq \sum_{a \in [n]} w_a \ \varphi(\abs{A}_a)$. Here, $w_a \in \mathbb{R}_+$ is a weight associated with $a \in [n]$ and $\abs{A}_a \coloneqq  \abs{\set{i \in [k] : a \in A_i}}$. We will refer to this problem as the $\varphi$-\textsc{Resource Allocation} problem.
 
 While $\varphi$-\textsc{Resource Allocation} does not directly reduce to $\varphi$-\textsc{MaxCoverage}, the next theorem shows that it corresponds to maximizing $\varphi$-coverage functions subject to a matroid constraint. Hence, invoking our result from Section~\ref{sec:matroid}, we obtain a tight $\alpha_\varphi$-approximation for $\varphi$-\textsc{Resource Allocation} (see Appendix~\ref{app:HardnessMA} for the proof):
 
@@ -640,7 +640,7 @@ For any $x \geq 1$, consider parameter $\lambda \in [0,1]$ such that $x = \lambd
 Therefore, $\alpha_{\varphi}(x) = \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x)} \geq \min\{\alpha_{\varphi}(\lfloor x \rfloor), \alpha_{\varphi}(\lceil x \rceil)\}$.
 
 
-Next we will show that $\alpha_{\varphi}(x)$ is non-increasing from $0$ to $1$, which implies that for $x \in [0,1)$, we have $\alpha_{\varphi}(x) \geq  \min\{\alpha_{\varphi}(\lfloor x \rfloor), \alpha_{\varphi}(\lceil x \rceil)\}$.
+Next we will show that $\alpha_{\varphi}(x)$ is nonincreasing from $0$ to $1$, which implies that for $x \in [0,1)$, we have $\alpha_{\varphi}(x) \geq  \min\{\alpha_{\varphi}(\lfloor x \rfloor), \alpha_{\varphi}(\lceil x \rceil)\}$.
 Recall that $\varphi$, by definition, is linear between integers. Hence, the fact that $\varphi(0) = 0$ and $\varphi(1) = 1$, gives us $\varphi(x) = x$ for all $x \in [0,1]$. Therefore, 
   \[\alpha_{\varphi}(x) = \frac{\mathbb{E}[\varphi(\Poi(x))]}{x} = e^{-x}\sum_{k=1}^{+\infty}\frac{\varphi(k)}{k}\frac{x^{k-1}}{(k-1)!} = e^{-x}\sum_{k=0}^{+\infty}\frac{\varphi(k+1)}{k+1}\frac{x^k}{k!} \ . \]
   In particular, $\alpha_{\varphi}(x)$ is well-defined at $0$ and $\alpha_{\varphi}(0) = e^{-0}\sum_{k=0}^{+\infty}\frac{\varphi(k+1)}{k+1}\frac{0^k}{k!} = 1$. Now, consider the derivative:
@@ -651,7 +651,7 @@ Recall that $\varphi$, by definition, is linear between integers. Hence, the fac
     \end{aligned}
   \end{equation}
 
-Note that $\frac{\varphi(k+2)}{k+2} - \frac{\varphi(k+1)}{k+1} = \frac{\varphi(k+2) - \varphi(0)}{(k+2)-0} - \frac{\varphi(k+1) - \varphi(0)}{(k+1)-0}  \leq 0$; the last inequality follows from the concavity of $\varphi$. Hence, $\alpha_{\varphi}'(x) \leq 0$. That is, $\alpha_{\varphi}(x)$ is non-increasing from $0$ to $1$.
+Note that $\frac{\varphi(k+2)}{k+2} - \frac{\varphi(k+1)}{k+1} = \frac{\varphi(k+2) - \varphi(0)}{(k+2)-0} - \frac{\varphi(k+1) - \varphi(0)}{(k+1)-0}  \leq 0$; the last inequality follows from the concavity of $\varphi$. Hence, $\alpha_{\varphi}'(x) \leq 0$. That is, $\alpha_{\varphi}(x)$ is nonincreasing from $0$ to $1$.
 \end{proof}
 
 \begin{proposition}
@@ -669,9 +669,8 @@ Write $X \sim \Poi(x)$ and note that $\mathbb{P}(X \leq x(1-\delta(x))) \leq \ex
     \end{aligned}
   \end{equation}
 
-Next, we will show that $\frac{\varphi(x(1-\delta(x)))}{\varphi(x)} \geq 1-\frac{\delta(x)+\frac{1}{x}}{1-\delta(x)}$. Towards this end, we will first bound $\varphi(x+y)-\varphi(x)$ in terms of $w^x_k = \varphi(x+k)-\varphi(x+k-1)$, which constitutes a non-increasing sequence (since $\varphi$ is concave):
-
-    \[ \varphi(x+y) - \varphi(x) \leq \varphi(x+\lfloor y \rfloor + 1)-\varphi(x+\lfloor y \rfloor) + \sum_{k=1}^{\lfloor y \rfloor} w^x_k \leq (\lfloor y \rfloor + 1) w^x_1. \]
+Next, we will show that $\frac{\varphi(x(1-\delta(x)))}{\varphi(x)} \geq 1-\frac{\delta(x)+\frac{1}{x}}{1-\delta(x)}$. Towards this end, we will first bound $\varphi(x+y)-\varphi(x)$ in terms of $w^x_k = \varphi(x+k)-\varphi(x+k-1)$, which constitutes a nonincreasing sequence (since $\varphi$ is concave):
+    \[ \varphi(x+y) - \varphi(x) \leq \varphi(x+\lfloor y \rfloor + 1)-\varphi(x+\lfloor y \rfloor) + \sum_{k=1}^{\lfloor y \rfloor} w^x_k \leq (\lfloor y \rfloor + 1) w^x_1 \ . \]
 
     Applying this bound to $x(1-\delta(x))$ and $x\delta(x)$ gives us
    
@@ -720,7 +719,7 @@ If $\varepsilon \geq 1$, we have $1 - \alpha_{\varphi}(x) \leq 1 \leq \varepsilo
     We have:
   \begin{enumerate}
   \item $\abs{S}_a \leq \abs{S}$,
-  \item $\abs{S \cup S'}_a\leq \abs{S}_a + \abs{S'}_a$. In particular, if $S \subseteq T$ then $\abs{S}_a \leq \abs{T}_a$ and $\abs{S\cup\set{x}}_a \leq \abs{S}_a + 1$,
+  \item $\abs{S \cup S'}_a\leq \abs{S}_a + \abs{S'}_a$. If $S \subseteq T$ then $\abs{S}_a \leq \abs{T}_a$ and $\abs{S\cup\set{x}}_a \leq \abs{S}_a + 1$,
   \item If $S \subseteq T$, $x \not\in T$ then $\abs{S}_a = \abs{T}_a \Rightarrow \abs{S\cup\set{x}}_a = \abs{T\cup\set{x}}_a$.
   \end{enumerate}
   \label{lem:ke}
@@ -769,8 +768,7 @@ If $\varepsilon \geq 1$, we have $1 - \alpha_{\varphi}(x) \leq 1 \leq \varepsilo
     \end{aligned}
   \end{equation}
   since $a \in T_i$. But $\abs{[m]}_a \leq m$ and $\varphi$ concave, so $\varphi(\abs{[m]}_a)) - \varphi(\abs{[m]}_a-1) \geq \varphi(m) - \varphi(m-1)$ for all $a \in [n]$. As a consequence we have that:
-
-  \[\frac{C^{\varphi}([m]) - C^{\varphi}([m]-\set{i})}{C^{\varphi}(\set{i}) - C^{\varphi}(\emptyset)} \geq \varphi(m) - \varphi(m-1)\ .\]
+  \[\frac{C^{\varphi}([m]) - C^{\varphi}([m]-\set{i})}{C^{\varphi}(\set{i}) - C^{\varphi}(\emptyset)} \geq \varphi(m) - \varphi(m-1)\ ,\]
   and this lower bound is true for its minimum over $i$. Thus we get that $c \leq 1 - (\varphi(m) - \varphi(m-1))$.
   Also one can find instances for all $m$ such that this bound is tight: take $T_1 =\set{a}$ and $\forall j \in [m], a \in T_j$ for instance.
 \end{proof}
@@ -778,6 +776,7 @@ If $\varepsilon \geq 1$, we have $1 - \alpha_{\varphi}(x) \leq 1 \leq \varepsilo
 \begin{proposition}
   Let $\ell \in \mathbb{N}^*$. if $\forall x \geq \ell, \varphi(x) = \varphi(\ell) +a(x-\ell)$ for some $0 \leq a \leq \varphi(\ell)-\varphi(\ell-1)$, then $\alpha_{\varphi}(x)$ is nondecreasing from $\ell$ to $+\infty$ and:
   \[\alpha_{\varphi}(x) =  \frac{\varphi(\ell) + a(x-\ell)}{\varphi(x)} - \frac{e^{-x}}{\varphi(x)}\left(\sum_{k=0}^{\ell} \left(\varphi(\ell) + a(x-\ell) - \varphi(k)\right)\frac{x^k}{k!} - a\frac{x^{\ell+1}}{\ell!} \right) \ .\]
+  
   In particular, $\alpha_{\varphi} = \min_{x \in [\ell]} \alpha_{\varphi}(x)$, and the argmin can be computed numerically.
   \label{prop:phiLinear}
 \end{proposition}
@@ -793,7 +792,6 @@ If $\varepsilon \geq 1$, we have $1 - \alpha_{\varphi}(x) \leq 1 \leq \varepsilo
   \end{equation}
   and thus we get:
   \[ \alpha_{\varphi}(x) = \frac{\varphi(\ell) + a(x-\ell)}{\varphi(x)} - \frac{e^{-x}}{\varphi(x)}\left(\sum_{k=0}^{\ell} \left(\varphi(\ell) + a(x-\ell) - \varphi(k)\right)\frac{x^k}{k!} - a\frac{x^{\ell+1}}{\ell!} \right) \ .\]
-
 
   Let us show that it is nondecreasing from $\ell$ to $+\infty$ by computing its derivative. Indeed, for $x \geq \ell$, we have that $\varphi(x) = \varphi(\ell) + a(x-\ell)$ and $\varphi'(x) = a$, so:
   \[ \alpha_{\varphi}(x) = 1 - e^{-x}\left(\sum_{k=0}^{\ell} \frac{x^k}{k!} - \frac{1}{\varphi(x)}\left(\sum_{k=0}^{\ell} \varphi(k)\frac{x^k}{k!} + a\frac{x^{\ell+1}}{\ell!}\right) \right) \ . \]
@@ -857,7 +855,9 @@ This is done in two steps:
 \begin{enumerate}
 \item Let $1 \leq \ell \leq m$, then:
   \[\alpha_{\varphi}(\ell) = \frac{\mathbb{E}[\varphi(\Poi(\ell))]}{\varphi(\ell)} = \frac{\mathbb{E}[\varphi(\Poi(\ell))]}{\varphi^{(\ell,1-c)}(\ell)} \geq \frac{\mathbb{E}[\varphi^{(\ell,1-c)}(\Poi(\ell))]}{\varphi^{(\ell,1-c)}(\ell)} = \alpha_{\varphi^{(\ell,1-c)}}(\ell) \ , \]
-  since $\varphi^{(\ell,1-c)}(x) \leq \varphi(x)$ for all $x$. Note that we have $\varphi(\ell)-\varphi(\ell-1) \geq \varphi(m)-\varphi(m-1) = 1-c$ by concavity of $\varphi$. So, we only have to show that for all $1 \leq \ell \leq m$, we have $\alpha^{(\ell,1-c)} := \alpha_{\varphi^{(\ell,1-c)}}(\ell) \geq 1 - ce^{-1}$.
+  since $\varphi^{(\ell,1-c)}(x) \leq \varphi(x)$ for all $x$. Note that we have:
+  \[ \varphi(\ell)-\varphi(\ell-1) \geq \varphi(m)-\varphi(m-1) = 1-c \ ,\]
+  by concavity of $\varphi$. So, we only have to show that for all $1 \leq \ell \leq m$, we have $\alpha^{(\ell,1-c)} := \alpha_{\varphi^{(\ell,1-c)}}(\ell) \geq 1 - ce^{-1}$.
 
   
 \item Let us show that $\alpha^{(\ell,1-c)} := \alpha_{\varphi^{(\ell,1-c)}}(\ell) \geq 1 - ce^{-1}$ for $1 \leq \ell \leq m$.
@@ -865,8 +865,7 @@ This is done in two steps:
   Using the closed-form expression of Proposition~\ref{prop:phiLinear} on $\varphi^{(\ell,1-c)}$ evaluated at $\ell$, one gets:
   \[ \alpha^{(\ell,1-c)} = \alpha_{\varphi^{(\ell,1-c)}}(\ell) = 1 - e^{-\ell}\left(\sum_{k=0}^{\ell-1}\left(\frac{\varphi(\ell)-\varphi(k)}{\varphi(\ell)}\right)\frac{\ell^k}{k!}  - \frac{1-c}{\varphi(\ell)}\frac{\ell^{\ell+1}}{\ell!} \right) \ .\]
   
-The worst case occurs when $\varphi^{(\ell,1-c)}$ is linear between $1$ and $\ell$, which we call $\varphi_{\text{lin}}^{(\ell,1-c)}$. Indeed, if we call $b:=\frac{\varphi(\ell)-1}{\ell-1}$, then for $1 \leq k \leq \ell$, we have that $\varphi_{\text{lin}}^{(\ell,1-c)}(k) = 1 + b(k-1)$. But:
-
+The worst case occurs when $\varphi^{(\ell,1-c)}$ is linear between $1$ and $\ell$, which we call $\varphi_{\text{lin}}^{(\ell,1-c)}$. Indeed, with $b:=\frac{\varphi(\ell)-1}{\ell-1}$, for $1 \leq k \leq \ell$, we have that $\varphi_{\text{lin}}^{(\ell,1-c)}(k) = 1 + b(k-1)$. But:
 \[\sum_{k=0}^{\ell-1}\left(\frac{\varphi(\ell)-\varphi(k)}{\varphi(\ell)}\right)\frac{\ell^k}{k!} \leq 1 + \sum_{k=1}^{\ell-1}\left(\frac{\varphi(\ell)- \left(1+b(k-1)\right)}{\varphi(\ell)}\right)\frac{\ell^k}{k!} \ ,\]
 since $\varphi(k) \geq 1 + b(k-1)$, because $\frac{\varphi(k)-\varphi(1)}{k-1} \geq \frac{\varphi(\ell)-\varphi(1)}{\ell-1} = b$ by concavity of $\varphi$. In that case, the expression can be simplified:
 \begin{equation}
@@ -880,9 +879,7 @@ since $\varphi(k) \geq 1 + b(k-1)$, because $\frac{\varphi(k)-\varphi(1)}{k-1} \
 \end{equation}
 
 We have also that $b \geq \varphi(\ell)-\varphi(\ell-1) \geq 1-c$ since $\varphi$ concave. As a function of $(b-(1-c))$ for $c$ fixed, we get $g(x) := 1 - e^{-\ell}\frac{c + x\left(\frac{\ell^{\ell+1}}{\ell!}-1\right)}{1 + (x+(1-c))(\ell-1)}$. In particular, we have that $\alpha_{\varphi_{\text{lin}}^{(\ell,(1-c))}}(\ell) = g(b-(1-c))$, since $\varphi(\ell) = 1 + b(\ell-1)$. We have that $g'(x) = -e^{-\ell}\frac{\ell\left(\frac{\ell^{\ell}}{\ell!}-1\right)+(1-c)\frac{\ell^{\ell+1}}{\ell!}(\ell-1)}{(1 + (x+(1-c))(\ell-1))^2} \leq 0$, so $g$ is nonincreasing: it is thus enough to show that $g(c) \geq 1-ce^{-1}$ to get the result, since $\alpha^{(\ell,1-c)} \geq g(b-(1-c)) \geq g(c) \geq  1-ce^{-1}$. But:
-
 \[ g(c) = 1 - \frac{c\frac{\ell^{\ell+1}}{\ell!}}{1 + \ell-1}e^{-\ell} = 1 - c\frac{\ell^{\ell}}{\ell!}e^{-\ell} \geq 1-ce^{-1} \ , \]
-
 since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 \end{enumerate}
 \end{proof}
@@ -896,10 +893,10 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 \end{proposition}
 
 \begin{proof}
-  Recall that $C^{\varphi}(S) = \sum_{a=1}^n C_a^{\varphi}(S)$, so by linearity of expectation we can focus on $\mathbb{E}_{X \sim x}[C_a^{\varphi}(X)]$. But $C_a^{\varphi}(X) = \varphi(\abs{X}_a)$ where $\abs{X}_a = \abs{\set{ i \in [m] : X_i = 1 \text{ and } a \in T_i}} \in [0,m]$. Thus:
+  Recall that $C^{\varphi}(S) = \sum_{a=1}^n C_a^{\varphi}(S)$, so by linearity of expectation we focus on $\mathbb{E}_{X \sim x}[C_a^{\varphi}(X)]$. But $C_a^{\varphi}(X) = \varphi(\abs{X}_a)$ where $\abs{X}_a = \abs{\set{ i \in [m] : X_i = 1 \text{ and } a \in T_i}}$. Thus:
   \[ \mathbb{E}_{X \sim x}[C_a^{\varphi}(X)] = \sum_{k=0}^{m} \mathbb{P}_{X \sim x}(\abs{X}_a=k)\varphi(k)\ .\]
 
-  It remains to compute the distribution of $\abs{X}_a$. But $\abs{X}_a = \sum_{i \in [m] : a \in T_i} X_i$ and $X_i \sim \Ber(x_i)$. Thus, $\abs{X}_a \sim \Poi\Bin((x_i)_{i \in [m] : a \in T_i})$, which is known as the Poisson binomial law. Thanks to~\cite{FW10}, we have that:
+  Let us compute the distribution of $\abs{X}_a$. We have $\abs{X}_a = \sum_{i \in [m] : a \in T_i} X_i$ and $X_i \sim \Ber(x_i)$. Thus, $\abs{X}_a \sim \Poi\Bin((x_i)_{i \in [m] : a \in T_i})$, which is known as the Poisson binomial law. Thanks to~\cite{FW10}, we have that:
   \[ \mathbb{P}_{X \sim x}(\abs{X}_a=k) = \frac{1}{m+1}\sum_{\ell = 0}^{m} \omega_{m+1}^{-\ell k}\prod_{j \in [m] : a \in  T_j}(1 +(\omega_{m+1}^{\ell}-1)x_j)\ ,\]
   where $\omega_{m+1} := \exp(\frac{2i\pi}{m+1})$, and the result is proved.
 \end{proof}
@@ -938,7 +935,6 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 
 \begin{proof}
   Since we have that $0 \leq \varphi(k) \leq k$ for $k \in \mathbb{N}$, in particular $g(x) = e^{-x}\sum_{k=0}^{+\infty} \varphi(k)\frac{x^k}{k!}$ is $\mathcal{C}^{\infty}$. It is thus enough to compute its first and second derivatives:
-
   \begin{equation}
     \begin{aligned}
       g'(x) &=&& -e^{-x}\sum_{k=0}^{+\infty}\varphi(k)\frac{x^k}{k!}+ e^{-x}\sum_{k=1}^{+\infty}\varphi(k)k\frac{x^{k-1}}{k!}\\
@@ -961,10 +957,9 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 \end{proposition}
 
 \begin{proof}
-  $\Bin(n,q) \leq_{\text{st}} \Bin(n+1,q)$ and we have that $\varphi$ is nondecreasing, so $\mathbb{E}[\varphi(\Bin(n,q))] \leq \mathbb{E}[\varphi(\Bin(n+1,q))]$, ie $g_q(n+1) - g_q(n) \geq 0$: $g_q$ is nondecreasing.
+  We have $\Bin(n,q) \leq_{\text{st}} \Bin(n+1,q)$ and $\mathbb{E}[\varphi(\Bin(n,q))] \leq \mathbb{E}[\varphi(\Bin(n+1,q))]$ since $\varphi$ is nondecreasing, ie $g_q(n+1) - g_q(n) \geq 0$: $g_q$ is nondecreasing.
 
-  We show then the concavity, i.e. $g_q(n+2) - g_q(n+1) \leq g_q(n+1) - g_q(n)$. Call $\psi(x) = \varphi(x+1)-\varphi(x)$ which is nonincreasing since $\varphi$ concave. Let us take $X_{k,q} \sim \Bin(k,q)$. Then:
-
+  We show then the concavity, i.e. $g_q(n+2) - g_q(n+1) \leq g_q(n+1) - g_q(n)$. Let us define $\psi(x) = \varphi(x+1)-\varphi(x)$, which is nonincreasing since $\varphi$ concave. Let us take $X_{k,q} \sim \Bin(k,q)$. Then:
   \begin{equation}
     \begin{aligned}
       g_q(n+1) &=&& \mathbb{E}[\varphi(X_{n+1,q})]\\
@@ -975,7 +970,6 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
   \end{equation}
 
   Thus:
-
   \begin{equation}
     \begin{aligned}
       g_q(n+1) -g_q(n) &=&& \sum_{i=0}^n \mathbb{E}[\varphi(i+X_{1,q}) - \varphi(i)]\mathbb{P}(X_{n,q}=i)\\
@@ -996,15 +990,14 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 \end{proposition}
 \begin{proof}
   \begin{itemize}
-  \item ($\Rightarrow$) Let $\epsilon > 0$, let us find a rank $N$ such that for $n \geq N$, $\frac{\varphi(n)}{n} \leq \epsilon$. Let $N_0$ the rank from which $w_i \leq \frac{\epsilon}{2}$ and $N_1$ the rank from which $\frac{1}{n} \sum_{i=1}^{N_0-1} w_i \leq \frac{\epsilon}{2}$. We have
-    
+  \item[($\Rightarrow$)] Let $\epsilon > 0$, let us find a rank $N$ such that for $n \geq N$, $\frac{\varphi(n)}{n} \leq \epsilon$. Let $N_0$ the rank from which $w_i \leq \frac{\epsilon}{2}$ and $N_1$ the rank from which $\frac{1}{n} \sum_{i=1}^{N_0-1} w_i \leq \frac{\epsilon}{2}$. We have   
     \begin{equation}
       \begin{aligned}
         \frac{\varphi(n)}{n} &=&& \frac{1}{n} \sum_{i=1}^{n} w_i \leq \frac{1}{n} \sum_{i=1}^{N_0-1} w_i + \frac{1}{n} \sum_{i=N_0}^{n-1} \frac{\epsilon}{2}\\
         &\leq&& \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \text{ for } n \geq \max(N_0,N_1) =: N\ .
       \end{aligned}
     \end{equation}
-  \item ($\Leftarrow$) Since $w_i = \varphi(i)-\varphi(i-1)$ is nonnegative and nonincreasing (respectively because $\varphi$ is nondecreasing and concave), then the sequence $w$ has a limit $L \geq 0$. But
+  \item[($\Leftarrow$)] Since $w_i = \varphi(i)-\varphi(i-1)$ is nonnegative and nonincreasing (respectively because $\varphi$ is nondecreasing and concave), then the sequence $w$ has a limit $L \geq 0$. But
     \[ \frac{\varphi(n)}{n} = \frac{1}{n} \sum_{i=1}^{n} w_i \geq L \ . \]
     
     Since the left hand side tends to $0$ by hypothesis, this means that $L=0$.
@@ -1012,7 +1005,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 \end{proof}
 
 \begin{proposition}
-    If $w_i := \varphi(i) - \varphi(i-1)$ is \emph{geometrically dominant}, i.e. $\forall i \in \mathbb{N}^*, \frac{w_i}{w_{i+1}} \geq \frac{w_{i+1}}{w_{i+2}}$, then $\alpha_{\varphi} = \alpha_{\varphi}(1)$.
+    If $w_i := \varphi(i) - \varphi(i-1)$ is \emph{geometrically dominant}, i.e. it satisfies $\forall i \in \mathbb{N}^*, \frac{w_i}{w_{i+1}} \geq \frac{w_{i+1}}{w_{i+2}}$, then $\alpha_{\varphi} = \alpha_{\varphi}(1)$.
   \label{prop:geoDominant}
 \end{proposition}
 
@@ -1021,7 +1014,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 \end{rk}
 
   \begin{proof}
-  Let $g(k) = \mathbb{E}[\varphi(\Poi(k))]$, and thus $\alpha_{\varphi}(k) = \frac{g(k)}{\varphi(k)}$. Let us show that for $k \in \mathbb{N}^*, \alpha_{\varphi}(k) \geq \alpha_{\varphi}(1)$, which will be enough to conclude. In order to show this, we will need the following lemmas:
+  Let $g(k) := \mathbb{E}[\varphi(\Poi(k))]$, and thus $\alpha_{\varphi}(k) = \frac{g(k)}{\varphi(k)}$. Let us show that for $k \in \mathbb{N}^*$, $\alpha_{\varphi}(k) \geq \alpha_{\varphi}(1)$, which will be enough to conclude. In order to show this, we will need the following lemmas:
   
   \begin{lemma}
     $\forall k < i \in \mathbb{N}, w_i \geq w_{k+1}w_{i-k}$ and thus $\forall k,j \in \mathbb{N}, \varphi(k+j) - \varphi(k) \geq w_{k+1} \varphi(j)$.
@@ -1033,11 +1026,8 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
     \[w_i = \frac{w_i}{w_{i-1}}\frac{w_{i-1}}{w_{i-2}}\ldots\frac{w_{i-k+1}}{w_{i-k}}w_{i-k} \ .\]
 
     But for $j \in [k]$:
-
     \[ \frac{w_{i-j+1}}{w_{i-j}} \geq \frac{w_{(i-1)-j+1}}{w_{(i-1)-j}} \geq \ldots \geq \frac{w_{(k+1)-j+1}}{w_{(k+1)-j}} \ , \]
-
     since $w$ is geometrically dominant and $k+1 \leq i$. Thus applying this bound on each term of the previous product, we get:
-
     \[w_i \geq \frac{w_{k+1}}{w_{k}}\frac{w_{k}}{w_{k-1}}\ldots\frac{w_{2}}{w_{1}}w_{i-k} = \frac{w_{k+1}}{w_1} w_{i-k} = w_{k+1} w_{i-k} \ . \]
 
     In particular, $\forall k,j \in \mathbb{N}$, we get:
@@ -1045,13 +1035,12 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
   \end{proof}
   
   \begin{lemma}
-    The piecewise linear extension on $[1,+\infty[$ of $w$, defined on integers by $w(k)=w_k$, is convex.
+    The piecewise linear extension on $[1,+\infty[$ of $w$, defined on integers with $w(k):=w_k$, is convex.
     \label{lem:wConvex}
   \end{lemma}
 
   \begin{proof}
     We will show that $\forall k \in \mathbb{N}^*, w_{k+2}-w_{k+1} \geq w_{k+1}-w_k$ which implies the convexity of its piecewise linear extension on $[1,+\infty[$. For $k \in \mathbb{N}^*$ we have:
-
         \[ \frac{w_{k+1}}{w_{k+2}}-1 \leq \frac{w_{k+1}}{w_{k+2}}\Big(\frac{w_{k+1}}{w_{k+2}} - 1\Big) \leq \frac{w_{k+1}}{w_{k+2}}\Big(\frac{w_{k}}{w_{k+1}}-1\Big) = \frac{w_k-w_{k+1}}{w_{k+2}} \ , \]
 
         since $w$ is nonnegative nonincreasing (respectively $\varphi$ nondecreasing concave) and $\frac{w_{k+1}}{w_{k+2}} \leq \frac{w_{k}}{w_{k+1}}$ since $w$ is geometrically dominant. Then, multiplying by $-w_{k+2} \leq 0$ gives the expected result $w_{k+2}-w_{k+1} \geq w_{k+1}-w_k$.
@@ -1067,7 +1056,6 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
     \end{aligned}
   \end{equation}
   by independence of $w(X+1)$ and $\varphi(Y)$. Since $w$ is convex on $[1,+\infty[$ by Lemma~\ref{lem:wConvex} and $\Poi(k)+1 \in [1,+\infty[$, we have that $\mathbb{E}[w(\Poi(k)+1)] \geq w(\mathbb{E}[\Poi(k)+1]) = w(k+1) = w_{k+1}$ thanks to Jensen's inequality. Note that $g(0) = \mathbb{E}[\varphi(\Poi(0))] = \varphi(0) = 0$. Then:
-
   \[g(k) = \sum_{i=0}^{k-1} g(i+1)-g(i) \geq  \Big(\sum_{i=0}^{k-1}w_{i+1}\Big)\mathbb{E}[\varphi(\Poi(1))] = \varphi(k)g(1) \ .\]
 
   Therefore:
@@ -1118,8 +1106,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 \end{proposition}
 
 \begin{proof}
-    By definition:
-    
+    By definition:   
     \begin{equation}
       \begin{aligned}
         \alpha_{\varphi}(x) &=&& \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x)} = \frac{\sum_{k=0}^{+\infty}\varphi(k)e^{-x}\frac{x^k}{k!}}{\varphi(x)}\\
@@ -1132,11 +1119,9 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
     \[\alpha_{\varphi}'(x) = \frac{pe^{-px}(1-e^{-qx}) - qe^{-qx}(1-e^{-px})}{(1-e^{-qx})^2} = \frac{pe^{-px} - qe^{-qx} + (q-p)e^{-(p+q)x}}{(1-e^{-qx})^2} \ .\]
 
     Let us take $t = \frac{p}{q} \in (0,1)$, since $q = \ln(\frac{1}{1-p}) > p > 0$, $x_1 = -px$ and $x_2 = -(p + q)x$. Then by strict convexity of the exponential function, we have:
-
     \[ e^{tx_1 + (1-t)x_2} < te^{x_1} + (1-t)e^{x_2} = \frac{pe^{-px} + (q-p)e^{-(p+q)x}}{q} \ .\]
 
-    But $tx_1 + (1-t)x_2 = \frac{-p^2x}{q} + \frac{-(q-p)(p+q)x}{q}  = \frac{-p^2x}{q} + \frac{-(q^2x-p^2x)}{q} = -qx$, so we get $pe^{-px} - qe^{-qx} + (q-p)e^{-(p+q)x} > 0$, and $\alpha'_{\varphi}(x) > 0$. Thus, $\alpha_{\varphi}(x)$ increases from $1$ to infinity and takes its minimum in $1$:
-    
+    But $tx_1 + (1-t)x_2 = \frac{-p^2x}{q} + \frac{-(q-p)(p+q)x}{q}  = \frac{-p^2x}{q} + \frac{-(q^2x-p^2x)}{q} = -qx$, so we get $pe^{-px} - qe^{-qx} + (q-p)e^{-(p+q)x} > 0$, and $\alpha'_{\varphi}(x) > 0$. Thus, $\alpha_{\varphi}(x)$ increases from $1$ to infinity and takes its minimum in $1$:  
     \[\alpha_{\varphi} = \alpha_{\varphi}(1) = \frac{1 - e^{-p}}{p} \ .\]
 \end{proof}
 
@@ -1201,11 +1186,9 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
     \[\mathbb{E}[C_a^{\varphi}(\mathcal{Q})] = \mathbb{E}[\varphi(\Bin(\abs{T},\frac{x_{\varphi}}{h}))] =\psi^{\varphi}_{\abs{T},h}\ .\]
 
     Since $\abs{\mathcal{Q}}_a\leq \abs{\mathcal{Q}} \leq R$ and $\varphi$ nondecreasing, we have $0 \leq C_a^{\varphi}(\mathcal{Q}) \leq \varphi(R)$. We claim that we can apply a Chernoff-Hoeffding bound on $C^{\varphi}(\mathcal{Q}) = \sum_{a \in [n]} C_a^{\varphi}(\mathcal{Q})$ and get:
-
     \[ \mathbb{P}\Big( \abs{C^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} > \eta n\Big) \leq 2 \text{exp}\Big(-2\Big(\frac{\eta}{\varphi(R)}\Big)^2n\Big)\ .\]
 
     The random variables $\{ C_a^{\varphi}(\mathcal{Q}) \}_{a \in [n]}$ are not independent in general. However, they are negatively associated~\cite{JP83}, and this is sufficient for the Chernoff-Hoeffding bound to hold as pointed out in~\cite{DR98}, provided that $\eta \in (0,1)$. The set of random variables $\{ C_a^{\varphi}(\mathcal{Q})  \}_{a \in [n]}$ is said to be negatively associated if for any functions $f$ and $g$ either both increasing or both decreasing and any disjoint index sets $I,J \subseteq [n]$, we have:
-
     \[ \mathbb{E}[f(C_a^{\varphi}(\mathcal{Q}): a \in  I) \cdot g(C_a^{\varphi}(\mathcal{Q}): a \in  J)] \leq  \mathbb{E}[f(C_a^{\varphi}(\mathcal{Q}): a \in  I)] \cdot \mathbb{E}[g(C_a^{\varphi}(\mathcal{Q}): a \in  J)] \ .\]
 
     Note that $C_a^{\varphi}(\mathcal{Q}) = \varphi(\abs{\mathcal{Q}}_a) = \varphi(X^a)$ is a nondecreasing function of $\{ X^a_i \}_{i \in  [R]}$, since $\varphi$ is nondecreasing and $X^a = \sum_{i \in T} X^a_i$. Thus in order to show that $\{ C_a^{\varphi}(\mathcal{Q}) \}_{a \in [n]}$ are negatively associated, it suffices to show that $\{ X^a_i \}_{i \in  [R],a \in [n]}$ are negatively associated (see Proposition P$_6$ of~\cite{JP83}).
