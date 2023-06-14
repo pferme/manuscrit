@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  14 JUN 2023 13:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  14 JUN 2023 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3097,7 +3097,7 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 
 ]
 Overfull \hbox (9.19568pt too wide) in paragraph at lines 2--2
- []\T1/LinuxBiolinumT-TLF/b/n/24.88 Remerciements/Acknowledgements|
+ []\T1/LinuxBiolinumT-TLF/b/n/24.88 Remerciements/Acknowledgements
  []
 
 ) [5
@@ -3163,29 +3163,52 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (./symbols.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/sc' will be
 (Font)              scaled to size 10.95pt on input line 6.
-LaTeX Font Info:    Try loading font information for U+bbm on input line 15.
- (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+LaTeX Font Info:    Try loading font information for U+euf on input line 9.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
+
+)
+LaTeX Font Info:    Try loading font information for U+bbm on input line 17.
+
+(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-))
-Underfull \vbox (badness 10000) has occurred while \output is active []
+)
+Overfull \hbox (4.94661pt too wide) in alignment at lines 5--26
+ [] [] 
+ []
 
- [9
+
+Overfull \hbox (4.94661pt too wide) in alignment at lines 26--46
+ [] [] 
+ []
 
 
-]
-[10
+Overfull \hbox (4.94661pt too wide) in alignment at lines 46--51
+ [] [] 
+ []
 
-] (./chap-resume.tex
+[9
+
+
+]) [10] (./chap-resume.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 3.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 6.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 6.
-) [11] [12
+) [11
 
-] (./chap-introduction.tex)pdfTeX warning (ext4): destination with the same ide
-ntifier (name{page.1}) has been already used, duplicate ignored
+] [12
+
+] (./chap-introduction.tex
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+))pdfTeX warning (ext4): destination with the same identifier (name{page.1}) ha
+s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.167 \cleardoublepage
@@ -3377,14 +3400,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [43]
 Overfull \hbox (2.75497pt too wide) detected at line 70
-[][]|
+[][]
  []
 
 [44] [45] [46] [47] [48]
 Missing character: There is no ; in font nullfont!
 
 Overfull \hbox (7.19527pt too wide) in paragraph at lines 315--355
-[][] [] |
+[][] [] 
  []
 
 [49]
@@ -3393,12 +3416,12 @@ Overfull \hbox (0.58092pt too wide) in paragraph at lines 392--394
 .95 )$ \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) (resp. $\OMS/lmsy/m/n/10.95 C[]\
 OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10.95 )$\T1/LinuxLibertine
 T-TLF/m/n/10.95 (-20) ) as the clo-sure of the set of all achiev-able (resp. su
-m-achievable)|
+m-achievable)
  []
 
 [50] [51] [52]
 Overfull \hbox (1.43102pt too wide) detected at line 514
-[][]|
+[][]
  []
 
 [53]
@@ -3458,50 +3481,6 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 17.28pt on input line 540.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 540.
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.545 ...nx'_n) := P(a^n|x^n) \cdot P'(a'^n|x'^n)$
-                                                  .
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten \right.
-<template> }
-            $\hfil \endtemplate 
-l.562     \end{aligned}
-                       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.562     \end{aligned}
-                       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.562     \end{aligned}
-                       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 [54]
 Overfull \hbox (3.22064pt too wide) in paragraph at lines 576--577
 \OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \O
@@ -3509,12 +3488,7 @@ MS/lmsy/m/n/10.95 ^^U [][]$ \T1/LinuxLibertineT-TLF/m/it/10.95 (-20) and $\OT1/
 lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W \OMS/lmsy/m/n/10.95 
  \OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^U 
 \OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W; k[]; k[]\OT1/lmr/m/n/10.95 )$\T1/
-LinuxLibertineT-TLF/m/it/10.95 (-20) . |
- []
-
-
-Overfull \hbox (0.73314pt too wide) detected at line 608
-[][]|
+LinuxLibertineT-TLF/m/it/10.95 (-20) . 
  []
 
 [55]
@@ -3525,7 +3499,7 @@ Underfull \vbox (badness 4872) has occurred while \output is active []
 
  [57]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 701.
+put line 702.
 
 [58] [59] [60] [61] [62] [63]
 Underfull \vbox (badness 3679) has occurred while \output is active []
@@ -3613,46 +3587,46 @@ PGFPlots: reading {Data/Data_BAC_relaxed/ZEBorderINEQ7.csv}
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [74] [75] [76] [77]
-Overfull \hbox (3.82483pt too wide) detected at line 1540
-[][][] \OMS/lmsy/m/n/10.95 ^^T [] ^^T [] \OML/lmm/m/it/10.95 :|
+Overfull \hbox (3.82483pt too wide) detected at line 1541
+[][][] \OMS/lmsy/m/n/10.95 ^^T [] ^^T [] \OML/lmm/m/it/10.95 :
  []
 
 [78] [79] [80] [81]
-Overfull \hbox (2.63985pt too wide) in paragraph at lines 1722--1723
+Overfull \hbox (2.63985pt too wide) in paragraph at lines 1723--1724
 []$\OMS/lmsy/m/n/10.95 8\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]; x[]\OT1/lm
 r/m/n/10.95 ) \OMS/lmsy/m/n/10.95 2 T[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 
 X[]; X[]\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 2[] \OMS/l
 msy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.9
 5 x[]; x[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 2[]$\
-T1/LinuxLibertineT-TLF/m/it/10.95 (-20) . |
+T1/LinuxLibertineT-TLF/m/it/10.95 (-20) . 
  []
 
 [82]
-Overfull \hbox (9.09203pt too wide) detected at line 1758
+Overfull \hbox (9.09203pt too wide) detected at line 1759
 [] \OT1/lmr/m/n/10.95 = [] [] \OML/lmm/m/it/10.95 Z[][]Z[] \OT1/lmr/m/n/10.95 :
 = \U/bbm/m/n/10.95 1[][]\OML/lmm/m/it/10.95 S \OT1/lmr/m/n/10.95 := \OMS/lmsy/m
 /n/10.95 f\OML/lmm/m/it/10.95 i \OT1/lmr/m/n/10.95 : \OML/lmm/m/it/10.95 y[] \O
 T1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 y\OMS/lmsy/m/n/10.95 g \OML/lmm/m/it/10.
-95 :|
+95 :
  []
 
 [83]
-Overfull \hbox (2.29578pt too wide) detected at line 1772
+Overfull \hbox (2.29578pt too wide) detected at line 1773
 \U/msb/m/n/10.95 P [] \OMS/lmsy/m/n/10.95 ^^T [] [] \OT1/lmr/m/n/10.95 0 \OML/l
-mm/m/it/10.95 :|
+mm/m/it/10.95 :
  []
 
 [84] [85]
 Underfull \vbox (badness 3623) has occurred while \output is active []
 
  [86]
-Overfull \hbox (3.39345pt too wide) in paragraph at lines 1897--1898
+Overfull \hbox (3.39345pt too wide) in paragraph at lines 1898--1899
 []\T1/LinuxLibertineT-TLF/b/n/10.95 Proposition 4.33 \T1/LinuxLibertineT-TLF/m/
 n/10.95 (-20) (Propo-si-tion 2.1 of [[]][])\T1/LinuxLibertineT-TLF/b/n/10.95 . 
 []$\OT1/lmr/m/n/10.95 S(\OML/lmm/m/it/10.95 W; k\OT1/lmr/m/n/10.95 ) = [][]\OML
 /lmm/m/it/10.95 f[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 
 )$ \T1/LinuxLibertineT-TLF/m/it/10.95 (-20) with $\OML/lmm/m/it/10.95 f[]\OT1/l
-mr/m/n/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 ) :=|
+mr/m/n/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 ) :=
  []
 
 
@@ -3702,11 +3676,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 55.
 
-
-Overfull \hbox (1.28583pt too wide) detected at line 76
-[][]|
- []
-
 [96]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -3724,14 +3693,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 101.
 
-[97]
-Overfull \hbox (1.99657pt too wide) in paragraph at lines 139--140
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Similarly, the value of the sum er-ro
-r for those en-coder and de-coders $\OT1/lmr/m/n/10.95 E[](\OML/lmm/m/it/10.95 
-W; k[]; k[]; e; d[]; d[]\OT1/lmr/m/n/10.95 )$|
- []
-
-[98] [99] [100] [101]
+[97] [98] [99] [100] [101]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -3739,42 +3701,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Underfull \vbox (badness 3343) has occurred while \output is active []
 
  [103]
-[104] [105] [106] [107] [108]
-Overfull \hbox (2.97527pt too wide) in paragraph at lines 553--554
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) In par-tic-u-lar, this im-plies that 
-the op-ti-mal ob-jec-tive val-ues sat-isfy $\OML/lmm/m/it/10.95 k[]k[][]\OT1/lm
-r/m/n/10.95 (\OML/lmm/m/it/10.95 W; k[]; k[]\OT1/lmr/m/n/10.95 ) =|
- []
-
-[109]
-Overfull \hbox (3.00566pt too wide) detected at line 580
-\U/msb/m/n/10.95 E[]\OT1/lmr/m/n/10.95 [\OML/lmm/m/it/10.95 e\OT1/lmr/m/n/10.95
- (\OMS/lmsy/m/n/10.95 P[]\OML/lmm/m/it/10.95 ; V[]\OT1/lmr/m/n/10.95 )] \OMS/lm
-sy/m/n/10.95 ^^U [] [] [] [] ^^U \OT1/lmr/m/n/10.95 (1 \OMS/lmsy/m/n/10.95 ^^@ 
-\OML/lmm/m/it/10.95 e[]\OT1/lmr/m/n/10.95 ) [] \OML/lmm/m/it/10.95 e\OT1/lmr/m/
-n/10.95 (\OMS/lmsy/m/n/10.95 P[]\OML/lmm/m/it/10.95 ; V[]\OT1/lmr/m/n/10.95 ) \
-OML/lmm/m/it/10.95 :|
- []
-
-
-Underfull \vbox (badness 4316) has occurred while \output is active []
-
- [110]
-[111] [112]
-Overfull \hbox (3.07263pt too wide) in paragraph at lines 685--686
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) Then, since $\OML/lmm/m/it/10.95 `[]`
-[]\OT1/lmr/m/n/10.95 S(\OML/lmm/m/it/10.95 W; `[]; `[]\OT1/lmr/m/n/10.95 ) = []
- \OML/lmm/m/it/10.95 e[]\OT1/lmr/m/n/10.95 (\OMS/lmsy/m/n/10.95 P[]\OML/lmm/m/i
-t/10.95 ; \OMS/lmsy/m/n/10.95 P[]\OT1/lmr/m/n/10.95 )$ \T1/LinuxLibertineT-TLF/
-m/n/10.95 (-20) by Propo-si-tion [][]5.7[][],|
- []
-
-[113] [114] [115] [116] [117] [118]
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [119]
-Overfull \hbox (0.8298pt too wide) detected at line 921
-[][]|
+[104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115]
+[116] [117] [118] [119]
+Overfull \hbox (0.8298pt too wide) detected at line 929
+[][]
  []
 
 [120]
@@ -3856,7 +3786,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 222.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FB831DB318FE9DA5080C77D5E91D611A;5121.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: DBD58D3FAD6B5BF2EDADF0AFDABA6760;8133.
+(rerunfilecheck)             Checksum: C2EA1BC3B07A08C26FCE0796C4AB8AE0;8210.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3867,11 +3797,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 222.
  ) 
 Here is how much of TeX's memory you used:
- 58540 strings out of 494821
- 1271052 string characters out of 6177891
- 1595604 words of memory out of 5000000
- 59454 multiletter control sequences out of 15000+600000
- 834964 words of font info for 540 fonts, out of 8000000 for 9000
+ 58584 strings out of 494821
+ 1271893 string characters out of 6177891
+ 1598394 words of memory out of 5000000
+ 59487 multiletter control sequences out of 15000+600000
+ 837560 words of font info for 551 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10467b,2448s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist
@@ -3894,21 +3824,22 @@ f-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/share/texlive/texmf
 dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/libertine/LinLibertineTBI.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
-8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (151 pages, 1678569 bytes).
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (151 pages, 1684198 bytes).
 PDF statistics:
- 2882 PDF objects out of 2984 (max. 8388607)
- 802 named destinations out of 1000 (max. 500000)
+ 2892 PDF objects out of 2984 (max. 8388607)
+ 804 named destinations out of 1000 (max. 500000)
  60457 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -60,14 +60,14 @@ We want to maximize over all encoders $e_1,e_2$ and decoders $d$ the probability
 
 \begin{proof}
 One should note that we allow randomized encoders and decoders for generality reasons, although the value of the program is not changed as it is convex. Besides that remark, let us name $I_1,I_2,J_1,J_2,X_1,X_2,Y$ the random variables corresponding to $i_1,i_2,j_1,j_2,x_1,x_2,y$ in the coding and decoding process. Then, for given $e_1,e_2,d$ and $W$, the objective value of the previous program is:
-\begin{equation*}
+\begin{equation}
   \begin{aligned}
     &\mathbb{P}\left(J_1 = I_1, J_2 = I_2\right) = \frac{1}{k_1k_2}\sum_{i_1,i_2} \mathbb{P}\left(J_1 = I_1, J_2 = I_2|I_1=i_1,I_2=i_2\right)\\
     &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2}e_1(x_1|i_1)e_2(x_2|i_2) \mathbb{P}\left(J_1 = i_1, J_2 = i_2|i_1,i_2,X_1=x_1,X_2=x_2\right)\\
     &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y}W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\mathbb{P}\left(J_1 = i_1,J_2=i_2|i_1,i_2,x_1,x_2,Y=y\right)\\
     &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y}W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)d(i_1,i_2|y) \ .\\
-  \end{aligned}
-\end{equation*}
+      \end{aligned}
+\end{equation}
 \end{proof}
 
 Since MACs are more general than point-to-point channels (by defining $W(y|x_1x_2):=\hat{W}(y|x_1)$ for $\hat{W}$ a point-to-point channel and looking only at its first input), computing $\mathrm{S}(W,k_1,k_2)$ is \textrm{NP}-hard, and it is even \textrm{NP}-hard to approximate $\mathrm{S}(W,k_1,k_2)$ within a better ratio than $\left(1-e^{-1}\right)$, as a consequence of the hardness result on $\mathrm{S}(W,k)$ shown in~\cite{BF18}.
@@ -542,7 +542,7 @@ For the other direction, given those variables, non-signaling probability distri
 \end{definition}
 
 \begin{definition}
-  Let $P(a^n|x^n)$ a conditional probability distribution defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ and $P'(a'^n|x'^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}'_i \times \bigtimes_{i=1}^n \mathcal{X}'_i$. We define $P \otimes P'$ the tensor product conditional probability distribution defined on $\bigtimes_{i=1}^n(\mathcal{A}_i \times \mathcal{A}'_i) \times \bigtimes_{i=1}^n (\mathcal{X}_i \times \mathcal{X}'_i)$ by $\left(P \otimes P')(a_1a'_1\ldots a_na'_n|x_1x'_1\ldots x_nx'_n) := P(a^n|x^n) \cdot P'(a'^n|x'^n)$.
+  Let $P(a^n|x^n)$ a conditional probability distribution defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ and $P'(a'^n|x'^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}'_i \times \bigtimes_{i=1}^n \mathcal{X}'_i$. We define $P \otimes P'$ the tensor product conditional probability distribution defined on $\bigtimes_{i=1}^n(\mathcal{A}_i \times \mathcal{A}'_i) \times \bigtimes_{i=1}^n (\mathcal{X}_i \times \mathcal{X}'_i)$ by $\left(P \otimes P'\right)(a_1a'_1\ldots a_na'_n|x_1x'_1\ldots x_nx'_n) := P(a^n|x^n) \cdot P'(a'^n|x'^n)$.
 \end{definition}
 
 \begin{lemma}
@@ -558,7 +558,7 @@ For the other direction, given those variables, non-signaling probability distri
       = &\sum_{\hat{a}_i\hat{a}_i'}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) \cdot P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\\
       = &\left(\sum_{\hat{a}_i}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\right)\\
       = &\left(\sum_{\hat{a}_i}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots \hat{x}'_i \ldots x'_n)\right)\\
-      = &\sum_{\hat{a}_i\hat{a}_i'}\left(P \otimes P')(a_1a'_1\ldots \hat{a}_i\hat{a}'_i \ldots a_na'_n|x_1x'_1\ldots \hat{x}_i\hat{x}'_i \ldots x_nx'_n) \ ,
+      = &\sum_{\hat{a}_i\hat{a}_i'}\left(P \otimes P'\right)(a_1a'_1\ldots \hat{a}_i\hat{a}'_i \ldots a_na'_n|x_1x'_1\ldots \hat{x}_i\hat{x}'_i \ldots x_nx'_n) \ ,
     \end{aligned}
   \end{equation}
   so $P \otimes P'$ is non-signaling.
@@ -599,7 +599,8 @@ For the other direction, given those variables, non-signaling probability distri
   \item First let us show that $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq \frac{|\mathcal{X}_1|}{k_1}$ (the case $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq \frac{|\mathcal{X}_2|}{k_2}$ is symmetric):
     \begin{equation}
       \begin{aligned}
-        \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) &= \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y} \leq \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r^2_{x_1,x_2,y}\\
+        \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) &= \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y}\\
+        &\leq \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r^2_{x_1,x_2,y}\\
         &\leq \frac{1}{k_1k_2} \sum_{x_2,y} \left(\sum_{x_1'} W(y|x_1'x_2)\right)\cdot\left(\sum_{x_1} r^2_{x_1,x_2,y} \right)\\
         &=  \frac{1}{k_1k_2} \sum_{x_2,y} \left(\sum_{x_1'} W(y|x_1'x_2)\right)\cdot\left(\frac{1}{k_1} \sum_{x_1} p_{x_1,x_2} \right)\\
         &= \frac{1}{k_1^2k_2} \sum_{x_1,x_2} p_{x_1,x_2} \sum_{x_1'}\left(\sum_y W(y|x_1'x_2)\right)\\
@@ -761,14 +762,14 @@ Although $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ can be computed in polynomial tim
   \[\forall g \in G, W(g \cdot y|g \cdot x_1 g \cdot x_2)=W(y|x_1x_2) \ .\]
 \end{definition}
 
-In particular, for  $W^{\otimes n}: \mathcal{X}_1^n \times \mathcal{X}_2^n \rightarrow \mathcal{Y}^n$, the symmetric group $G:=S_n$ acts in a natural way in any set $\mathcal{A}$ raised to power $n$. So for $\sigma \in S_n$, we have that:
+In particular, for  $W^{\otimes n}: \mathcal{X}_1^n \times \mathcal{X}_2^n \rightarrow \mathcal{Y}^n$, the symmetric group $G:=\permutations_n$ acts in a natural way in any set $\mathcal{A}$ raised to power $n$. So for $\sigma \in \permutations_n$, we have that:
 \begin{equation}
   \begin{aligned}
     W^{\otimes n}(\sigma \cdot y^n|\sigma \cdot x_1^n \sigma \cdot x_2^n) &= \prod_{i=1}^n W(y_{\sigma(i)}|x_{1,\sigma(i)}x_{2,\sigma(i)}) = \prod_{i=1}^n W(y_{i}|x_{1,i}x_{2,i})\\
     &= W^{\otimes n}(y^n|x_1^nx_2^n) \ ,
   \end{aligned}
 \end{equation}
-and so $W^{\otimes n}$ is invariant under the action of $S_n$.
+and so $W^{\otimes n}$ is invariant under the action of $\permutations_n$.
 
 Let $\mathcal{Z} := \{\mathcal{X}_1, \mathcal{X}_2, \mathcal{Y}, \mathcal{X}_1 \times \mathcal{Y}, \mathcal{X}_2 \times \mathcal{Y}, \mathcal{X}_1 \times \mathcal{X}_2,  \mathcal{X}_1 \times \mathcal{X}_2 \times \mathcal{Y} \}$. Let us call $\mathcal{O}_G(\mathcal{A})$ the set of orbits of $\mathcal{A}$ under the action of $G$. Then, one can find an equivalent smaller linear program for $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$:
 \begin{theorem}
@@ -795,9 +796,9 @@ Let $\mathcal{Z} := \{\mathcal{X}_1, \mathcal{X}_2, \mathcal{Y}, \mathcal{X}_1 \
   \label{cor:poly}
 \end{corollary}
 \begin{proof}
-  We use the linear program obtained in Theorem~\ref{theo:polyLP} with $G:=S_n$ acting on $W^{\otimes n}$ as described before. 
+  We use the linear program obtained in Theorem~\ref{theo:polyLP} with $G:=\permutations_n$ acting on $W^{\otimes n}$ as described before. 
   The number of variables and constraints is linear in the number of orbits of the action of $S^n$ on the different sets $\mathcal{A} \in \mathcal{Z}$, where here $\mathcal{Z} := \{\mathcal{X}_1^n, \mathcal{X}_2^n, \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{Y}^n, \mathcal{X}^n_2 \times \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{X}^n_2,  \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n \}$. For example, for $\mathcal{A} \in \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n$, we have that:
-\[ |\mathcal{O}_{S_n}(\mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n)| = \binom{n + |\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}|   - 1}{|\mathcal{X}_1| |\mathcal{X}_2| |\mathcal{Y}| - 1} \leq (n+|\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}|-1)^{|\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}| - 1} \ .\]
+\[ |\mathcal{O}_{\permutations_n}(\mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n)| = \binom{n + |\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}|   - 1}{|\mathcal{X}_1| |\mathcal{X}_2| |\mathcal{Y}| - 1} \leq (n+|\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}|-1)^{|\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}| - 1} \ .\]
 
 So the number of variables and constraints is $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$. Note also that all the numbers occurring this linear program are integers or fractions of integers, with those integers ranging in $\left[\left(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|\right)^n\right]$, thus of size $O(n\log(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|))$. So the size of this linear program is bounded by $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$, and thus $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ can be computed in polynomial time in $n$; see for instance Section 7.1 of~\cite{GM07}.
 \end{proof}

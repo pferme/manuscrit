@@ -68,7 +68,7 @@ We will focus first on maximizing $\frac{\mathrm{p}_1(W,e,d_1)+\mathrm{p}_2(W,e,
 One should note that we allow in fact non-deterministic encoders and decoders for generality reasons, although the value of the program is not changed as it is convex. Besides that remark, let us name $I_1,I_2,J_1,J_2,X,Y_1,Y_2$ the random variables corresponding to $i_1,i_2,j_1,j_2,x,y_1,y_2$ in the coding and decoding process. Then, given $e,d_1,d_2$ and $W$, the objective value of the previous program comes from:
 \begin{equation}
   \begin{aligned}
-    \mathrm{p}_1(W,e,d_1) &= \mathbb{P}\left(J_1 = I_1\right) = \frac{1}{k_1k_2}\sum_{i_1,i_2} \mathbb{P}\left(J_1 = i_1|I_1=i_1,I_2=i_2\right)\\
+    &\mathrm{p}_1(W,e,d_1) = \mathbb{P}\left(J_1 = I_1\right) = \frac{1}{k_1k_2}\sum_{i_1,i_2} \mathbb{P}\left(J_1 = i_1|I_1=i_1,I_2=i_2\right)\\
     &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x}e(x|i_1i_2) \mathbb{P}\left(J_1 = i_1|i_1,i_2,X=x\right)\\
     &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2}W(y_1y_2|x)e(x|i_1i_2) \mathbb{P}\left(J_1 = i_1|i_1,i_2,x,Y_1=y_1,Y_2=y_2\right)\\
     &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2}W(y_1y_2|x)e(x|i_1i_2)d_1(i_1|y_1) \ ,
@@ -136,7 +136,7 @@ The proof is the same as in the sum probability scenario. The objective values o
   \end{aligned}
 \end{equation}
 
-Similarly, the value of the sum error for those encoder and decoders $\mathrm{E}_{\text{sum}}(W,k_1,k_2,e,d_1,d_2)$ is equal to:
+Similarly, the value of the sum error $\mathrm{E}_{\text{sum}}(W,k_1,k_2,e,d_1,d_2)$ is equal to:
 \begin{equation}
   \begin{aligned}
     &1 -  \frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\frac{d_1(i_1|y_1)+d_2(i_2|y_2)}{2}\right)\\
@@ -550,7 +550,10 @@ e_{G_W}(\mathcal{P}_1,\mathcal{P}_2) &=  \sum_{i_1,i_2} \max_{x \in \mathcal{X}}
 which proves that given an optimal solution of \textsc{DensestQuotientGraph}, one can efficiently construct a solution $e,d_1,d_2$ of \textsc{DetBCC} such that:
 \[ k_1k_2\mathrm{S}(W,k_1,k_2,e,d_1,d_2) = \textsc{DensestQuotientGraph}(G_W,k_1,k_2) \ . \]
 
-In particular, this implies that the optimal objective values satisfy $k_1k_2\textsc{DetBCC}(W,k_1,k_2) = \textsc{DensestQuotientGraph}(G_W,k_1,k_2)$. Therefore, the solutions of both problems constructed throughout the proof are in fact optimal.
+In particular, this implies that the optimal objective values satisfy:
+\[ k_1k_2\textsc{DetBCC}(W,k_1,k_2) = \textsc{DensestQuotientGraph}(G_W,k_1,k_2) \ .\]
+
+Therefore, the solutions of both problems constructed throughout the proof are in fact optimal.
 \end{proof}
 
 \begin{rk}
@@ -577,7 +580,12 @@ The approximation algorithm is a two-step process. First, we consider the proble
 We will show nonetheless that this problem can be approximated within a factor $(1-e^{-1})^2$ in polynomial time. First we consider the case where $k_2=|V_2|$. We can then always assume that the right partition is $\mathcal{P}_2 := \{ \{v_2\} : v_2 \in V_2 \}$, which leads necessarily to a greater or equal number of edges in the quotient graph that with any other right partition. So, in that setting, we need only to find a partition of $V_1$ in $k_1$ parts maximizing the number of edges between vertices in the right part and the quotient of the left vertices.
 
 First, the maximum value we can get is upper bounded by $\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right)$. Indeed, each vertex of $v_2$ van be connected at most to the $k_1$ parts of $V_1$, so its contribution is bounded by $k_1$, and there needs to be an edge to each part it is connected, so its contribution is also bounded by $\deg(v_2)$. Let us show that if we take a partition $\mathcal{P}_1$ of $V_1$ uniformly at random, we get:
-\[ \mathbb{E}_{\mathcal{P}_1}[e(\mathcal{P}_1,V_2)] \geq \left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right) \geq (1-e^{-1})\max_{\mathcal{P}_1}e(\mathcal{P}_1,V_2) \ .\]
+\begin{equation}
+  \begin{aligned}
+  \mathbb{E}_{\mathcal{P}_1}[e(\mathcal{P}_1,V_2)] &\geq \left(1-\left(1-\frac{1}{k_1}\right)^{k_1}\right)\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right)\\
+  &\geq (1-e^{-1})\max_{\mathcal{P}_1}e(\mathcal{P}_1,V_2) \ .
+  \end{aligned}
+\end{equation}  
 
 We have $e(\mathcal{P}_1,V_2)=\sum_{v_2 \in V_2}\deg_{\mathcal{P}_1,V_2}(v_2)$, so by linearity of expectation $\mathbb{E}_{\mathcal{P}_1}[e(\mathcal{P}_1,V_2)] = \sum_{v_2 \in V_2}\mathbb{E}_{\mathcal{P}_1}[\deg_{\mathcal{P}_1,V_2}(v_2)]$. However $\deg_{\mathcal{P}_1,V_2}(v_2)=|\{i_1 \in [k_1]: N(v_2) \cap \mathcal{P}_1^{i_1} \not= \emptyset  \}|$. Recall also that for any $v_1$, $\mathbb{P}\left(v_1 \in \mathcal{P}_1^{i_1}\right) = \frac{1}{k_1}$ since the partition is taken uniformly at random. Thus, we get:
 \begin{equation}
@@ -682,7 +690,7 @@ Let us now prove the main result:
   \item This part shares a lot of similarities with the proof of Theorem~\ref{theo:DQGapprox}, which we will adapt to this particular situation. Let us show that if we take a partition $\mathcal{P}_1$ of $\mathcal{Y}_1$ of size $\ell_1$ uniformly at random, we get, for some fixed $\mathcal{P}_2$ of size $\ell_2$:
     \[ \mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)] \geq \frac{\ell_1}{k_1}\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right) \ .\]
 
-    Then, since $\ell_1\ell_2 \mathrm{S}(W,\ell_1,\ell_2) = \underset{\mathcal{P}_1 \text{ in $\ell_1$ parts},\mathcal{P}_2 \text{ in $\ell_2$ parts}}{\maxi} \ e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)$ by Proposition~\ref{prop:BCCisDQG}, this will imply that:
+    Since $\ell_1\ell_2 \mathrm{S}(W,\ell_1,\ell_2) = \underset{\mathcal{P}_1 \text{ in $\ell_1$ parts},\mathcal{P}_2 \text{ in $\ell_2$ parts}}{\maxi} \ e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)$ by Proposition~\ref{prop:BCCisDQG}, this will imply that:
     \begin{equation}
       \begin{aligned}
         \mathrm{S}(W,\ell_1,\ell_2) &\geq \frac{1}{\ell_1\ell_2}\mathbb{E}_{\mathcal{P}_1}[e_{G_W}(\mathcal{P}_1,\mathcal{P}_2)]\\

@@ -5,34 +5,47 @@
 \begin{longtable}{ll}
   \multicolumn{2}{l}{\scbf{General notations}} \\
   $\mathbb{N}$ & the set of nonnegative integers \\
+  $[k]$ & the set of integers from $1$ to $k$, i.e. $\{1,\ldots,k\}$\\
+  $\permutations_k$ & the set of permutations over $[k]$ \\
   $\mathbb{R}$ & the set of real numbers \\
   $\mathbb{R}_+$ & the set of nonnegative real numbers \\
-  $k,\ell,n,m, \ldots$ & integers\\
+  $k,\ell,n,m, \ldots$ & nonnegative integers\\
+  $x,y,z,\ldots$ & real numbers\\
   $p,q,\ldots$ & real numbers between $0$ and $1$\\
-  $[k]$ & the set of integers from $1$ to $k$, i.e. $\{1,\ldots,k\}$\\
-  $S,T,\ldots$ & finite sets of integers\\
-  $|S|$ & the cardinal of $S$\\
+  $\ceil{x}$ & the ceiling of $x$\\
+  $\floor{x}$ & the floor of $x$\\
   $\mathbbm{1}_A$ & the truth value of the statement $A$\\
-  $\ceil{\lambda}$ & the ceiling of $\lambda$\\
-  [1ex] \multicolumn{2}{l}{\scbf{Approximation Algorithms}} \\
+  [1ex] \multicolumn{2}{l}{\scbf{Complexity}} \\
   \textrm{P} & the class of problems decidable in polynomial time \\
   \textrm{NP} & the class of problems decidable in nondeterministic polynomial time \\
-  $O(f(n))$ & blabla\\
-  $o(f(n))$ & blabla\\
+  $O(f(n))$ & a function at most of the order of $f(n)$ when $n$ tends to infinity\\
+  $\Omega(f(n))$ & a function at least of the order of $f(n)$ when $n$ tends to infinity\\
+  $\Theta(f(n))$ & a function of the order of $f(n)$ when $n$ tends to infinity\\
+  $o(f(n))$ & a function dominated by $f(n)$ when $n$ tends to infinity\\
   [1ex] \multicolumn{2}{l}{\scbf{Probability}} \\
   $\mathcal{X},\mathcal{Y},\mathcal{Z},\ldots$ & finite sets\\
   $X,Y,Z,\ldots$ & random variables over $\mathcal{X},\mathcal{Y},\mathcal{Z},\ldots$\\
   $\mathbb{P}\left(E\right)$ & the probability of the event $E$\\
   $\mathbb{E}\left[X\right]$ & the expectation of $X$\\
+  $\sigma_X^2$ & the variance of $X$\\
   $\Ber(p)$ & the Bernouilli distribution of parameter $p$\\
   $\Bin(n,p)$ & the Binomial distribution of parameters $n,p$\\
   $\Poi(\lambda)$ & the Poisson distribution of parameter $\lambda$\\
   [1ex] \multicolumn{2}{l}{\scbf{Information Theory}} \\
   $W$ & a channel, possibly with multiple inputs or multiple outputs \\
-  $e,d$ & encoder, decoder\\
-  $\mathcal{C}(W)$ & capacity region of $W$\\
+  $W \otimes W'$ & the tensor product of the channels $W$ and $W'$\\
+  $W^{\otimes n}$ & the $n$th tensor product of $W$\\
+  $\mathcal{C}(W)$ & the capacity region of $W$\\
+  $\mathcal{C}^{\mathrm{NS}}(W)$ & the non-signaling assisted capacity region of $W$\\
+  $x^n,y^n,z^n,\ldots$ & words on $\mathcal{X}^n,\mathcal{Y}^n,\mathcal{Z}^n,\ldots$\\
+  $x_i,y_i,z_i,\ldots$ & the $i$th symbol of $x^n,y^n,z^n,\ldots$\\
+  $x_{-i},y_{-i},z_{-i},\ldots$ & the words $x^n,y^n,z^n,\ldots$ without their $i$th symbol\\
   $H(X)$ & the (Shannon) entropy of $X$\\
   $H(X|Y)$ & the conditional entropy of $X$ given $Y$\\
   $I(X:Y)$ & the mutual information of $X$ and $Y$\\
   $I(X:Y|Z)$ & the conditional mutual information of $X$ and $Y$ given $Z$\\
+  $X \rightarrow Y \rightarrow Z$ & a Markov chain\\
+  [1ex] \multicolumn{2}{l}{\scbf{Graphs}} \\
+  $G = (V,E)$ & an undirected graph with vertices in $V$ and edges in $E$\\
+  $\deg_G(v)$ & the degree of $v$ in $G$, i.e. the number of edges connected to $v$ \\
 \end{longtable}

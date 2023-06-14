@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  14 JUN 2023 13:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  14 JUN 2023 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2734,20 +2734,11 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 2115.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2115.
 
+Package rerunfilecheck Info: File `MAC_NS.out' has not changed.
+(rerunfilecheck)             Checksum: 8AF5C03345E53E8A5DC508AE18F20B79;1297.
 
-
-Package rerunfilecheck Warning: File `MAC_NS.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `MAC_NS.out':
-(rerunfilecheck)             Before: B2C6B6C3791ECFAD7A1E01BD99EF9289;1295
-(rerunfilecheck)             After:  8AF5C03345E53E8A5DC508AE18F20B79;1297.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2115.
  ) 
@@ -2788,7 +2779,7 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MAC_NS.pdf (51 pages, 547372 bytes).
+Output written on MAC_NS.pdf (51 pages, 547378 bytes).
 PDF statistics:
  1371 PDF objects out of 1440 (max. 8388607)
  806 compressed objects within 9 object streams
