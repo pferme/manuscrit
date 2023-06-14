@@ -256,7 +256,7 @@ Then, given an instance  $\mathcal{G} = (V,E,[L],[R], \Sigma, \set{\pi_{e,v}}_{e
     \item $n$ a large enough integer to have the existence of $([n],h,R,\varphi,\eta)$-partitioning systems using Proposition~\ref{prop:Partitioning}. Note that the size of these partitioning systems is independent of the size of the instance $\mathcal{G}$, and that one can find one of those in constant time, with relation to the size of the instance $\mathcal{G}$, thanks to Proposition~\ref{prop:Partitioning}.
     \item $\Gamma = [n] \times E$,
     \item $k =\abs{V}$,
-    \item Consider a  $([n],h,R,\varphi,\eta)$-partitioning system, and call $\mathcal{P} =\set{\mathcal{P}_1,\ldots,\mathcal{P}_R}$ the corresponding set of collections. Define sets $T_{\beta}^{e,v_j} := P_{\pi_{e,v_j}(\beta),j} \times \set{e}$ where ${e = (v_1,\ldots,v_h)} \in E, j \in [h], \beta \in [L]$. Then, take as cover sets $F^v_{\beta} := \bigsqcup_{e \in E:v \in e} T^{e,v}_{\beta}$ and $\mathcal{F} := \set{F^v_{\beta}, v \in V, \beta \in [L]}$.
+    \item Consider a  $([n],h,R,\varphi,\eta)$-partitioning system, and call $\mathcal{P} =\set{\mathcal{P}_1,\ldots,\mathcal{P}_R}$ the corresponding set of collections. Define sets $T_{\beta}^{e,v_j} := P_{\pi_{e,v_j}(\beta),j} \times \set{e}$ where ${e = (v_1,\ldots,v_h)} \in E, j \in [h], \beta \in [L]$. Then, take $F^v_{\beta} := \bigsqcup_{e \in E:v \in e} T^{e,v}_{\beta}$ as cover sets and $\mathcal{F} := \set{F^v_{\beta}, v \in V, \beta \in [L]}$.
   \end{itemize}
 
 We will now prove that if we are in a YES instance, we have that there exists $\mathcal{T}$ of size $k$ such that $C^{\varphi}(\mathcal{T}) \geq \varphi(x_{\varphi})\abs{\Gamma}$ (completeness). Moreover, if we are in a NO instance, then we have that for all $\mathcal{T}$ of size $k = \abs{V}$, $C^{\varphi}(\mathcal{T}) \leq (\alpha_{\varphi} + \varepsilon)\varphi(x_{\varphi})\abs{\Gamma}$ (soundness). Establishing these two properties would conclude the proof. 
@@ -910,7 +910,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 \end{proposition}
 
 \begin{proof}
-  Thanks to~\cite{Barbour84, TF19}, we have that the total variation distance between $\Bin(n,x/n)$ and $\Poi(x)$ is bounded in the following way:
+  Thanks to~\cite{Barbour84, TF19}, the total variation distance between $\Bin(n,x/n)$ and $\Poi(x)$ is bounded in the following way:
   \[ \Delta(\Bin(n,x/n),\Poi(x)) \leq \frac{1 - e^{-x}}{2x} n \cdot \Big(\frac{x}{n}\Big)^2 \leq \frac{x}{2n}\ .\]
   Thus with $B \sim \Bin(n,x/n)$ and $P \sim \Poi(x)$:
   \begin{equation}
