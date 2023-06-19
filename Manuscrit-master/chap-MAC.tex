@@ -1270,6 +1270,30 @@ The following proposition shows that this is indeed a relaxation of the non-sign
     One could show as in the non-relaxed case that $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ is convex without taking the convex hull in its definition.
   \end{rk}
 
+NEW: SOLVE ISSUE OF DEF BY PREVIOUS REMARK: ALlOW UNIFICATION OF CAPACITY DEFINITIONS
+  \begin{proposition}
+     $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ is convex. 
+  \end{proposition}
+
+  \begin{proof}
+  We only need to show that for all MACs $W,W'$ and integers $k_1, k_2, k_1', k_2'$:
+  \[ \mathrm{S}^{\overline{\mathrm{NS}}}(W \otimes W', k_1k_1', k_2k_2') \geq \mathrm{S}^{\overline{\mathrm{NS}}}(W, k_1, k_2) \cdot \mathrm{S}^{\overline{\mathrm{NS}}}(W', k_1', k_2') \ ,\]
+  thanks to Proposition~\ref{prop:timesharing}. Let us consider optimal solutions $(p_{x_1,x_2}, r_{x_1,x_2,y})_{x_1 \in \mathcal{X}_1, x_2 \in \mathcal{X}_2, y \in \mathcal{Y}}$ and $(p'_{x_1',x_2'}, r'_{x_1',x_2',y'})_{x_1' \in \mathcal{X}'_1, x_2' \in \mathcal{X}'_2, y' \in \mathcal{Y}'}$ of the programs computing $\mathrm{S}^{\overline{\mathrm{NS}}}(W, k_1, k_2)$ and $\mathrm{S}^{\overline{\mathrm{NS}}}(W', k_1', k_2')$ respectively. We construct a solution of the program computing the success probability $\mathrm{S}^{\overline{\mathrm{NS}}}(W \otimes W', k_1k_1', k_2k_2')$ by defining:
+  \[ p^*_{x_1x_1',x_2x_2'} := p_{x_1,x_2}p'_{x_1',x_2'} \text{ and } r^*_{x_1x_1',x_2x_2',yy'} := r_{x_1,x_2,y}r'_{x_1',x_2',y'} \ , \]
+  as $W \otimes W' : (\mathcal{X}_1 \times \mathcal{X}'_1) \times (\mathcal{X}_2  \times \mathcal{X}'_2) \rightarrow (\mathcal{Y}  \times \mathcal{Y}')$. It is straightforward to check that it is a valid solution. Indeed, linear constraints are preserved by product, except for coefficients $k_1$, $k_2$ which are replaced by products $k_1k_1'$ and $k_2k_2'$. Therefore, we have that $\mathrm{S}^{\overline{\mathrm{NS}}}(W \otimes W', k_1k_1', k_2k_2')$ is larger than or equal to:
+    \begin{equation}
+      \begin{aligned}
+        &\frac{1}{k_1k_1'k_2k_2'} \sum_{x_1,x_1',x_2,x_2',y,y'} \left(W \otimes W'\right)(yy'|x_1x_1'x_2x_2')r^*_{x_1x_1',x_2x_2',yy'}\\
+        &= \frac{1}{k_1k_1'k_2k_2'} \sum_{x_1,x_1',x_2,x_2',y,y'} W(y|x_1x_2)W'(y'|x_1'x_2')r_{x_1,x_2,y}r'_{x_1',x_2',y'}\\
+        &= \left(\frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y}\right)\cdot\left(\frac{1}{k_1'k_2'} \sum_{x_1',x_2',y'} W'(y'|x_1'x_2')r'_{x_1',x_2',y'}\right)\\
+        &= \mathrm{S}^{\overline{\mathrm{NS}}}(W, k_1, k_2) \cdot \mathrm{S}^{\overline{\mathrm{NS}}}(W', k_1', k_2') \ .
+      \end{aligned}
+    \end{equation}   
+    
+
+  \end{proof}
+ENDNEW
+
   A direct property that follows from this definition and Proposition~\ref{prop:NSisrelaxed} is the fact that the non-signaling assisted capacity region is included in the relaxed non-signaling assisted capacity region.
   \begin{corollary}
     \label{cor:NSisrelaxed}
