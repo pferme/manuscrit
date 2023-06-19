@@ -943,13 +943,13 @@ In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For al
 \section{Non-Signaling Achievability Bounds}
 \label{section:IB}
 \subsection{Zero-Error Non-Signaling Assisted Achievable Rate Pairs}
-We will now present a numerical method to find efficiently inner bounds on $\mathcal{C}_0^{\mathrm{NS}}(W)$. Thanks to Corollary~\ref{cor:poly}, we know how to decide in polynomial time in $n,k_1,k_2$ whether $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1$. However, by Proposition~\ref{prop:ZENScapacity}, if $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1$, then we have that $\left(\frac{k_1}{n},\frac{k_2}{n}\right) \in \mathcal{C}_0^{\mathrm{NS}}(W)$, which describes a way of computing achievable points for that capacity region. More precisely, this leads to the following result:
+We will now present a numerical method to find efficiently inner bounds on $\mathcal{C}_0^{\mathrm{NS}}(W)$. Thanks to Corollary~\ref{cor:poly}, we know how to decide in polynomial time in $n,k_1,k_2$ whether $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1$. However, by Proposition~\ref{prop:ZENScapacity}, if $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1$, then we have that $\left(\frac{\log(k_1)}{n},\frac{\log(k_2)}{n}\right) \in \mathcal{C}_0^{\mathrm{NS}}(W)$, which describes a way of computing achievable points for that capacity region. More precisely, this leads to the following result:
 
 \begin{proposition}[Inner Bounds on $\mathcal{C}_0^{\mathrm{NS}}(W)$]
   \label{prop:IB}
   Let us define the zero-error non-signaling assisted $n$-shots capacity region $\mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W)$ in the following way:
-  \[ \mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W)  := \left\{ \left(\frac{k_1}{n},\frac{k_2}{n}\right) : \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1 \right\}\ . \]
-  Then, we have that $\forall n \in \mathbb{N}, \mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W) \subseteq \mathcal{C}_0^{\mathrm{NS}}(W)$, and that one can decide in polynomial time in $n,k_1,k_2$ if $\left(\frac{k_1}{n},\frac{k_2}{n}\right) \in \mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W)$.
+  \[ \mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W)  := \left\{ \left(\frac{\log(k_1)}{n},\frac{\log(k_2)}{n}\right) : \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1 \right\}\ . \]
+  Then, we have that $\forall n \in \mathbb{N}, \mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W) \subseteq \mathcal{C}_0^{\mathrm{NS}}(W)$, and that one can decide in polynomial time in $n,k_1,k_2$ if $\left(\frac{\log(k_1)}{n},\frac{\log(k_2)}{n}\right) \in \mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W)$.
 \end{proposition}
 
 This implies that we can find efficiently achievable rate pairs for MACs.
