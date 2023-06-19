@@ -264,6 +264,13 @@ Shaddin Dughmi and Jan Vondr{\'{a}}k.
 \newblock \href {https://doi.org/10.1016/j.geb.2014.01.007}
   {\path{doi:10.1016/j.geb.2014.01.007}}.
 
+\bibitem[Eli57]{Elias57}
+Peter Elias.
+\newblock List decoding for noisy channels.
+\newblock {\em Technical Report}, 335, 1957.
+\newblock URL:
+  \url{https://dspace.mit.edu/bitstream/handle/1721.1/4484/RLE-TR-335-04734756.pdf}.
+
 \bibitem[Fei98]{Feige98}
 Uriel Feige.
 \newblock A threshold of ln \emph{n} for approximating set cover.
@@ -715,5 +722,10 @@ F.M.J. Willems.
   December 1990.
 \newblock URL:
   \url{https://research.tue.nl/nl/publications/the-maximal-error-and-average-error-capacity-region-of-the-broadc}.
+
+\bibitem[Woz58]{Wozencraft58}
+John~M Wozencraft.
+\newblock List decoding.
+\newblock {\em Quarterly Progress Report}, 48:90--95, 1958.
 
 \end{thebibliography}

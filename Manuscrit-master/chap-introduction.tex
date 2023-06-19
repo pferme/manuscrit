@@ -1,10 +1,21 @@
-Introduction Shannon~\cite{Shannon48}, capacity, etc.
-Quantum entanglement, a bit of intuition here, enhanced communication.
-Non-signaling, CHSH
-Algorithmic problem for a channel~\cite{BF18}
-Biblio on list decoding TODO, and add in MaxCoverage
-P. Elias, “List decoding for noisy channels,” Technical Report 335,
-Research Laboratory of Electronics, MIT, 1957
-J. M. Wozencraft, "List Decoding," Quarterly Progress Report, ResearchLaboratory of Electronics, MIT, vol. 48, pp. 90-95, 1958.
+Need for communication with increasing number of connected devices eg.
 
-Keep MAC studd and Broadcast stuff only for the specific chapters maybe ?
+Limits and capacity region established by Shannon~\cite{Shannon48}, capacity, fundamental limits. Howevere only theoritical.
+
+How to effectively achieve these rates: one common approach is by finding error-correcting codes (BIBLIO TODO), multiple copies of a channel.
+
+Antoher POV is the algo task of finding the best code for one copy of the channel, maximizing the success sending a fixed number of messages~\cite{BF18}. Task NP-hard, best approx in poly time in $1-e^{-1}$ and cannot do better. Task studied also for list-decoding~\cite{Elias57,Wozencraft58} in~\cite{BFGG20} and more generally for a larger class of combinatorial optimization problems.
+
+Another POV on sending information that arise is the use of quantum ressources. Small and concise intro on quantum machanics. QE shared helps sending info while not being able to send info directly (BIBLIO TODO).
+
+A more general and abstract notion on ressource is non-signaling assistance. Explain, theoritical but useful, example of the CHSH game where it is stronger than quantum.
+
+Back to~\cite{BF18}: finding the best code relies in fact in finding a non-signaling code and transforming back into a classical code. Easy because NS is linear program. Also implies that the capacity regions are the same.
+
+Network channels intro, modelize complex situations where multiple inputs outputs. Update on what is known on Q here. (take common part of intros on MACs and Broadcast here)
+
+In this thesis, address the problem of finding efficient codes for several communication scenarios. First, address algo question motivated by a generalization of List-decoding and \cite{BFGG20}, as well as the more abstract algo problem (RK here not so interesting to look at NS as same capacity ? Discuss with Omar). Then problem studied for network scenarios of MACs, Broadcast channels, as well as their link to their NS capacities.
+
+Section results and summary of results.
+
+Keep MAC stuff and Broadcast stuff only for the specific chapters maybe ?
