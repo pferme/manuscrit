@@ -5,7 +5,7 @@
 \babel@toc {french}{}
 \babel@toc {english}{}
 \contentsline {chapter}{Abstract}{iv}{chapter*.1}
-\contentsline {chapter}{Acknowledgements}{v}{chapter*.2}
+\contentsline {chapter}{Remerciements}{v}{chapter*.2}
 \babel@toc {french}{}
 \babel@toc {english}{}
 \contentsline {chapter}{Contents}{vii}{section*.3}

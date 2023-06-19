@@ -11,13 +11,25 @@ Put typical set properties for 1 and 2 parties
 
 Put common lemmas and general stuff: convex order (3.3), negatively associated random variables: recall important properties etc. (clean 3.5.4 with that and Prop 5.15 moved to intro)
 
+Put some basic properties of channels for MAC here
+
+Hypothesis Testing on probas
+
+Finish proof of 4.72 (put calculus here)
+
+Put back results from BF18 in the background part
+
+Graph notations on partitions?
+
+
+
 General capacity region $\mathcal{C}^{\mathrm{S}}(W)$ from of success probability $\mathrm{S}(W,k_1,k_2)$ and zero error capacity region $\mathcal{C}_0^{\mathrm{S}}(W)$ (easy to define and clean way to generalize):
 
 \begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{S}}(W)$ for a success probability $\mathrm{S}(W,k_1,k_2)$]
   A rate pair $(R_1,R_2)$ is $\mathrm{S}$-achievable (for the channel $W$) if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   We define the $\mathrm{S}$-capacity region $\mathcal{C}^{\mathrm{S}}(W)$ as the closure of the set of all achievable rate pairs (for the channel $W$).
-\end{definiiton}
+\end{definition}
 
 \begin{definition}[Zero-Error Capacity Region $\mathcal{C}_0^{\mathrm{S}}(W)$ for a success probability $\mathrm{S}(W,k_1,k_2)$]
   A rate pair $(R_1,R_2)$ is $\mathrm{S}$-achievable with zero-error (for the channel $W$) if:
@@ -36,22 +48,12 @@ General capacity region $\mathcal{C}^{\mathrm{S}}(W)$ from of success probabilit
     \[ \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) \underset{n \rightarrow +\infty}{\rightarrow} 1 \text{ and }\mathrm{S}(W^{\otimes n},\ceil{2^{R_1'n}},\ceil{2^{R_2'n}}) \underset{n \rightarrow +\infty}{\rightarrow} 1 \ . \]
     Let $\lambda \in (0,1)$ rational and define $R_{\lambda,i} := \lambda \cdot R_i + (1-\lambda) \cdot R'_i$, let us show that $(R_{\lambda,1},R_{\lambda,2})$ is achievable with non-signaling assistance. Let us call respectively $k_i:=2^{R_i}, k_i' := 2^{R_i'}, k_{\lambda,i} := 2^{R_{\lambda,i}} = k_i^{\lambda}\cdot k_i^{(1-\lambda)}$.
 
-    We have $R_{\lambda,i}n = \lambda \cdot R_in + (1-\lambda) \cdot R_i'n = (\lambda n) \cdot R_i + (1-\lambda)n \cdot R_i'$. This is the idea of \emph{time-sharing}: for $\lambda n$ copies of the channel, we use the strategy with rate $(R_1,R_2)$ and for the $(1-\lambda)n$ other copies of the channel, we use the strategy with rate $(R_1',R_2')$. There exists some $n$ such that $\lambda n,(1-\lambda)n,\lambda n R_i,(1-\lambda)n R_i'$ are integers, since everything is rational. This implies that $k_i^{\lambda n},k_i'^{(1-\lambda)n},k_{\lambda,i}^n$ are integers. Thus, by hypothesis, we have that $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda, 2})$ is larger than or equal to:
-\[ \mathrm{S}(W^{\otimes (\lambda n)}, k_1^{\lambda n}, k_2^{\lambda n}) \cdot \mathrm{S}(W^{\otimes ((1-\lambda) n)}, k'_1^{(1-\lambda) n}, k'_2^{(1-\lambda) n}) \underset{n \rightarrow +\infty}{\rightarrow} 1 \cdot 1 = 1  \ .\]
+    We have $R_{\lambda,i}n = \lambda \cdot R_in + (1-\lambda) \cdot R_i'n = (\lambda n) \cdot R_i + (1-\lambda)n \cdot R_i'$. This is the idea of \emph{time-sharing}: for $\lambda n$ copies of the channel, we use the strategy with rate $(R_1,R_2)$ and for the $(1-\lambda)n$ other copies of the channel, we use the strategy with rate $(R_1',R_2')$. There exists some $n$ such that $\lambda n,(1-\lambda)n,\lambda n R_i,(1-\lambda)n R_i'$ are integers, since everything is rational. This implies that $k_i^{\lambda n},k_i^{\prime (1-\lambda)n},k_{\lambda,i}^n$ are integers. Thus, by hypothesis, we have that $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda, 2})$ is larger than or equal to:
+\[ \mathrm{S}(W^{\otimes (\lambda n)}, k_1^{\lambda n}, k_2^{\lambda n}) \cdot \mathrm{S}(W^{\otimes ((1-\lambda) n)}, k_1^{\prime (1-\lambda) n}, k_2^{\prime (1-\lambda) n}) \underset{n \rightarrow +\infty}{\rightarrow} 1 \cdot 1 = 1  \ .\]
 
 Thus, since $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we get the result $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \underset{n \rightarrow +\infty}{\rightarrow} 1$, so $(R_{\lambda,1},R_{\lambda,2})$ is $\mathrm{S}$-achievable for the channel $W$. Finally, since $\mathcal{C}^{\mathrm{S}}(W)$ is defined as the closure of $\mathrm{S}$-achievable rates for the channel $W$, we get that $\mathcal{C}^{\mathrm{S}}(W)$ is convex.
 
 For zero-error capacity regions, since by hypothesis there exists ranks $n_0,n_0'$ such that $\mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1$ for $n \geq n_0$ and $\mathrm{S}(W^{\otimes n},\ceil{2^{R_1'n}},\ceil{2^{R_2'n}}) = 1$ for $n \geq n_0'$, then in particular we get that for $\lambda n \geq n_0$ and $(1-\lambda) n \geq n_0'$ that $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda, 2})$ is larger than or equal to:
-\[ \mathrm{S}(W^{\otimes (\lambda n)}, k_1^{\lambda n}, k_2^{\lambda n}) \cdot \mathrm{S}(W^{\otimes ((1-\lambda) n)}, k'_1^{(1-\lambda) n}, k'_2^{(1-\lambda) n}) = 1 \ .\]
+\[ \mathrm{S}(W^{\otimes (\lambda n)}, k_1^{\lambda n}, k_2^{\lambda n}) \cdot \mathrm{S}(W^{\otimes ((1-\lambda) n)}, k_1^{\prime (1-\lambda) n}, k_2^{\prime (1-\lambda) n}) = 1 \ .\]
 It is in particular true for $n \geq n_0 := \max\left(\ceil{\frac{n_0'}{1-\lambda}},\ceil{\frac{n_0}{\lambda}}\right)$. As $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we have  for all $n \geq n_0$ that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) = 1$, i.e. $(R_{\lambda,1},R_{\lambda,2})$ is $\mathrm{S}$-achievable with zero-error for the channel $W$.  Finally, since $\mathcal{C}_0^{\mathrm{S}}(W)$ is defined as the closure of $\mathrm{S}$-achievable rates with zero-error for the channel $W$, we get that $\mathcal{C}_0^{\mathrm{S}}(W)$ is convex.
 \end{proof}
-
-Put some basic properties of channels for MAC here
-
-Hypothesis Testing on probas
-
-Finish proof of 4.72 (put calculus here)
-
-Put back results from BF18 in the background part
-
-Graph notations on partitions?
