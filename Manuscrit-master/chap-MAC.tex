@@ -15,7 +15,7 @@ We also study the case where non-signaling assistance is shared only between eac
 \section{Multiple Access Channels Capacities}
 \label{section:capacity}
 \subsection{Classical Capacities}
-Formally, a MAC $W$ is a conditional probability distribution depending on two inputs in $\mathcal{X}_1$ and $\mathcal{X}_2$, and an output in $\mathcal{Y}$, so $W := \left(W(y|x_1x_2)\right)_{x_1 \in \mathcal{X}_1,x_2  \in \mathcal{X}_2, y \in \mathcal{Y}}$ with $W(y|x_1x_2) \geq 0$ and $\sum_{y \in \mathcal{Y}} W(y|x_1x_2) = 1$. We will denote such a MAC by $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$. The tensor product of two MACs $W: \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ and $W': \mathcal{X}'_1 \times \mathcal{X}'_2 \rightarrow \mathcal{Y}'$ is denoted by $W \otimes W' : (\mathcal{X}_1 \times \mathcal{X}'_1) \times (\mathcal{X}_2 \times \mathcal{X}'_2) \to \mathcal{Y} \times \mathcal{Y}'$ and defined by $(W \otimes W')(yy'|x_1x_1'x_2x_2') := W(y|x_1x_2) \cdot W'(y'|x_1'x_2')$. We denote by $W^{\otimes n}(y^n|x_1^nx_2^n) := \prod_{i=1}^nW(y_i|x_{1,i}x_{2,i})$, for $y^n := y_1 \ldots y_n \in \mathcal{Y}^n$, $x_1^n := x_{1,1} \ldots x_{1,n} \in \mathcal{X}_1^n$ and $x_2^n := x_{2,1} \ldots x_{2,n} \in \mathcal{X}_2^n$. We will use the notation $[k]:=\{1,\ldots,k\}$.
+%Formally, a MAC $W$ is a conditional probability distribution depending on two inputs in $\mathcal{X}_1$ and $\mathcal{X}_2$, and an output in $\mathcal{Y}$, so $W := \left(W(y|x_1x_2)\right)_{x_1 \in \mathcal{X}_1,x_2  \in \mathcal{X}_2, y \in \mathcal{Y}}$ with $W(y|x_1x_2) \geq 0$ and $\sum_{y \in \mathcal{Y}} W(y|x_1x_2) = 1$. We will denote such a MAC by $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$. The tensor product of two MACs $W: \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ and $W': \mathcal{X}'_1 \times \mathcal{X}'_2 \rightarrow \mathcal{Y}'$ is denoted by $W \otimes W' : (\mathcal{X}_1 \times \mathcal{X}'_1) \times (\mathcal{X}_2 \times \mathcal{X}'_2) \to \mathcal{Y} \times \mathcal{Y}'$ and defined by $(W \otimes W')(yy'|x_1x_1'x_2x_2') := W(y|x_1x_2) \cdot W'(y'|x_1'x_2')$. We denote by $W^{\otimes n}(y^n|x_1^nx_2^n) := \prod_{i=1}^nW(y_i|x_{1,i}x_{2,i})$, for $y^n := y_1 \ldots y_n \in \mathcal{Y}^n$, $x_1^n := x_{1,1} \ldots x_{1,n} \in \mathcal{X}_1^n$ and $x_2^n := x_{2,1} \ldots x_{2,n} \in \mathcal{X}_2^n$. We will use the notation $[k]:=\{1,\ldots,k\}$.
  
 
 The coding problem for a MAC $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ is the following: one wants to encode messages in $[k_1]$ into $\mathcal{X}_1$ and messages in $[k_2]$ into $\mathcal{X}_2$ independently, which will be given as input to the channel $W$. This results in a random output in $\mathcal{Y}$, which one needs to decode back into the corresponding messages in $[k_1]$ and $[k_2]$. We will call $e_1 : [k_1] \rightarrow \mathcal{X}_1$ the first encoder, $e_2 : [k_2] \rightarrow \mathcal{X}_2$ the second encoder and $d : \mathcal{Y} \rightarrow [k_1] \times [k_2]$ the decoder. This is depicted in Figure~\ref{fig:MACcoding}.
@@ -536,35 +536,6 @@ For the other direction, given those variables, non-signaling probability distri
 \end{proof}
 
 \subsection{Properties of $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$, $\mathcal{C}^{\mathrm{NS}}(W)$ and $\mathcal{C}^{\mathrm{NS}}_0(W)$}
-\begin{definition}
-  We say that a conditional probability distribution $P(a^n|x^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ is \emph{non-signaling} if for all $a^n, x^n, \hat{x}^n$, we have
-    \[ \forall i \in [n], \sum_{\hat{a}_i}P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) = \sum_{\hat{a}_i}P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n) \ .\]
-\end{definition}
-
-\begin{definition}
-  Let $P(a^n|x^n)$ a conditional probability distribution defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ and $P'(a'^n|x'^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}'_i \times \bigtimes_{i=1}^n \mathcal{X}'_i$. We define $P \otimes P'$ the tensor product conditional probability distribution defined on $\bigtimes_{i=1}^n(\mathcal{A}_i \times \mathcal{A}'_i) \times \bigtimes_{i=1}^n (\mathcal{X}_i \times \mathcal{X}'_i)$ by $\left(P \otimes P'\right)(a_1a'_1\ldots a_na'_n|x_1x'_1\ldots x_nx'_n) := P(a^n|x^n) \cdot P'(a'^n|x'^n)$.
-\end{definition}
-
-\begin{lemma}
-
-  \label{lem:NStensor}
-  If both $P$ and $P'$ are non-signaling, then $P \otimes P'$ is non-signaling.
-\end{lemma}
-\begin{proof}
-  Let $a^n \in \bigtimes_{j=1}^n\mathcal{A}_j$, $a'^n \in \bigtimes_{j=1}^n\mathcal{A}'_j$, $x^n \in \bigtimes_{j=1}^n \mathcal{X}_j$, $x'^n \in \bigtimes_{j=1}^n \mathcal{X}'_j$ and $\hat{x}_i \in \mathcal{X}_i$, $\hat{x}'_i \in \mathcal{X}'_i$. Using the fact that $P,P'$ are non-signaling, we have:
-  \begin{equation}
-    \begin{aligned}
-      &\sum_{\hat{a}_i\hat{a}_i'}P(a_1a'_1\ldots \hat{a}_i\hat{a}_i' \ldots a_na'_n|x_1x'_1\ldots x_ix'_i \ldots x_nx'_n)\\
-      = &\sum_{\hat{a}_i\hat{a}_i'}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) \cdot P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\\
-      = &\left(\sum_{\hat{a}_i}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\right)\\
-      = &\left(\sum_{\hat{a}_i}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots \hat{x}'_i \ldots x'_n)\right)\\
-      = &\sum_{\hat{a}_i\hat{a}_i'}\left(P \otimes P'\right)(a_1a'_1\ldots \hat{a}_i\hat{a}'_i \ldots a_na'_n|x_1x'_1\ldots \hat{x}_i\hat{x}'_i \ldots x_nx'_n) \ ,
-    \end{aligned}
-  \end{equation}
-  so $P \otimes P'$ is non-signaling.
-\end{proof}
-
-
 \begin{proposition}
   \label{prop:oneShot}
   For a MAC $W: \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ and $k_1,k_2 \in \mathbb{N}^*$, we have:
@@ -709,14 +680,7 @@ For the other direction, given those variables, non-signaling probability distri
 
 \begin{proof}
   \begin{enumerate}
-    \item Let $(R_1,R_2)$ and $(\tilde{R}_1,\tilde{R}_2)$, two pairs of rational rates achievable with non-signaling assistance for $W$, ie:
-    \[ \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) \underset{n \rightarrow +\infty}{\rightarrow} 1 \text{ and }\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{\tilde{R}_1n}},\ceil{2^{\tilde{R}_2n}}) \underset{n \rightarrow +\infty}{\rightarrow} 1 \ . \]
-    Let $\lambda \in (0,1)$ rational and define $R_{\lambda,i} := \lambda \cdot R_i + (1-\lambda) \cdot \tilde{R}_i$, let us show that $(R_{\lambda,1},R_{\lambda,2})$ is achievable with non-signaling assistance. Let us call respectively $k_i:=2^{R_i}, \tilde{k}_i := 2^{\tilde{R}_i}, k_{\lambda,i} := 2^{R_{\lambda,i}} = k_i^{\lambda}\cdot k_i^{(1-\lambda)}$.
-
-    We have $R_{\lambda,i}n = \lambda \cdot R_in + (1-\lambda) \cdot \tilde{R}_in = (\lambda n) \cdot R_i + (1-\lambda)n \cdot \tilde{R}_i$. This is the idea of \emph{time-sharing}: for $\lambda n$ copies of the MAC, we use the strategy with rate $(R_1,R_2)$ and for the $(1-\lambda)n$ other copies of the MAC, we use the strategy with rate $(\tilde{R}_1,\tilde{R}_2)$. There exists some $n$ such that $\lambda n,(1-\lambda)n,\lambda n R_i,(1-\lambda)n \tilde{R}_i$ are integers, since everything is rational. This implies that $k_i^{\lambda n},\tilde{k}_i^{(1-\lambda)n},k_{\lambda,i}^n$ are integers. Thus, thanks to the fourth property of Proposition~\ref{prop:oneShot}, we have that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda, 2})$ is larger than or equal to:
-\[ \mathrm{S}^{\mathrm{NS}}(W^{\otimes (\lambda n)}, k_1^{\lambda n}, k_2^{\lambda n}) \cdot \mathrm{S}^{\mathrm{NS}}(W^{\otimes ((1-\lambda) n)}, \tilde{k}_1^{(1-\lambda) n}, \tilde{k}_2^{(1-\lambda) n}) \underset{n \rightarrow +\infty}{\rightarrow} 1 \cdot 1 = 1  \ .\]
-
-    Thus in particular, since we have $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we get the result $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \underset{n \rightarrow +\infty}{\rightarrow} 1$, so $(R_{\lambda,1},R_{\lambda,2})$ is achievable with non-signaling assistance. Finally, since $\mathcal{C}^{\mathrm{NS}}(W)$ is defined as the closure of achievable rates with non-signaling assistance, we get that $\mathcal{C}^{\mathrm{NS}}(W)$ is convex.
+    \item It comes directly from Proposition~\ref{prop:timesharing} and the fourth property of Proposition~\ref{prop:oneShot}.
     
   \item By the second property of Proposition~\ref{prop:oneShot}, we have$\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \frac{|\mathcal{X}_1^n|}{k_1^n}$. In particular, if $R_1 > \log_2 |\mathcal{X}_1|$, then $k_1 > |\mathcal{X}_1|$ and we get that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \left(\frac{|\mathcal{X}_1|}{k_1}\right)^n \underset{n \rightarrow +\infty}{\rightarrow} 0$, so $R_1 > \log_2 |\mathcal{X}_1|$ is not achievable with non-signaling assistance. Symmetrically, $R_2 > \log_2 |\mathcal{X}_2|$ is not achievable with non-signaling assistance.
 
@@ -1263,14 +1227,9 @@ The following proposition shows that this is indeed a relaxation of the non-sign
   \begin{definition}[$\mathcal{C}^{\overline{\mathrm{NS}}}(W)$]
   A rate pair $(R_1,R_2)$ is achievable with relaxed non-signaling assistance if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\overline{\mathrm{NS}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  We define $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ as the closure of the convex hull of the set of all achievable rate pairs with relaxed non-signaling assistance.
+  We define $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ as the closure of of the set of all achievable rate pairs with relaxed non-signaling assistance.
   \end{definition}
 
-  \begin{rk}
-    One could show as in the non-relaxed case that $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ is convex without taking the convex hull in its definition.
-  \end{rk}
-
-NEW: SOLVE ISSUE OF DEF BY PREVIOUS REMARK: ALlOW UNIFICATION OF CAPACITY DEFINITIONS
   \begin{proposition}
      $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ is convex. 
   \end{proposition}
@@ -1289,10 +1248,7 @@ NEW: SOLVE ISSUE OF DEF BY PREVIOUS REMARK: ALlOW UNIFICATION OF CAPACITY DEFINI
         &= \mathrm{S}^{\overline{\mathrm{NS}}}(W, k_1, k_2) \cdot \mathrm{S}^{\overline{\mathrm{NS}}}(W', k_1', k_2') \ .
       \end{aligned}
     \end{equation}   
-    
-
   \end{proof}
-ENDNEW
 
   A direct property that follows from this definition and Proposition~\ref{prop:NSisrelaxed} is the fact that the non-signaling assisted capacity region is included in the relaxed non-signaling assisted capacity region.
   \begin{corollary}
@@ -1773,11 +1729,13 @@ In order to show additivity of the outer bound, we use the following lemma.
           \begin{aligned}
             &\mathbb{P}\left(\exists (x_1,x_2,y) : |\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \\
             &\leq \sum_{x_1,x_2,y} \mathbb{P}\left(|\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \\
+            &= \sum_{x_1,x_2,y} \mathbb{P}\left(\left|\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{P_{X_1X_2Y}(x_1,x_2,y)} - 1\right| > \varepsilon \right) \\
+            &= \sum_{x_1,x_2,y} \mathbb{P}\left(\left|\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{P_{X_1X_2|Y}(x_1,x_2|y)\pi(y|y^n)}\frac{\pi(y|y^n)}{P_Y(y)} - 1\right| > \varepsilon \right) \\
             &\leq \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} > \frac{1+\varepsilon}{1+\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right)\\
             &+ \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} < \frac{1-\varepsilon}{1-\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right) \ ,
           \end{aligned}
         \end{equation}
-        by calculations of~\cite{GK11}. However, since $\varepsilon' < \varepsilon$, we have $\frac{1+\varepsilon}{1+\varepsilon'} > 1$ and $\frac{1-\varepsilon}{1-\varepsilon'} < 1$. We will show that for all $x_1,x_2,y$ with $P_Y(y) > 0$, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability, with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, which will be enough to conclude the proof.
+        since $y^n \in  \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and thus $1-\varepsilon' \leq \frac{\pi(y|y^n)}{P_Y(y)} \leq 1+\varepsilon'$. However, since $\varepsilon' < \varepsilon$, we have $\frac{1+\varepsilon}{1+\varepsilon'} > 1$ and $\frac{1-\varepsilon}{1-\varepsilon'} < 1$. We will show that for all $x_1,x_2,y$ with $P_Y(y) > 0$, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability, with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, which will be enough to conclude the proof.
 
         Let us fix some $x_1,x_2,y$ with $P_Y(y) > 0$. Since $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, we have in particular $(1-\varepsilon')P_Y(y) \leq \pi(y|y^n) \leq (1+\varepsilon')P_Y(y)$. Thus $N := |\{i:y_i=y\}| = n\pi(y|y^n) \geq (1-\varepsilon')P_Y(y)n$. Then we have:
         \[ \frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} = \frac{1}{N}\sum_{i \in S}Z_i \text{ with }Z_i := \mathbbm{1}_{(X_{1,i},X_{2,i})=(x_1,x_2)} \text{ and } S := \{i:y_i=y\}\ . \]

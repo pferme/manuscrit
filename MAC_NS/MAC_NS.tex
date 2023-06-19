@@ -1811,12 +1811,13 @@ In order to show additivity of the outer bound, we use the following lemma.
             &\mathbb{P}\left((X_1^n,X_2^n,y^n) \notin \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right)\\
             &= \mathbb{P}\left(\exists (x_1,x_2,y) : |\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \\
             &\leq \sum_{x_1,x_2,y} \mathbb{P}\left(|\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \text{ by union bound,} \\
+            &= \sum_{x_1,x_2,y} \mathbb{P}\left(\left|\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{P_{X_1X_2Y}(x_1,x_2,y)} - 1\right| > \varepsilon \right) \\
+            &= \sum_{x_1,x_2,y} \mathbb{P}\left(\left|\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{P_{X_1X_2|Y}(x_1,x_2|y)\pi(y|y^n)}\frac{\pi(y|y^n)}{P_Y(y)} - 1\right| > \varepsilon \right) \\
             &\leq \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} > \frac{1+\varepsilon}{1+\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right)\\
-            &+ \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} < \frac{1-\varepsilon}{1-\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right)  \text{ by calculations of~\cite{GK11}.}\\
+            &+ \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} < \frac{1-\varepsilon}{1-\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right) \ ,
           \end{aligned}
         \end{equation}
-
-        However, since $\varepsilon' < \varepsilon$, we have $\frac{1+\varepsilon}{1+\varepsilon'} > 1$ and $\frac{1-\varepsilon}{1-\varepsilon'} < 1$. We will show that for all $x_1,x_2,y$ with $P_Y(y) > 0$, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability, with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, which will be enough to conclude the proof.
+        since $y^n \in  \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and thus $1-\varepsilon' \leq \frac{\pi(y|y^n)}{P_Y(y)} \leq 1+\varepsilon'$. However, since $\varepsilon' < \varepsilon$, we have $\frac{1+\varepsilon}{1+\varepsilon'} > 1$ and $\frac{1-\varepsilon}{1-\varepsilon'} < 1$. We will show that for all $x_1,x_2,y$ with $P_Y(y) > 0$, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability, with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, which will be enough to conclude the proof.
 
         Let us fix some $x_1,x_2,y$ with $P_Y(y) > 0$. Since $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, we have in particular $(1-\varepsilon')P_Y(y) \leq \pi(y|y^n) \leq (1+\varepsilon')P_Y(y)$. Thus $N := |\{i:y_i=y\}| = n\pi(y|y^n) \geq (1-\varepsilon')P_Y(y)n$. Then we have:
 

@@ -5,10 +5,6 @@ General Intro on Information Theory? With definitions of entropies etc.
 Graph notations on partitions?
 Groups and orbits and actions (basic stuff)?
 
-Put non-signaling basic properties
-
-Put general definition of channel $W$ with several inputs/outputs with $\mathcal{X}^n \rightarrow \mathcal{Y}^m$: specialization in different parts ($n=m=1$,$n=1,m=2$,$n=2,m=1$) (remove first paragraph of MAC and Broadcast)
-
 Put typical set properties for 1 and 2 parties
 
 Put common lemmas and general stuff: convex order (3.3), negatively associated random variables: recall important properties etc. (clean 3.5.4 with that and Prop 5.15 moved to intro)
@@ -17,14 +13,22 @@ Put some basic properties of channels for MAC here
 
 Hypothesis Testing on probas
 
-Finish proof of 4.72 (put calculus here)
+Put back results from~\cite{BF18} in the background part
 
-Put back results from BF18 in the background part
+General capacity region $\mathcal{C}^{\mathrm{S}}(W)$ from of success probability $\mathrm{S}(W,k_1,k_2)$ and zero error capacity region $\mathcal{C}_0^{\mathrm{S}}(W)$ (easy to define and clean way to generalize): TODO CHANGE IN THE MAIN DOCUMENTS BY APPLI OF THAT GENERAL DEFINITION.
 
+\newpage
+\section{Information Theory}
+\subsection{Channels}
+Formally, a channel $W$ is a conditional probability distribution depending on $n$ inputs belonging to $\mathcal{X}^n$ and $m$ outputs belonging to $\mathcal{Y}^m$, so $W := \left(W(y^m|x^n)\right)_{x^n \in \mathcal{X}^n, y^m \in \mathcal{Y}^m}$ with:
+  \[ \forall x^n,y^m, W(y^m|x^n) \geq 0 \text{ and } \forall x^n, \sum_{y^m \in \mathcal{Y}^m} W(y^m|x^n) = 1 \ . \]
+We will denote such a channel by $W : \mathcal{X}^n \rightarrow \mathcal{Y}^m$. The tensor product of two channels $W: \mathcal{X}^n \rightarrow \mathcal{Y}^m$ and $W': \mathcal{X}'^n \rightarrow \mathcal{Y}^m$ is denoted by $W \otimes W' : (\mathcal{X}^n \times \mathcal{X}^{\prime n}) \to  (\mathcal{Y}^n \times \mathcal{Y}^{\prime n})$ and defined by:
+\[ (W \otimes W')(y^my^{\prime m}|x^nx^{\prime n}) := W(y^m|x^n) \cdot W'^{\prime m}|x^{\prime n}) \ .\]
+We denote by $W^{\otimes n}$ the $n$th tensor product of $W$, i.e. $W^{\otimes n} = W \otimes \ldots \otimes W$ with $n$ occurences of $W$.
 
+When $n=m=1$, we will speak of regular or one-way channels. When $n>1,m=1$, we will speak of multiple-access channels. When $n=1,m>1$, we will speak of broadcast channels. If both $n,m$ are greater than $1$, we will speak of interference channels. More specifically, in this thesis, we will focus on the cases of $n=2,m=1$ and $n=1,m=2$, which are at the core of the specificity of network channels.
 
-General capacity region $\mathcal{C}^{\mathrm{S}}(W)$ from of success probability $\mathrm{S}(W,k_1,k_2)$ and zero error capacity region $\mathcal{C}_0^{\mathrm{S}}(W)$ (easy to define and clean way to generalize):
-
+\subsection{Capacity Regions}
 \begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{S}}(W)$ for a success probability $\mathrm{S}(W,k_1,k_2)$] 
   A rate pair $(R_1,R_2)$ is $\mathrm{S}$-achievable (for the channel $W$) if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
@@ -56,4 +60,33 @@ Thus, since $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, 
 For zero-error capacity regions, since by hypothesis there exists ranks $n_0,n_0'$ such that $\mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1$ for $n \geq n_0$ and $\mathrm{S}(W^{\otimes n},\ceil{2^{R_1'n}},\ceil{2^{R_2'n}}) = 1$ for $n \geq n_0'$, then in particular we get that for $\lambda n \geq n_0$ and $(1-\lambda) n \geq n_0'$ that $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda, 2})$ is larger than or equal to:
 \[ \mathrm{S}(W^{\otimes (\lambda n)}, k_1^{\lambda n}, k_2^{\lambda n}) \cdot \mathrm{S}(W^{\otimes ((1-\lambda) n)}, k_1^{\prime (1-\lambda) n}, k_2^{\prime (1-\lambda) n}) = 1 \ .\]
 It is in particular true for $n \geq n_0 := \max\left(\ceil{\frac{n_0'}{1-\lambda}},\ceil{\frac{n_0}{\lambda}}\right)$. As $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we have  for all $n \geq n_0$ that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) = 1$, i.e. $(R_{\lambda,1},R_{\lambda,2})$ is $\mathrm{S}$-achievable with zero-error for the channel $W$.  Finally, since $\mathcal{C}_0^{\mathrm{S}}(W)$ is defined as the closure of $\mathrm{S}$-achievable rates with zero-error for the channel $W$, we get that $\mathcal{C}_0^{\mathrm{S}}(W)$ is convex.
+\end{proof}
+
+\subsection{Non-signaling probability distributions}
+\begin{definition}
+  \label{defi:nonsignaling}
+  We say that a conditional probability distribution $P(a^n|x^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ is \emph{non-signaling} if for all $a^n, x^n, \hat{x}^n$, we have
+    \[ \forall i \in [n], \sum_{\hat{a}_i}P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) = \sum_{\hat{a}_i}P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n) \ .\]
+\end{definition}
+
+\begin{definition}
+  Let $P(a^n|x^n)$ a conditional probability distribution defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ and $P'(a'^n|x'^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}'_i \times \bigtimes_{i=1}^n \mathcal{X}'_i$. We define $P \otimes P'$ the tensor product conditional probability distribution defined on $\bigtimes_{i=1}^n(\mathcal{A}_i \times \mathcal{A}'_i) \times \bigtimes_{i=1}^n (\mathcal{X}_i \times \mathcal{X}'_i)$ by $\left(P \otimes P'\right)(a_1a'_1\ldots a_na'_n|x_1x'_1\ldots x_nx'_n) := P(a^n|x^n) \cdot P'(a'^n|x'^n)$.
+\end{definition}
+
+\begin{lemma}
+  \label{lem:NStensor}
+  If both $P$ and $P'$ are non-signaling, then $P \otimes P'$ is non-signaling.
+\end{lemma}
+\begin{proof}
+  Let $a^n \in \bigtimes_{j=1}^n\mathcal{A}_j$, $a'^n \in \bigtimes_{j=1}^n\mathcal{A}'_j$, $x^n \in \bigtimes_{j=1}^n \mathcal{X}_j$, $x'^n \in \bigtimes_{j=1}^n \mathcal{X}'_j$ and $\hat{x}_i \in \mathcal{X}_i$, $\hat{x}'_i \in \mathcal{X}'_i$. Using the fact that $P,P'$ are non-signaling, we have:
+  \begin{equation}
+    \begin{aligned}
+      &\sum_{\hat{a}_i\hat{a}_i'}P(a_1a'_1\ldots \hat{a}_i\hat{a}_i' \ldots a_na'_n|x_1x'_1\ldots x_ix'_i \ldots x_nx'_n)\\
+      = &\sum_{\hat{a}_i\hat{a}_i'}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) \cdot P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\\
+      = &\left(\sum_{\hat{a}_i}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\right)\\
+      = &\left(\sum_{\hat{a}_i}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots \hat{x}'_i \ldots x'_n)\right)\\
+      = &\sum_{\hat{a}_i\hat{a}_i'}\left(P \otimes P'\right)(a_1a'_1\ldots \hat{a}_i\hat{a}'_i \ldots a_na'_n|x_1x'_1\ldots \hat{x}_i\hat{x}'_i \ldots x_nx'_n) \ ,
+    \end{aligned}
+  \end{equation}
+  so $P \otimes P'$ is non-signaling.
 \end{proof}
