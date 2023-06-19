@@ -53,7 +53,7 @@
 \contentsline {paragraph}{Independent non-signaling assistance}{50}{section*.14}
 \contentsline {section}{\numberline {4.2}Properties of Non-Signaling Assisted Codes}{54}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Symmetrization}{54}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Properties of $\mathrm {S}^{\mathrm {NS}}(W,k_1,k_2)$, $\mathcal {C}^{\mathrm {NS}}(W)$ and $\mathcal {C}^{\mathrm {NS}}_0(W)$}{56}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Properties of $\mathrm {S}^{\mathrm {NS}}(W,k_1,k_2)$, $\mathcal {C}^{\mathrm {NS}}(W)$ and $\mathcal {C}^{\mathrm {NS}}_0(W)$}{55}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Linear Program with Reduced Size for Structured Channels}{61}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Non-Signaling Achievability Bounds}{66}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Zero-Error Non-Signaling Assisted Achievable Rate Pairs}{66}{subsection.4.3.1}
@@ -62,10 +62,10 @@
 \contentsline {paragraph}{Application to the Noisy Binary Adder Channel}{70}{section*.16}
 \contentsline {section}{\numberline {4.4}Relaxed Non-Signaling Assisted Capacity Region and Outer Bounds}{71}{section.4.4}
 \contentsline {paragraph}{Application to the Binary Adder Channel}{74}{section*.17}
-\contentsline {subsection}{\numberline {4.4.1}Outer Bound Part of Theorem~\ref {theo:CharaNSrelaxed}}{76}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Achievability Part of Theorem~\ref {theo:CharaNSrelaxed}}{84}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}Independent Non-Signaling Assisted Capacity Region}{89}{section.4.5}
-\contentsline {section}{\numberline {4.6}Conclusion}{94}{section.4.6}
+\contentsline {subsection}{\numberline {4.4.1}Outer Bound Part of Theorem~\ref {theo:CharaNSrelaxed}}{77}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Achievability Part of Theorem~\ref {theo:CharaNSrelaxed}}{83}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Independent Non-Signaling Assisted Capacity Region}{88}{section.4.5}
+\contentsline {section}{\numberline {4.6}Conclusion}{93}{section.4.6}
 \contentsline {chapter}{\chapternumberline {5}Broadcast Channel Coding with Non-Signaling Correlations}{95}{chapter.5}
 \contentsline {paragraph}{Our Results}{96}{section*.18}
 \contentsline {paragraph}{Organization}{97}{section*.19}
@@ -75,16 +75,16 @@
 \contentsline {subsection}{\numberline {5.1.3}The Joint Success Probability $\mathrm {S}(W,k_1,k_2)$}{99}{subsection.5.1.3}
 \contentsline {section}{\numberline {5.2}Non-Signaling Assistance}{101}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Non-Signaling Assistance between the Decoders}{101}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Full Non-Signaling Assistance}{104}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}Full Non-Signaling Assistance}{103}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Approximation of Deterministic Broadcast Channel Coding}{108}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Reformulation as a Bipartite Graph Problem}{109}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.1}Reformulation as a Bipartite Graph Problem}{108}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Approximation Algorithm for \textsc {DensestQuotientGraph}}{111}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Deterministic Non-Signaling Assisted Capacity Region}{114}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Hardness of Approximation of Broadcast Channel Coding}{119}{section.5.4}
+\contentsline {subsection}{\numberline {5.3.3}Deterministic Non-Signaling Assisted Capacity Region}{113}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Hardness of Approximation of Broadcast Channel Coding}{118}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Social Welfare Reformulation}{119}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Value Query Hardness}{120}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Limitations of the Model}{126}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}Conclusion}{126}{section.5.5}
+\contentsline {subsection}{\numberline {5.4.2}Value Query Hardness}{119}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Limitations of the Model}{125}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}Conclusion}{125}{section.5.5}
 \contentsline {chapter}{Conclusion}{127}{chapter*.20}
 \contentsline {chapter}{Bibliography}{129}{section*.22}
 \contentsline {chapter}{List of Figures}{137}{section*.23}

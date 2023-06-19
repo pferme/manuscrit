@@ -29,7 +29,8 @@ We denote by $W^{\otimes n}$ the $n$th tensor product of $W$, i.e. $W^{\otimes n
 When $n=m=1$, we will speak of regular or one-way channels. When $n>1,m=1$, we will speak of multiple-access channels. When $n=1,m>1$, we will speak of broadcast channels. If both $n,m$ are greater than $1$, we will speak of interference channels. More specifically, in this thesis, we will focus on the cases of $n=2,m=1$ and $n=1,m=2$, which are at the core of the specificity of network channels.
 
 \subsection{Capacity Regions}
-\begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{S}}(W)$ for a success probability $\mathrm{S}(W,k_1,k_2)$] 
+\begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{S}}(W)$ for a success probability $\mathrm{S}(W,k_1,k_2)$]
+  \label{defi:generalCapacityRegion}
   A rate pair $(R_1,R_2)$ is $\mathrm{S}$-achievable (for the channel $W$) if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   We define the $\mathrm{S}$-capacity region $\mathcal{C}^{\mathrm{S}}(W)$ as the closure of the set of all achievable rate pairs (for the channel $W$).

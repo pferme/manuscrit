@@ -72,12 +72,14 @@ One should note that we allow randomized encoders and decoders for generality re
 
 Since MACs are more general than point-to-point channels (by defining $W(y|x_1x_2):=\hat{W}(y|x_1)$ for $\hat{W}$ a point-to-point channel and looking only at its first input), computing $\mathrm{S}(W,k_1,k_2)$ is \textrm{NP}-hard, and it is even \textrm{NP}-hard to approximate $\mathrm{S}(W,k_1,k_2)$ within a better ratio than $\left(1-e^{-1}\right)$, as a consequence of the hardness result on $\mathrm{S}(W,k)$ shown in~\cite{BF18}.
 
-The (classical) capacity of a MAC, as defined for example in~\cite{CT01}, can be reformulated in the following way:
-\begin{definition}[Capacity Region $\mathcal{C}(W)$ of a MAC $W$]
-  A rate pair $(R_1,R_2)$ is achievable if:
-  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  We define the (classical) capacity region $\mathcal{C}(W)$ as the closure of the set of all achievable rate pairs.
-\end{definition}
+%The (classical) capacity of a MAC, as defined for example in~\cite{CT01}, can be reformulated in the following way:
+%\begin{definition}[Capacity Region $\mathcal{C}(W)$ of a MAC $W$]
+%  A rate pair $(R_1,R_2)$ is achievable if:
+%  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+%  We define the (classical) capacity region $\mathcal{C}(W)$ as the closure of the set of all achievable rate pairs.
+%\end{definition}
+
+The (classical) capacity region of a MAC $W$ is defined using Definition~\ref{defi:generalCapacityRegion} and $\mathrm{S}$ by $\mathcal{C}(W) := \mathcal{C}^{\mathrm{S}}(W)$, and its zero-error equivalent is defined by $\mathcal{C}_0(W) := \mathcal{C}_0^{\mathrm{S}}(W)$.
 
 The capacity region $\mathcal{C}(W)$ is characterized by a single-letter formula:
 
@@ -88,12 +90,12 @@ The capacity region $\mathcal{C}(W)$ is characterized by a single-letter formula
   for $(X_1,X_2) \in \mathcal{X}_1 \times \mathcal{X}_2$ following a product law $P_{X_1} \times P_{X_2}$, and $Y \in \mathcal{Y}$ the outcome of $W$ on inputs $X_1,X_2$.
 \end{theorem}
 
-For the zero-error (classical) capacity, this leads to the following definition:
-\begin{definition}[Zero-Error Capacity Region $\mathcal{C}_0(W)$ of a MAC $W$]
-  A rate pair $(R_1,R_2)$ is achievable with zero-error if:
-  \[ \exists n_0  \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  We define the zero-error (classical) capacity region $\mathcal{C}_0(W)$ as the closure of the set of all achievable rate pairs with zero-error.
-\end{definition}
+%For the zero-error (classical) capacity, this leads to the following definition:
+%\begin{definition}[Zero-Error Capacity Region $\mathcal{C}_0(W)$ of a MAC $W$]
+%  A rate pair $(R_1,R_2)$ is achievable with zero-error if:
+%  \[ \exists n_0  \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+%  We define the zero-error (classical) capacity region $\mathcal{C}_0(W)$ as the closure of the set of all achievable rate pairs with zero-error.
+%\end{definition}
 
 We will also consider what we call the sum success probability $\mathrm{S}_{\text{sum}}(W,k_1,k_2)$, defined using $\frac{\mathbb{P}\left(J_1=I_1\right)+\mathbb{P}\left(J_2=I_2\right)}{2}$ rather than $\mathbb{P}\left(J_1=I_1,J_2=I_2\right)$ as an objective value, which leads to the following optimization program:
 \begin{equation}
@@ -110,15 +112,17 @@ We will also consider what we call the sum success probability $\mathrm{S}_{\tex
 
 Note that we used independent decoders $d_1(j_1|y),d_2(j_2|y)$ rather than a global $d(j_1j_2|y)$ here. This does not change the value of the optimization program. Indeed, since the program is convex, an optimal solution can be found on the extremal points of the search space. Thus, if we had used the variable $d(j_1j_2|y)$, we could always take it to be a function $d$ from $\mathcal{Y}$ to $[k_1]\times[k_2]$. Taking $d_1,d_2$ as the first and second coordinates of that function satisfies the equality $d(j_1j_2|y) = d_1(j_1|y)d_2(j_2|y)$, and therefore, the value of the program is the same in both cases. Note that it is also true for the program computing $\mathrm{S}(W,k_1,k_2)$.
 
-As for the usual (joint) success probability, we can define its capacity region:
+%As for the usual (joint) success probability, we can define its capacity region:
 
-\begin{definition}[Sum-Capacity Region $\mathcal{C}_{\text{sum}}(W)$ of a MAC $W$]
-  A rate pair $(R_1,R_2)$ is sum-achievable if:
-  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  We define the sum-capacity region $\mathcal{C}_{\text{sum}}(W)$ as the closure of the set of all sum-achievable rate pairs.
-\end{definition}
+%\begin{definition}[Sum-Capacity Region $\mathcal{C}_{\text{sum}}(W)$ of a MAC $W$]
+%  A rate pair $(R_1,R_2)$ is sum-achievable if:
+%  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+%  We define the sum-capacity region $\mathcal{C}_{\text{sum}}(W)$ as the closure of the set of all sum-achievable rate pairs.
+%\end{definition}
 
-However, it turns out those two notions of success define the same capacity region:
+%However, it turns out those two notions of success define the same capacity region:
+
+As for the usual (joint) success probability, we can define its capacity region using Definition~\ref{defi:generalCapacityRegion} and $\mathrm{S}_{\text{sum}}$ by $\mathcal{C}_{\text{sum}}(W) := \mathcal{C}^{\mathrm{S}_{\text{sum}}}(W)$. It turns out those two notions of success define the same capacity region:
 \begin{proposition}
   \label{prop:CapaSumJoint}
   $\mathcal{C}(W) = \mathcal{C}_{\text{sum}}(W)$
@@ -258,18 +262,20 @@ As in the unassisted case, we want to maximize over all non-signaling box $P$ th
 
 Since it is given as a linear program, the complexity of computing $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ is polynomial in the number of variables and constraints (see for instance Section 7.1 of~\cite{GM07}), which is a polynomial in $|\mathcal{X}_1|,|\mathcal{X}_2|,|\mathcal{Y}|,k_1$ and $k_2$. Also, as it is easy to check that a classical strategy is a particular case of a non-signaling assisted strategy, we have that $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \geq \mathrm{S}(W,k_1,k_2)$.
 
-We have then the same definitions of capacity and zero-error capacity:
-\begin{definition}[Non-Signaling Assisted Capacity Region $\mathcal{C}^{\mathrm{NS}}(W)$ of a MAC $W$]
-  A rate pair $(R_1,R_2)$ is achievable with non-signaling assistance if:
-  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  We define the non-signaling assisted capacity region $\mathcal{C}^{\mathrm{NS}}(W)$ as the closure of the set of all achievable rate pairs with non-signaling assistance.
-\end{definition}
+%We have then the same definitions of capacity and zero-error capacity:
+%\begin{definition}[Non-Signaling Assisted Capacity Region $\mathcal{C}^{\mathrm{NS}}(W)$ of a MAC $W$]
+%  A rate pair $(R_1,R_2)$ is achievable with non-signaling assistance if:
+%  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+%  We define the non-signaling assisted capacity region $\mathcal{C}^{\mathrm{NS}}(W)$ as the closure of the set of all achievable rate pairs with non-signaling assistance.
+%\end{definition}
 
-\begin{definition}[Zero-Error Non-Signaling Assisted Capacity Region $\mathcal{C}^{\mathrm{NS}}_0(W)$ of a MAC $W$]
-  A rate pair $(R_1,R_2)$ is achievable with zero-error and non-signaling assistance if:
-  \[ \exists n_0 \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  We define the zero-error non-signaling assisted capacity region $\mathcal{C}^{\mathrm{NS}}_0(W)$ as the closure of the set of all achievable rate pairs with zero-error and non-signaling assistance.
-\end{definition}
+%\begin{definition}[Zero-Error Non-Signaling Assisted Capacity Region $\mathcal{C}^{\mathrm{NS}}_0(W)$ of a MAC $W$]
+%  A rate pair $(R_1,R_2)$ is achievable with zero-error and non-signaling assistance if:
+%  \[ \exists n_0 \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+%  We define the zero-error non-signaling assisted capacity region $\mathcal{C}^{\mathrm{NS}}_0(W)$ as the closure of the set of all achievable rate pairs with zero-error and non-signaling assistance.
+%\end{definition}
+
+As for the unassisted case, we define the non-signaling assisted capacity region using Definition~\ref{defi:generalCapacityRegion} and $\mathrm{S}^{\mathrm{NS}}$ by $\mathcal{C}^{\mathrm{NS}}(W) := \mathcal{C}^{\mathrm{S}^{\mathrm{NS}}}(W)$, and its zero-error equivalent is defined by $\mathcal{C}^{\mathrm{NS}}_0(W) := \mathcal{C}_0^{\mathrm{S}^{\mathrm{NS}}}(W)$.
 
 \paragraph{Independent non-signaling assistance} One can also consider the case where non-signaling assistance is shared independently between the first sender and the receiver as well as between the second encoder and the receiver, which we call independent non-signaling assistance. The precise scenario is depicted in Figure~\ref{fig:MACNSsrcoding}:
 
@@ -385,15 +391,15 @@ As before, one can also consider the sum-success probability $\mathrm{S}_{\text{
   \end{aligned}
 \end{equation}
 
-\begin{definition}[Independent Non-Signaling Assisted Capacity (resp. Sum-Capacity) Region $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)$ (resp. $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)$)  of a MAC $W$]
-  A rate pair $(R_1,R_2)$ is achievable (resp. sum-achievable) with independent non-signaling assistance if:
-  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+%\begin{definition}[Independent Non-Signaling Assisted Capacity (resp. Sum-Capacity) Region $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)$ (resp. $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)$)  of a MAC $W$]
+%  A rate pair $(R_1,R_2)$ is achievable (resp. sum-achievable) with independent non-signaling assistance if:
+%  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+%
+%   \[ (\text{resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ .) \]
+%  We define the independent non-signaling assisted capacity (resp. sum-capacity) region $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)$ (resp. $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)$) as the closure of the set of all achievable (resp. sum-achievable) rate pairs with independent non-signaling assistance.
+%\end{definition}
 
-   \[ (\text{resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ .) \]
-  We define the independent non-signaling assisted capacity (reps. sum-capacity) region $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)$ (resp. $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)$) as the closure of the set of all achievable (resp. sum-achievable) rate pairs with independent non-signaling assistance.
-\end{definition}
-
-However, it turns out those two notions of success define the same capacity region:
+We define the independent non-signaling assisted capacity (resp. sum-capacity) region using Definition~\ref{defi:generalCapacityRegion} by $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W) := \mathcal{C}^{\mathrm{S}^{\mathrm{NS}_{\mathrm{SR}}}}(W)$ (resp. $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W) := \mathcal{C}^{\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}}(W)$). It turns out those two notions of success define the same capacity region:
 \begin{proposition}
   \label{prop:NSCapaSumJoint}
   $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W) = \mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)$
@@ -1223,12 +1229,14 @@ The following proposition shows that this is indeed a relaxation of the non-sign
     Finally, we have directly $0 \leq r_{x_1,x_2,y} \leq p_{x_1,x_2}$, so the last constraint is satisfied.
   \end{proof}
 
-  We can now introduce the relaxed non-signaling assisted capacity region $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$:
-  \begin{definition}[$\mathcal{C}^{\overline{\mathrm{NS}}}(W)$]
-  A rate pair $(R_1,R_2)$ is achievable with relaxed non-signaling assistance if:
-  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\overline{\mathrm{NS}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  We define $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ as the closure of of the set of all achievable rate pairs with relaxed non-signaling assistance.
-  \end{definition}
+  %We can now introduce the relaxed non-signaling assisted capacity region $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$:
+  %\begin{definition}[$\mathcal{C}^{\overline{\mathrm{NS}}}(W)$]
+  %A rate pair $(R_1,R_2)$ is achievable with relaxed non-signaling assistance if:
+  %\[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\overline{\mathrm{NS}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+  %We define $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ as the closure of of the set of all achievable rate pairs with relaxed non-signaling assistance.
+  %\end{definition}
+
+  We can now define the relaxed non-signaling assisted capacity region of a MAC $W$ using Definition~\ref{defi:generalCapacityRegion} and $\mathrm{S}^{\overline{\mathrm{NS}}}$ by $\mathcal{C}^{\overline{\mathrm{NS}}}(W) := \mathcal{C}^{\mathrm{S}^{\overline{\mathrm{NS}}}}(W)$.
 
   \begin{proposition}
      $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ is convex. 

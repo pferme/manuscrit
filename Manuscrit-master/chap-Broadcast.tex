@@ -110,14 +110,16 @@ We will now focus on maximizing $\mathrm{p}(W,e,d_1,d_2)$ over all encoders $e$ 
   \end{aligned}
 \end{equation}
 
-The proof is the same as in the sum probability scenario. The objective values of those two optimization programs are not the same, but $\mathrm{S}(W,k_1,k_2)$ and $\mathrm{S}_{\text{sum}}(W,k_1,k_2)$ still characterize the same capacity region~\cite{Willems90}. Let us recall first the definition of their capacity regions:
+The proof is the same as in the sum probability scenario. We define their capacity regions using Definition~\ref{defi:generalCapacityRegion} by $\mathcal{C}(W):=\mathcal{C}^{\mathrm{S}}(W)$ and $\mathcal{C}_{\text{sum}}(W):=\mathcal{C}^{{\mathrm{S}}_{\text{sum}}}(W)$.
 
-\begin{definition}[Capacity Region $\mathcal{C}(W)$ (resp. $\mathcal{C}_{\text{sum}}(W)$) of a broadcast channel $W$]
-  A rate pair $(R_1,R_2)$ is achievable (resp. sum-achievable) if:
-  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  \[ \text{(resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 )\ . \]
-  We define the joint (resp. sum) (classical) capacity region $\mathcal{C}(W)$ (resp. $\mathcal{C}_{\text{sum}}(W)$) as the closure of the set of all achievable (resp. sum-achievable) rate pairs.
-\end{definition}
+The objective values of those two optimization programs are not the same, but $\mathrm{S}(W,k_1,k_2)$ and $\mathrm{S}_{\text{sum}}(W,k_1,k_2)$ still characterize the same capacity region~\cite{Willems90}: %Let us recall first the definition of their capacity regions:
+
+%\begin{definition}[Capacity Region $\mathcal{C}(W)$ (resp. $\mathcal{C}_{\text{sum}}(W)$) of a broadcast channel $W$]
+%  A rate pair $(R_1,R_2)$ is achievable (resp. sum-achievable) if:
+%  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+%  \[ \text{(resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 )\ . \]
+%  We define the joint (resp. sum) (classical) capacity region $\mathcal{C}(W)$ (resp. $\mathcal{C}_{\text{sum}}(W)$) as the closure of the set of all achievable (resp. sum-achievable) rate pairs.
+%\end{definition}
 
 \begin{proposition}
   \label{prop:capacitysum}
@@ -184,14 +186,14 @@ Thus, when receivers are given non-signaling assistance, the product $d_1(j_1|y_
   \end{aligned}
 \end{equation}
 
-The corresponding capacity regions $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ and $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$ are defined as before:
+The corresponding capacity regions $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W) := \mathcal{C}^{\mathrm{S}^{\mathrm{NS}_{\text{dec}}}}(W)$ and $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W) := \mathcal{C}^{\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}}(W)$ are defined as before using Definition~\ref{defi:generalCapacityRegion}.
 
-\begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$) of a broadcast channel $W$]
-  A rate pair $(R_1,R_2)$ is achievable (resp. sum-achievable) with non-signaling assistance between the decoders if:
-  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\text{dec}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  \[ \text{(resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 )\ . \]
-  We define the joint (resp. sum) capacity region with non-signaling assistance between the decoders $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$) as the closure of the set of all rate pairs achievable (resp. sum-achievable) with non-signaling assistance between the decoders.
-\end{definition}
+%\begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$) of a broadcast channel $W$]
+%  A rate pair $(R_1,R_2)$ is achievable (resp. sum-achievable) with non-signaling assistance between the decoders if:
+%  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\text{dec}}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+%  \[ \text{(resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 )\ . \]
+%  We define the joint (resp. sum) capacity region with non-signaling assistance between the decoders $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$) as the closure of the set of all rate pairs achievable (resp. sum-achievable) with non-signaling assistance between the decoders.
+%\end{definition}
 
 The objective of this section is to show that sharing non-signaling assistance between the decoders does not change the capacity regions of a broadcast channel. In order to do so, we will also show that sum and joint capacity regions with non-signaling assistance between the decoders are the same. This is an extension of the result by~\cite{PDB21} where it has been proved to be the case for the weaker resource that is quantum entanglement.
 
@@ -419,14 +421,14 @@ For the other direction, given those variables, a non-signaling probability dist
 \end{equation}
 \end{proof}
 
-As before, one can define the capacity regions of broadcast channels with non-signaling assistance:
+As before, one can define the capacity regions of broadcast channels with non-signaling assistance by $\mathcal{C}^{\mathrm{NS}}(W) :=  \mathcal{C}^{\mathrm{S}^{\mathrm{NS}}}(W)$ and $\mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W) := \mathcal{C}^{\mathrm{S}^{\mathrm{NS}}_{\text{sum}}}(W)$ using Definition~\ref{defi:generalCapacityRegion}.
 
-\begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{NS}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W)$) of a broadcast channel $W$]
-  A rate pair $(R_1,R_2)$ is achievable with (full) non-signaling assistance if:
-  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  \[ \text{(resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 )\ . \]
-  We define the joint (resp. sum) non-signaling assisted capacity region $\mathcal{C}^{\mathrm{NS}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W)$) as the closure of the set of all rate pairs achievable with (full) non-signaling assistance.
-\end{definition}
+%\begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{NS}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W)$) of a broadcast channel $W$]
+%  A rate pair $(R_1,R_2)$ is achievable with (full) non-signaling assistance if:
+%  \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+%  \[ \text{(resp. }\underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}_{\text{sum}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 )\ . \]
+%  We define the joint (resp. sum) non-signaling assisted capacity region $\mathcal{C}^{\mathrm{NS}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W)$) as the closure of the set of all rate pairs achievable with (full) non-signaling assistance.
+%\end{definition}
 
 \begin{proposition}
     For any broadcast channel $W$, $\mathcal{C}^{\mathrm{NS}}(W) = \mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W)$.
