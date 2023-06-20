@@ -1,10 +1,5 @@
-General Intro on Information Theory? With definitions of entropies etc. MAYBE
-Graph notations on partitions?
-Groups and orbits and actions (basic stuff)?
+Put common lemmas and general stuff: negatively associated random variables: recall important properties etc. (clean 3.5.4 with that) move chernoff broadcast to intro
 
-Put common lemmas and general stuff: negatively associated random variables: recall important properties etc. (clean 3.5.4 with that and Prop 5.15 moved to intro)
-
-\newpage
 \section{Probability}
 \subsection{Usual Distributions and Properties}
 \begin{definition}[Usual Distributions]
@@ -235,16 +230,7 @@ For zero-error capacity regions, since by hypothesis there exists ranks $n_0,n_0
 \[ \mathrm{S}(W^{\otimes (\lambda n)}, k_1^{\lambda n}, k_2^{\lambda n}) \cdot \mathrm{S}(W^{\otimes ((1-\lambda) n)}, k_1^{\prime (1-\lambda) n}, k_2^{\prime (1-\lambda) n}) = 1 \ .\]
 It is in particular true for $n \geq n_0 := \max\left(\ceil{\frac{n_0'}{1-\lambda}},\ceil{\frac{n_0}{\lambda}}\right)$. As $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we have  for all $n \geq n_0$ that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) = 1$, i.e. $(R_{\lambda,1},R_{\lambda,2})$ is $\mathrm{S}$-achievable with zero-error for the channel $W$.  Finally, since $\mathcal{C}_0[\mathrm{S}](W)$ is defined as the closure of $\mathrm{S}$-achievable rates with zero-error for the channel $W$, we get that $\mathcal{C}_0[\mathrm{S}](W)$ is convex.
 \end{proof}
-
-\section{Complexity?}
-TODO
-
-\section{Graphs?}
-TODO
-
-\section{Groups?}
-TODO 
-
+ 
 \section{Channel Coding for One-Way Channels}
 \label{subsection:onewaychannelcoding} 
 We recall here the main results from~\cite{BF18} on channel coding for one-way channels, i.e. with one input and one output. Let us first recall the definition of the maximum success probability $\mathrm{S}(W,k)$ of transmitting $k$ messages using the channel $W$:
