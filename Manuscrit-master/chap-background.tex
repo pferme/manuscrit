@@ -1,7 +1,7 @@
 P NP classes?
 Hardness reductions?
-General probability theory?
-General Intro on Information Theory? With definitions of entropies etc. 
+General probability theory? NO: only technical stuff and recall the distributions
+General Intro on Information Theory? With definitions of entropies etc. MAYBE
 Graph notations on partitions?
 Groups and orbits and actions (basic stuff)?
 
@@ -15,10 +15,176 @@ Hypothesis Testing on probas
 
 Put back results from~\cite{BF18} in the background part
 
-General capacity region $\mathcal{C}^{\mathrm{S}}(W)$ from of success probability $\mathrm{S}(W,k_1,k_2)$ and zero error capacity region $\mathcal{C}_0^{\mathrm{S}}(W)$ (easy to define and clean way to generalize): TODO CHANGE IN THE MAIN DOCUMENTS BY APPLI OF THAT GENERAL DEFINITION.
+General capacity region $\mathcal{C}^{\mathrm{S}}(W)$ from of success probability $\mathrm{S}(W,k_1,k_2)$ and zero error capacity region $\mathcal{C}_0^{\mathrm{S}}(W)$ (easy to define and clean way to generalize)
 
 \newpage
+\section{Probability}
+\subsection{Usual Distributions}
+TODO
+
+\subsection{Negatively Associated Random Variables}
+TODO
+
+\subsection{Tail Bounds}
+TODO 
+
+\subsection{Non-Signaling Probability Distributions}
+\begin{definition}
+  \label{defi:nonsignaling}
+  We say that a conditional probability distribution $P(a^n|x^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ is \emph{non-signaling} if for all $a^n, x^n, \hat{x}^n$, we have
+    \[ \forall i \in [n], \sum_{\hat{a}_i}P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) = \sum_{\hat{a}_i}P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n) \ .\]
+\end{definition}
+
+\begin{definition}
+  Let $P(a^n|x^n)$ a conditional probability distribution defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ and $P'(a'^n|x'^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}'_i \times \bigtimes_{i=1}^n \mathcal{X}'_i$. We define $P \otimes P'$ the tensor product conditional probability distribution defined on $\bigtimes_{i=1}^n(\mathcal{A}_i \times \mathcal{A}'_i) \times \bigtimes_{i=1}^n (\mathcal{X}_i \times \mathcal{X}'_i)$ by $\left(P \otimes P'\right)(a_1a'_1\ldots a_na'_n|x_1x'_1\ldots x_nx'_n) := P(a^n|x^n) \cdot P'(a'^n|x'^n)$.
+\end{definition}
+
+\begin{proposition}
+  \label{prop:NStensor}
+  If both $P$ and $P'$ are non-signaling, then $P \otimes P'$ is non-signaling.
+\end{proposition}
+\begin{proof}
+  Let $a^n \in \bigtimes_{j=1}^n\mathcal{A}_j$, $a'^n \in \bigtimes_{j=1}^n\mathcal{A}'_j$, $x^n \in \bigtimes_{j=1}^n \mathcal{X}_j$, $x'^n \in \bigtimes_{j=1}^n \mathcal{X}'_j$ and $\hat{x}_i \in \mathcal{X}_i$, $\hat{x}'_i \in \mathcal{X}'_i$. Using the fact that $P,P'$ are non-signaling, we have:
+  \begin{equation}
+    \begin{aligned}
+      &\sum_{\hat{a}_i\hat{a}_i'}P(a_1a'_1\ldots \hat{a}_i\hat{a}_i' \ldots a_na'_n|x_1x'_1\ldots x_ix'_i \ldots x_nx'_n)\\
+      = &\sum_{\hat{a}_i\hat{a}_i'}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) \cdot P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\\
+      = &\left(\sum_{\hat{a}_i}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\right)\\
+      = &\left(\sum_{\hat{a}_i}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots \hat{x}'_i \ldots x'_n)\right)\\
+      = &\sum_{\hat{a}_i\hat{a}_i'}\left(P \otimes P'\right)(a_1a'_1\ldots \hat{a}_i\hat{a}'_i \ldots a_na'_n|x_1x'_1\ldots \hat{x}_i\hat{x}'_i \ldots x_nx'_n) \ ,
+    \end{aligned}
+  \end{equation}
+  so $P \otimes P'$ is non-signaling.
+\end{proof}
+
+\subsection{Hypothesis Testing}
+TODO
+
 \section{Information Theory}
+\subsection{Information Quantities}
+In this subsection, $X,Y,Z$ will denote random variables over finite sets $\mathcal{X},\mathcal{Y},\mathcal{Z}$ and we will denote their distributions by $p_X(x) = \mathbb{P}(X=x)$, $p_{X,Y}(x,y) = \mathbb{P}(X=x,Y=y)$, $p_{X|Y}(x|y) = \mathbb{P}(X=x|Y=y), \ldots$
+\begin{definition}[(Shannon) Entropy $H(X)$]
+   The (Shannon) entropy $H(X)$ of $X$ is defined by:
+   \[ H(X) := \mathbb{E}_X[-\log(p_X(X))] = -\sum_{x \in \mathcal{X}}p_X(x)\log(p_X(x))\ . \]
+   The entropy of two random variables $X,Y$ is defined as $H(X,Y) := H((X,Y))$.
+\end{definition}
+
+\begin{definition}[Conditional Entropy $H(X|Y)$]
+  The conditional entropy $H(X|Y)$ of $X$ given $Y$ is defined by:
+   \begin{equation}
+      \begin{aligned}
+        H(X|Y) &:=  \sum_{y \in \mathcal{Y}}p_Y(y)H(X|Y=y)\\
+        &=  \sum_{y \in \mathcal{Y}}p_Y(y)\left(-\sum_{x \in \mathcal{X}}p_{X|Y}(x|y)\log(p_{X|Y}(x|y)) \right)\\
+        &= -\sum_{x \in \mathcal{X}, y \in \mathcal{Y}}p_{X,Y}(x,y)\log(p_{X|Y}(x|y)) \ .
+        \end{aligned}
+     \end{equation}
+\end{definition}
+
+\begin{definition}[Mutual Information $I(X:Y)$]
+  The mutual information $I(X:Y)$ of $X$ and $Y$ is defined by:
+    \[ I(X:Y) := \sum_{x \in \mathcal{X}, y \in \mathcal{Y}}p_{X,Y}(x,y)\log\left(\frac{p_{X,Y}(x,y)}{p_X(x)p_Y(y)}\right)\ .\]
+\end{definition}
+
+\begin{proposition}
+Equivalently, we have:
+\[ I(X:Y) = H(X) - H(X|Y) = H(Y) - H(Y|X) = H(X) + H(Y) - H(X,Y) \ .\]
+\end{proposition}
+
+\begin{definition}[Conditional Mutual Information $I(X:Y|Z)$]
+  The mutual information $I(X:Y|Z)$ of $X$ and $Y$ given $Z$ is defined by:
+    \begin{equation}
+       \begin{aligned}
+          I(X:Y|Z) &:= \sum_{z \in \mathcal{Z}}p_Z(z)I(X : Y|Z=z)\\
+          &= \sum_{x \in \mathcal{X}, y \in \mathcal{Y}, z \in \mathcal{Z}}p_{X,Y,Z}(x,y,z)\log\left(\frac{p_{X,Y|Z}(x,y|z)}{p_{X|Z}(x|z)p_{Y|Z}(y|z)}\right)\ .
+       \end{aligned}
+     \end{equation}   
+\end{definition}
+
+\begin{definition}[Markov chain $X \rightarrow Y \rightarrow Z$]
+We say that $X \rightarrow Y \rightarrow Z$ forms a Markov chain if $Z$ is conditionally independent from $X$ given $Y$, that is to say:
+\[\forall x \in \mathcal{X},\forall y \in \mathcal{Y},\forall z \in \mathcal{Z}, \mathbb{P}\left(Z=z|Y=y,X=x) = \mathbb{P}\left(Z=z|Y=y) \ .\]
+\end{definition}
+
+\subsection{Typical Sets}
+\label{subsection:typicalSets}
+We will consider the following typical sets defined in Chapter 2.5 of~\cite{GK11}: $\mathcal{T}^n_{\varepsilon}(X_1,X_2,Y)$, $\mathcal{T}^n_{\varepsilon}(X_1,X_2)$, $\mathcal{T}^n_{\varepsilon}(Y)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n,y^n)$, $\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)$. Recall that:
+      \begin{definition}[Typical set and conditional typical set]
+        We have the following definitions:
+        \begin{enumerate}
+        \item $\mathcal{T}^n_{\varepsilon}(X_1,X_2) := \{(x_1^n,x_2^n) : |\pi(x_1,x_2|x_1^n,x_2^n) - P_{X_1X_2}(x_1,x_2)|\leq \varepsilon P_{X_1X_2}(x_1,x_2)$ for all $(x_1,x_2) \in \mathcal{X}_1 \times \mathcal{X}_2\}$, where $\pi(x_1,x_2|x_1^n,x_2^n) := \frac{|\{i : (x_{1,i},x_{2,i}) = (x_1,x_2)\}|}{n}$. This definition generalizes for any $t$-uple of variables.
+    \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), \mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n) := \{ (x_1^n,x_2^n) : (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \}$
+        \end{enumerate}
+      \end{definition}
+
+      A crucial property of such typical sets is the typical average lemma:
+
+      \begin{lemma}[Typical Average Lemma~\cite{GK11}]
+        Let $(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)$. Then for any nonnegative function $g$ on $\mathcal{X}_1\times\mathcal{X}_2$:
+        \[ (1-\varepsilon)\mathbb{E}[g(X_1,X_2)] \leq \frac{1}{n}\sum_{i=1}^ng(x_{1,i},x_{2,i}) \leq (1+\varepsilon)\mathbb{E}[g(X_1,X_2)] \ . \]
+      \end{lemma}
+      
+      In particular, with this tool, we can derive the following properties:
+      
+      \begin{proposition}[Properties of typical sets~\cite{GK11}]
+        We have, among others, the following statements about typical sets:
+        \begin{enumerate}
+        \item $\forall (x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2), 2^{-n(1+\varepsilon)H(X_1,X_2)} \leq P_{X_1^nX_2^n}(x_1^n,x_2^n) \leq 2^{-n(1-\varepsilon)H(X_1,X_2)}$.
+        \item $\underset{n \rightarrow +\infty}{\lim} \mathbb{P}\left((X_1^n,X_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2) \right) = 1$.
+        \item $|\mathcal{T}^n_{\varepsilon}(X_1,X_2)| \leq 2^{n(1+\varepsilon)H(X_1,X_2)}$.
+        \item For $n$ sufficiently large, $|\mathcal{T}^n_{\varepsilon}(X_1,X_2)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2)}$.
+        \item If $(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)$ then $x_1^n \in \mathcal{T}^n_{\varepsilon}(X_1)$ and $x_2^n \in \mathcal{T}^n_{\varepsilon}(X_2)$.
+        \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), \mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n) \subseteq \mathcal{T}^n_{\varepsilon}(X_1,X_2)$.
+        \item $\forall (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y), 2^{-n(1+\varepsilon)H(X_1,X_2|Y)} \leq P_{X_1^nX_2^nY^n}(x_1^n,x_2^n|y^n) \leq 2^{-n(1-\varepsilon)H(X_1,X_2|Y)}$.
+        \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), |\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \leq 2^{n(1+\varepsilon)H(X_1,X_2|Y)}$.
+        \item For $\varepsilon' < \varepsilon$ and $n$ sufficiently large, we have that $\forall y^n \in \mathcal{T}^n_{\varepsilon'}(Y), |\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2|Y)}$.
+        \end{enumerate}
+      \end{proposition}
+      \begin{proof}
+        We reproduce the proof of the last statement here to emphasize on the fact that there is an $n_0$ such that for all $n \geq n_0$ and for all $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, the property holds.
+
+        For any $\varepsilon > \varepsilon' > 0$, let us show that there exists $n$ such that we have:
+        \[ \forall y^n \in \mathcal{T}^n_{\varepsilon'}(Y), \mathbb{P}\left((X_1^n,X_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right) \geq 1-\varepsilon \ , \]        
+        where $X_1^n, X_2^n$ are drawn from the distribution $P_{X_1^nX_2^n|Y^n=y^n}$. This will imply the statement. Indeed, we have that:
+        \begin{equation}
+          \begin{aligned}
+            \mathbb{P}\left((X_1^n,X_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right) &= \sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)} P_{X_1^nX_2^n|Y^n}(x_1^n,x_2^n|y^n) \\
+            &\leq |\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)|2^{-n(1-\varepsilon)H(X_1,X_2|Y)} \ ,
+          \end{aligned}
+        \end{equation}
+      
+        since $P_{X_1^nX_2^n|Y^n}(x_1^n,x_2^n|y^n) \leq 2^{-n(1-\varepsilon)H(X_1,X_2|Y)}$ as $(x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y)$. Thus, we have that $|\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2|Y)}$. In order to prove our result, we take the proof in Appendix 2A of~\cite{GK11}. We take $y^n \in \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and $(X_1^n,X_2^n) \sim P_{X_1^nX_2^n|Y^n}(x_1^n,x_2^n|y^n) = \prod_{i=1}^nP_{X_1X_2|Y}(x_{1,i},x_{2,i}|y_i)$. Applied to our choice of variables, we have that $\mathbb{P}\left((X_1^n,X_2^n,y^n) \notin \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right)$ is equal to:
+        \begin{equation}
+          \begin{aligned}
+            &\mathbb{P}\left(\exists (x_1,x_2,y) : |\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \\
+            &\leq \sum_{x_1,x_2,y} \mathbb{P}\left(|\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \\
+            &= \sum_{x_1,x_2,y} \mathbb{P}\left(\left|\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{P_{X_1X_2Y}(x_1,x_2,y)} - 1\right| > \varepsilon \right) \\
+            &= \sum_{x_1,x_2,y} \mathbb{P}\left(\left|\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{P_{X_1X_2|Y}(x_1,x_2|y)\pi(y|y^n)}\frac{\pi(y|y^n)}{P_Y(y)} - 1\right| > \varepsilon \right) \\
+            &\leq \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} > \frac{1+\varepsilon}{1+\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right)\\
+            &+ \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} < \frac{1-\varepsilon}{1-\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right) \ ,
+          \end{aligned}
+        \end{equation}
+        since $y^n \in  \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and thus $1-\varepsilon' \leq \frac{\pi(y|y^n)}{P_Y(y)} \leq 1+\varepsilon'$. However, since $\varepsilon' < \varepsilon$, we have $\frac{1+\varepsilon}{1+\varepsilon'} > 1$ and $\frac{1-\varepsilon}{1-\varepsilon'} < 1$. We will show that for all $x_1,x_2,y$ with $P_Y(y) > 0$, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability, with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, which will be enough to conclude the proof.
+
+        Let us fix some $x_1,x_2,y$ with $P_Y(y) > 0$. Since $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, we have in particular $(1-\varepsilon')P_Y(y) \leq \pi(y|y^n) \leq (1+\varepsilon')P_Y(y)$. Thus $N := |\{i:y_i=y\}| = n\pi(y|y^n) \geq (1-\varepsilon')P_Y(y)n$. Then we have:
+        \[ \frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} = \frac{1}{N}\sum_{i \in S}Z_i \text{ with }Z_i := \mathbbm{1}_{(X_{1,i},X_{2,i})=(x_1,x_2)} \text{ and } S := \{i:y_i=y\}\ . \]
+
+        Thus, all $Z_i$ with $i \in S$ are independent and follow the same law:      
+          \[ Z_i := \begin{cases}
+            1 & \text{ with probability } P_{X_1X_2|Y}(x_1,x_2|y) \\
+            0 & \text{ otherwise}
+          \end{cases}
+          \]
+
+
+          Furthermore, we have $\mathbb{E}[Z_i] = P_{X_1X_2|Y}(x_1,x_2|y)$, and all $Z_i$ have the same variance $\sigma_{x_1,x_2|y}^2 < +\infty$ (depending only on $X_1,X_2,Y,x_1,x_2,y$). Thus we can apply Chebyshev inequality:
+          \[ \mathbb{P}\left( \left|\frac{1}{N}\sum_{i \in S} Z_i - P_{X_1X_2|Y}(x_1,x_2|y) \right| \geq \eta \right) \leq \frac{\sigma_{x_1,x_2|y}^2}{N\eta^2} \ .\]
+
+          However, since $N \geq (1-\varepsilon')P_Y(y)n$, we get:
+          \[ \mathbb{P}\left( \left|\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} - P_{X_1X_2|Y}(x_1,x_2|y) \right| \geq \eta \right) \leq \frac{\sigma_{x_1,x_2|y}^2}{\eta^2(1-\varepsilon')P_Y(y)n} \underset{n \rightarrow +\infty}{\rightarrow} 0 \ .\]
+
+          Thus, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$.
+      \end{proof}
+
 \subsection{Channels}
 Formally, a channel $W$ is a conditional probability distribution depending on $n$ inputs belonging to $\mathcal{X}^n$ and $m$ outputs belonging to $\mathcal{Y}^m$, so $W := \left(W(y^m|x^n)\right)_{x^n \in \mathcal{X}^n, y^m \in \mathcal{Y}^m}$ with:
   \[ \forall x^n,y^m, W(y^m|x^n) \geq 0 \text{ and } \forall x^n, \sum_{y^m \in \mathcal{Y}^m} W(y^m|x^n) = 1 \ . \]
@@ -63,31 +229,14 @@ For zero-error capacity regions, since by hypothesis there exists ranks $n_0,n_0
 It is in particular true for $n \geq n_0 := \max\left(\ceil{\frac{n_0'}{1-\lambda}},\ceil{\frac{n_0}{\lambda}}\right)$. As $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we have  for all $n \geq n_0$ that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) = 1$, i.e. $(R_{\lambda,1},R_{\lambda,2})$ is $\mathrm{S}$-achievable with zero-error for the channel $W$.  Finally, since $\mathcal{C}_0^{\mathrm{S}}(W)$ is defined as the closure of $\mathrm{S}$-achievable rates with zero-error for the channel $W$, we get that $\mathcal{C}_0^{\mathrm{S}}(W)$ is convex.
 \end{proof}
 
-\subsection{Non-signaling probability distributions}
-\begin{definition}
-  \label{defi:nonsignaling}
-  We say that a conditional probability distribution $P(a^n|x^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ is \emph{non-signaling} if for all $a^n, x^n, \hat{x}^n$, we have
-    \[ \forall i \in [n], \sum_{\hat{a}_i}P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) = \sum_{\hat{a}_i}P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n) \ .\]
-\end{definition}
+\section{Complexity}
+TODO
 
-\begin{definition}
-  Let $P(a^n|x^n)$ a conditional probability distribution defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ and $P'(a'^n|x'^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}'_i \times \bigtimes_{i=1}^n \mathcal{X}'_i$. We define $P \otimes P'$ the tensor product conditional probability distribution defined on $\bigtimes_{i=1}^n(\mathcal{A}_i \times \mathcal{A}'_i) \times \bigtimes_{i=1}^n (\mathcal{X}_i \times \mathcal{X}'_i)$ by $\left(P \otimes P'\right)(a_1a'_1\ldots a_na'_n|x_1x'_1\ldots x_nx'_n) := P(a^n|x^n) \cdot P'(a'^n|x'^n)$.
-\end{definition}
+\section{Graphs}
+TODO
 
-\begin{lemma}
-  \label{lem:NStensor}
-  If both $P$ and $P'$ are non-signaling, then $P \otimes P'$ is non-signaling.
-\end{lemma}
-\begin{proof}
-  Let $a^n \in \bigtimes_{j=1}^n\mathcal{A}_j$, $a'^n \in \bigtimes_{j=1}^n\mathcal{A}'_j$, $x^n \in \bigtimes_{j=1}^n \mathcal{X}_j$, $x'^n \in \bigtimes_{j=1}^n \mathcal{X}'_j$ and $\hat{x}_i \in \mathcal{X}_i$, $\hat{x}'_i \in \mathcal{X}'_i$. Using the fact that $P,P'$ are non-signaling, we have:
-  \begin{equation}
-    \begin{aligned}
-      &\sum_{\hat{a}_i\hat{a}_i'}P(a_1a'_1\ldots \hat{a}_i\hat{a}_i' \ldots a_na'_n|x_1x'_1\ldots x_ix'_i \ldots x_nx'_n)\\
-      = &\sum_{\hat{a}_i\hat{a}_i'}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n) \cdot P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\\
-      = &\left(\sum_{\hat{a}_i}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots x_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots x'_i \ldots x'_n)\right)\\
-      = &\left(\sum_{\hat{a}_i}  P(a_1\ldots \hat{a}_i \ldots a_n|x_1\ldots \hat{x}_i \ldots x_n)\right) \cdot \left(\sum_{\hat{a}'_i}  P'(a'_1\ldots \hat{a}'_i \ldots a'_n|x'_1\ldots \hat{x}'_i \ldots x'_n)\right)\\
-      = &\sum_{\hat{a}_i\hat{a}_i'}\left(P \otimes P'\right)(a_1a'_1\ldots \hat{a}_i\hat{a}'_i \ldots a_na'_n|x_1x'_1\ldots \hat{x}_i\hat{x}'_i \ldots x_nx'_n) \ ,
-    \end{aligned}
-  \end{equation}
-  so $P \otimes P'$ is non-signaling.
-\end{proof}
+\section{Groups}
+TODO
+
+\section{Channel Coding for One-Way Channels}
+TODO~\cite{BF18}

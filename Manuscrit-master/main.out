@@ -5,64 +5,75 @@
 \BOOKMARK [0][-]{chapter*.4}{List of Symbols}{}% 5
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 6
 \BOOKMARK [0][-]{chapter.2}{Background}{}% 7
-\BOOKMARK [1][-]{section.2.1}{Information Theory}{chapter.2}% 8
-\BOOKMARK [2][-]{subsection.2.1.1}{Channels}{section.2.1}% 9
-\BOOKMARK [2][-]{subsection.2.1.2}{Capacity Regions}{section.2.1}% 10
-\BOOKMARK [2][-]{subsection.2.1.3}{Non-signaling probability distributions}{section.2.1}% 11
-\BOOKMARK [0][-]{chapter.3}{Tight Approximation Guarantees for Concave Coverage Problems}{}% 12
-\BOOKMARK [1][-]{section.3.1}{Approximation Algorithm for -MaxCoverage}{chapter.3}% 13
-\BOOKMARK [2][-]{subsection.3.1.1}{Generalization to Matroid Constraints}{section.3.1}% 14
-\BOOKMARK [1][-]{section.3.2}{Hardness of Approximation for -MaxCoverage}{chapter.3}% 15
-\BOOKMARK [2][-]{subsection.3.2.1}{Partitioning System}{section.3.2}% 16
-\BOOKMARK [2][-]{subsection.3.2.2}{The Reduction}{section.3.2}% 17
-\BOOKMARK [2][-]{subsection.3.2.3}{Further Hardness under Gap-ETH}{section.3.2}% 18
-\BOOKMARK [1][-]{section.3.3}{Applications}{chapter.3}% 19
-\BOOKMARK [2][-]{subsection.3.3.1}{Generalized List-Decoding}{section.3.3}% 20
-\BOOKMARK [2][-]{subsection.3.3.2}{Multiwinner Elections}{section.3.3}% 21
-\BOOKMARK [2][-]{subsection.3.3.3}{Resource Allocation in Multiagent Systems}{section.3.3}% 22
-\BOOKMARK [2][-]{subsection.3.3.4}{Vehicle-Target Assignment}{section.3.3}% 23
-\BOOKMARK [2][-]{subsection.3.3.5}{Welfare Maximization for -Coverage}{section.3.3}% 24
-\BOOKMARK [1][-]{section.3.4}{Conclusion}{chapter.3}% 25
-\BOOKMARK [1][-]{section.3.5}{Appendix}{chapter.3}% 26
-\BOOKMARK [2][-]{subsection.3.5.1}{General Properties}{section.3.5}% 27
-\BOOKMARK [2][-]{subsection.3.5.2}{Calculations of }{section.3.5}% 28
-\BOOKMARK [2][-]{subsection.3.5.3}{NP-hardness of ,h-AryGapLabelCover}{section.3.5}% 29
-\BOOKMARK [2][-]{subsection.3.5.4}{Proof of existence of partitioning systems}{section.3.5}% 30
-\BOOKMARK [2][-]{subsection.3.5.5}{Proof of Theorem 3.15}{section.3.5}% 31
-\BOOKMARK [0][-]{chapter.4}{Multiple-Access Channel Coding with Non-Signaling Correlations}{}% 32
-\BOOKMARK [1][-]{section.4.1}{Multiple Access Channels Capacities}{chapter.4}% 33
-\BOOKMARK [2][-]{subsection.4.1.1}{Classical Capacities}{section.4.1}% 34
-\BOOKMARK [2][-]{subsection.4.1.2}{Non-Signaling Assisted Capacities}{section.4.1}% 35
-\BOOKMARK [1][-]{section.4.2}{Properties of Non-Signaling Assisted Codes}{chapter.4}% 36
-\BOOKMARK [2][-]{subsection.4.2.1}{Symmetrization}{section.4.2}% 37
-\BOOKMARK [2][-]{subsection.4.2.2}{Properties of SNS\(W,k1,k2\), CNS\(W\) and CNS0\(W\)}{section.4.2}% 38
-\BOOKMARK [2][-]{subsection.4.2.3}{Linear Program with Reduced Size for Structured Channels}{section.4.2}% 39
-\BOOKMARK [1][-]{section.4.3}{Non-Signaling Achievability Bounds}{chapter.4}% 40
-\BOOKMARK [2][-]{subsection.4.3.1}{Zero-Error Non-Signaling Assisted Achievable Rate Pairs}{section.4.3}% 41
-\BOOKMARK [2][-]{subsection.4.3.2}{Non-Signaling Assisted Achievable Rate Pairs with Non-Zero Error}{section.4.3}% 42
-\BOOKMARK [1][-]{section.4.4}{Relaxed Non-Signaling Assisted Capacity Region and Outer Bounds}{chapter.4}% 43
-\BOOKMARK [2][-]{subsection.4.4.1}{Outer Bound Part of Theorem 4.22}{section.4.4}% 44
-\BOOKMARK [2][-]{subsection.4.4.2}{Achievability Part of Theorem 4.22}{section.4.4}% 45
-\BOOKMARK [1][-]{section.4.5}{Independent Non-Signaling Assisted Capacity Region}{chapter.4}% 46
-\BOOKMARK [1][-]{section.4.6}{Conclusion}{chapter.4}% 47
-\BOOKMARK [0][-]{chapter.5}{Broadcast Channel Coding with Non-Signaling Correlations}{}% 48
-\BOOKMARK [1][-]{section.5.1}{Broadcast Channel Coding}{chapter.5}% 49
-\BOOKMARK [2][-]{subsection.5.1.1}{Broadcast Channels}{section.5.1}% 50
-\BOOKMARK [2][-]{subsection.5.1.2}{The Sum Success Probability Ssum\(W,k1,k2\)}{section.5.1}% 51
-\BOOKMARK [2][-]{subsection.5.1.3}{The Joint Success Probability S\(W,k1,k2\)}{section.5.1}% 52
-\BOOKMARK [1][-]{section.5.2}{Non-Signaling Assistance}{chapter.5}% 53
-\BOOKMARK [2][-]{subsection.5.2.1}{Non-Signaling Assistance between the Decoders}{section.5.2}% 54
-\BOOKMARK [2][-]{subsection.5.2.2}{Full Non-Signaling Assistance}{section.5.2}% 55
-\BOOKMARK [1][-]{section.5.3}{Approximation of Deterministic Broadcast Channel Coding}{chapter.5}% 56
-\BOOKMARK [2][-]{subsection.5.3.1}{Reformulation as a Bipartite Graph Problem}{section.5.3}% 57
-\BOOKMARK [2][-]{subsection.5.3.2}{Approximation Algorithm for DensestQuotientGraph}{section.5.3}% 58
-\BOOKMARK [2][-]{subsection.5.3.3}{Deterministic Non-Signaling Assisted Capacity Region}{section.5.3}% 59
-\BOOKMARK [1][-]{section.5.4}{Hardness of Approximation of Broadcast Channel Coding}{chapter.5}% 60
-\BOOKMARK [2][-]{subsection.5.4.1}{Social Welfare Reformulation}{section.5.4}% 61
-\BOOKMARK [2][-]{subsection.5.4.2}{Value Query Hardness}{section.5.4}% 62
-\BOOKMARK [2][-]{subsection.5.4.3}{Limitations of the Model}{section.5.4}% 63
-\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 64
-\BOOKMARK [0][-]{chapter*.20}{Conclusion}{}% 65
-\BOOKMARK [0][-]{section*.22}{Bibliography}{}% 66
-\BOOKMARK [0][-]{section*.23}{List of Figures}{}% 67
-\BOOKMARK [0][-]{section*.24}{List of Tables}{}% 68
+\BOOKMARK [1][-]{section.2.1}{Probability}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.1.1}{Usual Distributions}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.2}{Negatively Associated Random Variables}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.3}{Tail Bounds}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.4}{Non-Signaling Probability Distributions}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.5}{Hypothesis Testing}{section.2.1}% 13
+\BOOKMARK [1][-]{section.2.2}{Information Theory}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.1}{Information Quantities}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.2}{Typical Sets}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.3}{Channels}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.4}{Capacity Regions}{section.2.2}% 18
+\BOOKMARK [1][-]{section.2.3}{Complexity}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.4}{Graphs}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.5}{Groups}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.6}{Channel Coding for One-Way Channels}{chapter.2}% 22
+\BOOKMARK [0][-]{chapter.3}{Tight Approximation Guarantees for Concave Coverage Problems}{}% 23
+\BOOKMARK [1][-]{section.3.1}{Approximation Algorithm for -MaxCoverage}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.1.1}{Generalization to Matroid Constraints}{section.3.1}% 25
+\BOOKMARK [1][-]{section.3.2}{Hardness of Approximation for -MaxCoverage}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.2.1}{Partitioning System}{section.3.2}% 27
+\BOOKMARK [2][-]{subsection.3.2.2}{The Reduction}{section.3.2}% 28
+\BOOKMARK [2][-]{subsection.3.2.3}{Further Hardness under Gap-ETH}{section.3.2}% 29
+\BOOKMARK [1][-]{section.3.3}{Applications}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.1}{Generalized List-Decoding}{section.3.3}% 31
+\BOOKMARK [2][-]{subsection.3.3.2}{Multiwinner Elections}{section.3.3}% 32
+\BOOKMARK [2][-]{subsection.3.3.3}{Resource Allocation in Multiagent Systems}{section.3.3}% 33
+\BOOKMARK [2][-]{subsection.3.3.4}{Vehicle-Target Assignment}{section.3.3}% 34
+\BOOKMARK [2][-]{subsection.3.3.5}{Welfare Maximization for -Coverage}{section.3.3}% 35
+\BOOKMARK [1][-]{section.3.4}{Conclusion}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.5}{Appendix}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.5.1}{General Properties}{section.3.5}% 38
+\BOOKMARK [2][-]{subsection.3.5.2}{Calculations of }{section.3.5}% 39
+\BOOKMARK [2][-]{subsection.3.5.3}{NP-hardness of ,h-AryGapLabelCover}{section.3.5}% 40
+\BOOKMARK [2][-]{subsection.3.5.4}{Proof of Existence of Partitioning Systems}{section.3.5}% 41
+\BOOKMARK [2][-]{subsection.3.5.5}{Proof of Theorem 3.15}{section.3.5}% 42
+\BOOKMARK [0][-]{chapter.4}{Multiple-Access Channel Coding with Non-Signaling Correlations}{}% 43
+\BOOKMARK [1][-]{section.4.1}{Multiple Access Channels Capacities}{chapter.4}% 44
+\BOOKMARK [2][-]{subsection.4.1.1}{Classical Capacities}{section.4.1}% 45
+\BOOKMARK [2][-]{subsection.4.1.2}{Non-Signaling Assisted Capacities}{section.4.1}% 46
+\BOOKMARK [1][-]{section.4.2}{Properties of Non-Signaling Assisted Codes}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.2.1}{Symmetrization}{section.4.2}% 48
+\BOOKMARK [2][-]{subsection.4.2.2}{Properties of SNS\(W,k1,k2\), CNS\(W\) and CNS0\(W\)}{section.4.2}% 49
+\BOOKMARK [2][-]{subsection.4.2.3}{Linear Program with Reduced Size for Structured Channels}{section.4.2}% 50
+\BOOKMARK [1][-]{section.4.3}{Non-Signaling Achievability Bounds}{chapter.4}% 51
+\BOOKMARK [2][-]{subsection.4.3.1}{Zero-Error Non-Signaling Assisted Achievable Rate Pairs}{section.4.3}% 52
+\BOOKMARK [2][-]{subsection.4.3.2}{Non-Signaling Assisted Achievable Rate Pairs with Non-Zero Error}{section.4.3}% 53
+\BOOKMARK [1][-]{section.4.4}{Relaxed Non-Signaling Assisted Capacity Region and Outer Bounds}{chapter.4}% 54
+\BOOKMARK [2][-]{subsection.4.4.1}{Outer Bound Part of Theorem 4.22}{section.4.4}% 55
+\BOOKMARK [2][-]{subsection.4.4.2}{Achievability Part of Theorem 4.22}{section.4.4}% 56
+\BOOKMARK [1][-]{section.4.5}{Independent Non-Signaling Assisted Capacity Region}{chapter.4}% 57
+\BOOKMARK [1][-]{section.4.6}{Conclusion}{chapter.4}% 58
+\BOOKMARK [0][-]{chapter.5}{Broadcast Channel Coding with Non-Signaling Correlations}{}% 59
+\BOOKMARK [1][-]{section.5.1}{Broadcast Channel Coding}{chapter.5}% 60
+\BOOKMARK [2][-]{subsection.5.1.1}{Broadcast Channels}{section.5.1}% 61
+\BOOKMARK [2][-]{subsection.5.1.2}{The Sum Success Probability Ssum\(W,k1,k2\)}{section.5.1}% 62
+\BOOKMARK [2][-]{subsection.5.1.3}{The Joint Success Probability S\(W,k1,k2\)}{section.5.1}% 63
+\BOOKMARK [1][-]{section.5.2}{Non-Signaling Assistance}{chapter.5}% 64
+\BOOKMARK [2][-]{subsection.5.2.1}{Non-Signaling Assistance between the Decoders}{section.5.2}% 65
+\BOOKMARK [2][-]{subsection.5.2.2}{Full Non-Signaling Assistance}{section.5.2}% 66
+\BOOKMARK [1][-]{section.5.3}{Approximation of Deterministic Broadcast Channel Coding}{chapter.5}% 67
+\BOOKMARK [2][-]{subsection.5.3.1}{Reformulation as a Bipartite Graph Problem}{section.5.3}% 68
+\BOOKMARK [2][-]{subsection.5.3.2}{Approximation Algorithm for DensestQuotientGraph}{section.5.3}% 69
+\BOOKMARK [2][-]{subsection.5.3.3}{Deterministic Non-Signaling Assisted Capacity Region}{section.5.3}% 70
+\BOOKMARK [1][-]{section.5.4}{Hardness of Approximation of Broadcast Channel Coding}{chapter.5}% 71
+\BOOKMARK [2][-]{subsection.5.4.1}{Social Welfare Reformulation}{section.5.4}% 72
+\BOOKMARK [2][-]{subsection.5.4.2}{Value Query Hardness}{section.5.4}% 73
+\BOOKMARK [2][-]{subsection.5.4.3}{Limitations of the Model}{section.5.4}% 74
+\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 75
+\BOOKMARK [0][-]{chapter*.20}{Conclusion}{}% 76
+\BOOKMARK [0][-]{section*.22}{Bibliography}{}% 77
+\BOOKMARK [0][-]{section*.23}{List of Figures}{}% 78
+\BOOKMARK [0][-]{section*.24}{List of Tables}{}% 79
