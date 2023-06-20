@@ -1,26 +1,36 @@
-P NP classes?
-Hardness reductions?
-General probability theory? NO: only technical stuff and recall the distributions
 General Intro on Information Theory? With definitions of entropies etc. MAYBE
 Graph notations on partitions?
 Groups and orbits and actions (basic stuff)?
 
-Put typical set properties for 1 and 2 parties
-
-Put common lemmas and general stuff: convex order (3.3), negatively associated random variables: recall important properties etc. (clean 3.5.4 with that and Prop 5.15 moved to intro)
-
-Put some basic properties of channels for MAC here
-
-Hypothesis Testing on probas
-
-Put back results from~\cite{BF18} in the background part
-
-General capacity region $\mathcal{C}^{\mathrm{S}}(W)$ from of success probability $\mathrm{S}(W,k_1,k_2)$ and zero error capacity region $\mathcal{C}_0^{\mathrm{S}}(W)$ (easy to define and clean way to generalize)
+Put common lemmas and general stuff: negatively associated random variables: recall important properties etc. (clean 3.5.4 with that and Prop 5.15 moved to intro)
 
 \newpage
 \section{Probability}
-\subsection{Usual Distributions}
-TODO
+\subsection{Usual Distributions and Properties}
+\begin{definition}[Usual Distributions]
+  \begin{enumerate}
+  \item The Bernouilli distribution $\Ber(p)$ is defined on $\{0,1\}$ with the mass function:
+        \[ (1-p,p) \ . \]
+  \item The binomial distribution $\Bin(n,p)$ is defined on $\{0,\ldots,n\}$ with the mass function:
+        \[ \left(\binom{n}{k}p^k(1-p)^{n-k}\right)_{k \in \{0,\ldots,n\}} \ .\]
+  \item The Poisson distribution $\Poi(\lambda)$ is defined on $\mathbb{N}$ with the mass function:
+        \[ \left(\frac{\lambda^ke^{-\lambda}}{k!}\right)_{k \in \mathbb{N}} \ .\]
+  \end{enumerate}      
+\end{definition}
+
+\begin{proposition}
+    For $\varphi$ concave, and $p \in [0,1]^m$, we have:
+    \[\mathbb{E}\Big[\varphi\Big(\sum_{i=1}^m\Ber(p_i)\Big)\Big] \geq \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i=1}^m p_i\Big)\Big)\Big]\ .\]
+  \label{prop:ConvexOrder}
+\end{proposition}
+
+\begin{proof}
+  The notion of \emph{convex order} discussed in~\cite{SS07} allows us to prove this result. We say that $X \leq_{\text{cx}} Y \iff \mathbb{E}[f(X)] \leq \mathbb{E}[f(Y)]$ for any convex $f$. Thanks to Lemma 2.3 of~\cite{BFGG20}, we have that for $p \in [0,1]$:
+  \[\Ber(p) \leq_{\text{cx}} \Poi(p)\ .\]
+  Since this order is preserved through convolution (Theorem 3.A.12 of~\cite{SS07}), and the fact that $\sum_{i=1}^m \Poi(p_i) \sim \Poi\Big(\sum_{i=1}^m p_i\Big)$, we have:
+  \[\sum_{i=1}^m\Ber(p_i) \leq_{\text{cx}}  \Poi\Big(\sum_{i=1}^m p_i\Big)\ .\]
+  Applying this result to $-\varphi$, which is convex, concludes the proof.
+\end{proof}
 
 \subsection{Negatively Associated Random Variables}
 TODO
@@ -57,15 +67,12 @@ TODO
   so $P \otimes P'$ is non-signaling.
 \end{proof}
 
-\subsection{Hypothesis Testing}
-TODO
-
 \section{Information Theory}
 \subsection{Information Quantities}
-In this subsection, $X,Y,Z$ will denote random variables over finite sets $\mathcal{X},\mathcal{Y},\mathcal{Z}$ and we will denote their distributions by $p_X(x) = \mathbb{P}(X=x)$, $p_{X,Y}(x,y) = \mathbb{P}(X=x,Y=y)$, $p_{X|Y}(x|y) = \mathbb{P}(X=x|Y=y), \ldots$
+In this subsection, $X,Y,Z$ will denote random variables over finite sets $\mathcal{X},\mathcal{Y},\mathcal{Z}$ and we will denote their distributions by $P_X(x) = \mathbb{P}(X=x)$, $P_{X,Y}(x,y) = \mathbb{P}(X=x,Y=y)$, $P_{X|Y}(x|y) = \mathbb{P}(X=x|Y=y), \ldots$
 \begin{definition}[(Shannon) Entropy $H(X)$]
    The (Shannon) entropy $H(X)$ of $X$ is defined by:
-   \[ H(X) := \mathbb{E}_X[-\log(p_X(X))] = -\sum_{x \in \mathcal{X}}p_X(x)\log(p_X(x))\ . \]
+   \[ H(X) := \mathbb{E}_X[-\log(P_X(X))] = -\sum_{x \in \mathcal{X}}P_X(x)\log(P_X(x))\ . \]
    The entropy of two random variables $X,Y$ is defined as $H(X,Y) := H((X,Y))$.
 \end{definition}
 
@@ -73,16 +80,16 @@ In this subsection, $X,Y,Z$ will denote random variables over finite sets $\math
   The conditional entropy $H(X|Y)$ of $X$ given $Y$ is defined by:
    \begin{equation}
       \begin{aligned}
-        H(X|Y) &:=  \sum_{y \in \mathcal{Y}}p_Y(y)H(X|Y=y)\\
-        &=  \sum_{y \in \mathcal{Y}}p_Y(y)\left(-\sum_{x \in \mathcal{X}}p_{X|Y}(x|y)\log(p_{X|Y}(x|y)) \right)\\
-        &= -\sum_{x \in \mathcal{X}, y \in \mathcal{Y}}p_{X,Y}(x,y)\log(p_{X|Y}(x|y)) \ .
+        H(X|Y) &:=  \sum_{y \in \mathcal{Y}}P_Y(y)H(X|Y=y)\\
+        &=  \sum_{y \in \mathcal{Y}}P_Y(y)\left(-\sum_{x \in \mathcal{X}}P_{X|Y}(x|y)\log(P_{X|Y}(x|y)) \right)\\
+        &= -\sum_{x \in \mathcal{X}, y \in \mathcal{Y}}P_{X,Y}(x,y)\log(P_{X|Y}(x|y)) \ .
         \end{aligned}
      \end{equation}
 \end{definition}
 
 \begin{definition}[Mutual Information $I(X:Y)$]
   The mutual information $I(X:Y)$ of $X$ and $Y$ is defined by:
-    \[ I(X:Y) := \sum_{x \in \mathcal{X}, y \in \mathcal{Y}}p_{X,Y}(x,y)\log\left(\frac{p_{X,Y}(x,y)}{p_X(x)p_Y(y)}\right)\ .\]
+    \[ I(X:Y) := \sum_{x \in \mathcal{X}, y \in \mathcal{Y}}P_{X,Y}(x,y)\log\left(\frac{P_{X,Y}(x,y)}{P_X(x)P_Y(y)}\right)\ .\]
 \end{definition}
 
 \begin{proposition}
@@ -94,15 +101,15 @@ Equivalently, we have:
   The mutual information $I(X:Y|Z)$ of $X$ and $Y$ given $Z$ is defined by:
     \begin{equation}
        \begin{aligned}
-          I(X:Y|Z) &:= \sum_{z \in \mathcal{Z}}p_Z(z)I(X : Y|Z=z)\\
-          &= \sum_{x \in \mathcal{X}, y \in \mathcal{Y}, z \in \mathcal{Z}}p_{X,Y,Z}(x,y,z)\log\left(\frac{p_{X,Y|Z}(x,y|z)}{p_{X|Z}(x|z)p_{Y|Z}(y|z)}\right)\ .
+          I(X:Y|Z) &:= \sum_{z \in \mathcal{Z}}P_Z(z)I(X : Y|Z=z)\\
+          &= \sum_{x \in \mathcal{X}, y \in \mathcal{Y}, z \in \mathcal{Z}}P_{X,Y,Z}(x,y,z)\log\left(\frac{P_{X,Y|Z}(x,y|z)}{P_{X|Z}(x|z)P_{Y|Z}(y|z)}\right)\ .
        \end{aligned}
      \end{equation}   
 \end{definition}
 
 \begin{definition}[Markov chain $X \rightarrow Y \rightarrow Z$]
 We say that $X \rightarrow Y \rightarrow Z$ forms a Markov chain if $Z$ is conditionally independent from $X$ given $Y$, that is to say:
-\[\forall x \in \mathcal{X},\forall y \in \mathcal{Y},\forall z \in \mathcal{Z}, \mathbb{P}\left(Z=z|Y=y,X=x) = \mathbb{P}\left(Z=z|Y=y) \ .\]
+\[\forall x \in \mathcal{X},\forall y \in \mathcal{Y},\forall z \in \mathcal{Z}, P_{Z|X,Y}(z|x,y) = P_{Z|Y}(z|y)   \ .\]
 \end{definition}
 
 \subsection{Typical Sets}
@@ -195,24 +202,24 @@ We denote by $W^{\otimes n}$ the $n$th tensor product of $W$, i.e. $W^{\otimes n
 When $n=m=1$, we will speak of regular or one-way channels. When $n>1,m=1$, we will speak of multiple-access channels. When $n=1,m>1$, we will speak of broadcast channels. If both $n,m$ are greater than $1$, we will speak of interference channels. More specifically, in this thesis, we will focus on the cases of $n=2,m=1$ and $n=1,m=2$, which are at the core of the specificity of network channels.
 
 \subsection{Capacity Regions}
-\begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{S}}(W)$ for a success probability $\mathrm{S}(W,k_1,k_2)$]
+\begin{definition}[Capacity Region ${\mathcal{C}[\mathrm{S}](W)}$ for a success probability $\mathrm{S}(W,k_1,k_2)$]
   \label{defi:generalCapacityRegion}
   A rate pair $(R_1,R_2)$ is $\mathrm{S}$-achievable (for the channel $W$) if:
   \[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  We define the $\mathrm{S}$-capacity region $\mathcal{C}^{\mathrm{S}}(W)$ as the closure of the set of all achievable rate pairs (for the channel $W$).
+  We define the $\mathrm{S}$-capacity region $\mathcal{C}[\mathrm{S}](W)$ as the closure of the set of all achievable rate pairs (for the channel $W$).
 \end{definition}
 
-\begin{definition}[Zero-Error Capacity Region $\mathcal{C}_0^{\mathrm{S}}(W)$ for a success probability $\mathrm{S}(W,k_1,k_2)$]
+\begin{definition}[Zero-Error Capacity Region ${\mathcal{C}_0[\mathrm{S}](W)}$ for a success probability $\mathrm{S}(W,k_1,k_2)$]
   A rate pair $(R_1,R_2)$ is $\mathrm{S}$-achievable with zero-error (for the channel $W$) if:
   \[ \exists n_0  \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-  We define the zero-error $\mathrm{S}$-capacity region $\mathcal{C}^{\mathrm{S}}(W)$ as the closure of the set of all achievable rate pairs with zero-error (for the channel $W$).
+  We define the zero-error $\mathrm{S}$-capacity region $\mathcal{C}[\mathrm{S}](W)$ as the closure of the set of all achievable rate pairs with zero-error (for the channel $W$).
 \end{definition}
 
 \begin{proposition}[Time-sharing]
   \label{prop:timesharing}
   If the success probability $\mathrm{S}$ satisfies:
   \[ \forall W,W', \forall k_1,k_2,k_1',k_2', \mathrm{S}(W \otimes W',k_1k_1',k_2k_2') \geq \mathrm{S}(W,k_1,k_2) \cdot \mathrm{S}(W',k_1',k_2') \ , \]
-  then for all channels $W$, $\mathcal{C}^{\mathrm{S}}(W)$ and $\mathcal{C}_0^{\mathrm{S}}(W)$ are convex.
+  then for all channels $W$, $\mathcal{C}[\mathrm{S}](W)$ and $\mathcal{C}_0[\mathrm{S}](W)$ are convex.
 \end{proposition}
 \begin{proof}
   Let $(R_1,R_2)$ and $(R_1',R_2')$, two pairs of $\mathrm{S}$-achievable rational rates for $W$, i.e.:
@@ -222,21 +229,68 @@ When $n=m=1$, we will speak of regular or one-way channels. When $n>1,m=1$, we w
     We have $R_{\lambda,i}n = \lambda \cdot R_in + (1-\lambda) \cdot R_i'n = (\lambda n) \cdot R_i + (1-\lambda)n \cdot R_i'$. This is the idea of \emph{time-sharing}: for $\lambda n$ copies of the channel, we use the strategy with rate $(R_1,R_2)$ and for the $(1-\lambda)n$ other copies of the channel, we use the strategy with rate $(R_1',R_2')$. There exists some $n$ such that $\lambda n,(1-\lambda)n,\lambda n R_i,(1-\lambda)n R_i'$ are integers, since everything is rational. This implies that $k_i^{\lambda n},k_i^{\prime (1-\lambda)n},k_{\lambda,i}^n$ are integers. Thus, by hypothesis, we have that $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda, 2})$ is larger than or equal to:
 \[ \mathrm{S}(W^{\otimes (\lambda n)}, k_1^{\lambda n}, k_2^{\lambda n}) \cdot \mathrm{S}(W^{\otimes ((1-\lambda) n)}, k_1^{\prime (1-\lambda) n}, k_2^{\prime (1-\lambda) n}) \underset{n \rightarrow +\infty}{\rightarrow} 1 \cdot 1 = 1  \ .\]
 
-Thus, since $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we get the result $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \underset{n \rightarrow +\infty}{\rightarrow} 1$, so $(R_{\lambda,1},R_{\lambda,2})$ is $\mathrm{S}$-achievable for the channel $W$. Finally, since $\mathcal{C}^{\mathrm{S}}(W)$ is defined as the closure of $\mathrm{S}$-achievable rates for the channel $W$, we get that $\mathcal{C}^{\mathrm{S}}(W)$ is convex.
+Thus, since $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we get the result $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \underset{n \rightarrow +\infty}{\rightarrow} 1$, so $(R_{\lambda,1},R_{\lambda,2})$ is $\mathrm{S}$-achievable for the channel $W$. Finally, since $\mathcal{C}[\mathrm{S}](W)$ is defined as the closure of $\mathrm{S}$-achievable rates for the channel $W$, we get that $\mathcal{C}[\mathrm{S}](W)$ is convex.
 
 For zero-error capacity regions, since by hypothesis there exists ranks $n_0,n_0'$ such that $\mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1$ for $n \geq n_0$ and $\mathrm{S}(W^{\otimes n},\ceil{2^{R_1'n}},\ceil{2^{R_2'n}}) = 1$ for $n \geq n_0'$, then in particular we get that for $\lambda n \geq n_0$ and $(1-\lambda) n \geq n_0'$ that $\mathrm{S}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda, 2})$ is larger than or equal to:
 \[ \mathrm{S}(W^{\otimes (\lambda n)}, k_1^{\lambda n}, k_2^{\lambda n}) \cdot \mathrm{S}(W^{\otimes ((1-\lambda) n)}, k_1^{\prime (1-\lambda) n}, k_2^{\prime (1-\lambda) n}) = 1 \ .\]
-It is in particular true for $n \geq n_0 := \max\left(\ceil{\frac{n_0'}{1-\lambda}},\ceil{\frac{n_0}{\lambda}}\right)$. As $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we have  for all $n \geq n_0$ that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) = 1$, i.e. $(R_{\lambda,1},R_{\lambda,2})$ is $\mathrm{S}$-achievable with zero-error for the channel $W$.  Finally, since $\mathcal{C}_0^{\mathrm{S}}(W)$ is defined as the closure of $\mathrm{S}$-achievable rates with zero-error for the channel $W$, we get that $\mathcal{C}_0^{\mathrm{S}}(W)$ is convex.
+It is in particular true for $n \geq n_0 := \max\left(\ceil{\frac{n_0'}{1-\lambda}},\ceil{\frac{n_0}{\lambda}}\right)$. As $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we have  for all $n \geq n_0$ that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) = 1$, i.e. $(R_{\lambda,1},R_{\lambda,2})$ is $\mathrm{S}$-achievable with zero-error for the channel $W$.  Finally, since $\mathcal{C}_0[\mathrm{S}](W)$ is defined as the closure of $\mathrm{S}$-achievable rates with zero-error for the channel $W$, we get that $\mathcal{C}_0[\mathrm{S}](W)$ is convex.
 \end{proof}
 
-\section{Complexity}
+\section{Complexity?}
 TODO
 
-\section{Graphs}
+\section{Graphs?}
 TODO
 
-\section{Groups}
-TODO
+\section{Groups?}
+TODO 
 
 \section{Channel Coding for One-Way Channels}
-TODO~\cite{BF18}
+\label{subsection:onewaychannelcoding} 
+We recall here the main results from~\cite{BF18} on channel coding for one-way channels, i.e. with one input and one output. Let us first recall the definition of the maximum success probability $\mathrm{S}(W,k)$ of transmitting $k$ messages using the channel $W$:
+\begin{equation}
+  \begin{aligned}
+    \mathrm{S}(W,k) := &&\underset{e,d}{\maxi} &&& \frac{1}{k} \sum_{i,x,y} W(y|x)e(x|i)d(i|y)\\
+    &&\st &&& \sum_{x \in \mathcal{X}} e(x|i) = 1, \forall i \in [k]\\
+    &&&&& \sum_{j \in [k]} d(j|y) = 1, \forall y \in \mathcal{Y}\\
+    &&&&& e(x|i), d(j|y) \geq 0
+  \end{aligned}
+\end{equation}
+
+Then, the following characterization of $\mathrm{S}(W,k)$ can be derived:
+
+\begin{proposition}[Proposition 2.1 of~\cite{BF18}]
+  $\mathrm{S}(W,k) = \frac{1}{k} \underset{S \subseteq X: |S| \leq k}{\max} f_W(S)$ with $f_W(S) := \sum_{y \in Y} \max_{x \in S} W(y|x)$.
+\end{proposition}
+
+One can consider non-signaling assistance shared between the sender and the receiver, which leads to the following maximum success probability:
+\begin{equation}
+  \begin{aligned}
+    \mathrm{S}^{\mathrm{NS}}(W,k) := &&\underset{P}{\maxi} &&& \frac{1}{k} \sum_{i,x,y} W(y|x)P(xi|iy)\\
+    &&\st &&& \sum_{x} P(xj|iy) = \sum_{x} P(xj|i'y)\\
+    &&&&& \sum_{j} P(xj|iy) = \sum_{j} P(xj|iy')\\
+    &&&&& \sum_{x,j} P(xj|iy) = 1\\
+    &&&&& P(xj|iy) \geq 0
+  \end{aligned}
+\end{equation}
+
+A symmetrization can also be done to simplify the expression of the linear program defining $\mathrm{S}^{\mathrm{NS}}(W,k)$:
+\begin{proposition}[Appendix A of~\cite{BF18}]
+  \label{prop:NSonewayLP}
+  \begin{equation}
+    \begin{aligned}
+      \mathrm{S}^{\mathrm{NS}}(W,k) = &&\underset{r,p}{\maxi} &&& \frac{1}{k} \sum_{x,y} W(y|x)r_{x,y}\\
+      &&\st &&& \sum_{x} r_{x,y} = 1\\
+      &&&&& \sum_{x} p_{x} = k\\
+      &&&&& 0 \leq r_{x,y} \leq p_{x}
+    \end{aligned}
+  \end{equation}
+\end{proposition}
+
+Finally, the main tool we will use from~\cite{BF18} is the following random coding technique, which describes how to find a classical code with a success probability close to the non-signaling assisted one:
+\begin{theorem}[Theorem 3.1 of~\cite{BF18}]
+  \label{theo:RandomCoding}
+  Given a solution $r,p$ of the program computing $\mathrm{S}^{\mathrm{NS}}(W,k)$, we have that:
+  \[ \mathbb{E}_S\left[\frac{f_W(S)}{\ell}\right] \geq \frac{k}{\ell}\left(1-\left(1-\frac{1}{k}\right)^{\ell}\right) \cdot \frac{1}{k} \sum_{x,y} W(y|x)r_{x,y} , \]
+  for the multiset $S$ obtained by choosing $\ell$ elements of $\mathcal{X}$ independently according to the distribution $\left(\frac{p_{x}}{k}\right)_{x \in \mathcal{X}}$.
+\end{theorem}

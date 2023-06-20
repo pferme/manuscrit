@@ -110,7 +110,7 @@ We will now focus on maximizing $\mathrm{p}(W,e,d_1,d_2)$ over all encoders $e$ 
   \end{aligned}
 \end{equation}
 
-The proof is the same as in the sum probability scenario. We define their capacity regions using Definition~\ref{defi:generalCapacityRegion} by $\mathcal{C}(W):=\mathcal{C}^{\mathrm{S}}(W)$ and $\mathcal{C}_{\text{sum}}(W):=\mathcal{C}^{{\mathrm{S}}_{\text{sum}}}(W)$.
+The proof is the same as in the sum probability scenario. We define their capacity regions using Definition~\ref{defi:generalCapacityRegion} by $\mathcal{C}(W):=\mathcal{C}[\mathrm{S}](W)$ and $\mathcal{C}_{\text{sum}}(W):=\mathcal{C}[{\mathrm{S}}_{\text{sum}}](W)$.
 
 The objective values of those two optimization programs are not the same, but $\mathrm{S}(W,k_1,k_2)$ and $\mathrm{S}_{\text{sum}}(W,k_1,k_2)$ still characterize the same capacity region~\cite{Willems90}: %Let us recall first the definition of their capacity regions:
 
@@ -186,7 +186,7 @@ Thus, when receivers are given non-signaling assistance, the product $d_1(j_1|y_
   \end{aligned}
 \end{equation}
 
-The corresponding capacity regions $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W) := \mathcal{C}^{\mathrm{S}^{\mathrm{NS}_{\text{dec}}}}(W)$ and $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W) := \mathcal{C}^{\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}}(W)$ are defined as before using Definition~\ref{defi:generalCapacityRegion}.
+The corresponding capacity regions $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W) := \mathcal{C}[\mathrm{S}^{\mathrm{NS}_{\text{dec}}}](W)$ and $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W) := \mathcal{C}[\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}](W)$ are defined as before using Definition~\ref{defi:generalCapacityRegion}.
 
 %\begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$) of a broadcast channel $W$]
 %  A rate pair $(R_1,R_2)$ is achievable (resp. sum-achievable) with non-signaling assistance between the decoders if:
@@ -421,7 +421,7 @@ For the other direction, given those variables, a non-signaling probability dist
 \end{equation}
 \end{proof}
 
-As before, one can define the capacity regions of broadcast channels with non-signaling assistance by $\mathcal{C}^{\mathrm{NS}}(W) :=  \mathcal{C}^{\mathrm{S}^{\mathrm{NS}}}(W)$ and $\mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W) := \mathcal{C}^{\mathrm{S}^{\mathrm{NS}}_{\text{sum}}}(W)$ using Definition~\ref{defi:generalCapacityRegion}.
+As before, one can define the capacity regions of broadcast channels with non-signaling assistance by $\mathcal{C}^{\mathrm{NS}}(W) :=  \mathcal{C}[\mathrm{S}^{\mathrm{NS}}](W)$ and $\mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W) := \mathcal{C}[\mathrm{S}^{\mathrm{NS}}_{\text{sum}}](W)$ using Definition~\ref{defi:generalCapacityRegion}. 
 
 %\begin{definition}[Capacity Region $\mathcal{C}^{\mathrm{NS}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}}_{\text{sum}}(W)$) of a broadcast channel $W$]
 %  A rate pair $(R_1,R_2)$ is achievable with (full) non-signaling assistance if:
@@ -739,14 +739,7 @@ which concludes the first part of the proof.
   is greater than or equal to:
   \[ \frac{\ell_2}{k_2}\left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\min\left(k_1k_2,\sum_{y_1}\min(k_2,\deg(y_1))\right) \ . \]
 
-  First, $\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right) = \sum_{i_2=1}^{\ell_2}\varphi(\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))$ with $\varphi(j):=\min(k_1,j)$ which is a concave function. We will use tools introduced in~\cite{BFF21} to handle those concave functions in approximation algorithms. Specifically, we have that the Poisson concavity ratio $\alpha_{\varphi} := \inf_{x \in \mathbb{R}^+} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x))} = 1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}$ for that particular function. We will also need the following lemma, whose proof is based on convex order:
-  \begin{lemma}[Lemma 2.2 of~\cite{BFF21}]
-    For $\varphi$ concave, and $p \in [0,1]^m$, we have:
-    \[\mathbb{E}\Big[\varphi\Big(\sum_{i=1}^m\Ber(p_i)\Big)\Big] \geq \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i=1}^m p_i\Big)\Big)\Big]\ .\]
-  \label{lem:ConvexOrder}
-\end{lemma}
-  
-Let us find the law of $\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})$:
+  First, $\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right) = \sum_{i_2=1}^{\ell_2}\varphi(\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))$ with $\varphi(j):=\min(k_1,j)$ which is a concave function. Recall the definition of the Poisson concavity ratio~\ref{eq:def-alpha-varphi} $\alpha_{\varphi} = \inf_{x \in \mathbb{R}^+} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x))}$ which is equal to $1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}$ for that particular function. Let us find the law of $\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})$:
   \begin{equation}
     \begin{aligned}
       \deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) &= \sum_{y_1} \mathbbm{1}_{N(y_1) \cap \mathcal{P}_2^{i_2} \not= \emptyset} = \sum_{y_1} \left(1-\mathbbm{1}_{N(y_1) \cap \mathcal{P}_2^{i_2} = \emptyset}\right)\\
@@ -758,7 +751,7 @@ Thus:
 \begin{equation}
   \begin{aligned}
     &\mathbb{E}\left[\varphi(\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))\right] = \mathbb{E}\left[\varphi\left(\sum_{y_1}\Ber\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg(y_1)}\right)\right)\right]\\
-    &\geq  \mathbb{E}\left[\varphi\left(\Poi\left(\sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg(y_1)}\right)\right)\right)\right] \text{ by Lemma~\ref{lem:ConvexOrder}}\\
+    &\geq  \mathbb{E}\left[\varphi\left(\Poi\left(\sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg(y_1)}\right)\right)\right)\right] \text{ by Proposition~\ref{prop:ConvexOrder}}\\
     &\geq \alpha_{\varphi}\varphi\left(\sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg(y_1)}\right)\right) \text{ by definition of $\alpha_{\varphi}$.}
   \end{aligned}
 \end{equation}

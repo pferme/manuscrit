@@ -103,17 +103,6 @@ Siddharth Barman and Omar Fawzi.
 \newblock \href {https://doi.org/10.1109/TIT.2017.2696963}
   {\path{doi:10.1109/TIT.2017.2696963}}.
 
-\bibitem[BFF21]{BFF21}
-Siddharth Barman, Omar Fawzi, and Paul Ferm{\'{e}}.
-\newblock Tight approximation guarantees for concave coverage problems.
-\newblock In Markus Bl{\"{a}}ser and Benjamin Monmege, editors, {\em 38th
-  International Symposium on Theoretical Aspects of Computer Science, {STACS}
-  2021, March 16-19, 2021, Saarbr{\"{u}}cken, Germany (Virtual Conference)},
-  volume 187 of {\em LIPIcs}, pages 9:1--9:17. Schloss Dagstuhl -
-  Leibniz-Zentrum f{\"{u}}r Informatik, 2021.
-\newblock \href {https://doi.org/10.4230/LIPIcs.STACS.2021.9}
-  {\path{doi:10.4230/LIPIcs.STACS.2021.9}}.
-
 \bibitem[BFGG20]{BFGG20}
 Siddharth Barman, Omar Fawzi, Suprovat Ghoshal, and Emirhan G{\"{u}}rpinar.
 \newblock Tight approximation bounds for maximum multi-coverage.

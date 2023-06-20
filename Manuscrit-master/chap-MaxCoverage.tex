@@ -112,30 +112,14 @@ Then it suffices to relate $\mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]$ to th
   \label{theo:AlgoCard}
 \end{theorem}
 
-In order to prove this theorem, we need the following lemma:
-
-\begin{lemma}
-    For $\varphi$ concave, and $p \in [0,1]^m$, we have:
-    \[\mathbb{E}\Big[\varphi\Big(\sum_{i=1}^m\Ber(p_i)\Big)\Big] \geq \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i=1}^m p_i\Big)\Big)\Big]\ .\]
-  \label{lem:ConvexOrder}
-\end{lemma}
-
 \begin{proof}
-  The notion of \emph{convex order} discussed in~\cite{SS07} allows us to prove this result. We say that $X \leq_{\text{cx}} Y \iff \mathbb{E}[f(X)] \leq \mathbb{E}[f(Y)]$ for any convex $f$. Thanks to Lemma 2.3 of~\cite{BFGG20}, we have that for $p \in [0,1]$:
-  \[\Ber(p) \leq_{\text{cx}} \Poi(p)\ .\]
-  Since this order is preserved through convolution (Theorem 3.A.12 of~\cite{SS07}), and the fact that $\sum_{i=1}^m \Poi(p_i) \sim \Poi\Big(\sum_{i=1}^m p_i\Big)$, we have:
-  \[\sum_{i=1}^m\Ber(p_i) \leq_{\text{cx}}  \Poi\Big(\sum_{i=1}^m p_i\Big)\ .\]
-  Applying this result to $-\varphi$, which is convex, concludes the proof.
-\end{proof}
-
-\begin{proof}[Proof of Theorem~\ref{theo:AlgoCard}]
   By linearity of expectation and the fact that the weights $w_a$ are positive, it is sufficient to show that for all $a \in [n]$:
   \[ \mathbb{E}[C_a^{\varphi}(X)] \geq \left(\min_{j \in [m]} \alpha_{\varphi}(j) \right) c_a \ , \]
  where $C_a^{\varphi}(S) := \varphi(\abs{S}_a)$. Note that $\abs{X}_a = \sum_{i \in [m] : a \in T_i} X_i$, and thus:
   \begin{equation}
     \begin{aligned}
       \mathbb{E}[C_a^{\varphi}(X)] &=&& \mathbb{E}\Big[\varphi\Big(\sum_{i \in [m] : a \in T_i} X_i\Big)\Big] = \mathbb{E}\Big[\varphi\Big(\sum_{i \in [m] : a \in T_i}\Ber(x_i) \Big)\Big]\\
-      &\geq&& \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i \in [m] : a \in T_i} x_i\Big)\Big)\Big] \text{ thanks to Lemma~\ref{lem:ConvexOrder}}\\
+      &\geq&& \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i \in [m] : a \in T_i} x_i\Big)\Big)\Big] \text{ thanks to Proposition~\ref{prop:ConvexOrder}}\\
       &=&& \mathbb{E}[\varphi(\Poi(\abs{x}_a))] \geq \min \{ \alpha_{\varphi}(\lfloor \abs{x}_a \rfloor), \alpha_{\varphi}(\lceil \abs{x}_a \rceil) \} \varphi(\abs{x}_a)\\
       &\quad&& \text{thanks to Proposition~\ref{prop:minInt}}\\
       &\geq&& \left(\min_{j \in [m]} \alpha_{\varphi}(j) \right) \varphi(\abs{x}_a) \geq \left(\min_{j \in [m]} \alpha_{\varphi}(j) \right) c_a\ .

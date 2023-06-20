@@ -15,7 +15,10 @@
   $\ceil{x}$ & the ceiling of $x$\\
   $\floor{x}$ & the floor of $x$\\
   $\log(x)$ & the binary logarithm of $x$\\
+  $e^x,\exp(x)$ & the exponential of $x$\\
   $\mathbbm{1}_A$ & the truth value of the statement $A$\\
+  $k!$ & the factorial of $k$\\
+  $\binom{n}{k}$ & the binomial coefficient of parameters $n$ and $k$\\
   [1ex] \multicolumn{2}{l}{\scbf{Complexity}} \\
   \textrm{P} & the class of problems decidable in polynomial time \\
   \textrm{NP} & the class of problems decidable in nondeterministic polynomial time \\
@@ -26,27 +29,36 @@
   [1ex] \multicolumn{2}{l}{\scbf{Probability}} \\
   $\mathcal{X},\mathcal{Y},\mathcal{Z},\ldots$ & finite sets\\
   $X,Y,Z,\ldots$ & random variables over $\mathcal{X},\mathcal{Y},\mathcal{Z},\ldots$\\
+  $P_X,P_Y,P_Z,\ldots$ & the probability distributions of $X,Y,Z,\ldots$\\
   $\mathbb{P}\left(E\right)$ & the probability of the event $E$\\
   $\mathbb{E}\left[X\right]$ & the expectation of $X$\\
   $\sigma_X^2$ & the variance of $X$\\
   $\Ber(p)$ & the Bernouilli distribution of parameter $p$\\
-  $\Bin(n,p)$ & the Binomial distribution of parameters $n,p$\\
+  $\Bin(n,p)$ & the binomial distribution of parameters $n,p$\\
   $\Poi(\lambda)$ & the Poisson distribution of parameter $\lambda$\\
   [1ex] \multicolumn{2}{l}{\scbf{Information Theory}} \\
   $W$ & a channel, possibly with multiple inputs or multiple outputs \\
   $W \otimes W'$ & the tensor product of the channels $W$ and $W'$\\
   $W^{\otimes n}$ & the $n$th tensor product of $W$\\
-  $\mathcal{C}^{\mathrm{S}}(W)$ & the capacity region of $W$ for a success probability $\mathrm{S}$\\
-  $\mathcal{C}_0^{\mathrm{S}}(W)$ & the zero-error capacity region of $W$ for a success probability $\mathrm{S}$\\
+  $\mathcal{C}[\mathrm{S}](W)$ & the capacity region of $W$ for a success probability $\mathrm{S}$\\
+  $\mathcal{C}_0[\mathrm{S}](W)$ & the zero-error capacity region of $W$ for a success probability $\mathrm{S}$\\
   $x^n,y^n,z^n,\ldots$ & words on $\mathcal{X}^n,\mathcal{Y}^n,\mathcal{Z}^n,\ldots$\\
-  $x_i,y_i,z_i,\ldots$ & the $i$th symbol of $x^n,y^n,z^n,\ldots$\\
-  $x_{-i},y_{-i},z_{-i},\ldots$ & the words $x^n,y^n,z^n,\ldots$ without their $i$th symbol\\
-  $H(X)$ & the (Shannon) entropy of $X$\\
+  $x_i,y_i,z_i,\ldots$ & the $i$th letter of $x^n,y^n,z^n,\ldots$\\
+  $x_{-i},y_{-i},z_{-i},\ldots$ & the words $x^n,y^n,z^n,\ldots$ without their $i$th letter\\
+  $\mathcal{T}^n_{\varepsilon}(X)$ & the set of $\varepsilon$-typical words of $n$ letters following $X$\\
+  $H(X)$ & the entropy of $X$\\
   $H(X|Y)$ & the conditional entropy of $X$ given $Y$\\
   $I(X:Y)$ & the mutual information of $X$ and $Y$\\
   $I(X:Y|Z)$ & the conditional mutual information of $X$ and $Y$ given $Z$\\
   $X \rightarrow Y \rightarrow Z$ & a Markov chain\\
   [1ex] \multicolumn{2}{l}{\scbf{Graphs}} \\
   $G = (V,E)$ & an undirected graph with vertices in $V$ and edges in $E$\\
-  $\deg_G(v)$ & the degree of $v$ in $G$, i.e. the number of edges connected to $v$ \\
+  $\deg_G(v)$ & the degree of $v$ in $G$, i.e. the number of edges connected to $v$\\
+  [1ex] \multicolumn{2}{l}{\scbf{Goups}} \\
+  $G$ & a group\\
+  $g$ & an element of the group $G$\\
+  $\mathcal{X},\mathcal{Y},\mathcal{Z},\ldots$ & sets where $G$ acts\\
+  $x,y,z,\ldots$ & elements of $\mathcal{X},\mathcal{Y},\mathcal{Z},\ldots$\\
+  $g \cdot x$ & the action of $g$ on $x$\\
+  $\mathcal{O}_G(\mathcal{X})$ & the set of orbits of $\mathcal{X}$ under the action of $G$\\  
 \end{longtable}

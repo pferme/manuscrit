@@ -79,7 +79,7 @@ Since MACs are more general than point-to-point channels (by defining $W(y|x_1x_
 %  We define the (classical) capacity region $\mathcal{C}(W)$ as the closure of the set of all achievable rate pairs.
 %\end{definition}
 
-The (classical) capacity region of a MAC $W$ is defined using Definition~\ref{defi:generalCapacityRegion} and $\mathrm{S}$ by $\mathcal{C}(W) := \mathcal{C}^{\mathrm{S}}(W)$, and its zero-error equivalent is defined by $\mathcal{C}_0(W) := \mathcal{C}_0^{\mathrm{S}}(W)$.
+The (classical) capacity region of a MAC $W$, as defined for example in~\cite{CT01}, can be reformulated in terms of the previous success probability $\mathrm{S}$ using Definition~\ref{defi:generalCapacityRegion} and by $\mathcal{C}(W) := \mathcal{C}[\mathrm{S}](W)$, and its zero-error equivalent is defined by $\mathcal{C}_0(W) := \mathcal{C}_0[\mathrm{S}](W)$.
 
 The capacity region $\mathcal{C}(W)$ is characterized by a single-letter formula:
 
@@ -122,7 +122,7 @@ Note that we used independent decoders $d_1(j_1|y),d_2(j_2|y)$ rather than a glo
 
 %However, it turns out those two notions of success define the same capacity region:
 
-As for the usual (joint) success probability, we can define its capacity region using Definition~\ref{defi:generalCapacityRegion} and $\mathrm{S}_{\text{sum}}$ by $\mathcal{C}_{\text{sum}}(W) := \mathcal{C}^{\mathrm{S}_{\text{sum}}}(W)$. It turns out those two notions of success define the same capacity region:
+As for the usual (joint) success probability, we can define its capacity region using Definition~\ref{defi:generalCapacityRegion} by $\mathcal{C}_{\text{sum}}(W) := \mathcal{C}[\mathrm{S}_{\text{sum}}](W)$. It turns out those two notions of success define the same capacity region:
 \begin{proposition}
   \label{prop:CapaSumJoint}
   $\mathcal{C}(W) = \mathcal{C}_{\text{sum}}(W)$
@@ -275,7 +275,7 @@ Since it is given as a linear program, the complexity of computing $\mathrm{S}^{
 %  We define the zero-error non-signaling assisted capacity region $\mathcal{C}^{\mathrm{NS}}_0(W)$ as the closure of the set of all achievable rate pairs with zero-error and non-signaling assistance.
 %\end{definition}
 
-As for the unassisted case, we define the non-signaling assisted capacity region using Definition~\ref{defi:generalCapacityRegion} and $\mathrm{S}^{\mathrm{NS}}$ by $\mathcal{C}^{\mathrm{NS}}(W) := \mathcal{C}^{\mathrm{S}^{\mathrm{NS}}}(W)$, and its zero-error equivalent is defined by $\mathcal{C}^{\mathrm{NS}}_0(W) := \mathcal{C}_0^{\mathrm{S}^{\mathrm{NS}}}(W)$.
+As for the unassisted case, we define the non-signaling assisted capacity region using Definition~\ref{defi:generalCapacityRegion} and $\mathrm{S}^{\mathrm{NS}}$ by $\mathcal{C}^{\mathrm{NS}}(W) := \mathcal{C}[\mathrm{S}^{\mathrm{NS}}](W)$, and its zero-error equivalent is defined by $\mathcal{C}^{\mathrm{NS}}_0(W) := \mathcal{C}_0[\mathrm{S}^{\mathrm{NS}}](W)$.
 
 \paragraph{Independent non-signaling assistance} One can also consider the case where non-signaling assistance is shared independently between the first sender and the receiver as well as between the second encoder and the receiver, which we call independent non-signaling assistance. The precise scenario is depicted in Figure~\ref{fig:MACNSsrcoding}:
 
@@ -399,7 +399,7 @@ As before, one can also consider the sum-success probability $\mathrm{S}_{\text{
 %  We define the independent non-signaling assisted capacity (resp. sum-capacity) region $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)$ (resp. $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)$) as the closure of the set of all achievable (resp. sum-achievable) rate pairs with independent non-signaling assistance.
 %\end{definition}
 
-We define the independent non-signaling assisted capacity (resp. sum-capacity) region using Definition~\ref{defi:generalCapacityRegion} by $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W) := \mathcal{C}^{\mathrm{S}^{\mathrm{NS}_{\mathrm{SR}}}}(W)$ (resp. $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W) := \mathcal{C}^{\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}}(W)$). It turns out those two notions of success define the same capacity region:
+We define the independent non-signaling assisted capacity (resp. sum-capacity) region using Definition~\ref{defi:generalCapacityRegion} by $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W) := \mathcal{C}[\mathrm{S}^{\mathrm{NS}_{\mathrm{SR}}}](W)$ (resp. $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W) := \mathcal{C}[\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}](W)$). It turns out those two notions of success define the same capacity region:
 \begin{proposition}
   \label{prop:NSCapaSumJoint}
   $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W) = \mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}}}(W)$
@@ -1236,7 +1236,7 @@ The following proposition shows that this is indeed a relaxation of the non-sign
   %We define $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ as the closure of of the set of all achievable rate pairs with relaxed non-signaling assistance.
   %\end{definition}
 
-  We can now define the relaxed non-signaling assisted capacity region of a MAC $W$ using Definition~\ref{defi:generalCapacityRegion} and $\mathrm{S}^{\overline{\mathrm{NS}}}$ by $\mathcal{C}^{\overline{\mathrm{NS}}}(W) := \mathcal{C}^{\mathrm{S}^{\overline{\mathrm{NS}}}}(W)$.
+  We can now define the relaxed non-signaling assisted capacity region of a MAC $W$ using Definition~\ref{defi:generalCapacityRegion} by $\mathcal{C}^{\overline{\mathrm{NS}}}(W) := \mathcal{C}[\mathrm{S}^{\overline{\mathrm{NS}}}](W)$.
 
   \begin{proposition}
      $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ is convex. 
@@ -1687,7 +1687,7 @@ In order to show additivity of the outer bound, we use the following lemma.
       \end{corollary}
 
       \subsection{Achievability Part of Theorem~\ref{theo:CharaNSrelaxed}}
-      In order to construct the relaxed non-signaling assisted code for achievability, we will use the notions of jointly and conditional typical sets described in subsection \ref{subsection:typicalSets}:
+      In order to construct the relaxed non-signaling assisted code for achievability, we will use the notions of jointly and conditional typical sets described in Subsection~\ref{subsection:typicalSets}:
   \begin{proposition}[Achievability part of Theorem~\ref{theo:CharaNSrelaxed}]      
       \label{prop:AchievabilityNSrelaxed}
       If a rate pair is in the closure of the convex hull of $(R_1,R_2)$ satisfying:
@@ -1795,56 +1795,9 @@ In order to show additivity of the outer bound, we use the following lemma.
 
   \section{Independent Non-Signaling Assisted Capacity Region}
   \label{section:NSsr}
-The goal of this section is to show that independent non-signaling assistance does not change the capacity region of a MAC $W$, i.e. that $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)=\mathcal{C}(W)$. In order to prove this result, we will need some properties in the one-sender one-receiver case from~\cite{BF18}. Specifically, let us first recall the definition of the maximum success probability $\mathrm{S}(W,k)$ of transmitting $k$ messages using the channel $W$:
-\begin{equation}
-  \begin{aligned}
-    \mathrm{S}(W,k) := &&\underset{e,d}{\maxi} &&& \frac{1}{k} \sum_{i,x,y} W(y|x)e(x|i)d(i|y)\\
-    &&\st &&& \sum_{x \in \mathcal{X}} e(x|i) = 1, \forall i \in [k]\\
-    &&&&& \sum_{j \in [k]} d(j|y) = 1, \forall y \in \mathcal{Y}\\
-    &&&&& e(x|i), d(j|y) \geq 0
-  \end{aligned}
-\end{equation}
+The goal of this section is to show that independent non-signaling assistance does not change the capacity region of a MAC $W$, i.e. that $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)=\mathcal{C}(W)$. In order to prove this result, we will need some properties in the one-sender one-receiver case from~\cite{BF18} recalled in Subsection~\ref{subsection:onewaychannelcoding}.
 
-Then, the following characterization of $\mathrm{S}(W,k)$ can be derived:
-
-\begin{proposition}[Proposition 2.1 of~\cite{BF18}]
-  $\mathrm{S}(W,k) = \frac{1}{k} \underset{S \subseteq X: |S| \leq k}{\max} f_W(S)$ with $f_W(S) := \sum_{y \in Y} \max_{x \in S} W(y|x)$.
-\end{proposition}
-
-As in the MAC scenario, one can consider non-signaling assistance shared between the sender and the receiver, which leads to the following maximum success probability:
-\begin{equation}
-  \begin{aligned}
-    \mathrm{S}^{\mathrm{NS}}(W,k) := &&\underset{P}{\maxi} &&& \frac{1}{k} \sum_{i,x,y} W(y|x)P(xi|iy)\\
-    &&\st &&& \sum_{x} P(xj|iy) = \sum_{x} P(xj|i'y)\\
-    &&&&& \sum_{j} P(xj|iy) = \sum_{j} P(xj|iy')\\
-    &&&&& \sum_{x,j} P(xj|iy) = 1\\
-    &&&&& P(xj|iy) \geq 0
-  \end{aligned}
-\end{equation}
-
-A symmetrization can also be done to simplify the expression of the linear program defining $\mathrm{S}^{\mathrm{NS}}(W,k)$:
-
-\begin{proposition}[Appendix A of~\cite{BF18}]
-  \label{prop:NSonewayLP}
-  \begin{equation}
-    \begin{aligned}
-      \mathrm{S}^{\mathrm{NS}}(W,k) = &&\underset{r,p}{\maxi} &&& \frac{1}{k} \sum_{x,y} W(y|x)r_{x,y}\\
-      &&\st &&& \sum_{x} r_{x,y} = 1\\
-      &&&&& \sum_{x} p_{x} = k\\
-      &&&&& 0 \leq r_{x,y} \leq p_{x}
-    \end{aligned}
-  \end{equation}
-\end{proposition}
-
-Finally, the main tool we will use from~\cite{BF18} is the following random coding technique, which describes how to find a classical code with a success probability close to the non-signaling assisted one:
-\begin{theorem}[Theorem 3.1 of~\cite{BF18}]
-  \label{theo:RandomCoding}
-  Given a solution $r,p$ of the program computing $\mathrm{S}^{\mathrm{NS}}(W,k)$, we have that:
-  \[ \mathbb{E}_S\left[\frac{f_W(S)}{\ell}\right] \geq \frac{k}{\ell}\left(1-\left(1-\frac{1}{k}\right)^{\ell}\right) \cdot \frac{1}{k} \sum_{x,y} W(y|x)r_{x,y} , \]
-  for the multiset $S$ obtained by choosing $\ell$ elements of $\mathcal{X}$ independently according to the distribution $\left(\frac{p_{x}}{k}\right)_{x \in \mathcal{X}}$.
-\end{theorem}
-
-We can now state our result on independent non-signaling assistance, which says that even in one-shot scenarios, the success probability with and without that assistance are close:
+Let us state our result on independent non-signaling assistance, which says that even in one-shot scenarios, the success probability with and without that assistance are close:
 
 \begin{theorem}
   \label{theo:NSsr}
