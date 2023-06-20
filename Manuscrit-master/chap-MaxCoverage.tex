@@ -118,8 +118,8 @@ Then it suffices to relate $\mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]$ to th
  where $C_a^{\varphi}(S) := \varphi(\abs{S}_a)$. Note that $\abs{X}_a = \sum_{i \in [m] : a \in T_i} X_i$, and thus:
   \begin{equation}
     \begin{aligned}
-      \mathbb{E}[C_a^{\varphi}(X)] &=&& \mathbb{E}\Big[\varphi\Big(\sum_{i \in [m] : a \in T_i} X_i\Big)\Big] = \mathbb{E}\Big[\varphi\Big(\sum_{i \in [m] : a \in T_i}\Ber(x_i) \Big)\Big]\\
-      &\geq&& \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i \in [m] : a \in T_i} x_i\Big)\Big)\Big] \text{ thanks to Proposition~\ref{prop:ConvexOrder}}\\
+      \mathbb{E}[C_a^{\varphi}(X)] &=&& \mathbb{E}\left[\varphi\left(\sum_{i \in [m] : a \in T_i} X_i\right)\right] = \mathbb{E}\left[\varphi\left(\sum_{i \in [m] : a \in T_i}\Ber(x_i) \right)\right]\\
+      &\geq&& \mathbb{E}\left[\varphi\left(\Poi\left(\sum_{i \in [m] : a \in T_i} x_i\right)\right)\right] \text{ thanks to Proposition~\ref{prop:ConvexOrder}}\\
       &=&& \mathbb{E}[\varphi(\Poi(\abs{x}_a))] \geq \min \{ \alpha_{\varphi}(\lfloor \abs{x}_a \rfloor), \alpha_{\varphi}(\lceil \abs{x}_a \rceil) \} \varphi(\abs{x}_a)\\
       &\quad&& \text{thanks to Proposition~\ref{prop:minInt}}\\
       &\geq&& \left(\min_{j \in [m]} \alpha_{\varphi}(j) \right) \varphi(\abs{x}_a) \geq \left(\min_{j \in [m]} \alpha_{\varphi}(j) \right) c_a\ .
@@ -203,7 +203,7 @@ We say that $\mathcal{Q}$ is an \emph{$x$-cover} of $x \in \mathbb{N}$ if every 
   \item For any $T \subseteq [R]$ and $\mathcal{Q} = \set{P_{i,j(i)} : i \in T}$ for some function $j : T \rightarrow [h]$, we have $\abs{C^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} \leq \eta n$ where:
   \begin{align}
   \label{eq:def-phi}
-   \psi^{\varphi}_{k,h} := \mathbb{E}\Big[\varphi\Big(\Bin\Big(k,\frac{x_{\varphi}}{h}\Big)\Big)\Big] \ .
+   \psi^{\varphi}_{k,h} := \mathbb{E}\left[\varphi\left(\Bin\left(k,\frac{x_{\varphi}}{h}\right)\right)\right] \ .
    \end{align}
   \end{enumerate}
   \label{defi:PartSystem}
@@ -286,11 +286,11 @@ Next, we bound the contribution of $B$:
   We have:
   \begin{equation}
     \begin{aligned}
-      \sum_{e \in B} C^{\varphi,e}(\mathcal{T}_e) &\leq&& \sum_{e \in B} n\varphi\Big(\abs{L(e)}\frac{x_{\varphi}}{h}\Big) \quad \text{by remark on Definition~\ref{defi:PartSystem} and } \abs{\mathcal{T}_e} = \abs{L(e)}\\
-      &\leq&& \abs{B} \cdot n\varphi\Big(\frac{\sum_{e \in B} \abs{L(e)}}{\abs{B}}\frac{x_{\varphi}}{h}\Big) \quad \text{by Jensen's inequality on concave } \varphi\\
-      &\leq&&  \abs{B} \cdot n\varphi\Big(\frac{\abs{E}h}{\abs{B}}\frac{x_{\varphi}}{h}\Big)\\
+      \sum_{e \in B} C^{\varphi,e}(\mathcal{T}_e) &\leq&& \sum_{e \in B} n\varphi\left(\abs{L(e)}\frac{x_{\varphi}}{h}\right) \quad \text{by remark on Definition~\ref{defi:PartSystem} and } \abs{\mathcal{T}_e} = \abs{L(e)}\\
+      &\leq&& \abs{B} \cdot n\varphi\left(\frac{\sum_{e \in B} \abs{L(e)}}{\abs{B}}\frac{x_{\varphi}}{h}\right) \quad \text{by Jensen's inequality on concave } \varphi\\
+      &\leq&&  \abs{B} \cdot n\varphi\left(\frac{\abs{E}h}{\abs{B}}\frac{x_{\varphi}}{h}\right)\\
       &\quad&& \text{since } \varphi \text{ nondecreasing and } \sum_{e \in B} \abs{L(e)} \leq \abs{E}h \text{ by Lemma~\ref{lem:labelBound}}\\
-      &=&& \frac{\varphi\big(\frac{\abs{E}x_{\varphi}}{\abs{B}}\big)}{\frac{\abs{E}x_{\varphi}}{\abs{B}}} x_{\varphi} \abs{\Gamma} \ .
+      &=&& \frac{\varphi\left(\frac{\abs{E}x_{\varphi}}{\abs{B}}\right)}{\frac{\abs{E}x_{\varphi}}{\abs{B}}} x_{\varphi} \abs{\Gamma} \ .
     \end{aligned}
   \end{equation}
 
@@ -338,14 +338,14 @@ Since we have supposed that $\sum_{e \in E} C^{\varphi,e}(\mathcal{T}_e) = C^{\v
 \[\sum_{e \in N}  C^{\varphi,e}(\mathcal{T}_e) > \frac{\varepsilon}{4}\varphi(x_{\varphi})\abs{\Gamma}\ .\]
 
 However, we have that for $e \in N$ that:
-\[ C^{\varphi,e}(\mathcal{T}_e) \leq  n\varphi\Big(\abs{\mathcal{T}_e}\frac{x_{\varphi}}{h}\Big) = n\varphi\Big(\abs{L(e)}\frac{x_{\varphi}}{h}\Big) \leq n \varphi\Big(\frac{x_{\varphi}}{\xi}\Big) \leq \frac{nx_{\varphi}}{\xi} \ ,\]
+\[ C^{\varphi,e}(\mathcal{T}_e) \leq  n\varphi\left(\abs{\mathcal{T}_e}\frac{x_{\varphi}}{h}\right) = n\varphi\left(\abs{L(e)}\frac{x_{\varphi}}{h}\right) \leq n \varphi\left(\frac{x_{\varphi}}{\xi}\right) \leq \frac{nx_{\varphi}}{\xi} \ ,\]
 thanks to the remark on Definition~\ref{defi:PartSystem} and the bound $\abs{L(e)} < \frac{h}{\xi}$. This implies that:
 \[\frac{\abs{N}}{\abs{E}} \geq \frac{\xi}{x_{\varphi}}\frac{\varepsilon \varphi(x_{\varphi})}{4} = \xi \eta \ .\]
 \end{proof}
 
 Finally, we construct a randomized labeling $\sigma : V \mapsto [L]$ as follows: for $v \in V$, if $L(v) \not= \emptyset$, set $\sigma(v)$ uniformly from $L(v)$, otherwise set it arbitrarily. We claim that in expectation, this labeling must weakly satisfy $\delta$ fraction of the hyperedges.
 
-To see this, fix any $e = (v_1,\ldots,v_h) \in N$. Thus, ther exists $\exists x \not= y \in [h]$ such that $\pi_{e,v_x}(L(v_x)) \cap \pi_{e,v_y}(L(v_y)) \not= \emptyset$. Furthermore $\abs{L(v_x)},\abs{L(v_y)} \leq \frac{h}{\xi}$. Thus, we have that $\pi_{e,v_x}(L(v_x)) = \pi_{e,v_y}(L(v_y))$ with probability at least $\frac{1}{\abs{L(v_x)}\abs{L(v_y)}} \geq \Big(\frac{\xi}{h}\Big)^2$. Therefore:
+To see this, fix any $e = (v_1,\ldots,v_h) \in N$. Thus, ther exists $\exists x \not= y \in [h]$ such that $\pi_{e,v_x}(L(v_x)) \cap \pi_{e,v_y}(L(v_y)) \not= \emptyset$. Furthermore $\abs{L(v_x)},\abs{L(v_y)} \leq \frac{h}{\xi}$. Thus, we have that $\pi_{e,v_x}(L(v_x)) = \pi_{e,v_y}(L(v_y))$ with probability at least $\frac{1}{\abs{L(v_x)}\abs{L(v_y)}} \geq \left(\frac{\xi}{h}\right)^2$. Therefore:
 \begin{equation}
   \begin{aligned}
     \mathbb{E}_{\sigma}\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e] &\geq \xi \eta \mathbb{E}_{\sigma}\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e | e \in N] \quad \text{by Lemma~\ref{lem:nice}}\\
@@ -871,7 +871,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 
 \begin{proposition}
   Let $F(x) := \mathbb{E}_{X \sim x}[C^{\varphi}(X)]$ for $x \in \set{0,1}^m$. We have an explicit formula for $F$:
-  \[  F(x) = \sum_{a = 1}^n \sum_{k=0}^{m} \Big[\frac{1}{m+1}\sum_{\ell = 0}^{m} \omega_{m+1}^{-\ell k}\prod_{j \in [m] : a \in  T_j}(1 +(\omega_{m+1}^{\ell}-1)x_j)\Big]\varphi(k) \ , \]
+  \[  F(x) = \sum_{a = 1}^n \sum_{k=0}^{m} \left[\frac{1}{m+1}\sum_{\ell = 0}^{m} \omega_{m+1}^{-\ell k}\prod_{j \in [m] : a \in  T_j}(1 +(\omega_{m+1}^{\ell}-1)x_j)\right]\varphi(k) \ , \]
   with $\omega_{m+1} := \exp(\frac{2i\pi}{m+1})$. Thus, $F$ is computable in polynomial time in $n$ and $m$.
   \label{prop:Fpoly}
 \end{proposition}
@@ -895,7 +895,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 
 \begin{proof}
   Thanks to~\cite{Barbour84, TF19}, the total variation distance between $\Bin(n,x/n)$ and $\Poi(x)$ is bounded in the following way:
-  \[ \Delta(\Bin(n,x/n),\Poi(x)) \leq \frac{1 - e^{-x}}{2x} n \cdot \Big(\frac{x}{n}\Big)^2 \leq \frac{x}{2n}\ .\]
+  \[ \Delta(\Bin(n,x/n),\Poi(x)) \leq \frac{1 - e^{-x}}{2x} n \cdot \left(\frac{x}{n}\right)^2 \leq \frac{x}{2n}\ .\]
   Thus with $B \sim \Bin(n,x/n)$ and $P \sim \Poi(x)$:
   \begin{equation}
     \begin{aligned}
@@ -1025,7 +1025,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 
   \begin{proof}
     We will show that $\forall k \in \mathbb{N}^*, w_{k+2}-w_{k+1} \geq w_{k+1}-w_k$ which implies the convexity of its piecewise linear extension on $[1,+\infty[$. For $k \in \mathbb{N}^*$ we have:
-        \[ \frac{w_{k+1}}{w_{k+2}}-1 \leq \frac{w_{k+1}}{w_{k+2}}\Big(\frac{w_{k+1}}{w_{k+2}} - 1\Big) \leq \frac{w_{k+1}}{w_{k+2}}\Big(\frac{w_{k}}{w_{k+1}}-1\Big) = \frac{w_k-w_{k+1}}{w_{k+2}} \ , \]
+        \[ \frac{w_{k+1}}{w_{k+2}}-1 \leq \frac{w_{k+1}}{w_{k+2}}\left(\frac{w_{k+1}}{w_{k+2}} - 1\right) \leq \frac{w_{k+1}}{w_{k+2}}\left(\frac{w_{k}}{w_{k+1}}-1\right) = \frac{w_k-w_{k+1}}{w_{k+2}} \ , \]
 
         since $w$ is nonnegative nonincreasing (respectively $\varphi$ nondecreasing concave) and $\frac{w_{k+1}}{w_{k+2}} \leq \frac{w_{k}}{w_{k+1}}$ since $w$ is geometrically dominant. Then, multiplying by $-w_{k+2} \leq 0$ gives the expected result $w_{k+2}-w_{k+1} \geq w_{k+1}-w_k$.
   \end{proof}
@@ -1040,7 +1040,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
     \end{aligned}
   \end{equation}
   by independence of $w(X+1)$ and $\varphi(Y)$. Since $w$ is convex on $[1,+\infty[$ by Lemma~\ref{lem:wConvex} and $\Poi(k)+1 \in [1,+\infty[$, we have that $\mathbb{E}[w(\Poi(k)+1)] \geq w(\mathbb{E}[\Poi(k)+1]) = w(k+1) = w_{k+1}$ thanks to Jensen's inequality. Note that $g(0) = \mathbb{E}[\varphi(\Poi(0))] = \varphi(0) = 0$. Then:
-  \[g(k) = \sum_{i=0}^{k-1} g(i+1)-g(i) \geq  \Big(\sum_{i=0}^{k-1}w_{i+1}\Big)\mathbb{E}[\varphi(\Poi(1))] = \varphi(k)g(1) \ .\]
+  \[g(k) = \sum_{i=0}^{k-1} g(i+1)-g(i) \geq  \left(\sum_{i=0}^{k-1}w_{i+1}\right)\mathbb{E}[\varphi(\Poi(1))] = \varphi(k)g(1) \ .\]
 
   Therefore:
   \[\alpha_{\varphi}(k) = \frac{g(k)}{\varphi(k)} \geq g(1) = \frac{g(1)}{\varphi(1)}=\alpha_{\varphi}(1) \ .\]
@@ -1060,25 +1060,25 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
       \mathbb{E}[\varphi(\Poi(x))] &=&& e^{-x}\sum_{k=0}^{+\infty}\varphi(k)\frac{x^k}{k!}\\
       &=&& e^{-x}\sum_{k=0}^{\ell}k\frac{x^k}{k!} + e^{-x}\sum_{k=\ell+1}^{+\infty}\ell\frac{x^k}{k!}\\
       &=&& e^{-x}x \sum_{k=0}^{\ell-1}\frac{x^k}{k!} + \ell e^{-x}\sum_{k=\ell+1}^{+\infty}\frac{x^k}{k!}\\
-      &=&& e^{-x}\Big[(x-\ell)\sum_{k=0}^{\ell-1}\frac{x^k}{k!} - \ell\frac{x^{\ell}}{\ell!}\Big] + \ell e^{-x}\sum_{k=0}^{+\infty}\frac{x^k}{k!}\\
-      &=&& \ell - e^{-x}\Big[\frac{x^{\ell}}{(\ell-1)!} - (x-\ell)\sum_{k=0}^{\ell-1}\frac{x^k}{k!}\Big] \ .
+      &=&& e^{-x}\left[(x-\ell)\sum_{k=0}^{\ell-1}\frac{x^k}{k!} - \ell\frac{x^{\ell}}{\ell!}\right] + \ell e^{-x}\sum_{k=0}^{+\infty}\frac{x^k}{k!}\\
+      &=&& \ell - e^{-x}\left[\frac{x^{\ell}}{(\ell-1)!} - (x-\ell)\sum_{k=0}^{\ell-1}\frac{x^k}{k!}\right] \ .
     \end{aligned}
   \end{equation}
 
   Let us show that $x \mapsto \alpha_{\varphi}(x)$ takes its minimum in $\ell$, where we have indeed:
-  \[ \alpha_{\varphi}(\ell) = \frac{1}{\ell}\Big( \ell - e^{-\ell}\Big[\frac{\ell^{\ell}}{(\ell-1)!} - (\ell-\ell)\sum_{k=0}^{\ell-1}\frac{\ell^k}{k!}\Big]\Big) = 1 - e^{-\ell}\frac{\ell^{\ell}}{\ell!} \ . \]
+  \[ \alpha_{\varphi}(\ell) = \frac{1}{\ell}\left( \ell - e^{-\ell}\left[\frac{\ell^{\ell}}{(\ell-1)!} - (\ell-\ell)\sum_{k=0}^{\ell-1}\frac{\ell^k}{k!}\right]\right) = 1 - e^{-\ell}\frac{\ell^{\ell}}{\ell!} \ . \]
 
   Thanks to proposition~\ref {prop:phiLinear}, $x \mapsto \alpha_{\varphi}(x)$ is nondecreasing from $\ell$ to $+\infty$. Suppose now that $\ell \geq 2$ (otherwise the result is already proved). Since $x \mapsto \alpha_{\varphi}(x)$ is differentiable, we have for $1 \leq x \leq \ell$:
   \begin{equation}
     \begin{aligned}
-      \alpha_{\varphi}'(x) &=&& -\frac{\ell}{x^2} + e^{-x}\Big[\frac{x^{\ell-1}}{(\ell-1)!} -  \sum_{k=0}^{\ell-1}\frac{x^k}{k!}  + \ell\sum_{k=0}^{\ell-2}\frac{x^k}{(k+1)!} + \frac{\ell}{x}\Big]\\ 
-      &-&& e^{-x}\Big[\frac{x^{\ell-2}}{(\ell-2)!} - \sum_{k=0}^{\ell-2}\frac{x^k}{k!} + \ell\sum_{k=0}^{\ell-3}\frac{x^k}{(k+2)k!} - \frac{\ell}{x^2}\Big]\\
-      &=&&  \frac{\ell}{x}\Big(e^{-x}\Big(1+\frac{1}{x}\Big)- \frac{1}{x}\Big)\\
-      &+&& e^{-x}\Big[\Big(\frac{\ell}{\ell-1}-1\Big)\frac{x^{\ell-2}}{(\ell-2)!} + \ell\sum_{k=0}^{\ell-3}\Big(\frac{x^k}{(k+1)!} - \frac{x^k}{(k+2)k!} \Big) \Big]\\
-      &=&&  \frac{\ell}{x}\Big(e^{-x}\Big(1+\frac{1}{x}\Big) - \frac{1}{x}\Big) + e^{-x}\Big[\frac{x^{\ell-2}}{(\ell-1)!} + \ell\sum_{k=0}^{\ell-3}\frac{x^k}{k!}\Big(\frac{1}{k+1} - \frac{1}{k+2} \Big) \Big]\\
-      &=&&  \frac{\ell}{x}\Big(e^{-x}\Big(1+\frac{1}{x} + \frac{x^{\ell-1}}{\ell!} + x\sum_{k=0}^{\ell-3}\frac{x^k}{k!}\frac{1}{(k+1)(k+2)}\Big) - \frac{1}{x}\Big)\\
-      &=&&  \frac{\ell e^{-x}}{x^2}\Big(\Big(1+x+ \frac{x^\ell}{\ell!} + \sum_{k=0}^{\ell-3}\frac{x^{k+2}}{(k+2)!}\Big) - e^x\Big)\\
-      &=&& \frac{\ell e^{-x}}{x^2}\Big(\sum_{k=0}^{\ell} \frac{x^k}{k!} -e^x\Big) \leq 0\ .
+      \alpha_{\varphi}'(x) &=&& -\frac{\ell}{x^2} + e^{-x}\left[\frac{x^{\ell-1}}{(\ell-1)!} -  \sum_{k=0}^{\ell-1}\frac{x^k}{k!}  + \ell\sum_{k=0}^{\ell-2}\frac{x^k}{(k+1)!} + \frac{\ell}{x}\right]\\ 
+      &-&& e^{-x}\left[\frac{x^{\ell-2}}{(\ell-2)!} - \sum_{k=0}^{\ell-2}\frac{x^k}{k!} + \ell\sum_{k=0}^{\ell-3}\frac{x^k}{(k+2)k!} - \frac{\ell}{x^2}\right]\\
+      &=&&  \frac{\ell}{x}\left(e^{-x}\left(1+\frac{1}{x}\right)- \frac{1}{x}\right)\\
+      &+&& e^{-x}\left[\left(\frac{\ell}{\ell-1}-1\right)\frac{x^{\ell-2}}{(\ell-2)!} + \ell\sum_{k=0}^{\ell-3}\left(\frac{x^k}{(k+1)!} - \frac{x^k}{(k+2)k!} \right) \right]\\
+      &=&&  \frac{\ell}{x}\left(e^{-x}\left(1+\frac{1}{x}\right) - \frac{1}{x}\right) + e^{-x}\left[\frac{x^{\ell-2}}{(\ell-1)!} + \ell\sum_{k=0}^{\ell-3}\frac{x^k}{k!}\left(\frac{1}{k+1} - \frac{1}{k+2} \right) \right]\\
+      &=&&  \frac{\ell}{x}\left(e^{-x}\left(1+\frac{1}{x} + \frac{x^{\ell-1}}{\ell!} + x\sum_{k=0}^{\ell-3}\frac{x^k}{k!}\frac{1}{(k+1)(k+2)}\right) - \frac{1}{x}\right)\\
+      &=&&  \frac{\ell e^{-x}}{x^2}\left(\left(1+x+ \frac{x^\ell}{\ell!} + \sum_{k=0}^{\ell-3}\frac{x^{k+2}}{(k+2)!}\right) - e^x\right)\\
+      &=&& \frac{\ell e^{-x}}{x^2}\left(\sum_{k=0}^{\ell} \frac{x^k}{k!} -e^x\right) \leq 0\ .
     \end{aligned}
   \end{equation}
   since the partial sum of the exponential series is bounded by its total sum. Thus $\alpha_{\varphi}(x)$ is nonincreasing from $1$ to $\ell$, and nondecreasing after, so it takes indeed its minimum in $\ell$ and the proposition is proved.
@@ -1122,8 +1122,8 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
      \begin{aligned}
        \alpha_{\varphi}'(x) &=&& -\alpha_{\varphi}(x)+ e^{-x}\sum_{k=1}^{+\infty}(k-d)k^d\frac{x^{k-d-1}}{k!} \\
        &=&& -\alpha_{\varphi}(x)+ e^{-x}\sum_{k=0}^{+\infty}(k+1-d)(k+1)^d\frac{x^{k-d}}{(k+1)!}\\
-       &=&& -\alpha_{\varphi}(x)+ e^{-x}\Big((1-d)x^{-d} +  \sum_{k=1}^{+\infty}(k+1-d)(k+1)^{d-1}\frac{x^{k-d}}{k!}\Big)\\
-       &=&& e^{-x}x^{-d}\Big(1-d + \sum_{k=1}^{+\infty}(\frac{k+1-d}{k+1}(k+1)^d - k^d)\frac{x^k}{k!}\Big) \ . 
+       &=&& -\alpha_{\varphi}(x)+ e^{-x}\left((1-d)x^{-d} +  \sum_{k=1}^{+\infty}(k+1-d)(k+1)^{d-1}\frac{x^{k-d}}{k!}\right)\\
+       &=&& e^{-x}x^{-d}\left(1-d + \sum_{k=1}^{+\infty}\left(\frac{k+1-d}{k+1}(k+1)^d - k^d\right)\frac{x^k}{k!}\right) \ . 
      \end{aligned}
    \end{equation}
 

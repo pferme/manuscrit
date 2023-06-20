@@ -36,7 +36,7 @@
 \contentsline {subsection}{\numberline {3.2.2}The Reduction}{22}{subsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.2.1}Completeness}{23}{subsubsection.3.2.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2.2}Soundness}{23}{subsubsection.3.2.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Further Hardness under Gap-ETH}{25}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.3}Further Hardness under Gap-ETH}{26}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Applications}{26}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Generalized List-Decoding}{26}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Multiwinner Elections}{27}{subsection.3.3.2}
