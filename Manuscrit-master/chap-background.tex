@@ -1,5 +1,3 @@
-Put common lemmas and general stuff: negatively associated random variables: recall important properties etc. (clean 3.5.4 with that) move chernoff broadcast to intro
-
 \section{Probability}
 \subsection{Usual Distributions and Properties}
 \begin{definition}[Usual Distributions]
@@ -28,10 +26,28 @@ Put common lemmas and general stuff: negatively associated random variables: rec
 \end{proof}
 
 \subsection{Negatively Associated Random Variables}
-TODO
+Negatively associated random variables definition, recall important properties etc. (clean 3.5.4 with and paragraph before (5.44) with that)
 
 \subsection{Tail Bounds}
-TODO 
+\begin{proposition}[Chernoff-Hoeffding bound - version 1]
+  \label{prop:chernoff1}
+  Let $X_1, \ldots, X_m$ be negatively associated random variables such that $0 \leq X_i \leq B$ and $\mathbb{E}[X_i] = \mu$. Then for $\eta \in (0,1)$:
+  \[ \mathbb{P}\left(\left|\frac{1}{m}\sum_{i=1}^m X_i - \mu\right| > \eta \right) \leq 2e^{-2\left(\frac{\eta}{B}\right)^2m \ . \]
+\end{proposition}
+\begin{proof}
+This usual version of the Chernoff-Hoeffding bound for independent variables (Theorem 2 of~\cite{Hoeffding63}) can be extended to negatively associated random variables directly as pointed out by~\cite{DR98}.
+\end{proof}
+
+\begin{proposition}[Chernoff-Hoeffding bound - version 2]
+  \label{prop:chernoff2}
+  Let $X_1, \ldots, X_m$ be negatively associated Bernouilli random variables of parameter $p$. Then for $0 < \varepsilon \leq \frac{1}{2}$:
+  \[ \mathbb{P}\left(\frac{1}{m}\sum_{i=1}^m X_i > (1+\varepsilon)p \right) \leq e^{-\frac{pm\varepsilon^2}{4}} \ . \]
+\end{proposition}
+\begin{proof}
+  Usual proofs of the Chernoff-Hoeffding bound work in the same way with negatively associated variables as pointed out by~\cite{DR98}. So, one obtain as in the original proof (Theorem 1 of~\cite{Hoeffding63}) that:
+  \[ \mathbb{P}\left(\frac{1}{m}\sum_{i=1}^m X_i > (1+\varepsilon)p \right) \leq e^{-D\left((1+\varepsilon)p||p\right)m} \ ,\]
+    with $D\left(x||y\right) := x\ln\left(\frac{x}{y}\right) + (1-x)\ln\left(\frac{1-x}{1-y}\right)$ the Kullback–Leibler divergence between Bernoulli distributed random variables with parameters $x$ and $y$. As $D\left((1+\varepsilon)p||p\right) \geq \frac{\varepsilon^2p}{4}$ for $0 < \varepsilon < \frac{1}{2}$, we recover the expected bound.
+\end{proof}
 
 \subsection{Non-Signaling Probability Distributions}
 \begin{definition}

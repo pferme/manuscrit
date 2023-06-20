@@ -215,7 +215,7 @@ We say that $\mathcal{Q}$ is an \emph{$x$-cover} of $x \in \mathbb{N}$ if every 
 \begin{proposition}
   For every choice of $R,h \in \mathbb{N}$ with
   \[h \geq x_{\varphi}, \eta \in (0,1),  n \geq \eta^{-2}R\varphi(R)^2\log(20(h+1)) \]
-  such that $\frac{x_{\varphi}n}{h} \in \mathbb{N}$, there exists a $([n],h,R,\varphi,\eta)$-partitioning system, which can be found in time exp($Rn\log(n))\cdot \text{poly}(h)$.
+  such that $\frac{x_{\varphi}n}{h} \in \mathbb{N}$, there exists a $([n],h,R,\varphi,\eta)$-partitioning system, which can be found in time $exp(Rn\log(n))\cdot \text{poly}(h)$.
   \label{prop:Partitioning}
 \end{proposition}
 
@@ -1164,25 +1164,26 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
     By construction, the first condition is fulfilled. Let us prove the second one.
 
     Fix $T \subseteq [R]$ and $\mathcal{Q} := \set{P_{i,j(i)} : i \in T}$ for some function $j : T \rightarrow [h]$. We have for $a \in [n]$:
-    \[ \mathbb{E}[C_a^{\varphi}(\mathcal{Q})] =  \mathbb{E}[\varphi(\abs{\mathcal{Q}}_a)] = \mathbb{E}[\varphi(\abs{\set{i \in T: a \in P_{i,j(i)}}})]\ .\]
+    \[ \mathbb{E}[C_a^{\varphi}(\mathcal{Q})] =  \mathbb{E}[\varphi(\abs{\mathcal{Q}}_a)] = \mathbb{E}\left[\varphi\left(\abs{\set{i \in T: a \in P_{i,j(i)}}}\right)\right]\ .\]
 
     But the random variables $\set{X^a_i := \mathbbm{1}_{a \in P_{i,j(i)}}}_{i \in T}$ are independent and $X^a_i \sim \Ber(\frac{x_{\varphi}}{h})$, so $X^a :=\abs{\set{i \in T: a \in P_{i,j(i)}}} = \sum_{i \in T} X^a_i \sim \Bin(\abs{T},\frac{x_{\varphi}}{h})$, and thus:
-    \[\mathbb{E}[C_a^{\varphi}(\mathcal{Q})] = \mathbb{E}[\varphi(\Bin(\abs{T},\frac{x_{\varphi}}{h}))] =\psi^{\varphi}_{\abs{T},h}\ .\]
+    \[\mathbb{E}[C_a^{\varphi}(\mathcal{Q})] = \mathbb{E}\left[\varphi\left(\Bin\left(\abs{T},\frac{x_{\varphi}}{h}\right)\right)\right] =\psi^{\varphi}_{\abs{T},h}\ .\]
 
-    Since $\abs{\mathcal{Q}}_a\leq \abs{\mathcal{Q}} \leq R$ and $\varphi$ nondecreasing, we have $0 \leq C_a^{\varphi}(\mathcal{Q}) \leq \varphi(R)$. We claim that we can apply a Chernoff-Hoeffding bound on $C^{\varphi}(\mathcal{Q}) = \sum_{a \in [n]} C_a^{\varphi}(\mathcal{Q})$ and get:
-    \[ \mathbb{P}\Big( \abs{C^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} > \eta n\Big) \leq 2 \text{exp}\Big(-2\Big(\frac{\eta}{\varphi(R)}\Big)^2n\Big)\ .\]
+    Since $\abs{\mathcal{Q}}_a\leq \abs{\mathcal{Q}} \leq R$ and $\varphi$ nondecreasing, we have $0 \leq C_a^{\varphi}(\mathcal{Q}) \leq \varphi(R)$. The random variables $\{ C_a^{\varphi}(\mathcal{Q}) \}_{a \in [n]}$ are not independent in general. However, we will show that they are negatively associated, thus we can apply the version of the Chernoff-Hoeffding bound described in Proposition~\ref{prop:chernoff1} to get:
+    %We claim that we can apply a Chernoff-Hoeffding bound on $C^{\varphi}(\mathcal{Q}) = \sum_{a \in [n]} C_a^{\varphi}(\mathcal{Q})$ and get:
+    \[ \mathbb{P}\left(\left|\frac{1}{n}\sum_{a \in [n]}C_a^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h}\right| > \eta \right) \leq 2 \exp\left(-2\left(\frac{\eta}{\varphi(R)}\right)^2n\right)\ .\]
 
-    The random variables $\{ C_a^{\varphi}(\mathcal{Q}) \}_{a \in [n]}$ are not independent in general. However, they are negatively associated~\cite{JP83}, and this is sufficient for the Chernoff-Hoeffding bound to hold as pointed out in~\cite{DR98}, provided that $\eta \in (0,1)$. The set of random variables $\{ C_a^{\varphi}(\mathcal{Q})  \}_{a \in [n]}$ is said to be negatively associated if for any functions $f$ and $g$ either both increasing or both decreasing and any disjoint index sets $I,J \subseteq [n]$, we have:
-    \[ \mathbb{E}[f(C_a^{\varphi}(\mathcal{Q}): a \in  I) \cdot g(C_a^{\varphi}(\mathcal{Q}): a \in  J)] \leq  \mathbb{E}[f(C_a^{\varphi}(\mathcal{Q}): a \in  I)] \cdot \mathbb{E}[g(C_a^{\varphi}(\mathcal{Q}): a \in  J)] \ .\]
+%    The random variables $\{ C_a^{\varphi}(\mathcal{Q}) \}_{a \in [n]}$ are not independent in general. However, they are negatively associated~\cite{JP83}, and this is sufficient for the Chernoff-Hoeffding bound to hold as pointed out in~\cite{DR98}, provided that $\eta \in (0,1)$. The set of random variables $\{ C_a^{\varphi}(\mathcal{Q})  \}_{a \in [n]}$ is said to be negatively associated if for any functions $f$ and $g$ either both increasing or both decreasing and any disjoint index sets $I,J \subseteq [n]$, we have:
+%    \[ \mathbb{E}[f(C_a^{\varphi}(\mathcal{Q}): a \in  I) \cdot g(C_a^{\varphi}(\mathcal{Q}): a \in  J)] \leq  \mathbb{E}[f(C_a^{\varphi}(\mathcal{Q}): a \in  I)] \cdot \mathbb{E}[g(C_a^{\varphi}(\mathcal{Q}): a \in  J)] \ .\]
 
     Note that $C_a^{\varphi}(\mathcal{Q}) = \varphi(\abs{\mathcal{Q}}_a) = \varphi(X^a)$ is a nondecreasing function of $\{ X^a_i \}_{i \in  [R]}$, since $\varphi$ is nondecreasing and $X^a = \sum_{i \in T} X^a_i$. Thus in order to show that $\{ C_a^{\varphi}(\mathcal{Q}) \}_{a \in [n]}$ are negatively associated, it suffices to show that $\{ X^a_i \}_{i \in  [R],a \in [n]}$ are negatively associated (see Proposition P$_6$ of~\cite{JP83}).
 
     For fixed $i \in [R]$, $\{ X^a_i \}_{a \in [n]}$ are negatively associated because it corresponds to a permutation distribution of $(0,\ldots,0,1,\ldots,1)$, with $n-\frac{x_{\varphi}n}{h}$ zeros and $\frac{x_{\varphi}n}{h}$ ones, since it describes a random subset of size $\frac{x_{\varphi}n}{h}$ (see Definition 2.10 and Theorem 2.11 of~\cite{JP83}). Then, using the fact that the families $\{ X^a_i \}_{a \in [n]}$ are mutually independent, we obtain that $\{ X^a_i \}_{i \in  [R],a \in [n]}$ are negatively associated (see Property P$_7$ of~\cite{JP83}). Using~\cite{DR98}, this establishes the claimed Chernoff-Hoeffding bound.
     
     Since there are at most $(h+1)^R$ choices of $T$ and $\mathcal{Q}$, a union bound gives:
-    \[ \mathbb{P}\Big(\exists C,\mathcal{Q} : \abs{C^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} > \eta n\Big) \leq 2(h+1)^R \text{exp}\Big(-2\Big(\frac{\eta}{\varphi(R)}\Big)^2n\Big)\ .\]
+    \[ \mathbb{P}\left(\exists C,\mathcal{Q} : \abs{C^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} > \eta n\right) \leq 2(h+1)^R \exp\left(-2\left(\frac{\eta}{\varphi(R)}\right)^2n\right)\ .\]
 
-    Thus with probability at least $9/10$, we have that $\abs{C^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} \leq \eta n$, since we have taken $n \geq \eta^{-2}R\varphi(R)^2\log(20(h+1))$. So there must exists some choice of $\mathcal{P}$ that satisfies the first and second constraints of partitioning systems. Thus, we can enumerate over all choices of $\mathcal{P}$ in time exp($Rn\log(n))\cdot\text{poly}(h)$ to find such a partitioning system.
+    Thus with probability at least $9/10$, we have that $\abs{C^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} \leq \eta n$, since we have taken $n \geq \eta^{-2}R\varphi(R)^2\log(20(h+1))$. So there must exists some choice of $\mathcal{P}$ that satisfies the first and second constraints of partitioning systems. Thus, we can enumerate over all choices of $\mathcal{P}$ in time $\exp(Rn\log(n))\cdot\text{poly}(h)$ to find such a partitioning system.
 \end{proof}
 
 \subsection{Proof of Theorem~\ref{theo:HardnessMA}}

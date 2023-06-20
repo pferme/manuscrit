@@ -876,18 +876,6 @@ This is more restricted than using any algorithm, but in such a model, it is pos
   So $f_W^1$ is the maximum of the set of $a_{\lambda}$ for $\lambda \in \mathcal{X}^{\mathcal{Y}_1}$, which are linear valuation functions, thus $f_W^1$ is \textrm{XOS}.
 \end{proof}
 
-In order to prove our hardness result, we will need the following version of the Chernoff-Hoeffding bound with negatively associated random variables, which is a weaker notion of independence where tail bounds are still valid (see~\cite{DR98} for further discussion on negatively associated random variables):
-\begin{proposition}[Chernoff-Hoeffding bound]
-  \label{prop:chernoff}
-  Let $X_1, \ldots, X_m$ be negatively associated Bernouilli random variables of parameter $p$. Then for $0 < \varepsilon \leq \frac{1}{2}$:
-  \[ \mathbb{P}\left(\frac{1}{m}\sum_{i=1}^m X_i > (1+\varepsilon)p \right) \leq e^{-\frac{pm\varepsilon^2}{4}} \ . \]
-\end{proposition}
-\begin{proof}
-  Usual proofs of the Chernoff-Hoeffding bound work in the same way with negatively associated variables as pointed out by~\cite{DR98}. So, one obtain as in the original proof~\cite{Hoeffding63} that:
-  \[ \mathbb{P}\left(\frac{1}{m}\sum_{i=1}^m X_i > (1+\varepsilon)p \right) \leq e^{-D\left((1+\varepsilon)p||p\right)m} \ ,\]
-    with $D\left(x||y\right) := x\ln\left(\frac{x}{y}\right) + (1-x)\ln\left(\frac{1-x}{1-y}\right)$ the Kullback–Leibler divergence between Bernoulli distributed random variables with parameters $x$ and $y$. As $D\left((1+\varepsilon)p||p\right) \geq \frac{\varepsilon^2p}{4}$ for $0 < \varepsilon < \frac{1}{2}$, we recover the expected bound.
-\end{proof}
-
 Let us now state the value query hardness of approximation of the broadcast channel problem:
 \begin{theorem}
   \label{theo:VQhardnessBC}
@@ -954,7 +942,7 @@ Let us now state the value query hardness of approximation of the broadcast chan
 
   We will now prove that distinguishing between $v$ and $v'$ requires an exponential number of value queries. Note first that $v(\emptyset) = v'(\emptyset) = 0$, so we do not need to consider empty sets.
 
-  Let us fix some non-empty set $S \subseteq [m]$. Let us define the random boolean variables $X_j^i := \mathbbm{1}_{i \in T_j}$ for $j \in [k_1]$ and $i \in [m]$. By construction of the random equi-partition $T_1, \ldots, T_{k_1}$, $(X_j^i)_{i \in [m]}$ is a permutation distribution (see Definition 2.10 of~\cite{JP83}) of $(0,\ldots,0,1,\ldots,1)$ with $m-k_1$ zeros and $k_1$ ones, each $X_j^i$ following a Bernouilli law of parameter $p := \frac{1}{k_1}$. Thus it is negatively associated (by Theorem 2.11 of~\cite{JP83}), and the sub-family $(X_j^i)_{i \in S}$ is negatively associated as well. Note in particular that $|T_j \cap S| = \sum_{i \in S} X_j^i$ is a sum of negatively associated Bernouilli variables of the same parameter $p$, so the version of the Chernoff-Hoeffding bound from Proposition~\ref{prop:chernoff} holds.
+  Let us fix some non-empty set $S \subseteq [m]$. Let us define the random boolean variables $X_j^i := \mathbbm{1}_{i \in T_j}$ for $j \in [k_1]$ and $i \in [m]$. By construction of the random equi-partition $T_1, \ldots, T_{k_1}$, $(X_j^i)_{i \in [m]}$ is a permutation distribution (see Definition 2.10 of~\cite{JP83}) of $(0,\ldots,0,1,\ldots,1)$ with $m-k_1$ zeros and $k_1$ ones, each $X_j^i$ following a Bernouilli law of parameter $p := \frac{1}{k_1}$. Thus it is negatively associated (by Theorem 2.11 of~\cite{JP83}), and the sub-family $(X_j^i)_{i \in S}$ is negatively associated as well. Note in particular that $|T_j \cap S| = \sum_{i \in S} X_j^i$ is a sum of negatively associated Bernouilli variables of the same parameter $p$, so the version of the Chernoff-Hoeffding bound from Proposition~\ref{prop:chernoff2} holds.
   
   Let us first assume that $S$ is of size $0 < |S| \leq m^{\frac{1}{2}+\delta}$. Then, we have that $\frac{1}{m^{\frac{1}{2}-\delta}}|S| \leq m^{2\delta}$, so we get that $v'(S) = m^{2\delta}$. On the other hand, we have that:
     \begin{equation}
@@ -973,7 +961,7 @@ Let us now state the value query hardness of approximation of the broadcast chan
         &=\sum_{j \in [k_1]} \mathbb{P}\left(\sum_{i \in S}X_j^i > m^{2\delta}\right)
         =\sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{m^{2\delta}}{[S|}-1}{p}\right)p \right)\\
         &\leq \sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{m^{2\delta}}{|S|}}{p}\right)p \right)\\
-        &\leq \sum_{j \in [k_1]}\exp\left(-\frac{p|S|}{4}\left(\frac{m^{2\delta}}{p|S|}\right)^2\right) \text{ by Proposition~\ref{prop:chernoff}}\\
+        &\leq \sum_{j \in [k_1]}\exp\left(-\frac{p|S|}{4}\left(\frac{m^{2\delta}}{p|S|}\right)^2\right) \text{ by Proposition~\ref{prop:chernoff2}}\\
         &= \sum_{j \in [k_1]}\exp\left(-\frac{1}{4p|S|}m^{4\delta}\right) \leq \sum_{j \in [k_1]}\exp\left(-\frac{m^{-\delta}}{4}m^{4\delta}\right) \text{ since } \frac{1}{p|S|} = \frac{k_1}{|S|} \geq m^{-\delta}\\
         &= m^{\frac{1}{2}}e^{-\frac{m^{3\delta}}{4}}\ .
       \end{aligned}
@@ -999,7 +987,7 @@ Let us now state the value query hardness of approximation of the broadcast chan
         =\sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{1}{|S|m^{\frac{1}{2}-\delta}}{|S|}-1}{p}\right)p \right)\\
         &\leq \sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{1}{m^{\frac{1}{2}-\delta}}}{p}\right)p \right)\\
         &= \sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + m^{\delta}\right)p \right) \text{ since } p = \frac{1}{k_1} = \frac{1}{m^{\frac{1}{2}}}\\
-        &\leq \sum_{j \in [k_1]}\exp\left(-\frac{p|S|}{4}m^{2\delta}\right) \text{ by Proposition~\ref{prop:chernoff}}\\
+        &\leq \sum_{j \in [k_1]}\exp\left(-\frac{p|S|}{4}m^{2\delta}\right) \text{ by Proposition~\ref{prop:chernoff2}}\\
         &\leq \sum_{j \in [k_1]}\exp\left(-\frac{m^{\delta}}{4}m^{2\delta}\right) \text{ since } p|S| = \frac{|S|}{k_1} \geq m^{\delta}\\
         &= m^{\frac{1}{2}}e^{-\frac{m^{3\delta}}{4}}\ .
       \end{aligned}
