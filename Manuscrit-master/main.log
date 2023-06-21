@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  20 JUN 2023 16:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  21 JUN 2023 14:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2860,7 +2860,7 @@ ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 
-<garde.pdf, id=305, 597.50829pt x 845.0471pt>
+<garde.pdf, id=301, 597.50829pt x 845.0471pt>
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf>
 Package pdftex.def Info: garde.pdf  used on input line 110.
@@ -2869,7 +2869,7 @@ File: garde.pdf Graphic file (type pdf)
 <use garde.pdf>
 Package pdftex.def Info: garde.pdf  used on input line 110.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-<garde.pdf, id=308, page=1, 597.50829pt x 845.0471pt>
+<garde.pdf, id=304, page=1, 597.50829pt x 845.0471pt>
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf, page 1>
 Package pdftex.def Info: garde.pdf , page1 used on input line 110.
@@ -2989,19 +2989,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 31.
+(Font)              scaled to size 10.95pt on input line 30.
  [7]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 81.
+(Font)              scaled to size 8.0pt on input line 80.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 81.
+(Font)              scaled to size 6.0pt on input line 80.
  [8])
 [9] [10
 
 ] (./symbols.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/sc' will be
 (Font)              scaled to size 10.95pt on input line 6.
-LaTeX Font Info:    Try loading font information for U+euf on input line 9.
+LaTeX Font Info:    Try loading font information for U+euf on input line 10.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -3010,22 +3010,22 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
 )
-LaTeX Font Info:    Try loading font information for U+bbm on input line 18.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-Overfull \hbox (4.94661pt too wide) in alignment at lines 5--26
+Overfull \hbox (4.94661pt too wide) in alignment at lines 5--27
  [] [] 
  []
 
 
-Overfull \hbox (4.94661pt too wide) in alignment at lines 26--46
+Overfull \hbox (4.94661pt too wide) in alignment at lines 27--47
  [] [] 
  []
 
 
-Overfull \hbox (4.94661pt too wide) in alignment at lines 46--63
+Overfull \hbox (4.94661pt too wide) in alignment at lines 47--64
  [] [] 
  []
 
@@ -3066,7 +3066,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 ! Missing } inserted.
 <inserted text> 
                 }
-l.35 ...e^{-2\left(\frac{\eta}{B}\right)^2m \ . \]
+l.76 ...e^{-2\left(\frac{\eta}{B}\right)^2n \ . \]
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3074,31 +3074,31 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+[4] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 55.
+(Font)              scaled to size 20.74pt on input line 96.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 55.
+(Font)              <20.74> on input line 96.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 55.
+(Font)              <14.4> on input line 96.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 55.
+(Font)              <12> on input line 96.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 55.
+(Font)              scaled to size 17.28pt on input line 96.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 55.
+(Font)              <17.28> on input line 96.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 55.
+(Font)              <10> on input line 96.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 55.
+(Font)              scaled to size 9.0pt on input line 96.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 55.
+(Font)              <9> on input line 96.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 55.
- [4] [5]
-Overfull \hbox (24.95612pt too wide) in paragraph at lines 128--129
+(Font)              <5> on input line 96.
+ [5]
+Overfull \hbox (24.95612pt too wide) in paragraph at lines 169--170
 \OMS/lmsy/m/n/10.95 T[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 X[]; X[]\OT1/lmr
 /m/n/10.95 )$\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) , $\OMS/lmsy/m/n/10.95 T[]
 \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 Y\OT1/lmr/m/n/10.95 )$\T1/LinuxLibertin
@@ -3116,10 +3116,11 @@ F/m/n/10.95 (-20) , $\OMS/lmsy/m/n/10.95 T[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/1
 T1/LinuxLibertineT-TLF/m/n/10.95 (-20) .
  []
 
+[6]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 139.
+line 180.
 
-Overfull \hbox (2.63985pt too wide) in paragraph at lines 149--150
+Overfull \hbox (2.63985pt too wide) in paragraph at lines 190--191
 []$\OMS/lmsy/m/n/10.95 8\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]; x[]\OT1/lm
 r/m/n/10.95 ) \OMS/lmsy/m/n/10.95 2 T[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 
 X[]; X[]\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 2[] \OMS/l
@@ -3128,8 +3129,8 @@ msy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.9
 T1/LinuxLibertineT-TLF/m/it/10.95 (-20) . 
  []
 
-[6] [7]
-Overfull \hbox (9.09203pt too wide) detected at line 187
+[7]
+Overfull \hbox (9.09203pt too wide) detected at line 228
 [] \OT1/lmr/m/n/10.95 = [] [] \OML/lmm/m/it/10.95 Z[][]Z[] \OT1/lmr/m/n/10.95 :
 = \U/bbm/m/n/10.95 1[][]\OML/lmm/m/it/10.95 S \OT1/lmr/m/n/10.95 := \OMS/lmsy/m
 /n/10.95 f\OML/lmm/m/it/10.95 i \OT1/lmr/m/n/10.95 : \OML/lmm/m/it/10.95 y[] \O
@@ -3138,32 +3139,36 @@ T1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 y\OMS/lmsy/m/n/10.95 g \OML/lmm/m/it/10.
  []
 
 
-Overfull \hbox (2.29578pt too wide) detected at line 201
+Overfull \hbox (2.29578pt too wide) detected at line 242
 \U/msb/m/n/10.95 P [] \OMS/lmsy/m/n/10.95 ^^T [] [] \OT1/lmr/m/n/10.95 0 \OML/l
 mm/m/it/10.95 :
  []
 
 [8]
-Overfull \hbox (10.57585pt too wide) in paragraph at lines 224--225
-[]\T1/LinuxLibertineT-TLF/b/n/10.95 Definition 2.11 \T1/LinuxLibertineT-TLF/m/n
+Overfull \hbox (10.57585pt too wide) in paragraph at lines 265--266
+[]\T1/LinuxLibertineT-TLF/b/n/10.95 Definition 2.13 \T1/LinuxLibertineT-TLF/m/n
 /10.95 (-20) (Ze-ro-Er-ror Ca-pac-ity Re-gion $[]$ for a suc-cess prob-a-bil-it
 y $\OT1/lmr/m/n/10.95 S(\OML/lmm/m/it/10.95 W; k[]; k[]\OT1/lmr/m/n/10.95 )$\T1
 /LinuxLibertineT-TLF/m/n/10.95 (-20) )\T1/LinuxLibertineT-TLF/b/n/10.95 .
  []
 
-[9]
-Underfull \vbox (badness 3623) has occurred while \output is active []
+[9] [10]
+Overfull \hbox (3.39345pt too wide) in paragraph at lines 306--307
+[]\T1/LinuxLibertineT-TLF/b/n/10.95 Proposition 2.15 \T1/LinuxLibertineT-TLF/m/
+n/10.95 (-20) (Propo-si-tion 2.1 of [[]][])\T1/LinuxLibertineT-TLF/b/n/10.95 . 
+[]$\OT1/lmr/m/n/10.95 S(\OML/lmm/m/it/10.95 W; k\OT1/lmr/m/n/10.95 ) = [][]\OML
+/lmm/m/it/10.95 f[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 
+)$ \T1/LinuxLibertineT-TLF/m/it/10.95 (-20) with $\OML/lmm/m/it/10.95 f[]\OT1/l
+mr/m/n/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 ) :=
+ []
 
- [10]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 293.
-)
-[11] [12
-
-] (./chap-MaxCoverage.tex
+t line 334.
+[11]) [12] (./chap-MaxCoverage.tex
 Underfull \vbox (badness 1189) has occurred while \output is active []
 
  [13
+
 
 ]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/scit' will be
@@ -3428,10 +3433,10 @@ PGFPlots: reading {Data/Data_Capacity_BACwithSmallBitFlipNoise/Capacity5.csv}
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [77] [78]
-Overfull \hbox (0.77039pt too wide) in paragraph at lines 1247--1249
-\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) thanks to Propo-si-tion [][]2.8[][]. Le
-t us con-sider op-ti-mal so-lu-tions $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 p
-[]; r[]\OT1/lmr/m/n/10.95 )[]$
+Overfull \hbox (5.76028pt too wide) in paragraph at lines 1247--1249
+\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) thanks to Propo-si-tion [][]2.14[][]. L
+et us con-sider op-ti-mal so-lu-tions $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 
+p[]; r[]\OT1/lmr/m/n/10.95 )[]$
  []
 
 [79] [80] [81]
@@ -3670,25 +3675,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5C442C3AC2C235F3EDD79F681A1EC96C;5859.
+(rerunfilecheck)             Checksum: 7D143E4ADAE845EA3C5667D0EAB873B1;5794.
+Package rerunfilecheck Info: File `main.brf' has not changed.
+(rerunfilecheck)             Checksum: AB726F1C65F1366518ECE197867F7BF8;8504.
 
-
-Package rerunfilecheck Warning: File `main.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `main.brf':
-(rerunfilecheck)             Before: A9A4823FE7932CC2A778EAA8356DD585;8473
-(rerunfilecheck)             After:  BD04F46EA6DAE0F5B8DFFF055ACA2C7B;8425.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
  ) 
 Here is how much of TeX's memory you used:
- 57273 strings out of 494821
- 1250759 string characters out of 6177891
- 1570432 words of memory out of 5000000
- 58213 multiletter control sequences out of 15000+600000
+ 57310 strings out of 494821
+ 1251608 string characters out of 6177891
+ 1571561 words of memory out of 5000000
+ 58235 multiletter control sequences out of 15000+600000
  836597 words of font info for 547 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10422b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3725,9 +3725,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (155 pages, 1709668 bytes).
+Output written on main.pdf (155 pages, 1715288 bytes).
 PDF statistics:
- 3005 PDF objects out of 3580 (max. 8388607)
- 824 named destinations out of 1000 (max. 500000)
- 60537 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 3029 PDF objects out of 3580 (max. 8388607)
+ 839 named destinations out of 1000 (max. 500000)
+ 60529 words of extra memory for PDF output out of 61914 (max. 10000000)
 

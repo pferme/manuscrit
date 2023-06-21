@@ -26,13 +26,54 @@
 \end{proof}
 
 \subsection{Negatively Associated Random Variables}
-Negatively associated random variables definition, recall important properties etc. (clean 3.5.4 with and paragraph before (5.44) with that)
+We present a weaker notion of independence for random variables which is called negative association as introduced in~\cite{JP83}, for which the Chernoff-Hoeffding bounds still hold.
 
-\subsection{Tail Bounds}
+\begin{definition}
+   \label{defi:NA}
+Random variables $X_1,\ldots,X_n$ are said to be negatively associated if for every pair of disjoints subsets $I,J$ of $[n]$ and (coordinate-wise) increasing functions $f,g$, we have:
+    \[ \mathbb{E}[f(\{X_i : i \in I\})) \cdot g(\{X_i : i \in J\})] \leq  \mathbb{E}[f(\{X_i : i \in I\})] \cdot \mathbb{E}[g(\{X_i : i \in J\})] \ .\]
+\end{definition}
+
+\begin{proposition}[Property $\text{P}_1$ of~\cite{JP83}]
+  \label{prop:NA_P1}
+  A pair of random variable $X,Y$ is negatively associated if and only if:
+  \[ \forall x \in \mathcal{X},  \forall y \in \mathcal{Y}, P_{XY}(x,y) \leq P_X(x)P_Y(y) \ .\]
+\end{proposition}
+
+\begin{proposition}[Property $\text{P}_4$ of~\cite{JP83}]
+  \label{prop:NA_P4}
+  A subset of two or more negatively associated random variables is negatively associated.
+\end{proposition}
+
+\begin{proposition}[Property $\text{P}_5$ of~\cite{JP83}]
+  \label{prop:NA_P5}
+  A set of independent random variables is negatively associated.
+\end{proposition}
+
+\begin{proposition}[Property $\text{P}_6$ of~\cite{JP83}]
+  \label{prop:NA_P6}
+  Increasing functions defined on disjoint subsets of a set of negatively associated random variables are negatively associated.
+\end{proposition}
+
+\begin{proposition}[Property $\text{P}_7$ of~\cite{JP83}]
+    \label{prop:NA_P7}
+    The union of independent sets of negatively associated random variables is negatively associated.
+\end{proposition}
+
+\begin{definition}[Permutation Distribution]
+  \label{defi:perm}
+  Let $x = (x_1,\ldots,x_k) \in \mathbb{R}^k$. A permutation distribution is the joint distribution of the vector $X = (X_1,\ldots,X_k)$ which takes as values all $k!$ permutations of $x$ with equal probabilities, each being $\frac{1}{k!}$.
+\end{definition}
+
+\begin{proposition}[Theorem 2.11 of~\cite{JP83}]
+  \label{prop:permNA}
+   A permutation distribution is negatively associated.
+\end{proposition} 
+
 \begin{proposition}[Chernoff-Hoeffding bound - version 1]
   \label{prop:chernoff1}
-  Let $X_1, \ldots, X_m$ be negatively associated random variables such that $0 \leq X_i \leq B$ and $\mathbb{E}[X_i] = \mu$. Then for $\eta \in (0,1)$:
-  \[ \mathbb{P}\left(\left|\frac{1}{m}\sum_{i=1}^m X_i - \mu\right| > \eta \right) \leq 2e^{-2\left(\frac{\eta}{B}\right)^2m \ . \]
+  Let $X_1, \ldots, X_n$ be negatively associated random variables such that $0 \leq X_i \leq B$ and $\mathbb{E}[X_i] = \mu$. Then for $\eta \in (0,1)$:
+  \[ \mathbb{P}\left(\left|\frac{1}{n}\sum_{i=1}^n X_i - \mu\right| > \eta \right) \leq 2e^{-2\left(\frac{\eta}{B}\right)^2n \ . \]
 \end{proposition}
 \begin{proof}
 This usual version of the Chernoff-Hoeffding bound for independent variables (Theorem 2 of~\cite{Hoeffding63}) can be extended to negatively associated random variables directly as pointed out by~\cite{DR98}.
@@ -40,12 +81,12 @@ This usual version of the Chernoff-Hoeffding bound for independent variables (Th
 
 \begin{proposition}[Chernoff-Hoeffding bound - version 2]
   \label{prop:chernoff2}
-  Let $X_1, \ldots, X_m$ be negatively associated Bernouilli random variables of parameter $p$. Then for $0 < \varepsilon \leq \frac{1}{2}$:
-  \[ \mathbb{P}\left(\frac{1}{m}\sum_{i=1}^m X_i > (1+\varepsilon)p \right) \leq e^{-\frac{pm\varepsilon^2}{4}} \ . \]
+  Let $X_1, \ldots, X_n$ be negatively associated Bernouilli random variables of parameter $p$. Then for $0 < \varepsilon \leq \frac{1}{2}$:
+  \[ \mathbb{P}\left(\frac{1}{n}\sum_{i=1}^n X_i > (1+\varepsilon)p \right) \leq e^{-\frac{pn\varepsilon^2}{4}} \ . \]
 \end{proposition}
 \begin{proof}
   Usual proofs of the Chernoff-Hoeffding bound work in the same way with negatively associated variables as pointed out by~\cite{DR98}. So, one obtain as in the original proof (Theorem 1 of~\cite{Hoeffding63}) that:
-  \[ \mathbb{P}\left(\frac{1}{m}\sum_{i=1}^m X_i > (1+\varepsilon)p \right) \leq e^{-D\left((1+\varepsilon)p||p\right)m} \ ,\]
+  \[ \mathbb{P}\left(\frac{1}{n}\sum_{i=1}^n X_i > (1+\varepsilon)p \right) \leq e^{-D\left((1+\varepsilon)p||p\right)n} \ ,\]
     with $D\left(x||y\right) := x\ln\left(\frac{x}{y}\right) + (1-x)\ln\left(\frac{1-x}{1-y}\right)$ the Kullback–Leibler divergence between Bernoulli distributed random variables with parameters $x$ and $y$. As $D\left((1+\varepsilon)p||p\right) \geq \frac{\varepsilon^2p}{4}$ for $0 < \varepsilon < \frac{1}{2}$, we recover the expected bound.
 \end{proof}
 
@@ -208,7 +249,7 @@ Formally, a channel $W$ is a conditional probability distribution depending on $
   \[ \forall x^n,y^m, W(y^m|x^n) \geq 0 \text{ and } \forall x^n, \sum_{y^m \in \mathcal{Y}^m} W(y^m|x^n) = 1 \ . \]
 We will denote such a channel by $W : \mathcal{X}^n \rightarrow \mathcal{Y}^m$. The tensor product of two channels $W: \mathcal{X}^n \rightarrow \mathcal{Y}^m$ and $W': \mathcal{X}'^n \rightarrow \mathcal{Y}^m$ is denoted by $W \otimes W' : (\mathcal{X}^n \times \mathcal{X}^{\prime n}) \to  (\mathcal{Y}^n \times \mathcal{Y}^{\prime n})$ and defined by:
 \[ (W \otimes W')(y^my^{\prime m}|x^nx^{\prime n}) := W(y^m|x^n) \cdot W'^{\prime m}|x^{\prime n}) \ .\]
-We denote by $W^{\otimes n}$ the $n$th tensor product of $W$, i.e. $W^{\otimes n} = W \otimes \ldots \otimes W$ with $n$ occurences of $W$.
+We denote by $W^{\otimes n}$ the $n$th tensor product of $W$, i.e. $W^{\otimes n} = W \otimes \ldots \otimes W$ with $n$ occurrences of $W$.
 
 When $n=m=1$, we will speak of regular or one-way channels. When $n>1,m=1$, we will speak of multiple-access channels. When $n=1,m>1$, we will speak of broadcast channels. If both $n,m$ are greater than $1$, we will speak of interference channels. More specifically, in this thesis, we will focus on the cases of $n=2,m=1$ and $n=1,m=2$, which are at the core of the specificity of network channels.
 
