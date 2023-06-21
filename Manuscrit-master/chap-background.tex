@@ -1,6 +1,7 @@
 \section{Probability}
 \subsection{Usual Distributions and Properties}
 \begin{definition}[Usual Distributions]
+  We will consider the following probability distributions:
   \begin{enumerate}
   \item The Bernouilli distribution $\Ber(p)$ is defined on $\{0,1\}$ with the mass function:
         \[ (1-p,p) \ . \]
@@ -18,15 +19,15 @@
 
 \begin{proposition}
     For $\varphi$ concave, and $p \in [0,1]^m$, we have:
-    \[\mathbb{E}\Big[\varphi\Big(\sum_{i=1}^m\Ber(p_i)\Big)\Big] \geq \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i=1}^m p_i\Big)\Big)\Big]\ .\]
+    \[\mathbb{E}\left[\varphi\left(\sum_{i=1}^m\Ber(p_i)\right)\right] \geq \mathbb{E}\left[\varphi\left(\Poi\left(\sum_{i=1}^m p_i\right)\right)\right]\ .\]
   \label{prop:ConvexOrder}
 \end{proposition}
 
 \begin{proof}
   The notion of \emph{convex order} discussed in~\cite{SS07} allows us to prove this result. We say that $X \leq_{\text{cx}} Y \iff \mathbb{E}[f(X)] \leq \mathbb{E}[f(Y)]$ for any convex $f$. Thanks to Lemma 2.3 of~\cite{BFGG20}, we have that for $p \in [0,1]$:
   \[\Ber(p) \leq_{\text{cx}} \Poi(p)\ .\]
-  Since this order is preserved through convolution (Theorem 3.A.12 of~\cite{SS07}), and the fact that $\sum_{i=1}^m \Poi(p_i) \sim \Poi\Big(\sum_{i=1}^m p_i\Big)$, we have:
-  \[\sum_{i=1}^m\Ber(p_i) \leq_{\text{cx}}  \Poi\Big(\sum_{i=1}^m p_i\Big)\ .\]
+  Since this order is preserved through convolution (Theorem 3.A.12 of~\cite{SS07}), and the fact that $\sum_{i=1}^m \Poi(p_i) \sim \Poi\left(\sum_{i=1}^m p_i\right)$, we have:
+  \[\sum_{i=1}^m\Ber(p_i) \leq_{\text{cx}}  \Poi\left(\sum_{i=1}^m p_i\right)\ .\]
   Applying this result to $-\varphi$, which is convex, concludes the proof.
 \end{proof}
 
@@ -171,7 +172,7 @@ We say that $X \rightarrow Y \rightarrow Z$ forms a Markov chain if $Z$ is condi
 
 \subsection{Typical Sets}
 \label{subsection:typicalSets}
-We will consider the following typical sets defined in Chapter 2.5 of~\cite{GK11}: $\mathcal{T}^n_{\varepsilon}(X_1,X_2,Y)$, $\mathcal{T}^n_{\varepsilon}(X_1,X_2)$, $\mathcal{T}^n_{\varepsilon}(Y)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n,y^n)$, $\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)$. Recall that:
+We will consider the following typical sets defined in Chapter 2.5 of~\cite{GK11}: $\mathcal{T}^n_{\varepsilon}(X_1,X_2,Y)$, $\mathcal{T}^n_{\varepsilon}(X_1,X_2)$, $\mathcal{T}^n_{\varepsilon}(Y)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n,y^n)$ as well as $\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)$. Recall that:
       \begin{definition}[Typical set and conditional typical set]
         We have the following definitions:
         \begin{enumerate}
@@ -266,7 +267,7 @@ When $n=m=1$, we will speak of regular or one-way channels. When $n>1,m=1$, we w
   We define the $\mathrm{S}$-capacity region $\mathcal{C}[\mathrm{S}](W)$ as the closure of the set of all achievable rate pairs (for the channel $W$).
 \end{definition}
 
-\begin{definition}[Zero-Error Capacity Region ${\mathcal{C}_0[\mathrm{S}](W)}$ for a success probability $\mathrm{S}(W,k_1,k_2)$]
+\begin{definition}[Zero-Error Capacity Region ${\mathcal{C}_0[\mathrm{S}](W)}$ for $\mathrm{S}(W,k_1,k_2)$]
   A rate pair $(R_1,R_2)$ is $\mathrm{S}$-achievable with zero-error (for the channel $W$) if:
   \[ \exists n_0  \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   We define the zero-error $\mathrm{S}$-capacity region $\mathcal{C}[\mathrm{S}](W)$ as the closure of the set of all achievable rate pairs with zero-error (for the channel $W$).
