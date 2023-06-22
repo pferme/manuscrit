@@ -282,6 +282,16 @@ Uriel Feige.
 \newblock \href {https://doi.org/10.1145/285055.285059}
   {\path{doi:10.1145/285055.285059}}.
 
+\bibitem[Fei02]{Feige02}
+Uriel Feige.
+\newblock Relations between average case complexity and approximation
+  complexity.
+\newblock In John~H. Reif, editor, {\em Proceedings on 34th Annual {ACM}
+  Symposium on Theory of Computing, May 19-21, 2002, Montr{\'{e}}al,
+  Qu{\'{e}}bec, Canada}, pages 534--543. {ACM}, 2002.
+\newblock \href {https://doi.org/10.1145/509907.509985}
+  {\path{doi:10.1145/509907.509985}}.
+
 \bibitem[FF22]{FF22}
 Omar Fawzi and Paul Ferm{\'{e}}.
 \newblock Beating the sum-rate capacity of the binary adder channel with
