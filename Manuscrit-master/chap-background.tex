@@ -257,7 +257,7 @@ We will denote such a channel by $W : \mathcal{X}^n \rightarrow \mathcal{Y}^m$. 
 \[ (W \otimes W')(y^my^{\prime m}|x^nx^{\prime n}) := W(y^m|x^n) \cdot W'^{\prime m}|x^{\prime n}) \ .\]
 We denote by $W^{\otimes n}$ the $n$th tensor product of $W$, i.e. $W^{\otimes n} = W \otimes \ldots \otimes W$ with $n$ occurrences of $W$.
 
-When $n=m=1$, we will speak of regular or one-way channels. When $n>1,m=1$, we will speak of multiple-access channels. When $n=1,m>1$, we will speak of broadcast channels. If both $n,m$ are greater than $1$, we will speak of interference channels. More specifically, in this thesis, we will focus on the cases of $n=2,m=1$ and $n=1,m=2$, which are at the core of the specificity of network channels.
+When $n=m=1$, we will speak of regular or point-to-point channels. When $n>1,m=1$, we will speak of multiple-access channels. When $n=1,m>1$, we will speak of broadcast channels. If both $n,m$ are greater than $1$, we will speak of interference channels. More specifically, in this thesis, we will focus on the cases of $n=2,m=1$ and $n=1,m=2$, which are at the core of the specificity of network channels.
 
 \subsection{Capacity Regions}
 \begin{definition}[Capacity Region ${\mathcal{C}[\mathrm{S}](W)}$ for a success probability $\mathrm{S}(W,k_1,k_2)$]
@@ -294,9 +294,9 @@ For zero-error capacity regions, since by hypothesis there exists ranks $n_0,n_0
 It is in particular true for $n \geq n_0 := \max\left(\ceil{\frac{n_0'}{1-\lambda}},\ceil{\frac{n_0}{\lambda}}\right)$. As $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we have  for all $n \geq n_0$ that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) = 1$, i.e. $(R_{\lambda,1},R_{\lambda,2})$ is $\mathrm{S}$-achievable with zero-error for the channel $W$.  Finally, since $\mathcal{C}_0[\mathrm{S}](W)$ is defined as the closure of $\mathrm{S}$-achievable rates with zero-error for the channel $W$, we get that $\mathcal{C}_0[\mathrm{S}](W)$ is convex.
 \end{proof}
  
-\section{Channel Coding for One-Way Channels}
+\section{Channel Coding for Point-to-Point Channels}
 \label{subsection:onewaychannelcoding} 
-We recall here the main results from~\cite{BF18} on channel coding for one-way channels, i.e. with one input and one output. Let us first recall the definition of the maximum success probability $\mathrm{S}(W,k)$ of transmitting $k$ messages using the channel $W$:
+We recall here the main results from~\cite{BF18} on channel coding for point-to-point channels, i.e. with one input and one output. Let us first recall the definition of the maximum success probability $\mathrm{S}(W,k)$ of transmitting $k$ messages using the channel $W$:
 \begin{equation}
   \begin{aligned}
     \mathrm{S}(W,k) := &&\underset{e,d}{\maxi} &&& \frac{1}{k} \sum_{i,x,y} W(y|x)e(x|i)d(i|y)\\
