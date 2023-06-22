@@ -49,6 +49,14 @@ PK~Aravind.
 \newblock \href {https://arxiv.org/abs/quant-ph/0206070}
   {\path{arXiv:quant-ph/0206070}}.
 
+\bibitem[Ari09]{Arikan09}
+Erdal Arikan.
+\newblock Channel polarization: a method for constructing capacity-achieving
+  codes for symmetric binary-input memoryless channels.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 55(7):3051--3073, 2009.
+\newblock \href {https://doi.org/10.1109/TIT.2009.2021379}
+  {\path{doi:10.1109/TIT.2009.2021379}}.
+
 \bibitem[AS04]{AS04}
 Alexander~A. Ageev and Maxim Sviridenko.
 \newblock Pipage rounding: {A} new method of constructing algorithms with
@@ -112,6 +120,13 @@ Siddharth Barman, Omar Fawzi, Suprovat Ghoshal, and Emirhan G{\"{u}}rpinar.
   Lecture Notes in Computer Science}, pages 66--77. Springer, 2020.
 \newblock \href {https://doi.org/10.1007/978-3-030-45771-6\_6}
   {\path{doi:10.1007/978-3-030-45771-6\_6}}.
+
+\bibitem[BG96]{BG96}
+Claude Berrou and Alain Glavieux.
+\newblock Near optimum error correcting coding and decoding: turbo-codes.
+\newblock {\em {IEEE} Trans. Commun.}, 44(10):1261--1271, 1996.
+\newblock \href {https://doi.org/10.1109/26.539767}
+  {\path{doi:10.1109/26.539767}}.
 
 \bibitem[BH84]{Barbour84}
 Andrew~D Barbour and Peter Hall.
@@ -302,6 +317,13 @@ Manuel Fern{\'a}ndez and Stuart Williams.
   46(2):803--817, 2010.
 \newblock \href {https://doi.org/10.1109/TAES.2010.5461658}
   {\path{doi:10.1109/TAES.2010.5461658}}.
+
+\bibitem[Gal62]{Gallager62}
+Robert~G. Gallager.
+\newblock Low-density parity-check codes.
+\newblock {\em {IRE} Trans. Inf. Theory}, 8(1):21--28, 1962.
+\newblock \href {https://doi.org/10.1109/TIT.1962.1057683}
+  {\path{doi:10.1109/TIT.1962.1057683}}.
 
 \bibitem[Gal74]{Gallager74}
 R.G. Gallager.

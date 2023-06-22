@@ -14,6 +14,8 @@ Another approach, developped by Barman and Fawzi in~\cite{BF18}, focuses on a un
 
 Following this work, the $\ell$-list-decoding task~\cite{Elias57,Wozencraft58}, where the decoder is only asked to output a list of $\ell$ possible guesses instead of giving the right input message, was studied from an algorithmic point of view in~\cite{BFGG20}. Similarly, they developed a $\left(1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}\right)$-approximation algorithm running in polynomial time, and it was shown in~\cite{DMMS20} that this ratio cannot be increased if $\textrm{P}\not=\textrm{NP}$. More generally, a larger class of combinatorial optimization problems, called maximum multi-coverage, falls in the analysis of~\cite{BFGG20}.
 
+A natural extension
+
 %Intro Chapter 1 here? MAYBE.
 
 %Another POV on sending information that arise is the use of quantum ressources. Small and concise intro on quantum machanics. QE shared helps sending info while not being able to send info directly (BIBLIO TODO).

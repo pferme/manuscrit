@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  22 JUN 2023 11:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  22 JUN 2023 14:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3031,20 +3031,22 @@ Overfull \hbox (4.94661pt too wide) in alignment at lines 47--64
 
 [11
 
-]) [12] (./chap-introduction.texpdfTeX warning (ext4): destination with the sam
-e identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.22 \newpage
-              [1
-
-
-])pdfTeX warning (ext4): destination with the same identifier (name{page.2}) ha
-s been already used, duplicate ignored
+]) [12] (./chap-introduction.tex)pdfTeX warning (ext4): destination with the sa
+me identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.155 \cleardoublepage
-                       [2] (./chap-background.tex
+                       [1
+
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.155 \cleardoublepage
+                       [2
+
+] (./chap-background.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 1.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
@@ -3061,20 +3063,8 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 6.0pt on input line 22.
  [3
 
-
-]
-! Missing } inserted.
-<inserted text> 
-                }
-l.82 ...e^{-2\left(\frac{\eta}{B}\right)^2n \ . \]
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[4] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+] [4]
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
@@ -3609,17 +3599,17 @@ Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
  [131]
-Underfull \hbox (badness 1389) in paragraph at lines 149--149
+Underfull \hbox (badness 1389) in paragraph at lines 164--164
 []\T1/LinuxLibertineT-TLF/m/n/10 (+20) Charles H Ben-nett, Pe-ter W Shor, John 
 A Smolin, and Ashish V Thap-liyal.
  []
 
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 160.
+(Font)              using `T1/zi4/m/n' instead on input line 175.
 
 [132] [133] [134] [135] [136]
-Underfull \hbox (badness 1383) in paragraph at lines 714--714
+Underfull \hbox (badness 1383) in paragraph at lines 736--736
 \T1/zi4/m/n/10 the-[]maximal-[]error-[]and-[]average-[]error-[]capacity-[]regio
 n-[]of-[]the-[]broadc$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) .  Ci-ta-tions:
  []
@@ -3650,7 +3640,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 98DEBA54360693B0E595D2CA5BD9CD52;5801.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: 528E12FCC8A2FF980758EF2A7642F0B1;8547.
+(rerunfilecheck)             Checksum: 6662C65224731652C2EABF37BD0301D1;8626.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3658,11 +3648,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
  ) 
 Here is how much of TeX's memory you used:
- 57316 strings out of 494821
- 1251737 string characters out of 6177891
- 1571614 words of memory out of 5000000
- 58236 multiletter control sequences out of 15000+600000
- 836968 words of font info for 549 fonts, out of 8000000 for 9000
+ 57343 strings out of 494821
+ 1252128 string characters out of 6177891
+ 1571713 words of memory out of 5000000
+ 58254 multiletter control sequences out of 15000+600000
+ 837612 words of font info for 553 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10422b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist
@@ -3698,9 +3688,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (155 pages, 1716936 bytes).
+Output written on main.pdf (155 pages, 1719493 bytes).
 PDF statistics:
- 3035 PDF objects out of 3580 (max. 8388607)
- 841 named destinations out of 1000 (max. 500000)
+ 3047 PDF objects out of 3580 (max. 8388607)
+ 844 named destinations out of 1000 (max. 500000)
  60529 words of extra memory for PDF output out of 61914 (max. 10000000)
 

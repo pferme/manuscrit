@@ -79,7 +79,7 @@ Random variables $X_1,\ldots,X_n$ are said to be negatively associated if for ev
 \begin{proposition}[Chernoff-Hoeffding bound - version 1]
   \label{prop:chernoff1}
   Let $X_1, \ldots, X_n$ be negatively associated random variables such that $0 \leq X_i \leq B$ and $\mathbb{E}[X_i] = \mu$. Then for $\eta \in (0,1)$:
-  \[ \mathbb{P}\left(\left|\frac{1}{n}\sum_{i=1}^n X_i - \mu\right| > \eta \right) \leq 2e^{-2\left(\frac{\eta}{B}\right)^2n \ . \]
+  \[ \mathbb{P}\left(\left|\frac{1}{n}\sum_{i=1}^n X_i - \mu\right| > \eta \right) \leq 2e^{-2\left(\frac{\eta}{B}\right)^2n} \ . \]
 \end{proposition}
 \begin{proof}
 This usual version of the Chernoff-Hoeffding bound for independent variables (Theorem 2 of~\cite{Hoeffding63}) can be extended to negatively associated random variables directly as pointed out by~\cite{DR98}.
