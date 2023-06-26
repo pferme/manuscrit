@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  23 JUN 2023 17:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  26 JUN 2023 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3038,11 +3038,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.19 
+l.20 
       [1
 
 
-])pdfTeX warning (ext4): destination with the same identifier (name{page.2}) ha
+] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+))pdfTeX warning (ext4): destination with the same identifier (name{page.2}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -3066,9 +3068,6 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 
 
 ] [4]
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 20.74pt on input line 102.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -3600,18 +3599,25 @@ Package microtype Info: Character `textendash ' is missing
 Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [131]
-Underfull \hbox (badness 1389) in paragraph at lines 164--164
+
+Underfull \hbox (badness 1292) in paragraph at lines 37--37
+\T1/zi4/m/n/10 / / link . aps . org / doi / 10 . 1103 / PhysRevLett . 49 . 1804
+$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) , [][]$\T1/zi4/m/n/10 doi : 10 . 1103
+ / PhysRevLett . 49 . 1804$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) .
+ []
+
+[131]
+Underfull \hbox (badness 1389) in paragraph at lines 180--180
 []\T1/LinuxLibertineT-TLF/m/n/10 (+20) Charles H Ben-nett, Pe-ter W Shor, John 
 A Smolin, and Ashish V Thap-liyal.
  []
 
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 175.
+(Font)              using `T1/zi4/m/n' instead on input line 191.
 
 [132] [133] [134] [135] [136]
-Underfull \hbox (badness 1383) in paragraph at lines 746--746
+Underfull \hbox (badness 1383) in paragraph at lines 777--777
 \T1/zi4/m/n/10 the-[]maximal-[]error-[]and-[]average-[]error-[]capacity-[]regio
 n-[]of-[]the-[]broadc$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) .  Ci-ta-tions:
  []
@@ -3642,7 +3648,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 98DEBA54360693B0E595D2CA5BD9CD52;5801.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: ED143F793FC6CA27CC662EA43818E219;8665.
+(rerunfilecheck)             Checksum: 0E30804AE4C1CDFC43FDD645D2AA4BB6;8890.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3650,11 +3656,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
  ) 
 Here is how much of TeX's memory you used:
- 57350 strings out of 494821
- 1252205 string characters out of 6177891
- 1571746 words of memory out of 5000000
- 58260 multiletter control sequences out of 15000+600000
- 837612 words of font info for 553 fonts, out of 8000000 for 9000
+ 57381 strings out of 494821
+ 1252549 string characters out of 6177891
+ 1571858 words of memory out of 5000000
+ 58284 multiletter control sequences out of 15000+600000
+ 837983 words of font info for 555 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10422b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist
@@ -3690,9 +3696,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (155 pages, 1721589 bytes).
+Output written on main.pdf (155 pages, 1727797 bytes).
 PDF statistics:
- 3051 PDF objects out of 3580 (max. 8388607)
- 845 named destinations out of 1000 (max. 500000)
+ 3073 PDF objects out of 3580 (max. 8388607)
+ 849 named destinations out of 1000 (max. 500000)
  60529 words of extra memory for PDF output out of 61914 (max. 10000000)
 

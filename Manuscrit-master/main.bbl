@@ -26,6 +26,15 @@ Rudolf Ahlswede and Vladimir~B. Balakirsky.
 \newblock \href {https://doi.org/10.1109/18.746834}
   {\path{doi:10.1109/18.746834}}.
 
+\bibitem[ADR82]{ADG82}
+Alain Aspect, Jean Dalibard, and G\'erard Roger.
+\newblock Experimental test of bell's inequalities using time-varying
+  analyzers.
+\newblock {\em Phys. Rev. Lett.}, 49:1804--1807, Dec 1982.
+\newblock URL: \url{https://link.aps.org/doi/10.1103/PhysRevLett.49.1804},
+  \href {https://doi.org/10.1103/PhysRevLett.49.1804}
+  {\path{doi:10.1103/PhysRevLett.49.1804}}.
+
 \bibitem[Ahl73]{Ahlswede73}
 Rudolf Ahlswede.
 \newblock Multi-way communication channels.
@@ -95,6 +104,13 @@ Nicolas Brunner, Daniel Cavalcanti, Stefano Pironio, Valerio Scarani, and
 \newblock {\em Rev. Mod. Phys.}, 86:419--478, Apr 2014.
 \newblock \href {https://doi.org/10.1103/RevModPhys.86.419}
   {\path{doi:10.1103/RevModPhys.86.419}}.
+
+\bibitem[Bel64]{Bell64}
+J.~S. Bell.
+\newblock On the einstein podolsky rosen paradox.
+\newblock {\em Physics Physique Fizika}, 1:195--200, Nov 1964.
+\newblock \href {https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195}
+  {\path{doi:10.1103/PhysicsPhysiqueFizika.1.195}}.
 
 \bibitem[Ber73]{Bergmans73}
 Patrick~P. Bergmans.
@@ -209,6 +225,13 @@ G{\'e}rard Cornu{\'e}jols, Marshall~L Fisher, and George~L Nemhauser.
 \newblock \href {https://doi.org/10.1287/mnsc.23.8.789}
   {\path{doi:10.1287/mnsc.23.8.789}}.
 
+\bibitem[CHSH69]{CHSH69}
+John~F. Clauser, Michael~A. Horne, Abner Shimony, and Richard~A. Holt.
+\newblock Proposed experiment to test local hidden-variable theories.
+\newblock {\em Phys. Rev. Lett.}, 23:880--884, Oct 1969.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.23.880}
+  {\path{doi:10.1103/PhysRevLett.23.880}}.
+
 \bibitem[Cov72]{Cover72}
 Thomas~M. Cover.
 \newblock Broadcast channels.
@@ -274,6 +297,14 @@ Peter Elias.
 \newblock {\em Technical Report}, 335, 1957.
 \newblock URL:
   \url{https://dspace.mit.edu/bitstream/handle/1721.1/4484/RLE-TR-335-04734756.pdf}.
+
+\bibitem[EPR35]{EPR35}
+A.~Einstein, B.~Podolsky, and N.~Rosen.
+\newblock Can quantum-mechanical description of physical reality be considered
+  complete?
+\newblock {\em Phys. Rev.}, 47:777--780, May 1935.
+\newblock \href {https://doi.org/10.1103/PhysRev.47.777}
+  {\path{doi:10.1103/PhysRev.47.777}}.
 
 \bibitem[Fei98]{Feige98}
 Uriel Feige.
