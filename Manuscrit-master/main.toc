@@ -15,13 +15,13 @@
 \contentsline {section}{\numberline {2.1}Probability}{3}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Usual Distributions and Properties}{3}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Negatively Associated Random Variables}{4}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Non-Signaling Probability Distributions}{5}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.3}Non-signaling Probability Distributions}{5}{subsection.2.1.3}
 \contentsline {section}{\numberline {2.2}Information Theory}{6}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Information Quantities}{6}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Typical Sets}{7}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Channels}{9}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Capacity Regions}{9}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Channel Coding for Point-to-Point Channels}{10}{section.2.3}
+\contentsline {section}{\numberline {2.3}Channel Coding for Point-to-point Channels}{10}{section.2.3}
 \contentsline {chapter}{\chapternumberline {3}Tight Approximation Guarantees for Concave Coverage Problems}{13}{chapter.3}
 \contentsline {paragraph}{Applications and related work}{14}{section*.5}
 \contentsline {paragraph}{Remarks on the {Poisson concavity ratio} $\alpha _{\varphi }$.}{16}{section*.7}
@@ -37,10 +37,10 @@
 \contentsline {subsubsection}{\numberline {3.2.2.2}Soundness}{23}{subsubsection.3.2.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Further Hardness under Gap-ETH}{26}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Applications}{26}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Generalized List-Decoding}{26}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Generalized List-decoding}{26}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Multiwinner Elections}{27}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Resource Allocation in Multiagent Systems}{28}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Vehicle-Target Assignment}{29}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.3}Resource Allocation in Multi-agent Systems}{28}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Vehicle-target Assignment}{29}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}Welfare Maximization for $\varphi $-Coverage}{30}{subsection.3.3.5}
 \contentsline {section}{\numberline {3.4}Conclusion}{31}{section.3.4}
 \contentsline {section}{\numberline {3.5}Appendix}{33}{section.3.5}
@@ -49,43 +49,43 @@
 \contentsline {subsection}{\numberline {3.5.3}NP-hardness of $\delta ,h$-\textsc {AryGapLabelCover}}{46}{subsection.3.5.3}
 \contentsline {subsection}{\numberline {3.5.4}Proof of Existence of Partitioning Systems}{47}{subsection.3.5.4}
 \contentsline {subsection}{\numberline {3.5.5}Proof of Theorem~\ref {theo:HardnessMA}}{48}{subsection.3.5.5}
-\contentsline {chapter}{\chapternumberline {4}Multiple-Access Channel Coding with Non-Signaling Correlations}{49}{chapter.4}
+\contentsline {chapter}{\chapternumberline {4}Multiple-access Channel Coding with Non-signaling Correlations}{49}{chapter.4}
 \contentsline {paragraph}{Our Results}{50}{section*.11}
 \contentsline {paragraph}{Organization}{50}{section*.12}
-\contentsline {section}{\numberline {4.1}Multiple Access Channels Capacities}{51}{section.4.1}
+\contentsline {section}{\numberline {4.1}Multiple-access Channels Capacities}{51}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Classical Capacities}{51}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Non-Signaling Assisted Capacities}{55}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Non-signaling Assisted Capacities}{55}{subsection.4.1.2}
 \contentsline {paragraph}{Three-party non-signaling assistance}{55}{section*.13}
 \contentsline {paragraph}{Independent non-signaling assistance}{56}{section*.14}
-\contentsline {section}{\numberline {4.2}Properties of Non-Signaling Assisted Codes}{60}{section.4.2}
+\contentsline {section}{\numberline {4.2}Properties of Non-signaling Assisted Codes}{60}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Symmetrization}{60}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Properties of $\mathrm {S}^{\mathrm {NS}}(W,k_1,k_2)$, $\mathcal {C}^{\mathrm {NS}}(W)$ and $\mathcal {C}^{\mathrm {NS}}_0(W)$}{61}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Linear Program with Reduced Size for Structured Channels}{67}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Non-Signaling Achievability Bounds}{72}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Zero-Error Non-Signaling Assisted Achievable Rate Pairs}{72}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.3}Non-signaling Achievability Bounds}{72}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Zero-error Non-signaling Assisted Achievable Rate Pairs}{72}{subsection.4.3.1}
 \contentsline {paragraph}{Application to the binary adder channel}{73}{section*.15}
-\contentsline {subsection}{\numberline {4.3.2}Non-Signaling Assisted Achievable Rate Pairs with Non-Zero Error}{74}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}Non-signaling Assisted Achievable Rate Pairs with Non-zero Error}{74}{subsection.4.3.2}
 \contentsline {paragraph}{Application to the Noisy Binary Adder Channel}{76}{section*.16}
-\contentsline {section}{\numberline {4.4}Relaxed Non-Signaling Assisted Capacity Region and Outer Bounds}{77}{section.4.4}
+\contentsline {section}{\numberline {4.4}Relaxed Non-signaling Assisted Capacity Region and Outer Bounds}{77}{section.4.4}
 \contentsline {paragraph}{Application to the Binary Adder Channel}{80}{section*.17}
 \contentsline {subsection}{\numberline {4.4.1}Outer Bound Part of Theorem~\ref {theo:CharaNSrelaxed}}{83}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Achievability Part of Theorem~\ref {theo:CharaNSrelaxed}}{89}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}Independent Non-Signaling Assisted Capacity Region}{92}{section.4.5}
+\contentsline {section}{\numberline {4.5}Independent Non-signaling Assisted Capacity Region}{92}{section.4.5}
 \contentsline {section}{\numberline {4.6}Conclusion}{95}{section.4.6}
-\contentsline {chapter}{\chapternumberline {5}Broadcast Channel Coding with Non-Signaling Correlations}{97}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}Broadcast Channel Coding with Non-signaling Correlations}{97}{chapter.5}
 \contentsline {paragraph}{Our Results}{98}{section*.18}
 \contentsline {paragraph}{Organization}{99}{section*.19}
 \contentsline {section}{\numberline {5.1}Broadcast Channel Coding}{99}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Broadcast Channels}{99}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}The Sum Success Probability $\mathrm {S}_{\text {sum}}(W,k_1,k_2)$}{100}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}The Joint Success Probability $\mathrm {S}(W,k_1,k_2)$}{101}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Non-Signaling Assistance}{103}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Non-Signaling Assistance between the Decoders}{103}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Full Non-Signaling Assistance}{105}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.2}Non-signaling Assistance}{103}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Non-signaling Assistance between the Decoders}{103}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Full Non-signaling Assistance}{105}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Approximation of Deterministic Broadcast Channel Coding}{110}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Reformulation as a Bipartite Graph Problem}{110}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Approximation Algorithm for \textsc {DensestQuotientGraph}}{113}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Deterministic Non-Signaling Assisted Capacity Region}{115}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.3}Deterministic Non-signaling Assisted Capacity Region}{115}{subsection.5.3.3}
 \contentsline {section}{\numberline {5.4}Hardness of Approximation of Broadcast Channel Coding}{120}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Social Welfare Reformulation}{121}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2}Value Query Hardness}{121}{subsection.5.4.2}

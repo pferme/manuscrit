@@ -31,8 +31,7 @@ Alain Aspect, Jean Dalibard, and G\'erard Roger.
 \newblock Experimental test of bell's inequalities using time-varying
   analyzers.
 \newblock {\em Phys. Rev. Lett.}, 49:1804--1807, Dec 1982.
-\newblock URL: \url{https://link.aps.org/doi/10.1103/PhysRevLett.49.1804},
-  \href {https://doi.org/10.1103/PhysRevLett.49.1804}
+\newblock \href {https://doi.org/10.1103/PhysRevLett.49.1804}
   {\path{doi:10.1103/PhysRevLett.49.1804}}.
 
 \bibitem[Ahl73]{Ahlswede73}
@@ -182,6 +181,14 @@ Charles~H Bennett, Peter~W Shor, John~A Smolin, and Ashish~V Thapliyal.
 Steven~J. Brams and Alan~D. Taylor.
 \newblock {\em Fair division - from cake-cutting to dispute resolution}.
 \newblock Cambridge University Press, 1996.
+
+\bibitem[BW92]{BW92}
+Charles~H. Bennett and Stephen~J. Wiesner.
+\newblock Communication via one- and two-particle operators on
+  einstein-podolsky-rosen states.
+\newblock {\em Phys. Rev. Lett.}, 69:2881--2884, Nov 1992.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.69.2881}
+  {\path{doi:10.1103/PhysRevLett.69.2881}}.
 
 \bibitem[Can17]{PoissonBound}
 Cl{\'e}ment~L Canonne.

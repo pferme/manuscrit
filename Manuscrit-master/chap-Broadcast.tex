@@ -159,11 +159,11 @@ so, maximizing over all $e,d_1,d_2$, we get:
 Thus, up to a multiplicative factor $2$, the error is the same. In particular, when one of those errors tends to zero, the other one tends to zero as well. This implies that the capacity regions are the same.
 \end{proof}
 
-\section{Non-Signaling Assistance}
+\section{Non-signaling Assistance}
 \label{section:NSBC}
 In this section, we will consider the broadcast channel coding problem with additional resources, in order to determine how these resources affect its success probabilities as well as the capacity regions that can be defined from them.
 
-\subsection{Non-Signaling Assistance between the Decoders}
+\subsection{Non-signaling Assistance between the Decoders}
 Here, we consider the case where the receivers are given non-signaling assistance. This resource, which is a theoretical but easier to manipulate generalization of quantum entanglement, can be characterized as follows.  A non-signaling box $d(j_1j_2|y_1y_2)$ is any joint conditional probability distribution such that the marginal from one party is independent from the other party's input, i.e. we have:
 \begin{equation}
   \begin{aligned}
@@ -257,7 +257,7 @@ Thus, by choosing $d_1(j_1|y_1) := \sum_{j_2}d(j_1j_2|y_1y_2)$ and $d_2(j_2|y_2)
 Finally, since $\mathcal{C}(W) = \mathcal{C}_{\text{sum}}(W)$ by Proposition~\ref{prop:capacitysum} and $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W)= \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ by Proposition~\ref{prop:NSdecoderssum}, we get that $\mathcal{C}(W) = \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$.
 \end{proof}
 
-\subsection{Full Non-Signaling Assistance}
+\subsection{Full Non-signaling Assistance}
 In this section, we will consider the case where the sender and the receivers are given non-signaling assistance. This means that a three-party non-signaling box $P(xj_1j_2|(i_1i_2)y_1y_2)$ will replace the product $e(x|i_1i_2)d_1(j_1|y_1)d_2(j_2|y_2)$ in the previous objective values. A joint conditional probability $P(xj_1j_2|(i_1i_2)y_1y_2)$ is a non-signaling box if the marginal from any two parties is independent from the removed party's input:
 \begin{equation}
   \begin{aligned}
@@ -637,7 +637,7 @@ We will give a $(1-e^{-1})$ approximation algorithm running in polynomial time f
 The problem $\max_{\mathcal{P}_2}\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)$ is a particular instance of the submodular welfare problem from~\cite{Vondrak08}. Note that $\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) = \deg_{V_1,\{\mathcal{P}_2^{i_2}, V_2-\mathcal{P}_2^{i_2}\}}(\mathcal{P}_2^{i_2})$, as the degree of $\mathcal{P}_2^{i_2}$ does not depend on the rest of the partition $\mathcal{P}_2$. Then, $h(S_2) := \min\left(k_1,\deg_{V_1,\{S_2,V_2-S_2\}}(S_2)\right)$, for $S_2 \subseteq V_2$, is a nondecreasing submodular function, as $S_2 \mapsto \deg_{V_1,\{S_2,V_2-S_2\}}(S_2)$ is a nondecreasing submodular function on $V_2$ and $\min(k_1,\cdot)$ is nondecreasing concave. Thus, we want to maximize $\sum_{i_2=1}^{k_2}h(S_{i_2})$ where $(S_{i_2})_{i_2 \in [k_2]}$ is a partition of items in $V_2$ among $k_2$ bidders. It is a particular case of the submodular welfare problem where each nondecreasing submodular utility weight is the same for all bidders and equal to $h$. Thus, thanks to~\cite{Vondrak08}, there exists a $(1-e^{-1})$ polynomial-time approximation of $\max_{\mathcal{P}_2}\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)$.
 \end{proof}
 
-\subsection{Deterministic Non-Signaling Assisted Capacity Region}
+\subsection{Deterministic Non-signaling Assisted Capacity Region}
 Thanks to Theorem~\ref{theo:DQGapprox} and Proposition~\ref{prop:BCCisDQG}, there exists a constant factor approximation algorithm for the broadcast channel coding problem running in polynomial time. We aim to show here that that the non-signaling assisted value is linked by a constant factor to the unassisted one. Indeed, the hope is that the non-signaling assisted program is linked to the linear relaxation of the unassisted problem, thus is likely a good approximation since the broadcast channel coding problem can be approximated in polynomial time.
 
 This turns out to be true, and will be proved through the following theorem:

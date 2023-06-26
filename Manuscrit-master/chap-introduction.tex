@@ -4,7 +4,7 @@
 %Another POV is the algo task of finding the best code for one copy of the channel, maximizing the success sending a fixed number of messages~\cite{BF18}. Task NP-hard, best approx in poly time in $1-e^{-1}$ and cannot do better. Task studied also for list-decoding~\cite{Elias57,Wozencraft58} in~\cite{BFGG20} and more generally for a larger class of combinatorial optimization problems.
 %Another POV on sending information that arise is the use of quantum ressources. Small and concise intro on quantum machanics.
 %\newpage
-%Entanglement, EPR paradox, 
+%Entanglement, EPR paradox, Bell, CHSH, Aspect
 
 With the growing number of connected devices and the explosion in the amount of exchanged data, the need for efficient and reliable communication has never been as critical as in today's world. Noise, coming from physical imperfection, signal interference, or even \emph{lepidopterans}, is one of the major hurdles to overcome.
 
@@ -24,7 +24,9 @@ Einstein, Podolsky and Rosen~\cite{EPR35} first discovered that phenomenon, whic
 
 Bell showed in~\cite{Bell64} that no hidden-variable theory, where we could associate unknown local variables to each of the entangled particles, would be enough to explain their correlation when spread apart. This \emph{nonlocal} nature of quantum physics is in contradiction with the usual principle of locality of classic physics, which states that any object can be influenced only by its immediate surroundings. The results in~\cite{Bell64} were generalized into the so-called CHSH inequality~\cite{CHSH69}, which if violated, imply that a hidden-variable theory cannot explain the correlations between the particles. These inequalities violations were practically realized by Aspect et al.~\cite{ADG82}, which finally proved the nonlocal nature of quantum physics.
 
-%Use of Q ressources for communication. QE shared helps sending info while not being able to send info directly (BIBLIO TODO).
+Another particularity of quantum mechanics is that any measurement of physical properties of a quantum system actually disturbs it. Furthermore, in the case of entangled particles, measuring one of the particles will also affect the other. This \emph{spooky action at a distance}, as stated by Einstein, does not violate special relativity, as one cannot actually transmits information through that process. The result of a quantum measurement being intrinsically random, only correlation is obtained between particles.
+
+However, entanglement can be used to enhance communication. The superdense coding~\cite{BW92}. Other Q scenarios biblio todo. No increase in capa for usual channel~\cite{BSST99}. 
 
 %One can also abstract the notion of entanglement in A more general and abstract notion on ressource is non-signaling assistance. Explain, theoritical but useful, example of the CHSH game where it is stronger than quantum.
 

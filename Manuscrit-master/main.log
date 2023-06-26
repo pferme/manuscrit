@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  26 JUN 2023 16:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  26 JUN 2023 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3599,35 +3599,28 @@ Package microtype Info: Character `textendash ' is missing
 Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
-
-Underfull \hbox (badness 1292) in paragraph at lines 37--37
-\T1/zi4/m/n/10 / / link . aps . org / doi / 10 . 1103 / PhysRevLett . 49 . 1804
-$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) , [][]$\T1/zi4/m/n/10 doi : 10 . 1103
- / PhysRevLett . 49 . 1804$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) .
- []
-
-[131]
-Underfull \hbox (badness 1389) in paragraph at lines 180--180
+ [131]
+Underfull \hbox (badness 1389) in paragraph at lines 179--179
 []\T1/LinuxLibertineT-TLF/m/n/10 (+20) Charles H Ben-nett, Pe-ter W Shor, John 
 A Smolin, and Ashish V Thap-liyal.
  []
 
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 191.
+(Font)              using `T1/zi4/m/n' instead on input line 198.
 
 [132] [133] [134] [135] [136]
-Underfull \hbox (badness 1383) in paragraph at lines 777--777
+Underfull \hbox (badness 1383) in paragraph at lines 784--784
 \T1/zi4/m/n/10 the-[]maximal-[]error-[]and-[]average-[]error-[]capacity-[]regio
 n-[]of-[]the-[]broadc$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) .  Ci-ta-tions:
  []
 
-) [137] [138
-
-] (./main.lof
+[137]) [138] (./main.lof
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [139])
+ [139
+
+])
 [140] (./main.lot) [141
 
 ]
@@ -3646,9 +3639,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 98DEBA54360693B0E595D2CA5BD9CD52;5801.
+(rerunfilecheck)             Checksum: 2DCACD5436BB149C718D83DD9D0D5684;5802.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: 0E30804AE4C1CDFC43FDD645D2AA4BB6;8890.
+(rerunfilecheck)             Checksum: 69C62220E33E8A12CFF42F6875879A18;8964.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3656,11 +3649,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
  ) 
 Here is how much of TeX's memory you used:
- 57381 strings out of 494821
- 1252549 string characters out of 6177891
- 1571858 words of memory out of 5000000
- 58284 multiletter control sequences out of 15000+600000
- 837983 words of font info for 555 fonts, out of 8000000 for 9000
+ 57400 strings out of 494821
+ 1252899 string characters out of 6177891
+ 1571890 words of memory out of 5000000
+ 58290 multiletter control sequences out of 15000+600000
+ 839271 words of font info for 563 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10422b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist
@@ -3696,9 +3689,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (155 pages, 1727797 bytes).
+Output written on main.pdf (155 pages, 1728900 bytes).
 PDF statistics:
- 3073 PDF objects out of 3580 (max. 8388607)
- 849 named destinations out of 1000 (max. 500000)
+ 3077 PDF objects out of 3580 (max. 8388607)
+ 850 named destinations out of 1000 (max. 500000)
  60529 words of extra memory for PDF output out of 61914 (max. 10000000)
 

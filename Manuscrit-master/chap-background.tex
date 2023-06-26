@@ -96,7 +96,7 @@ This usual version of the Chernoff-Hoeffding bound for independent variables (Th
     with $D\left(x||y\right) := x\ln\left(\frac{x}{y}\right) + (1-x)\ln\left(\frac{1-x}{1-y}\right)$ the Kullback–Leibler divergence between Bernoulli distributed random variables with parameters $x$ and $y$. As $D\left((1+\varepsilon)p||p\right) \geq \frac{\varepsilon^2p}{4}$ for $0 < \varepsilon < \frac{1}{2}$, we recover the expected bound.
 \end{proof}
 
-\subsection{Non-Signaling Probability Distributions}
+\subsection{Non-signaling Probability Distributions}
 \begin{definition}
   \label{defi:nonsignaling}
   We say that a conditional probability distribution $P(a^n|x^n)$ defined on $\bigtimes_{i=1}^n\mathcal{A}_i \times \bigtimes_{i=1}^n \mathcal{X}_i$ is \emph{non-signaling} if for all $a^n, x^n, \hat{x}^n$, we have
@@ -267,7 +267,7 @@ When $n=m=1$, we will speak of regular or point-to-point channels. When $n>1,m=1
   We define the $\mathrm{S}$-capacity region $\mathcal{C}[\mathrm{S}](W)$ as the closure of the set of all achievable rate pairs (for the channel $W$).
 \end{definition}
 
-\begin{definition}[Zero-Error Capacity Region ${\mathcal{C}_0[\mathrm{S}](W)}$ for $\mathrm{S}(W,k_1,k_2)$]
+\begin{definition}[Zero-error Capacity Region ${\mathcal{C}_0[\mathrm{S}](W)}$ for $\mathrm{S}(W,k_1,k_2)$]
   A rate pair $(R_1,R_2)$ is $\mathrm{S}$-achievable with zero-error (for the channel $W$) if:
   \[ \exists n_0  \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
   We define the zero-error $\mathrm{S}$-capacity region $\mathcal{C}[\mathrm{S}](W)$ as the closure of the set of all achievable rate pairs with zero-error (for the channel $W$).
@@ -294,7 +294,7 @@ For zero-error capacity regions, since by hypothesis there exists ranks $n_0,n_0
 It is in particular true for $n \geq n_0 := \max\left(\ceil{\frac{n_0'}{1-\lambda}},\ceil{\frac{n_0}{\lambda}}\right)$. As $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) \leq 1$, we have  for all $n \geq n_0$ that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k^n_{\lambda,1},k^n_{\lambda,2}) = 1$, i.e. $(R_{\lambda,1},R_{\lambda,2})$ is $\mathrm{S}$-achievable with zero-error for the channel $W$.  Finally, since $\mathcal{C}_0[\mathrm{S}](W)$ is defined as the closure of $\mathrm{S}$-achievable rates with zero-error for the channel $W$, we get that $\mathcal{C}_0[\mathrm{S}](W)$ is convex.
 \end{proof}
  
-\section{Channel Coding for Point-to-Point Channels}
+\section{Channel Coding for Point-to-point Channels}
 \label{subsection:onewaychannelcoding} 
 We recall here the main results from~\cite{BF18} on channel coding for point-to-point channels, i.e. with one input and one output. Let us first recall the definition of the maximum success probability $\mathrm{S}(W,k)$ of transmitting $k$ messages using the channel $W$:
 \begin{equation}
