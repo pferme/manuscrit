@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  27 JUN 2023 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  27 JUN 2023 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3039,7 +3039,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.22 
+l.23 
       [1
 
 
@@ -3052,7 +3052,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 
+l.35 
       [2]) [3] [4
 
 ] (./chap-background.tex
@@ -3646,7 +3646,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 2DCACD5436BB149C718D83DD9D0D5684;5802.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: F71C19AE067AAC86D00CC49FCD52C7F1;9134.
+(rerunfilecheck)             Checksum: A7DBB7821E8DA940D72EB9C92B58CA5F;9172.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3694,9 +3694,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (157 pages, 1739878 bytes).
+Output written on main.pdf (157 pages, 1740846 bytes).
 PDF statistics:
- 3099 PDF objects out of 3580 (max. 8388607)
+ 3101 PDF objects out of 3580 (max. 8388607)
  854 named destinations out of 1000 (max. 500000)
  60529 words of extra memory for PDF output out of 61914 (max. 10000000)
 

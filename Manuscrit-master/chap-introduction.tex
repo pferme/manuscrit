@@ -7,6 +7,7 @@
 %Entanglement, EPR paradox, Bell, CHSH, Aspect
 %Superdensecoding, no QE ptp capacity advantage
 %CHSH game and intro to NS
+%Link with BF18 and NS
 
 With the growing number of connected devices and the explosion in the amount of exchanged data, the need for efficient and reliable communication has never been as critical as in today's world. Noise, coming from physical imperfection, signal interference, or even \emph{lepidopterans}, is one of the major hurdles to overcome.
 
@@ -18,7 +19,7 @@ Another approach, developed by Barman and Fawzi in~\cite{BF18}, focuses on a uni
 
 Following this work, the $\ell$-list-decoding task~\cite{Elias57,Wozencraft58}, where the decoder is only asked to output a list of $\ell$ possible guesses instead of giving the right input message, was studied from an algorithmic point of view in~\cite{BFGG20}. Similarly, they developed a $\left(1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}\right)$-approximation algorithm running in polynomial time, and it was shown in~\cite{DMMS20} that this ratio cannot be increased if $\textrm{P}\not=\textrm{NP}$. More generally, a larger class of combinatorial optimization problems, called maximum $\ell$-multi-coverage, falls in the analysis of~\cite{BFGG20}.
 
-A natural extension of the maximum $\ell$-multi-coverage problem entails maximizing the quantity $\sum_{a \in [n]}  \varphi(\abs{\set{i \in S : a \in T_i}})$ over subsets $S \subseteq [m]$ of cardinality $k$, for a general nonnegative concave function $\varphi$; the  maximum $\ell$-multi-coverage problem is retrieved by taking $\varphi(x) := \min(x,\ell)$. In terms of channel coding interpretation, this corresponds to what we call generalized $\varphi$-list-decoding, where the length restriction on the list of guesses of the decoder in $\ell$-list-decoding is replaced by a probability $\frac{\varphi(\ell)}{\ell}$ of correctly decoding a list of guesses of variable size $\ell$. This problem will be the first subject of study of this thesis.
+A natural extension of the maximum $\ell$-multi-coverage problem entails maximizing the quantity $\sum_{a \in [n]}  \varphi(\abs{\set{i \in S : a \in T_i}})$ over subsets $S \subseteq [m]$ of cardinality $k$, for a general nonnegative concave function $\varphi$; the  maximum $\ell$-multi-coverage problem is retrieved by taking $\varphi(x) := \min(x,\ell)$. In terms of channel coding interpretation, this corresponds to what we call generalized $\varphi$-list-decoding, where the length restriction on the list of guesses of the decoder in $\ell$-list-decoding is replaced by a probability $\frac{\varphi(\ell)}{\ell}$ of correctly decoding a list of guesses of variable size $\ell$. This problem will be the first subject of study of the thesis.
 
 Shaking the physical foundations of the world at the beginning of the twentieth century, the rise of quantum mechanics has revolutionized the comprehension of nature at atomic and subatomic scale. One of its most intriguing characteristics is the notion of \emph{entanglement}. Two entangled particles have the particularity of being correlated, even when spread apart, in such a way that cannot be explained by non-quantum physic laws.
 
@@ -34,7 +35,7 @@ One can also abstract quantum entanglement into \emph{non-signaling} correlation
 
 General non-signaling correlations are not representing physical reality, as they imply stronger nonlocal behaviors than those occurring within quantum mechanics. However, they present a strong theoretical interest. Notably, the description of the set of non-signaling correlations is much simpler than with quantum ones, as they are characterized by simple linear constraints.
 
-Going back to the work by Barman and Fawzi~\cite{BF18}: finding the best code relies in fact in finding a non-signaling code and transforming back into a classical code. Easy because NS is linear program. Also implies that the capacity regions are the same.
+The approximation algorithm for the channel coding problem in~\cite{BF18} relies in fact on non-signaling codes. As finding the best non-signaling code for a channel is a linear program, it can be solved exactly in polynomial time. Then, they developed a strategy to transform back that non-signaling code into a classical one, losing at most a factor $1-e^{-1}$ in the success probability. A more precise statement of this strategy actually implies that the capacity regions with or without non-signaling assistance are the same, retrieving back a result by~\cite{BSST99}. This unexpected link between approximation algorithms for the channel coding problem and non-signaling correlations is the main motivation of the rest of the thesis. Specifically, we will develop these analysis in the main network communication scenarios.
 
 %Network channels intro, modelize complex situations where multiple inputs outputs. Update on what is known on Q here. (take common part of intros on MACs and Broadcast here)
 
