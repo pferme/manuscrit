@@ -28,7 +28,7 @@ Rudolf Ahlswede and Vladimir~B. Balakirsky.
 
 \bibitem[ADR82]{ADG82}
 Alain Aspect, Jean Dalibard, and G\'erard Roger.
-\newblock Experimental test of bell's inequalities using time-varying
+\newblock Experimental test of {B}ell's inequalities using time-varying
   analyzers.
 \newblock {\em Phys. Rev. Lett.}, 49:1804--1807, Dec 1982.
 \newblock \href {https://doi.org/10.1103/PhysRevLett.49.1804}
@@ -106,7 +106,7 @@ Nicolas Brunner, Daniel Cavalcanti, Stefano Pironio, Valerio Scarani, and
 
 \bibitem[Bel64]{Bell64}
 J.~S. Bell.
-\newblock On the einstein podolsky rosen paradox.
+\newblock On the {E}instein {P}odolsky {R}osen paradox.
 \newblock {\em Physics Physique Fizika}, 1:195--200, Nov 1964.
 \newblock \href {https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195}
   {\path{doi:10.1103/PhysicsPhysiqueFizika.1.195}}.
@@ -185,7 +185,7 @@ Steven~J. Brams and Alan~D. Taylor.
 \bibitem[BW92]{BW92}
 Charles~H. Bennett and Stephen~J. Wiesner.
 \newblock Communication via one- and two-particle operators on
-  einstein-podolsky-rosen states.
+  {E}instein-{P}odolsky-{R}osen states.
 \newblock {\em Phys. Rev. Lett.}, 69:2881--2884, Nov 1992.
 \newblock \href {https://doi.org/10.1103/PhysRevLett.69.2881}
   {\path{doi:10.1103/PhysRevLett.69.2881}}.
@@ -238,6 +238,13 @@ John~F. Clauser, Michael~A. Horne, Abner Shimony, and Richard~A. Holt.
 \newblock {\em Phys. Rev. Lett.}, 23:880--884, Oct 1969.
 \newblock \href {https://doi.org/10.1103/PhysRevLett.23.880}
   {\path{doi:10.1103/PhysRevLett.23.880}}.
+
+\bibitem[{Cir}80]{Tsirelson80}
+Boris~S. {Cirel'Son}.
+\newblock Quantum generalizations of {B}ell's inequality.
+\newblock {\em Letters in Mathematical Physics}, 4(2):93--100, Mar 1980.
+\newblock \href {https://doi.org/10.1007/BF00417500}
+  {\path{doi:10.1007/BF00417500}}.
 
 \bibitem[Cov72]{Cover72}
 Thomas~M. Cover.
