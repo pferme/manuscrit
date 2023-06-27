@@ -5,6 +5,7 @@
 %Another POV on sending information that arise is the use of quantum ressources. Small and concise intro on quantum machanics.
 %\newpage
 %Entanglement, EPR paradox, Bell, CHSH, Aspect
+%Superdensecoding, no QE ptp capacity advantage
 
 With the growing number of connected devices and the explosion in the amount of exchanged data, the need for efficient and reliable communication has never been as critical as in today's world. Noise, coming from physical imperfection, signal interference, or even \emph{lepidopterans}, is one of the major hurdles to overcome.
 
@@ -26,14 +27,15 @@ Bell showed in~\cite{Bell64} that no hidden-variable theory, where we could asso
 
 Another particularity of quantum mechanics is that any measurement of physical properties of a quantum system actually disturbs it. Furthermore, in the case of entangled particles, measuring one of the particles will also affect the other. This \emph{spooky action at a distance}, as stated by Einstein, does not violate special relativity, as one cannot actually transmits information through that process. The result of a quantum measurement being intrinsically random, only correlation is obtained between particles.
 
-However, entanglement can be used to enhance communication. The superdense coding~\cite{BW92}. Other Q scenarios biblio todo. No increase in capa for usual channel~\cite{BSST99}. 
+However, entanglement can be used to enhance communication. A qubit, the quantum basic unit of information, cannot by itself convey more than one bit of information~\cite{Holevo73}. However, Bennett and Wiesner showed in~\cite{BW92} that if quantum entanglement is shared between the parties, in the form of what is called an EPR pair, then one can actually transmit two bits of information using only one qubit. This is known today as superdense coding. For point-to-point (classical) channels, quantum entanglement shared between the sender and the receiver does not however increase the capacity of the channel~\cite{BSST99}.
 
-%One can also abstract the notion of entanglement in A more general and abstract notion on ressource is non-signaling assistance. Explain, theoritical but useful, example of the CHSH game where it is stronger than quantum.
+One can also abstract quantum entanglement in a notion called \emph{non-signaling} assistance. In order to 
+%Explain, theoritical but useful, example of the CHSH game where it is stronger than quantum.
 
 %Back to~\cite{BF18}: finding the best code relies in fact in finding a non-signaling code and transforming back into a classical code. Easy because NS is linear program. Also implies that the capacity regions are the same.
 
 %Network channels intro, modelize complex situations where multiple inputs outputs. Update on what is known on Q here. (take common part of intros on MACs and Broadcast here)
 
-%In this thesis, address the problem of finding efficient codes for several communication scenarios. First, address algo question motivated by a generalization of List-decoding and \cite{BFGG20}, as well as the more abstract algo problem (RK here not so interesting to look at NS as same capacity ? Discuss with Omar). Then problem studied for network scenarios of MACs, Broadcast channels, as well as their link to their NS capacities.
+%In this thesis, address the problem of finding efficient codes for several communication scenarios. Problem studied for network scenarios of MACs, Broadcast channels, as well as their link to their NS capacities.
 
 %Section results and summary of results.

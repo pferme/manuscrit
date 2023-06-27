@@ -434,6 +434,12 @@ Wassily Hoeffding.
 \newblock \href {https://doi.org/10.1080/01621459.1963.10500830}
   {\path{doi:10.1080/01621459.1963.10500830}}.
 
+\bibitem[Hol73]{Holevo73}
+Alexander~Semenovich Holevo.
+\newblock Bounds for the quantity of information transmitted by a quantum
+  communication channel.
+\newblock {\em Problemy Peredachi Informatsii}, 9(3):3--11, 1973.
+
 \bibitem[JDP83]{JP83}
 Kumar Joag-Dev and Frank Proschan.
 \newblock Negative association of random variables with applications.

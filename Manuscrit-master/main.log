@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  27 JUN 2023 14:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  27 JUN 2023 16:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3039,7 +3039,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 
+l.21 
       [1
 
 
@@ -3611,7 +3611,7 @@ LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
 (Font)              using `T1/zi4/m/n' instead on input line 198.
 
 [132] [133] [134] [135] [136]
-Underfull \hbox (badness 1383) in paragraph at lines 784--784
+Underfull \hbox (badness 1383) in paragraph at lines 790--790
 \T1/zi4/m/n/10 the-[]maximal-[]error-[]and-[]average-[]error-[]capacity-[]regio
 n-[]of-[]the-[]broadc$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) .  Ci-ta-tions:
  []
@@ -3642,7 +3642,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 2DCACD5436BB149C718D83DD9D0D5684;5802.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: 69C62220E33E8A12CFF42F6875879A18;8964.
+(rerunfilecheck)             Checksum: 87BFAC639CA935725D18E508C20D5A07;9004.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3650,10 +3650,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
  ) 
 Here is how much of TeX's memory you used:
- 57400 strings out of 494821
- 1252899 string characters out of 6177891
- 1571890 words of memory out of 5000000
- 58290 multiletter control sequences out of 15000+600000
+ 57407 strings out of 494821
+ 1252983 string characters out of 6177891
+ 1571924 words of memory out of 5000000
+ 58296 multiletter control sequences out of 15000+600000
  839271 words of font info for 563 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10422b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3690,9 +3690,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (155 pages, 1732265 bytes).
+Output written on main.pdf (155 pages, 1733481 bytes).
 PDF statistics:
- 3079 PDF objects out of 3580 (max. 8388607)
- 850 named destinations out of 1000 (max. 500000)
+ 3082 PDF objects out of 3580 (max. 8388607)
+ 851 named destinations out of 1000 (max. 500000)
  60529 words of extra memory for PDF output out of 61914 (max. 10000000)
 
