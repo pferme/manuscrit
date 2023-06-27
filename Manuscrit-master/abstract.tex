@@ -17,4 +17,12 @@
 \addcontentsline{tof}{chapter}{Résumé en anglais}
 \vspace{1.5cm}
 
-In this thesis, we study...
+Finding efficient codes is crucial for achieving reliable communication over noisy channels. While error-correcting codes for multiple channel copies are well understood, the task of approximating the best code for a single channel, i.e. that maximizes the success probability of the encoding and decoding process, is much less developed. This thesis address this problem in several scenarios.
+
+For point-to-point channels, optimal approximation algorithms for usual coding and list-decoding are known. We study a generalization of the latter with a variable list size, compensated by an increasing probabilty of failure. More generally, we study the coverage problem which entails maximizing $\sum_{a \in [n]}  \varphi(\abs{\set{i \in S : a \in T_i}})$ over subsets $S \subseteq [m]$ of cardinality $k$, for a general nonnegative concave function $\varphi$. We provide an approximation algorithm for that problem of ratio $\alpha_{\varphi} := \min_{x \in \mathbb{N}^*} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])}$, which cannot be improved unless $\textrm{P}\not=\textrm{NP}$.
+
+Generalizing and abstracting quantum entanglement, non-signaling correlations can be used to enhance communication. For multiple-access channels, we show that optimal non-signaling codes can be found in polynomial time in the number of copies of the channel. Applied the binary adder channel, a non-signaling advantage on its capacity is established. We provide also a general single-letter outer bound on the non-signaling capacity region. On the other hand, when non-signaling assistance is not shared between encoders, we show that the capacity region is not changed.
+
+For broadcast channels, we first show that when non-signaling assistance is shared only between the decoders, the capacity region does not change. Restricting to deterministic channels, we describe a $(1-e^{-1})^2$-approximation algorithm running in polynomial time, and we show that their capacity region is the same with or without non-signaling assistance. Finally, we show that in the value query model, we cannot achieve a better approximation ratio than $\Omega\left(\frac{1}{\sqrt{m}}\right)$ in polynomial time for the general broadcast channel coding problem, with $m$ an output size of the channel.
+
+% Surprisingly, the existence of efficient approximation algorithms for point-to-point channel coding results in the absence of non-signaling assisted capacity advantage.
