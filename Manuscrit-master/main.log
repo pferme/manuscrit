@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  27 JUN 2023 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  28 JUN 2023 11:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2863,32 +2863,32 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 <garde.pdf, id=301, 597.50829pt x 845.0471pt>
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf>
-Package pdftex.def Info: garde.pdf  used on input line 110.
+Package pdftex.def Info: garde.pdf  used on input line 111.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf>
-Package pdftex.def Info: garde.pdf  used on input line 110.
+Package pdftex.def Info: garde.pdf  used on input line 111.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 <garde.pdf, id=304, page=1, 597.50829pt x 845.0471pt>
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf, page 1>
-Package pdftex.def Info: garde.pdf , page1 used on input line 110.
+Package pdftex.def Info: garde.pdf , page1 used on input line 111.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf, page 1>
-Package pdftex.def Info: garde.pdf , page1 used on input line 110.
+Package pdftex.def Info: garde.pdf , page1 used on input line 111.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf, page 1>
-Package pdftex.def Info: garde.pdf , page1 used on input line 110.
+Package pdftex.def Info: garde.pdf , page1 used on input line 111.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf, page 1>
-Package pdftex.def Info: garde.pdf , page1 used on input line 110.
+Package pdftex.def Info: garde.pdf , page1 used on input line 111.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf, page 1>
-Package pdftex.def Info: garde.pdf , page1 used on input line 110.
+Package pdftex.def Info: garde.pdf , page1 used on input line 111.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 [1
 
@@ -2902,9 +2902,9 @@ t available
 nput line 2.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 10.95pt on input line 2.
- [1
+ [3
 
-] [2
+] [4
 
 ]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
@@ -2933,7 +2933,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 (Font)              scaled to size 24.88pt on input line 2.
 
-[3]
+[5]
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 22.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -2986,18 +2986,18 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 22.
 )
-(./acknowledgements.tex [4
+(./acknowledgements.tex [6
 
-]) [5
+]) [7
 
-] [6
+] [8
 
 ] (./main.toc
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 10.95pt on input line 4.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 30.
- [7] [8]) [9] [10
+ [9] [10]) [11] [12
 
 ]
 (./symbols.tex
@@ -3030,30 +3030,22 @@ Overfull \hbox (4.94661pt too wide) in alignment at lines 47--64
  [] [] 
  []
 
-[11
+[13
 
-]) [12] (./chap-introduction.tex
+]) [14] (./chap-introduction.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.23 
-      [1
+ [1
 
 
-] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+]
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.35 
-      [2]) [3] [4
+ [2])
+[3] [4
 
 ] (./chap-background.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
@@ -3604,18 +3596,32 @@ Package microtype Info: Character `textendash ' is missing
 Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [133]
-Underfull \hbox (badness 1389) in paragraph at lines 179--179
+
+Overfull \hbox (0.96834pt too wide) in paragraph at lines 75--75
+\T1/LinuxLibertineT-TLF/m/n/10 (-20) constructing algorithms with proven perfor
+mance guarantee.  \T1/LinuxLibertineT-TLF/m/it/10 (-20) J. Comb. Optim.\T1/Linu
+xLibertineT-TLF/m/n/10 (-20) , 8(3):307--
+ []
+
+[133]
+Underfull \hbox (badness 1270) in paragraph at lines 188--188
 []\T1/LinuxLibertineT-TLF/m/n/10 (+20) Charles H Ben-nett, Pe-ter W Shor, John 
 A Smolin, and Ashish V Thap-liyal.
  []
 
+[134]
 
 LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
-(Font)              using `T1/zi4/m/n' instead on input line 198.
+(Font)              using `T1/zi4/m/n' instead on input line 207.
 
-[134] [135] [136] [137] [138] [139]
-Underfull \hbox (badness 1383) in paragraph at lines 797--797
+[135] [136] [137] [138]
+Overfull \hbox (1.02441pt too wide) in paragraph at lines 684--684
+[]\T1/LinuxLibertineT-TLF/m/n/10 (-20) Dario Paccagnan and Jason R Marden.  Uti
+lity design for distributed resource allocation--
+ []
+
+[139]
+Underfull \hbox (badness 1009) in paragraph at lines 820--820
 \T1/zi4/m/n/10 the-[]maximal-[]error-[]and-[]average-[]error-[]capacity-[]regio
 n-[]of-[]the-[]broadc$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) .  Ci-ta-tions:
  []
@@ -3638,27 +3644,27 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \tf@lot=\write11
 \openout11 = `main.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 210.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 2DCACD5436BB149C718D83DD9D0D5684;5802.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: A7DBB7821E8DA940D72EB9C92B58CA5F;9172.
+(rerunfilecheck)             Checksum: EA91C4FE1BB8D48EABB7612D428F1A26;9362.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
  ) 
 Here is how much of TeX's memory you used:
- 57413 strings out of 494821
- 1253032 string characters out of 6177891
- 1571971 words of memory out of 5000000
- 58302 multiletter control sequences out of 15000+600000
- 838998 words of font info for 561 fonts, out of 8000000 for 9000
+ 57421 strings out of 494821
+ 1252929 string characters out of 6177891
+ 1572073 words of memory out of 5000000
+ 58320 multiletter control sequences out of 15000+600000
+ 837339 words of font info for 551 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10422b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist
@@ -3694,9 +3700,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (157 pages, 1740846 bytes).
+Output written on main.pdf (157 pages, 1746017 bytes).
 PDF statistics:
- 3101 PDF objects out of 3580 (max. 8388607)
- 854 named destinations out of 1000 (max. 500000)
+ 3125 PDF objects out of 3580 (max. 8388607)
+ 859 named destinations out of 1000 (max. 500000)
  60529 words of extra memory for PDF output out of 61914 (max. 10000000)
 

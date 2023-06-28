@@ -1,15 +1,15 @@
 \babel@toc {english}{}
 \babel@toc {french}{}
 \babel@toc {english}{}
-\contentsline {chapter}{R\IeC {\'e}sum\IeC {\'e}}{iii}{chapter*.1}
+\contentsline {chapter}{R\IeC {\'e}sum\IeC {\'e}}{v}{chapter*.1}
 \babel@toc {french}{}
 \babel@toc {english}{}
-\contentsline {chapter}{Abstract}{iv}{chapter*.1}
-\contentsline {chapter}{Remerciements}{v}{chapter*.2}
+\contentsline {chapter}{Abstract}{vi}{chapter*.1}
+\contentsline {chapter}{Remerciements}{vii}{chapter*.2}
 \babel@toc {french}{}
 \babel@toc {english}{}
-\contentsline {chapter}{Contents}{vii}{section*.3}
-\contentsline {chapter}{List of Symbols}{xi}{chapter*.4}
+\contentsline {chapter}{Contents}{ix}{section*.3}
+\contentsline {chapter}{List of Symbols}{xiii}{chapter*.4}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\chapternumberline {2}Background}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Probability}{5}{section.2.1}

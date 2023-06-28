@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{AAM{\etalchar{+}}11}
+\begin{thebibliography}{CLMW10}
 
 \bibitem[AA00]{Mosek}
 Erling~D Andersen and Knud~D Andersen.
@@ -80,6 +80,15 @@ Shraga~I. Bross and Ian~F. Blake.
 \newblock {\em {IEEE} Trans. Inf. Theory}, 44(1):334--340, 1998.
 \newblock \href {https://doi.org/10.1109/18.651062}
   {\path{doi:10.1109/18.651062}}.
+
+\bibitem[BBC{\etalchar{+}}93]{BBCJPW93}
+Charles~H. Bennett, Gilles Brassard, Claude Cr\'epeau, Richard Jozsa, Asher
+  Peres, and William~K. Wootters.
+\newblock Teleporting an unknown quantum state via dual classical and
+  einstein-podolsky-rosen channels.
+\newblock {\em Phys. Rev. Lett.}, 70:1895--1899, Mar 1993.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.70.1895}
+  {\path{doi:10.1103/PhysRevLett.70.1895}}.
 
 \bibitem[BBT05]{BBT05}
 Gilles Brassard, Anne Broadbent, and Alain Tapp.
@@ -245,6 +254,13 @@ Boris~S. {Cirel'Son}.
 \newblock {\em Letters in Mathematical Physics}, 4(2):93--100, Mar 1980.
 \newblock \href {https://doi.org/10.1007/BF00417500}
   {\path{doi:10.1007/BF00417500}}.
+
+\bibitem[CLMW10]{CLMW10}
+Toby~S. Cubitt, Debbie Leung, William Matthews, and Andreas Winter.
+\newblock Improving zero-error classical communication with entanglement.
+\newblock {\em Phys. Rev. Lett.}, 104:230503, Jun 2010.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.104.230503}
+  {\path{doi:10.1103/PhysRevLett.104.230503}}.
 
 \bibitem[Cov72]{Cover72}
 Thomas~M. Cover.
@@ -651,7 +667,7 @@ Mark~Semenovich Pinsker.
 \newblock Capacity of noiseless broadcast channel.
 \newblock {\em Problemy Peredachi Informatsii}, 14(2):28--34, 1978.
 
-\bibitem[PLM{\etalchar{+}}11]{PLMK11}
+\bibitem[PLM{\etalchar{+}}11]{PLMKR11}
 R.~Prevedel, Y.~Lu, W.~Matthews, R.~Kaltenbaek, and K.~J. Resch.
 \newblock Entanglement-enhanced classical communication over a noisy classical
   channel.
@@ -703,6 +719,13 @@ Claude~E. Shannon.
 \newblock {\em Bell Syst. Tech. J.}, 27(3):379--423, 1948.
 \newblock \href {https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}
   {\path{doi:10.1002/j.1538-7305.1948.tb01338.x}}.
+
+\bibitem[Sha61]{Shannon61}
+Claude~E. Shannon.
+\newblock Two-way communication channels.
+\newblock In {\em Proceedings of the Fourth Berkeley Symposium on Mathematical
+  Statistics and Probability, Volume 1: Contributions to the Theory of
+  Statistics}, volume~4, pages 611--645. University of California Press, 1961.
 
 \bibitem[SLSS22]{SLSS22}
 Akshay Seshadri, Felix Leditzky, Vikesh Siddhu, and Graeme Smith.
