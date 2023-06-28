@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  28 JUN 2023 14:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  28 JUN 2023 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3043,9 +3043,7 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2])
-[3] [4
-
-] (./chap-background.tex
+[3] [4] (./chap-background.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 1.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
@@ -3057,4 +3055,651 @@ nput line 3.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
 input line 15.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input li
+(Font)              scaled to size 8.0pt on input line 22.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 6.0pt on input line 22.
+ [5
+
+
+] [6]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 20.74pt on input line 102.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20.74> on input line 102.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 102.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 102.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 17.28pt on input line 102.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <17.28> on input line 102.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 102.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 102.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 102.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 102.
+ [7] [8]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
+line 186.
+
+Overfull \hbox (2.63985pt too wide) in paragraph at lines 196--197
+[]$\OMS/lmsy/m/n/10.95 8\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]; x[]\OT1/lm
+r/m/n/10.95 ) \OMS/lmsy/m/n/10.95 2 T[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 
+X[]; X[]\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 2[] \OMS/l
+msy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 P[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.9
+5 x[]; x[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 2[]$\
+T1/LinuxLibertineT-TLF/m/it/10.95 (-20) . 
+ []
+
+[9]
+Overfull \hbox (9.09203pt too wide) detected at line 234
+[] \OT1/lmr/m/n/10.95 = [] [] \OML/lmm/m/it/10.95 Z[][]Z[] \OT1/lmr/m/n/10.95 :
+= \U/bbm/m/n/10.95 1[][]\OML/lmm/m/it/10.95 S \OT1/lmr/m/n/10.95 := \OMS/lmsy/m
+/n/10.95 f\OML/lmm/m/it/10.95 i \OT1/lmr/m/n/10.95 : \OML/lmm/m/it/10.95 y[] \O
+T1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 y\OMS/lmsy/m/n/10.95 g \OML/lmm/m/it/10.
+95 :
+ []
+
+
+Overfull \hbox (2.29578pt too wide) detected at line 248
+\U/msb/m/n/10.95 P [] \OMS/lmsy/m/n/10.95 ^^T [] [] \OT1/lmr/m/n/10.95 0 \OML/l
+mm/m/it/10.95 :
+ []
+
+[10] [11] [12]
+Overfull \hbox (3.39345pt too wide) in paragraph at lines 312--313
+[]\T1/LinuxLibertineT-TLF/b/n/10.95 Proposition 2.16 \T1/LinuxLibertineT-TLF/m/
+n/10.95 (-20) (Propo-si-tion 2.1 of [[]][])\T1/LinuxLibertineT-TLF/b/n/10.95 . 
+[]$\OT1/lmr/m/n/10.95 S(\OML/lmm/m/it/10.95 W; k\OT1/lmr/m/n/10.95 ) = [][]\OML
+/lmm/m/it/10.95 f[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 
+)$ \T1/LinuxLibertineT-TLF/m/it/10.95 (-20) with $\OML/lmm/m/it/10.95 f[]\OT1/l
+mr/m/n/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 ) :=
+ []
+
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
+t line 340.
+[13]) [14] (./chap-MaxCoverage.tex
+Underfull \vbox (badness 1189) has occurred while \output is active []
+
+ [15
+
+
+]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/scit' will be
+(Font)              scaled to size 10.95pt on input line 18.
+
+[16]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 9.0pt on input line 31.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17] [18]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 74.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 74.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\varphi' on input line 74.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 74.
+
+[19] [20] [21]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 159.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\varphi' on input line 159.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 159.
+
+LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
+ input line 174.
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
+File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
+LinuxLibertineT-TLF.
+)
+LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 174.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+[22]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/it' will be
+(Font)              scaled to size 10.95pt on input line 185.
+Package hyperref Info: bookmark level for unknown rk defaults to 0 on input lin
+e 213.
+ [23] [24] [25] [26] [27] [28] [29] [30]
+PGFPlots: reading {Data/VTATruncPlot.csv}
+PGFPlots: reading {Data/VTATruncPlot.csv}
+PGFPlots: reading {Data/VTATruncPlot.csv}
+PGFPlots: reading {Data/VTATruncPlot.csv}
+PGFPlots: reading {Data/VTATruncPlot.csv}
+PGFPlots: reading {Data/VTATruncPlot.csv}
+ [31]
+PGFPlots: reading {Data/VTAPoA.csv}
+PGFPlots: reading {Data/VTAPoA.csv}
+PGFPlots: reading {Data/VTAPoA.csv}
+PGFPlots: reading {Data/dPowerPoA.csv}
+PGFPlots: reading {Data/dPowerPoA.csv}
+PGFPlots: reading {Data/dPowerPoA.csv}
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 591.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\varphi' on input line 591.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 591.
+
+[32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1051.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 1051.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1051.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\varphi' on input line 1051.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1051.
+
+[45]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+[47]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/sc' will be
+(Font)              scaled to size 12.0pt on input line 1133.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1133.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\delta' on input line 1133.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1133.
+
+[48] [49]) [50] (./chap-MAC.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51
+
+
+]
+[52] [53]
+Overfull \hbox (2.75497pt too wide) detected at line 70
+[][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
+[56] [57]
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (7.19527pt too wide) in paragraph at lines 321--361
+[][] [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+[60] [61] [62]
+Overfull \hbox (1.43102pt too wide) detected at line 520
+[][]
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 544.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 544.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 544.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 544.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 544.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 544.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 544.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 544.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 544.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 544.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 544.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 544.
+
+[63]
+Overfull \hbox (3.22064pt too wide) in paragraph at lines 553--554
+\OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \O
+MS/lmsy/m/n/10.95 ^^U [][]$ \T1/LinuxLibertineT-TLF/m/it/10.95 (-20) and $\OT1/
+lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W \OMS/lmsy/m/n/10.95 
+ \OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^U 
+\OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W; k[]; k[]\OT1/lmr/m/n/10.95 )$\T1/
+LinuxLibertineT-TLF/m/it/10.95 (-20) . 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+[65]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [66]
+[67]
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
+put line 679.
+ [68] [69] [70] [71] [72]
+Underfull \vbox (badness 3679) has occurred while \output is active []
+
+ [73]
+[74]
+PGFPlots: reading {Data/Data_BAC/ZEBorder2.csv}
+PGFPlots: reading {Data/Data_BAC/ZEBorder3.csv}
+PGFPlots: reading {Data/Data_BAC/ZEBorder7.csv}
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[75]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [76]
+[77] [78]
+PGFPlots: reading {Data/Data_Capacity_BACwithSmallBitFlipNoise/Capacity3.csv}
+PGFPlots: reading {Data/Data_Capacity_BACwithSmallBitFlipNoise/Capacity5.csv}
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[79] [80]
+Overfull \hbox (5.76028pt too wide) in paragraph at lines 1247--1249
+\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) thanks to Propo-si-tion [][]2.15[][]. L
+et us con-sider op-ti-mal so-lu-tions $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 
+p[]; r[]\OT1/lmr/m/n/10.95 )[]$
+ []
+
+[81] [82] [83]
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {Data/Data_BAC/ZEBorder7.csv}
+PGFPlots: reading {Data/Data_BAC_relaxed/ZEBorderINEQ7.csv}
+ [84] [85] [86]
+Overfull \hbox (3.82483pt too wide) detected at line 1529
+[][][] \OMS/lmsy/m/n/10.95 ^^T [] ^^T [] \OML/lmm/m/it/10.95 :
+ []
+
+[87] [88] [89] [90] [91] [92]
+Underfull \vbox (badness 3623) has occurred while \output is active []
+
+ [93]
+[94] [95]
+Underfull \vbox (badness 1371) has occurred while \output is active []
+
+ [96])
+[97] [98] (./chap-Broadcast.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [100]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[101]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 8.0pt on input line 55.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 6.0pt on input line 55.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 55.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 55.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 55.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 55.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 55.
+
+[102]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 101.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 101.
+
+[103] [104]
+Overfull \hbox (24.7033pt too wide) in paragraph at lines 189--190
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) The cor-re-spond-ing ca-pac-ity re-gi
+ons $\OMS/lmsy/m/n/10.95 C[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 W\OT1/lmr/m
+/n/10.95 ) := \OMS/lmsy/m/n/10.95 C\OT1/lmr/m/n/10.95 [S[]](\OML/lmm/m/it/10.95
+ W\OT1/lmr/m/n/10.95 )$ \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) and $\OMS/lmsy/
+m/n/10.95 C[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10.95 ) := \
+OMS/lmsy/m/n/10.95 C\OT1/lmr/m/n/10.95 [S[]](\OML/lmm/m/it/10.95 W\OT1/lmr/m/n/
+10.95 )$
+ []
+
+[105] [106]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[107]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [108]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [109]
+Underfull \vbox (badness 2343) has occurred while \output is active []
+
+ [110]
+[111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122]
+[123] [124]
+Overfull \hbox (0.8298pt too wide) detected at line 912
+[][]
+ []
+
+[125]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [126]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [127]
+[128]) [129] [130
+
+] (./chap-conclusion.tex) (./main.bbl (./main.brf)
+\tf@brf=\write8
+\openout8 = `main.brf'.
+
+ [131]
+[132
+
+]
+bibitemlist
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 2.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 12.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 12.
+(/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 8.69995pt on input line 12.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `T1/zi4/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `T1/zi4/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Overfull \hbox (0.96834pt too wide) in paragraph at lines 75--75
+\T1/LinuxLibertineT-TLF/m/n/10 (-20) constructing algorithms with proven perfor
+mance guarantee.  \T1/LinuxLibertineT-TLF/m/it/10 (-20) J. Comb. Optim.\T1/Linu
+xLibertineT-TLF/m/n/10 (-20) , 8(3):307--
+ []
+
+[133]
+Underfull \hbox (badness 1270) in paragraph at lines 188--188
+[]\T1/LinuxLibertineT-TLF/m/n/10 (+20) Charles H Ben-nett, Pe-ter W Shor, John 
+A Smolin, and Ashish V Thap-liyal.
+ []
+
+[134]
+
+LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
+(Font)              using `T1/zi4/m/n' instead on input line 207.
+
+[135] [136] [137] [138]
+Overfull \hbox (1.02441pt too wide) in paragraph at lines 684--684
+[]\T1/LinuxLibertineT-TLF/m/n/10 (-20) Dario Paccagnan and Jason R Marden.  Uti
+lity design for distributed resource allocation--
+ []
+
+[139]
+Underfull \hbox (badness 1009) in paragraph at lines 827--827
+\T1/zi4/m/n/10 the-[]maximal-[]error-[]and-[]average-[]error-[]capacity-[]regio
+n-[]of-[]the-[]broadc$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) .  Ci-ta-tions:
+ []
+
+) [140] (./main.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [141
+
+])
+[142] (./main.lot) [143
+
+]
+\tf@toc=\write9
+\openout9 = `main.toc'.
+
+\tf@lof=\write10
+\openout10 = `main.lof'.
+
+\tf@lot=\write11
+\openout11 = `main.lot'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
+ (./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 7E83FFB016623750D557239B3D4BA562;5802.
+Package rerunfilecheck Info: File `main.brf' has not changed.
+(rerunfilecheck)             Checksum: 1081B2ABBB9D0050CD396B7CB36AC7CA;9652.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
+ ) 
+Here is how much of TeX's memory you used:
+ 57430 strings out of 494821
+ 1253044 string characters out of 6177891
+ 1572111 words of memory out of 5000000
+ 58324 multiletter control sequences out of 15000+600000
+ 837612 words of font info for 553 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 75i,22n,128p,10422b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist
+/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/share/texlive/texmf-dist/fonts/e
+nc/dvips/libertine/lbtn_ki75ao.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvi
+ps/libertine/lbtn_naooyc.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
+}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-d
+ist/fonts/enc/dvips/libertine/lbtn_iqbcqn.enc}{/usr/share/texlive/texmf-dist/fo
+nts/enc/dvips/libertine/lbtn_jtta5h.enc} </home/paul/.texlive2017/texmf-var/fon
+ts/pk/ljfour/public/bbm/bbm10.657pk>{/usr/share/texlive/texmf-dist/fonts/enc/dv
+ips/libertine/lbtn_tlukpt.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/li
+bertine/lbtn_7grukw.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertin
+e/lbtn_ncsllp.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn
+_nh77jq.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texl
+ive/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/share/texlive/te
+xmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}</usr/share/texlive/texmf-di
+st/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/libertine/LinLibertineTBI.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (156 pages, 1750303 bytes).
+PDF statistics:
+ 3143 PDF objects out of 3580 (max. 8388607)
+ 861 named destinations out of 1000 (max. 500000)
+ 60529 words of extra memory for PDF output out of 61914 (max. 10000000)
+
