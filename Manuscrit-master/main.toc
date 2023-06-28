@@ -11,8 +11,8 @@
 \contentsline {chapter}{Contents}{vii}{section*.3}
 \contentsline {chapter}{List of Symbols}{xi}{chapter*.4}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
-\contentsline {paragraph}{Results}{3}{section*.5}
-\contentsline {paragraph}{Organisation}{4}{section*.6}
+\contentsline {paragraph}{Contributions}{3}{section*.5}
+\contentsline {paragraph}{Organisation}{3}{section*.6}
 \contentsline {chapter}{\chapternumberline {2}Background}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Probability}{5}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Usual Distributions and Properties}{5}{subsection.2.1.1}
