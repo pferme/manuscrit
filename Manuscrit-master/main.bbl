@@ -689,6 +689,13 @@ Yury Polyanskiy, H.~Vincent Poor, and Sergio Verd{\'{u}}.
 \newblock \href {https://doi.org/10.1109/TIT.2010.2043769}
   {\path{doi:10.1109/TIT.2010.2043769}}.
 
+\bibitem[PR94]{PR94}
+Sandu Popescu and Daniel Rohrlich.
+\newblock Quantum nonlocality as an axiom.
+\newblock {\em Foundations of Physics}, 24(3):379--385, 1994.
+\newblock \href {https://doi.org/10.1007/BF02058098}
+  {\path{doi:10.1007/BF02058098}}.
+
 \bibitem[QS17]{QS17}
 Yihui Quek and Peter~W. Shor.
 \newblock Quantum and superquantum enhancements to two-sender, two-receiver

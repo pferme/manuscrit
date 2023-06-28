@@ -108,13 +108,20 @@
 
 \begin{document}
 \pagenumbering{roman}
+\setcounter{page}{0}
 \includepdf{garde.pdf}
 \frontmatter
-\setcounter{page}{3}
+
+\setcounter{page}{1}
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+\thispagestyle{empty}
+%\cleardoublepage
 %%%%%%%%%%%%%
 % Décidaces %
 %%%%%%%%%%%%%
-\cleardoublepage
 \vspace*{\stretch{1}}
 \begin{flushright}
   %À \ldots
