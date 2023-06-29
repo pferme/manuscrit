@@ -95,5 +95,3 @@
 \contentsline {section}{\numberline {5.5}Conclusion}{129}{section.5.5}
 \contentsline {chapter}{Conclusion}{131}{chapter*.22}
 \contentsline {chapter}{Bibliography}{133}{section*.24}
-\contentsline {chapter}{List of Figures}{141}{section*.25}
-\contentsline {chapter}{List of Tables}{143}{section*.26}
