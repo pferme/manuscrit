@@ -40,11 +40,11 @@
 \contentsline {subsection}{\numberline {3.2.3}Further Hardness under Gap-ETH}{28}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Applications}{28}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Generalized List-decoding}{28}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Multiwinner Elections}{29}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Multiwinner Elections}{30}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Resource Allocation in Multi-agent Systems}{30}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Vehicle-target Assignment}{31}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}Welfare Maximization for $\varphi $-Coverage}{32}{subsection.3.3.5}
-\contentsline {section}{\numberline {3.4}Conclusion}{33}{section.3.4}
+\contentsline {section}{\numberline {3.4}Conclusion}{34}{section.3.4}
 \contentsline {section}{\numberline {3.5}Appendix}{35}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}General Properties}{35}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Calculations of $\alpha _{\varphi }$}{46}{subsection.3.5.2}
