@@ -39,34 +39,35 @@
 \BOOKMARK [1][-]{section.4.1}{Multiple-access Channels Capacities}{chapter.4}% 39
 \BOOKMARK [2][-]{subsection.4.1.1}{Classical Capacities}{section.4.1}% 40
 \BOOKMARK [2][-]{subsection.4.1.2}{Non-signaling Assisted Capacities}{section.4.1}% 41
-\BOOKMARK [1][-]{section.4.2}{Properties of Non-signaling Assisted Codes}{chapter.4}% 42
-\BOOKMARK [2][-]{subsection.4.2.1}{Symmetrization}{section.4.2}% 43
-\BOOKMARK [2][-]{subsection.4.2.2}{Properties of SNS\(W,k1,k2\), CNS\(W\) and CNS0\(W\)}{section.4.2}% 44
-\BOOKMARK [2][-]{subsection.4.2.3}{Linear Program with Reduced Size for Structured Channels}{section.4.2}% 45
-\BOOKMARK [1][-]{section.4.3}{Non-signaling Achievability Bounds}{chapter.4}% 46
-\BOOKMARK [2][-]{subsection.4.3.1}{Zero-error Non-signaling Assisted Achievable Rate Pairs}{section.4.3}% 47
-\BOOKMARK [2][-]{subsection.4.3.2}{Non-signaling Assisted Achievable Rate Pairs with Non-zero Error}{section.4.3}% 48
-\BOOKMARK [1][-]{section.4.4}{Relaxed Non-signaling Assisted Capacity Region and Outer Bounds}{chapter.4}% 49
-\BOOKMARK [2][-]{subsection.4.4.1}{Outer Bound Part of Theorem 4.22}{section.4.4}% 50
-\BOOKMARK [2][-]{subsection.4.4.2}{Achievability Part of Theorem 4.22}{section.4.4}% 51
-\BOOKMARK [1][-]{section.4.5}{Independent Non-signaling Assisted Capacity Region}{chapter.4}% 52
-\BOOKMARK [1][-]{section.4.6}{Conclusion}{chapter.4}% 53
-\BOOKMARK [0][-]{chapter.5}{Broadcast Channel Coding with Non-signaling Correlations}{}% 54
-\BOOKMARK [1][-]{section.5.1}{Broadcast Channel Coding}{chapter.5}% 55
-\BOOKMARK [2][-]{subsection.5.1.1}{Broadcast Channels}{section.5.1}% 56
-\BOOKMARK [2][-]{subsection.5.1.2}{The Sum Success Probability Ssum\(W,k1,k2\)}{section.5.1}% 57
-\BOOKMARK [2][-]{subsection.5.1.3}{The Joint Success Probability S\(W,k1,k2\)}{section.5.1}% 58
-\BOOKMARK [1][-]{section.5.2}{Non-signaling Assistance}{chapter.5}% 59
-\BOOKMARK [2][-]{subsection.5.2.1}{Non-signaling Assistance between the Decoders}{section.5.2}% 60
-\BOOKMARK [2][-]{subsection.5.2.2}{Full Non-signaling Assistance}{section.5.2}% 61
-\BOOKMARK [1][-]{section.5.3}{Approximation of Deterministic Broadcast Channel Coding}{chapter.5}% 62
-\BOOKMARK [2][-]{subsection.5.3.1}{Reformulation as a Bipartite Graph Problem}{section.5.3}% 63
-\BOOKMARK [2][-]{subsection.5.3.2}{Approximation Algorithm for DensestQuotientGraph}{section.5.3}% 64
-\BOOKMARK [2][-]{subsection.5.3.3}{Deterministic Non-signaling Assisted Capacity Region}{section.5.3}% 65
-\BOOKMARK [1][-]{section.5.4}{Hardness of Approximation of Broadcast Channel Coding}{chapter.5}% 66
-\BOOKMARK [2][-]{subsection.5.4.1}{Social Welfare Reformulation}{section.5.4}% 67
-\BOOKMARK [2][-]{subsection.5.4.2}{Value Query Hardness}{section.5.4}% 68
-\BOOKMARK [2][-]{subsection.5.4.3}{Limitations of the Model}{section.5.4}% 69
-\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 70
-\BOOKMARK [0][-]{chapter*.22}{Conclusion}{}% 71
-\BOOKMARK [0][-]{section*.24}{Bibliography}{}% 72
+\BOOKMARK [1][-]{section.4.2}{Hardness of Approximation for Multiple-access Channel Coding}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.3}{Properties of Non-signaling Assisted Codes}{chapter.4}% 43
+\BOOKMARK [2][-]{subsection.4.3.1}{Symmetrization}{section.4.3}% 44
+\BOOKMARK [2][-]{subsection.4.3.2}{Properties of SNS\(W,k1,k2\), CNS\(W\) and CNS0\(W\)}{section.4.3}% 45
+\BOOKMARK [2][-]{subsection.4.3.3}{Linear Program with Reduced Size for Structured Channels}{section.4.3}% 46
+\BOOKMARK [1][-]{section.4.4}{Non-signaling Achievability Bounds}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.4.1}{Zero-error Non-signaling Assisted Achievable Rate Pairs}{section.4.4}% 48
+\BOOKMARK [2][-]{subsection.4.4.2}{Non-signaling Assisted Achievable Rate Pairs with Non-zero Error}{section.4.4}% 49
+\BOOKMARK [1][-]{section.4.5}{Relaxed Non-signaling Assisted Capacity Region and Outer Bounds}{chapter.4}% 50
+\BOOKMARK [2][-]{subsection.4.5.1}{Outer Bound Part of Theorem 4.23}{section.4.5}% 51
+\BOOKMARK [2][-]{subsection.4.5.2}{Achievability Part of Theorem 4.23}{section.4.5}% 52
+\BOOKMARK [1][-]{section.4.6}{Independent Non-signaling Assisted Capacity Region}{chapter.4}% 53
+\BOOKMARK [1][-]{section.4.7}{Conclusion}{chapter.4}% 54
+\BOOKMARK [0][-]{chapter.5}{Broadcast Channel Coding with Non-signaling Correlations}{}% 55
+\BOOKMARK [1][-]{section.5.1}{Broadcast Channel Coding}{chapter.5}% 56
+\BOOKMARK [2][-]{subsection.5.1.1}{Broadcast Channels}{section.5.1}% 57
+\BOOKMARK [2][-]{subsection.5.1.2}{The Sum Success Probability Ssum\(W,k1,k2\)}{section.5.1}% 58
+\BOOKMARK [2][-]{subsection.5.1.3}{The Joint Success Probability S\(W,k1,k2\)}{section.5.1}% 59
+\BOOKMARK [1][-]{section.5.2}{Non-signaling Assistance}{chapter.5}% 60
+\BOOKMARK [2][-]{subsection.5.2.1}{Non-signaling Assistance between the Decoders}{section.5.2}% 61
+\BOOKMARK [2][-]{subsection.5.2.2}{Full Non-signaling Assistance}{section.5.2}% 62
+\BOOKMARK [1][-]{section.5.3}{Approximation of Deterministic Broadcast Channel Coding}{chapter.5}% 63
+\BOOKMARK [2][-]{subsection.5.3.1}{Reformulation as a Bipartite Graph Problem}{section.5.3}% 64
+\BOOKMARK [2][-]{subsection.5.3.2}{Approximation Algorithm for DensestQuotientGraph}{section.5.3}% 65
+\BOOKMARK [2][-]{subsection.5.3.3}{Deterministic Non-signaling Assisted Capacity Region}{section.5.3}% 66
+\BOOKMARK [1][-]{section.5.4}{Hardness of Approximation for Broadcast Channel Coding}{chapter.5}% 67
+\BOOKMARK [2][-]{subsection.5.4.1}{Social Welfare Reformulation}{section.5.4}% 68
+\BOOKMARK [2][-]{subsection.5.4.2}{Value Query Hardness}{section.5.4}% 69
+\BOOKMARK [2][-]{subsection.5.4.3}{Limitations of the Model}{section.5.4}% 70
+\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 71
+\BOOKMARK [0][-]{chapter*.22}{Conclusion}{}% 72
+\BOOKMARK [0][-]{section*.24}{Bibliography}{}% 73
