@@ -82,16 +82,16 @@
 \contentsline {subsection}{\numberline {5.1.1}Broadcast Channels}{103}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}The Sum Success Probability $\mathrm {S}_{\text {sum}}(W,k_1,k_2)$}{104}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}The Joint Success Probability $\mathrm {S}(W,k_1,k_2)$}{105}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Non-signaling Assistance}{107}{section.5.2}
+\contentsline {section}{\numberline {5.2}Non-signaling Assistance}{106}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Non-signaling Assistance between the Decoders}{107}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Full Non-signaling Assistance}{109}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Approximation of Deterministic Broadcast Channel Coding}{113}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Reformulation as a Bipartite Graph Problem}{114}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Approximation Algorithm for \textsc {DensestQuotientGraph}}{116}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Deterministic Non-signaling Assisted Capacity Region}{119}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.3}Deterministic Non-signaling Assisted Capacity Region}{118}{subsection.5.3.3}
 \contentsline {section}{\numberline {5.4}Hardness of Approximation for Broadcast Channel Coding}{123}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Social Welfare Reformulation}{124}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Value Query Hardness}{125}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.2}Value Query Hardness}{124}{subsection.5.4.2}
 \contentsline {subsection}{\numberline {5.4.3}Limitations of the Model}{130}{subsection.5.4.3}
 \contentsline {section}{\numberline {5.5}Conclusion}{130}{section.5.5}
 \contentsline {chapter}{Conclusion}{131}{chapter*.22}

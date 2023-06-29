@@ -655,6 +655,13 @@ Uzi Pereg, Christian Deppe, and Holger Boche.
   \href {https://doi.org/10.48550/arXiv.2303.10456}
   {\path{doi:10.48550/arXiv.2303.10456}}.
 
+\bibitem[Pee03]{Peeters03}
+Ren{\'{e}} Peeters.
+\newblock The maximum edge biclique problem is {NP}-complete.
+\newblock {\em Discret. Appl. Math.}, 131(3):651--654, 2003.
+\newblock \href {https://doi.org/10.1016/S0166-218X(03)00333-0}
+  {\path{doi:10.1016/S0166-218X(03)00333-0}}.
+
 \bibitem[Per90]{Peres90}
 Asher Peres.
 \newblock Incompatible results of quantum measurements.

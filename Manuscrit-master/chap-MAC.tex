@@ -72,8 +72,6 @@ One should note that we allow randomized encoders and decoders for generality re
 \end{equation}
 \end{proof}
 
-Since MACs are more general than point-to-point channels (by defining $W(y|x_1x_2):=\hat{W}(y|x_1)$ for $\hat{W}$ a point-to-point channel and looking only at its first input), computing $\mathrm{S}(W,k_1,k_2)$ is \textrm{NP}-hard, and it is even \textrm{NP}-hard to approximate $\mathrm{S}(W,k_1,k_2)$ within a better ratio than $\left(1-e^{-1}\right)$, as a consequence of the hardness result on $\mathrm{S}(W,k)$ shown in~\cite{BF18}.
-
 %The (classical) capacity of a MAC, as defined for example in~\cite{CT01}, can be reformulated in the following way:
 %\begin{definition}[Capacity Region $\mathcal{C}(W)$ of a MAC $W$]
 %  A rate pair $(R_1,R_2)$ is achievable if:
@@ -464,29 +462,31 @@ Thus, as before, the capacity regions are the same.
 \end{proof}
 
 \section{Hardness of Approximation for Multiple-access Channel Coding}
-TODO!!!
+Since MACs are more general than point-to-point channels (by defining $W(y|x_1x_2):=\hat{W}(y|x_1)$ for $\hat{W}$ a point-to-point channel and looking only at its first input), computing $\mathrm{S}(W,k_1,k_2)$ is \textrm{NP}-hard, and it is even \textrm{NP}-hard to approximate within a better ratio than $1-e^{-1}$, as a consequence of the hardness result for point-to-point channels from~\cite{BF18}.
 
-Whereas it is know that deciding if some rate pair $(R_1,R_2)$ is in $\mathcal{C}$ is a \textrm{NP}-hard problem \cite{LALS20}, computing a single value $S(W,k_1,k_2)$ could be in principle a simpler task. It turns out that it is not, emphasizing the computational advantage of $S^{NS}(W,k_1,k_2)$:
+On the other hand, it has been shown in~\cite{LALS20} that it is \textrm{NP}-hard to decide whether a rate pair belongs to the classical capacity region of a MAC.
+
+The goal of this section is to show that, under some strong complexity hypothesis, the multiple-access channel coding problem cannot be approximated in polynomial time within a $\Omega(1)$ factor.
+
+Simple reduction from Bipartite Densest Subgraph: likely no constant factor approx
+
+Densest subgraph and bipartite version
+
+Hardness under Hyp 1.1
+
+First, in the \textsc{Densest $\kappa$-Subgraph} problem (\textsc{D$\kappa$S}), introduced in \cite{FKP01}, we are given a graph $G=(V,E)$ and a parameter $\kappa$, and the goal is to find a subset $S \subseteq V$ of size $\kappa$ that contains the most edges among all such subsets. This problem is \textrm{NP}-hard as a simple consequence of the \textrm{NP}-hardness of the \textsc{MaxClique} problem.
+
+It is conjectured to be hard to approximate. That is to say, for any $\varepsilon \in (0,1)$, it is not possible to get a solution with a number of edges at least greater that $\left(1-\varepsilon\right)$ times the number of edges of an optimal solution in polynomial time. Assuming certain assumptions on the hardness of distinguishing satisfiability of particular formulas, one can show such a hardness result on \textsc{D$\kappa$S}; see \cite{AAMMW11} for a full description.
+
+We look at the \emph{bipartite} version of \textsc{D$\kappa$S} (\textsc{bD$\kappa$S}): given a bipartite graph $G = (A \cup B, E)$ and two parameters $\kappa_1$ and $\kappa_2$, the goal is to find subsests $S \subseteq A$ and $T \subseteq B$ such that $|S|=\kappa_1,|T|=\kappa_2$ and the number of edges contained in $S \cup T$ is the maximum possible among such subsets. With a simple reduction from the \textsc{MaxEdgeBiclique} problem, which is \textrm{NP}-complete \cite{Peeters03}, one can easily show that \textsc{bD$\kappa$S} is \textrm{NP}-complete.
+
 
 \begin{proposition}
   \label{prop:hardnessMAC} 
-  The MAC coding problem, which entails deciding whether $S(W,k_1,k_2) \geq 1-\varepsilon$ for some $\varepsilon > 0$, is \textrm{NP}-complete.
-   Furthermore, assuming some complexity hypothesis on random $k$-AND formulas (Hypothesis 1.1 of \cite{AAMMW11}, introduced in \cite{Feige02}), it is \textrm{NP}-hard to approximate $S_{\text{norm}}(W,k_1,k_2) := \frac{S(W,k_1,k_2)-\frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}}$ within a better ratio than $2$.
+   Assuming some complexity hypothesis on random $k$-AND formulas (Hypothesis 1.1 of \cite{AAMMW11}, introduced in \cite{Feige02}), there is no constant factor polynomial-time approximation algorithm for $S_{\text{norm}}(W,k_1,k_2) := \frac{S(W,k_1,k_2)-\frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}}$.
 \end{proposition}
 
 \begin{proof}
-First, it is simple to see that computing the value of $S(W,k_1,k_2)$, given an optimal solution of its program, is polynomial, so our problem is in \textrm{NP}.
-
-In order to show its \textrm{NP}-hardness, we will do a reduction from the \textsc{Bipartite Densest $\kappa$-Subgraph} problem (\textsc{bD$\kappa$S}).
-
-First, in the \textsc{Densest $\kappa$-Subgraph} problem (\textsc{D$\kappa$S}), introduced in \cite{FKP01}, we are given a graph $G=(V,E)$ and a parameter $\kappa$, and the goal is to find a subset $S \subseteq V$ of size $\kappa$ that contains the most edges among all such subsets. This problem is {\rm NP}-hard as a simple consequence of the {\rm NP}-hardness of the \textsc{MaxClique} problem.
-
-It is conjectured to be hard to approximate. That is to say, for any $\varepsilon \in (0,1)$, it is {\rm NP}-hard to get a solution with a number of edges at least greater that $\left(1-\varepsilon\right)$ times the number of edges of an optimal solution. Assuming certain assumptions on the hardness of distinguishing satisfiability of particular formulas, one can show such a hardness result on \textsc{D$\kappa$S}; see \cite{AAMMW11} for a full description.
-
-We look at the \emph{bipartite} version of \textsc{D$\kappa$S} (\textsc{bD$\kappa$S}): given a bipartite graph $G = (A \cup B, E)$ and two parameters $\kappa_1$ and $\kappa_2$, the goal is to find subsests $S \subseteq A$ and $T \subseteq B$ such that $|S|=\kappa_1,|T|=\kappa_2$ and the number of edges contained in $S \cup T$ is the maximum possible among such subsets. With a simple reduction from the \textsc{MaxEdgeBiclique} problem, which is {\rm NP}-complete \cite{Peeters03}, one can easily show that \textsc{bD$\kappa$S} is {\rm NP}-complete.
-
-The MAC coding problem, on the other hand, entails computing $S(W,k_1,k_2)$ for some inputs $W,k_1,k_2$, by finding the best $e_1,e_2,d$ among all possible ones.
-
 Given an instance $G = (A \cup B, E)$, $\kappa_1$ and $\kappa_2$ of \textsc{bD$\kappa$S} with an optimal value $N$, we construct an instance of the MAC coding problem with a value $S_{\text{norm}}(W,k_1,k_2) := \frac{S(W,k_1,k_2)-\frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}} = \frac{N}{k_1k_2}$.
 
 We take $k_1:=\kappa_1,k_2:=\kappa_2,\mathcal{X}_1:=A,\mathcal{X}_2:=B$ and $\mathcal{Y}:=\mathcal{X}_1 \times \mathcal{X}_2$. Thus we define:
@@ -517,12 +517,8 @@ Thus, the maximization in both problems entails choosing subsets of $A$ and $B$ 
 Thus, we get that:
 \[ f(Z) :=  \frac{\frac{1}{k_1k_2}\sum_{y \in \mathcal{Y}} \max_{(x_1,x_2) \in Z}W(y|x_1x_2) - \frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}} = \frac{|E_Z|}{k_1k_2} =: g(Z) \ , \]
 where $f$ is the function maximized in the MAC coding problem, and $g$ is the function maximized in the \textsc{bD$\kappa$S} problem, since they are both positive linear transformations of the original quantities one has to maximize. Since they are equal, we have that $S_{\text{norm}}(W,k_1,k_2) = \frac{N}{k_1k_2}$.
-
-This gives the {\rm NP}-hardness of computing the exact value $S_{\text{norm}}(W,k_1,k_2)$, and thus of deciding whether $S(W,k_1,k_2) \geq 1 - \varepsilon$ for some $\varepsilon > 0$.
-
-Furthermore, under Hypothesis 1.1 of \cite{AAMMW11}, there is no $2$-approximation of \textsc{bD$\kappa$S} as shown in \cite{AAMMW11}, thus there is no $2$-approximation of $S_{\text{norm}}(W,k_1,k_2)$ either.
 \end{proof}
-TODO!!!
+
 
 \section{Properties of Non-signaling Assisted Codes}
 \label{section:complexity}

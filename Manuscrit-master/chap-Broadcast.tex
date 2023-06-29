@@ -97,9 +97,6 @@ One can rewrite this optimization program in a more convenient way, proving that
   It follows from the definitions $W_1(y_1|x) := \sum_{y_2} W(y_1y_2|x)$ and $W_2(y_2|x) := \sum_{y_1} W(y_1y_2|x)$.
 \end{proof}
 
-
-Since broadcast channels are more general than point-to-point channels (by defining $W_1(y_1|x):=\hat{W}(y_1|x)$ for $\hat{W}$ a point-to-point channel and taking $W_2(y_2|x)=\frac{1}{|\mathcal{Y}_2|}$ a completely trivial channel), computing a single value $\mathrm{S}_{\text{sum}}(W,k_1,k_2)$ is \textrm{NP}-hard, and it is even \textrm{NP}-hard to approximate $\mathrm{S}_{\text{sum}}(W,k_1,k_2)$ within a better factor than $\left(1-e^{-1}\right)$, as a consequence of the hardness result on $\mathrm{S}(W,k)$ proved in~\cite{BF18}. 
-
 \subsection{The Joint Success Probability $\mathrm{S}(W,k_1,k_2)$}
 We will now focus on maximizing $\mathrm{p}(W,e,d_1,d_2)$ over all encoders $e$ and decoders $d_1,d_2$. We will call $\mathrm{S}(W,k_1,k_2)$ the resulting maximum probability of successfully encoding and decoding the messages through $W$, given that the input message couple is taken uniformly in $[k_1] \times [k_2]$. $\mathrm{S}(W,k_1,k_2)$ is the solution of the following optimization program:
 \begin{equation}
@@ -810,7 +807,9 @@ Thus, in particular, there exists some partition $\mathcal{P}_2$ that satisfies 
 \end{proof}
 
 \section{Hardness of Approximation for Broadcast Channel Coding}
-\label{section:HardnessBC} 
+\label{section:HardnessBC}
+Since broadcast channels are more general than point-to-point channels (by defining $W_1(y_1|x):=\hat{W}(y_1|x)$ for $\hat{W}$ a point-to-point channel and taking $W_2(y_2|x)=\frac{1}{|\mathcal{Y}_2|}$ a completely trivial channel), computing a single value $\mathrm{S}(W,k_1,k_2)$ is \textrm{NP}-hard, and it is even \textrm{NP}-hard to approximate within a better factor than $1-e^{-1}$, as a consequence of the hardness result for point-to-point channels from~\cite{BF18}.
+
 The goal of this section is to show that the general broadcast channel coding problem cannot be approximated in polynomial time within a $\Omega(1)$ factor, under reasonable hardness assumptions. It will be a good insight that non-signaling assistance will enlarge the capacity region of the channel as discussed in the introduction.
 
 Formally, one would want to show that it is \textrm{NP}-hard to approximate this problem within a $\Omega(1)$ factor in polynomial time. As a first step towards this goal, we will prove a $\Omega\left(\frac{1}{\sqrt{m}}\right)$-approximation hardness in the value query model.
