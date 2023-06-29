@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  29 JUN 2023 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  29 JUN 2023 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3311,61 +3311,61 @@ nput line 473.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [63]
-Overfull \hbox (1.43102pt too wide) detected at line 576
+Overfull \hbox (1.43102pt too wide) detected at line 577
 [][]
  []
 
 [64]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 600.
+(hyperref)                removing `math shift' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 600.
+(hyperref)                removing `superscript' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 600.
+(hyperref)                removing `subscript' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 600.
+(hyperref)                removing `subscript' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 600.
+(hyperref)                removing `math shift' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 600.
+(hyperref)                removing `math shift' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 600.
+(hyperref)                removing `superscript' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 600.
+(hyperref)                removing `math shift' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 600.
+(hyperref)                removing `math shift' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 600.
+(hyperref)                removing `superscript' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 600.
+(hyperref)                removing `subscript' on input line 601.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 600.
+(hyperref)                removing `math shift' on input line 601.
 
 [65]
-Overfull \hbox (3.22064pt too wide) in paragraph at lines 609--610
+Overfull \hbox (3.22064pt too wide) in paragraph at lines 610--611
 \OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \O
 MS/lmsy/m/n/10.95 ^^U [][]$ \T1/LinuxLibertineT-TLF/m/it/10.95 (-20) and $\OT1/
 lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W \OMS/lmsy/m/n/10.95 
@@ -3382,7 +3382,7 @@ Underfull \vbox (badness 4872) has occurred while \output is active []
 
  [68]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 735.
+put line 736.
 
 [69] [70]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -3400,7 +3400,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [81]
 [82]
-Overfull \hbox (5.76028pt too wide) in paragraph at lines 1303--1305
+Overfull \hbox (5.76028pt too wide) in paragraph at lines 1304--1306
 \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) thanks to Propo-si-tion [][]2.15[][]. L
 et us con-sider op-ti-mal so-lu-tions $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 
 p[]; r[]\OT1/lmr/m/n/10.95 )[]$
@@ -3473,7 +3473,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [86]
 [87] [88]
-Overfull \hbox (3.82483pt too wide) detected at line 1585
+Overfull \hbox (3.82483pt too wide) detected at line 1586
 [][][] \OMS/lmsy/m/n/10.95 ^^T [] ^^T [] \OML/lmm/m/it/10.95 :
  []
 
@@ -3691,7 +3691,7 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (153 pages, 1740893 bytes).
+Output written on main.pdf (153 pages, 1740882 bytes).
 PDF statistics:
  3078 PDF objects out of 3580 (max. 8388607)
  864 named destinations out of 1000 (max. 500000)
