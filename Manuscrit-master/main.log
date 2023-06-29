@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  29 JUN 2023 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  29 JUN 2023 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2728,42 +2728,42 @@ File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 ))) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 109.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 110.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
 LaTeX Font Info:    Try loading font information for T1+LinuxLibertineT-TLF on 
-input line 109.
+input line 110.
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/T1LinuxLibertineT-TLF.fd
 File: T1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Li
 nuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 109.
+(Font)              scaled to size 10.95pt on input line 110.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \degres on input line 109.
-LaTeX Info: Redefining \dots on input line 109.
-LaTeX Info: Redefining \up on input line 109.
+LaTeX Info: Redefining \degres on input line 110.
+LaTeX Info: Redefining \dots on input line 110.
+LaTeX Info: Redefining \up on input line 110.
 \c@mv@tabular=\count387
 \c@mv@boldtabular=\count388
 
@@ -2813,7 +2813,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box90
-Package hyperref Info: Link coloring ON on input line 109.
+Package hyperref Info: Link coloring ON on input line 110.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -2825,15 +2825,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 109.
-LaTeX Info: Redefining \ref on input line 109.
-LaTeX Info: Redefining \pageref on input line 109.
-LaTeX Info: Redefining \nameref on input line 109.
+LaTeX Info: Redefining \nameref on input line 110.
+LaTeX Info: Redefining \ref on input line 110.
+LaTeX Info: Redefining \pageref on input line 110.
+LaTeX Info: Redefining \nameref on input line 110.
 (./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 109.
+LaTeX Info: Redefining \microtypecontext on input line 110.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2863,32 +2863,32 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 <garde.pdf, id=297, 597.50829pt x 845.0471pt>
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf>
-Package pdftex.def Info: garde.pdf  used on input line 112.
+Package pdftex.def Info: garde.pdf  used on input line 113.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf>
-Package pdftex.def Info: garde.pdf  used on input line 112.
+Package pdftex.def Info: garde.pdf  used on input line 113.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 <garde.pdf, id=300, page=1, 597.50829pt x 845.0471pt>
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf, page 1>
-Package pdftex.def Info: garde.pdf , page1 used on input line 112.
+Package pdftex.def Info: garde.pdf , page1 used on input line 113.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf, page 1>
-Package pdftex.def Info: garde.pdf , page1 used on input line 112.
+Package pdftex.def Info: garde.pdf , page1 used on input line 113.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf, page 1>
-Package pdftex.def Info: garde.pdf , page1 used on input line 112.
+Package pdftex.def Info: garde.pdf , page1 used on input line 113.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf, page 1>
-Package pdftex.def Info: garde.pdf , page1 used on input line 112.
+Package pdftex.def Info: garde.pdf , page1 used on input line 113.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 File: garde.pdf Graphic file (type pdf)
 <use garde.pdf, page 1>
-Package pdftex.def Info: garde.pdf , page1 used on input line 112.
+Package pdftex.def Info: garde.pdf , page1 used on input line 113.
 (pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
 [0
 
@@ -2992,9 +2992,9 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sl' in size <10.95> no
 t available
 (Font)              Font shape `T1/LinuxLibertineT-TLF/m/it' tried instead on i
-nput line 145.
+nput line 146.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 145.
+(Font)              scaled to size 10.95pt on input line 146.
  [8] [9] [10
 
 ]
@@ -3304,65 +3304,68 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [59]
-[60] [61] [62]
+[60] [61]
+Package hyperref Info: bookmark level for unknown hypothesis defaults to 0 on i
+nput line 473.
+ [62]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [63]
-Overfull \hbox (1.43102pt too wide) detected at line 579
+Overfull \hbox (1.43102pt too wide) detected at line 576
 [][]
  []
 
 [64]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 603.
+(hyperref)                removing `math shift' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 603.
+(hyperref)                removing `superscript' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 603.
+(hyperref)                removing `subscript' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 603.
+(hyperref)                removing `subscript' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 603.
+(hyperref)                removing `math shift' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 603.
+(hyperref)                removing `math shift' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 603.
+(hyperref)                removing `superscript' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 603.
+(hyperref)                removing `math shift' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 603.
+(hyperref)                removing `math shift' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 603.
+(hyperref)                removing `superscript' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 603.
+(hyperref)                removing `subscript' on input line 600.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 603.
+(hyperref)                removing `math shift' on input line 600.
 
 [65]
-Overfull \hbox (3.22064pt too wide) in paragraph at lines 612--613
+Overfull \hbox (3.22064pt too wide) in paragraph at lines 609--610
 \OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \O
 MS/lmsy/m/n/10.95 ^^U [][]$ \T1/LinuxLibertineT-TLF/m/it/10.95 (-20) and $\OT1/
 lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W \OMS/lmsy/m/n/10.95 
@@ -3379,7 +3382,7 @@ Underfull \vbox (badness 4872) has occurred while \output is active []
 
  [68]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 738.
+put line 735.
 
 [69] [70]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -3397,7 +3400,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [81]
 [82]
-Overfull \hbox (5.76028pt too wide) in paragraph at lines 1306--1308
+Overfull \hbox (5.76028pt too wide) in paragraph at lines 1303--1305
 \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) thanks to Propo-si-tion [][]2.15[][]. L
 et us con-sider op-ti-mal so-lu-tions $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 
 p[]; r[]\OT1/lmr/m/n/10.95 )[]$
@@ -3470,7 +3473,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [86]
 [87] [88]
-Overfull \hbox (3.82483pt too wide) detected at line 1588
+Overfull \hbox (3.82483pt too wide) detected at line 1585
 [][][] \OMS/lmsy/m/n/10.95 ^^T [] ^^T [] \OML/lmm/m/it/10.95 :
  []
 
@@ -3632,26 +3635,26 @@ n-[]of-[]the-[]broadc$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) .  Ci-ta-tions:
 \tf@toc=\write9
 \openout9 = `main.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 96FBAA53AA4D995184ABD7D27CB4894D;5805.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: 53F4767C78CFD3D0A65907AC7ACE8492;9662.
+(rerunfilecheck)             Checksum: D8312E773D0668B5E2A9C61FE6A1BFE2;9701.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
  ) 
 Here is how much of TeX's memory you used:
- 57426 strings out of 494821
- 1252997 string characters out of 6177891
- 1592104 words of memory out of 5000000
- 58331 multiletter control sequences out of 15000+600000
+ 57452 strings out of 494821
+ 1253485 string characters out of 6177891
+ 1592599 words of memory out of 5000000
+ 58355 multiletter control sequences out of 15000+600000
  837085 words of font info for 549 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10422b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3688,9 +3691,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (153 pages, 1739073 bytes).
+Output written on main.pdf (153 pages, 1740893 bytes).
 PDF statistics:
- 3074 PDF objects out of 3580 (max. 8388607)
- 862 named destinations out of 1000 (max. 500000)
+ 3078 PDF objects out of 3580 (max. 8388607)
+ 864 named destinations out of 1000 (max. 500000)
  60521 words of extra memory for PDF output out of 61914 (max. 10000000)
 

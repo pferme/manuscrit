@@ -153,10 +153,11 @@
 \backcite {BF18}{{62}{4.2}{section.4.2}}
 \backcite {LALS20}{{62}{4.2}{section.4.2}}
 \backcite {FKP01}{{62}{4.2}{section.4.2}}
-\backcite {AAMMW11}{{62}{4.2}{section.4.2}}
 \backcite {Peeters03}{{62}{4.2}{section.4.2}}
-\backcite {AAMMW11}{{62}{4.4}{proposition.4.4}}
-\backcite {Feige02}{{62}{4.4}{proposition.4.4}}
+\backcite {AAMMW11}{{62}{4.2}{section.4.2}}
+\backcite {Feige02}{{62}{4.2}{section.4.2}}
+\backcite {AAMMW11}{{62}{4.2}{section.4.2}}
+\backcite {Feige02}{{62}{4.1}{hypothesis.4.1}}
 \backcite {GM07}{{72}{4.3.3}{corollary.4.11}}
 \backcite {Lindstrom69,Tilborg78,KL78,Weldon78,KLWY83,BT85,BB98,UL98,AB99,MO05,OS15}{{77}{4.4.1}{section*.17}}
 \backcite {MO05}{{77}{4.4.1}{section*.17}}
@@ -165,8 +166,8 @@
 \backcite {MO05}{{77}{4.4}{figure.4.4}}
 \backcite {MO05}{{78}{4.4.1}{figure.4.4}}
 \backcite {Matthews12}{{87}{4.5.1}{subsection.4.5.1}}
-\backcite {Matthews12}{{87}{4.5.1}{thmt@dummyctr.dummy.103}}
-\backcite {PPV10}{{87}{4.5.1}{thmt@dummyctr.dummy.103}}
+\backcite {Matthews12}{{87}{4.5.1}{thmt@dummyctr.dummy.104}}
+\backcite {PPV10}{{87}{4.5.1}{thmt@dummyctr.dummy.104}}
 \backcite {PPV10}{{89}{4.5.1}{equation.4.5.61}}
 \backcite {BF18}{{96}{4.6}{section.4.6}}
 \backcite {Cover72}{{101}{4.7}{chapter.5}}
@@ -209,4 +210,4 @@
 \backcite {DS06}{{125}{5.4.2}{subsection.5.4.2}}
 \backcite {MSV08}{{125}{5.4.2}{subsection.5.4.2}}
 \backcite {DS06}{{125}{(document)}{Doc-Start}}
-\backcite {MSV08}{{125}{5.4.2}{thmt@dummyctr.dummy.136}}
+\backcite {MSV08}{{125}{5.4.2}{thmt@dummyctr.dummy.137}}

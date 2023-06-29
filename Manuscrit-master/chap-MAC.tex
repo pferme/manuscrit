@@ -466,30 +466,28 @@ Since MACs are more general than point-to-point channels (by defining $W(y|x_1x_
 
 On the other hand, it has been shown in~\cite{LALS20} that it is \textrm{NP}-hard to decide whether a rate pair belongs to the classical capacity region of a MAC.
 
-The goal of this section is to show that, under some strong complexity hypothesis, the multiple-access channel coding problem cannot be approximated in polynomial time within a $\Omega(1)$ factor.
+The goal of this section is to show that, under some reasonable hardness assumptions, the multiple-access channel coding problem cannot be approximated in polynomial time within a $\Omega(1)$ factor. We will achieve this through a simple reduction from the bipartite version of the densest $k$-subgraph problem~\cite{FKP01}, where one aims at finding a subgraph of $k$ vertices with the highest number of edges. In the bipartite version, given a bipartite graph $G = (A \sqcup B, E)$ and two parameters $k_1$ and $k_2$, the goal is to find subsests $S \subseteq A$ and $T \subseteq B$ such that $|S|=k_1,|T|=k_2$ with the maximum number of edges contained in $S \cup T$. With a simple reduction from the maximum edge biclique problem~\cite{Peeters03}, the bipartite densest subgraph problem is \textrm{NP}-complete.
 
-Simple reduction from Bipartite Densest Subgraph: likely no constant factor approx
+A well-known result by Alon et al.~\cite{AAMMW11} shows that, under the following complexity hypothesis on random clauses with $k$ literals ($k$-AND formulas) introduced by Feige in~\cite{Feige02}, there is no polynomial-time $\Omega(1)$-approximation algorithm for the bipartite densest subgraph problem; see \cite{AAMMW11} for further details.
 
-Densest subgraph and bipartite version
+\begin{hypothesis}[\cite{Feige02}]
+\label{hypo:kANDFeige}
+For some constant $c > 0$, for every $k$, for $\Delta$ a sufficiently large constant independent of $n$, there is no polynomial-time algorithm that on most random $k$-AND formulas with $n$ variables and $m = \Delta n$ clauses outputs \textbf{typical}, but never outputs \textbf{typical} on $k$-AND formulas with at least $m2^{-c\sqrt{k}}$ satisfiable clauses.
+\end{hypothesis}
 
-Hardness under Hyp 1.1
-
-First, in the \textsc{Densest $\kappa$-Subgraph} problem (\textsc{D$\kappa$S}), introduced in \cite{FKP01}, we are given a graph $G=(V,E)$ and a parameter $\kappa$, and the goal is to find a subset $S \subseteq V$ of size $\kappa$ that contains the most edges among all such subsets. This problem is \textrm{NP}-hard as a simple consequence of the \textrm{NP}-hardness of the \textsc{MaxClique} problem.
-
-It is conjectured to be hard to approximate. That is to say, for any $\varepsilon \in (0,1)$, it is not possible to get a solution with a number of edges at least greater that $\left(1-\varepsilon\right)$ times the number of edges of an optimal solution in polynomial time. Assuming certain assumptions on the hardness of distinguishing satisfiability of particular formulas, one can show such a hardness result on \textsc{D$\kappa$S}; see \cite{AAMMW11} for a full description.
-
-We look at the \emph{bipartite} version of \textsc{D$\kappa$S} (\textsc{bD$\kappa$S}): given a bipartite graph $G = (A \cup B, E)$ and two parameters $\kappa_1$ and $\kappa_2$, the goal is to find subsests $S \subseteq A$ and $T \subseteq B$ such that $|S|=\kappa_1,|T|=\kappa_2$ and the number of edges contained in $S \cup T$ is the maximum possible among such subsets. With a simple reduction from the \textsc{MaxEdgeBiclique} problem, which is \textrm{NP}-complete \cite{Peeters03}, one can easily show that \textsc{bD$\kappa$S} is \textrm{NP}-complete.
-
-
-\begin{proposition}
-  \label{prop:hardnessMAC} 
-   Assuming some complexity hypothesis on random $k$-AND formulas (Hypothesis 1.1 of \cite{AAMMW11}, introduced in \cite{Feige02}), there is no constant factor polynomial-time approximation algorithm for $S_{\text{norm}}(W,k_1,k_2) := \frac{S(W,k_1,k_2)-\frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}}$.
-\end{proposition}
+This will imply the following hardness of approximation result for the multiple-access channel coding problem:
+\begin{theorem}
+  \label{theo:hardnessMAC} 
+   Under Hypothesis~\ref{hypo:kANDFeige}, there is no polynomial-time $\Omega(1)$-approximation algorithm for the multiple-access channel coding problem.
+   %$S_{\text{norm}}(W,k_1,k_2) := \frac{S(W,k_1,k_2)-\frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}}$.
+\end{theorem}
 
 \begin{proof}
-Given an instance $G = (A \cup B, E)$, $\kappa_1$ and $\kappa_2$ of \textsc{bD$\kappa$S} with an optimal value $N$, we construct an instance of the MAC coding problem with a value $S_{\text{norm}}(W,k_1,k_2) := \frac{S(W,k_1,k_2)-\frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}} = \frac{N}{k_1k_2}$.
+TODO Rewrite proof
 
-We take $k_1:=\kappa_1,k_2:=\kappa_2,\mathcal{X}_1:=A,\mathcal{X}_2:=B$ and $\mathcal{Y}:=\mathcal{X}_1 \times \mathcal{X}_2$. Thus we define:
+Given an instance $G = (A \sqcup B, E), k_1, k_2$ of the bipartite densest subgraph problem with an optimal value $N$, we construct an instance of the MAC coding problem with an optimal value $S_{\text{norm}}(W,k_1,k_2) := \frac{S(W,k_1,k_2)-\frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}} = \frac{N}{k_1k_2}$.
+
+Let us take $\mathcal{X}_1:=A,\mathcal{X}_2:=B$ and $\mathcal{Y}:=\mathcal{X}_1 \times \mathcal{X}_2$. We define:
 \begin{equation}
   W((x'_1,x'_2)|x_1x_2) = \begin{cases}
       \begin{aligned}
@@ -499,12 +497,12 @@ We take $k_1:=\kappa_1,k_2:=\kappa_2,\mathcal{X}_1:=A,\mathcal{X}_2:=B$ and $\ma
 \end{cases}
 \end{equation}
 
-One can easily check that it gives indeed a channel.
+It is indeed a channel as...
 
-Let us show that $S_{\text{norm}}(W,k_1,k_2) = \frac{N}{k_1k_2}$. First one can show that:
+Let us show that $S_{\text{norm}}(W,k_1,k_2) = \frac{N}{k_1k_2}$. First one can show that...:
 \[ S(W,k_1,k_2) = \frac{1}{k_1k_2}\max_{Z = Z_1 \times Z_2\\ Z_1 \subseteq \mathcal{X}_1, Z_2 \subseteq \mathcal{X}_2\\ |Z_1|=k_1,|Z_2|=k_2}\sum_{y \in \mathcal{Y}} \max_{(x_1,x_2) \in Z}W(y|x_1x_2)\]
 
-Thus, the maximization in both problems entails choosing subsets of $A$ and $B$ of cardinal $\kappa_1$ and $\kappa_2$ respectively. Consider such subsets $Z_1$ and $Z_2$, and call $Z=(Z_1,Z_2)$. Call $E_Z$ the edges of the induced subgraph, its cardinal being the value of the solution for the \textsc{bD$\kappa$S} problem. On the other hand, we get that the value of the second problem is the following:
+Thus, the maximization in both problems entails choosing subsets of $A$ and $B$ of cardinal $k_1$ and $k_2$ respectively. Consider such subsets $Z_1$ and $Z_2$, and call $Z=(Z_1,Z_2)$. Call $E_Z$ the edges of the induced subgraph, its cardinal being the value of the solution for the bipartite densest subgraph problem. On the other hand, we get that the value of the second problem is the following:
 
 \begin{equation}
   \begin{aligned}
@@ -516,7 +514,7 @@ Thus, the maximization in both problems entails choosing subsets of $A$ and $B$ 
 
 Thus, we get that:
 \[ f(Z) :=  \frac{\frac{1}{k_1k_2}\sum_{y \in \mathcal{Y}} \max_{(x_1,x_2) \in Z}W(y|x_1x_2) - \frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}} = \frac{|E_Z|}{k_1k_2} =: g(Z) \ , \]
-where $f$ is the function maximized in the MAC coding problem, and $g$ is the function maximized in the \textsc{bD$\kappa$S} problem, since they are both positive linear transformations of the original quantities one has to maximize. Since they are equal, we have that $S_{\text{norm}}(W,k_1,k_2) = \frac{N}{k_1k_2}$.
+where $f$ is the function maximized in the MAC coding problem, and $g$ is the function maximized in the densest bipartite subgraph problem, since they are both positive linear transformations of the original quantities one has to maximize. Since they are equal, we have that $S_{\text{norm}}(W,k_1,k_2) = \frac{N}{k_1k_2}$.
 \end{proof}
 
 

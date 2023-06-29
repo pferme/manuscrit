@@ -1143,12 +1143,12 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
   We reduce from the Label Cover problem described in~\cite{DMMS20} which is known to be an NP-hard problem. The main idea of this reduction is the usual equivalence between bipartite graphs and hypergraphs.
 
   \begin{definition}
-    A Label Cover instance $\mathcal{L} = (A,B,E,[L],[R],\set{\pi_e}_{e \in E})$ consists of a bi-regular bipartite graph $(A,B,E)$ with right degree $t$, alphabet sets $[L],[R]$ and for every edge $e \in E$, a constraint $\pi_e :[L] \rightarrow [R]$.
+    A Label Cover instance $\mathcal{L} = (A \sqcup B,E,[L],[R],\set{\pi_e}_{e \in E})$ consists of a bi-regular bipartite graph $(A \sqcup B,E)$ with right degree $t$, alphabet sets $[L],[R]$ and for every edge $e \in E$, a constraint $\pi_e :[L] \rightarrow [R]$.
     A \emph{labeling} of $\mathcal{L}$ is a function $\sigma : A \rightarrow [L]$. We say that $\sigma$ \emph{strongly satisfies} a right vertex $v \in B$ if for every two neighbours $u,u'$ of $v$, we have $\pi_{(u,v)}(\sigma(u)) = \pi_{(u',v)}(\sigma(u'))$. Moreover, we say that  $\sigma$ \emph{weakly satisfies} a right vertex $v \in B$ if there exists two neighbours $u,u'$ of $v$ such that $\pi_{(u,v)}(\sigma(u)) = \pi_{(u',v)}(\sigma(u'))$.
   \end{definition}
 
  \begin{theorem}[$\delta$-Gap-Label-Cover$(t,R)$ from~\cite{DMMS20}]
-  For any fixed integer $t \geq 2$ and fixed $\delta > 0$, there exists $R_0$ such that for any integer $R \geq R_0$, it is NP-hard for Label Cover instances $\mathcal{L} = (A,B,E,[L],[R],\set{\pi_e}_{e \in E})$ with right degree $t$ and right alphabet $[R]$ to distinguish between:
+  For any fixed integer $t \geq 2$ and fixed $\delta > 0$, there exists $R_0$ such that for any integer $R \geq R_0$, it is NP-hard for Label Cover instances $\mathcal{L} = (A \sqcup B,E,[L],[R],\set{\pi_e}_{e \in E})$ with right degree $t$ and right alphabet $[R]$ to distinguish between:
   
   \begin{itemize}
   \item[\textbf{YES:}] There exists a labeling $\sigma$ that \emph{strongly satisfies} all the right vertices.
@@ -1156,7 +1156,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
   \end{itemize}
 \end{theorem}
 
- The reduction is the following. From $\delta$-Gap-Label-Cover$(t,R)$, we take $h=t$ and the same parameters $\delta,R$. Given an instance $\mathcal{L} = (A,B,E,[L],[R],\set{\pi_e}_{e \in E})$, we take $\mathcal{G} = (A,E',[L],[R],\set{\pi'_{e',v}}_{e' \in E',v \in e'})$ with $E' = \set{N(b), b \in B}$ with $N(b)$ the set of neighbours of $b$ in $\mathcal{L}$, and $\pi'_{e',v} = \pi'_{N(b),v} := \pi_{v,b}$ since $v \in N(b)$. Since $(A,B,E)$ is bipartite and biregular, we get that our hypergraph has all hyperedges of size $h = \abs{N(b)} = t$, and that it is regular from the regular left degree of $(A,B,E)$. By construction, the notion of weakly and strongly satisfied is the same in both cases, as well as the labelings, and thus we have the NP-hardness of $\delta,h$-\textsc{AryGapLabelCover}.
+ The reduction is the following. From $\delta$-Gap-Label-Cover$(t,R)$, we take $h=t$ and the same parameters $\delta,R$. Given an instance $\mathcal{L} = (A \sqcup B,E,[L],[R],\set{\pi_e}_{e \in E})$, we take $\mathcal{G} = (A,E',[L],[R],\set{\pi'_{e',v}}_{e' \in E',v \in e'})$ with $E' = \set{N(b), b \in B}$ with $N(b)$ the set of neighbours of $b$ in $\mathcal{L}$, and $\pi'_{e',v} = \pi'_{N(b),v} := \pi_{v,b}$ since $v \in N(b)$. Since $(A \sqcup B,E)$ is bipartite and biregular, we get that our hypergraph has all hyperedges of size $h = \abs{N(b)} = t$, and that it is regular from the regular left degree of $(A \sqcup B,E)$. By construction, the notion of weakly and strongly satisfied is the same in both cases, as well as the labelings, and thus we have the NP-hardness of $\delta,h$-\textsc{AryGapLabelCover}.
 
  Note that both problems are in fact linearly equivalent since we could do the same reduction backwards.
  
