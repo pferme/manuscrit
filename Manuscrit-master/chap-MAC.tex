@@ -20,7 +20,7 @@ We also study the case where non-signaling assistance is shared only between eac
 %Formally, a MAC $W$ is a conditional probability distribution depending on two inputs in $\mathcal{X}_1$ and $\mathcal{X}_2$, and an output in $\mathcal{Y}$, so $W := \left(W(y|x_1x_2)\right)_{x_1 \in \mathcal{X}_1,x_2  \in \mathcal{X}_2, y \in \mathcal{Y}}$ with $W(y|x_1x_2) \geq 0$ and $\sum_{y \in \mathcal{Y}} W(y|x_1x_2) = 1$. We will denote such a MAC by $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$. The tensor product of two MACs $W: \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ and $W': \mathcal{X}'_1 \times \mathcal{X}'_2 \rightarrow \mathcal{Y}'$ is denoted by $W \otimes W' : (\mathcal{X}_1 \times \mathcal{X}'_1) \times (\mathcal{X}_2 \times \mathcal{X}'_2) \to \mathcal{Y} \times \mathcal{Y}'$ and defined by $(W \otimes W')(yy'|x_1x_1'x_2x_2') := W(y|x_1x_2) \cdot W'(y'|x_1'x_2')$. We denote by $W^{\otimes n}(y^n|x_1^nx_2^n) := \prod_{i=1}^nW(y_i|x_{1,i}x_{2,i})$, for $y^n := y_1 \ldots y_n \in \mathcal{Y}^n$, $x_1^n := x_{1,1} \ldots x_{1,n} \in \mathcal{X}_1^n$ and $x_2^n := x_{2,1} \ldots x_{2,n} \in \mathcal{X}_2^n$. We will use the notation $[k]:=\{1,\ldots,k\}$.
  
 
-The coding problem for a MAC $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ is the following: one wants to encode messages in $[k_1]$ into $\mathcal{X}_1$ and messages in $[k_2]$ into $\mathcal{X}_2$ independently, which will be given as input to the channel $W$. This results in a random output in $\mathcal{Y}$, which one needs to decode back into the corresponding messages in $[k_1]$ and $[k_2]$. We will call $e_1 : [k_1] \rightarrow \mathcal{X}_1$ the first encoder, $e_2 : [k_2] \rightarrow \mathcal{X}_2$ the second encoder and $d : \mathcal{Y} \rightarrow [k_1] \times [k_2]$ the decoder. This is depicted in Figure~\ref{fig:MACcoding}.
+The coding problem for a MAC $W : \mathcal{X}_1 \times \mathcal{X}_2 \rightarrow \mathcal{Y}$ can be stated in the following way. We want to encode messages from $[k_1]$ into $\mathcal{X}_1$ and messages from $[k_2]$ into $\mathcal{X}_2$ independently. They are given as inputs to $W$, which results in a random output in $\mathcal{Y}$. From this output, we want to decode back the original messages in $[k_1]$ and $[k_2]$. We will call $e_1 : [k_1] \rightarrow \mathcal{X}_1$ the first encoder, $e_2 : [k_2] \rightarrow \mathcal{X}_2$ the second encoder and $d : \mathcal{Y} \rightarrow [k_1] \times [k_2]$ the decoder. The scenario is depicted in Figure~\ref{fig:MACcoding}.
 
 \begin{figure}[!h]
 \begin{center}
@@ -466,57 +466,101 @@ Since MACs are more general than point-to-point channels (by defining $W(y|x_1x_
 
 On the other hand, it has been shown in~\cite{LALS20} that it is \textrm{NP}-hard to decide whether a rate pair belongs to the classical capacity region of a MAC.
 
-The goal of this section is to show that, under some reasonable hardness assumptions, the multiple-access channel coding problem cannot be approximated in polynomial time within a $\Omega(1)$ factor. We will achieve this through a simple reduction from the bipartite version of the densest $k$-subgraph problem~\cite{FKP01}, where one aims at finding a subgraph of $k$ vertices with the highest number of edges. In the bipartite version, given a bipartite graph $G = (A \sqcup B, E)$ and two parameters $k_1$ and $k_2$, the goal is to find subsests $S \subseteq A$ and $T \subseteq B$ such that $|S|=k_1,|T|=k_2$ with the maximum number of edges contained in $S \cup T$. With a simple reduction from the maximum edge biclique problem~\cite{Peeters03}, the bipartite densest subgraph problem is \textrm{NP}-complete.
+The goal of this section is to show that, under some reasonable hardness assumptions, the multiple-access channel coding problem cannot be approximated in polynomial time within a $\Omega(1)$ factor. We will achieve this through a simple reduction from the bipartite version of the densest $k$-subgraph problem~\cite{FKP01}, where one aims at finding a subgraph of $k$ vertices with the highest number of edges. In the bipartite version, given a bipartite graph $G = (A \sqcup B, E)$ and two parameters $k_1$ and $k_2$, the goal is to find subsets $S \subseteq A$ and $T \subseteq B$ such that $|S|=k_1,|T|=k_2$ with the maximum number of edges contained in $S \cup T$, i.e. $|(S \times T) \cap E|$. With a simple reduction from the maximum edge biclique problem~\cite{Peeters03}, the bipartite densest subgraph problem is \textrm{NP}-complete.
 
-A well-known result by Alon et al.~\cite{AAMMW11} shows that, under the following complexity hypothesis on random clauses with $k$ literals ($k$-AND formulas) introduced by Feige in~\cite{Feige02}, there is no polynomial-time $\Omega(1)$-approximation algorithm for the bipartite densest subgraph problem; see \cite{AAMMW11} for further details.
+A well-known result by Alon et al.~\cite{AAMMW11} shows that, under the following complexity hypothesis on random clauses with $k$ literals ($k$-AND formulas) introduced by Feige in~\cite{Feige02}, there is no polynomial-time $\Omega(1)$-approximation algorithm for the bipartite densest subgraph problem; see~\cite{AAMMW11} for further details.
 
 \begin{hypothesis}[\cite{Feige02}]
 \label{hypo:kANDFeige}
 For some constant $c > 0$, for every $k$, for $\Delta$ a sufficiently large constant independent of $n$, there is no polynomial-time algorithm that on most random $k$-AND formulas with $n$ variables and $m = \Delta n$ clauses outputs \textbf{typical}, but never outputs \textbf{typical} on $k$-AND formulas with at least $m2^{-c\sqrt{k}}$ satisfiable clauses.
 \end{hypothesis}
 
-This will imply the following hardness of approximation result for the multiple-access channel coding problem:
+We will consider the following reformulation of the multiple-access channel coding problem in the proof of its hardness of approximation:
+\begin{proposition}
+  Given a MAC $W$ and integers $k_1,k_2$, the multiple-access channel coding problem entails maximizing:
+  \[ f_W(S,T) := \frac{1}{|S||T|}\sum_{y \in \mathcal{Y}} \max_{x_1 \in S, x_2 \in T} W(y|x_1x_2) \ ,\]
+  over all sets $S \subseteq \mathcal{X}_1, T \subseteq \mathcal{X}_2$ with $|S|=k_1,|T|=k_2$.
+\end{proposition}
+\begin{proof}
+  As the multiple-access channel coding problem is a convex program, its optimal solution can be found on integer solutions, i.e. when $e_1,e_2$ and $d$ are functions. Note that that this restriction does not affect the hardness of the problem as a deterministic code with a better or equal value can be retrieved easily from any code.
+
+  Therefore, given encoders $e_1,e_2$, the objective value becomes:
+  \[ \max_d\frac{1}{k_1k_2}\sum_{i_1,i_2,y}W(y|e_1(i_1)e_2(i_2))\mathbbm{1}_{d(y)=(i_1,i_2)} = \frac{1}{k_1k_2}\sum_y \max_{i_1,i_2} W(y|e_1(i_1)e_2(i_2)) \ ,\]
+  by taking $d(y) \in \text{argmax}_{i_1,i_2} \{ W(y|e_1(i_1)e_2(i_2)) \}$. Finally, optimizing over functions $e_1,e_2$ is the same as optimizing over sets $S,T$ of size $k_1,k_2$ (corresponding to their images). Thus, we have that the multiple-access channel coding can be reformulated as: 
+  \[ \max_{S \subseteq \mathcal{X}_1, T \subseteq \mathcal{X}_2:|S|=k_1,|T|=k_2} \frac{1}{|S||T|}\sum_{y \in \mathcal{Y}} \max_{x_1 \in S, x_2 \in T} W(y|x_1x_2) \ .\]
+\end{proof}
+
+The previously mentioned hardness of approximation for the bipartite densest subgraph problem from~\cite{AAMMW11} will imply the following hardness of approximation for the multiple-access channel coding problem:
 \begin{theorem}
   \label{theo:hardnessMAC} 
    Under Hypothesis~\ref{hypo:kANDFeige}, there is no polynomial-time $\Omega(1)$-approximation algorithm for the multiple-access channel coding problem.
-   %$S_{\text{norm}}(W,k_1,k_2) := \frac{S(W,k_1,k_2)-\frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}}$.
 \end{theorem}
 
 \begin{proof}
-TODO Rewrite proof
-
-Given an instance $G = (A \sqcup B, E), k_1, k_2$ of the bipartite densest subgraph problem with an optimal value $N$, we construct an instance of the MAC coding problem with an optimal value $S_{\text{norm}}(W,k_1,k_2) := \frac{S(W,k_1,k_2)-\frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}} = \frac{N}{k_1k_2}$.
-
-Let us take $\mathcal{X}_1:=A,\mathcal{X}_2:=B$ and $\mathcal{Y}:=\mathcal{X}_1 \times \mathcal{X}_2$. We define:
+Given a bipartite graph $G = (A \sqcup B, E)$, we define its associated MAC $W_G$ on $\mathcal{X}_1:=A, \mathcal{X}_2:=B$ and $\mathcal{Y}:= A \times B$ in the following way:
 \begin{equation}
-  W((x'_1,x'_2)|x_1x_2) = \begin{cases}
+  W((a',b')|ab) = \begin{cases}
       \begin{aligned}
-      &\delta_{x'_1,x_1}\delta_{x'_2,x_2} &&\text{if } (x_1,x_2) \in E\\
-      &\frac{1}{|\mathcal{Y}|} &&\text{otherwise}
+      &\delta_{a,a'}\delta_{b,b'} &&\text{if } (a,b) \in E \ ,\\
+      &\frac{1}{|A||B|} &&\text{otherwise} \ .
       \end{aligned}
 \end{cases}
 \end{equation}
 
-It is indeed a channel as...
+It is indeed a MAC as $\sum_{a',b'}W((a',b')|ab) = \sum_{a',b'} \delta_{a,a'}\delta_{b,b'} = 1$ if $(a,b) \in E$ and $\sum_{a',b'}W((a',b')|ab) = \sum_{a',b'}\frac{1}{|A||B|} = 1$ otherwise.
 
-Let us show that $S_{\text{norm}}(W,k_1,k_2) = \frac{N}{k_1k_2}$. First one can show that...:
-\[ S(W,k_1,k_2) = \frac{1}{k_1k_2}\max_{Z = Z_1 \times Z_2\\ Z_1 \subseteq \mathcal{X}_1, Z_2 \subseteq \mathcal{X}_2\\ |Z_1|=k_1,|Z_2|=k_2}\sum_{y \in \mathcal{Y}} \max_{(x_1,x_2) \in Z}W(y|x_1x_2)\]
+We claim the following linear relation between the objective functions of the bipartite densest subgraph problem on $G$ and the multiple-access channel coding problem on $W_G$:
+\begin{lemma}
+  \label{lem:GraphMACequiv}
+  For $G=(A \sqcup B,E)$, $S \subseteq A$ and $T \subseteq B$:
+  \[ \frac{f_{W_G}(S,T) - \frac{1}{|S||T|}}{1-\frac{1}{|A||B|}}  = \frac{|(S \times T) \cap E|}{|S||T|} \ .\]
+\end{lemma}
 
-Thus, the maximization in both problems entails choosing subsets of $A$ and $B$ of cardinal $k_1$ and $k_2$ respectively. Consider such subsets $Z_1$ and $Z_2$, and call $Z=(Z_1,Z_2)$. Call $E_Z$ the edges of the induced subgraph, its cardinal being the value of the solution for the bipartite densest subgraph problem. On the other hand, we get that the value of the second problem is the following:
-
+\begin{proof}[Proof of Lemma~\ref{lem:GraphMACequiv}]
+We have that:
 \begin{equation}
   \begin{aligned}
-    &\frac{1}{k_1k_2}\sum_{y \in \mathcal{Y}} \max_{(x_1,x_2) \in Z}W(y|x_1x_2)\\
-    &= \frac{1}{k_1k_2}\left(\sum_{y \in E_Z} \max_{(x_1,x_2) \in Z}W(y|x_1x_2) + \sum_{y \in \mathcal{Y}-E_Z} \max_{(x_1,x_2) \in Z}W(y|x_1x_2)\right)\\
-    &= \frac{1}{k_1k_2}\left(|E_Z| + \frac{\mathcal{Y} - |E_Z|}{\mathcal{Y}}\right) = \frac{1}{k_1k_2} + \frac{|E_Z|}{k_1k_2} \left(1-\frac{1}{|\mathcal{Y}|}\right) \ .
+    &f_{W_G}(S,T) = \frac{1}{|S||T|}\sum_{a',b'} \max_{a \in S, b \in T} W((a',b')|ab)\\
+    &= \frac{1}{|S||T|}\left(\sum_{(a',b') \in (S \times T) \cap E} \max_{a \in S, b \in T} W((a',b')|ab) + \sum_{(a',b') \not\in (S \times T) \cap E} \max_{a \in S, b \in T} W((a',b')|ab)\right)\\
+    &= \frac{1}{|S||T|}\left(\sum_{(a',b') \in (S \times T) \cap E} 1 + \sum_{(a',b') \not\in (S \times T) \cap E} \frac{1}{|A||B|}\right)\\
+    &= \frac{1}{|S||T|}\left(|(S \times T) \cap E| + \frac{|A||B|-|(S \times T) \cap E|}{|A||B|}\right)\\
+    &= \frac{1}{|S||T|} + \frac{|(S \times T) \cap E|}{|S||T|}\left(1-\frac{1}{|A||B|}\right) \ ,
   \end{aligned}
 \end{equation}
-
-Thus, we get that:
-\[ f(Z) :=  \frac{\frac{1}{k_1k_2}\sum_{y \in \mathcal{Y}} \max_{(x_1,x_2) \in Z}W(y|x_1x_2) - \frac{1}{k_1k_2}}{1-\frac{1}{|\mathcal{Y}|}} = \frac{|E_Z|}{k_1k_2} =: g(Z) \ , \]
-where $f$ is the function maximized in the MAC coding problem, and $g$ is the function maximized in the densest bipartite subgraph problem, since they are both positive linear transformations of the original quantities one has to maximize. Since they are equal, we have that $S_{\text{norm}}(W,k_1,k_2) = \frac{N}{k_1k_2}$.
+which implies the claimed equality.
 \end{proof}
 
+Let us now assume that a polynomial-time constant approximation of the multiple-access channel coding problem exists. Let us call $\lambda \in (0,1)$ the ratio of that algorithm. Then, for any $G=(A \sqcup B,E),k_1,k_2$, we can apply our algorithm to $W_G,k_1,k_2$ and get $S_{\text{approx}},T_{\text{approx}}$ of size $k_1,k_2$ such that:
+\[ f_{W_G}(S_{\text{approx}},T_{\text{approx}}) \geq \lambda \cdot \max_{S,T:|S|=k_1,|T|=k_2}f_{W_G}(S,T) \ .\]
+
+But, thanks to Lemma~\ref{lem:GraphMACequiv}, we have that:
+  \[ \frac{\max_{S,T:|S|=k_1,|T|=k_2}f_{W_G}(S,T) - \frac{1}{k_1k_2}}{1-\frac{1}{|A||B|}}  = \frac{\max_{S,T:|S|=k_1,|T|=k_2}|(S \times T) \cap E|}{k_1k_2} \ .\]
+
+So in all, we have:
+\begin{equation}
+  \begin{aligned}
+    &\frac{|(S_{\text{approx}} \times T_{\text{approx}}) \cap E|}{k_1k_2} = \frac{f_{W_G}(S_{\text{approx}},T_{\text{approx}}) - \frac{1}{k_1k_2}}{1-\frac{1}{|A||B|}}\\
+    &\geq \frac{\lambda \cdot \max_{S,T:|S|=k_1,|T|=k_2}f_{W_G}(S,T) - \frac{1}{k_1k_2}}{1-\frac{1}{|A||B|}}\\
+    &= \lambda \cdot \frac{\max_{S,T:|S|=k_1,|T|=k_2}f_{W_G}(S,T) - \frac{1}{k_1k_2}}{1-\frac{1}{|A||B|}} - \frac{\frac{1-\lambda}{k_1k_2}}{1-\frac{1}{|A||B|}}\\
+    &= \lambda \cdot \frac{\max_{S,T:|S|=k_1,|T|=k_2}|(S \times T) \cap E|}{k_1k_2} - \frac{\frac{1-\lambda}{k_1k_2}}{1-\frac{1}{|A||B|}} \ ,
+  \end{aligned}
+\end{equation}
+and thus:
+\[ |(S_{\text{approx}} \times T_{\text{approx}}) \cap E| \geq \lambda \cdot \max_{S,T:|S|=k_1,|T|=k_2}|(S \times T) \cap E| - \frac{1-\lambda}{1-\frac{1}{|A||B|}} \ .\]
+
+Let us consider instances of the bipartite densest subgraph problem with $|E| \geq \min(k_1,k_2)$, which implies directly that $\max_{S,T:|S|=k_1,|T|=k_2}|(S \times T) \cap E| \geq \min(k_1,k_2)$ by picking $\min(k_1,k_2)$ edges and taking their endpoints to construct $S$ and $T$. As $|A||B| \geq 2$, we have that $\frac{1-\lambda}{1-\frac{1}{|A||B|}} \leq 2$. Then:
+\begin{equation}
+  \begin{aligned}
+     &|(S_{\text{approx}} \times T_{\text{approx}}) \cap E| \geq \lambda \cdot \max_{S,T:|S|=k_1,|T|=k_2}|(S \times T) \cap E| - 2\\
+     &\geq (1-c)\lambda \cdot \max_{S,T:|S|=k_1,|T|=k_2}|(S \times T) \cap E| + c\lambda\min(k_1,k_2) - 2 \text{ for any } c \in (0,1)\\
+     &=\left(1 - \frac{2}{\lambda\min(k_1,k_2)} \right) \lambda \cdot \max_{S,T:|S|=k_1,|T|=k_2}|(S \times T) \cap E| \ ,\\
+  \end{aligned}
+\end{equation}
+by choosing $c=\frac{2}{\lambda\min(k_1,k_2)}$. Finally, for instances such that $k_1,k_2 \geq \frac{4}{\lambda}$, we have that:
+\[|(S_{\text{approx}} \times T_{\text{approx}}) \cap E| \geq \frac{\lambda}{2} \cdot \max_{S,T:|S|=k_1,|T|=k_2}|(S \times T) \cap E| \ .\]
+
+Therefore, if a polynomial-time approximation of the multiple-access channel coding problem of constant ratio $\lambda$ exists, then we have a polynomial-time $\frac{\lambda}{2}$-approximation of the bipartite densest subgraph problem for instances satisfying $|E| \geq \min(k_1,k_2)$ and $k_1,k_2 \geq \frac{4}{\lambda}$. Note that the bipartite densest subgraph problem can be solved in polynomial time for instances which do not satisfy these constraints (as $\frac{1}{\lambda}$ is constant). Thus, we have in all a constant polynomial-time approximation for the bipartite densest subgraph problem, which is in contradiction with Hypothesis~\ref{hypo:kANDFeige} as proved in~\cite{AAMMW11}. Hence, under Hypothesis~\ref{hypo:kANDFeige}, there is no polynomial-time $\Omega(1)$-approximation algorithm for the multiple-access channel coding problem.
+\end{proof}
 
 \section{Properties of Non-signaling Assisted Codes}
 \label{section:complexity}
@@ -982,7 +1026,7 @@ We will now present a numerical method to find efficiently inner bounds on $\mat
 This implies that we can find efficiently achievable rate pairs for MACs.
 
 \paragraph{Application to the binary adder channel}
-The binary adder channel $W_{\text{BAC}}$ is the following MAC:
+The binary adder channel $W_{\text{BAC}}$ is defined by:
 \[ \forall x_1,x_2 \in \{0,1\}, \forall y \in \{0,1,2\}, W_{\text{BAC}}(y|x_1x_2) := \delta_{y,x_1+x_2} \ .\]
 
 Its classical capacity region $\mathcal{C}(W_{\text{BAC}})$ is well known and consists of all $(R_1,R_2)$ such that $R_1 \leq 1,R_2 \leq 1, R_1+R_2 \leq \frac{3}{2}$, as a consequence of Theorem~\ref{theo:capacity}. Its zero-error classical capacity $\mathcal{C}_0(W_{\text{BAC}})$ is not yet characterized. A lot of work has been done in finding outer and inner bounds on this region~\cite{Lindstrom69,Tilborg78,KL78,Weldon78,KLWY83,BT85,BB98,UL98,AB99,MO05,OS15}. To date, the best lower bound on the sum-rate capacity is $\log_2(240/6) \simeq 1.3178$~\cite{MO05}.

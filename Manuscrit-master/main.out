@@ -48,8 +48,8 @@
 \BOOKMARK [2][-]{subsection.4.4.1}{Zero-error Non-signaling Assisted Achievable Rate Pairs}{section.4.4}% 48
 \BOOKMARK [2][-]{subsection.4.4.2}{Non-signaling Assisted Achievable Rate Pairs with Non-zero Error}{section.4.4}% 49
 \BOOKMARK [1][-]{section.4.5}{Relaxed Non-signaling Assisted Capacity Region and Outer Bounds}{chapter.4}% 50
-\BOOKMARK [2][-]{subsection.4.5.1}{Outer Bound Part of Theorem 4.23}{section.4.5}% 51
-\BOOKMARK [2][-]{subsection.4.5.2}{Achievability Part of Theorem 4.23}{section.4.5}% 52
+\BOOKMARK [2][-]{subsection.4.5.1}{Outer Bound Part of Theorem 4.25}{section.4.5}% 51
+\BOOKMARK [2][-]{subsection.4.5.2}{Achievability Part of Theorem 4.25}{section.4.5}% 52
 \BOOKMARK [1][-]{section.4.6}{Independent Non-signaling Assisted Capacity Region}{chapter.4}% 53
 \BOOKMARK [1][-]{section.4.7}{Conclusion}{chapter.4}% 54
 \BOOKMARK [0][-]{chapter.5}{Broadcast Channel Coding with Non-signaling Correlations}{}% 55
@@ -63,7 +63,7 @@
 \BOOKMARK [1][-]{section.5.3}{Approximation of Deterministic Broadcast Channel Coding}{chapter.5}% 63
 \BOOKMARK [2][-]{subsection.5.3.1}{Reformulation as a Bipartite Graph Problem}{section.5.3}% 64
 \BOOKMARK [2][-]{subsection.5.3.2}{Approximation Algorithm for DensestQuotientGraph}{section.5.3}% 65
-\BOOKMARK [2][-]{subsection.5.3.3}{Deterministic Non-signaling Assisted Capacity Region}{section.5.3}% 66
+\BOOKMARK [2][-]{subsection.5.3.3}{Non-signaling Assisted Capacity Region for Deterministic Channels}{section.5.3}% 66
 \BOOKMARK [1][-]{section.5.4}{Hardness of Approximation for Broadcast Channel Coding}{chapter.5}% 67
 \BOOKMARK [2][-]{subsection.5.4.1}{Social Welfare Reformulation}{section.5.4}% 68
 \BOOKMARK [2][-]{subsection.5.4.2}{Value Query Hardness}{section.5.4}% 69

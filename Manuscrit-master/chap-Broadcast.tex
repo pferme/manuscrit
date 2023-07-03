@@ -24,7 +24,7 @@ On the other direction, we consider the subproblem of broadcast channel coding w
 \subsection{Broadcast Channels}
 %Formally, a broadcast channel is given by a conditional probability distribution on input $\mathcal{X}$ and two outputs $\mathcal{Y}_1$ and $\mathcal{Y}_2$, so $W := \left(W(y_1,y_2|x)\right)_{y_1 \in \mathcal{Y}_1, y_2 \in \mathcal{Y}_2, x \in \mathcal{X}}$, with $W(y_1y_2|x) \geq 0$ and such that $\sum_{y_1 \in \mathcal{Y}_1, y_2 \in \mathcal{Y}_2} W(y_1y_2|x) = 1$. We define its marginals $W_1$ and $W_2$ respectively by $W_1(y_1|x) := \sum_{y_2 \in \mathcal{Y}_2} W(y_1y_2|x)$ and $W_2(y_2|x) := \sum_{y_1 \in \mathcal{Y}_1} W(y_1y_2|x)$. We will denote such a broadcast channel by $W : \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$. The tensor product of two broadcast channels $W: \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$ and $W': \mathcal{X}' \rightarrow \mathcal{Y}'_1 \times \mathcal{Y}'_2$ is denoted by $W \otimes W' : \mathcal{X} \times \mathcal{X}' \rightarrow (\mathcal{Y}_1 \times \mathcal{Y}_1') \times (\mathcal{Y}_2 \times \mathcal{Y}_2')$ and defined by $(W \otimes W')(y_1y_1'y_2y_2'|xx') := W(y_1y_2|x) \cdot W'(y_1'y_2'|x')$. We define $W^{\otimes n}(y_1^ny_2^n|x^n) := \prod_{i=1}^nW(y_{1,i}y_{2,i}|x_i)$, for $y_1^n := y_{1,1} \ldots y_{1,n} \in \mathcal{Y}_1^n$ and $y_2^n := y_{2,1} \ldots y_{2,n} \in \mathcal{Y}_2^n$ and $x^n := x_1 \ldots x_n \in \mathcal{X}^n$. We will use the notation $[k]:=\{1,\ldots,k\}$.
 
-The coding problem for a broadcast channel $W : \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$ is the following: one wants to encode a pair of messages belonging to $[k_1] \times [k_2]$ into $\mathcal{X}$, which will be given as input to the channel $W$. This results in two random outputs in $\mathcal{Y}_1$ and $\mathcal{Y}_2$, which one needs to decode back into the corresponding messages in $[k_1]$ and $[k_2]$. We will call $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$ the encoder, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$ the first decoder and $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$ the second decoder. This is depicted in Figure~\ref{fig:BCcoding}.
+The coding problem for a broadcast channel $W : \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$ can be stated in the following way. We want to encode a pair of messages belonging to $[k_1] \times [k_2]$ into $\mathcal{X}$. The pair is given as input to $W$, which results in two random outputs in $\mathcal{Y}_1$ and $\mathcal{Y}_2$. From the output in $\mathcal{Y}_1$ (resp. $\mathcal{Y}_2$), we want to decode back the original message in $[k_1]$ (resp. $[k_2]$). We will call $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$ the encoder, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$ the first decoder and $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$ the second decoder. The scenario is depicted in Figure~\ref{fig:BCcoding}.
 
 \begin{figure}[!h]
 \begin{center}
@@ -533,7 +533,7 @@ which proves that given an optimal solution of \textsc{DetBCC}, one can efficien
 For the other direction, consider an optimal solution $\mathcal{P}_1,\mathcal{P}_2$ of \textsc{DensestQuotientGraph}. We have as before that:
 \[ e_{G_W}(\mathcal{P}_1,\mathcal{P}_2) =  \sum_{i_1,i_2} \max_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}} \ . \]
 
-Now, let us define $e(i_1,i_2) \in \text{argmax}_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}}$ and $d_b(y_b)$ the index of the part of $\mathcal{P}_b$ where $y_b$ lies, for $b \in \{1,2\}$. With those definitions, we get again that:
+Now, let us define $e(i_1,i_2) \in \text{argmax}_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}}$ and $d_b(y_b)$ the index $i_b$ such that $y_b \in \mathcal{P}_b^{i_b}$, for $b \in \{1,2\}$. With those definitions, we get again that:
 \begin{equation}
   \begin{aligned}
     \max_{x \in \mathcal{X}}\mathbbm{1}_{W_1(x) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(x) \in \mathcal{P}_2^{i_2}} &= \mathbbm{1}_{W_1(e(i_1,i_2)) \in \mathcal{P}_1^{i_1}}\mathbbm{1}_{W_2(e(i_1,i_2)) \in \mathcal{P}_2^{i_2}}\\
@@ -636,7 +636,7 @@ We will give a $(1-e^{-1})$ approximation algorithm running in polynomial time f
 The problem $\max_{\mathcal{P}_2}\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)$ is a particular instance of the submodular welfare problem from~\cite{Vondrak08}. Note that $\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) = \deg_{V_1,\{\mathcal{P}_2^{i_2}, V_2-\mathcal{P}_2^{i_2}\}}(\mathcal{P}_2^{i_2})$, as the degree of $\mathcal{P}_2^{i_2}$ does not depend on the rest of the partition $\mathcal{P}_2$. Then, $h(S_2) := \min\left(k_1,\deg_{V_1,\{S_2,V_2-S_2\}}(S_2)\right)$, for $S_2 \subseteq V_2$, is a nondecreasing submodular function, as $S_2 \mapsto \deg_{V_1,\{S_2,V_2-S_2\}}(S_2)$ is a nondecreasing submodular function on $V_2$ and $\min(k_1,\cdot)$ is nondecreasing concave. Thus, we want to maximize $\sum_{i_2=1}^{k_2}h(S_{i_2})$ where $(S_{i_2})_{i_2 \in [k_2]}$ is a partition of items in $V_2$ among $k_2$ bidders. It is a particular case of the submodular welfare problem where each nondecreasing submodular utility weight is the same for all bidders and equal to $h$. Thus, thanks to~\cite{Vondrak08}, there exists a $(1-e^{-1})$ polynomial-time approximation of $\max_{\mathcal{P}_2}\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)$.
 \end{proof}
 
-\subsection{Deterministic Non-signaling Assisted Capacity Region}
+\subsection{Non-signaling Assisted Capacity Region for Deterministic Channels}
 Thanks to Theorem~\ref{theo:DQGapprox} and Proposition~\ref{prop:BCCisDQG}, there exists a constant factor approximation algorithm for the broadcast channel coding problem running in polynomial time. We aim to show here that that the non-signaling assisted value is linked by a constant factor to the unassisted one. Indeed, the hope is that the non-signaling assisted program is linked to the linear relaxation of the unassisted problem, thus is likely a good approximation since the broadcast channel coding problem can be approximated in polynomial time.
 
 This turns out to be true, and will be proved through the following theorem:
@@ -738,7 +738,7 @@ which concludes the first part of the proof.
   is greater than or equal to:
   \[ \frac{\ell_2}{k_2}\left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\min\left(k_1k_2,\sum_{y_1}\min(k_2,\deg(y_1))\right) \ . \]
 
-  First, $\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right) = \sum_{i_2=1}^{\ell_2}\varphi(\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))$ with $\varphi(j):=\min(k_1,j)$ which is a concave function. Recall the definition of the Poisson concavity ratio~\ref{eq:def-alpha-varphi} $\alpha_{\varphi} = \inf_{x \in \mathbb{R}^+} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x))}$ which is equal to $1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}$ for that particular function. Let us find the law of $\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})$:
+  First, $\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right) = \sum_{i_2=1}^{\ell_2}\varphi(\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}))$ with $\varphi(j):=\min(k_1,j)$ which is a concave function. Recall the definition of the Poisson concavity ratio~\ref{eq:def-alpha-varphi} $\alpha_{\varphi} = \inf_{x \in \mathbb{R}^+} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x)}$ which is equal to $1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}$ for that particular function. Let us find the law of $\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})$:
   \begin{equation}
     \begin{aligned}
       \deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2}) &= \sum_{y_1} \mathbbm{1}_{N(y_1) \cap \mathcal{P}_2^{i_2} \not= \emptyset} = \sum_{y_1} \left(1-\mathbbm{1}_{N(y_1) \cap \mathcal{P}_2^{i_2} = \emptyset}\right)\\
@@ -758,7 +758,7 @@ Thus:
 But:
 \begin{equation}
   \begin{aligned}
-    \sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg(y_1)}\right) &\geq \sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\min\left(k_2,\deg(y_1)\right))}\right)\\
+    \sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\deg(y_1)}\right) &\geq \sum_{y_1}\left(1-\left(1-\frac{1}{\ell_2}\right)^{\min\left(k_2,\deg(y_1)\right)}\right)\\
     &\geq \left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\frac{1}{k_2}\sum_{y_1}\min\left(k_2,\deg(y_1)\right) \ ,
   \end{aligned}
 \end{equation}
@@ -810,15 +810,15 @@ Thus, in particular, there exists some partition $\mathcal{P}_2$ that satisfies 
 \label{section:HardnessBC}
 Since broadcast channels are more general than point-to-point channels (by defining $W_1(y_1|x):=\hat{W}(y_1|x)$ for $\hat{W}$ a point-to-point channel and taking $W_2(y_2|x)=\frac{1}{|\mathcal{Y}_2|}$ a completely trivial channel), computing a single value $\mathrm{S}(W,k_1,k_2)$ is \textrm{NP}-hard, and it is even \textrm{NP}-hard to approximate within a better factor than $1-e^{-1}$, as a consequence of the hardness result for point-to-point channels from~\cite{BF18}.
 
-The goal of this section is to show that the general broadcast channel coding problem cannot be approximated in polynomial time within a $\Omega(1)$ factor, under reasonable hardness assumptions. It will be a good insight that non-signaling assistance will enlarge the capacity region of the channel as discussed in the introduction.
+The goal of this section is to give some evidence for the hardness of approximation of the general broadcast channel coding problem, specifically that it cannot be approximated in polynomial time within a $\Omega(1)$ factor. It will be a good insight that non-signaling assistance will enlarge the capacity region of the channel as discussed in the introduction.
 
 Formally, one would want to show that it is \textrm{NP}-hard to approximate this problem within a $\Omega(1)$ factor in polynomial time. As a first step towards this goal, we will prove a $\Omega\left(\frac{1}{\sqrt{m}}\right)$-approximation hardness in the value query model.
 
 First, let us introduce formally the problem:
 \begin{definition}[\textsc{BCC}]
-  Given a channel $W$ and integers $k_1$ and $k_2$, the broadcast channel coding problem, which we call \textsc{BCC}, entails maximizing:
-  \[ \mathrm{S}(W,k_1,k_2,e,d_1,d_2) := \frac{1}{k_1k_2}\sum_{y_1,y_2,i_1,i_2} W(y_1y_2|e(i_1,i_2))\mathbbm{1}_{d_1(y_1)=i_1, d_2(y_2)=i_2}\]
-  over all functions $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$,  $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$.
+  Given a channel $W$ and integers $k_1,k_2$, the broadcast channel coding problem, which we call \textsc{BCC}, entails maximizing:
+  \[ \mathrm{S}(W,k_1,k_2,e,d_1,d_2) := \frac{1}{k_1k_2}\sum_{i_1,i_2,y_1,y_2} W(y_1y_2|e(i_1,i_2))\mathbbm{1}_{d_1(y_1)=i_1, d_2(y_2)=i_2} \ ,\]
+  over all functions $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$ and $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$.
 \end{definition}
 
 As in the deterministic case, we restrict ourselves to deterministic encoders and decoders, which does not change the value nor the hardness of the problem. Also, it can be equivalently stated in terms of partitions corresponding to $d_1,d_2$ as:
