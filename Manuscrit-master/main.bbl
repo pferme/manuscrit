@@ -463,6 +463,11 @@ Alexander~Semenovich Holevo.
   communication channel.
 \newblock {\em Problemy Peredachi Informatsii}, 9(3):3--11, 1973.
 
+\bibitem[Hop81]{Hopper81}
+Grace~Murray Hopper.
+\newblock The first bug.
+\newblock {\em Annals of the History of Computing}, 3(3):285--286, 1981.
+
 \bibitem[JDP83]{JP83}
 Kumar Joag-Dev and Frank Proschan.
 \newblock Negative association of random variables with applications.
