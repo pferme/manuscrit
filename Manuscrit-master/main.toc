@@ -53,7 +53,7 @@
 \contentsline {subsection}{\numberline {3.5.5}Proof of Theorem~\ref {theo:HardnessMA}}{50}{subsection.3.5.5}
 \contentsline {chapter}{\chapternumberline {4}Multiple-access Channel Coding with Non-signaling Correlations}{51}{chapter.4}
 \contentsline {paragraph}{Our Results}{52}{section*.13}
-\contentsline {paragraph}{Organization}{52}{section*.14}
+\contentsline {paragraph}{Organization}{53}{section*.14}
 \contentsline {section}{\numberline {4.1}Multiple-access Channels Capacities}{53}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Classical Capacities}{53}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Non-signaling Assisted Capacities}{57}{subsection.4.1.2}
