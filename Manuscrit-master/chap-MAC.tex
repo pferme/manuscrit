@@ -475,7 +475,8 @@ A well-known result by Alon et al.~\cite{AAMMW11} shows that, under the followin
 For some constant $c > 0$, for every $k$, for $\Delta$ a sufficiently large constant independent of $n$, there is no polynomial-time algorithm that on most random $k$-AND formulas with $n$ variables and $m = \Delta n$ clauses outputs \textbf{typical}, but never outputs \textbf{typical} on $k$-AND formulas with at least $m2^{-c\sqrt{k}}$ satisfiable clauses.
 \end{hypothesis}
 
-We will consider the following reformulation of the multiple-access channel coding problem in the proof of its hardness of approximation:
+We will consider the following reformulation of the multiple-access channel coding problem:
+
 \begin{proposition}
   Given a MAC $W$ and integers $k_1,k_2$, the multiple-access channel coding problem entails maximizing:
   \[ f_W(S,T) := \frac{1}{|S||T|}\sum_{y \in \mathcal{Y}} \max_{x_1 \in S, x_2 \in T} W(y|x_1x_2) \ ,\]
