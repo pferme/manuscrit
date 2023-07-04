@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  4 JUL 2023 11:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  4 JUL 2023 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3309,68 +3309,68 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [59]
 [60] [61]
 Package hyperref Info: bookmark level for unknown hypothesis defaults to 0 on i
-nput line 473.
+nput line 474.
  [62]
-Overfull \hbox (10.10655pt too wide) detected at line 530
+Overfull \hbox (10.10655pt too wide) detected at line 531
 [][]
  []
 
 [63] [64] [65]
-Overfull \hbox (1.43102pt too wide) detected at line 622
+Overfull \hbox (1.43102pt too wide) detected at line 623
 [][]
  []
 
 [66]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 646.
+(hyperref)                removing `math shift' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 646.
+(hyperref)                removing `superscript' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 646.
+(hyperref)                removing `subscript' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 646.
+(hyperref)                removing `subscript' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 646.
+(hyperref)                removing `math shift' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 646.
+(hyperref)                removing `math shift' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 646.
+(hyperref)                removing `superscript' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 646.
+(hyperref)                removing `math shift' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 646.
+(hyperref)                removing `math shift' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 646.
+(hyperref)                removing `superscript' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 646.
+(hyperref)                removing `subscript' on input line 647.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 646.
+(hyperref)                removing `math shift' on input line 647.
 
 
-Overfull \hbox (3.22064pt too wide) in paragraph at lines 655--656
+Overfull \hbox (3.22064pt too wide) in paragraph at lines 656--657
 \OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \O
 MS/lmsy/m/n/10.95 ^^U [][]$ \T1/LinuxLibertineT-TLF/m/it/10.95 (-20) and $\OT1/
 lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W \OMS/lmsy/m/n/10.95 
@@ -3385,7 +3385,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [69]
 [70]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on in
-put line 781.
+put line 782.
  [71] [72] [73] [74] [75]
 Underfull \vbox (badness 3679) has occurred while \output is active []
 
@@ -3410,7 +3410,7 @@ PGFPlots: reading {Data/Data_Capacity_BACwithSmallBitFlipNoise/Capacity5.csv}
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [82] [83]
-Overfull \hbox (5.76028pt too wide) in paragraph at lines 1349--1351
+Overfull \hbox (5.76028pt too wide) in paragraph at lines 1350--1352
 \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) thanks to Propo-si-tion [][]2.15[][]. L
 et us con-sider op-ti-mal so-lu-tions $\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 
 p[]; r[]\OT1/lmr/m/n/10.95 )[]$
@@ -3475,7 +3475,7 @@ Missing character: There is no ; in font nullfont!
 PGFPlots: reading {Data/Data_BAC/ZEBorder7.csv}
 PGFPlots: reading {Data/Data_BAC_relaxed/ZEBorderINEQ7.csv}
  [87] [88] [89]
-Overfull \hbox (3.82483pt too wide) detected at line 1631
+Overfull \hbox (3.82483pt too wide) detected at line 1632
 [][][] \OMS/lmsy/m/n/10.95 ^^T [] ^^T [] \OML/lmm/m/it/10.95 :
  []
 
@@ -3542,18 +3542,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 100.
 
-[107] [108]
-Overfull \hbox (24.7033pt too wide) in paragraph at lines 188--189
-[]\T1/LinuxLibertineT-TLF/m/n/10.95 (-20) The cor-re-spond-ing ca-pac-ity re-gi
-ons $\OMS/lmsy/m/n/10.95 C[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 W\OT1/lmr/m
-/n/10.95 ) := \OMS/lmsy/m/n/10.95 C\OT1/lmr/m/n/10.95 [S[]](\OML/lmm/m/it/10.95
- W\OT1/lmr/m/n/10.95 )$ \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) and $\OMS/lmsy/
-m/n/10.95 C[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 W\OT1/lmr/m/n/10.95 ) := \
-OMS/lmsy/m/n/10.95 C\OT1/lmr/m/n/10.95 [S[]](\OML/lmm/m/it/10.95 W\OT1/lmr/m/n/
-10.95 )$
- []
-
-[109] [110]
+[107] [108] [109] [110]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -3646,7 +3635,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 46FCF12799866AD8C33F4345D0CED5FD;5818.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: 7B93A7507B5EA61B1422BFBDB5D975AC;9837.
+(rerunfilecheck)             Checksum: 624114738AFBEA8E301416953ED57DEE;9890.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3654,10 +3643,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
  ) 
 Here is how much of TeX's memory you used:
- 57469 strings out of 494821
- 1253730 string characters out of 6177891
- 1592790 words of memory out of 5000000
- 58363 multiletter control sequences out of 15000+600000
+ 57471 strings out of 494821
+ 1253771 string characters out of 6177891
+ 1592978 words of memory out of 5000000
+ 58365 multiletter control sequences out of 15000+600000
  837085 words of font info for 549 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10422b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3694,9 +3683,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (155 pages, 1751375 bytes).
+Output written on main.pdf (155 pages, 1752725 bytes).
 PDF statistics:
- 3109 PDF objects out of 3580 (max. 8388607)
+ 3116 PDF objects out of 3580 (max. 8388607)
  873 named destinations out of 1000 (max. 500000)
  60521 words of extra memory for PDF output out of 61914 (max. 10000000)
 
