@@ -1,13 +1,30 @@
 \contentsline {chapter}{R\IeC {\'e}sum\IeC {\'e}}{iii}{chapter*.1}
 \contentsline {chapter}{R\IeC {\'e}sum\IeC {\'e} en anglais}{iv}{chapter*.1}
-\contentsline {chapter}{Table des mati\`eres}{vii}{chapter*.3}
+\contentsline {chapter}{Table des mati\`eres}{viii}{chapter*.3}
 \contentsline {chapter}{Liste des symboles et abr\IeC {\'e}viations}{xiii}{chapter*.5}
 \contentsline {chapter}{\numberline {1} Introduction}{1}{chapter.1}
-\contentsline {chapter}{\numberline {} Pr\IeC {\'e}liminaires}{5}{chapter.2}
-\contentsline {chapter}{\numberline {} TODO}{15}{chapter.3}
-\contentsline {chapter}{\numberline {} TODO}{51}{chapter.4}
-\contentsline {chapter}{\numberline {} TODO}{99}{chapter.5}
-\contentsline {chapter}{Conclusion}{131}{chapter*.21}
-\contentsline {chapter}{Bibliographie}{140}{section*.23}
-\contentsline {chapter}{Liste des figures}{142}{section*.24}
-\contentsline {chapter}{Liste des tableaux}{143}{section*.25}
+\contentsline {chapter}{\numberline {2} Pr\IeC {\'e}liminaires}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1} Probabilit\IeC {\'e}s}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2} Th\IeC {\'e}orie de l'information}{8}{section.2.2}
+\contentsline {section}{\numberline {2.3} Probl\IeC {\`e}me du codage pour les canaux un-\IeC {\`a}-un}{12}{section.2.3}
+\contentsline {chapter}{\numberline {3} Strictes garanties d'approximation pour des probl\IeC {\`e}mes de couverture concaves}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1} Algorithme d'approximation pour $\varphi $-\textsc {MaxCoverage}}{19}{section.3.1}
+\contentsline {section}{\numberline {3.2} Difficult\IeC {\'e} d'approximation pour $\varphi $-\textsc {MaxCoverage}}{22}{section.3.2}
+\contentsline {section}{\numberline {3.3} Applications}{28}{section.3.3}
+\contentsline {section}{\numberline {3.4} Conclusion}{34}{section.3.4}
+\contentsline {chapter}{\numberline {4} Probl\IeC {\`e}me du codage pour les canaux \IeC {\`a} acc\IeC {\`e}s multiple et corr\IeC {\'e}lations non-signalantes}{51}{chapter.4}
+\contentsline {section}{\numberline {4.1} Zones de capacit\IeC {\'e} pour les canaux \IeC {\`a} acc\IeC {\`e}s multiple}{53}{section.4.1}
+\contentsline {section}{\numberline {4.2} Difficult\IeC {\'e} d'approximation pour le probl\IeC {\`e}me du codage pour les canaux \IeC {\`a} acc\IeC {\`e}s multiple}{62}{section.4.2}
+\contentsline {section}{\numberline {4.3} Propri\IeC {\'e}t\IeC {\'e}s des codes avec assistance non-signalante}{65}{section.4.3}
+\contentsline {section}{\numberline {4.4} Bornes sur les taux atteignables avec assistance non-signalante}{77}{section.4.4}
+\contentsline {section}{\numberline {4.5} Zone de capacit\IeC {\'e} avec assistance non-signalante relax\IeC {\'e}e et bornes ext\IeC {\'e}rieures}{82}{section.4.5}
+\contentsline {section}{\numberline {4.6} Zone de capacit\IeC {\'e} avec assistance non-signalante ind\IeC {\'e}pendante}{97}{section.4.6}
+\contentsline {section}{\numberline {4.7} Conclusion}{100}{section.4.7}
+\contentsline {chapter}{\numberline {5} Probl\IeC {\`e}me du codage pour les canaux de diffusion et corr\IeC {\'e}lations non-signalantes}{103}{chapter.5}
+\contentsline {section}{\numberline {5.1} Probl\IeC {\`e}me du codage pour les canaux de diffusion}{105}{section.5.1}
+\contentsline {section}{\numberline {5.2} Assistance non-signalante}{108}{section.5.2}
+\contentsline {section}{\numberline {5.3} Algorithme d'approximation pour le probl\IeC {\`e}me du codage pour les canaux de diffusion d\IeC {\'e}terministes}{115}{section.5.3}
+\contentsline {section}{\numberline {5.4} Difficult\IeC {\'e} d'approximation pour le probl\IeC {\`e}me du codage pour les canaux de diffusion}{125}{section.5.4}
+\contentsline {section}{\numberline {5.5} Conclusion}{132}{section.5.5}
+\contentsline {chapter}{Conclusion}{133}{chapter*.26}
+\contentsline {chapter}{Bibliographie}{142}{section*.28}

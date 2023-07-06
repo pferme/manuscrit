@@ -21,6 +21,7 @@ As far as hardness is concerned, we consider the subproblem of broadcast channel
 \paragraph{Organization} In Section~\ref{section:BCCpb}, we define precisely the different versions of the broadcast channel coding problem depending on the choice of objective value, and show that they all lead to the same capacity region. In Section~\ref{section:NSBC}, we define the different non-signaling assisted versions of the broadcast channel coding problem. In particular, when shared only between the decoders, we show that the capacity region does not change. In Section~\ref{section:ApproxDetBC}, we address both algorithmic aspects and capacity considerations of deterministic broadcast channels. Specifically, we describe a $(1-e^{-1})^2$-approximation algorithm running in polynomial time for that class, and we show that the capacity region for that class is the same with or without non-signaling assistance. Finally, in Section~\ref{section:HardnessBC}, we show that in the value query model, we cannot achieve a better approximation ratio than $\Omega\left(\frac{1}{\sqrt{m}}\right)$ in polynomial time for the general broadcast channel coding problem, with $m$ the size of one of the outputs of the channel.
 
 \section{Broadcast Channel Coding}
+\addcontentsline{tof}{section}{\protect\numberline{\thesection} Problème du codage pour les canaux de diffusion}
 \label{section:BCCpb}
 \subsection{Broadcast Channels}
 %Formally, a broadcast channel is given by a conditional probability distribution on input $\mathcal{X}$ and two outputs $\mathcal{Y}_1$ and $\mathcal{Y}_2$, so $W := \left(W(y_1,y_2|x)\right)_{y_1 \in \mathcal{Y}_1, y_2 \in \mathcal{Y}_2, x \in \mathcal{X}}$, with $W(y_1y_2|x) \geq 0$ and such that $\sum_{y_1 \in \mathcal{Y}_1, y_2 \in \mathcal{Y}_2} W(y_1y_2|x) = 1$. We define its marginals $W_1$ and $W_2$ respectively by $W_1(y_1|x) := \sum_{y_2 \in \mathcal{Y}_2} W(y_1y_2|x)$ and $W_2(y_2|x) := \sum_{y_1 \in \mathcal{Y}_1} W(y_1y_2|x)$. We will denote such a broadcast channel by $W : \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$. The tensor product of two broadcast channels $W: \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$ and $W': \mathcal{X}' \rightarrow \mathcal{Y}'_1 \times \mathcal{Y}'_2$ is denoted by $W \otimes W' : \mathcal{X} \times \mathcal{X}' \rightarrow (\mathcal{Y}_1 \times \mathcal{Y}_1') \times (\mathcal{Y}_2 \times \mathcal{Y}_2')$ and defined by $(W \otimes W')(y_1y_1'y_2y_2'|xx') := W(y_1y_2|x) \cdot W'(y_1'y_2'|x')$. We define $W^{\otimes n}(y_1^ny_2^n|x^n) := \prod_{i=1}^nW(y_{1,i}y_{2,i}|x_i)$, for $y_1^n := y_{1,1} \ldots y_{1,n} \in \mathcal{Y}_1^n$ and $y_2^n := y_{2,1} \ldots y_{2,n} \in \mathcal{Y}_2^n$ and $x^n := x_1 \ldots x_n \in \mathcal{X}^n$. We will use the notation $[k]:=\{1,\ldots,k\}$.
@@ -160,6 +161,7 @@ Thus, up to a multiplicative factor $2$, the error is the same. In particular, w
 \end{proof}
 
 \section{Non-signaling Assistance}
+\addcontentsline{tof}{section}{\protect\numberline{\thesection} Assistance non-signalante}
 \label{section:NSBC}
 In this section, we will consider the broadcast channel coding problem with additional resources, in order to determine how these resources affect its success probabilities as well as the capacity regions that can be defined from them.
 
@@ -464,7 +466,8 @@ Let us consider an optimal solution $p_x,r_{x,y_1,y_2},r^1_{x,y_1},r^2_{x,y_2}$ 
   since $p_x,r_{x,y_1,y_2},r^1_{x,y_1},r^2_{x,y_2}$ is a valid solution of the program computing $\mathrm{S}^{\mathrm{NS}}_{\text{sum}}(W,k_1,k_2)$. This prove the inequalities $ 2 \mathrm{S}_{\text{sum}}^{\mathrm{NS}}(W,k_1,k_2)-1 \leq  \mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq \mathrm{S}_{\text{sum}}^{\mathrm{NS}}(W,k_1,k_2)$, and thus concludes the proof.
 \end{proof}
 
-\section{Approximation of Deterministic Broadcast Channel Coding}
+\section{Approximation Algorithm for Deterministic Broadcast Channel Coding}
+\addcontentsline{tof}{section}{\protect\numberline{\thesection} Algorithme d'approximation pour le problème du codage pour les canaux de diffusion déterministes}
 \label{section:ApproxDetBC}
 In this section, we will address the question of the approximability of $\mathrm{S}(W,k_1,k_2)$, in the restricted scenario of a deterministic broadcast channel $W$. Specifically, we study the problem of finding a code  $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$,  $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$ that maximizes the program computing $\mathrm{S}(W,k_1,k_2)$. Note that the restriction to deterministic codes does not affect the value of the objective of the program which is convex, and that the problem is as hard as finding any code maximizing the program computing $\mathrm{S}(W,k_1,k_2)$, as a deterministic code with a better or equal value can be retrieved easily from any code.
 
@@ -808,6 +811,7 @@ Thus, in particular, there exists some partition $\mathcal{P}_2$ that satisfies 
 \end{proof}
 
 \section{Hardness of Approximation for Broadcast Channel Coding}
+\addcontentsline{tof}{section}{\protect\numberline{\thesection} Difficulté d'approximation pour le problème du codage pour les canaux de diffusion}
 \label{section:HardnessBC}
 Since broadcast channels are more general than point-to-point channels (by defining $W_1(y_1|x):=\hat{W}(y_1|x)$ for $\hat{W}$ a point-to-point channel and taking $W_2(y_2|x)=\frac{1}{|\mathcal{Y}_2|}$ a completely trivial channel), computing a single value $\mathrm{S}(W,k_1,k_2)$ is \textrm{NP}-hard, and it is even \textrm{NP}-hard to approximate within a better factor than $1-e^{-1}$, as a consequence of the hardness result for point-to-point channels from~\cite{BF18}.
 
@@ -1015,6 +1019,7 @@ The main weakness of the previous result is that it highly relies on the restric
 On the other hand, one can also remark that when $f_W^1$ is written as a maximum of linear valuation functions, then that defining set of linear valuation functions is of exponential size. Hence, we think that it is still relevant to study the value query complexity of such a family of functions, as it is not clear how one could recover the partition in polynomial time from this exponential-size set of linear valuations without any additional information.
 
 \section{Conclusion}
+\addcontentsline{tof}{section}{\protect\numberline{\thesection} Conclusion}
 In this chapter, we have studied several algorithmic aspects and non-signaling assisted capacity regions of broadcast channels. We have shown that when non-signaling assistance is shared only between the decoders, the capacity region does not change. For the class of deterministic broadcast channels, we have described a $(1-e^{-1})^2$-approximation algorithm running in polynomial time, and we have shown that the capacity region for that class is the same with or without non-signaling assistance. Finally, we have shown that in the value query model, we cannot achieve a better approximation ratio than $\Omega\left(\frac{1}{\sqrt{m}}\right)$ in polynomial time for the general broadcast channel coding problem, with $m$ the size of one of the outputs of the channel.
 
 Our results suggest that non-signaling assistance could improve the capacity region of general broadcast channels, which is left as a major open question. An intermediate result would be to show that it is \textrm{NP}-hard to approximate the broadcast channel coding problem within any constant, strengthening our hardness result without relying on the value query model. Finally, one could also try to develop approximations algorithms for other sub-classes of broadcast channels, such as semi-deterministic or degraded ones. This could be a crucial step towards showing that the capacity region for those classes is the same with or without non-signaling assistance.

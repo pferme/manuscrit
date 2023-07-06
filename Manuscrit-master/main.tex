@@ -112,7 +112,7 @@
 \setcounter{page}{0}
 \includepdf{garde.pdf}
 \frontmatter
-
+ 
 \setcounter{page}{1}
 \newpage
 \thispagestyle{empty}
@@ -138,19 +138,19 @@
 
 \input acknowledgements
 
-%\cleardoublepage
-%\frenchtableofcontents
+\cleardoublepage
+\frenchtableofcontents
 \cleardoublepage
 \tableofcontents
 
 \cleardoublepage
 \input symbols
 
-%\begin{otherlanguage}{french}
-%\chapter{Résumé substantiel en Français}
-%\label{chap:resume-fr}
-%\input chap-resume
-%\end{otherlanguage}
+\begin{otherlanguage}{french}
+\chapter{Résumé substantiel en Français}
+\label{chap:resume-fr}
+\input chap-resume
+\end{otherlanguage}
 
 \mainmatter
 \pagestyle{ruled}
@@ -164,7 +164,7 @@
 \cleardoublepage
 {\let\newpage\relax
 \chapter{Background}
-\addcontentsline{tof}{chapter}{\protect\numberline{\thepart} Préliminaires}
+\addcontentsline{tof}{chapter}{\protect\numberline{\thechapter} Préliminaires}
 \label{chap:background}
 }
 
@@ -173,7 +173,7 @@
 \cleardoublepage
 {\let\newpage\relax
 \chapter{Tight Approximation Guarantees for Concave Coverage Problems}
-\addcontentsline{tof}{chapter}{\protect\numberline{\thepart} TODO}
+\addcontentsline{tof}{chapter}{\protect\numberline{\thechapter} Strictes garanties d'approximation pour des problèmes de couverture concaves}
 \label{chap:MaxCoverage}
 }
 
@@ -182,7 +182,7 @@
 \cleardoublepage
 {\let\newpage\relax
 \chapter{Multiple-access Channel Coding with Non-signaling Correlations}
-\addcontentsline{tof}{chapter}{\protect\numberline{\thepart} TODO}
+\addcontentsline{tof}{chapter}{\protect\numberline{\thechapter} Problème du codage pour les canaux à accès multiple et corrélations non-signalantes}
 \label{chap:MAC}
 }
 
@@ -191,7 +191,7 @@
 \cleardoublepage
 {\let\newpage\relax
   \chapter{Broadcast Channel Coding with Non-signaling Correlations}
-\addcontentsline{tof}{chapter}{\protect\numberline{\thepart} TODO}
+\addcontentsline{tof}{chapter}{\protect\numberline{\thechapter} Problème du codage pour les canaux de diffusion et corrélations non-signalantes}
 \label{chap:Broadcast}
 }
 
@@ -210,7 +210,7 @@
 \addcontentsline{tof}{chapter}{Bibliographie}
 %\printindex
 %\addcontentsline{tof}{chapter}{Index en anglais}
-\backmatter
+%\backmatter
 %\listoffigures
 %\addcontentsline{tof}{chapter}{Liste des figures}
 %\clearpage
