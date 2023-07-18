@@ -1,3 +1,5 @@
+In this chapter, we recall briefly definitions and properties as well as more unusual results needed throughout the thesis.
+
 \section{Probability}
 \addcontentsline{tof}{section}{\protect\numberline{\thesection} Probabilités}
 \subsection{Usual Distributions and Properties}
@@ -174,82 +176,82 @@ We say that $X \rightarrow Y \rightarrow Z$ forms a Markov chain if $Z$ is condi
 
 \subsection{Typical Sets}
 \label{subsection:typicalSets}
-We will consider the following typical sets defined in Chapter 2.5 of~\cite{GK11}: $\mathcal{T}^n_{\varepsilon}(X_1,X_2,Y)$, $\mathcal{T}^n_{\varepsilon}(X_1,X_2)$, $\mathcal{T}^n_{\varepsilon}(Y)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n,y^n)$ as well as $\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)$. Recall that:
+%We will consider the following typical sets defined in Chapter 2.5 of~\cite{GK11}: $\mathcal{T}^n_{\varepsilon}(X_1,X_2,Y)$, $\mathcal{T}^n_{\varepsilon}(X_1,X_2)$, $\mathcal{T}^n_{\varepsilon}(Y)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n)$, $\mathcal{T}^n_{\varepsilon}(X_1|x_2^n,y^n)$, $\mathcal{T}^n_{\varepsilon}(X_2|x_1^n,y^n)$ as well as $\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)$. Recall that:
+
+We consider typical sets as defined in Chapter 2.5 of~\cite{GK11}:
       \begin{definition}[Typical set and conditional typical set]
         We have the following definitions:
         \begin{enumerate}
-        \item $\mathcal{T}^n_{\varepsilon}(X_1,X_2) := \{(x_1^n,x_2^n) : |\pi(x_1,x_2|x_1^n,x_2^n) - P_{X_1X_2}(x_1,x_2)|\leq \varepsilon P_{X_1X_2}(x_1,x_2)$ for all $(x_1,x_2) \in \mathcal{X}_1 \times \mathcal{X}_2\}$, where $\pi(x_1,x_2|x_1^n,x_2^n) := \frac{|\{i : (x_{1,i},x_{2,i}) = (x_1,x_2)\}|}{n}$. This definition generalizes for any $t$-uple of variables.
-    \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), \mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n) := \{ (x_1^n,x_2^n) : (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \}$
+        \item $\mathcal{T}^n_{\varepsilon}(X) := \{x^n : |\pi(x|x^n) - P_{X}(x)|\leq \varepsilon P_{X}(x)$ for all $x \in \mathcal{X}\}$, with the empirical distribution $\pi$ defined by $\pi(x|x^n) := \frac{|\{i : x_i=x\}|}{n}$. This definition generalizes for any $t$-uple of variables.
+    \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), \mathcal{T}^n_{\varepsilon}(X|y^n) := \{ x^n : (x^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X,Y) \}$.
         \end{enumerate}
       \end{definition}
 
       A crucial property of such typical sets is the typical average lemma:
-
       \begin{lemma}[Typical Average Lemma~\cite{GK11}]
-        Let $(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)$. Then for any nonnegative function $g$ on $\mathcal{X}_1\times\mathcal{X}_2$:
-        \[ (1-\varepsilon)\mathbb{E}[g(X_1,X_2)] \leq \frac{1}{n}\sum_{i=1}^ng(x_{1,i},x_{2,i}) \leq (1+\varepsilon)\mathbb{E}[g(X_1,X_2)] \ . \]
+        Let $x^n \in \mathcal{T}^n_{\varepsilon}(X)$. Then for any nonnegative function $g$ on $\mathcal{X}$:
+        \[ (1-\varepsilon)\mathbb{E}[g(X)] \leq \frac{1}{n}\sum_{i=1}^ng(x_i) \leq (1+\varepsilon)\mathbb{E}[g(X)] \ . \]
       \end{lemma}
       
-      In particular, with this tool, we can derive the following properties:
-      
+      In particular, with this tool, we can derive the following properties:      
       \begin{proposition}[Properties of typical sets~\cite{GK11}]
         We have, among others, the following statements about typical sets:
         \begin{enumerate}
-        \item $\forall (x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2), 2^{-n(1+\varepsilon)H(X_1,X_2)} \leq P_{X_1^nX_2^n}(x_1^n,x_2^n) \leq 2^{-n(1-\varepsilon)H(X_1,X_2)}$.
-        \item $\underset{n \rightarrow +\infty}{\lim} \mathbb{P}\left((X_1^n,X_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2) \right) = 1$.
-        \item $|\mathcal{T}^n_{\varepsilon}(X_1,X_2)| \leq 2^{n(1+\varepsilon)H(X_1,X_2)}$.
-        \item For $n$ sufficiently large, $|\mathcal{T}^n_{\varepsilon}(X_1,X_2)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2)}$.
-        \item If $(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)$ then $x_1^n \in \mathcal{T}^n_{\varepsilon}(X_1)$ and $x_2^n \in \mathcal{T}^n_{\varepsilon}(X_2)$.
-        \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), \mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n) \subseteq \mathcal{T}^n_{\varepsilon}(X_1,X_2)$.
-        \item $\forall (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y), 2^{-n(1+\varepsilon)H(X_1,X_2|Y)} \leq P_{X_1^nX_2^nY^n}(x_1^n,x_2^n|y^n) \leq 2^{-n(1-\varepsilon)H(X_1,X_2|Y)}$.
-        \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), |\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \leq 2^{n(1+\varepsilon)H(X_1,X_2|Y)}$.
-        \item For $\varepsilon' < \varepsilon$ and $n$ sufficiently large, we have that $\forall y^n \in \mathcal{T}^n_{\varepsilon'}(Y), |\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2|Y)}$.
+        \item $\forall x^n \in \mathcal{T}^n_{\varepsilon}(X), 2^{-n(1+\varepsilon)H(X)} \leq P_{X^n}(x^n) \leq 2^{-n(1-\varepsilon)H(X)}$.
+        \item $\underset{n \rightarrow +\infty}{\lim} \mathbb{P}\left(X^n \in \mathcal{T}^n_{\varepsilon}(X) \right) = 1$.
+        \item $|\mathcal{T}^n_{\varepsilon}(X)| \leq 2^{n(1+\varepsilon)H(X)}$.
+        \item For $n$ sufficiently large, $|\mathcal{T}^n_{\varepsilon}(X)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X)}$.
+        \item If $(x^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X,Y)$ then $x^n \in \mathcal{T}^n_{\varepsilon}(X)$ and $y^n \in \mathcal{T}^n_{\varepsilon}(Y)$.
+        \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), \mathcal{T}^n_{\varepsilon}(X|y^n) \subseteq \mathcal{T}^n_{\varepsilon}(X)$.
+        \item $\forall (x^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X,Y), 2^{-n(1+\varepsilon)H(X|Y)} \leq P_{X^nY^n}(x^n|y^n) \leq 2^{-n(1-\varepsilon)H(X|Y)}$.
+        \item $\forall y^n \in \mathcal{T}^n_{\varepsilon}(Y), |\mathcal{T}^n_{\varepsilon}(X|y^n)| \leq 2^{n(1+\varepsilon)H(X|Y)}$.
+        \item For $\varepsilon' < \varepsilon$ and $n$ sufficiently large, we have that $\forall y^n \in \mathcal{T}^n_{\varepsilon'}(Y), |\mathcal{T}^n_{\varepsilon}(X|y^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X|Y)}$.
         \end{enumerate}
       \end{proposition}
       \begin{proof}
         We reproduce the proof of the last statement here to emphasize on the fact that there is an $n_0$ such that for all $n \geq n_0$ and for all $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, the property holds.
 
         For any $\varepsilon > \varepsilon' > 0$, let us show that there exists $n$ such that we have:
-        \[ \forall y^n \in \mathcal{T}^n_{\varepsilon'}(Y), \mathbb{P}\left((X_1^n,X_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right) \geq 1-\varepsilon \ , \]        
-        where $X_1^n, X_2^n$ are drawn from the distribution $P_{X_1^nX_2^n|Y^n=y^n}$. This will imply the statement. Indeed, we have that:
+        \[ \forall y^n \in \mathcal{T}^n_{\varepsilon'}(Y), \mathbb{P}\left((X^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X,Y) \right) \geq 1-\varepsilon \ , \]        
+        where $X^n$ are drawn from the distribution $P_{X^n|Y^n=y^n}$. This will imply the statement. Indeed, we have that:
         \begin{equation}
           \begin{aligned}
-            \mathbb{P}\left((X_1^n,X_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right) &= \sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)} P_{X_1^nX_2^n|Y^n}(x_1^n,x_2^n|y^n) \\
-            &\leq |\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)|2^{-n(1-\varepsilon)H(X_1,X_2|Y)} \ ,
+            \mathbb{P}\left((X^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X,Y) \right) &= \sum_{x^n \in \mathcal{T}^n_{\varepsilon}(X|y^n)} P_{X^n|Y^n}(x^n|y^n) \\
+            &\leq |\mathcal{T}^n_{\varepsilon}(X|y^n)|2^{-n(1-\varepsilon)H(X|Y)} \ ,
           \end{aligned}
         \end{equation}
       
-        since $P_{X_1^nX_2^n|Y^n}(x_1^n,x_2^n|y^n) \leq 2^{-n(1-\varepsilon)H(X_1,X_2|Y)}$ as $(x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y)$. Thus, we have that $|\mathcal{T}^n_{\varepsilon}(X_1,X_2|y^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X_1,X_2|Y)}$. In order to prove our result, we take the proof in Appendix 2A of~\cite{GK11}. We take $y^n \in \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and $(X_1^n,X_2^n) \sim P_{X_1^nX_2^n|Y^n}(x_1^n,x_2^n|y^n) = \prod_{i=1}^nP_{X_1X_2|Y}(x_{1,i},x_{2,i}|y_i)$. Applied to our choice of variables, we have that $\mathbb{P}\left((X_1^n,X_2^n,y^n) \notin \mathcal{T}^n_{\varepsilon}(X_1,X_2,Y) \right)$ is equal to:
+        since $P_{X^n|Y^n}(x^n|y^n) \leq 2^{-n(1-\varepsilon)H(X|Y)}$ as $(x^n,y^n) \in \mathcal{T}^n_{\varepsilon}(X,Y)$. Thus, we have that $|\mathcal{T}^n_{\varepsilon}(X|y^n)| \geq (1-\varepsilon)2^{n(1-\varepsilon)H(X|Y)}$. In order to prove our result, we take the proof in Appendix 2A of~\cite{GK11}. We take $y^n \in \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and $X^n \sim P_{X^n|Y^n}(x^n|y^n) = \prod_{i=1}^nP_{X|Y}(x_i|y_i)$. Applied to our choice of variables, we have that $\mathbb{P}\left((X^n,y^n) \notin \mathcal{T}^n_{\varepsilon}(X,Y) \right)$ is equal to:
         \begin{equation}
           \begin{aligned}
-            &\mathbb{P}\left(\exists (x_1,x_2,y) : |\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \\
-            &\leq \sum_{x_1,x_2,y} \mathbb{P}\left(|\pi(x_1,x_2,y|X_1^n,X_2^n,y^n) - P_{X_1X_2Y}(x_1,x_2,y)| > \varepsilon P_{X_1X_2Y}(x_1,x_2,y) \right) \\
-            &= \sum_{x_1,x_2,y} \mathbb{P}\left(\left|\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{P_{X_1X_2Y}(x_1,x_2,y)} - 1\right| > \varepsilon \right) \\
-            &= \sum_{x_1,x_2,y} \mathbb{P}\left(\left|\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{P_{X_1X_2|Y}(x_1,x_2|y)\pi(y|y^n)}\frac{\pi(y|y^n)}{P_Y(y)} - 1\right| > \varepsilon \right) \\
-            &\leq \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} > \frac{1+\varepsilon}{1+\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right)\\
-            &+ \sum_{x_1,x_2,y} \mathbb{P}\left(\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} < \frac{1-\varepsilon}{1-\varepsilon'}P_{X_1X_2|Y}(x_1,x_2|y) \right) \ ,
+            &\mathbb{P}\left(\exists (x,y) : |\pi(x,y|X^n,y^n) - P_{XY}(x,y)| > \varepsilon P_{XY}(x,y) \right) \\
+            &\leq \sum_{x,y} \mathbb{P}\left(|\pi(x,y|X^n,y^n) - P_{XY}(x,y)| > \varepsilon P_{XY}(x,y) \right) \\
+            &= \sum_{x,y} \mathbb{P}\left(\left|\frac{\pi(x,y|X^n,y^n)}{P_{XY}(x,y)} - 1\right| > \varepsilon \right) \\
+            &= \sum_{x,y} \mathbb{P}\left(\left|\frac{\pi(x,y|X^n,y^n)}{P_{X|Y}(x|y)\pi(y|y^n)}\frac{\pi(y|y^n)}{P_Y(y)} - 1\right| > \varepsilon \right) \\
+            &\leq \sum_{x,y} \mathbb{P}\left(\frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} > \frac{1+\varepsilon}{1+\varepsilon'}P_{X|Y}(x|y) \right)\\
+            &+ \sum_{x,y} \mathbb{P}\left(\frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} < \frac{1-\varepsilon}{1-\varepsilon'}P_{X|Y}(x|y) \right) \ ,
           \end{aligned}
         \end{equation}
-        since $y^n \in  \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and thus $1-\varepsilon' \leq \frac{\pi(y|y^n)}{P_Y(y)} \leq 1+\varepsilon'$. However, since $\varepsilon' < \varepsilon$, we have $\frac{1+\varepsilon}{1+\varepsilon'} > 1$ and $\frac{1-\varepsilon}{1-\varepsilon'} < 1$. We will show that for all $x_1,x_2,y$ with $P_Y(y) > 0$, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability, with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, which will be enough to conclude the proof.
+        since $y^n \in  \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and thus $1-\varepsilon' \leq \frac{\pi(y|y^n)}{P_Y(y)} \leq 1+\varepsilon'$. However, since $\varepsilon' < \varepsilon$, we have $\frac{1+\varepsilon}{1+\varepsilon'} > 1$ and $\frac{1-\varepsilon}{1-\varepsilon'} < 1$. We will show that for all $x,y$ with $P_Y(y) > 0$, we have $\frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X|Y}(x|y)$ in probability, with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, which will be enough to conclude the proof.
 
-        Let us fix some $x_1,x_2,y$ with $P_Y(y) > 0$. Since $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, we have in particular $(1-\varepsilon')P_Y(y) \leq \pi(y|y^n) \leq (1+\varepsilon')P_Y(y)$. Thus $N := |\{i:y_i=y\}| = n\pi(y|y^n) \geq (1-\varepsilon')P_Y(y)n$. Then we have:
-        \[ \frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} = \frac{1}{N}\sum_{i \in S}Z_i \text{ with }Z_i := \mathbbm{1}_{(X_{1,i},X_{2,i})=(x_1,x_2)} \text{ and } S := \{i:y_i=y\}\ . \]
+        Let us fix some $x,y$ with $P_Y(y) > 0$. Since $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, we have in particular that $(1-\varepsilon')P_Y(y) \leq \pi(y|y^n) \leq (1+\varepsilon')P_Y(y)$. Thus $N := |\{i:y_i=y\}| = n\pi(y|y^n) \geq (1-\varepsilon')P_Y(y)n$. Then we have:
+        \[ \frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} = \frac{1}{N}\sum_{i \in S}Z_i \text{ with }Z_i := \mathbbm{1}_{X_i=x} \text{ and } S := \{i:y_i=y\}\ . \]
 
         Thus, all $Z_i$ with $i \in S$ are independent and follow the same law:      
           \[ Z_i := \begin{cases}
-            1 & \text{ with probability } P_{X_1X_2|Y}(x_1,x_2|y) \\
+            1 & \text{ with probability } P_{X|Y}(x|y) \\
             0 & \text{ otherwise}
           \end{cases}
           \]
 
 
-          Furthermore, we have $\mathbb{E}[Z_i] = P_{X_1X_2|Y}(x_1,x_2|y)$, and all $Z_i$ have the same variance $\sigma_{x_1,x_2|y}^2 < +\infty$ (depending only on $X_1,X_2,Y,x_1,x_2,y$). Thus we can apply Chebyshev inequality:
-          \[ \mathbb{P}\left( \left|\frac{1}{N}\sum_{i \in S} Z_i - P_{X_1X_2|Y}(x_1,x_2|y) \right| \geq \eta \right) \leq \frac{\sigma_{x_1,x_2|y}^2}{N\eta^2} \ .\]
+          Furthermore, we have $\mathbb{E}[Z_i] = P_{X|Y}(x|y)$, and all $Z_i$ have the same variance $\sigma_{x|y}^2 < +\infty$ (depending only on $X,Y,x,y$). Thus we can apply Chebyshev inequality:
+          \[ \mathbb{P}\left( \left|\frac{1}{N}\sum_{i \in S} Z_i - P_{X|Y}(x|y) \right| \geq \eta \right) \leq \frac{\sigma_{x|y}^2}{N\eta^2} \ .\]
 
           However, since $N \geq (1-\varepsilon')P_Y(y)n$, we get:
-          \[ \mathbb{P}\left( \left|\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} - P_{X_1X_2|Y}(x_1,x_2|y) \right| \geq \eta \right) \leq \frac{\sigma_{x_1,x_2|y}^2}{\eta^2(1-\varepsilon')P_Y(y)n} \underset{n \rightarrow +\infty}{\rightarrow} 0 \ .\]
+          \[ \mathbb{P}\left( \left|\frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} - P_{X|Y}(x|y) \right| \geq \eta \right) \leq \frac{\sigma_{x|y}^2}{\eta^2(1-\varepsilon')P_Y(y)n} \underset{n \rightarrow +\infty}{\rightarrow} 0 \ .\]
 
-          Thus, we have $\frac{\pi(x_1,x_2,y|X_1^n,X_2^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X_1X_2|Y}(x_1,x_2|y)$ in probability with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$.
+          Thus, we have $\frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X|Y}(x|y)$ in probability with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$.
       \end{proof}
 
 \subsection{Channels}

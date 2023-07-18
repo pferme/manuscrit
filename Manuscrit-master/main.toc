@@ -27,8 +27,8 @@
 \contentsline {subsection}{\numberline {2.2.1}Information Quantities}{8}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Typical Sets}{9}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Channels}{11}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Capacity Regions}{11}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Channel Coding for Point-to-point Channels}{12}{section.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Capacity Regions}{12}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Channel Coding for Point-to-point Channels}{13}{section.2.3}
 \contentsline {chapter}{\chapternumberline {3}Tight Approximation Guarantees for Concave Coverage Problems}{15}{chapter.3}
 \contentsline {paragraph}{Applications and related work}{16}{section*.11}
 \contentsline {paragraph}{Remarks on the {Poisson concavity ratio} $\alpha _{\varphi }$.}{18}{section*.13}
