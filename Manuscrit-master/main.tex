@@ -50,7 +50,7 @@
 
 % numbering
 \setsecnumdepth{subsubsection}
-\maxtocdepth   {subsection}
+\maxtocdepth   {section}
 \setlength{\parskip}{5pt}
 \usepackage{enumerate}
 \makeatletter
@@ -142,12 +142,13 @@
 \frenchtableofcontents
 \cleardoublepage
 \tableofcontents
-
+ 
 \cleardoublepage
 \input symbols
 
 \begin{otherlanguage}{french}
-\chapter{Résumé substantiel en Français}
+\chapter*{Résumé substantiel en français}
+\addcontentsline{tof}{chapter}{Résumé substantiel en français}
 \label{chap:resume-fr}
 \input chap-resume
 \end{otherlanguage}
