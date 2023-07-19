@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  18 JUL 2023 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  19 JUL 2023 12:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3494,9 +3494,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3AA1E3B66045D388FE196957857384F0;2212.
+(rerunfilecheck)             Checksum: D91FDBDB5B8BA9BF117D34649988326B;2212.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: 8A19F133F7C8C8730E1AE8FA3EBBEBC9;9562.
+(rerunfilecheck)             Checksum: B7B569BD5B7C3653EEFA56FDD95059D4;9562.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3504,9 +3504,9 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
  ) 
 Here is how much of TeX's memory you used:
- 57438 strings out of 494821
- 1253157 string characters out of 6177891
- 1593714 words of memory out of 5000000
+ 57437 strings out of 494821
+ 1253146 string characters out of 6177891
+ 1594714 words of memory out of 5000000
  58320 multiletter control sequences out of 15000+600000
  837085 words of font info for 549 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -3544,9 +3544,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (157 pages, 1745129 bytes).
+Output written on main.pdf (157 pages, 1749952 bytes).
 PDF statistics:
- 2991 PDF objects out of 3580 (max. 8388607)
- 879 named destinations out of 1000 (max. 500000)
+ 2993 PDF objects out of 3580 (max. 8388607)
+ 878 named destinations out of 1000 (max. 500000)
  60177 words of extra memory for PDF output out of 61914 (max. 10000000)
 
