@@ -479,6 +479,15 @@ E.~J.~Weldon Jr.
 \newblock \href {https://doi.org/10.1016/S0019-9958(78)90312-1}
   {\path{doi:10.1016/S0019-9958(78)90312-1}}.
 
+\bibitem[Kho02]{Khot02}
+Subhash Khot.
+\newblock On the power of unique 2-prover 1-round games.
+\newblock In John~H. Reif, editor, {\em Proceedings on 34th Annual {ACM}
+  Symposium on Theory of Computing, May 19-21, 2002, Montr{\'{e}}al,
+  Qu{\'{e}}bec, Canada}, pages 767--775. {ACM}, 2002.
+\newblock \href {https://doi.org/10.1145/509907.510017}
+  {\path{doi:10.1145/509907.510017}}.
+
 \bibitem[KL78]{KL78}
 Tadao Kasami and Shu Lin.
 \newblock Bounds on the achievable rates of block coding for a memoryless

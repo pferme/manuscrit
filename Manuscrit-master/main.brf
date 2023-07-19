@@ -7,7 +7,7 @@
 \backcite {Feige02}{{1}{1}{chapter.1}}
 \backcite {Elias57,Wozencraft58}{{1}{1}{chapter.1}}
 \backcite {BFGG20}{{1}{1}{chapter.1}}
-\backcite {DMMS20}{{1}{1}{chapter.1}}
+\backcite {Khot02}{{1}{1}{chapter.1}}
 \backcite {BFGG20}{{1}{1}{chapter.1}}
 \backcite {EPR35}{{2}{1}{chapter.1}}
 \backcite {EPR35}{{2}{1}{chapter.1}}
@@ -185,7 +185,6 @@
 \backcite {PDB21}{{103}{4.7}{chapter.5}}
 \backcite {BF18}{{103}{4.7}{chapter.5}}
 \backcite {BFGG20}{{103}{4.7}{chapter.5}}
-\backcite {DMMS20}{{103}{4.7}{chapter.5}}
 \backcite {FKP01}{{103}{4.7}{chapter.5}}
 \backcite {AAMMW11}{{103}{4.7}{chapter.5}}
 \backcite {BF18}{{104}{4.7}{chapter.5}}
@@ -207,6 +206,3 @@
 \backcite {MSV08}{{127}{5.4.2}{subsection.5.4.2}}
 \backcite {DS06}{{127}{(document)}{Doc-Start}}
 \backcite {MSV08}{{127}{5.4.2}{thmt@dummyctr.dummy.139}}
-\backcite {BFGG20}{{133}{6}{chapter.6}}
-\backcite {DMMS20}{{133}{6}{chapter.6}}
-\backcite {SVW17}{{133}{6}{chapter.6}}

@@ -95,5 +95,5 @@
 \contentsline {subsection}{\numberline {5.4.2}Value Query Hardness}{126}{subsection.5.4.2}
 \contentsline {subsection}{\numberline {5.4.3}Limitations of the Model}{132}{subsection.5.4.3}
 \contentsline {section}{\numberline {5.5}Conclusion}{132}{section.5.5}
-\contentsline {chapter}{\chapternumberline {6}Conclusion}{133}{chapter.6}
-\contentsline {chapter}{Bibliography}{135}{section*.27}
+\contentsline {chapter}{Conclusion}{133}{chapter*.26}
+\contentsline {chapter}{Bibliography}{135}{section*.28}

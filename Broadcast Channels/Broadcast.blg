@@ -8,44 +8,44 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Broadcast.bib
-You've used 44 entries,
+You've used 43 entries,
             2616 wiz_defined-function locations,
-            974 strings with 14601 characters,
-and the built_in function-call counts, 18477 in all, are:
-= -- 2049
-> -- 473
-< -- 16
-+ -- 151
-- -- 107
-* -- 1031
-:= -- 2319
-add.period$ -- 181
-call.type$ -- 44
-change.case$ -- 40
+            964 strings with 14263 characters,
+and the built_in function-call counts, 17895 in all, are:
+= -- 1985
+> -- 454
+< -- 15
++ -- 145
+- -- 102
+* -- 998
+:= -- 2246
+add.period$ -- 176
+call.type$ -- 43
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 44
-duplicate$ -- 569
-empty$ -- 1950
-format.name$ -- 107
-if$ -- 5153
+cite$ -- 43
+duplicate$ -- 548
+empty$ -- 1893
+format.name$ -- 102
+if$ -- 4994
 int.to.chr$ -- 0
-int.to.str$ -- 44
-missing$ -- 48
-newline$ -- 259
-num.names$ -- 56
-pop$ -- 307
+int.to.str$ -- 43
+missing$ -- 47
+newline$ -- 253
+num.names$ -- 53
+pop$ -- 298
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1419
+skip$ -- 1378
 stack$ -- 0
-substring$ -- 1023
-swap$ -- 253
-text.length$ -- 82
+substring$ -- 989
+swap$ -- 240
+text.length$ -- 79
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 135
-width$ -- 46
-write$ -- 570
+while$ -- 130
+width$ -- 45
+write$ -- 556

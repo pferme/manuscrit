@@ -210,14 +210,16 @@ Siddharth Barman, Omar Fawzi, Suprovat Ghoshal, and Emirhan G{\"{u}}rpinar.
 \newblock \href {https://doi.org/10.1007/978-3-030-45771-6\_6}
   {\path{doi:10.1007/978-3-030-45771-6\_6}}.
 
-\bibitem{DMMS20}
-Szymon Dudycz, Pasin Manurangsi, Jan Marcinkowski, and Krzysztof Sornat.
-\newblock Tight approximation for proportional approval voting.
-\newblock In Christian Bessiere, editor, {\em Proceedings of the Twenty-Ninth
-  International Joint Conference on Artificial Intelligence, {IJCAI} 2020},
-  pages 276--282. ijcai.org, 2020.
-\newblock \href {https://doi.org/10.24963/ijcai.2020/39}
-  {\path{doi:10.24963/ijcai.2020/39}}.
+\bibitem{BFF21}
+Siddharth Barman, Omar Fawzi, and Paul Ferm{\'{e}}.
+\newblock Tight approximation guarantees for concave coverage problems.
+\newblock In Markus Bl{\"{a}}ser and Benjamin Monmege, editors, {\em 38th
+  International Symposium on Theoretical Aspects of Computer Science, {STACS}
+  2021, March 16-19, 2021, Saarbr{\"{u}}cken, Germany (Virtual Conference)},
+  volume 187 of {\em LIPIcs}, pages 9:1--9:17. Schloss Dagstuhl -
+  Leibniz-Zentrum f{\"{u}}r Informatik, 2021.
+\newblock \href {https://doi.org/10.4230/LIPIcs.STACS.2021.9}
+  {\path{doi:10.4230/LIPIcs.STACS.2021.9}}.
 
 \bibitem{FKP01}
 Uriel Feige, Guy Kortsarz, and David Peleg.
@@ -303,17 +305,6 @@ M.~R. Garey and David~S. Johnson.
 \newblock {\em Computers and Intractability: {A} Guide to the Theory of
   {NP}-Completeness}.
 \newblock W. H. Freeman, 1979.
-
-\bibitem{BFF21}
-Siddharth Barman, Omar Fawzi, and Paul Ferm{\'{e}}.
-\newblock Tight approximation guarantees for concave coverage problems.
-\newblock In Markus Bl{\"{a}}ser and Benjamin Monmege, editors, {\em 38th
-  International Symposium on Theoretical Aspects of Computer Science, {STACS}
-  2021, March 16-19, 2021, Saarbr{\"{u}}cken, Germany (Virtual Conference)},
-  volume 187 of {\em LIPIcs}, pages 9:1--9:17. Schloss Dagstuhl -
-  Leibniz-Zentrum f{\"{u}}r Informatik, 2021.
-\newblock \href {https://doi.org/10.4230/LIPIcs.STACS.2021.9}
-  {\path{doi:10.4230/LIPIcs.STACS.2021.9}}.
 
 \bibitem{DR98}
 Devdatt~P. Dubhashi and Desh Ranjan.
