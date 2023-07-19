@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  19 JUL 2023 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  19 JUL 2023 12:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3061,42 +3061,46 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [3])
 [4] (./chap-background.tex
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on i
-nput line 5.
+nput line 6.
 Package hyperref Info: bookmark level for unknown proposition defaults to 0 on 
-input line 17.
+input line 18.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 24.
+(Font)              scaled to size 8.0pt on input line 25.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 24.
+(Font)              scaled to size 6.0pt on input line 25.
  [5
 
 
 ] [6]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 104.
+(Font)              scaled to size 20.74pt on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 104.
+(Font)              <20.74> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 104.
+(Font)              <14.4> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 104.
+(Font)              <12> on input line 105.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 104.
+(Font)              scaled to size 17.28pt on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 104.
+(Font)              <17.28> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 104.
+(Font)              <10> on input line 105.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 104.
+(Font)              scaled to size 9.0pt on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 104.
+(Font)              <9> on input line 105.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 104.
- [7] [8]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 190.
+(Font)              <5> on input line 105.
 
-Overfull \hbox (2.56485pt too wide) in paragraph at lines 223--224
+Underfull \vbox (badness 4013) has occurred while \output is active []
+
+ [7]
+[8]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
+line 191.
+ [9]
+Overfull \hbox (2.56485pt too wide) in paragraph at lines 224--225
 \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) pendix 2A of [[]][]. We take $\OML/lmm/
 m/it/10.95 y[] \OMS/lmsy/m/n/10.95 2 T[]\OT1/lmr/m/n/10.95 (\OMS/lmsy/m/n/10.95
  Y\OT1/lmr/m/n/10.95 )$ \T1/LinuxLibertineT-TLF/m/n/10.95 (-20) and $\OML/lmm/m
@@ -3107,8 +3111,8 @@ m/it/10.95 y[] \OMS/lmsy/m/n/10.95 2 T[]\OT1/lmr/m/n/10.95 (\OMS/lmsy/m/n/10.95
 LibertineT-TLF/m/n/10.95 (-20) .
  []
 
-[9] [10] [11] [12]
-Overfull \hbox (3.39345pt too wide) in paragraph at lines 316--317
+[10] [11] [12]
+Overfull \hbox (3.39345pt too wide) in paragraph at lines 317--318
 []\T1/LinuxLibertineT-TLF/b/n/10.95 Proposition 2.16 \T1/LinuxLibertineT-TLF/m/
 n/10.95 (-20) (Propo-si-tion 2.1 of [[]][])\T1/LinuxLibertineT-TLF/b/n/10.95 . 
 []$\OT1/lmr/m/n/10.95 S(\OML/lmm/m/it/10.95 W; k\OT1/lmr/m/n/10.95 ) = [][]\OML
@@ -3117,9 +3121,14 @@ n/10.95 (-20) (Propo-si-tion 2.1 of [[]][])\T1/LinuxLibertineT-TLF/b/n/10.95 .
 mr/m/n/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 ) :=
  []
 
+
+Underfull \vbox (badness 3623) has occurred while \output is active []
+
+ [13]
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on inpu
-t line 344.
-[13]) [14] (./chap-MaxCoverage.tex
+t line 345.
+)
+[14] (./chap-MaxCoverage.tex
 Underfull \vbox (badness 1189) has occurred while \output is active []
 
  [15
@@ -3496,7 +3505,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D91FDBDB5B8BA9BF117D34649988326B;2212.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: B7B569BD5B7C3653EEFA56FDD95059D4;9562.
+(rerunfilecheck)             Checksum: 8D0BA512E2E8D0D1C7D1B2FDD25770F8;9562.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3544,9 +3553,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (157 pages, 1749952 bytes).
+Output written on main.pdf (157 pages, 1749816 bytes).
 PDF statistics:
- 2993 PDF objects out of 3580 (max. 8388607)
+ 2989 PDF objects out of 3580 (max. 8388607)
  878 named destinations out of 1000 (max. 500000)
  60177 words of extra memory for PDF output out of 61914 (max. 10000000)
 
