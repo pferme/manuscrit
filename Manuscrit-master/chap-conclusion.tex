@@ -1,8 +1,14 @@
 In this thesis, we have studied several channel coding problems, with and without non-signaling assistance, from the points of view of algorithmic approximation and  capacity regions.
 
-TODO (concise = 1 page)
+TODO (concise = 1 page? OR name the chapter)
 
--Sum up quickly conclusions (like the abstract size more or less)
+-Sum up quickly conclusions (less than abstract size)
+
+We study a generalization of the latter with a variable list size, compensated by an increasing probability of failure. More generally, we study the coverage problem which entails maximizing $\sum_{a \in [n]}  \varphi(\abs{\set{i \in S : a \in T_i}})$ over subsets $S \subseteq [m]$ of cardinality $k$, for a general nondecreasing concave function $\varphi$. We provide an approximation algorithm for that problem of ratio $\alpha_{\varphi} := \min_{x \in \mathbb{N}^*} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])}$, which cannot be improved for sublinear $\varphi$ unless $\textrm{P}\not=\textrm{NP}$.
+
+For multiple-access channels, we show that the coding problem cannot be approximated within any constant ratio under some complexity hypothesis on random clauses. Generalizing and abstracting quantum entanglement, non-signaling correlations can be used to enhance communication. We show that optimal non-signaling codes for multiple-access channels can be found in polynomial time in the number of copies of the channel. Applied to the binary adder channel, a non-signaling advantage on its capacity region is established. We provide a general single-letter outer bound on the non-signaling capacity region. When non-signaling assistance is not shared between encoders, we show that the capacity region is not changed.
+
+For broadcast channels, we show that non-signaling assistance shared only between decoders does not not change the capacity region. Restricting to deterministic channels, we provide a $(1-e^{-1})^2$-approximation algorithm for the unassisted coding problem, and we show that their capacity region is not changed with non-signaling assistance. In the value query model, we show that we cannot achieve a better approximation ratio than $\Omega\left(\frac{1}{\sqrt{m}}\right)$ for the general broadcast channel coding problem, with $m$ an output size of the channel.
 
 -Recall quickly local open questions
 
