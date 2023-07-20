@@ -10,10 +10,8 @@
 \babel@toc {english}{}
 \contentsline {chapter}{Contents}{ix}{section*.5}
 \contentsline {chapter}{List of Symbols}{xi}{chapter*.6}
-\babel@toc {french}{}
-\babel@toc {english}{}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
-\contentsline {paragraph}{Contributions}{4}{section*.10}
+\contentsline {paragraph}{Contributions}{4}{section*.7}
 \contentsline {chapter}{\chapternumberline {2}Background}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Probability}{5}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Usual Distributions and Properties}{5}{subsection.2.1.1}
@@ -26,12 +24,12 @@
 \contentsline {subsection}{\numberline {2.2.4}Capacity Regions}{12}{subsection.2.2.4}
 \contentsline {section}{\numberline {2.3}Channel Coding for Point-to-point Channels}{13}{section.2.3}
 \contentsline {chapter}{\chapternumberline {3}Tight Approximation Guarantees for Concave Coverage Problems}{15}{chapter.3}
-\contentsline {paragraph}{Applications and related work}{16}{section*.11}
-\contentsline {paragraph}{Remarks on the {Poisson concavity ratio} $\alpha _{\varphi }$.}{18}{section*.13}
-\contentsline {paragraph}{Further hardness under Gap-ETH}{18}{section*.14}
-\contentsline {paragraph}{Proof techniques and organization}{19}{section*.15}
+\contentsline {paragraph}{Applications and related work}{16}{section*.8}
+\contentsline {paragraph}{Remarks on the {Poisson concavity ratio} $\alpha _{\varphi }$.}{18}{section*.10}
+\contentsline {paragraph}{Further hardness under Gap-ETH}{18}{section*.11}
+\contentsline {paragraph}{Proof techniques and organization}{19}{section*.12}
 \contentsline {section}{\numberline {3.1}Approximation Algorithm for $\varphi $-\textsc {MaxCoverage}}{19}{section.3.1}
-\contentsline {paragraph}{Rounding}{20}{section*.16}
+\contentsline {paragraph}{Rounding}{20}{section*.13}
 \contentsline {subsection}{\numberline {3.1.1}Generalization to Matroid Constraints}{21}{subsection.3.1.1}
 \contentsline {section}{\numberline {3.2}Hardness of Approximation for $\varphi $-\textsc {MaxCoverage}}{22}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Partitioning System}{23}{subsection.3.2.1}
@@ -53,13 +51,13 @@
 \contentsline {subsection}{\numberline {3.5.4}Proof of Existence of Partitioning Systems}{49}{subsection.3.5.4}
 \contentsline {subsection}{\numberline {3.5.5}Proof of Theorem~\ref {theo:HardnessMA}}{50}{subsection.3.5.5}
 \contentsline {chapter}{\chapternumberline {4}Multiple-access Channel Coding with Non-signaling Correlations}{51}{chapter.4}
-\contentsline {paragraph}{Contributions}{52}{section*.17}
-\contentsline {paragraph}{Organization}{53}{section*.18}
+\contentsline {paragraph}{Contributions}{52}{section*.14}
+\contentsline {paragraph}{Organization}{53}{section*.15}
 \contentsline {section}{\numberline {4.1}Multiple-access Channels Capacity Regions}{53}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Classical Capacities}{53}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Non-signaling Assisted Capacities}{57}{subsection.4.1.2}
-\contentsline {paragraph}{Three-party non-signaling assistance}{57}{section*.19}
-\contentsline {paragraph}{Independent non-signaling assistance}{58}{section*.20}
+\contentsline {paragraph}{Three-party non-signaling assistance}{57}{section*.16}
+\contentsline {paragraph}{Independent non-signaling assistance}{58}{section*.17}
 \contentsline {section}{\numberline {4.2}Hardness of Approximation for Multiple-access Channel Coding}{62}{section.4.2}
 \contentsline {section}{\numberline {4.3}Properties of Non-signaling Assisted Codes}{65}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Symmetrization}{65}{subsection.4.3.1}
@@ -67,18 +65,18 @@
 \contentsline {subsection}{\numberline {4.3.3}Linear Program with Reduced Size for Structured Channels}{72}{subsection.4.3.3}
 \contentsline {section}{\numberline {4.4}Non-signaling Achievability Bounds}{77}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Zero-error Non-signaling Assisted Achievable Rate Pairs}{77}{subsection.4.4.1}
-\contentsline {paragraph}{Application to the binary adder channel}{78}{section*.21}
+\contentsline {paragraph}{Application to the binary adder channel}{78}{section*.18}
 \contentsline {subsection}{\numberline {4.4.2}Non-signaling Assisted Achievable Rate Pairs with Non-zero Error}{79}{subsection.4.4.2}
-\contentsline {paragraph}{Application to the Noisy Binary Adder Channel}{81}{section*.22}
+\contentsline {paragraph}{Application to the Noisy Binary Adder Channel}{81}{section*.19}
 \contentsline {section}{\numberline {4.5}Relaxed Non-signaling Assisted Capacity Region and Outer Bounds}{82}{section.4.5}
-\contentsline {paragraph}{Application to the Binary Adder Channel}{85}{section*.23}
+\contentsline {paragraph}{Application to the Binary Adder Channel}{85}{section*.20}
 \contentsline {subsection}{\numberline {4.5.1}Outer Bound Part of Theorem~\ref {theo:CharaNSrelaxed}}{88}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Achievability Part of Theorem~\ref {theo:CharaNSrelaxed}}{94}{subsection.4.5.2}
 \contentsline {section}{\numberline {4.6}Independent Non-signaling Assisted Capacity Region}{97}{section.4.6}
 \contentsline {section}{\numberline {4.7}Conclusion}{100}{section.4.7}
 \contentsline {chapter}{\chapternumberline {5}Broadcast Channel Coding with Non-signaling Correlations}{103}{chapter.5}
-\contentsline {paragraph}{Contributions}{104}{section*.24}
-\contentsline {paragraph}{Organization}{104}{section*.25}
+\contentsline {paragraph}{Contributions}{104}{section*.21}
+\contentsline {paragraph}{Organization}{104}{section*.22}
 \contentsline {section}{\numberline {5.1}Broadcast Channel Coding}{105}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Broadcast Channels}{105}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}The Sum Success Probability $\mathrm {S}_{\text {sum}}(W,k_1,k_2)$}{105}{subsection.5.1.2}
@@ -95,5 +93,5 @@
 \contentsline {subsection}{\numberline {5.4.2}Value Query Hardness}{126}{subsection.5.4.2}
 \contentsline {subsection}{\numberline {5.4.3}Limitations of the Model}{132}{subsection.5.4.3}
 \contentsline {section}{\numberline {5.5}Conclusion}{132}{section.5.5}
-\contentsline {chapter}{Conclusion}{133}{chapter*.26}
-\contentsline {chapter}{Bibliography}{135}{section*.28}
+\contentsline {chapter}{\chapternumberline {6}Conclusion}{133}{chapter.6}
+\contentsline {chapter}{Bibliography}{135}{section*.24}

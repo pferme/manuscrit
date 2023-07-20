@@ -384,7 +384,6 @@ This section shows that instantiations of $\varphi$-\textsc{MaxCoverage} encapsu
 
 \subsection{Generalized List-decoding}
 \label{subsection:generalized-list-decoding}
-
 In the usual $\ell$-list-decoding problem~\cite{Elias57,Wozencraft58}, we are given a noisy channel $W(y|x)$, and the goal is to send a message chosen uniformly in $[k]$ through this channel. In order to do so, the sender encodes the input message in $\mathcal{X}$, and the receiver decodes a list of size $\ell$ of possible messages in $[k]$ from the output of the channel in $\mathcal{Y}$. The goal is to maximize the probability of successfully decoding the message, which happens when the initial message belongs to the decoded list. We consider the generalization of the $\ell$-list-decoding problem that allows decoding lists of any size, with an associated cost function $\varphi$, which we call the $\varphi$-list-decoding problem. Now, the decoding will be successful only with probability $\frac{\varphi(\ell)}{\ell}$ when the initial message belongs to a decoding list of size $\ell$. Formally, the problem can be stated as:
 \[ \max_{\set{L_y}_{y \in \mathcal{Y}}, S \subseteq \mathcal{X}:|S|=k} \frac{1}{k}\sum_{x \in S}\sum_{y \in \mathcal{Y}: x \in L_y} \frac{\varphi(|L_y|)}{|L_y|}W(y|x)\ ,\]
 and can be directly reformulated as:
