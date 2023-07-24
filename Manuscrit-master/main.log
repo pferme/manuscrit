@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  24 JUL 2023 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  24 JUL 2023 12:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2895,9 +2895,10 @@ Package pdftex.def Info: garde.pdf , page1 used on input line 113.
  <./garde.pdf{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}>] [1
 
 ]
-(./abstract.tex [2
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
+(Font)              scaled to size 10.95pt on input line 130.
 
-]
+(./abstract.tex [2]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 14.4pt on input line 2.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
@@ -2973,7 +2974,9 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 6.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 6.
- [3])
+ [3
+
+])
 (./acknowledgements.tex [4
 
 ]) [5
@@ -2982,16 +2985,16 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 
 ] (./main.toc
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 2.
+(Font)              scaled to size 10.95pt on input line 4.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 32.
+(Font)              scaled to size 10.95pt on input line 34.
  [7])
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sl' in size <10.95> no
 t available
 (Font)              Font shape `T1/LinuxLibertineT-TLF/m/it' tried instead on i
-nput line 143.
+nput line 142.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 143.
+(Font)              scaled to size 10.95pt on input line 142.
  [8] (./main.tof [9
 
 
@@ -3117,13 +3120,13 @@ LibertineT-TLF/m/n/10.95 (-20) .
  []
 
 [16] [17] [18]
-Overfull \hbox (3.39345pt too wide) in paragraph at lines 317--318
+Overfull \hbox (3.78545pt too wide) in paragraph at lines 317--318
 []\T1/LinuxLibertineT-TLF/b/n/10.95 Proposition 2.16 \T1/LinuxLibertineT-TLF/m/
 n/10.95 (-20) (Propo-si-tion 2.1 of [[]][])\T1/LinuxLibertineT-TLF/b/n/10.95 . 
 []$\OT1/lmr/m/n/10.95 S(\OML/lmm/m/it/10.95 W; k\OT1/lmr/m/n/10.95 ) = [][]\OML
 /lmm/m/it/10.95 f[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 
-)$ \T1/LinuxLibertineT-TLF/m/it/10.95 (-20) with $\OML/lmm/m/it/10.95 f[]\OT1/l
-mr/m/n/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 ) :=
+)$ \T1/LinuxLibertineT-TLF/m/it/10.95 with $\OML/lmm/m/it/10.95 f[]\OT1/lmr/m/n
+/10.95 (\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 ) :=
  []
 
 
@@ -3380,13 +3383,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 652.
 
 
-Overfull \hbox (3.22064pt too wide) in paragraph at lines 661--662
+Overfull \hbox (4.78911pt too wide) in paragraph at lines 661--662
 \OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \O
-MS/lmsy/m/n/10.95 ^^U [][]$ \T1/LinuxLibertineT-TLF/m/it/10.95 (-20) and $\OT1/
-lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W \OMS/lmsy/m/n/10.95 
+MS/lmsy/m/n/10.95 ^^U [][]$ \T1/LinuxLibertineT-TLF/m/it/10.95 and $\OT1/lmr/m/
+n/10.95 S[](\OML/lmm/m/it/10.95 W \OMS/lmsy/m/n/10.95 
  \OML/lmm/m/it/10.95 W[]; k[]; k[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^U 
 \OT1/lmr/m/n/10.95 S[](\OML/lmm/m/it/10.95 W; k[]; k[]\OT1/lmr/m/n/10.95 )$\T1/
-LinuxLibertineT-TLF/m/it/10.95 (-20) . 
+LinuxLibertineT-TLF/m/it/10.95 . 
  []
 
 [73] [74]
@@ -3645,11 +3648,11 @@ n-[]of-[]the-[]broadc$[][]\T1/LinuxLibertineT-TLF/m/n/10 (+20) .  Ci-ta-tions:
 \tf@tof=\write10
 \openout10 = `main.tof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 230.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 230.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 230.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 230.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E7E4E754725CA11C344C24873480003E;5734.
 Package rerunfilecheck Info: File `main.brf' has not changed.
@@ -3658,14 +3661,14 @@ Package rerunfilecheck Info: File `main.brf' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 230.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
  ) 
 Here is how much of TeX's memory you used:
- 57509 strings out of 494821
- 1254370 string characters out of 6177891
+ 57420 strings out of 494821
+ 1252069 string characters out of 6177891
  1594930 words of memory out of 5000000
  58376 multiletter control sequences out of 15000+600000
- 837729 words of font info for 553 fonts, out of 8000000 for 9000
+ 831604 words of font info for 494 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10422b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist
@@ -3677,11 +3680,11 @@ ist/fonts/enc/dvips/libertine/lbtn_iqbcqn.enc}{/usr/share/texlive/texmf-dist/fo
 nts/enc/dvips/libertine/lbtn_jtta5h.enc} </home/paul/.texlive2017/texmf-var/fon
 ts/pk/ljfour/public/bbm/bbm10.657pk>{/usr/share/texlive/texmf-dist/fonts/enc/dv
 ips/libertine/lbtn_tlukpt.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/li
-bertine/lbtn_7grukw.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertin
-e/lbtn_ncsllp.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn
-_nh77jq.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texl
-ive/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/usr/share/texlive/te
-xmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}</usr/share/texlive/texmf-di
+bertine/lbtn_ncsllp.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertin
+e/lbtn_nh77jq.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/shar
+e/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/usr/share/texl
+ive/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/share/texlive/te
+xmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}</usr/share/texlive/texmf-di
 st/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/share/texlive/texmf-
@@ -3701,7 +3704,7 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (163 pages, 1822733 bytes).
+Output written on main.pdf (163 pages, 1821154 bytes).
 PDF statistics:
  3265 PDF objects out of 3580 (max. 8388607)
  885 named destinations out of 1000 (max. 500000)
