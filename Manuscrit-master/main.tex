@@ -50,7 +50,7 @@
 
 % numbering
 \setsecnumdepth{subsubsection}
-\maxtocdepth   {section}
+\maxtocdepth   {subsection}
 \setlength{\parskip}{5pt}
 \usepackage{enumerate}
 \makeatletter
@@ -123,15 +123,15 @@
 %%%%%%%%%%%%%
 % Décidaces %
 %%%%%%%%%%%%%
-\vspace*{\stretch{1}}
-\begin{flushright}
+%\vspace*{\stretch{1}}
+%\begin{flushright}
   %À \ldots
-\begin{otherlanguage}{french}
-  Dédicace,\\
-  peut-être\ldots
-\end{otherlanguage}
-\end{flushright}
-\vspace*{\stretch{2}}
+%\begin{otherlanguage}{french}
+%  Dédicace,\\
+%  peut-être\ldots
+%\end{otherlanguage}
+%\end{flushright}
+%\vspace*{\stretch{2}}
 %%%%%%%%%%%%%
 
 \input abstract
@@ -139,9 +139,9 @@
 \input acknowledgements
 
 \cleardoublepage
-\frenchtableofcontents
-\cleardoublepage
 \tableofcontents
+\cleardoublepage
+\frenchtableofcontents
  
 \cleardoublepage
 \input symbols
@@ -157,10 +157,15 @@
 \pagestyle{ruled}
 
 \chapter{Introduction}
-\addcontentsline{tof}{chapter}{\protect\numberline{\thechapter} Introduction}
 \label{chap:introduction}
 
 \input chap-introduction
+
+\chapter*{Introduction}
+\label{chap:introduction-fr}
+\addcontentsline{tof}{chapter}{\protect\numberline{\thechapter} Introduction}
+
+\input chap-introduction-fr
 
 \cleardoublepage
 {\let\newpage\relax
@@ -202,9 +207,14 @@
 
 \chapter{Conclusion}
 %\addcontentsline{toc}{chapter}{Conclusion}
-\addcontentsline{tof}{chapter}{\protect\numberline{\thechapter} Conclusion}
 
 \input chap-conclusion
+
+\chapter*{Conclusion}
+\label{chap:conclusion-fr}
+\addcontentsline{tof}{chapter}{\protect\numberline{\thechapter} Conclusion}
+
+\input chap-conclusion-fr
 
 \bibliographystyle{alphaurl}
 \bibliography{these}

@@ -165,7 +165,7 @@ In this section, we establish an inapproximability bound for the $\varphi$-\text
 We establish the following theorem in this section:
 
 \begin{theorem}
- It is NP-hard to approximate the $\varphi$-\textsc{MaxCoverage} problem for $\varphi(n) = o(n)$ within a factor greater that $\alpha_{\varphi} + \varepsilon$ for any $\varepsilon > 0$.
+ It is \textrm{NP}-hard to approximate the $\varphi$-\textsc{MaxCoverage} problem for $\varphi(n) = o(n)$ within a factor greater that $\alpha_{\varphi} + \varepsilon$ for any $\varepsilon > 0$.
   \label{theo:Hardness}
 \end{theorem}
 
@@ -226,7 +226,7 @@ The proof can be found in Appendix~\ref{app:Partitioning}.
   
 \subsection{The Reduction}
   \begin{proof}[Proof of Theorem~\ref{theo:Hardness}]
-    Let $\varepsilon > 0$. Without loss of generality, we can assume that $\varepsilon < 1$. We show that it is NP-hard to reach an approximation ratio greater than $\alpha_{\varphi} + \varepsilon$ for the $\varphi$-\textsc{MaxCoverage} problem, via a reduction from $\delta,h$-\textsc{AryGapLabelCover}.
+    Let $\varepsilon > 0$. Without loss of generality, we can assume that $\varepsilon < 1$. We show that it is \textrm{NP}-hard to reach an approximation ratio greater than $\alpha_{\varphi} + \varepsilon$ for the $\varphi$-\textsc{MaxCoverage} problem, via a reduction from $\delta,h$-\textsc{AryGapLabelCover}.
   \begin{itemize}
     \item $\eta = \frac{\varphi(x_{\varphi})}{4x_{\varphi}} \varepsilon$, so $0 < \eta \leq \varepsilon < 1$,
     \item $h \geq x_{\varphi}$ such that $\abs{\psi^{\varphi}_{h,h} - \alpha_{\varphi}\varphi(x_{\varphi})} \leq \eta$ (see~\eqref{eq:def-phi} for the definition of $\psi^{\varphi}$); such a choice exists thanks to Proposition~\ref{prop:UnboundBinPoi},
@@ -1139,10 +1139,10 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
    But the function $f(k) = \frac{k+1-d}{k+1}(k+1)^d - k^d$ is positive on $\mathbb{R}_+^*$, so we get that $\alpha_{\varphi}'(x) > 0$ for $x \geq 1$, thus $\alpha_{\varphi}(x)$ is increasing from $1$ to $+\infty$, so $\alpha_{\varphi} = \alpha_{\varphi}(1) = e^{-1}\sum_{k=1}^{+\infty}\frac{k^d}{k!}$.
 \end{proof}
 
-\subsection{NP-hardness of $\delta,h$-\textsc{AryGapLabelCover}}
+\subsection{\textrm{NP}-hardness of $\delta,h$-\textsc{AryGapLabelCover}}
 \label{app:NPhardnessGap}
 \begin{proof}[Proof of Proposition~\ref{prop:AryGapLabelCover}]
-  We reduce from the Label Cover problem described in~\cite{DMMS20} which is known to be an NP-hard problem. The main idea of this reduction is the usual equivalence between bipartite graphs and hypergraphs.
+  We reduce from the Label Cover problem described in~\cite{DMMS20} which is known to be an \textrm{NP}-hard problem. The main idea of this reduction is the usual equivalence between bipartite graphs and hypergraphs.
 
   \begin{definition}
     A Label Cover instance $\mathcal{L} = (A \sqcup B,E,[L],[R],\set{\pi_e}_{e \in E})$ consists of a bi-regular bipartite graph $(A \sqcup B,E)$ with right degree $t$, alphabet sets $[L],[R]$ and for every edge $e \in E$, a constraint $\pi_e :[L] \rightarrow [R]$.
@@ -1150,7 +1150,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
   \end{definition}
 
  \begin{theorem}[$\delta$-Gap-Label-Cover$(t,R)$ from~\cite{DMMS20}]
-  For any fixed integer $t \geq 2$ and fixed $\delta > 0$, there exists $R_0$ such that for any integer $R \geq R_0$, it is NP-hard for Label Cover instances $\mathcal{L} = (A \sqcup B,E,[L],[R],\set{\pi_e}_{e \in E})$ with right degree $t$ and right alphabet $[R]$ to distinguish between:
+  For any fixed integer $t \geq 2$ and fixed $\delta > 0$, there exists $R_0$ such that for any integer $R \geq R_0$, it is \textrm{NP}-hard for Label Cover instances $\mathcal{L} = (A \sqcup B,E,[L],[R],\set{\pi_e}_{e \in E})$ with right degree $t$ and right alphabet $[R]$ to distinguish between:
   
   \begin{itemize}
   \item[\textbf{YES:}] There exists a labeling $\sigma$ that \emph{strongly satisfies} all the right vertices.
@@ -1158,7 +1158,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
   \end{itemize}
 \end{theorem}
 
- The reduction is the following. From $\delta$-Gap-Label-Cover$(t,R)$, we take $h=t$ and the same parameters $\delta,R$. Given an instance $\mathcal{L} = (A \sqcup B,E,[L],[R],\set{\pi_e}_{e \in E})$, we take $\mathcal{G} = (A,E',[L],[R],\set{\pi'_{e',v}}_{e' \in E',v \in e'})$ with $E' = \set{N(b), b \in B}$ with $N(b)$ the set of neighbours of $b$ in $\mathcal{L}$, and $\pi'_{e',v} = \pi'_{N(b),v} := \pi_{v,b}$ since $v \in N(b)$. Since $(A \sqcup B,E)$ is bipartite and biregular, we get that our hypergraph has all hyperedges of size $h = \abs{N(b)} = t$, and that it is regular from the regular left degree of $(A \sqcup B,E)$. By construction, the notion of weakly and strongly satisfied is the same in both cases, as well as the labelings, and thus we have the NP-hardness of $\delta,h$-\textsc{AryGapLabelCover}.
+ The reduction is the following. From $\delta$-Gap-Label-Cover$(t,R)$, we take $h=t$ and the same parameters $\delta,R$. Given an instance $\mathcal{L} = (A \sqcup B,E,[L],[R],\set{\pi_e}_{e \in E})$, we take $\mathcal{G} = (A,E',[L],[R],\set{\pi'_{e',v}}_{e' \in E',v \in e'})$ with $E' = \set{N(b), b \in B}$ with $N(b)$ the set of neighbours of $b$ in $\mathcal{L}$, and $\pi'_{e',v} = \pi'_{N(b),v} := \pi_{v,b}$ since $v \in N(b)$. Since $(A \sqcup B,E)$ is bipartite and biregular, we get that our hypergraph has all hyperedges of size $h = \abs{N(b)} = t$, and that it is regular from the regular left degree of $(A \sqcup B,E)$. By construction, the notion of weakly and strongly satisfied is the same in both cases, as well as the labelings, and thus we have the \textrm{NP}-hardness of $\delta,h$-\textsc{AryGapLabelCover}.
 
  Note that both problems are in fact linearly equivalent since we could do the same reduction backwards.
  
