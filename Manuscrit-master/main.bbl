@@ -241,6 +241,13 @@ G{\'e}rard Cornu{\'e}jols, Marshall~L Fisher, and George~L Nemhauser.
 \newblock \href {https://doi.org/10.1287/mnsc.23.8.789}
   {\path{doi:10.1287/mnsc.23.8.789}}.
 
+\bibitem[Cha77]{Chaitin77}
+Gregory~J. Chaitin.
+\newblock Algorithmic information theory.
+\newblock {\em {IBM} J. Res. Dev.}, 21(4):350--359, 1977.
+\newblock \href {https://doi.org/10.1147/rd.214.0350}
+  {\path{doi:10.1147/rd.214.0350}}.
+
 \bibitem[CHSH69]{CHSH69}
 John~F. Clauser, Michael~A. Horne, Abner Shimony, and Richard~A. Holt.
 \newblock Proposed experiment to test local hidden-variable theories.
