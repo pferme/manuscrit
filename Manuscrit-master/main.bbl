@@ -793,6 +793,13 @@ Maxim Sviridenko, Jan Vondr{\'{a}}k, and Justin Ward.
 \newblock \href {https://doi.org/10.1287/moor.2016.0842}
   {\path{doi:10.1287/moor.2016.0842}}.
 
+\bibitem[TBR16]{TBR16}
+Marco Tomamichel, Mario Berta, and Joseph~M Renes.
+\newblock Quantum coding with finite resources.
+\newblock {\em Nature communications}, 7(1):11419, 2016.
+\newblock \href {https://doi.org/10.1038/ncomms11419}
+  {\path{doi:10.1038/ncomms11419}}.
+
 \bibitem[Tom12]{Tomamichel12}
 Marco Tomamichel.
 \newblock {\em A framework for non-asymptotic quantum information theory}.

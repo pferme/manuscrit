@@ -5,7 +5,7 @@
 \backcite {Arikan09}{{1}{1}{chapter.1}}
 \backcite {RU08}{{1}{1}{chapter.1}}
 \backcite {BF18}{{1}{1}{chapter.1}}
-\backcite {RWW06,Tomamichel12}{{1}{1}{chapter.1}}
+\backcite {RWW06,Tomamichel12,TBR16}{{1}{1}{chapter.1}}
 \backcite {Feige98}{{1}{1}{chapter.1}}
 \backcite {Chaitin77}{{1}{1}{chapter.1}}
 \backcite {Elias57,Wozencraft58}{{1}{1}{chapter.1}}
@@ -43,7 +43,7 @@
 \backcite {Arikan09}{{5}{1}{chapter*.8}}
 \backcite {RU08}{{5}{1}{chapter*.8}}
 \backcite {BF18}{{5}{1}{chapter*.8}}
-\backcite {RWW06,Tomamichel12}{{5}{1}{chapter*.8}}
+\backcite {RWW06,Tomamichel12,TBR16}{{5}{1}{chapter*.8}}
 \backcite {Feige98}{{5}{1}{chapter*.8}}
 \backcite {Chaitin77}{{5}{1}{chapter*.8}}
 \backcite {Elias57,Wozencraft58}{{5}{1}{chapter*.8}}
