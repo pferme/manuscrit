@@ -715,6 +715,22 @@ Yihui Quek and Peter~W. Shor.
 \newblock \href {https://doi.org/10.1103/PhysRevA.95.052329}
   {\path{doi:10.1103/PhysRevA.95.052329}}.
 
+\bibitem[RU08]{RU08}
+Thomas~J. Richardson and R{\"{u}}diger~L. Urbanke.
+\newblock {\em Modern Coding Theory}.
+\newblock Cambridge University Press, 2008.
+\newblock \href {https://doi.org/10.1017/cbo9780511791338}
+  {\path{doi:10.1017/cbo9780511791338}}.
+
+\bibitem[RWW06]{RWW06}
+Renato Renner, Stefan Wolf, and J{\"{u}}rg Wullschleger.
+\newblock The single-serving channel capacity.
+\newblock In {\em Proceedings 2006 {IEEE} International Symposium on
+  Information Theory, {ISIT} 2006, The Westin Seattle, Seattle, Washington,
+  USA, July 9-14, 2006}, pages 1424--1427. {IEEE}, 2006.
+\newblock \href {https://doi.org/10.1109/ISIT.2006.262081}
+  {\path{doi:10.1109/ISIT.2006.262081}}.
+
 \bibitem[Sat78]{Sato78}
 Hiroshi Sato.
 \newblock An outer bound to the capacity region of broadcast channels
@@ -769,6 +785,13 @@ Maxim Sviridenko, Jan Vondr{\'{a}}k, and Justin Ward.
 \newblock {\em Math. Oper. Res.}, 42(4):1197--1218, 2017.
 \newblock \href {https://doi.org/10.1287/moor.2016.0842}
   {\path{doi:10.1287/moor.2016.0842}}.
+
+\bibitem[Tom12]{Tomamichel12}
+Marco Tomamichel.
+\newblock {\em A framework for non-asymptotic quantum information theory}.
+\newblock PhD thesis, {ETH} Zürich, 2012.
+\newblock \href {https://doi.org/10.48550/arXiv.1203.2142}
+  {\path{doi:10.48550/arXiv.1203.2142}}.
 
 \bibitem[TT19]{TF19}
 Wenpin Tang and Fengmin Tang.

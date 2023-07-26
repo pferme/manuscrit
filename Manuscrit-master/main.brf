@@ -3,7 +3,9 @@
 \backcite {Gallager62}{{1}{1}{chapter.1}}
 \backcite {BG96}{{1}{1}{chapter.1}}
 \backcite {Arikan09}{{1}{1}{chapter.1}}
+\backcite {RU08}{{1}{1}{chapter.1}}
 \backcite {BF18}{{1}{1}{chapter.1}}
+\backcite {RWW06,Tomamichel12}{{1}{1}{chapter.1}}
 \backcite {Feige98}{{1}{1}{chapter.1}}
 \backcite {Elias57,Wozencraft58}{{1}{1}{chapter.1}}
 \backcite {BFGG20}{{1}{1}{chapter.1}}
@@ -38,12 +40,14 @@
 \backcite {Gallager62}{{5}{1}{chapter*.8}}
 \backcite {BG96}{{5}{1}{chapter*.8}}
 \backcite {Arikan09}{{5}{1}{chapter*.8}}
+\backcite {RU08}{{5}{1}{chapter*.8}}
 \backcite {BF18}{{5}{1}{chapter*.8}}
+\backcite {RWW06,Tomamichel12}{{5}{1}{chapter*.8}}
 \backcite {Feige98}{{5}{1}{chapter*.8}}
 \backcite {Elias57,Wozencraft58}{{5}{1}{chapter*.8}}
 \backcite {BFGG20}{{5}{1}{chapter*.8}}
 \backcite {Khot02}{{5}{1}{chapter*.8}}
-\backcite {BFGG20}{{5}{1}{chapter*.8}}
+\backcite {BFGG20}{{6}{1}{chapter*.8}}
 \backcite {EPR35}{{6}{1}{chapter*.8}}
 \backcite {EPR35}{{6}{1}{chapter*.8}}
 \backcite {Bell64}{{6}{1}{chapter*.8}}
@@ -52,8 +56,8 @@
 \backcite {ADG82}{{6}{1}{chapter*.8}}
 \backcite {Holevo73}{{6}{1}{chapter*.8}}
 \backcite {BW92}{{6}{1}{chapter*.8}}
-\backcite {CLMW10,PLMKR11}{{6}{1}{chapter*.8}}
-\backcite {BBCJPW93,BSST99}{{6}{1}{chapter*.8}}
+\backcite {CLMW10,PLMKR11}{{7}{1}{chapter*.8}}
+\backcite {BBCJPW93,BSST99}{{7}{1}{chapter*.8}}
 \backcite {Tsirelson80,PR94}{{7}{1}{chapter*.8}}
 \backcite {CHSH69}{{7}{1}{chapter*.8}}
 \backcite {Tsirelson80}{{7}{1}{chapter*.8}}
@@ -65,7 +69,7 @@
 \backcite {Cover72}{{7}{1}{chapter*.8}}
 \backcite {Ahlswede73}{{7}{1}{chapter*.8}}
 \backcite {Liao73}{{7}{1}{chapter*.8}}
-\backcite {QS17}{{7}{1}{chapter*.8}}
+\backcite {QS17}{{8}{1}{chapter*.8}}
 \backcite {Noetzel20,ND20}{{8}{1}{chapter*.8}}
 \backcite {SS07}{{12}{2.1.1}{proposition.2.2}}
 \backcite {BFGG20}{{12}{2.1.1}{proposition.2.2}}
