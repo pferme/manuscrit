@@ -183,7 +183,7 @@
 \backcite {LALS20,SLSS22}{{57}{3.5.5}{chapter.4}}
 \backcite {Mermin90,Peres90,Aravind02,BBT05}{{57}{3.5.5}{chapter.4}}
 \backcite {Noetzel20,ND20}{{57}{3.5.5}{chapter.4}}
-\backcite {JNWY20}{{58}{3.5.5}{section*.16}}
+\backcite {JNVWY20}{{58}{3.5.5}{section*.16}}
 \backcite {PDB23}{{58}{3.5.5}{section*.16}}
 \backcite {HDW08}{{58}{3.5.5}{section*.16}}
 \backcite {CT01}{{60}{4.1.1}{equation.4.1.2}}
@@ -246,3 +246,5 @@
 \backcite {MSV08}{{133}{5.4.2}{subsection.5.4.2}}
 \backcite {DS06}{{133}{(document)}{Doc-Start}}
 \backcite {MSV08}{{133}{5.4.2}{thmt@dummyctr.dummy.139}}
+\backcite {JNVWY20}{{140}{6}{chapter.6}}
+\backcite {JNVWY20}{{142}{6}{chapter*.25}}

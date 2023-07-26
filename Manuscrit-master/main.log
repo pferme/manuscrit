@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  26 JUL 2023 12:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  26 JUL 2023 17:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3656,7 +3656,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E7E4E754725CA11C344C24873480003E;5734.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: DEE00B05F203C6E882886BE91C045CCA;11187.
+(rerunfilecheck)             Checksum: 927A30E86E3BDDF261FEEFF8769DEC21;11272.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3665,8 +3665,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
  ) 
 Here is how much of TeX's memory you used:
  57454 strings out of 494821
- 1252544 string characters out of 6177891
- 1595063 words of memory out of 5000000
+ 1252551 string characters out of 6177891
+ 1594064 words of memory out of 5000000
  58400 multiletter control sequences out of 15000+600000
  832248 words of font info for 498 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -3704,9 +3704,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (163 pages, 1828401 bytes).
+Output written on main.pdf (163 pages, 1829251 bytes).
 PDF statistics:
- 3292 PDF objects out of 3580 (max. 8388607)
+ 3296 PDF objects out of 3580 (max. 8388607)
  889 named destinations out of 1000 (max. 500000)
  60505 words of extra memory for PDF output out of 61914 (max. 10000000)
 
