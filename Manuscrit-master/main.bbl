@@ -289,6 +289,14 @@ Rahul Chandan, Dario Paccagnan, and Jason~R. Marden.
 \newblock {\em CoRR}, abs/1911.07823, 2019.
 \newblock \href {https://arxiv.org/abs/1911.07823} {\path{arXiv:1911.07823}}.
 
+\bibitem[CRBT22]{CRBT22}
+Michael~X. Cao, Navneeth Ramakrishnan, Mario Berta, and Marco Tomamichel.
+\newblock Channel simulation: Finite blocklengths and broadcast channels.
+\newblock {\em CoRR}, abs/2212.11666, 2022.
+\newblock \href {https://arxiv.org/abs/2212.11666} {\path{arXiv:2212.11666}},
+  \href {https://doi.org/10.48550/arXiv.2212.11666}
+  {\path{doi:10.48550/arXiv.2212.11666}}.
+
 \bibitem[CT01]{CT01}
 Thomas~M. Cover and Joy~A. Thomas.
 \newblock {\em Elements of Information Theory}.

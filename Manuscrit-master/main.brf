@@ -29,6 +29,7 @@
 \backcite {BCPSW14}{{3}{1}{chapter.1}}
 \backcite {BF18}{{3}{1}{chapter.1}}
 \backcite {Matthews12}{{3}{1}{chapter.1}}
+\backcite {CRBT22}{{3}{1}{chapter.1}}
 \backcite {Shannon61}{{3}{1}{chapter.1}}
 \backcite {Cover72}{{3}{1}{chapter.1}}
 \backcite {Ahlswede73}{{3}{1}{chapter.1}}
@@ -67,9 +68,10 @@
 \backcite {BCPSW14}{{7}{1}{chapter*.8}}
 \backcite {BF18}{{7}{1}{chapter*.8}}
 \backcite {Matthews12}{{7}{1}{chapter*.8}}
+\backcite {CRBT22}{{7}{1}{chapter*.8}}
 \backcite {Shannon61}{{7}{1}{chapter*.8}}
-\backcite {Cover72}{{7}{1}{chapter*.8}}
-\backcite {Ahlswede73}{{7}{1}{chapter*.8}}
+\backcite {Cover72}{{8}{1}{chapter*.8}}
+\backcite {Ahlswede73}{{8}{1}{chapter*.8}}
 \backcite {Liao73}{{8}{1}{chapter*.8}}
 \backcite {QS17}{{8}{1}{chapter*.8}}
 \backcite {Noetzel20,ND20}{{8}{1}{chapter*.8}}
