@@ -1616,9 +1616,9 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
     Thanks to Lemma~\ref{lem:beta}, with the fact that $P_{X_1X_2} = P_{X_1|X_2} \times P_{X_2} = P_{X_2|X_1} \times P_{X_1}$, we have already:
     \begin{equation}
       \begin{aligned}
-        &\beta_{1-\varepsilon}\left(P_{X_1X_2Y},\left(P_{X_1|X_2} \times P_{Y|X_2} \right) \times P_{X_2}\right) \leq \frac{1}{k_1}\\
-        &\beta_{1-\varepsilon}\left(P_{X_1X_2Y},\left(P_{X_2|X_1} \times P_{Y|X_1} \right) \times P_{X_1}\right) \leq \frac{1}{k_2}\\
-        &\beta_{1-\varepsilon}\left(P_{X_1X_2Y},P_{X_1X_2} \times P_{Y}\right) \leq \frac{1}{k_1k_2}       
+        &\beta_{1-\varepsilon}\left(P_{X_1X_2Y},\left(P_{X_1|X_2} \times P_{Y|X_2} \right) \times P_{X_2}\right) \leq \frac{1}{k_1}\ ,\\
+        &\beta_{1-\varepsilon}\left(P_{X_1X_2Y},\left(P_{X_2|X_1} \times P_{Y|X_1} \right) \times P_{X_1}\right) \leq \frac{1}{k_2}\ ,\\
+        &\beta_{1-\varepsilon}\left(P_{X_1X_2Y},P_{X_1X_2} \times P_{Y}\right) \leq \frac{1}{k_1k_2}\ .      
       \end{aligned}
     \end{equation}
 
@@ -1627,12 +1627,10 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
       \begin{aligned}
         &d\left(1-\varepsilon||\beta_{1-\varepsilon}\left(P_{X_1X_2Y},\left(P_{X_1|X_2} \times P_{Y|X_2} \right) \times P_{X_2}\right)\right)\\
         &= d\left(\beta_{1-\varepsilon}\left(P_{X_1X_2Y},P_{X_1X_2Y}\right)||\beta_{1-\varepsilon}\left(P_{X_1X_2Y},\left(P_{X_1|X_2} \times P_{Y|X_2} \right) \times P_{X_2}\right)\right)\\
-        &\leq D\left(P_{X_1X_2Y}||\left(P_{X_1|X_2} \times P_{Y|X_2} \right) \times P_{X_2}\right) = I(X_1:Y|X_2)
+        &\leq D\left(P_{X_1X_2Y}||\left(P_{X_1|X_2} \times P_{Y|X_2} \right) \times P_{X_2}\right) = I(X_1:Y|X_2) \ ,
       \end{aligned}
     \end{equation}
-      
-
-    where the binary divergence $d(a||b):= a\log\left(\frac{a}{b}\right) + (1-a)\log\left(\frac{1-a}{1-b}\right)$ and satisfies, $d(a||b) \geq -h(a) - a\log(b)$ and thus:
+    where the binary divergence is defined by $d(a||b):= a\log\left(\frac{a}{b}\right) + (1-a)\log\left(\frac{1-a}{1-b}\right)$ and satisfies $d(a||b) \geq -h(a) - a\log(b)$, and thus:
     \[ \log(\frac{1}{b}) \leq \frac{d(a||b) + h(a)}{a} = \frac{d(a||b) + h(1-a)}{a} \ . \]
 
     This leads to:
