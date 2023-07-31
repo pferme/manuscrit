@@ -136,18 +136,18 @@ As for the usual (joint) success probability, we can define the sum-capacity reg
   thus, the value of the maximum error for those encoders and decoders, which we call $\mathrm{E}(W,k_1,k_2,e_1,d_1,e_2,d_2)$, is:
 \begin{equation}
   \begin{aligned}
-    & 1 -  \frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)d_1(i_1|y)d_2(i_2|y)\right)\\
+    & 1 -  \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)d_1(i_1|y)d_2(i_2|y)\\
     &=\frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\\
     &-\frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)d_1(i_1|y)d_2(i_2|y)\\
-    &=\frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\left[1-d_1(i_1|y)d_2(i_2|y)\right]\right) \ .\\
+    &=\frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\left[1-d_1(i_1|y)d_2(i_2|y)\right] \ .\\
   \end{aligned}
 \end{equation}
 
 Similarly, the value of the sum error for those encoder and decoders, which we call $\mathrm{E}_{\text{sum}}(W,k_1,k_2,e_1,d_1,e_2,d_2)$, is:
 \begin{equation}
   \begin{aligned}
-    &1 -  \frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\frac{d_1(i_1|y)+d_2(i_2|y)}{2}\right)\\
-    &= \frac{1}{k_1k_2}\left(\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\left[1-\frac{d_1(i_1|y)+d_2(i_2|y)}{2}\right]\right) \ .
+    &1 -  \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\frac{d_1(i_1|y)+d_2(i_2|y)}{2}\\
+    &= \frac{1}{k_1k_2}\sum_{i_1,i_2,x_1,x_2,y} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)\left[1-\frac{d_1(i_1|y)+d_2(i_2|y)}{2}\right] \ .
   \end{aligned}
 \end{equation}
 
