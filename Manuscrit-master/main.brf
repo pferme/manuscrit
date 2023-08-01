@@ -36,7 +36,6 @@
 \backcite {Liao73}{{3}{1}{chapter.1}}
 \backcite {QS17}{{3}{1}{chapter.1}}
 \backcite {LALS20,SLSS22}{{3}{1}{chapter.1}}
-\backcite {Noetzel20,ND20}{{3}{1}{chapter.1}}
 \backcite {Hopper81}{{5}{1}{chapter*.8}}
 \backcite {Shannon48}{{5}{1}{chapter*.8}}
 \backcite {Gallager62}{{5}{1}{chapter*.8}}
@@ -74,7 +73,6 @@
 \backcite {Ahlswede73}{{8}{1}{chapter*.8}}
 \backcite {Liao73}{{8}{1}{chapter*.8}}
 \backcite {QS17}{{8}{1}{chapter*.8}}
-\backcite {Noetzel20,ND20}{{8}{1}{chapter*.8}}
 \backcite {SS07}{{12}{2.1.1}{proposition.2.2}}
 \backcite {BFGG20}{{12}{2.1.1}{proposition.2.2}}
 \backcite {SS07}{{12}{2.1.1}{proposition.2.2}}
@@ -184,7 +182,7 @@
 \backcite {QS17}{{57}{3.5.5}{chapter.4}}
 \backcite {LALS20,SLSS22}{{57}{3.5.5}{chapter.4}}
 \backcite {Mermin90,Peres90,Aravind02,BBT05}{{57}{3.5.5}{chapter.4}}
-\backcite {Noetzel20,ND20}{{57}{3.5.5}{chapter.4}}
+\backcite {Noetzel20,ND20,YRB20}{{57}{3.5.5}{chapter.4}}
 \backcite {JNVWY20}{{58}{3.5.5}{section*.16}}
 \backcite {PDB23}{{58}{3.5.5}{section*.16}}
 \backcite {HDW08}{{58}{3.5.5}{section*.16}}

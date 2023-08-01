@@ -886,4 +886,11 @@ John~M Wozencraft.
 \newblock List decoding.
 \newblock {\em Quarterly Progress Report}, 48:90--95, 1958.
 
+\bibitem[YRB20]{YRB20}
+Jiyoung Yun, Ashutosh Rai, and Joonwoo Bae.
+\newblock Nonlocal network coding in interference channels.
+\newblock {\em Physical Review Letters}, 125(15):150502, 2020.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.125.150502}
+  {\path{doi:10.1103/PhysRevLett.125.150502}}.
+
 \end{thebibliography}
