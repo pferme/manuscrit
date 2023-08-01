@@ -893,4 +893,11 @@ Jiyoung Yun, Ashutosh Rai, and Joonwoo Bae.
 \newblock \href {https://doi.org/10.1103/PhysRevLett.125.150502}
   {\path{doi:10.1103/PhysRevLett.125.150502}}.
 
+\bibitem[YRB23]{YRB23}
+Jiyoung Yun, Ashutosh Rai, and Joonwoo Bae.
+\newblock Non-local and quantum advantages in network coding for multiple
+  access channels.
+\newblock {\em CoRR}, abs/2304.10792, 2023.
+\newblock \href {https://arxiv.org/abs/2304.10792} {\path{arXiv:2304.10792}}.
+
 \end{thebibliography}
