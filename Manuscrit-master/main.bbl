@@ -81,6 +81,12 @@ Shraga~I. Bross and Ian~F. Blake.
 \newblock \href {https://doi.org/10.1109/18.651062}
   {\path{doi:10.1109/18.651062}}.
 
+\bibitem[BBBE71]{Born71}
+Max Born, Hedwig Born, Irene Born, and Albert Einstein.
+\newblock {\em The Born-Einstein letters: correspondence between Albert
+  Einstein and Max and Hedwig Born from 1916 to 1955}.
+\newblock Walker, 1971.
+
 \bibitem[BBC{\etalchar{+}}93]{BBCJPW93}
 Charles~H. Bennett, Gilles Brassard, Claude Cr\'epeau, Richard Jozsa, Asher
   Peres, and William~K. Wootters.
