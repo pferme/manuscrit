@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  7 AUG 2023 20:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  5 SEP 2023 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3654,9 +3654,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E7E4E754725CA11C344C24873480003E;5734.
+(rerunfilecheck)             Checksum: EBE30B13902A2A0E775484CE0C5974AE;5730.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: B45C596E15D98690D34373FAE1B02F65;11357.
+(rerunfilecheck)             Checksum: 716D9B463CF182CF95081A08228C902A;11403.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3664,11 +3664,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
  ) 
 Here is how much of TeX's memory you used:
- 57496 strings out of 494821
- 1253041 string characters out of 6177891
- 1595223 words of memory out of 5000000
+ 57493 strings out of 494821
+ 1252957 string characters out of 6177891
+ 1595215 words of memory out of 5000000
  58430 multiletter control sequences out of 15000+600000
- 832892 words of font info for 502 fonts, out of 8000000 for 9000
+ 832523 words of font info for 500 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,22n,128p,10422b,2439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist
@@ -3704,9 +3704,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (164 pages, 1834703 bytes).
+Output written on main.pdf (164 pages, 1836403 bytes).
 PDF statistics:
- 3321 PDF objects out of 3580 (max. 8388607)
+ 3326 PDF objects out of 3580 (max. 8388607)
  895 named destinations out of 1000 (max. 500000)
  60505 words of extra memory for PDF output out of 61914 (max. 10000000)
 

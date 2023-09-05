@@ -16,7 +16,7 @@ We also study the case where non-signaling assistance is shared only between eac
 
 \paragraph{Organization} In Section~\ref{section:capacity}, we define precisely the different notions of MAC capacities: the classical capacity (i.e. without any assistance) as well as the non-signaling assisted capacity. In Section~\ref{section:hardness}, we show that no polynomial-time constant approximation for multiple-access channel coding exists if a complexity hypothesis on random $k$-SAT formulas is true. In Section~\ref{section:complexity}, we address computational complexity questions concerning the probability of success of the best classical coding strategy and the best non-signaling strategy for a MAC. In Section~\ref{section:IB}, we develop numerical methods to find inner bounds on non-signaling assisted capacity regions, and apply those to the binary adder channel and a noisy variant. In Section~\ref{section:OB}, we define our relaxation of non-signaling assistance, we characterize its capacity region by a single-letter formula, and apply those to the binary adder channel. Finally, in Section~\ref{section:NSsr}, we show that the capacity region with non-signaling assistance shared only between each sender and the receiver independently is the same as without assistance.
 
-\section{Multiple-access Channels Capacity Regions}
+\section{Multiple-Access Channels Capacity Regions}
 \addcontentsline{tof}{section}{\protect\numberline{\thesection} Zones de capacité pour les canaux à accès multiple}
 \label{section:capacity}
 \subsection{Classical Capacities}
@@ -166,7 +166,7 @@ so, maximizing over all $e_1,d_1,e_2,d_2$, we get:
 Thus, up to a multiplicative factor $2$, the error is the same. In particular, when one of those errors tends to zero, the other one tends to zero as well. This implies that the capacity regions are the same.
 \end{proof}
 
-\subsection{Non-signaling Assisted Capacities}
+\subsection{Non-Signaling Assisted Capacities}
 \paragraph{Three-party non-signaling assistance} We now consider the case where the senders and the receiver are given non-signaling assistance. This resource, which is a theoretical but easier to manipulate generalization of quantum entanglement, can be characterized as follows. A tripartite non-signaling box is described by a joint conditional probability distribution $P(x_1x_2(j_1j_2)|i_1i_2y)$ such that the marginal from any two parties is independent from the removed party's input, i.e., we have:
 \begin{equation}
   \begin{aligned}
@@ -464,7 +464,7 @@ and by maximizing over all $P^1$ and $P^2$:
 Thus, as before, the capacity regions are the same.
 \end{proof}
 
-\section{Hardness of Approximation for Multiple-access Channel Coding}
+\section{Hardness of Approximation for Multiple-Access Channel Coding}
 \addcontentsline{tof}{section}{\protect\numberline{\thesection} Difficulté d'approximation pour le problème du codage pour les canaux à accès multiple}
 \label{section:hardness}
 Since MACs are more general than point-to-point channels (by defining $W(y|x_1x_2):=\hat{W}(y|x_1)$ for $\hat{W}$ a point-to-point channel and looking only at its first input), computing $\mathrm{S}(W,k_1,k_2)$ is \textrm{NP}-hard, and it is even \textrm{NP}-hard to approximate within a better ratio than $1-e^{-1}$, as a consequence of the hardness result for point-to-point channels from~\cite{BF18}.
@@ -568,7 +568,7 @@ by choosing $c=\frac{2}{\lambda\min(k_1,k_2)}$. Finally, for instances such that
 Therefore, if a polynomial-time approximation of the multiple-access channel coding problem of constant ratio $\lambda$ exists, then we have a polynomial-time $\frac{\lambda}{2}$-approximation of the bipartite densest subgraph problem for instances satisfying $|E| \geq \min(k_1,k_2)$ and $k_1,k_2 \geq \frac{4}{\lambda}$. Note that the bipartite densest subgraph problem can be solved in polynomial time for instances which do not satisfy these constraints (as $\frac{1}{\lambda}$ is constant). Thus, we have in all a constant polynomial-time approximation for the bipartite densest subgraph problem, which is in contradiction with Hypothesis~\ref{hypo:kANDFeige} as proved in~\cite{AAMMW11}. Hence, under Hypothesis~\ref{hypo:kANDFeige}, there is no polynomial-time $\Omega(1)$-approximation algorithm for the multiple-access channel coding problem.
 \end{proof}
 
-\section{Properties of Non-signaling Assisted Codes}
+\section{Properties of Non-Signaling Assisted Codes}
 \addcontentsline{tof}{section}{\protect\numberline{\thesection} Propriétés des codes avec assistance non-signalante}
 \label{section:complexity}
 \subsection{Symmetrization}
@@ -831,7 +831,7 @@ For the other direction, given those variables, non-signaling probability distri
   But $\ceil{2^{R_1nm}} = \ceil{2^{\frac{R_1nm}{nm+r}(nm+r)}} = \ceil{2^{\frac{R_1}{1+\delta}(nm+r)}}$ with $\delta = \frac{r}{nm} \leq \frac{1}{m}$, and symmetrically $\ceil{2^{R_1nm}} = \ceil{2^{\frac{R_1}{1+\delta}(nm+r)}}$. Thus in particular, for all $R'_1 \leq \frac{R_1}{1+\frac{1}{m}}$ and $R'_2 \leq \frac{R_2}{1+\frac{1}{m}}$, we have that for all $n'\geq nm, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n'},\ceil{2^{R_1'n'}},\ceil{2^{R_2'n'}}) = 1$. So for any $(R_1',R_2')$ such that $R'_1 < R_1$ and $R'_2 < R_2$, there is large enough $m$ such that $R'_1 \leq \frac{R_1}{1+\frac{1}{m}}$ and $R'_2 \leq \frac{R_2}{1+\frac{1}{m}}$, and thus we get the expected property on $(R_1',R_2')$ for $n_0:=nm$.
 \end{proof}
 
-\subsection{Linear Program with Reduced Size for Structured Channels}
+\subsection{Linear Program With Reduced Size for Structured Channels}
 
 Although $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ can be computed in polynomial time in $W$, $k_1$ and $k_2$, a channel of the form $W^{\otimes n}$ has exponential size in $n$. Thus, the linear program for $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ grows exponentially with $n$. However, using the invariance of $W^{\otimes n}$ under permutations, one can find a much smaller linear program computing $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$.
 
@@ -1018,10 +1018,10 @@ In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For al
    which was what we wanted to show.
 \end{proof}
   
-\section{Non-signaling Achievability Bounds}
+\section{Non-Signaling Achievability Bounds}
 \addcontentsline{tof}{section}{\protect\numberline{\thesection} Bornes sur les taux atteignables avec assistance non-signalante}
 \label{section:IB}
-\subsection{Zero-error Non-signaling Assisted Achievable Rate Pairs}
+\subsection{Zero-Error Non-Signaling Assisted Achievable Rate Pairs}
 We will now present a numerical method to find efficiently inner bounds on $\mathcal{C}_0^{\mathrm{NS}}(W)$. Thanks to Corollary~\ref{cor:poly}, we know how to decide in polynomial time in $n,k_1,k_2$ whether $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1$. However, by Proposition~\ref{prop:ZENScapacity}, if $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1$, then we have that $\left(\frac{\log(k_1)}{n},\frac{\log(k_2)}{n}\right) \in \mathcal{C}_0^{\mathrm{NS}}(W)$, which describes a way of computing achievable points for that capacity region. More precisely, this leads to the following result:
 
 \begin{proposition}[Inner Bounds on $\mathcal{C}_0^{\mathrm{NS}}(W)$]
@@ -1118,7 +1118,7 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
     Since $2^{8\frac{\log_2(72)}{8}}=72$ and numerically $\mathrm{S}^{\mathrm{NS}}(W^{\otimes 8}_{\mathrm{BAC}},72,72)=1$ thanks to Corollary~\ref{cor:poly}, we get that  $\left(\frac{\log_2(72)}{8},\frac{\log_2(72)}{8}\right) \in \mathcal{C}^{\mathrm{NS}}_0(W_{\mathrm{BAC}})$ by Proposition~\ref{prop:ZENScapacity}. However, $\frac{\log_2(72)}{8}+\frac{\log_2(72)}{8} > \frac{3}{2}$ so $\left(\frac{\log_2(72)}{8},\frac{\log_2(72)}{8}\right) \not\in \mathcal{C}(W_{\mathrm{BAC}})$ by Theorem~\ref{theo:capacity} applied to $W_{\mathrm{BAC}}$. Since $\mathcal{C}(W_{\mathrm{BAC}}) \subseteq \mathcal{C}^{\mathrm{NS}}(W_{\mathrm{BAC}})$ and $\mathcal{C}^{\mathrm{NS}}_0(W_{\mathrm{BAC}}) \subseteq \mathcal{C}^{\mathrm{NS}}(W_{\mathrm{BAC}})$, we thus get that $\mathcal{C}(W_{\mathrm{BAC}}) \subsetneq \mathcal{C}^{\mathrm{NS}}(W_{\mathrm{BAC}})$.
   \end{proof}
 
-  \subsection{Non-signaling Assisted Achievable Rate Pairs with Non-zero Error}
+  \subsection{Non-Signaling Assisted Achievable Rate Pairs With Non-Zero Error}
   We have analyzed the non-signaling assisted capacity region through zero-error strategies and applied it to the BAC. However, if some noise is added to that channel, its zero-error non-signaling assisted capacity region becomes trivial (see Proposition~\ref{prop:NScapaNoisy}). Thus, the previous method fails to find significant inner bounds on the non-signaling assisted capacity region of noisy MACs.
 
   In this section, we use concatenated codes to obtain achievable rate pairs, and apply it to a noisy version of the BAC:
@@ -1285,7 +1285,7 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
           ] table[x=R1,y=R2,col sep=comma] {Data/Data_Capacity_BACwithSmallBitFlipNoise/Capacity5.csv};
           \coordinate (spypoint) at (0.745,0.745);
           \coordinate (magnifyglass) at (0.5,0.5);
-          \legend{$\mathcal{C}(W_{\text{BAC},\varepsilon,\varepsilon})$ for $\varepsilon = 10^{-3}$, Zero-error Non-signaling Capacity Region, Non-signaling Achievable Points for $3$ copies, Non-signaling Achievable Points for $5$ copies}
+          \legend{$\mathcal{C}(W_{\text{BAC},\varepsilon,\varepsilon})$ for $\varepsilon = 10^{-3}$, Zero-Error Non-Signaling Capacity Region, Non-Signaling Achievable Points for $3$ Copies, Non-Signaling Achievable Points for $5$ Copies}
         \end{axis}
      
         \spy [size=3cm] on (spypoint) in node [fill=white] at (magnifyglass);        
@@ -1298,7 +1298,7 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
 \shorthandon{;}
 Compared to the noiseless binary adder channel, we can first notice that the classical capacity region is slightly smaller, with a classical  sum-rate capacity of $1.478$ at most. On the other hand, although the zero-error non-signaling assisted capacity of $W_{\text{BAC},\varepsilon,\varepsilon}$ is completely trivial, we have with our concatenated codes strategy found significant rate pairs achievable with non-signaling assistance. In particular, we have reached a non-signaling assisted sum-rate capacity of $1.493$ which beats the best classical sum-rate capacity. Thus, it shows that non-signaling assistance can improve the capacity of the noisy binary adder channel as well.
 
-\section{Relaxed Non-signaling Assisted Capacity Region and Outer Bounds}
+\section{Relaxed Non-Signaling Assisted Capacity Region and Outer Bounds}
 \addcontentsline{tof}{section}{\protect\numberline{\thesection} Zone de capacité avec assistance non-signalante relaxée et bornes extérieures}
 \label{section:OB}
 A natural question that arises when studying the strength of non-signaling assistance is whether a result similar to Theorem~\ref{theo:capacity} can be found to describe by a single-letter formula the non-signaling assisted capacity region of MACs. In particular, dropping the constraint that $(X_1,X_2)$ is in product form in Theorem~\ref{theo:capacity} seems to be a particularly good candidate to characterize the non-signaling assisted capacity region of MACs, as this looks quite similar to allowing correlations between parties.
@@ -1787,7 +1787,7 @@ In order to show additivity of the outer bound, we use the following lemma.
 
       The main consequence of that outer bound on the relaxed non-signaling assisted capacity region is that it holds also for the non-signaling assisted capacity region thanks to Corollary~\ref{cor:NSisrelaxed}:
 
-      \begin{corollary}[Outer Bound on the Non-signaling Assisted Capacity Region]
+      \begin{corollary}[Outer Bound on the Non-Signaling Assisted Capacity Region]
         \label{cor:OB}
         If a rate pair is achievable with non-signaling assistance, then it is in the closure of the convex hull of all $(R_1,R_2)$ satisfying:
         \[ R_1 < I(X_1:Y|X_2)\ ,\ R_2 < I(X_2:Y|X_1)\ ,\ R_1+R_2 < I((X_1,X_2):Y) \ ,\]
@@ -1901,7 +1901,7 @@ In order to show additivity of the outer bound, we use the following lemma.
   \end{proof}
 
 
-  \section{Independent Non-signaling Assisted Capacity Region}
+  \section{Independent Non-Signaling Assisted Capacity Region}
   \addcontentsline{tof}{section}{\protect\numberline{\thesection} Zone de capacité avec assistance non-signalante indépendante}
   \label{section:NSsr}
 The goal of this section is to show that independent non-signaling assistance does not change the capacity region of a MAC $W$, i.e. that $\mathcal{C}^{\mathrm{NS}_{\mathrm{SR}}}(W)=\mathcal{C}(W)$. In order to prove this result, we will need some properties in the one-sender one-receiver case from~\cite{BF18} recalled in Section~\ref{subsection:onewaychannelcoding}.
