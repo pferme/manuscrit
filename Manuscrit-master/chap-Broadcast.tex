@@ -497,7 +497,7 @@ We will reformulate \textsc{DetBCC} as a bipartite graph problem. But first, let
 
 Now, let us remark that a deterministic channel $W$, up to a permutation of elements of $\mathcal{X}$, is characterized by the following bipartite graph:
 
-\begin{definition}[Bipartite Graph $G_W$ associated to the deterministic channel $W$]
+\begin{definition}[Bipartite Graph $G_W$ associated with the deterministic channel $W$]
 \[ G_W:=(\mathcal{Y}_1 \sqcup \mathcal{Y}_2, E = \{(y_1,y_2) \in \mathcal{Y}_1 \times \mathcal{Y}_2: \exists x \in \mathcal{X}, y_1=W_1(x) \text{ and } y_2=W_2(x)\}) \ . \]
 \end{definition}
 
@@ -582,7 +582,7 @@ The approximation algorithm is a two-step process. First, we consider the proble
 \begin{proof}[Proof of Theorem~\ref{theo:DQGapprox}]
   Consider first the hardness result. Let us show that the decision version of \textsc{DensestQuotientGraph} is \textrm{NP}-complete. It is in \textrm{NP}, the certificate being the two partitions and the selection of edges between those partitions. It is \textrm{NP}-hard as one of its particular cases is the \textsc{SetSplitting} problem (see for instance~\cite{GJ79}), in the case where $k_1=2$ and $k_2=|V_2|$, by interpreting the neighbors of $v_2 \in V_2$ as a set covering elements of $V_1$.
 
-We will show nonetheless that this problem can be approximated within a factor $(1-e^{-1})^2$ in polynomial time. First we consider the case where $k_2=|V_2|$. We can then always assume that the right partition is $\mathcal{P}_2 := \{ \{v_2\} : v_2 \in V_2 \}$, which leads necessarily to a greater or equal number of edges in the quotient graph that with any other right partition. So, in that setting, we need only to find a partition of $V_1$ in $k_1$ parts maximizing the number of edges between vertices in the right part and the quotient of the left vertices.
+We will show nonetheless that this problem can be approximated within a factor $(1-e^{-1})^2$ in polynomial time. First we consider the case where $k_2=|V_2|$. We can then always assume that the right partition is $\mathcal{P}_2 := \{ \{v_2\} : v_2 \in V_2 \}$, which leads necessarily to a greater or equal number of edges in the quotient graph that with any other right partition. So, in that setting, we only need to find a partition of $V_1$ in $k_1$ parts maximizing the number of edges between vertices in the right part and the quotient of the left vertices.
 
 First, the maximum value we can get is upper bounded by $\sum_{v_2 \in V_2}\min\left(k_1,\deg(v_2)\right)$. Indeed, each vertex of $v_2$ van be connected at most to the $k_1$ parts of $V_1$, so its contribution is bounded by $k_1$, and there needs to be an edge to each part it is connected, so its contribution is also bounded by $\deg(v_2)$. Let us show that if we take a partition $\mathcal{P}_1$ of $V_1$ uniformly at random, we get:
 \begin{equation}
