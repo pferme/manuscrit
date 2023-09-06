@@ -507,13 +507,13 @@ Given a bipartite graph $G = (A \sqcup B, E)$, we define its associated MAC $W_G
 \begin{equation}
   W((a',b')|ab) = \begin{cases}
       \begin{aligned}
-      &\delta_{a,a'}\delta_{b,b'} &&\text{if } (a,b) \in E \ ,\\
+      &\mathbbm{1}_{a=a'}\mathbbm{1}_{b=b'} &&\text{if } (a,b) \in E \ ,\\
       &\frac{1}{|A||B|} &&\text{otherwise} \ .
       \end{aligned}
 \end{cases}
 \end{equation}
 
-It is indeed a MAC as $\sum_{a',b'}W((a',b')|ab) = \sum_{a',b'} \delta_{a,a'}\delta_{b,b'} = 1$ if $(a,b) \in E$ and $\sum_{a',b'}W((a',b')|ab) = \sum_{a',b'}\frac{1}{|A||B|} = 1$ otherwise.
+It is indeed a MAC as $\sum_{a',b'}W((a',b')|ab) = \sum_{a',b'} \mathbbm{1}_{a=a'}\mathbbm{1}_{b=b'} = 1$ if $(a,b) \in E$ and $\sum_{a',b'}W((a',b')|ab) = \sum_{a',b'}\frac{1}{|A||B|} = 1$ otherwise.
 
 We claim the following linear relation between the objective functions of the bipartite densest subgraph problem on $G$ and the multiple-access channel coding problem on $W_G$:
 \begin{lemma}
@@ -1035,7 +1035,7 @@ This implies that we can find efficiently achievable rate pairs for MACs.
 
 \paragraph{Application to the binary adder channel}
 The binary adder channel $W_{\text{BAC}}$ is defined by:
-\[ \forall x_1,x_2 \in \{0,1\}, \forall y \in \{0,1,2\}, W_{\text{BAC}}(y|x_1x_2) := \delta_{y,x_1+x_2} \ .\]
+\[ \forall x_1,x_2 \in \{0,1\}, \forall y \in \{0,1,2\}, W_{\text{BAC}}(y|x_1x_2) := \mathbbm{1}_{y=x_1+x_2} \ .\]
 
 Its classical capacity region $\mathcal{C}(W_{\text{BAC}})$ is well known and consists of all $(R_1,R_2)$ such that $R_1 \leq 1,R_2 \leq 1, R_1+R_2 \leq \frac{3}{2}$, as a consequence of Theorem~\ref{theo:capacity}. Its zero-error classical capacity $\mathcal{C}_0(W_{\text{BAC}})$ is not yet characterized. A lot of work has been done in finding outer and inner bounds on this region~\cite{Lindstrom69,Tilborg78,KL78,Weldon78,KLWY83,BT85,BB98,UL98,AB99,MO05,OS15}. To date, the best lower bound on the sum-rate capacity is $\log_2(240/6) \simeq 1.3178$~\cite{MO05}.
 
@@ -1124,7 +1124,7 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
   In this section, we use concatenated codes to obtain achievable rate pairs, and apply it to a noisy version of the BAC:
 
   \begin{definition}[Concatenated Codes]
-  Given a MAC$W$ and a non-signaling assisted code $P$, let $W[P] : [k_1] \times [k_2] \rightarrow [\ell]$ with $W[P](j|i_1i_2) := \sum_{x_1,x_2,y}W(y|x_1x_2)P(x_1x_2j|i_1i_2y)$:
+  Given a MAC $W$ and a non-signaling assisted code $P$, let $W[P] : [k_1] \times [k_2] \rightarrow [\ell]$ with $W[P](j|i_1i_2) := \sum_{x_1,x_2,y}W(y|x_1x_2)P(x_1x_2j|i_1i_2y)$:
 \begin{center}
   \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [input, name=i1] {};
@@ -1200,7 +1200,7 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
   
   Thanks to Proposition~\ref{prop:concatCodes}, we have for any non-signaling assisted code $P$, $\mathcal{C}(W^{\otimes n}[P]) \subseteq \mathcal{C}^{\mathrm{NS}}(W^{\otimes n})$. But if $(R_1,R_2) \in \mathcal{C}^{\mathrm{NS}}(W^{\otimes n})$, we have that $(\frac{R_1}{n},\frac{R_2}{n}) \in \mathcal{C}^{\mathrm{NS}}(W)$. Thus, applying Theorem~\ref{theo:capacity} on $W^{\otimes n}[P]$ leads to inner bounds on $\mathcal{C}^{\mathrm{NS}}(W)$:
   \begin{proposition}[Inner Bounds on $\mathcal{C}^{\mathrm{NS}}(W)$]
-    \label{prop:NumericalMethod} For any number of copies $n$, number of inputs $k_1 \in [|\mathcal{X}_1|^n]$ and $k_2 \in [|\mathcal{X}_2|^n]$, non-signaling assisted codes $P$ on inputs in $[k_1],[k_2]$ for $W^{\otimes n}$, and distributions $q_1,q_2$ on $[k_1],[k_2]$, we have that the following $(R_1,R_2)$ are in $\mathcal{C}^{\mathrm{NS}}(W)$: 
+    \label{prop:NumericalMethod} For any number of copies $n$, number of inputs $k_1 \in [|\mathcal{X}_1|^n]$ and $k_2 \in [|\mathcal{X}_2|^n]$, non-signaling assisted codes $P$ on inputs in $[k_1],[k_2]$ for $W^{\otimes n}$, and distributions $q_1,q_2$ on $[k_1],[k_2]$, we have that the rate pairs $(R_1,R_2)$ satisfying the following constraints are in $\mathcal{C}^{\mathrm{NS}}(W)$: 
   \[ R_1 \leq \frac{I(I_1:J|I_2)}{n}\ ,\ R_2 \leq \frac{I(I_2:J|I_1)}{n}\ ,\ R_1+R_2 \leq \frac{I((I_1,I_2):J)}{n} \ ,\]
   for $(I_1,I_2) \in [k_1] \times [k_2]$ following the product law $q_1 \times q_2$, and $J \in [\ell]$ the outcome of $W^{\otimes n }[P]$ on inputs $I_1,I_2$. In particular, the corner points of this capacity region are given by:
   \[ \left(\frac{I(I_1:J|I_2)}{n},\frac{I(I_2 : J)}{n} \right) \text{ and } \left(\frac{I(I_1 : J)}{n} ,\frac{I(I_2:J|I_1)}{n}\right) \ .\]
@@ -1241,7 +1241,7 @@ Note that the linear program from Theorem~\ref{theo:polyLP} has still a large nu
         &\leq \frac{1}{k_1k_2} \sum_{x_1^n,x_2^n,y^n} W^{\otimes n}(y^n|x_1^nx_2^n)p_{x_1^n,x_2^n} = 1 \ ,
       \end{aligned}
     \end{equation}
-    which implies the previous statement. But, for $W_{\text{BAC},\varepsilon_1, \varepsilon_2}^{\otimes n}$, one can easily check that for all $y^n,x_1^n,x_2^n$, $W^{\otimes n}(y^n|x_1^nx_2^n) > 0$ since $\varepsilon_1,\varepsilon_2 \in (0,1)$. Indeed, you just have to flip the inputs to a valid preimage of the output. Thus if $\mathrm{S}^{NS}(W_{\text{BAC},\varepsilon_1, \varepsilon_2}^{\otimes n},k_1,k_2) = 1$, we have that $\forall y^n,x_1^n,x_2^n, r_{x_1^n,x_2^n,y^n} = p_{x_1^n,x_2^n}$. In particular, this implies that $\sum_{x_1^n,x_2^n} r_{x_1^n,x_2^n,y^n} = \sum_{x_1^n,x_2^n} p_{x_1^n,x_2^n}$, therefore $1 = k_1k_2$, so $k_1 = 1$ and $k_2 = 1$. Thus $\mathrm{S}^{NS}(W^{\otimes n},2^{nR_1},2^{nR_2}) = 1$ implies that $(R_1,R_2)=(0,0)$. 
+    which implies the previous statement. But, for $W_{\text{BAC},\varepsilon_1, \varepsilon_2}^{\otimes n}$, one can easily check that for all $y^n,x_1^n,x_2^n$, $W^{\otimes n}(y^n|x_1^nx_2^n) > 0$ since $\varepsilon_1,\varepsilon_2 \in (0,1)$. Indeed, one can flip the inputs to a valid preimage of the output. Thus if $\mathrm{S}^{NS}(W_{\text{BAC},\varepsilon_1, \varepsilon_2}^{\otimes n},k_1,k_2) = 1$, we have that $\forall y^n,x_1^n,x_2^n, r_{x_1^n,x_2^n,y^n} = p_{x_1^n,x_2^n}$. In particular, this implies that $\sum_{x_1^n,x_2^n} r_{x_1^n,x_2^n,y^n} = \sum_{x_1^n,x_2^n} p_{x_1^n,x_2^n}$, therefore $1 = k_1k_2$, so $k_1 = 1$ and $k_2 = 1$. Thus $\mathrm{S}^{NS}(W^{\otimes n},2^{nR_1},2^{nR_2}) = 1$ implies that $(R_1,R_2)=(0,0)$. 
   \end{proof}
 
   We have then applied the numerical method described in Proposition~\ref{prop:NumericalMethod} to $W_{\text{BAC},\varepsilon_1, \varepsilon_2}$ for the symmetric case $\varepsilon_1 = \varepsilon_2 = \varepsilon := 10^{-3}$. Since it is hard to go through all non-signaling assisted codes $P$ and product distributions $q_1,q_2$, we have applied the heuristic of using non-signaling assisted codes obtained while optimizing $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ in the symmetrized linear program. We have combined them with uniform $q_1,q_2$, as the form of those non-signaling assisted codes coming from our optimization program is symmetric. We have evaluated the achievable corner points for all $k_1, k_2 \leq 2^n$ for $n \leq 5$ copies which led to Figure~\ref{fig:noisyBAC}:
@@ -1384,7 +1384,7 @@ The following proposition shows that this is indeed a relaxation of the non-sign
   \end{theorem}
 
   \begin{rk}
-    Note that the only difference with the classical capacity region of MACs in Theorem~\ref{theo:capacity} is that the joint distribution of $X_1$ and $X_2$ does not have any product form constraints here.
+    Note that the only difference with the classical capacity region of MACs in Theorem~\ref{theo:capacity} is that the joint distribution of $X_1$ and $X_2$ does not have a product form constraint here.
   \end{rk}
 
   The proof of Theorem~\ref{theo:CharaNSrelaxed} will be divided in Proposition~\ref{prop:OBNSrelaxed} (outer bound part) and Proposition~\ref{prop:AchievabilityNSrelaxed} (achievability part). But first, let us apply these results to the binary adder channel.
