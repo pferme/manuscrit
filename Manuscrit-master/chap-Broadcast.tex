@@ -211,7 +211,7 @@ The objective of this section is to show that sharing non-signaling assistance b
 This should be compared to the sum success probability $\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d)$ of encoding and decoding correctly with those:
 \[ \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\left[\frac{\sum_{j_2}d(i_1j_2|y_1y_2)+\sum_{j_1}d(j_1i_2|y_1y_2)}{2}\right] \ . \]
 
-Similarly to what was done in Proposition~\ref{prop:capacitysum}, we focus on the error probabilities rather than success probabilities. This leads again to:
+Similarly to what was done in Proposition~\ref{prop:capacitysum}, we focus on error probabilities rather than success probabilities. This leads again to:
 \[ \mathrm{E}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d) = \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\left[1-d(i_1i_2|y_1y_2)\right] \ , \]
 and $\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2,e,d)$ equal to:
 \[ \frac{1}{k_1k_2}\sum_{i_1,i_2,x,y_1,y_2} W(y_1y_2|x)e(x|i_1i_2)\left[\frac{1-\sum_{j_2}d(i_1j_2|y_1y_2)}{2}+\frac{1-\sum_{j_1}d(j_1i_2|y_1y_2)}{2}\right] \ . \]
