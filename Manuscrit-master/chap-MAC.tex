@@ -1560,7 +1560,7 @@ In order to prove Proposition~\ref{prop:OBNSrelaxed}, we use a connection betwee
   \begin{proof}
     This result is a direct generalization of Theorem 9 in~\cite{Matthews12} for point-to-point channels, itself a generalization of Theorem 27 in~\cite{PPV10} without non-signaling assistance.
 
-    Let us name $W_0:=W$ and $W_1$ a MAC yet to be defined. The coding strategy described by $r_{x_1,x_2,y}$ and $p_{x_1, x_2}$ leads to a probability of success on channel $i \in \{0,1\}$ is given by:
+    Let us name $W_0:=W$ and $W_1$ a MAC yet to be defined. The coding strategy described by $r_{x_1,x_2,y}$ and $p_{x_1, x_2}$ leads to a probability of success on channel $i \in \{0,1\}$ given by:
   \begin{equation}
     \begin{aligned}
       1 - \varepsilon_i &= \frac{1}{k_1k_2}\sum_{x_1,x_2,y} r_{x_1,x_2,y}W_i(y|x_1x_2)\\
@@ -1827,15 +1827,15 @@ In order to show additivity of the outer bound, we use the following lemma.
     \end{equation}
   We define a solution of $\mathrm{S}^{\overline{\mathrm{NS}}}(W^{\otimes n},2^{nR_1},2^{nR_2})$ in the following way:
   \[ p_{x_1^n,x_2^n} := \begin{cases}
-    \frac{2^{n(R_1+R_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)} & \text{ if } (x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2) \\
-    0 & \text{ otherwise}
+    \frac{2^{n(R_1+R_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)}{\sum_{(x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2)}P_{X_1^nX_2^n}(x_1^n,x_2^n)} & \text{ if } (x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2) \ , \\
+    0 & \text{ otherwise} \ .
   \end{cases}
   \]
 
   and:
   \[ r_{x_1^n,x_2^n,y^n} := \begin{cases}
-    p_{x_1^n,x_2^n} & \text{ if } (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y) \\
-    0 & \text{ otherwise}
+    p_{x_1^n,x_2^n} & \text{ if } (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y) \ ,\\
+    0 & \text{ otherwise} \ .
   \end{cases}
     \]
 
