@@ -616,7 +616,7 @@ Another open question is whether the hardness result remains true when $\varphi(
 \newpage
 \section{Appendix}
 \subsection{General Properties}
-In this section, we will assume that $\varphi$ is specified over the nonnegative integers (i.e., $\varphi : \mathbb{N} \rightarrow \mathbb{R}_+$) and it is nondecreasing, concave, and normalized: $\varphi(0)=0$ and $\varphi(1)=1$. We will consider its piecewise linear extension on  $\mathbb{R}_+$ by defining $\varphi(x) := \lambda \varphi(\lfloor x \rfloor) + (1-\lambda)\varphi(\lceil x \rceil)$; here, parameter $\lambda\in [0,1]$ satisfies $x = \lambda\lfloor x \rfloor + (1-\lambda)\lceil x \rceil$. Note that the piecewise linear extension is also nondecreasing and concave.
+In this section, we will assume that $\varphi$ is specified over nonnegative integers (i.e. $\varphi : \mathbb{N} \rightarrow \mathbb{R}_+$) and that it is nondecreasing, concave, and normalized (i.e. $\varphi(0)=0$ and $\varphi(1)=1$). We will consider its piecewise linear extension on $\mathbb{R}_+$ by defining $\varphi(x) := \lambda \varphi(\lfloor x \rfloor) + (1-\lambda)\varphi(\lceil x \rceil)$; here, parameter $\lambda\in [0,1]$ satisfies $x = \lambda\lfloor x \rfloor + (1-\lambda)\lceil x \rceil$. Note that the piecewise linear extension is also nondecreasing and concave.
 
 \begin{proposition}
 For all $x \in \mathbb{R}_+$, we have $\alpha_{\varphi}(x) \geq \min(\alpha_{\varphi}(\lfloor x \rfloor), \alpha_{\varphi}(\lceil x \rceil))$; here, $\alpha_{\varphi}(0) := \underset{x \rightarrow 0}{\lim} \alpha_{\varphi}(x) = 1$.
@@ -624,17 +624,19 @@ For all $x \in \mathbb{R}_+$, we have $\alpha_{\varphi}(x) \geq \min(\alpha_{\va
 \end{proposition}
 \begin{proof}
 For any $x \geq 1$, consider parameter $\lambda \in [0,1]$ such that $x = \lambda \lfloor x \rfloor + (1-\lambda) \lceil x \rceil$. Since $x \mapsto \mathbb{E}[\varphi(\Poi(x))]$ is concave (Proposition~\ref{prop:PoiCon}), the following bound holds for all $x \geq 1$:
-  \begin{align*}
+  \begin{equation}
+    \begin{aligned}
       \mathbb{E}[\varphi(\Poi(x))] &\geq \lambda \mathbb{E}[\varphi(\Poi(\lfloor x \rfloor))] + (1-\lambda) \mathbb{E}[\varphi(\Poi(\lceil x \rceil))] \\      
       &=  \lambda \alpha_{\varphi}(\lfloor x \rfloor)\varphi(\lfloor x \rfloor) + (1-\lambda) \alpha_{\varphi}(\lceil x \rceil)\varphi(\lceil x \rceil) \quad \text{by definition of $\alpha_{\varphi}(x)$}\\
       &\geq \min(\alpha_{\varphi}(\lfloor x \rfloor), \alpha_{\varphi}(\lceil x \rceil)) \left(\lambda \varphi(\lfloor x \rfloor) + (1-\lambda) \varphi(\lceil x \rceil) \right)\\
-      &=  \min(\alpha_{\varphi}(\lfloor x \rfloor), \alpha_{\varphi}(\lceil x \rceil)) \varphi(x) \quad \text{since $\varphi$ linear between integer points.} 
-  \end{align*}
-Therefore, $\alpha_{\varphi}(x) = \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x)} \geq \min(\alpha_{\varphi}(\lfloor x \rfloor), \alpha_{\varphi}(\lceil x \rceil))$.
+      &=  \min(\alpha_{\varphi}(\lfloor x \rfloor), \alpha_{\varphi}(\lceil x \rceil)) \varphi(x) \ ,
+    \end{aligned}
+  \end{equation}
+since $\varphi$ linear between integers. Therefore, $\alpha_{\varphi}(x) = \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x)} \geq \min(\alpha_{\varphi}(\lfloor x \rfloor), \alpha_{\varphi}(\lceil x \rceil))$.
 
 
-Next we will show that $\alpha_{\varphi}(x)$ is nonincreasing from $0$ to $1$, which implies that for $x \in [0,1)$, we have $\alpha_{\varphi}(x) \geq  \min(\alpha_{\varphi}(\lfloor x \rfloor), \alpha_{\varphi}(\lceil x \rceil))$.
-Recall that $\varphi$, by definition, is linear between integers. Hence, the fact that $\varphi(0) = 0$ and $\varphi(1) = 1$, gives us $\varphi(x) = x$ for all $x \in [0,1]$. Therefore, 
+We will show next that $\alpha_{\varphi}(x)$ is nonincreasing from $0$ to $1$, which implies that for $x \in [0,1)$, we have $\alpha_{\varphi}(x) \geq  \min(\alpha_{\varphi}(\lfloor x \rfloor), \alpha_{\varphi}(\lceil x \rceil))$.
+Since $\varphi$ is linear between integers, $\varphi(0) = 0$ and $\varphi(1) = 1$, we have that $\varphi(x) = x$ for all $x \in [0,1]$. Therefore: 
   \[\alpha_{\varphi}(x) = \frac{\mathbb{E}[\varphi(\Poi(x))]}{x} = e^{-x}\sum_{k=1}^{+\infty}\frac{\varphi(k)}{k}\frac{x^{k-1}}{(k-1)!} = e^{-x}\sum_{k=0}^{+\infty}\frac{\varphi(k+1)}{k+1}\frac{x^k}{k!} \ . \]
   In particular, $\alpha_{\varphi}(x)$ is well-defined at $0$ and $\alpha_{\varphi}(0) = e^{-0}\sum_{k=0}^{+\infty}\frac{\varphi(k+1)}{k+1}\frac{0^k}{k!} = 1$. Now, consider the derivative:
   \begin{equation}
@@ -652,7 +654,7 @@ For any $\varepsilon >0$,  the bound $1 - \alpha_{\varphi}(x) \leq \varepsilon$ 
 \label{prop:ConvergenceRate}
 \end{proposition}
 \begin{proof}
-Write $X \sim \Poi(x)$ and note that $\mathbb{P}(X \leq x(1-\delta(x))) \leq \exp(-\frac{x\delta(x)^2}{2(1+\delta(x))})$, for any positive function $\delta(\cdot)$ which satisfies $\delta(x) < 1$, for all $x >1$; see, e.g.,~\cite{PoissonBound}. Therefore, 
+Write $X \sim \Poi(x)$ and note that $\mathbb{P}(X \leq x(1-\delta(x))) \leq \exp(-\frac{x\delta(x)^2}{2(1+\delta(x))})$, for any positive function $\delta(\cdot)$ which satisfies $\delta(x) < 1$, for all $x >1$; see for instance~\cite{PoissonBound}. Therefore:
   \begin{equation}
     \begin{aligned}
       \mathbb{E}[\varphi(X)] &\geq  e^{-x}\sum_{k=\lceil x(1-\delta(x)) \rceil}^{+\infty}\varphi(k)\frac{x^k}{k!} \quad \text{since $\varphi$ nonnegative} \\
@@ -665,8 +667,7 @@ Write $X \sim \Poi(x)$ and note that $\mathbb{P}(X \leq x(1-\delta(x))) \leq \ex
 Next, we will show that $\frac{\varphi(x(1-\delta(x)))}{\varphi(x)} \geq 1-\frac{\delta(x)+\frac{1}{x}}{1-\delta(x)}$. Towards this end, we will first bound $\varphi(x+y)-\varphi(x)$ in terms of $w^x_k = \varphi(x+k)-\varphi(x+k-1)$, which constitutes a nonincreasing sequence (since $\varphi$ is concave):
     \[ \varphi(x+y) - \varphi(x) \leq \varphi(x+\lfloor y \rfloor + 1)-\varphi(x+\lfloor y \rfloor) + \sum_{k=1}^{\lfloor y \rfloor} w^x_k \leq (\lfloor y \rfloor + 1) w^x_1 \ . \]
 
-    Applying this bound to $x(1-\delta(x))$ and $x\delta(x)$ gives us
-   
+    Applying this bound to $x(1-\delta(x))$ and $x\delta(x)$ gives us:   
       \begin{align}
         1 - \frac{\varphi(x(1-\delta(x)))}{\varphi(x)} &=  \frac{\varphi(x)-\varphi(x(1-\delta(x)))}{\varphi(x)} \leq \frac{(\lfloor x\delta(x) \rfloor+1) w^{x(1-\delta(x))}_1}{\varphi(x)} \nonumber \\
         &\leq  \frac{x\delta(x)+1}{\varphi(x)} \ \frac{\varphi(x(1-\delta(x)))}{x(1-\delta(x))} \leq \frac{x\delta(x)+1}{x(1-\delta(x))} = \frac{\delta(x)+\frac{1}{x}}{1-\delta(x)}. \label{ineq:phi-soup}    \end{align}
@@ -705,8 +706,7 @@ If $\varepsilon \geq 1$, we have $1 - \alpha_{\varphi}(x) \leq 1 \leq \varepsilo
 \end{proposition}
 
 \begin{proof}
-
-  We use the following lemma which is trivial to prove:
+  We will use the following straightforward lemma:
 
   \begin{lemma}[Properties of $\abs{S}_a = \abs{\set{i \in S : a \in T_i}}$.]
     We have:
@@ -1146,7 +1146,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
 
   \begin{definition}
     A Label Cover instance $\mathcal{L} = (A \sqcup B,E,[L],[R],\set{\pi_e}_{e \in E})$ consists of a bi-regular bipartite graph $(A \sqcup B,E)$ with right degree $t$, alphabet sets $[L],[R]$ and for every edge $e \in E$, a constraint $\pi_e :[L] \rightarrow [R]$.
-    A \emph{labeling} of $\mathcal{L}$ is a function $\sigma : A \rightarrow [L]$. We say that $\sigma$ \emph{strongly satisfies} a right vertex $v \in B$ if for every two neighbours $u,u'$ of $v$, we have $\pi_{(u,v)}(\sigma(u)) = \pi_{(u',v)}(\sigma(u'))$. Moreover, we say that  $\sigma$ \emph{weakly satisfies} a right vertex $v \in B$ if there exists two neighbours $u,u'$ of $v$ such that $\pi_{(u,v)}(\sigma(u)) = \pi_{(u',v)}(\sigma(u'))$.
+    A \emph{labeling} of $\mathcal{L}$ is a function $\sigma : A \rightarrow [L]$. We say that $\sigma$ \emph{strongly satisfies} a right vertex $v \in B$ if for every two neighbors $u,u'$ of $v$, we have $\pi_{(u,v)}(\sigma(u)) = \pi_{(u',v)}(\sigma(u'))$. Moreover, we say that  $\sigma$ \emph{weakly satisfies} a right vertex $v \in B$ if there exists two neighbors $u,u'$ of $v$ such that $\pi_{(u,v)}(\sigma(u)) = \pi_{(u',v)}(\sigma(u'))$.
   \end{definition}
 
  \begin{theorem}[$\delta$-Gap-Label-Cover$(t,R)$ from~\cite{DMMS20}]
@@ -1158,7 +1158,7 @@ since $\frac{\ell^\ell}{\ell!}e^{-\ell}$ is a decreasing sequence.
   \end{itemize}
 \end{theorem}
 
- The reduction is the following. From $\delta$-Gap-Label-Cover$(t,R)$, we take $h=t$ and the same parameters $\delta,R$. Given an instance $\mathcal{L} = (A \sqcup B,E,[L],[R],\set{\pi_e}_{e \in E})$, we take $\mathcal{G} = (A,E',[L],[R],\set{\pi'_{e',v}}_{e' \in E',v \in e'})$ with $E' = \set{N(b), b \in B}$ with $N(b)$ the set of neighbours of $b$ in $\mathcal{L}$, and $\pi'_{e',v} = \pi'_{N(b),v} := \pi_{v,b}$ since $v \in N(b)$. Since $(A \sqcup B,E)$ is bipartite and biregular, we get that our hypergraph has all hyperedges of size $h = \abs{N(b)} = t$, and that it is regular from the regular left degree of $(A \sqcup B,E)$. By construction, the notion of weakly and strongly satisfied is the same in both cases, as well as the labelings, and thus we have the \textrm{NP}-hardness of $\delta,h$-\textsc{AryGapLabelCover}.
+ The reduction is the following. From $\delta$-Gap-Label-Cover$(t,R)$, we take $h=t$ and the same parameters $\delta,R$. Given an instance $\mathcal{L} = (A \sqcup B,E,[L],[R],\set{\pi_e}_{e \in E})$, we take $\mathcal{G} = (A,E',[L],[R],\set{\pi'_{e',v}}_{e' \in E',v \in e'})$ with $E' = \set{N(b), b \in B}$ with $N(b)$ the set of neighbors of $b$ in $\mathcal{L}$, and $\pi'_{e',v} = \pi'_{N(b),v} := \pi_{v,b}$ since $v \in N(b)$. Since $(A \sqcup B,E)$ is bipartite and biregular, we get that our hypergraph has all hyperedges of size $h = \abs{N(b)} = t$, and that it is regular from the regular left degree of $(A \sqcup B,E)$. By construction, the notion of weakly and strongly satisfied is the same in both cases, as well as the labelings, and thus we have the \textrm{NP}-hardness of $\delta,h$-\textsc{AryGapLabelCover}.
 
  Note that both problems are in fact linearly equivalent since we could do the same reduction backwards.
  
