@@ -170,7 +170,7 @@ Equivalently, we have:
 \end{definition}
 
 \begin{definition}[Markov chain $X \rightarrow Y \rightarrow Z$]
-We say that $X \rightarrow Y \rightarrow Z$ forms a Markov chain if $Z$ is conditionally independent from $X$ given $Y$, that is to say:
+We say that $X \rightarrow Y \rightarrow Z$ forms a Markov chain if $Z$ is conditionally independent of $X$ given $Y$, that is to say:
 \[\forall x \in \mathcal{X},\forall y \in \mathcal{Y},\forall z \in \mathcal{Z}, P_{Z|X,Y}(z|x,y) = P_{Z|Y}(z|y)   \ .\]
 \end{definition}
 
@@ -232,7 +232,7 @@ We consider typical sets as defined in Chapter 2.5 of~\cite{GK11}:
             &+ \sum_{x,y} \mathbb{P}\left(\frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} < \frac{1-\varepsilon}{1-\varepsilon'}P_{X|Y}(x|y) \right) \ ,
           \end{aligned}
         \end{equation}
-        since $y^n \in  \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and thus $1-\varepsilon' \leq \frac{\pi(y|y^n)}{P_Y(y)} \leq 1+\varepsilon'$. However, since $\varepsilon' < \varepsilon$, we have $\frac{1+\varepsilon}{1+\varepsilon'} > 1$ and $\frac{1-\varepsilon}{1-\varepsilon'} < 1$. We will show that for all $x,y$ with $P_Y(y) > 0$, we have $\frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X|Y}(x|y)$ in probability, with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, which will be enough to conclude the proof.
+        since $y^n \in  \mathcal{T}^n_{\varepsilon'}(\mathcal{Y})$ and thus $1-\varepsilon' \leq \frac{\pi(y|y^n)}{P_Y(y)} \leq 1+\varepsilon'$. However, since $\varepsilon' < \varepsilon$, we have $\frac{1+\varepsilon}{1+\varepsilon'} > 1$ and $\frac{1-\varepsilon}{1-\varepsilon'} < 1$. We will show that for all $x,y$ with $P_Y(y) > 0$, we have $\frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X|Y}(x|y)$ in probability, with a convergence rate independent of $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, which will be enough to conclude the proof.
 
         Let us fix some $x,y$ with $P_Y(y) > 0$. Since $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$, we have in particular that $(1-\varepsilon')P_Y(y) \leq \pi(y|y^n) \leq (1+\varepsilon')P_Y(y)$. Thus $N := |\{i:y_i=y\}| = n\pi(y|y^n) \geq (1-\varepsilon')P_Y(y)n$. Then we have:
         \[ \frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} = \frac{1}{N}\sum_{i \in S}Z_i \text{ with }Z_i := \mathbbm{1}_{X_i=x} \text{ and } S := \{i:y_i=y\}\ . \]
@@ -251,7 +251,7 @@ We consider typical sets as defined in Chapter 2.5 of~\cite{GK11}:
           However, since $N \geq (1-\varepsilon')P_Y(y)n$, we get:
           \[ \mathbb{P}\left( \left|\frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} - P_{X|Y}(x|y) \right| \geq \eta \right) \leq \frac{\sigma_{x|y}^2}{\eta^2(1-\varepsilon')P_Y(y)n} \underset{n \rightarrow +\infty}{\rightarrow} 0 \ .\]
 
-          Thus, we have $\frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X|Y}(x|y)$ in probability with a convergence rate independent from $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$.
+          Thus, we have $\frac{\pi(x,y|X^n,y^n)}{\pi(y|y^n)} \underset{n \rightarrow +\infty}{\rightarrow} P_{X|Y}(x|y)$ in probability with a convergence rate independent of $y^n \in \mathcal{T}^n_{\varepsilon'}(Y)$.
       \end{proof}
 
 \subsection{Channels}

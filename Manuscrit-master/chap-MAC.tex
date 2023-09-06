@@ -167,7 +167,7 @@ Thus, up to a multiplicative factor $2$, the error is the same. In particular, w
 \end{proof}
 
 \subsection{Non-Signaling Assisted Capacities}
-\paragraph{Three-party non-signaling assistance} We now consider the case where the senders and the receiver are given non-signaling assistance. This resource, which is a theoretical but easier to manipulate generalization of quantum entanglement, can be characterized as follows. A tripartite non-signaling box is described by a joint conditional probability distribution $P(x_1x_2(j_1j_2)|i_1i_2y)$ such that the marginal from any two parties is independent from the removed party's input, i.e., we have:
+\paragraph{Three-party non-signaling assistance} We now consider the case where the senders and the receiver are given non-signaling assistance. This resource, which is a theoretical but easier to manipulate generalization of quantum entanglement, can be characterized as follows. A tripartite non-signaling box is described by a joint conditional probability distribution $P(x_1x_2(j_1j_2)|i_1i_2y)$ such that the marginal from any two parties is independent of the removed party's input, i.e., we have:
 \begin{equation}
   \begin{aligned}
     &&\forall x_2,j_1,j_2,i_1,i_2,y,i_1', &&&\sum_{x_1} P(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{x_1} P(x_1x_2(j_1j_2)|i_1'i_2y) \ ,\\
@@ -246,7 +246,7 @@ This implies that one can consider for example $P(x_1x_2|i_1i_2)$ since it does 
 \label{fig:MACNScoding}
 \end{figure}
 
-The cyclicity of Figure~\ref{fig:MACNScoding} is at first sight counter-intuitive. Note first that $P$ being a non-signaling box is completely independent from $W$: in particular, the variable $y$ does not need to follow any law in the definition of $P$ being a non-signaling box. Therefore, the remaining ambiguity is the apparent need to encode and decode at the same time. However, since $P$ is a non-signaling box, we do not need to do both at the same time. Indeed, $\forall y, P(x_1x_2|i_1i_2) = P(x_1x_2|i_1i_2y)$ by the non-signaling property of $P$. Thus, one can get the outputs $x_1,x_2$ on inputs $i_1,i_2$ without access to $y$, as that knowledge won't affect the laws of $x_1,x_2$. Then $y$ follows the law given by $W$ given those $x_1,x_2$. Finally, given access to $y$, the decoding process is described by:
+The cyclicity of Figure~\ref{fig:MACNScoding} is at first sight counter-intuitive. Note first that $P$ being a non-signaling box is completely independent of $W$: in particular, the variable $y$ does not need to follow any law in the definition of $P$ being a non-signaling box. Therefore, the remaining ambiguity is the apparent need to encode and decode at the same time. However, since $P$ is a non-signaling box, we do not need to do both at the same time. Indeed, $\forall y, P(x_1x_2|i_1i_2) = P(x_1x_2|i_1i_2y)$ by the non-signaling property of $P$. Thus, one can get the outputs $x_1,x_2$ on inputs $i_1,i_2$ without access to $y$, as that knowledge won't affect the laws of $x_1,x_2$. Then $y$ follows the law given by $W$ given those $x_1,x_2$. Finally, given access to $y$, the decoding process is described by:
           \[ P((j_1 j_2)|i_1 i_2 y x_1 x_2) = \frac{P(x_1 x_2 (j_1 j_2)|i_1 i_2 y)}{P(x_1 x_2 |i_1 i_2 y)} = \frac{P(x_1 x_2 (j_1 j_2)|i_1 i_2 y)}{P(x_1 x_2 |i_1 i_2)} \ , \]
           so we recover globally $P((j_1 j_2)|i_1 i_2 y x_1 x_2) \times P(x_1 x_2 |i_1 i_2) = P(x_1 x_2 (j_1 j_2)|i_1 i_2 y)$ the prescribed conditional probability. 
           The non-signaling condition ensures that it is possible to consider the conditional probabilities of each party independently. This clarifies how one can effectively encode and then decode messages through a non-signaling box.
@@ -447,13 +447,13 @@ and symetrically, we get that $\mathrm{E}_{\text{sum}}^{\mathrm{NS}_{\mathrm{SR}
   \end{aligned}
 \end{equation}
 
-with $T := \{(j_1,i_2) : j_1 \in [k_1]-\{i_1\}\} \cup \{(i_1,j_2) : j_2 \in [k_2]-\{i_2\}\}$. However, we have that:
+with $S := \{(j_1,i_2) : j_1 \in [k_1]-\{i_1\}\} \cup \{(i_1,j_2) : j_2 \in [k_2]-\{i_2\}\}$. However, we have that:
 \begin{equation}
   \begin{aligned}
-    &\sum_{j_1\not=i_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) + \frac{\sum_{(j_1,j_2) \in T}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)}{2}\\
-    &\leq \sum_{j_1\not=i_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) + \sum_{(j_1,j_2) \in T}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)\\
+    &\sum_{j_1\not=i_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) + \frac{\sum_{(j_1,j_2) \in S}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)}{2}\\
+    &\leq \sum_{j_1\not=i_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) + \sum_{(j_1,j_2) \in S}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)\\
     &= \sum_{(j_1,j_2) \not= (i_1,i_2)}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)\\
-    &\leq 2\left(\sum_{j_1\not=i_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) + \frac{\sum_{(j_1,j_2) \in T}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)}{2}\right) \ .
+    &\leq 2\left(\sum_{j_1\not=i_1,j_2\not=i_2}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y) + \frac{\sum_{(j_1,j_2) \in S}P^1(x_1j_1|i_1y)P^2(x_2j_2|i_2y)}{2}\right) \ .
   \end{aligned}
 \end{equation}
 
@@ -488,7 +488,7 @@ We will consider the following reformulation of the multiple-access channel codi
   over all sets $S \subseteq \mathcal{X}_1, T \subseteq \mathcal{X}_2$ with $|S|=k_1,|T|=k_2$.
 \end{proposition}
 \begin{proof}
-  As the multiple-access channel coding problem is a convex program, its optimal solution can be found on integer solutions, i.e. when $e_1,e_2$ and $d$ are functions. Note that that this restriction does not affect the hardness of the problem as a deterministic code with a better or equal value can be retrieved easily from any code.
+  As the multiple-access channel coding problem is a convex program, its optimal solution can be found on integer solutions, i.e. when $e_1,e_2$ and $d$ are functions. Note that this restriction does not affect the hardness of the problem as a deterministic code with a better or equal value can be retrieved easily from any code.
 
   Therefore, given encoders $e_1,e_2$, the objective value becomes:
   \[ \max_d\frac{1}{k_1k_2}\sum_{i_1,i_2,y}W(y|e_1(i_1)e_2(i_2))\mathbbm{1}_{d(y)=(i_1,i_2)} = \frac{1}{k_1k_2}\sum_y \max_{i_1,i_2} W(y|e_1(i_1)e_2(i_2)) \ ,\]
@@ -599,7 +599,7 @@ One can prove an equivalent formulation of the linear program computing $\mathrm
     &r^2_{x_1,x_2,y} := \sum_{j_2,i_1,i_2} P(x_1x_2(i_1j_2)|i_1i_2y) \ , &p_{x_1,x_2} := \sum_{j_1,j_2,i_1,i_2} P(x_1x_2(j_1j_2)|i_1i_2y) \ . \\
   \end{aligned}
 \end{equation}
-Note that $p_{x_1,x_2}$ is well-defined since $\sum_{j_1,j_2,i_1,i_2} P(x_1x_2(j_1j_2)|i_1i_2y)$ is independent from $y$ by since $P$ is a non-signaling box.
+Note that $p_{x_1,x_2}$ is well-defined since $\sum_{j_1,j_2,i_1,i_2} P(x_1x_2(j_1j_2)|i_1i_2y)$ is independent of $y$ as $P$ is a non-signaling box.
 
 For the other direction, given those variables, a non-signaling probability distribution $P(x_1x_2(j_1j_2)|i_1i_2y)$ achieving the same objective value is given by, for $j_1 \not=i_1$ and $j_2 \not= i_2$:
 \begin{equation}
@@ -636,7 +636,7 @@ This symmetrization can also be done for the program computing $\mathrm{S}_{\tex
     &r^2_{x_2,y} := \sum_{i_2} P^2(x_2i_2|i_2y) \ , &p^2_{x_2} := \sum_{j_2,i_2} P^2(x_2j_2|i_2y) \ .\\
   \end{aligned}
 \end{equation}
-Note that $p^1_{x_1}$ and $p^2_{x_2}$ are well-defined since  $\sum_{j_1,i_1} P^1(x_1j_1|i_1y)$ and $\sum_{j_2,i_2} P^2(x_2j_2|i_2y)$ are independent from $y$ since $P^1$ and $P^2$ are non-signaling boxes.
+Note that $p^1_{x_1}$ and $p^2_{x_2}$ are well-defined since  $\sum_{j_1,i_1} P^1(x_1j_1|i_1y)$ and $\sum_{j_2,i_2} P^2(x_2j_2|i_2y)$ are independent of $y$ as $P^1$ and $P^2$ are non-signaling boxes.
 
 For the other direction, given those variables, non-signaling probability distributions $P^1(x_1j_1|i_1y)$ and $P^2(x_2j_2|i_2y)$ achieving the same objective value are given by, for $j_1 \not=i_1$ and $j_2 \not= i_2$:
 \begin{equation}
@@ -796,11 +796,11 @@ For the other direction, given those variables, non-signaling probability distri
   \begin{enumerate}
     \item It comes directly from Proposition~\ref{prop:timesharing} and the fourth property of Proposition~\ref{prop:oneShot}.
     
-  \item By the second property of Proposition~\ref{prop:oneShot}, we have$\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \frac{|\mathcal{X}_1^n|}{k_1^n}$. In particular, if $R_1 > \log_2 |\mathcal{X}_1|$, then $k_1 > |\mathcal{X}_1|$ and we get that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \left(\frac{|\mathcal{X}_1|}{k_1}\right)^n \underset{n \rightarrow +\infty}{\rightarrow} 0$, so $R_1 > \log_2 |\mathcal{X}_1|$ is not achievable with non-signaling assistance. Symmetrically, $R_2 > \log_2 |\mathcal{X}_2|$ is not achievable with non-signaling assistance.
+  \item By the second property of Proposition~\ref{prop:oneShot}, we have $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \frac{|\mathcal{X}_1^n|}{k_1^n}$. In particular, if $R_1 > \log_2 |\mathcal{X}_1|$, then $k_1 > |\mathcal{X}_1|$ and we get that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \left(\frac{|\mathcal{X}_1|}{k_1}\right)^n \underset{n \rightarrow +\infty}{\rightarrow} 0$, so $R_1 > \log_2 |\mathcal{X}_1|$ is not achievable with non-signaling assistance. Symmetrically, $R_2 > \log_2 |\mathcal{X}_2|$ is not achievable with non-signaling assistance.
 
     Furthermore, if one takes $R_1+R_2 > \log_2|\mathcal{Y}|$, then in particular $k_1k_2 > |\mathcal{Y}|$, so by the second property of Proposition~\ref{prop:oneShot}, $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1^n,k_2^n) \leq \frac{|\mathcal{Y}^n|}{k_1^nk_2^n} = \left(\frac{|\mathcal{Y}|}{k_1k_2}\right)^n \underset{n \rightarrow +\infty}{\rightarrow} 0$. Thus, $R_1+R_2 > \log_2|\mathcal{Y}|$ is not achievable with non-signaling assistance.
     
-  \item Since $(R_1,R_2)$ is achievable with non-signaling assistance, we have by definition that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR_1}},\ceil{2^{nR_2}}) \underset{n \rightarrow +\infty}{\rightarrow} 1$. But, for all positive integer $n$, we have that $\ceil{2^{nR'_1}} \leq \ceil{2^{nR_1}}$ and $\ceil{2^{nR'_2}}\leq \ceil{2^{nR_2}}$, so by the third property of Proposition~\ref{prop:oneShot}, we have that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR'_1}},\ceil{2^{nR'_2}}) \geq \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR_1}},\ceil{2^{nR_2}})$. Thus $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR'_1}},\ceil{2^{nR'_2}} \underset{n \rightarrow +\infty}{\rightarrow} 1$ since it is upper bounded by $1$, and so $(R'_1,R'_2)$ is achievable with non-signaling assistance.
+  \item Since $(R_1,R_2)$ is achievable with non-signaling assistance, we have by definition that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR_1}},\ceil{2^{nR_2}}) \underset{n \rightarrow +\infty}{\rightarrow} 1$. But, for all positive integers $n$, we have that $\ceil{2^{nR'_1}} \leq \ceil{2^{nR_1}}$ and $\ceil{2^{nR'_2}}\leq \ceil{2^{nR_2}}$, so by the third property of Proposition~\ref{prop:oneShot}, we have that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR'_1}},\ceil{2^{nR'_2}}) \geq \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR_1}},\ceil{2^{nR_2}})$. Thus $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{nR'_1}},\ceil{2^{nR'_2}} \underset{n \rightarrow +\infty}{\rightarrow} 1$ since it is upper bounded by $1$, and so $(R'_1,R'_2)$ is achievable with non-signaling assistance.
   \end{enumerate}
 \end{proof}
 
@@ -817,7 +817,7 @@ For the other direction, given those variables, non-signaling probability distri
   \[ \exists n_0 \in \mathbb{N}^*, \forall n \geq n_0, \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1'n}},\ceil{2^{R_2'n}}) = 1 \ , \]
   which is enough to conclude, since we consider only closure of such sets.
   
-  First, for all positive integer $m$, we have that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes nm},\ceil{2^{R_1nm}},\ceil{2^{R_2nm}}) = 1$. By the fourth property of Proposition~\ref{prop:oneShot}, we have that $\mathrm{S}^{\mathrm{NS}}(\left(W^{\otimes n}\right)^{\otimes m},\ceil{2^{R_1n}}^m,\ceil{2^{R_2n}}^m) \geq \left[\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}})\right]^m = 1$, so $\mathrm{S}^{\mathrm{NS}}(\left(W^{\otimes n}\right)^{\otimes m},\ceil{2^{R_1n}}^m,\ceil{2^{R_2n}}^m) = 1$ since $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq 1$ by the first property of Proposition~\ref{prop:oneShot}. But $\left(W^{\otimes n}\right)^{\otimes m} = W^{\otimes nm}$, and $\ceil{2^{R_1n}}^m \geq \ceil{2^{R_1nm}},\ceil{2^{R_2n}}^m \geq \ceil{2^{R_2nm}}$, so by the third property of Proposition~\ref{prop:oneShot}, we have $\mathrm{S}^{\mathrm{NS}}(W^{\otimes nm},\ceil{2^{R_1nm}},\ceil{2^{R_2nm}}) \geq 1$, so $\mathrm{S}^{\mathrm{NS}}(W^{\otimes nm},\ceil{2^{R_1nm}},\ceil{2^{R_2nm}})=1$.
+  First, for all positive integers $m$, we have that $\mathrm{S}^{\mathrm{NS}}(W^{\otimes nm},\ceil{2^{R_1nm}},\ceil{2^{R_2nm}}) = 1$. By the fourth property of Proposition~\ref{prop:oneShot}, we have that $\mathrm{S}^{\mathrm{NS}}(\left(W^{\otimes n}\right)^{\otimes m},\ceil{2^{R_1n}}^m,\ceil{2^{R_2n}}^m) \geq \left[\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}})\right]^m = 1$, so $\mathrm{S}^{\mathrm{NS}}(\left(W^{\otimes n}\right)^{\otimes m},\ceil{2^{R_1n}}^m,\ceil{2^{R_2n}}^m) = 1$ since $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq 1$ by the first property of Proposition~\ref{prop:oneShot}. But $\left(W^{\otimes n}\right)^{\otimes m} = W^{\otimes nm}$, and $\ceil{2^{R_1n}}^m \geq \ceil{2^{R_1nm}},\ceil{2^{R_2n}}^m \geq \ceil{2^{R_2nm}}$, so by the third property of Proposition~\ref{prop:oneShot}, we have $\mathrm{S}^{\mathrm{NS}}(W^{\otimes nm},\ceil{2^{R_1nm}},\ceil{2^{R_2nm}}) \geq 1$, so $\mathrm{S}^{\mathrm{NS}}(W^{\otimes nm},\ceil{2^{R_1nm}},\ceil{2^{R_2nm}})=1$.
 
   Then, consider some $r \in \{0,\ldots,n-1\}$. By the fourth property of Proposition~\ref{prop:oneShot}, we have that:
   \begin{equation}
@@ -875,10 +875,10 @@ Let $\mathcal{Z} := \{\mathcal{X}_1, \mathcal{X}_2, \mathcal{Y}, \mathcal{X}_1 \
 \end{corollary}
 \begin{proof}
   We use the linear program obtained in Theorem~\ref{theo:polyLP} with $G:=\permutations_n$ acting on $W^{\otimes n}$ as described before. 
-  The number of variables and constraints is linear in the number of orbits of the action of $S^n$ on the different sets $\mathcal{A} \in \mathcal{Z}$, where here $\mathcal{Z} := \{\mathcal{X}_1^n, \mathcal{X}_2^n, \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{Y}^n, \mathcal{X}^n_2 \times \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{X}^n_2,  \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n \}$. For example, for $\mathcal{A} \in \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n$, we have that:
+  The number of variables and constraints is linear in the number of orbits of the action of $\permutations_n$ on the different sets $\mathcal{A} \in \mathcal{Z}$, where here $\mathcal{Z} := \{\mathcal{X}_1^n, \mathcal{X}_2^n, \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{Y}^n, \mathcal{X}^n_2 \times \mathcal{Y}^n, \mathcal{X}^n_1 \times \mathcal{X}^n_2,  \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n \}$. For example, for $\mathcal{A} \in \mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n$, we have that:
 \[ |\mathcal{O}_{\permutations_n}(\mathcal{X}^n_1 \times \mathcal{X}^n_2 \times \mathcal{Y}^n)| = \binom{n + |\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}|   - 1}{|\mathcal{X}_1| |\mathcal{X}_2| |\mathcal{Y}| - 1} \leq (n+|\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}|-1)^{|\mathcal{X}_1||\mathcal{X}_2| |\mathcal{Y}| - 1} \ .\]
 
-So the number of variables and constraints is $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$. Note also that all the numbers occurring this linear program are integers or fractions of integers, with those integers ranging in $\left[\left(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|\right)^n\right]$, thus of size $O(n\log(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|))$. So the size of this linear program is bounded by $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$, and thus $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ can be computed in polynomial time in $n$; see for instance Section 7.1 of~\cite{GM07}.
+So the number of variables and constraints is $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$. Note also that all the numbers occurring in this linear program are integers or fractions of integers, with those integers ranging in $\left[\left(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|\right)^n\right]$, thus of size $O(n\log(|\mathcal{X}_1||\mathcal{X}_2||\mathcal{Y}|))$. So the size of this linear program is bounded by $O(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1})$, and thus $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ can be computed in polynomial time in $n$; see for instance Section 7.1 of~\cite{GM07}.
 \end{proof}
 
 In order to prove Theorem~\ref{theo:polyLP}, we will need several lemmas. For all of them, $\mathcal{A}$ and $\mathcal{B}$ will denote finite sets on which a group $G$ is acting, and $x^G$ will denote the orbit of $x$ under $G$:
@@ -1757,7 +1757,7 @@ In order to show additivity of the outer bound, we use the following lemma.
       \end{aligned}
     \end{equation}
 
-    Then let us consider some random variable $Q$ uniform on $[n]$ and independent from $(X_1^n,X_2^n,Y^n)$. Then we can write:
+    Then let us consider some random variable $Q$ uniform on $[n]$ and independent of $(X_1^n,X_2^n,Y^n)$. Then we can write:
     \[ \sum_{i=1}^nI(X_{1,i}:Y_i|X_{2,i}) = \sum_{i=1}^nI(X_{1,i}:Y_i|X_{2,i},Q=i) = nI(X_{1,Q}:Y_Q|X_{2,Q},Q ) \ . \]
 
     Since $Y_Q$ conditioned on $X_{1,Q}$ and $X_{2,Q}$ still follows the law of the MAC $W(y|x_1x_2)$, we can take $X_1=X_{1,Q},X_2=X_{2,Q}$, and then the output of the channel $Y$ satisfies $Y=Y_Q$, and thus we obtain:
@@ -1817,7 +1817,7 @@ In order to show additivity of the outer bound, we use the following lemma.
 
       Thus, $\hat{Y}$ follows the product law of $Y_i$, i.e.  $\hat{Y} = Y^n$.
       
-  Let us consider $C_1,C_2,C_3$ some positive numbers independent from $n$ and $\varepsilon$ which we will define later,  $k_1 = 2^{nR_1}$, $k_2 = 2^{nR_2}$ integers with $(R_1,R_2)$ positive rates such that:
+  Let us consider $C_1,C_2,C_3$ some positive numbers independent of $n$ and $\varepsilon$ which we will define later,  $k_1 = 2^{nR_1}$, $k_2 = 2^{nR_2}$ integers with $(R_1,R_2)$ positive rates such that:
   \begin{equation}
       \begin{aligned}
         R_1 &\leq I(X_1:Y|X_2) - \frac{1}{n} - C_1\varepsilon \ ,\\

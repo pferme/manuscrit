@@ -166,7 +166,7 @@ Thus, up to a multiplicative factor $2$, the error is the same. In particular, w
 In this section, we will consider the broadcast channel coding problem with additional resources, in order to determine how these resources affect its success probabilities as well as the capacity regions that can be defined from them.
 
 \subsection{Non-Signaling Assistance Between Decoders}
-Here, we consider the case where the receivers are given non-signaling assistance. This resource, which is a theoretical but easier to manipulate generalization of quantum entanglement, can be characterized as follows.  A non-signaling box $d(j_1j_2|y_1y_2)$ is any joint conditional probability distribution such that the marginal from one party is independent from the other party's input, i.e. we have:
+Here, we consider the case where the receivers are given non-signaling assistance. This resource, which is a theoretical but easier to manipulate generalization of quantum entanglement, can be characterized as follows.  A non-signaling box $d(j_1j_2|y_1y_2)$ is any joint conditional probability distribution such that the marginal from one party is independent of the other party's input, i.e. we have:
 \begin{equation}
   \begin{aligned}
     &&\forall j_1,y_1,y_2,y'_2, &&&\sum_{j_2} d(j_1j_2|y_1y_2) = \sum_{j_1} d(j_1j_2|y_1y'_2) \ ,\\
@@ -260,7 +260,7 @@ Finally, since $\mathcal{C}(W) = \mathcal{C}_{\text{sum}}(W)$ by Proposition~\re
 \end{proof}
 
 \subsection{Full Non-Signaling Assistance}
-In this section, we will consider the case where the sender and the receivers are given non-signaling assistance. This means that a three-party non-signaling box $P(xj_1j_2|(i_1i_2)y_1y_2)$ will replace the product $e(x|i_1i_2)d_1(j_1|y_1)d_2(j_2|y_2)$ in the previous objective values. A joint conditional probability $P(xj_1j_2|(i_1i_2)y_1y_2)$ is a non-signaling box if the marginal from any two parties is independent from the removed party's input:
+In this section, we will consider the case where the sender and the receivers are given non-signaling assistance. This means that a three-party non-signaling box $P(xj_1j_2|(i_1i_2)y_1y_2)$ will replace the product $e(x|i_1i_2)d_1(j_1|y_1)d_2(j_2|y_2)$ in the previous objective values. A joint conditional probability $P(xj_1j_2|(i_1i_2)y_1y_2)$ is a non-signaling box if the marginal from any two parties is independent of the removed party's input:
 \begin{equation}
   \begin{aligned}
     &&\forall j_1,j_2,i_1,i_2,y_1,y_2,i_1',i_2', &&&\sum_{x} P(xj_1j_2|(i_1i_2)y_1y_2) = \sum_{x} P(xj_1j_2|(i_1'i_2')y_1y_2) \ ,\\
@@ -343,7 +343,7 @@ The scenario is depicted in Figure~\ref{fig:BCNScoding}.
 \label{fig:BCNScoding}
 \end{figure}
 
-The cyclicity of Figure~\ref{fig:BCNScoding} is at first sight counter-intuitive. Note first that $P$ being a non-signaling box is completely independent from $W$: in particular, the variables $y_1,y_2$ do not need to follow any laws in the definition of $P$ being a non-signaling box. Therefore, the remaining ambiguity is the apparent need to encode and decode at the same time. However, since $P$ is a non-signaling box, we won't need to do both at the same time, although the global correlation between the sender and the receivers will be characterized only by $P(xj_1j_2|(i_1i_2)y_1y_2)$. Indeed, $\forall y_1,y_2, P(x|(i_1i_2)) = P(x|(i_1i_2)y_1y_2)$ by the non-signaling property of $P$. Thus, one can get the output $x$ on input $(i_1i_2)$ without access to $y_1,y_2$, as that knowledge won't affect the law of $x$. Then $(y_1,y_2)$ follows the law given by $W$ given that $x$. Finally, given access to $y_1,y_2$, the decoding process is described by:
+The cyclicity of Figure~\ref{fig:BCNScoding} is at first sight counter-intuitive. Note first that $P$ being a non-signaling box is completely independent of $W$: in particular, the variables $y_1,y_2$ do not need to follow any laws in the definition of $P$ being a non-signaling box. Therefore, the remaining ambiguity is the apparent need to encode and decode at the same time. However, since $P$ is a non-signaling box, we won't need to do both at the same time, although the global correlation between the sender and the receivers will be characterized only by $P(xj_1j_2|(i_1i_2)y_1y_2)$. Indeed, $\forall y_1,y_2, P(x|(i_1i_2)) = P(x|(i_1i_2)y_1y_2)$ by the non-signaling property of $P$. Thus, one can get the output $x$ on input $(i_1i_2)$ without access to $y_1,y_2$, as that knowledge won't affect the law of $x$. Then $(y_1,y_2)$ follows the law given by $W$ given that $x$. Finally, given access to $y_1,y_2$, the decoding process is described by:
           \[ P(j_1j_2|(i_1i_2) y_1 y_2 x) = \frac{P(xj_1j_2|(i_1i_2) y_1 y_2)}{P(x|(i_1i_2) y_1 y_2)} =  \frac{P(xj_1j_2|(i_1i_2) y_1 y_2)}{P(x|(i_1i_2))}  \ , \]
           so we recover $P(j_1j_2|(i_1i_2) y_1 y_2 x)) \times P(x |(i_1 i_2)) = P(xj_1j_2|(i_1i_2)y_1y_2)$, and therefore, the process is not cyclic. Non-signaling boxes define exactly the conditional probability distributions where it is possible to consider the conditional probabilities of each party independently. This clarifies how one can effectively encode and then decode messages through a non-signaling box.
 
@@ -641,7 +641,7 @@ The problem $\max_{\mathcal{P}_2}\sum_{i_2=1}^{k_2}\min\left(k_1,\deg_{V_1,\math
 \end{proof}
 
 \subsection{Non-Signaling Assisted Capacity Region for Deterministic Channels}
-Thanks to Theorem~\ref{theo:DQGapprox} and Proposition~\ref{prop:BCCisDQG}, there exists a constant factor approximation algorithm for the broadcast channel coding problem running in polynomial time. We aim to show here that that the non-signaling assisted value is linked by a constant factor to the unassisted one. Indeed, the hope is that the non-signaling assisted program is linked to the linear relaxation of the unassisted problem, thus is likely a good approximation since the broadcast channel coding problem can be approximated in polynomial time.
+Thanks to Theorem~\ref{theo:DQGapprox} and Proposition~\ref{prop:BCCisDQG}, there exists a constant factor approximation algorithm for the broadcast channel coding problem running in polynomial time. We aim to show here that the non-signaling assisted value is linked by a constant factor to the unassisted one. Indeed, the hope is that the non-signaling assisted program is linked to the linear relaxation of the unassisted problem, thus is likely a good approximation since the broadcast channel coding problem can be approximated in polynomial time.
 
 This turns out to be true, and will be proved through the following theorem:
 
@@ -1002,7 +1002,7 @@ Let us now state the value query hardness of approximation of the broadcast chan
 
     Thus, this event occurs with exponentially small probability as well. We have then that for all set $S$,  $\mathbb{P}\left(v(S) \not= v'(S) \right) \leq p_{\text{leak}} := m^{\frac{1}{2}}e^{-\frac{m^{3\delta}}{4}}$, which is an exponentially small bound that does not depend on $S$.
 
-    Hence, for every set $S$, only with exponentially small probability $p_{\text{leak}}$ can one distinguish between $v$ and $v'$. For some fixed algorithm $\mathcal{A}$, let us consider the sequence $L$ of queries made by $\mathcal{A}$ before it is able to distinguish between $v$ and $v'$: $L := (S_1, \ldots, S_n)$, with $v(S_i) = v'(S_i)$ for $i \in [n]$ and $v'(S_{n+1}) > v(S_{n+1})$. $L$ is independent from $T_1, \ldots T_{k_1}$ as no information from this partition is leaked before $S_{n+1}$. Thus, for such an algorithm to be correct, it should work for any equi-partition $T_1, \ldots T_{k_1}$. We have:
+    Hence, for every set $S$, only with exponentially small probability $p_{\text{leak}}$ can one distinguish between $v$ and $v'$. For some fixed algorithm $\mathcal{A}$, let us consider the sequence $L$ of queries made by $\mathcal{A}$ before it is able to distinguish between $v$ and $v'$: $L := (S_1, \ldots, S_n)$, with $v(S_i) = v'(S_i)$ for $i \in [n]$ and $v'(S_{n+1}) > v(S_{n+1})$. $L$ is independent of $T_1, \ldots T_{k_1}$ as no information from this partition is leaked before $S_{n+1}$. Thus, for such an algorithm to be correct, it should work for any equi-partition $T_1, \ldots T_{k_1}$. We have:
     \[ \mathbb{P}\left( \exists i \in [n] : v(S_i) \not= v'(S_i) \right) \leq \sum_{i=1}^n\mathbb{P}\left(v(S_i) \not= v'(S_i) \right) = np_{\text{leak}} \text{ by union bound.}\]
 
     In particular, this implies that:
@@ -1010,7 +1010,7 @@ Let us now state the value query hardness of approximation of the broadcast chan
 
     So, if $1 - np_{\text{leak}} > 0$, i.e. $n < \frac{1}{p_{\text{leak}}}$, then there exists some equi-partition $T_1, \ldots T_{k_1}$ such that our algorithm outputs a sequence $L$ of queries of length $n$ before being able to distinguish between $v$ and $v'$. In particular, we can take $n = \frac{1}{2p_{\text{leak}}}$ so that $L$ is of exponential size. Hence, for any algorithm $\mathcal{A}$, there exists some equi-partition $T_1, \ldots T_{k_1}$ such that $\mathcal{A}$ needs an exponential number of value queries to distinguish between $v$ and $v'$. This concludes the proof of the theorem for any deterministic algorithm.
 
-    Finally, the hardness result holds also for randomized algorithms. Indeed, let us call $\mathcal{A}_s$, the running algorithm conditioned on its random bits being $s$. $\mathcal{A}_s$ is deterministic so the previous proof holds: with high probability $p$, the sequence of $\lfloor\frac{1-p}{p_{leak}}\rfloor$ queries does not reveal anything to distinguish between $v$ and $v'$, although it is of exponential size in $m$. Then, averaging over all its random bitstrings, the same result holds, as $p_{leak}$ is independent from the equi-partition $T_1, \ldots, T_{k_1}$.
+    Finally, the hardness result holds also for randomized algorithms. Indeed, let us call $\mathcal{A}_s$, the running algorithm conditioned on its random bits being $s$. $\mathcal{A}_s$ is deterministic so the previous proof holds: with high probability $p$, the sequence of $\lfloor\frac{1-p}{p_{leak}}\rfloor$ queries does not reveal anything to distinguish between $v$ and $v'$, although it is of exponential size in $m$. Then, averaging over all its random bitstrings, the same result holds, as $p_{leak}$ is independent of the equi-partition $T_1, \ldots, T_{k_1}$.
 \end{proof}
 
 \subsection{Limitations of the Model}
