@@ -358,6 +358,21 @@ To see this, fix any $e = (v_1,\ldots,v_h) \in N$. Thus, there exists $\exists x
 In particular, there exists some labeling $\sigma$ such that $\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e] > \delta$, thus the soundness is proved.
 \end{proof}
 
+Furthermore, the previous proof implies an additive inapproximability result:
+
+\begin{corollary}
+  There is no additive PTAS for the $\varphi$-\textsc{MaxCoverage} problem for $\varphi(n) = o(n)$ and $\alpha_{\varphi}<1$ if \textrm{P}$\not=$\textrm{NP}; that is to say, a polynomial-time approximation scheme that achieves an additive approximation error of $\varepsilon \cdot n$, with $n$ the size of the universe, for all $\varepsilon > 0$.
+  \label{cor:Hardness}
+\end{corollary}
+
+\begin{rk}
+A PTAS does not necessarily run in polynomial time in $\frac{1}{\varepsilon}$.
+\end{rk}
+
+\begin{proof}
+  Let us take $\varepsilon := \frac{1-\alpha_{\varphi}}{2}\varphi(x_{\varphi}) > 0$. In the previous proof, with such an additive approximation algorithm, one could distinguish between YES and NO instance of $\delta,h$-\textsc{AryGapLabelCover}. Indeed, a YES instance implies that the associated $\varphi$-\textsc{MaxCoverage} instance has a solution of value $\varphi(x_{\varphi}) \cdot |\Gamma|$, where $\Gamma$ is the universe in that setting. On the other hand, a NO instance implies that all the solutions of the associated $\varphi$-\textsc{MaxCoverage} instance have a value smaller than or equal to $\alpha_\varphi\varphi(x_{\varphi}) \cdot |\Gamma|$. Therefore, on a YES instance, our approximation algorithm would output a solution with a value larger than or equal to $\frac{1+\alpha_{\varphi}}{2}\varphi(x_{\varphi}) \cdot |\Gamma|$. This resulting inequality is enough to guarantee that it does not come from a NO instance, as it is strictly larger than $\alpha_\varphi\varphi(x_{\varphi}) \cdot |\Gamma|$. Thus, such an approximation algorithm would allow us to solve $\delta,h$-\textsc{AryGapLabelCover} in polynomial time, which cannot happen if \textrm{P}$\not=$\textrm{NP}.
+\end{proof}
+
 \subsection{Further Hardness Under Gap-ETH}
   \label{section:GapETH}
   The Gap Exponential Time Hypothesis (Gap-ETH for short) states that, for some constant $\delta > 0$, there is no $2^{o(n)}$-time algorithm that, given $n$-variable $3$-SAT formula, can distinguish whether the formula is fully satisfiable or that it is not even $(1-\delta)$-satisfiable. Gap-ETH is a standard assumption in proving FPT hardness of approximation (see e.g.~\cite{CCKLMNT17}). Under such hypothesis, Manurangsi showed the following theorem:
