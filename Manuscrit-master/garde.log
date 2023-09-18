@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  5 SEP 2023 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  18 SEP 2023 14:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -593,17 +593,17 @@ Here is how much of TeX's memory you used:
  14295 words of font info for 34 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  41i,4n,30p,272b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600p
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600p
+k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600p
 k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on garde.pdf (1 page, 121795 bytes).
+Output written on garde.pdf (1 page, 121516 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
+ 239 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)

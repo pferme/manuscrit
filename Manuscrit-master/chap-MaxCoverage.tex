@@ -225,6 +225,7 @@ The proof can be found in Appendix~\ref{app:Partitioning}.
 
   
 \subsection{The Reduction}
+\label{subsection:reduction}
   \begin{proof}[Proof of Theorem~\ref{theo:Hardness}]
     Let $\varepsilon > 0$. Without loss of generality, we can assume that $\varepsilon < 1$. We show that it is \textrm{NP}-hard to reach an approximation ratio greater than $\alpha_{\varphi} + \varepsilon$ for the $\varphi$-\textsc{MaxCoverage} problem, via a reduction from $\delta,h$-\textsc{AryGapLabelCover}.
   \begin{itemize}
@@ -361,16 +362,16 @@ In particular, there exists some labeling $\sigma$ such that $\mathbb{E}_{e \sim
 Furthermore, the previous proof implies an additive inapproximability result:
 
 \begin{corollary}
-  There is no additive PTAS for the $\varphi$-\textsc{MaxCoverage} problem for $\varphi(n) = o(n)$ and $\alpha_{\varphi}<1$ if \textrm{P}$\not=$\textrm{NP}; that is to say, a polynomial-time approximation scheme that achieves an additive approximation error of $\varepsilon \cdot n$, with $n$ the size of the universe, for all $\varepsilon > 0$.
+  There is no additive polynomial-time approximation scheme (PTAS) for the $\varphi$-\textsc{MaxCoverage} problem for $\varphi(n) = o(n)$ and $\alpha_{\varphi}<1$ if \textrm{P}$\not=$\textrm{NP}; that is to say, a polynomial-time approximation that achieves an additive approximation error of $\varepsilon \cdot n$, with $n$ the size of the universe, for all $\varepsilon > 0$.
   \label{cor:Hardness}
 \end{corollary}
 
 \begin{rk}
-Contrary to a FPTAS, a PTAS does not necessarily run in polynomial time in $\frac{1}{\varepsilon}$.
+Contrary to fully polynomial-time approximation schemes (FPTAS), a PTAS does not necessarily run in polynomial time in $\frac{1}{\varepsilon}$.
 \end{rk}
 
 \begin{proof}
-  Let us fix $\varepsilon := \frac{1-\alpha_{\varphi}}{3}\varphi(x_{\varphi}) > 0$, which does not depend on the instance of the $\varphi$-\textsc{MaxCoverage} problem. In the previous proof (with the former $\varepsilon$ chosen equal to $\frac{1-\alpha_{\varphi}}{3}$), with such an additive approximation algorithm, one could distinguish between YES and NO instances of $\delta,h$-\textsc{AryGapLabelCover}. Indeed, a YES instance implies that the associated $\varphi$-\textsc{MaxCoverage} instance has a solution of value $\varphi(x_{\varphi}) |\Gamma|$, where $\Gamma$ is the universe in that setting. On the other hand, a NO instance implies that all solutions of the associated $\varphi$-\textsc{MaxCoverage} instance have a value smaller than or equal to $\frac{2\alpha_\varphi+1}{3}\varphi(x_{\varphi}) |\Gamma|$. Therefore, on a YES instance, our approximation algorithm would output a solution with a value larger than or equal to $\frac{\alpha_{\varphi}+2}{3}\varphi(x_{\varphi}) |\Gamma|$. This resulting inequality is enough to guarantee that it does not come from a NO instance, as it is strictly larger than $\frac{2\alpha_\varphi+1}{3}\varphi(x_{\varphi}) |\Gamma|$. Thus, such an approximation algorithm would allow us to solve $\delta,h$-\textsc{AryGapLabelCover} in polynomial time, which is impossible if \textrm{P}$\not=$\textrm{NP}.
+  Let us fix $\varepsilon := \frac{1-\alpha_{\varphi}}{3}\varphi(x_{\varphi}) > 0$, which does not depend on the instance of the $\varphi$-\textsc{MaxCoverage} problem. Assume for the sake of contradiction that we have a polynomial-time approximation that achieves an additive approximation error of $\varepsilon \cdot n$, with $n$ the size of the universe. In the previous proof (with the former $\varepsilon$ defined in Section \ref{subsection:reduction} chosen equal to $\frac{1-\alpha_{\varphi}}{3}$), with such an additive approximation algorithm, one could distinguish between YES and NO instances of $\delta,h$-\textsc{AryGapLabelCover}. Indeed, a YES instance implies that the associated $\varphi$-\textsc{MaxCoverage} instance has a solution of value $\varphi(x_{\varphi}) |\Gamma|$, where $\Gamma$ is the universe in that setting. On the other hand, a NO instance implies that all solutions of the associated $\varphi$-\textsc{MaxCoverage} instance have a value smaller than or equal to $\frac{1+2\alpha_\varphi}{3}\varphi(x_{\varphi}) |\Gamma|$. Therefore, on a YES instance, our approximation algorithm would output a solution with a value larger than or equal to $\frac{2+\alpha_{\varphi}}{3}\varphi(x_{\varphi}) |\Gamma|$. This resulting inequality is enough to guarantee that it does not come from a NO instance, as it is strictly larger than $\frac{1+2\alpha_\varphi}{3}\varphi(x_{\varphi}) |\Gamma|$ since $\alpha_\varphi < 1$. Thus, such an approximation algorithm would allow us to solve $\delta,h$-\textsc{AryGapLabelCover} in polynomial time, which is impossible if \textrm{P}$\not=$\textrm{NP}.
 \end{proof}
 
 \subsection{Further Hardness Under Gap-ETH}
