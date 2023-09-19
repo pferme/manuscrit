@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  18 SEP 2023 16:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  19 SEP 2023 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3673,7 +3673,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 1CAB838683CE451E3A6CA4CF84721998;5737.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: 343F5889895E741F210E2B932F9C1B6B;11454.
+(rerunfilecheck)             Checksum: 7C36988E25C32112E6FB7DF55C031E78;11454.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3683,7 +3683,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
 Here is how much of TeX's memory you used:
  57510 strings out of 494821
  1253246 string characters out of 6177891
- 1593241 words of memory out of 5000000
+ 1592241 words of memory out of 5000000
  58440 multiletter control sequences out of 15000+600000
  832523 words of font info for 500 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -3721,9 +3721,9 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (166 pages, 1842553 bytes).
+Output written on main.pdf (166 pages, 1842525 bytes).
 PDF statistics:
- 3346 PDF objects out of 3580 (max. 8388607)
+ 3345 PDF objects out of 3580 (max. 8388607)
  902 named destinations out of 1000 (max. 500000)
  60505 words of extra memory for PDF output out of 61914 (max. 10000000)
 
