@@ -20,8 +20,6 @@ As far as hardness is concerned, we consider the subproblem of broadcast channel
 \addcontentsline{tof}{section}{\protect\numberline{\thesection} Problème du codage pour les canaux de diffusion}
 \label{section:BCCpb}
 \subsection{Broadcast Channels}
-%Formally, a broadcast channel is given by a conditional probability distribution on input $\mathcal{X}$ and two outputs $\mathcal{Y}_1$ and $\mathcal{Y}_2$, so $W := \left(W(y_1,y_2|x)\right)_{y_1 \in \mathcal{Y}_1, y_2 \in \mathcal{Y}_2, x \in \mathcal{X}}$, with $W(y_1y_2|x) \geq 0$ and such that $\sum_{y_1 \in \mathcal{Y}_1, y_2 \in \mathcal{Y}_2} W(y_1y_2|x) = 1$. We define its marginals $W_1$ and $W_2$ respectively by $W_1(y_1|x) := \sum_{y_2 \in \mathcal{Y}_2} W(y_1y_2|x)$ and $W_2(y_2|x) := \sum_{y_1 \in \mathcal{Y}_1} W(y_1y_2|x)$. We will denote such a broadcast channel by $W : \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$. The tensor product of two broadcast channels $W: \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$ and $W': \mathcal{X}' \rightarrow \mathcal{Y}'_1 \times \mathcal{Y}'_2$ is denoted by $W \otimes W' : \mathcal{X} \times \mathcal{X}' \rightarrow (\mathcal{Y}_1 \times \mathcal{Y}_1') \times (\mathcal{Y}_2 \times \mathcal{Y}_2')$ and defined by $(W \otimes W')(y_1y_1'y_2y_2'|xx') := W(y_1y_2|x) \cdot W'(y_1'y_2'|x')$. We define $W^{\otimes n}(y_1^ny_2^n|x^n) := \prod_{i=1}^nW(y_{1,i}y_{2,i}|x_i)$, for $y_1^n := y_{1,1} \ldots y_{1,n} \in \mathcal{Y}_1^n$ and $y_2^n := y_{2,1} \ldots y_{2,n} \in \mathcal{Y}_2^n$ and $x^n := x_1 \ldots x_n \in \mathcal{X}^n$. We will use the notation $[k]:=\{1,\ldots,k\}$.
-
 The coding problem for a broadcast channel $W : \mathcal{X} \rightarrow \mathcal{Y}_1 \times \mathcal{Y}_2$ can be stated in the following way. We want to encode a pair of messages belonging to $[k_1] \times [k_2]$ into $\mathcal{X}$. The pair is given as input to $W$, which results in two random outputs in $\mathcal{Y}_1$ and $\mathcal{Y}_2$. From the output in $\mathcal{Y}_1$ (resp. $\mathcal{Y}_2$), we want to decode back the original message in $[k_1]$ (resp. $[k_2]$). We will call $e : [k_1] \times [k_2] \rightarrow \mathcal{X}$ the encoder, $d_1 : \mathcal{Y}_1 \rightarrow [k_1]$ the first decoder and $d_2 : \mathcal{Y}_2 \rightarrow [k_2]$ the second decoder. The scenario is depicted in Figure~\ref{fig:BCcoding}.
 
 \begin{figure}[!h]
@@ -197,7 +195,7 @@ The objective of this section is to show that sharing non-signaling assistance b
 
 \begin{proposition}
   \label{prop:NSdecoderssum}
-  For any broadcast channel $W$, $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W)= \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$
+  For any broadcast channel $W$, $\mathcal{C}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W)= \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$.
 \end{proposition}
 
 \begin{proof}
@@ -238,7 +236,7 @@ As before, this implies that the capacity regions are the same.
 
 \begin{theorem}
     \label{theo:NSdecoders}
-   For any broadcast channel $W$, $\mathcal{C}(W) = \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$
+   For any broadcast channel $W$, $\mathcal{C}(W) = \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$.
 \end{theorem}
 
 \begin{proof}
