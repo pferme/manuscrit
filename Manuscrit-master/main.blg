@@ -9,44 +9,46 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: these.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 120 entries,
+Warning--empty booktitle in FF23
+You've used 123 entries,
             3368 wiz_defined-function locations,
-            1705 strings with 31519 characters,
-and the built_in function-call counts, 68912 in all, are:
-= -- 7656
-> -- 2456
-< -- 74
-+ -- 770
-- -- 744
-* -- 4447
-:= -- 9720
-add.period$ -- 491
-call.type$ -- 120
-change.case$ -- 729
-chr.to.int$ -- 120
-cite$ -- 120
-duplicate$ -- 2041
-empty$ -- 5813
-format.name$ -- 900
-if$ -- 17048
+            1735 strings with 32330 characters,
+and the built_in function-call counts, 70929 in all, are:
+= -- 7878
+> -- 2531
+< -- 77
++ -- 793
+- -- 767
+* -- 4586
+:= -- 9994
+add.period$ -- 504
+call.type$ -- 123
+change.case$ -- 748
+chr.to.int$ -- 123
+cite$ -- 124
+duplicate$ -- 2105
+empty$ -- 5982
+format.name$ -- 926
+if$ -- 17552
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 128
-newline$ -- 710
-num.names$ -- 386
-pop$ -- 1098
+missing$ -- 131
+newline$ -- 728
+num.names$ -- 397
+pop$ -- 1129
 preamble$ -- 1
-purify$ -- 861
+purify$ -- 883
 quote$ -- 0
-skip$ -- 4750
+skip$ -- 4888
 stack$ -- 0
-substring$ -- 3481
-swap$ -- 576
-text.length$ -- 262
+substring$ -- 3581
+swap$ -- 606
+text.length$ -- 271
 text.prefix$ -- 43
 top$ -- 0
-type$ -- 916
-warning$ -- 0
-while$ -- 533
-width$ -- 124
-write$ -- 1793
+type$ -- 940
+warning$ -- 1
+while$ -- 549
+width$ -- 127
+write$ -- 1840
+(There was 1 warning)

@@ -8,9 +8,13 @@ In the point-to-point scenario studied in~\cite{BF18}, the existence of a consta
 This raises the following questions on broadcast channels: Does the capacity region of the broadcast channel change when non-signaling resources between parties are allowed? What is the best approximability ratio of the broadcast channel coding problem? How those two questions are related?
 
 
-\paragraph{Contributions} In this chapter, we first extend the result by~\cite{PDB21} in a natural way. We prove that non-signaling resource shared between decoders does not change the capacity region; see Theorem~\ref{theo:NSdecoders}. More significantly, we study the influence of sharing a non-signaling resource between the three parties. Contrary to the previous case, this turns the broadcast channel coding problem, which is \textrm{NP}-hard, into a linear program, thus solvable in polynomial time.
+\paragraph{Contributions} In this chapter, as a first result, we prove that the sum success probabilities of the broadcast channel coding problem are the same with and without non-signaling assistance between decoders; see Theorem~\ref{theo:NSdecoders}. This strengthens a result by~\cite{PDB21} establishing that entanglement between the decoders does not change the capacity region.
 
-We describe a $(1-e^{-1})^2$-approximation algorithm running in polynomial time for the broadcast channel coding problem restricted to the class of deterministic channels. This is achieved through a graph interpretation of the problem, where one aims at partitioning a bipartite graph into $k_1$ and $k_2$ parts, such that the resulting quotient graph is the densest possible; see Proposition~\ref{prop:BCCisDQG} and Theorem~\ref{theo:DQGapprox}. Using the ideas coming from this algorithm, we show that for the class of deterministic channels, non-signaling resource shared between the three parties does not change the capacity region; see Theorem~\ref{theo:NSdet} and Corollary~\ref{cor:NSdet}.
+%we first extend the result by~\cite{PDB21} in a natural way. We prove that non-signaling resource shared between decoders does not change the capacity region; see Theorem~\ref{theo:NSdecoders}. More significantly, we study the influence of sharing a non-signaling resource between the three parties. Contrary to the previous case, this turns the broadcast channel coding problem, which is \textrm{NP}-hard, into a linear program, thus solvable in polynomial time.
+
+%We describe a $(1-e^{-1})^2$-approximation algorithm running in polynomial time for the broadcast channel coding problem restricted to the class of deterministic channels. This is achieved through a graph interpretation of the problem, where one aims at partitioning a bipartite graph into $k_1$ and $k_2$ parts, such that the resulting quotient graph is the densest possible; see Proposition~\ref{prop:BCCisDQG} and Theorem~\ref{theo:DQGapprox}. Using the ideas coming from this algorithm, we show that for the class of deterministic channels, non-signaling resource shared between the three parties does not change the capacity region; see Theorem~\ref{theo:NSdet} and Corollary~\ref{cor:NSdet}.
+
+The main focus of this chapter is to study the influence of sharing a non-signaling resource between the three parties. Our main result shows that for the class of deterministic broadcast channels, non-signaling resources shared between the three parties does not change the capacity region; see Theorem~\ref{theo:NSdet} and Corollary~\ref{cor:NSdet}. In order to prove this result, we consider the algorithmic problem of optimal channel coding for a deterministic broadcast channel. For this problem, we describe a $(1-e^{-1})^2$-approximation algorithm running in polynomial time. This is achieved through a graph interpretation of the problem, where one aims at partitioning a bipartite graph into $k_1$ and $k_2$ parts, such that the resulting quotient graph is the densest possible; see Proposition~\ref{prop:BCCisDQG} and Theorem~\ref{theo:DQGapprox}. To prove our result on the limitations of non-signaling assistance for deterministic broadcast channels, we use the same ideas as the ones involved in the analysis of the approximation algorithm.
 
 As far as hardness is concerned, we consider the subproblem of broadcast channel coding where the number of messages one decoder is responsible of is maximum. This subproblem can be interpreted as a social welfare maximization problem. In the theory of fair division~\cite{BT96,Moulin03}, social welfare maximization entails partitioning a set of goods among agents in order to maximize the sum of their utilities. The social welfare problem has been extensively studied through black box approach~\cite{BN05}, which led to a precise analysis of achievable approximation ratio as well as hardness results~\cite{DS06,MSV08}, depending on the class of utility functions considered and the type of black box access to them. We refine the hardness result for the class of fractionally sub-additive utility functions to the subclass coming from the broadcast channel coding subproblem interpretation. Specifically, we show that in the value query model, we cannot achieve a better approximation ratio than $\Omega\left(\frac{1}{\sqrt{m}}\right)$ in polynomial time, with $m$ the size of one of the outputs of the channel: see Theorem \ref{theo:VQhardnessBC}. Following the previous discussion on the links between constant-ratio approximation algorithms and non-signaling capacity regions, this hardness result is a first step towards showing that sharing a non-signaling resource between the three parties of a broadcast channel can enlarge its capacity region.
 
@@ -191,7 +195,9 @@ The (resp. sum) capacity region with non-signaling assistance between decoders i
 %  We define the joint (resp. sum) capacity region with non-signaling assistance between decoders $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$ (resp. $\mathcal{C}^{\mathrm{NS}_{\text{dec}}}_{\text{sum}}(W)$) as the closure of the set of all rate pairs achievable (resp. sum-achievable) with non-signaling assistance between decoders.
 %\end{definition}
 
-The objective of this section is to show that sharing non-signaling assistance between decoders does not change the capacity regions of a broadcast channel. In order to do so, we will also show that sum and joint capacity regions with non-signaling assistance between decoders are the same. This is an extension of the result by~\cite{PDB21} where it has been proved to be the case for the weaker resource that is quantum entanglement.
+%The objective of this section is to show that sharing non-signaling assistance between decoders does not change the capacity regions of a broadcast channel. In order to do so, we will also show that sum and joint capacity regions with non-signaling assistance between decoders are the same. This is an extension of the result by~\cite{PDB21} where it has been proved to be the case for the weaker resource that is quantum entanglement.
+
+We will now show that sum and joint capacity regions with non-signaling assistance between decoders are the same.
 
 \begin{proposition}
   \label{prop:NSdecoderssum}
@@ -234,9 +240,11 @@ and by maximizing over all $e$ and $d$:
 As before, this implies that the capacity regions are the same.
 \end{proof}
 
+We will now prove that sum success probabilities of the broadcast channel coding problem are the same with and without non-signaling assistance between decoders. In particular, this implies that non-signaling resources shared between decoders does not change the capacity region. Note that, after the publication of~\cite{PDB21}, Pereg et al. added a remark to the arXiv version of their paper that their result stating that entanglement shared between decoders does not change the capacity of a broadcast channel could be generalized to non-signaling assistance. The theorem below strengthens this result showing that non-signaling assistance between the decoders cannot increase the sum success probability even in the one-shot setting and for arbitrary broadcast channels.
+
 \begin{theorem}
-    \label{theo:NSdecoders}
-   For any broadcast channel $W$, $\mathcal{C}(W) = \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$.
+   \label{theo:NSdecoders}
+   For any $W, k_1, k_2$, we have $\mathrm{S}_{\text{sum}}(W,k_1,k_2)=\mathrm{S}_{\text{sum}}^{\mathrm{NS}_{\text{dec}}}(W,k_1,k_2)$. As a consequence, $\mathcal{C}(W) = \mathcal{C}^{\mathrm{NS}_{\text{dec}}}(W)$.
 \end{theorem}
 
 \begin{proof}
@@ -492,6 +500,7 @@ We will reformulate \textsc{DetBCC} as a bipartite graph problem. But first, let
 Now, let us remark that a deterministic channel $W$, up to a permutation of elements of $\mathcal{X}$, is characterized by the following bipartite graph:
 
 \begin{definition}[Bipartite Graph $G_W$ associated with the deterministic channel $W$]
+  \label{defi:graphGW}
 \[ G_W:=(\mathcal{Y}_1 \sqcup \mathcal{Y}_2, E = \{(y_1,y_2) \in \mathcal{Y}_1 \times \mathcal{Y}_2: \exists x \in \mathcal{X}, y_1=W_1(x) \text{ and } y_2=W_2(x)\}) \ . \]
 \end{definition}
 
@@ -668,7 +677,7 @@ Since this is true for all $\varepsilon > 0$, we get in fact that $\underset{n \
 Let us now prove the main result:
 
 \begin{proof}[Proof of Theorem~\ref{theo:NSdet}]
-  The proof will be done in three parts. We will work on the graph $G_W$:
+  The proof will be done in three parts. We will work on the graph $G_W$ (see Definition~\ref{defi:graphGW}).
   \begin{enumerate}
   \item First, we prove that for any partition $\mathcal{P}_2$ of $\mathcal{Y}_2$ in $\ell_2$ parts:
     \[ \mathrm{S}(W,\ell_1,\ell_2) \geq \left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\frac{\sum_{i_2=1}^{\ell_2}\min\left(k_1,\deg_{\mathcal{Y}_1,\mathcal{P}_2}(\mathcal{P}_2^{i_2})\right)}{k_1\ell_2} \ . \]
@@ -1014,6 +1023,6 @@ On the other hand, one can also remark that when $f_W^1$ is written as a maximum
 
 \section{Conclusion}
 \addcontentsline{tof}{section}{\protect\numberline{\thesection} Conclusion}
-In this chapter, we have studied several algorithmic aspects and non-signaling assisted capacity regions of broadcast channels. We have shown that when non-signaling assistance is shared only between decoders, the capacity region does not change. For the class of deterministic broadcast channels, we have described a $(1-e^{-1})^2$-approximation algorithm running in polynomial time, and we have shown that the capacity region for that class is the same with or without non-signaling assistance. Finally, we have shown that in the value query model, we cannot achieve a better approximation ratio than $\Omega\left(\frac{1}{\sqrt{m}}\right)$ in polynomial time for the general broadcast channel coding problem, with $m$ the size of one of the outputs of the channel.
+In this chapter, we have studied several algorithmic aspects and non-signaling assisted capacity regions of broadcast channels. We have shown that sum success probabilities of the broadcast channel coding problem are the same with and without non-signaling assistance between decoders, and that it implied that non-signaling resource shared between decoders does not change the capacity region. For the class of deterministic broadcast channels, we have described a $(1-e^{-1})^2$-approximation algorithm running in polynomial time, and we have shown that the capacity region for that class is the same with or without non-signaling assistance. Finally, we have shown that in the value query model, we cannot achieve a better approximation ratio than $\Omega\left(\frac{1}{\sqrt{m}}\right)$ in polynomial time for the general broadcast channel coding problem, with $m$ the size of one of the outputs of the channel.
 
 Our results suggest that non-signaling assistance could improve the capacity region of general broadcast channels, which is left as a major open question. An intermediate result would be to show that it is \textrm{NP}-hard to approximate the broadcast channel coding problem within any constant ratio, strengthening our hardness result without relying on the value query model. Finally, one could also try to develop approximations algorithms for other sub-classes of broadcast channels, such as semi-deterministic or degraded ones. This could be a crucial step towards showing that the capacity region for those classes is the same with or without non-signaling assistance.

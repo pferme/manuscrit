@@ -141,6 +141,17 @@ Siddharth Barman and Omar Fawzi.
 \newblock \href {https://doi.org/10.1109/TIT.2017.2696963}
   {\path{doi:10.1109/TIT.2017.2696963}}.
 
+\bibitem[BFF21]{BFF21}
+Siddharth Barman, Omar Fawzi, and Paul Ferm{\'{e}}.
+\newblock Tight approximation guarantees for concave coverage problems.
+\newblock In Markus Bl{\"{a}}ser and Benjamin Monmege, editors, {\em 38th
+  International Symposium on Theoretical Aspects of Computer Science, {STACS}
+  2021, March 16-19, 2021, Saarbr{\"{u}}cken, Germany (Virtual Conference)},
+  volume 187 of {\em LIPIcs}, pages 9:1--9:17. Schloss Dagstuhl -
+  Leibniz-Zentrum f{\"{u}}r Informatik, 2021.
+\newblock \href {https://doi.org/10.4230/LIPIcs.STACS.2021.9}
+  {\path{doi:10.4230/LIPIcs.STACS.2021.9}}.
+
 \bibitem[BFGG20]{BFGG20}
 Siddharth Barman, Omar Fawzi, Suprovat Ghoshal, and Emirhan G{\"{u}}rpinar.
 \newblock Tight approximation bounds for maximum multi-coverage.
@@ -373,6 +384,23 @@ Uriel Feige.
   Qu{\'{e}}bec, Canada}, pages 534--543. {ACM}, 2002.
 \newblock \href {https://doi.org/10.1145/509907.509985}
   {\path{doi:10.1145/509907.509985}}.
+
+\bibitem[FF22]{FF22}
+Omar Fawzi and Paul Ferm{\'{e}}.
+\newblock Beating the sum-rate capacity of the binary adder channel with
+  non-signaling correlations.
+\newblock In {\em {IEEE} International Symposium on Information Theory, {ISIT}
+  2022, Espoo, Finland, June 26 - July 1, 2022}, pages 2750--2755. {IEEE},
+  2022.
+\newblock \href {https://doi.org/10.1109/ISIT50566.2022.9834699}
+  {\path{doi:10.1109/ISIT50566.2022.9834699}}.
+
+\bibitem[FF23]{FF23}
+Omar Fawzi and Paul Ferm{\'{e}}.
+\newblock Multiple-access channel coding with non-signaling correlations.
+\newblock pages 1--1, 2023.
+\newblock \href {https://doi.org/10.1109/TIT.2023.3301719}
+  {\path{doi:10.1109/TIT.2023.3301719}}.
 
 \bibitem[FK14]{FK14}
 Vitaly Feldman and Pravesh Kothari.
@@ -675,10 +703,9 @@ Or~Ordentlich and Ofer Shayevitz.
 Uzi Pereg, Christian Deppe, and Holger Boche.
 \newblock Quantum broadcast channels with cooperating decoders: An
   information-theoretic perspective on quantum repeaters.
-\newblock In {\em {IEEE} International Symposium on Information Theory, {ISIT}
-  2021, Melbourne, Australia, July 12-20, 2021}, pages 772--777. {IEEE}, 2021.
-\newblock \href {https://doi.org/10.1109/ISIT45174.2021.9518284}
-  {\path{doi:10.1109/ISIT45174.2021.9518284}}.
+\newblock {\em Journal of Mathematical Physics}, 62(6):062204, 06 2021.
+\newblock \href {https://arxiv.org/abs/2011.09233} {\path{arXiv:2011.09233}},
+  \href {https://doi.org/10.1063/5.0038083} {\path{doi:10.1063/5.0038083}}.
 
 \bibitem[PDB23]{PDB23}
 Uzi Pereg, Christian Deppe, and Holger Boche.
