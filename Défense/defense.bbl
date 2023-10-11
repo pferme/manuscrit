@@ -1,0 +1,10 @@
+\begin{thebibliography}{BF18}
+
+\bibitem[BF18]{BF18}
+Siddharth Barman and Omar Fawzi.
+\newblock Algorithmic aspects of optimal channel coding.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 64(2):1038--1045, 2018.
+\newblock \href {https://doi.org/10.1109/TIT.2017.2696963}
+  {\path{doi:10.1109/TIT.2017.2696963}}.
+
+\end{thebibliography}

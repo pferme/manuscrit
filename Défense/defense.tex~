@@ -1,0 +1,187 @@
+\documentclass{beamer}
+
+%%% ISSUE BBB solved %%%
+%\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{dsfont}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{xparse}
+\usepackage{physics}
+\usepackage{empheq}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage[affil-it]{authblk}
+%\usepackage{enumitem}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes,arrows}
+
+\tikzstyle{block} = [draw, fill=white, rectangle, 
+  minimum height=2em, minimum width=3em]
+\tikzstyle{bigblock} = [draw, fill=white, rectangle, 
+  minimum height=3em, minimum width=4em]
+\tikzstyle{Bigblock} = [draw, fill=white, rectangle, 
+    minimum height=5em, minimum width=8.5em]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+
+\usepackage{pgfplots}
+\pgfplotsset{compat = newest}
+
+\theoremstyle{definition}
+\newtheorem{theo}{Theorem}[section]
+\newtheorem{lem}[theo]{Lemma}
+\newtheorem{cor}[theo]{Corollary}
+\newtheorem{prop}[theo]{Proposition}
+\newtheorem{defi}[theo]{Definition}
+\newtheorem{conj}[theo]{Conjecture}
+
+\newtheorem{theo*}{Theorem}
+
+\theoremstyle{remark}
+\newtheorem*{rk}{Remark}
+
+\DeclareMathOperator{\Poi}{\text{Poi}}
+\DeclareMathOperator{\Ber}{\text{Ber}}
+\DeclareMathOperator{\Bin}{\text{Bin}}
+\DeclareMathOperator{\maxi}{\text{maximize}}
+\DeclareMathOperator{\mini}{\text{minimize}}
+\DeclareMathOperator{\st}{\text{subject to}}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
+
+\colorlet{darkgreen}{green!40!black}
+
+\usepackage{appendixnumberbeamer}
+\beamertemplatenavigationsymbolsempty
+
+%%%%%%%%%
+\usetheme{Dresden}
+\usecolortheme{lily}
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+  \oldmacro\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+%%%%%%%%%
+
+
+
+\title{Approximation Algorithms for Channel Coding and Non-Signaling Correlations}
+\subtitle{\textit{Algorithmes d'approximation pour le problème du codage de canal et corrélations non-signalantes}}
+\author{Paul Fermé}
+\institute{ENS de Lyon}
+\date{29 novembre 2023}
+
+%\AtBeginSection[]
+%{
+%  \begin{frame}<beamer>
+%    \frametitle{Contents}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\section{Introduction}
+\begin{frame}{Qu'est ce qu'un canal de communication bruité ?}
+  \pause
+  \begin{center}
+    \includegraphics[scale=0.42]{tin-can-telephone.jpg}
+    
+      \pause
+      Vent ? Pluie ? Fil détendu ? Obstacles ?
+  \end{center}
+\end{frame}
+
+\begin{frame}{Communiquer avec du bruit ?}
+  \begin{center}
+    \only<1>{\begin{tikzpicture}
+      \node at (3.6,0) (tin) {\includegraphics[scale=0.23]{tin-can-telephone.jpg}};
+      \node[ellipse callout, draw, callout relative pointer={(-0.3,-0.3)}] at (0,0.1) (Alice) {\Large Loué};
+      \node[ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (7.3,0.1) (Bob) {\Large Lavé};
+    \end{tikzpicture}}
+    \only<2>{\begin{tikzpicture}
+      \node at (5.05,0) (tin) {\includegraphics[scale=0.23]{long-tin-can-telephone.jpg}};
+      \node[ellipse callout, draw, callout relative pointer={(-0.3,-0.3)}] at (0,0.1) (Alice) {\Large Loué};
+      \node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.9,0.1) (Bob) {\tiny Lavé};
+    \end{tikzpicture}}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}{Modélisation mathématique}
+  \begin{center}
+    \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+      \node [bigblock] (W) {$W$};
+      \node [right of=W] (y) {\only<1-2>{$y$}\only<3>{\alert{$0$}}\only<4>{\alert{$1$}}};
+      \node [left of=W] (x) {\only<1-2>{$x$}\only<3-4>{\alert{$0$}}};
+      \draw [->] (x) -- (W);
+      \draw [->] (W) -- (y);
+    \end{tikzpicture}
+
+    \pause
+    \bigskip
+    Probabilité \only<2>{$W(y|x)$}\only<3>{\alert{$9/10$}}\only<4>{\alert{$1/10$}} d'avoir la sortie \only<2>{$y$}\only<3>{\alert{$0$}}\only<4>{\alert{$1$}} pour l'entrée \only<2>{$x$}\only<3-4>{\alert{$0$}}.
+  \end{center} 
+\end{frame}
+
+\begin{frame}{Le problème du codage de canal}
+  \begin{center}
+    \begin{tikzpicture}[auto, node distance=2.5cm,>=latex']
+      \node [block] (e) {$e$};
+      \node [bigblock, right of=e] (W) {$W$};
+      \node [block, right of=W] (d) {$d$};
+      \draw [->] (e) -- node[name=x] {$x$} (W);
+      \draw [->] (W) -- node[name=y] {$y$} (d);
+      \node [left of=e, node distance=1.5cm] (i) {$i$};
+      \node [right of=d,  node distance=1.5cm] (j) {$j$};
+      \draw [draw,->] (i) -- (e);
+      \draw [draw,->] (d) -- (j);
+    \end{tikzpicture}
+
+    \bigskip
+
+    Trouver $e$ et $d$ tels que $j=i$.
+  \end{center}
+  %Envoi de $k$ messages uniformes, trouver meilleur e/d pour maximiser la proba de succès (2 types de caractère: lettres VS nombres)
+\end{frame}
+
+\begin{frame}{Résolution \cite{BF18}}
+Problème difficile, impossible de trouver efficacement (ie. NP difficile) le meilleur
+
+Par contre, on peut trouver efficacement une $1-e^{-1} \simeq 0.63$ approx, ie. qui trouve une solution qui fait au moins $63\%$ aussi bien que le meilleur, et on ne peut pas faire mieux
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bibliography}
+\begin{frame}[allowframebreaks]{Bibliography}
+  \bibliographystyle{alphaurl}
+  \bibliography{these}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

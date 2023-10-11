@@ -1,0 +1,42 @@
+\begin{thebibliography}{}
+
+\bibitem[Ahlswede, 1973]{Ahlswede73}
+Ahlswede, R. (1973).
+\newblock Multi-way communication channels.
+\newblock In {\em 2nd International Symposium on Information Theory,
+  Tsahkadsor, Armenia, USSR, September 2-8, 1971}, pages 23--52. Publishing
+  House of the Hungarian Academy of Science.
+
+\bibitem[Barman and Fawzi, 2018]{BF18}
+Barman, S. and Fawzi, O. (2018).
+\newblock Algorithmic aspects of optimal channel coding.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 64(2):1038--1045.
+
+\bibitem[Bennett et~al., 1999]{BSST99}
+Bennett, C.~H., Shor, P.~W., Smolin, J.~A., and Thapliyal, A.~V. (1999).
+\newblock Entanglement-assisted classical capacity of noisy quantum channels.
+\newblock {\em Physical Review Letters}, 83(15):3081.
+
+\bibitem[Leditzky et~al., 2020]{LALS20}
+Leditzky, F., Alhejji, M.~A., Levin, J., and Smith, G. (2020).
+\newblock Playing games with multiple access channels.
+\newblock {\em Nature communications}, 11(1):1--5.
+
+\bibitem[Liao, 1973]{Liao73}
+Liao, H.~H. (1973).
+\newblock Multiple access channels ({Ph.D. Thesis} abstr.).
+\newblock {\em {IEEE} Trans. Inf. Theory}, 19(2):253.
+
+\bibitem[Mattas and {\"{O}}sterg{\aa}rd, 2005]{MO05}
+Mattas, M. and {\"{O}}sterg{\aa}rd, P. R.~J. (2005).
+\newblock A new bound for the zero-error capacity region of the two-user binary
+  adder channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 51(9):3289--3291.
+
+\bibitem[Matthews, 2012]{Matthews12}
+Matthews, W. (2012).
+\newblock A linear program for the finite block length converse of
+  {Polyanskiy-Poor-Verd{\'{u}}} via nonsignaling codes.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 58(12):7036--7044.
+
+\end{thebibliography}

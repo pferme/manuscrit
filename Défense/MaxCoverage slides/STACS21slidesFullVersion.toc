@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Approximation Algorithm}{19}{0}{2}
+\beamer@sectionintoc {3}{Applications}{31}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{39}{1}{4}
+\beamer@sectionintoc {5}{Bibliography}{42}{1}{5}

@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Multiple-Access Channels}{6}{0}{1}
+\beamer@sectionintoc {2}{Non-signaling assistance}{13}{0}{2}
+\beamer@sectionintoc {3}{The Binary Adder Channel}{28}{0}{3}
+\beamer@sectionintoc {4}{Conclusion and open problems}{42}{1}{4}
+\beamer@sectionintoc {5}{Bibliography}{48}{1}{5}

@@ -1,0 +1,61 @@
+\begin{thebibliography}{}
+
+\bibitem[Ageev and Sviridenko, 2004]{AS04}
+Ageev, A.~A. and Sviridenko, M. (2004).
+\newblock Pipage rounding: {A} new method of constructing algorithms with
+  proven performance guarantee.
+\newblock {\em J. Comb. Optim.}, 8(3):307--328.
+
+\bibitem[Barman et~al., 2020]{BFGG20}
+Barman, S., Fawzi, O., Ghoshal, S., and G{\"{u}}rpinar, E. (2020).
+\newblock Tight approximation bounds for maximum multi-coverage.
+\newblock In Bienstock, D. and Zambelli, G., editors, {\em Integer Programming
+  and Combinatorial Optimization - 21st International Conference, {IPCO} 2020,
+  London, UK, June 8-10, 2020, Proceedings}, volume 12125 of {\em Lecture Notes
+  in Computer Science}, pages 66--77. Springer.
+
+\bibitem[Chandan et~al., 2019]{CPM19}
+Chandan, R., Paccagnan, D., and Marden, J.~R. (2019).
+\newblock Optimal mechanisms for distributed resource-allocation.
+\newblock {\em CoRR}, abs/1911.07823.
+
+\bibitem[Dudycz et~al., 2020]{DMMS20}
+Dudycz, S., Manurangsi, P., Marcinkowski, J., and Sornat, K. (2020).
+\newblock Tight approximation for proportional approval voting.
+\newblock In Bessiere, C., editor, {\em Proceedings of the Twenty-Ninth
+  International Joint Conference on Artificial Intelligence, {IJCAI} 2020},
+  pages 276--282. ijcai.org.
+
+\bibitem[Feige, 1998]{Feige98}
+Feige, U. (1998).
+\newblock A threshold of ln \emph{n} for approximating set cover.
+\newblock {\em J. {ACM}}, 45(4):634--652.
+
+\bibitem[Hochbaum, 1997]{Hochbaum96}
+Hochbaum, D.~S. (1997).
+\newblock Approximation algorithms for {NP}-hard problems.
+\newblock {\em {SIGACT} News}, 28(2):40--52.
+
+\bibitem[Murphey, 2000]{Murphey00}
+Murphey, R.~A. (2000).
+\newblock Target-based weapon target assignment problems.
+\newblock In {\em Nonlinear assignment problems}, pages 39--53. Springer.
+
+\bibitem[Paccagnan and Marden, 2018]{PM19}
+Paccagnan, D. and Marden, J.~R. (2018).
+\newblock Utility design for distributed resource allocation--part {II}:
+  Applications to submodular, covering, and supermodular problems.
+\newblock {\em CoRR}, abs/1807.01343.
+
+\bibitem[Sviridenko et~al., 2017]{SVW17}
+Sviridenko, M., Vondr{\'{a}}k, J., and Ward, J. (2017).
+\newblock Optimal approximation for submodular and supermodular optimization
+  with bounded curvature.
+\newblock {\em Math. Oper. Res.}, 42(4):1197--1218.
+
+\bibitem[Vondr{\'a}k, 2007]{Vondrak07}
+Vondr{\'a}k, J. (2007).
+\newblock Submodularity in {C}ombinatorial {O}ptimization.
+\newblock {\em Univerzita Karlova, Matematicko-{F}yzik{\'a}ln{\'\i} {F}akulta}.
+
+\end{thebibliography}

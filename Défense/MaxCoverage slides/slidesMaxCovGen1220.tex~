@@ -1,0 +1,719 @@
+\documentclass{beamer}
+
+%%% ISSUE BBB solved %%%
+\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{dsfont}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{xparse}
+\usepackage{physics}
+\usepackage{empheq}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage[affil-it]{authblk}
+%\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{quotes,angles,calc}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat = newest}
+
+\theoremstyle{definition}
+\newtheorem{theo}{Theorem}[section]
+\newtheorem{lem}[theo]{Lemma}
+\newtheorem{cor}[theo]{Corollary}
+\newtheorem{prop}[theo]{Proposition}
+\newtheorem{defi}[theo]{Definition}
+\newtheorem{conj}[theo]{Conjecture}
+
+\newtheorem{theo*}{Theorem}
+
+\theoremstyle{remark}
+\newtheorem*{rk}{Remark}
+
+\DeclareMathOperator{\Poi}{\text{Poi}}
+\DeclareMathOperator{\Ber}{\text{Ber}}
+\DeclareMathOperator{\Bin}{\text{Bin}}
+\DeclareMathOperator{\maxi}{\text{maximize}}
+\DeclareMathOperator{\mini}{\text{minimize}}
+\DeclareMathOperator{\st}{\text{subject to}}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
+
+\colorlet{darkgreen}{green!40!black}
+
+\usepackage{appendixnumberbeamer}
+
+\usetheme{Dresden}
+\usecolortheme{lily}
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+  \oldmacro\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber}
+
+
+\title{Tight Approximation Guarantees for\\ Concave Coverage Problems}
+\author{Siddharth Barman, Omar Fawzi, \textbf{Paul Fermé}}
+\institute{LIP - ENS de Lyon}
+\date{15/12/2020}
+
+%\AtBeginSection[]
+%{
+%  \begin{frame}<beamer>
+%    \frametitle{Contents}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\begin{frame}{Introduction}
+  \begin{columns}
+    \begin{column}{4cm}
+      \includegraphics[scale=0.2]{MaxCovPlotNamed.png}
+    \end{column}
+    \begin{column}{7cm}
+      \begin{itemize}
+      \item \underline{\textsc{MaxCoverage} problem:}\\
+        Maximize $C(S) := \abs{\bigcup_{i \in S} T_i}$ subject to $\abs{S} = k$.
+
+      \item NP-hard, exact approximation ratio is $1 - e^{-1}$ if \textrm{P}$\not=$\textrm{NP} \cite{Hochbaum96,Feige98}.
+        \pause
+        \bigskip
+      \item What happens if we take into account elements covered several times?
+      \item \underline{Applications:} multiwinner elections, network coverage issues, $\ldots$
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Some examples}
+  \begin{columns}
+    \begin{column}{6cm}
+      \includegraphics<1>[scale=0.25]{MaxCovPlotNamed.png}%
+      \includegraphics<2>[scale=0.25]{MaxCovPlotNamed1.png}%
+      \includegraphics<3>[scale=0.25]{MaxCovPlotNamed2.png}%
+      \includegraphics<4>[scale=0.25]{MaxCovPlotNamed3.png}%
+    \end{column}
+    \begin{column}{6cm}
+      \begin{itemize}
+      \item Max $C^{\varphi}(S) := \sum_{a \in [n]}\varphi(\abs{S}_a)$\\
+        subject to $\abs{S} = 3$,\\
+        where $\abs{S}_a = \abs{\set{i \in S : a \in T_i}}$.
+        
+        \bigskip
+        
+      \item<only@1> \textcolor{white}{$\varphi(j) = \min\{j,1\}$,}
+      \item<only@1> \textcolor{white}{$S=\{3,4,5\}$,}
+      \item<only@1> \textcolor{white}{$C^{\varphi}(S)=9$.}
+        
+      \item<only@2> $\varphi(j) = \min\{j,1\}$,
+      \item<only@2> $S=\{3,4,5\}$,
+      \item<only@2> $C^{\varphi}(S)=9$.
+
+      \item<only@3> $\varphi(j) = j$,
+      \item<only@3> $S=\{1,2,5\}$,
+      \item<only@3> $C^{\varphi}(S)=12$.
+
+      \item<only@4> $\varphi(j) = \min\{j,2\}$,
+      \item<only@4> $S=\{2,3,5\}$,
+      \item<only@4> $C^{\varphi}(S)=11$.
+      
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Our results}
+  \begin{defi}[$\varphi$-\textsc{MaxCoverage} problem]
+    Maximize $C^{\varphi}(S) := \sum_{a \in [n]}w_a\varphi(\abs{S}_a)$ subject to $\abs{S} = k$,
+    \\ where $\abs{S}_a = \abs{\set{i \in S : a \in T_i}}$.
+  \end{defi}
+
+  From now on, we suppose $\varphi$ nondecreasing concave and normalized, ie. $\varphi(0)=0$, $\varphi(1)=1$.
+
+  \pause
+  
+  \begin{theo}[Main Result]
+    There exists a polynomial-time approximation algorithm achieving the \emph{Poisson concavity ratio} of $\varphi$, defined by:
+    \[ \alpha_{\varphi} := \min_{x \in \mathbb{N}^*} \alpha_{\varphi}(x) \text{ , with } \alpha_{\varphi}(x) := \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])}=\frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(x)}\ .\]
+    Furthermore for $\varphi(n) = o(n)$, it is \textrm{NP}-hard to approximate within a factor better than $\alpha_\varphi + \varepsilon$.
+  \end{theo}
+\end{frame}
+
+\begin{frame}{Previous work}
+  \begin{itemize}
+  \item \cite{SVW17} Generic algorithm for submodular maximization under cardinality constraint using the \emph{curvature} $c$, ratio $1-ce^{-1}$.\\
+  $\Rightarrow$ We have shown that $\alpha_{\varphi} \geq 1-ce^{-1}$, $c$ curvature of $C^{\varphi}$.
+    \pause
+    \bigskip
+  \item \cite{BFGG20} \underline{$\ell$-\textsc{MultiCoverage} problem:} $\varphi(j):=\min\{ j,\ell\}$, ratio $1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$, tight under UGC.\\
+  $\Rightarrow$ One can compute $\alpha_{\varphi} = \alpha_{\varphi}(\ell) = 1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$, tight if \textrm{P}$\not=$\textrm{NP}.
+    \pause
+    \bigskip
+  \item \cite{DDMS20} For \emph{geometrically dominant} $\varphi$, ratio $\mathbb{E}[\varphi(\Poi(1))]$, tight if $\varphi(n) = o(n)$ and \textrm{P}$\not=$\textrm{NP}.\\
+  $\Rightarrow$ We have shown that if $\varphi$ is geometrically dominant, then $\alpha_\varphi=\alpha_\varphi(1)=\mathbb{E}[\varphi(\Poi(1))]$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Some particular cases}
+  \begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|l|l|l|}
+      \hline
+      $\varphi$-\textsc{MaxCoverage}  & $\varphi(j)$ & $\alpha_{\varphi}$ \\
+      \hline
+      \textsc{MaxCoverage} & $\min \{ j,1\}$ & $1 - e^{-1}$  \\
+      $\ell$-\textsc{MultiCoverage} & $\min\{ j,\ell\}$ & $1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$ \\
+       \textsc{PAV} & $\sum_{i=1}^j \frac{1}{i}$ & $\alpha_{\varphi}(1) \simeq 0.7965\ldots$\\
+      \textsc{PAV} capped at $3$ & $\sum_{i=1}^{\min\{j,3\}} \frac{1}{i}$ & $\alpha_{\varphi}(1) \simeq 0.7910\ldots$ \\
+      $p$-\textsc{VTA} & $\frac{1-(1-p)^j}{p}$ & $\frac{1 - e^{-p}}{p}$  \\
+      $0.1$-\textsc{VTA} & $\frac{1-(1-0.1)^j}{0.1}$ & $\frac{1 - e^{-0.1}}{0.1} \simeq 0.9516\ldots$ \\
+      $0.1$-\textsc{VTA} capped at $5$ & $\frac{1-(1-0.1)^{\min\{j,5\}}}{0.1}$ & $\alpha_{\varphi}(5) \simeq 0.8470\ldots$  \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Tight approximation ratios for particular choices of $\varphi$ in the $\varphi$-\textsc{MaxCoverage} problem.}
+  \label{figComp}
+\end{table}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Approximation Algorithm}
+\begin{frame}{Linear Relaxation of $\varphi$-\textsc{MaxCoverage}}
+  \begin{itemize}
+  \item \emph{Relax and Round} strategy to achieve the ratio $\alpha_{\varphi}$.
+    \pause
+  \item We consider $\varphi$ on $\mathbb{R}^+$, by extending it piecewise linearly:  
+  \begin{align*}
+      &\maxi&& \sum_{a \in [n]} w_ac_a \\
+      &\st&& c_a \leq \varphi(\abs{x}_a), \forall a \in [n],\text{ with }\abs{x}_a := \sum_{i \in [m] : a \in T_i} x_i\\
+      &&& 0 \leq x_i \leq 1, \forall i \in [m]\\
+      &&& \sum_{i=1}^m x_i = k \ .
+  \end{align*}
+  \pause
+  
+\item Note that $c_a \leq \varphi(\abs{x}_a)$ equivalent to $c_a \leq \varphi_j(\abs{x}_a)$ for all $j \in [m]$, with $\varphi_j$ linear interpolation of $\varphi(j-1)$ and $\varphi(j)$.
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \includegraphics[scale=0.35]{PhiLinearConstraint.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Pipage Rounding}
+  $C^{\varphi}$ \emph{submodular}: use \emph{pipage rounding} to get integral solution from fractional one.
+
+  \pause
+  
+  \begin{defi}[Multilinear extension]
+    The multilinear extension $F : [0, 1]^m \rightarrow \mathbb{R}$ of $f$ is defined by:\\
+    $F(x_1,\ldots,x_m): = \mathbb{E}[f(X_1,\ldots,X_m)]$, $X_i \sim \Ber(x_i)$ independent.
+  \end{defi}
+
+  \begin{theo}[\cite{AS04, Vondrak07}]
+    For $f$ submodular and $F$ computable in polynomial time, the \emph{pipage rounding} procedure applied on a fractional solution $x$ gives in polynomial time an integer solution $x^{\text{int}}$ with $F(x^{\text{int}}) \geq F(x)$.
+  \end{theo}
+
+  \bigskip
+  \pause
+  
+  Applied to our setting, with $x^*$ an optimal fractional solution:
+  \[C^{\varphi}(x^{\text{int}}) \geq \mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]\ .\]
+\end{frame}
+
+\begin{frame}{Approximation Guarantee Theorem}
+  \begin{theo}
+      Let $x,c$ be a feasible solution of our linear relaxation and $X \sim \Ber(x)$. We have:
+      \[\mathbb{E}_{X \sim \Ber(x)}[C^{\varphi}(X)] \geq \left(\min_{j \in [m]} \alpha_{\varphi}(j)\right) \sum_{a \in [n]} w_ac_a\ .\]
+  In particular, this implies that the described polynomial time algorithm has an approximation ratio of $\alpha_{\varphi}$:
+  \[C^{\varphi}(x^{\text{int}}) \geq \alpha_{\varphi} \sum_{a \in [n]} w_ac^*_a \geq \alpha_{\varphi} \max_{S \subseteq [m] : \abs{S} = k} C^{\varphi}(S)\ .\]
+  \end{theo}
+\end{frame}
+
+\begin{frame}{Theorem proof I}
+  \begin{lem}
+    For $\varphi$ concave, and $p \in [0,1]^m$, we have $\mathbb{E}\Big[\varphi\Big(\sum_{i=1}^m\Ber(p_i)\Big)\Big] \geq \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i=1}^m p_i\Big)\Big)\Big]$.    
+    \label{lem:ConvexOrder}
+  \end{lem}
+
+  
+  \bigskip
+  \pause
+
+  \begin{itemize}
+  \item Notion of \emph{convex order} used to prove this result: $X \leq_{\text{cx}} Y \iff \mathbb{E}[f(X)] \leq \mathbb{E}[f(Y)]$ for any convex $f$.
+    \pause
+    \item We have $\forall p_i \in [0,1], \Ber(p_i) \leq_{\text{cx}} \Poi(p_i)$.
+    \item Convex order is preserved through convolution.
+    \item $\sum_{i=1}^m \Poi(p_i) \sim \Poi\Big(\sum_{i=1}^m p_i\Big)$. So:
+      \[\sum_{i=1}^m\Ber(p_i) \leq_{\text{cx}}  \Poi\Big(\sum_{i=1}^m p_i\Big)\ .\]
+      \pause
+\item Apply this to convex $-\varphi$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Theorem proof II}
+  By linearity of expectation and $w_a > 0$, enough to show $\forall a \in [n]$:
+  \[ \mathbb{E}[C_a^{\varphi}(X)] \geq \left(\min_{j \in [m]} \alpha_{\varphi}(j) \right) c_a \ , \]
+  where $C_a^{\varphi}(S) := \varphi(\abs{S}_a)$. Note that $\abs{X}_a = \sum_{i \in [m] : a \in T_i} X_i$:
+  \pause
+  \begin{equation*}
+    \begin{aligned}
+      \mathbb{E}[C_a^{\varphi}(X)] &=&& \mathbb{E}\Big[\varphi\Big(\sum_{i \in [m] : a \in T_i} X_i\Big)\Big] = \mathbb{E}\Big[\varphi\Big(\sum_{i \in [m] : a \in T_i}\Ber(x_i) \Big)\Big]\\\pause
+      &\geq&& \mathbb{E}\Big[\varphi\Big(\Poi\Big(\sum_{i \in [m] : a \in T_i} x_i\Big)\Big)\Big] = \mathbb{E}[\varphi(\Poi(\abs{x}_a))]\\\pause
+      &\geq&&  \min \{ \alpha_{\varphi}(\lfloor \abs{x}_a \rfloor), \alpha_{\varphi}(\lceil \abs{x}_a \rceil) \} \varphi(\abs{x}_a)\\\pause
+      &\geq&& \left(\min_{j \in [m]} \alpha_{\varphi}(j) \right) \varphi(\abs{x}_a) \geq \left(\min_{j \in [m]} \alpha_{\varphi}(j) \right) c_a\ .
+    \end{aligned}
+  \end{equation*}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Hardness of Approximation Theorem}
+  \begin{theo*}
+ It is NP-hard to approximate the $\varphi$-\textsc{MaxCoverage} problem for $\varphi(n) = o(n)$ within a factor greater that $\alpha_{\varphi} + \varepsilon$ for any $\varepsilon > 0$.
+  \label{theo:Hardness}
+\end{theo*}
+
+  \bigskip
+  \pause
+
+  Idea of the reduction:
+  \begin{itemize}
+  \item \underline{\textrm{NP}-hard problem:} \emph{LabelCover} on (hyper)graphs.
+  \item Color vertices in order to satisfy constraints per (hyper)edge.
+  \item \textrm{NP}-hard to distinguish between all edges \emph{strongly satisfied} and at most $\delta$ fraction of edges \emph{weakly satisfied}.
+    \pause
+    \bigskip
+    
+  \item Then, we construct some instance of $\varphi$-\textsc{MaxCoverage} as $\mathcal{F} = \{ F_v^{\beta}, v \in V, \beta \text{ color}\}$, and we interpret subsets of size $|V|$ as coloring of vertices.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Crucial Tool: Partitioning System}
+  \includegraphics[scale=0.37]{PartSyst.png}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Applications}
+
+\begin{frame}{Multiwinner elections}
+  \begin{itemize}
+  \item \underline{Multiwinner elections:} selection of $k$ (out of $m$) candidates that maximize utility across $n$ voters: given weights $(w_1, w_2, \ldots)$, voter $a$'s utility is $\sum_{i=1}^{\#\text{approved candidates by $a$}} w_i$.
+  \item Coverage problem with $T_i \subseteq [n]$ as the set of voters that approve of candidate $i \in [m]$ and $\varphi(j) = \sum_{i=1}^j w_i$.
+
+    \pause
+    \bigskip
+    
+  \item \cite{DDMS20}: if $w$ nonnegative nonincreasing, \emph{geometrically dominant} ($\forall i, w_{i } \ w_{i+2} \geq w_{i+1}^2$) and $\lim_{i \rightarrow \infty} w_i = 0$, tight approximation guarantee $\mathbb{E}[\sum_{i=1}^{\Poi(1)}w_i]$.
+
+    \pause
+    \bigskip
+  \item However, geometric dominance excludes any $\varphi$ with $\alpha_{\varphi}$ not taken at $1$ (e.g. $\ell$-\textsc{MultiCoverage} with $\alpha_{\varphi}=\alpha_{\varphi}(\ell)$), or any $\varphi$ which is eventually stationary (e.g. capping the \textsc{PAV} rule at $3$ : $\varphi(j)=\sum_{i=1}^{\min\{j,3\}} \frac{1}{i}$, then  $\alpha_{\varphi}(1) \simeq 0.7910\ldots$).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Resource Allocation in Multiagent Systems}
+  \begin{itemize}
+  \item \underline{Algorithmic game theory:} maximizing welfare among multiple agents \cite{PM19}.
+    
+  \item \underline{$\varphi$-\textsc{Resource Allocation} problem:} $n$ resources, $k$ agents, and a (counting) function $\varphi: \mathbb{N} \mapsto \mathbb{R}_+$. Every agent $i$ has resource subsets $\mathcal{A}_i = \set{T^i_1, \ldots, T^i_{m_i}}$ with $T^i_j \subseteq [n]$.\\
+    Maximize $W^{\varphi}(A_1, A_2, \ldots, A_k)  \coloneqq \sum_{a \in [n]} w_a \ \varphi(\abs{A}_a)$ with  $A_i \in \mathcal{A}_i$ and $\abs{A}_a \coloneqq  \abs{\set{i \in [k] : a \in A_i}}$.
+
+    \pause
+    \bigskip
+  \item $\varphi$-\textsc{Resource Allocation} is a $\varphi$-\textsc{MaxCoverage} instance subject to a partition matroid constraint.
+    \item We can also adapt the hardness proof in that case, and we get the same theorem as for $\varphi$-\textsc{MaxCoverage}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\textsc{Vehicle-Target Assignment}~\cite{Murphey00}}
+  \begin{itemize}
+  \item Particular case of $\varphi$-\textsc{Resource Allocation}:
+    \begin{enumerate}
+    \item The $[n]$ resources correspond to targets,
+    \item The agents correspond to vehicles $i \in [k]$, each  with a collection of covering choices $\mathcal{A}_i \subseteq 2^{[n]}$,
+    \item $\varphi^p(j) = \frac{1-(1-p)^j}{p}$, for some $p \in (0,1)$.
+    \end{enumerate}
+    \pause
+    \bigskip
+  \item $\varphi^p$ is nondecreasing concave and $\varphi(n)=o(n)$: we get the tight ratio $\alpha_{\varphi^p} = \frac{1 - e^{-p}}{p}$.
+    \bigskip
+  \item Capped version of this problem: $\varphi^p_{\ell}(j) := \varphi^p(\min\{j,\ell\})$.\\In particular, we recover the $\ell$-\textsc{MultiCoverage} function when $p=0$ and \textsc{MaxCoverage} for $p=1$.
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+  
+\begin{figure}[!h]
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin = 0, xmax = 1,
+          ymin = 0.5, ymax = 1,
+          xtick distance = 0.2,
+          ytick distance = 0.1,
+          grid = both,
+          width = 0.95\textwidth,
+          height = 0.55\textwidth,
+          legend cell align = {left},
+          legend pos = north east,
+          xlabel=$p$,
+        ]
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          black,
+          mark = x,
+        ] table[x=p,y=alpha,col sep=comma] {VTATruncPlot.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          brown,
+          mark = triangle,
+        ] table[x=p,y=m1,col sep=comma] {VTATruncPlot.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          orange,
+          mark = o,
+        ] table[x=p,y=m2,col sep=comma] {VTATruncPlot.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          purple,
+          mark = diamond,
+        ] table[x=p,y=m3,col sep=comma] {VTATruncPlot.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          red,
+          mark = square,
+        ] table[x=p,y=m4,col sep=comma] {VTATruncPlot.csv};
+        \addplot[
+          domain = 0:1,
+          samples = 21,
+          smooth,
+          blue,
+          mark = star,
+        ] table[x=p,y=m5,col sep=comma] {VTATruncPlot.csv};
+
+        \legend{$\alpha_{\varphi^p_{\infty}}$, $\alpha_{\varphi^p_{1}}$, $\alpha_{\varphi^p_{2}}$, $\alpha_{\varphi^p_{3}}$, $\alpha_{\varphi^p_{4}}$, $\alpha_{\varphi^p_{5}}$ }
+      \end{axis}
+    \end{tikzpicture}
+  \end{center}
+  \caption{Tight approximation ratios $\alpha_{\varphi^p_{\ell}}$, where $\ell$ is the rank of the capped version of the $p$-\textsc{Vehicle-Target Assignment} problem. When $p=0$, we recover the $\ell$-coverage problem.}
+  \label{fig:VTATrunc}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Links to \emph{Price of Anarchy}}
+  \begin{itemize}
+  \item \cite{PM19}: game-theoretic aspects of $\varphi$-\textsc{Resource Allocation} problem, and in particular \textsc{VTA}.
+  \item \underline{Goal:} bound welfare loss due to self-interested choice of $A_i \in \mathcal{A}_i$ by each agent $i$, defined as the \emph{Price of Anarchy}.
+  \item In that setting, the PoA can be computed via linear programs. 
+
+    \pause
+    \bigskip
+
+  \item \underline{Our hardness result} $\Rightarrow$ upper bounds on those PoA.
+  \item \cite{CPM19}: in the particular case of the $\ell$-\textsc{MultiCoverage} problem, PoA $=\alpha_{\varphi}$.
+  \item However, numerically comparing $\alpha_{\varphi}$ for \textsc{VTA} with the optimal PoA bound,  $\alpha_{\varphi}$ can in fact be strictly greater than the PoA guarantee.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[!h]
+      \begin{center}
+       \begin{tikzpicture}
+          \begin{axis}[
+            xmin = 0, xmax = 1,
+            ymin = 0.5, ymax = 1,
+            xtick distance = 0.2,
+            ytick distance = 0.1,
+            grid = both,
+            width = 0.95\textwidth,
+            height = 0.55\textwidth,
+            legend cell align = {left},
+            legend pos = north east,
+            xlabel=$p$,
+            ]
+            \addplot[
+              domain = 0:1,
+              samples = 21,
+              smooth,
+              black,
+              mark = x,
+            ] table[x=p,y=alpha,col sep=comma] {VTAPoA.csv};
+            \addplot[
+              domain = 0:1,
+              samples = 21,
+              smooth,
+              blue,
+              mark = o,
+            ] table[x=p,y=PoA,col sep=comma] {VTAPoA.csv};
+            \addplot[
+              domain = 0:1,
+              samples = 21,
+              smooth,
+              red,
+              mark = diamond,
+            ] table[x=p,y=App,col sep=comma] {VTAPoA.csv};
+            \legend{$\alpha_{\varphi^p} = \frac{1 - e^{-p}}{p}$, PoA$^{20}$,Curv $=1 - \frac{c}{e}$}
+          \end{axis}
+       \end{tikzpicture}
+    \end{center}
+    \caption{Comparison between the PoA and $\alpha_{\varphi}$ for the \textsc{Vehicle-Target Assignment} problem. Since the PoA only decreases when the number of players grows, this means that PoA $< \alpha_{\varphi}$ in that case.}
+    \label{fig:VTA}
+\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+\begin{frame}{Conclusion and Open Questions}
+  \begin{itemize}
+  \item $\varphi$-\textsc{MaxCoverage}: generalization of \textsc{MaxCoverage} where having $c$ copies of element $a$ gives a value $\varphi(c)$.
+  \item For nondecreasing concave $\varphi$, approximation guarantee given by the \emph{Poisson concavity ratio} $\alpha_{\varphi} := \min_{x \in \mathbb{N^*}} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])}$.
+  \item Tight for sublinear functions $\varphi(n)=o(n)$.
+  \item Beats the curvature bound as soon as $\varphi(t)\not=1+(1-c)t$, where they are equal.
+
+    \pause
+    \bigskip
+    
+    \item Open questions:
+      \begin{enumerate}
+      \item Does there exist combinatorial algorithms that achieve $\alpha_{\varphi}$?
+      \item Does the hardness result remain true when $\varphi(n) \not= o(n)$?
+      \end{enumerate}
+      \bigskip
+      \pause
+      \item Thank you for listening!
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bibliography}
+\begin{frame}[allowframebreaks]{Bibliography}
+  \bibliographystyle{apalike}
+  \bibliography{these.bib}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hardness of Approximation - Full Proof}
+\begin{frame}{Hardness of Approximation Theorem}
+  \begin{theo*}
+ It is NP-hard to approximate the $\varphi$-\textsc{MaxCoverage} problem for $\varphi(n) = o(n)$ within a factor greater that $\alpha_{\varphi} + \varepsilon$ for any $\varepsilon > 0$.
+  \label{theo:Hardness}
+\end{theo*}
+
+  \bigskip
+  \pause
+  
+\begin{defi}[$h$-\textsc{AryLabelCover}]
+  An instance $\mathcal{G} = (V,E,[L],[R],\set{\pi_{e,v}}_{e \in E, v \in e})$ of $h$-\textsc{AryLabelCover} is characterized by $h$-uniform regular hypergraph $(V, E)$ and constraints $\pi_{e,v} : [L] \rightarrow [R]$. 
+\end{defi}
+\end{frame}
+\begin{frame}
+  \begin{defi}
+    For any labeling $\sigma : V \rightarrow [L]$:
+    \begin{itemize}
+      \item An edge $e = (v_1,\ldots,v_h) \in E$ is \emph{strongly satisfied} by $\sigma$ if:\\
+    $\forall x,y \in [h], \pi_{e,v_x}(\sigma(v_x)) = \pi_{e,v_y}(\sigma(v_y))$.
+      \item An edge $e = (v_1,\ldots,v_h) \in E$ is \emph{weakly satisfied} by $\sigma$ if:\\ $\exists x\not=y \in [h], \pi_{e,v_x}(\sigma(v_x)) = \pi_{e,v_y}(\sigma(v_y))$.
+    \end{itemize}
+  \end{defi}
+
+  \pause
+
+  \includegraphics[scale=0.35]{haryLabelCover.png}
+
+\end{frame}
+
+\begin{frame}{The \textrm{NP}-hardness problem}    
+\begin{prop}[$\delta,h$-\textsc{AryGapLabelCover}]
+\label{prop:hardness-ary-lc}
+For any fixed integer $h \geq 2$ and fixed $\delta > 0$, there exists an $R_0$ such that for any integer $R \geq R_0$, it is {\rm NP}-hard for instances $\mathcal{G} = (V,E,[L],[R],\set{\pi_{e,v}}_{e \in E, v \in e})$ of $h$-\textsc{AryLabelCover} with right alphabet $[R]$ to distinguish between:
+\bigskip
+  \begin{itemize}
+  \item[\textbf{YES:}] There exists a labeling $\sigma$ that \emph{strongly satisfies} all the edges.
+    \bigskip
+  \item[\textbf{NO:}] No labeling \emph{weakly satisfies} more than $\delta$ fraction of the edges.
+  \end{itemize}
+  \label{prop:AryGapLabelCover}
+\end{prop}
+\end{frame}
+
+\begin{frame}{Crucial Tool: Partitioning System}
+  \begin{itemize}
+  \item $\mathcal{Q}$ is an \emph{$x$-cover} of $x \in \mathbb{N}$ if every element of $[n]$ is covered $x$ times, so $C^{\varphi}(\mathcal{Q}) = n\varphi(x)$.
+  \item Let $x_{\varphi} \in \text{argmin}_{x \in \mathbb{N}^*}\alpha_{\varphi}(x)$.
+    \pause
+\begin{defi}[Generalizing \cite{Feige98,BFGG20}]
+  An \emph{$([n],h,R,\varphi,\eta)$-partitioning system} consists of $R$ collections of subsets of $[n]$, $\mathcal{P}_1,\ldots,\mathcal{P}_R \subseteq 2^{[n]}$, that satisfy $\frac{x_{\varphi}n}{h} \in \mathbb{N}$, $x_{\varphi} \geq h$ and:
+  \begin{enumerate}
+  \item For every $i \in [R], \mathcal{P}_i$ is a collection of $h$ subsets $P_{i,1}, \ldots, P_{i,h} \subseteq [n]$ each of size $\frac{x_{\varphi}n}{h}$ which is an $x_{\varphi}$-cover.
+    \pause
+  \item For any $T \subseteq [R]$ and $\mathcal{Q} = \set{P_{i,j(i)} : i \in T}$ for some function $j : T \rightarrow [h]$, we have $\abs{C^{\varphi}(\mathcal{Q}) -\psi^{\varphi}_{\abs{T},h} n} \leq \eta n$ where:
+  \begin{align*}
+   \psi^{\varphi}_{k,h} := \mathbb{E}\Big[\varphi\Big(\Bin\Big(k,\frac{x_{\varphi}}{h}\Big)\Big)\Big] \ .
+   \end{align*}
+  \end{enumerate}
+  \label{defi:PartSystem}
+\end{defi}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{A drawing}
+  \includegraphics[scale=0.37]{PartSyst.png}
+\end{frame}
+
+\begin{frame}{The Reduction}
+  \begin{itemize}
+  \item Let $\varepsilon > 0$. For a good choice of parameters $h,\eta,\xi$, define $\delta = \frac{\eta}{2} \frac{\xi^3}{h^2}$ and fix $R \geq h$ large enough.
+    \pause
+  \item Given $\mathcal{G} = (V,E,[L],[R], \Sigma, \set{\pi_{e,v}}_{e \in E, v \in e})$ of $\delta,h$-\textsc{AryGapLabelCover}, we construct an instance $(\Gamma, \mathcal{F}, k)$ of the $\varphi$-\textsc{MaxCoverage} problem with:
+    \begin{enumerate}
+      \pause
+    \item $n$ large enough to have a $([n],h,R,\varphi,\eta)$-partitioning system,
+    \item $\Gamma = [n] \times E$,
+    \item $k =\abs{V}$,
+      \pause
+    \item Consider a  $([n],h,R,\varphi,\eta)$-partitioning system, call $\mathcal{P} =\set{\mathcal{P}_1,\ldots,\mathcal{P}_R}$ the corresponding set of collections:
+      \begin{itemize}
+      \item $T_{\beta}^{e,v_j} := P_{\pi_{e,v_j}(\beta),j} \times \set{e}$, $e = (v_1,\ldots,v_h) \in E, j \in [h], \beta \in [L]$,
+        \pause
+      \item $F^v_{\beta} := \bigsqcup_{e \in E:v \in e} T^{e,v}_{\beta}$,
+      \item $\mathcal{F} := \set{F^v_{\beta}, v \in V, \beta \in [L]}$.
+        \end{itemize}
+    \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{The Goal}
+  \begin{enumerate}
+  \item YES instance $\Rightarrow \exists \mathcal{T}$ of size $k$ such that $C^{\varphi}(\mathcal{T}) \geq \varphi(x_{\varphi})\abs{\Gamma}$ (completeness).
+  \item NO instance $\Rightarrow \forall \mathcal{T}$ of size $k$, $C^{\varphi}(\mathcal{T}) \leq (\alpha_{\varphi} + \varepsilon)\varphi(x_{\varphi})\abs{\Gamma}$ (soundness).
+    \end{enumerate}
+
+  \pause
+  Let us determine the relevant part of $C^{\varphi}$ on each edge:
+  \begin{itemize}
+  \item $C^{\varphi,e} := \sum_{a \in [n] \times \set{e}} C^{\varphi}_a$. So $C^{\varphi} = \sum_{e \in E}C^{\varphi,e}$.
+    \pause
+  \item For $\mathcal{T} \subseteq \mathcal{F}$, we define the relevant part of $\mathcal{T}$ on $e$ by:
+    \begin{align*}
+      \mathcal{T}_e &:= \set{T_{\beta}^{e,v} : v \in e, F^v_{\beta} \in \mathcal{T}} = \set{F^v_{\beta} \cap ([n] \times \set{e}), F^v_{\beta} \in \mathcal{T}}\  .
+    \end{align*}
+  \item Thus:
+    \[ C^{\varphi}(\mathcal{T}) = \sum_{e \in E} C^{\varphi,e}(\mathcal{T}_e) \ . \]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Completeness}
+  \begin{itemize}
+  \item Suppose $\mathcal{G}$ is a YES instance: there exists a labeling $\sigma : V \mapsto [L]$ which strongly satisfies all edges.
+  \item Consider $\mathcal{T} := \set{F_{\sigma(v)}^v : v \in V}$ of size $\abs{V}$.
+    \pause
+    \bigskip
+  \item  Fix $e = (v_1,\ldots,v_h) \in E$. Since $e$ is strongly satisfied by $\sigma$, there exists $r \in [R]$ such that $\pi_{e,v_i}(\sigma(v_i)) = r$ for all $i \in [h]$.
+  \item So $\mathcal{T}_e = \set{T_{\sigma(v_i)}^{e,v_i}}_{i \in [h]} = \set{P_{r,i} \times \set{e}}_{i \in [h]}$ is an $x_{\varphi}$-cover of $[n] \times \set{e}$. Therefore $C^{\varphi,e}(\mathcal{T}_e) = n\varphi(x_{\varphi})$.
+    \pause
+    \bigskip
+  \item Thus $C^{\varphi}(\mathcal{T}) = \sum_{e \in E}C^{\varphi,e}(\mathcal{T}_e) = \abs{E}n\varphi(x_{\varphi}) = \varphi(x_{\varphi})\abs{\Gamma}$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Soundness I}
+  \begin{itemize}
+  \item Suppose $\mathcal{G}$ is a NO instance. Contrapositive of the soundness:\begin{enumerate}
+  \item We suppose that there exists $\mathcal{T}$ of size $k = \abs{V}$ such that  $C^{\varphi}(\mathcal{T}) > (\alpha_{\varphi} + \varepsilon)\varphi(x_{\varphi})\abs{\Gamma}$.
+  \item We show there exists a labeling $\sigma$ that weakly satisfies a strictly larger fraction of edges than $\delta$.
+  \end{enumerate}
+
+    \pause
+    
+  \item For $v \in V$, $L(v) := \set{\beta \in [L] : F_{\beta}^v \in \mathcal{T}}$. For $e = (v_1,\ldots,v_h)$, $L(e) := \bigcup_{i \in [h]} L(v_i)$ is the \emph{multiset} of all labels associated with the edge. %Note that $\abs{\mathcal{T}_e}=\abs{L(e)}$.
+
+    \pause
+
+  \item $e = (v_1,\ldots,v_h) \in E$ is \emph{consistent} if and only if $\exists x \not= y \in [h], \pi_{e,v_x}(L(v_x)) \cap \pi_{e,v_y}(L(v_y)) \not= \emptyset$.
+    
+    \pause
+    \bigskip
+  \item We decompose $E$ in three parts:
+    \begin{enumerate}
+    \item $B$ set of edges $e$ with $\abs{L(e)} \geq \frac{h}{\xi}$.
+    \item $N$ set of consistent edges $e$ with $\abs{L(e)} < \frac{h}{\xi}$.
+    \item $I = E - (B \cup N)$ set of inconsistent edges $e$ with $\abs{L(e)} < \frac{h}{\xi}$.
+    \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Soundness II}
+  \begin{itemize}
+  \item We show that the contribution of $N$ is not too small:
+    \begin{enumerate}
+    \item $\sum_{e \in B} C^{\varphi,e}(\mathcal{T}_e) \leq \frac{\varepsilon}{4}\varphi(x_{\varphi})\abs{\Gamma}$.
+    \item $\sum_{e \in I} C^{\varphi,e}(\mathcal{T}_e) \leq (\alpha_{\varphi} + \frac{\varepsilon}{2})\varphi(x_{\varphi})\abs{\Gamma}$.
+    \item $\sum_{e \in N} C^{\varphi,e}(\mathcal{T}_e) > \frac{\varepsilon}{4}\varphi(x_{\varphi})\abs{\Gamma}$ and thus $\frac{\abs{N}}{\abs{E}} \geq \xi\eta$.
+    \end{enumerate}
+    \pause
+  \item Construct a randomized labeling $\sigma : V \mapsto [L]$ which will satisfy strictly more than $\delta$ fraction of the edges in expectation:
+    \begin{enumerate}
+    \item For $v \in V$, if $L(v) \not= \emptyset$, set $\sigma(v)$ uniformly form $L(v)$,
+    \item Otherwise, set it arbitrarily.
+    \end{enumerate}
+    \pause
+  \item Let $e = (v_1,\ldots,v_h) \in N$.
+    \begin{enumerate}
+    \item $\exists x \not= y \in [h], \pi_{e,v_x}(L(v_x)) \cap \pi_{e,v_y}(L(v_y)) \not= \emptyset$ with $\abs{L(v_x)},\abs{L(v_y)} \leq h/\xi$.
+    \item So $\pi_{e,v_x}(L(v_x)) = \pi_{e,v_y}(L(v_y))$ w.p. at least $\left(\xi/h\right)^2$.
+    \end{enumerate}
+    \pause
+    \begin{align*}
+      \text{Thus: }  & \mathbb{E}_{\sigma}\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e]\\
+      \geq& \xi \eta \mathbb{E}_{\sigma}\mathbb{E}_{e \sim E}[\sigma \text{ weakly satisfies } e | e \in N]
+      \geq \eta \xi^3/h^2 > \delta \ .
+  \end{align*}
+  \end{itemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

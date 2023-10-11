@@ -1,0 +1,420 @@
+%%%%%   INTRODUCTION   %%%%%
+%%% Shannon
+@article{Shannon48,
+  author    = {Claude E. Shannon},
+  title     = {A mathematical theory of communication},
+  journal   = {Bell Syst. Tech. J.},
+  volume    = {27},
+  number    = {3},
+  pages     = {379--423},
+  year      = {1948},
+  url       = {https://doi.org/10.1002/j.1538-7305.1948.tb01338.x},
+  doi       = {10.1002/j.1538-7305.1948.tb01338.x},
+  timestamp = {Sat, 30 May 2020 20:01:09 +0200},
+  biburl    = {https://dblp.org/rec/journals/bstj/Shannon48.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+%%% MAC capacity
+@inproceedings{Ahlswede73,
+  title={Multi-way communication channels},
+  author={Ahlswede, Rudolf},
+  booktitle={2nd International Symposium on Information Theory, Tsahkadsor, Armenia, USSR, September 2-8, 1971},
+  pages={23--52},
+  year={1973},
+  organization={Publishing House of the Hungarian Academy of Science}
+}
+@article{Liao73,
+  author    = {Henry Herng{-}Jiunn Liao},
+  title     = {Multiple access channels ({Ph.D. Thesis} abstr.)},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {19},
+  number    = {2},
+  pages     = {253},
+  year      = {1973},
+  url       = {https://doi.org/10.1109/TIT.1973.1054960},
+  doi       = {10.1109/TIT.1973.1054960},
+  timestamp = {Tue, 10 Mar 2020 10:45:01 +0100},
+  biburl    = {https://dblp.org/rec/journals/tit/Liao73.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+%%% Zero-Error Capacity
+@article{Lindstrom69,
+  title={Determination of two vectors from the sum},
+  author={Lindstr{\"o}m, Bernt},
+  journal={Journal of Combinatorial Theory},
+  volume={6},
+  number={4},
+  pages={402--407},
+  year={1969},
+  publisher={Elsevier},
+  url={https://doi.org/10.1016/S0021-9800(69)80038-4},
+  doi={10.1016/S0021-9800(69)80038-4}
+}
+@article{Tilborg78,
+  author    = {Henk C. A. van Tilborg},
+  title     = {An upper bound for codes in a two-access binary erasure channel {(Corresp.)}},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {24},
+  number    = {1},
+  pages     = {112--116},
+  year      = {1978},
+  url       = {https://doi.org/10.1109/TIT.1978.1055814},
+  doi       = {10.1109/TIT.1978.1055814},
+  timestamp = {Tue, 10 Mar 2020 10:45:18 +0100},
+  biburl    = {https://dblp.org/rec/journals/tit/Tilborg78.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{KL78,
+  author    = {Tadao Kasami and
+               Shu Lin},
+  title     = {Bounds on the achievable rates of block coding for a memoryless multiple-access
+               channel},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {24},
+  number    = {2},
+  pages     = {187--197},
+  year      = {1978},
+  url       = {https://doi.org/10.1109/TIT.1978.1055860},
+  doi       = {10.1109/TIT.1978.1055860},
+  timestamp = {Thu, 10 Sep 2020 17:39:06 +0200},
+  biburl    = {https://dblp.org/rec/journals/tit/KasamiL78.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{Weldon78,
+  author    = {E. J. Weldon Jr.},
+  title     = {Coding for a Multiple-Access Channel},
+  journal   = {Inf. Control.},
+  volume    = {36},
+  number    = {3},
+  pages     = {256--274},
+  year      = {1978},
+  url       = {https://doi.org/10.1016/S0019-9958(78)90312-1},
+  doi       = {10.1016/S0019-9958(78)90312-1},
+  timestamp = {Mon, 18 May 2020 17:44:49 +0200},
+  biburl    = {https://dblp.org/rec/journals/iandc/Weldon78.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{KLWY83,
+  author    = {Tadao Kasami and
+               Shu Lin and
+               Victor K.{-}W. Wei and
+               Saburo Yamamura},
+  title     = {Graph theoretic approaches to the code construction for the two-user
+               multiple-access binary adder channel},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {29},
+  number    = {1},
+  pages     = {114--130},
+  year      = {1983},
+  url       = {https://doi.org/10.1109/TIT.1983.1056614},
+  doi       = {10.1109/TIT.1983.1056614},
+  timestamp = {Thu, 10 Sep 2020 17:39:06 +0200},
+  biburl    = {https://dblp.org/rec/journals/tit/KasamiLWY83.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{BT85,
+  author    = {P. A. B. M. Coebergh van den Braak and
+               Henk C. A. van Tilborg},
+  title     = {A family of good uniquely decodable code pairs for the two-access
+               binary adder channel},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {31},
+  number    = {1},
+  pages     = {3--9},
+  year      = {1985},
+  url       = {https://doi.org/10.1109/TIT.1985.1057004},
+  doi       = {10.1109/TIT.1985.1057004},
+  timestamp = {Tue, 10 Mar 2020 10:45:44 +0100},
+  biburl    = {https://dblp.org/rec/journals/tit/BraakT85.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{BB98,
+  author    = {Shraga I. Bross and
+               Ian F. Blake},
+  title     = {Upper Bound for Uniquely Decodable Codes in a Binary Input {N}-User
+               Adder Channel},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {44},
+  number    = {1},
+  pages     = {334--340},
+  year      = {1998},
+  url       = {https://doi.org/10.1109/18.651062},
+  doi       = {10.1109/18.651062},
+  timestamp = {Tue, 10 Mar 2020 10:45:20 +0100},
+  biburl    = {https://dblp.org/rec/journals/tit/BrossB98.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@inproceedings{UL98,
+  title={The zero-error capacity region of the 2-user synchronous {BAC} is strictly smaller than its {Shannon} capacity region},
+  author={Urbanke, R{\"u}diger and Li, Quinn},
+  booktitle={1998 Information Theory Workshop (Cat. No. 98EX131)},
+  pages={61},
+  year={1998},
+  organization={IEEE},
+  url={https://doi.org/10.1109/ITW.1998.706434},
+  doi={10.1109/ITW.1998.706434}
+}
+@article{AB99,
+  author    = {Rudolf Ahlswede and
+               Vladimir B. Balakirsky},
+  title     = {Construction of Uniquely Decodable Codes for the Two-User Binary Adder
+               Channel},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {45},
+  number    = {1},
+  pages     = {326--330},
+  year      = {1999},
+  url       = {https://doi.org/10.1109/18.746834},
+  doi       = {10.1109/18.746834},
+  timestamp = {Tue, 10 Mar 2020 10:47:32 +0100},
+  biburl    = {https://dblp.org/rec/journals/tit/AhlswedeB99.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{MO05,
+  author    = {M. Mattas and
+               Patric R. J. {\"{O}}sterg{\aa}rd},
+  title     = {A New Bound for the Zero-Error Capacity Region of the Two-User Binary
+               Adder Channel},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {51},
+  number    = {9},
+  pages     = {3289--3291},
+  year      = {2005},
+  url       = {https://doi.org/10.1109/TIT.2005.853309},
+  doi       = {10.1109/TIT.2005.853309},
+  timestamp = {Tue, 10 Mar 2020 10:43:34 +0100},
+  biburl    = {https://dblp.org/rec/journals/tit/MattasO05.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@inproceedings{OS15,
+  author    = {Or Ordentlich and
+               Ofer Shayevitz},
+  title     = {A {VC}-dimension-based outer bound on the zero-error capacity of the
+               binary adder channel},
+  booktitle = {{IEEE} International Symposium on Information Theory, {ISIT} 2015,
+               Hong Kong, China, June 14-19, 2015},
+  pages     = {2366--2370},
+  publisher = {{IEEE}},
+  year      = {2015},
+  url       = {https://doi.org/10.1109/ISIT.2015.7282879},
+  doi       = {10.1109/ISIT.2015.7282879},
+  timestamp = {Wed, 16 Oct 2019 14:14:48 +0200},
+  biburl    = {https://dblp.org/rec/conf/isit/OrdentlichS15.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+%%% Quantum
+@article{BSST99,
+  title={Entanglement-assisted classical capacity of noisy quantum channels},
+  author={Bennett, Charles H and Shor, Peter W and Smolin, John A and Thapliyal, Ashish V},
+  journal={Physical Review Letters},
+  volume={83},
+  number={15},
+  pages={3081},
+  year={1999},
+  publisher={APS},
+  url={https://doi.org/10.1103/PhysRevLett.83.3081},
+  doi={10.1103/PhysRevLett.83.3081}
+}
+@article{Mermin90,
+  title={Simple unified form for the major no-hidden-variables theorems},
+  author={Mermin, N David},
+  journal={Physical review letters},
+  volume={65},
+  number={27},
+  pages={3373},
+  year={1990},
+  publisher={APS},
+  url={https://doi.org/10.1103/PhysRevLett.65.3373},
+  doi={10.1103/PhysRevLett.65.3373}
+}
+@article{Peres90,
+  title={Incompatible results of quantum measurements},
+  author={Peres, Asher},
+  journal={Physics Letters A},
+  volume={151},
+  number={3-4},
+  pages={107--108},
+  year={1990},
+  publisher={Elsevier},
+  url={https://doi.org/10.1016/0375-9601(90)90172-K},
+  doi={10.1016/0375-9601(90)90172-K}
+}
+@article{Aravind02,
+  title={A simple demonstration of {Bell}'s theorem involving two observers and no probabilities or inequalities},
+  author={Aravind, PK},
+  journal={CoRR},
+  volume={abs/quant-ph/0206070},
+  year={2002},
+  eprinttype={arXiv},
+  eprint={quant-ph/0206070}
+}
+@article{BBT05,
+  title={Quantum pseudo-telepathy},
+  author={Brassard, Gilles and Broadbent, Anne and Tapp, Alain},
+  journal={Foundations of Physics},
+  volume={35},
+  number={11},
+  pages={1877--1907},
+  year={2005},
+  publisher={Springer},
+  url={https://doi.org/10.1007/s10701-005-7353-4},
+  doi={10.1007/s10701-005-7353-4}
+}
+
+%%% Non-signalling assistance
+@article{Matthews12,
+  author    = {William Matthews},
+  title     = {A Linear Program for the Finite Block Length Converse of {Polyanskiy-Poor-Verd{\'{u}}}
+               Via Nonsignaling Codes},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {58},
+  number    = {12},
+  pages     = {7036--7044},
+  year      = {2012},
+  url       = {https://doi.org/10.1109/TIT.2012.2210695},
+  doi       = {10.1109/TIT.2012.2210695},
+  timestamp = {Tue, 10 Mar 2020 10:49:27 +0100},
+  biburl    = {https://dblp.org/rec/journals/tit/Matthews12.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{BF18,
+  author    = {Siddharth Barman and
+               Omar Fawzi},
+  title     = {Algorithmic Aspects of Optimal Channel Coding},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {64},
+  number    = {2},
+  pages     = {1038--1045},
+  year      = {2018},
+  url       = {https://doi.org/10.1109/TIT.2017.2696963},
+  doi       = {10.1109/TIT.2017.2696963},
+  timestamp = {Tue, 10 Mar 2020 10:44:43 +0100},
+  biburl    = {https://dblp.org/rec/journals/tit/BarmanF18.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{LALS20,
+  title={Playing games with multiple access channels},
+  author={Leditzky, Felix and Alhejji, Mohammad A and Levin, Joshua and Smith, Graeme},
+  journal={Nature communications},
+  volume={11},
+  number={1},
+  pages={1--5},
+  year={2020},
+  publisher={Nature Publishing Group},
+  url={https://doi.org/10.1038/s41467-020-15240-w},
+  doi={10.1038/s41467-020-15240-w}
+}
+
+%%% IT Books
+@book{CT01,
+  author    = {Thomas M. Cover and
+               Joy A. Thomas},
+  title     = {Elements of Information Theory},
+  publisher = {Wiley},
+  year      = {2001},
+  url       = {https://doi.org/10.1002/0471200611},
+  doi       = {10.1002/0471200611},
+  isbn      = {9780471062592},
+  timestamp = {Tue, 09 Jul 2019 11:28:21 +0200},
+  biburl    = {https://dblp.org/rec/books/wi/01/CT2001.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@book{GK11,
+  author    = {Abbas El Gamal and
+               Young{-}Han Kim},
+  title     = {Network Information Theory},
+  publisher = {Cambridge University Press},
+  year      = {2011},
+  url       = {https://doi.org/10.1017/CBO9781139030687},
+  doi       = {10.1017/CBO9781139030687},
+  isbn      = {9781139030687},
+  timestamp = {Thu, 04 Jul 2019 18:12:10 +0200},
+  biburl    = {https://dblp.org/rec/books/cu/GK2011.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+%%% Hardness results
+@article{FKP01,
+  author    = {Uriel Feige and
+               Guy Kortsarz and
+               David Peleg},
+  title     = {The Dense \emph{k}-Subgraph Problem},
+  journal   = {Algorithmica},
+  volume    = {29},
+  number    = {3},
+  pages     = {410--421},
+  year      = {2001},
+  url       = {https://doi.org/10.1007/s004530010050},
+  doi       = {10.1007/s004530010050},
+  timestamp = {Wed, 17 May 2017 14:25:12 +0200},
+  biburl    = {https://dblp.org/rec/journals/algorithmica/FeigePK01.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@inproceedings{Feige02,
+  author    = {Uriel Feige},
+  editor    = {John H. Reif},
+  title     = {Relations between average case complexity and approximation complexity},
+  booktitle = {Proceedings on 34th Annual {ACM} Symposium on Theory of Computing,
+               May 19-21, 2002, Montr{\'{e}}al, Qu{\'{e}}bec, Canada},
+  pages     = {534--543},
+  publisher = {{ACM}},
+  year      = {2002},
+  url       = {https://doi.org/10.1145/509907.509985},
+  doi       = {10.1145/509907.509985},
+  timestamp = {Wed, 14 Nov 2018 10:51:36 +0100},
+  biburl    = {https://dblp.org/rec/conf/stoc/Feige02.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{Peeters03,
+  author    = {Ren{\'{e}} Peeters},
+  title     = {The maximum edge biclique problem is {NP}-complete},
+  journal   = {Discret. Appl. Math.},
+  volume    = {131},
+  number    = {3},
+  pages     = {651--654},
+  year      = {2003},
+  url       = {https://doi.org/10.1016/S0166-218X(03)00333-0},
+  doi       = {10.1016/S0166-218X(03)00333-0},
+  timestamp = {Thu, 20 Feb 2020 15:47:06 +0100},
+  biburl    = {https://dblp.org/rec/journals/dam/Peeters03.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{AAMMW11,
+  title={Inapproximability of densest $\kappa$-subgraph from average case hardness},
+  author={Alon, Noga and Arora, Sanjeev and Manokaran, Rajsekar and Moshkovitz, Dana and Weinstein, Omri},
+  journal={Unpublished manuscript},
+  volume={1},
+  year={2011},
+  url={https://www.tau.ac.il/~nogaa/PDFS/dks8.pdf}
+}
+%%% Switching Channel
+@article{VHP85,
+  author    = {A. J. Han Vinck and
+               Wim L. M. Hoeks and
+               Karel A. Post},
+  title     = {On the capacity of the two-user {M} -ary multiple-access channel with
+               feedback},
+  journal   = {{IEEE} Trans. Inf. Theory},
+  volume    = {31},
+  number    = {4},
+  pages     = {540--543},
+  year      = {1985},
+  url       = {https://doi.org/10.1109/TIT.1985.1057066},
+  doi       = {10.1109/TIT.1985.1057066},
+  timestamp = {Tue, 10 Mar 2020 10:48:26 +0100},
+  biburl    = {https://dblp.org/rec/journals/tit/VinckHP85.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@article{Vinck07,
+  title={Coding techniques and the two-access channel},
+  author={Vinck, AJ Han},
+  journal={NATO SECURITY THROUGH SCIENCE SERIES D-INFORMATION AND COMMUNICATION SECURITY},
+  volume={10},
+  pages={273},
+  year={2007},
+  publisher={Citeseer}
+}
+% Introduction
