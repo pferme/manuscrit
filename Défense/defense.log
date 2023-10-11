@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  11 OCT 2023 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  11 OCT 2023 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2900,12 +2900,14 @@ thkerncmss.
 
 ] [20
 
+] [21
+
 ] (./defense.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [21
+)) [22
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write6
@@ -2917,19 +2919,19 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
  (./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 207.
 Package rerunfilecheck Info: File `defense.out' has not changed.
 (rerunfilecheck)             Checksum: 2EB89E4E9F6F37DB0BE5257A7EB9A46C;94.
  ) 
 Here is how much of TeX's memory you used:
- 43824 strings out of 494821
- 1016611 string characters out of 6177891
- 1246518 words of memory out of 5000000
- 46369 multiletter control sequences out of 15000+600000
+ 43827 strings out of 494821
+ 1016645 string characters out of 6177891
+ 1247518 words of memory out of 5000000
+ 46370 multiletter control sequences out of 15000+600000
  547098 words of font info for 64 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  74i,19n,128p,10378b,775s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2945,10 +2947,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on defense.pdf (21 pages, 528954 bytes).
+Output written on defense.pdf (22 pages, 530634 bytes).
 PDF statistics:
- 611 PDF objects out of 1000 (max. 8388607)
- 355 compressed objects within 4 object streams
- 46 named destinations out of 1000 (max. 500000)
+ 626 PDF objects out of 1000 (max. 8388607)
+ 368 compressed objects within 4 object streams
+ 48 named destinations out of 1000 (max. 500000)
  79 words of extra memory for PDF output out of 10000 (max. 10000000)
 

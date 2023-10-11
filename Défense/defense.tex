@@ -164,7 +164,7 @@
 
     \pause
     \bigskip
-    Probabilité \only<2>{$W(y|x)$}\only<3>{$6/10$}\only<4>{$3/10$}\only<5>{$1/10$} d'avoir la sortie \only<2>{$y$}\only<3>{\emph{alfa}}\only<4>{\emph{alma}}\only<5>{\emph{alvo}} pour l'entrée \only<2>{$x$}\only<3-5>{\emph{alfa}}.
+    Probabilité \only<2>{$W(y|x)$}\only<3>{$6/10$}\only<4>{$3/10$}\only<5>{$1/10$} d'avoir la sortie \only<2>{$y$}\only<3>{\emph{alfa}}\only<4>{\emph{alma}}\only<5>{\emph{alvo}} pour l'entrée \only<2>{$x$}\only<3-5>{\emph{alfa}}
   \end{center} 
 \end{frame}
 
@@ -172,21 +172,22 @@
   \begin{center}
     \begin{tikzpicture}[auto, node distance=2.5cm,>=latex']
       \node [block] (e) {$e$};
-      \node [bigblock, right of=e] (W) {\only<1>{$W$}\only<2>{$6/10$}\only<3>{$3/10$}\only<4>{$1/10$}};
+      \node [bigblock, right of=e] (W) {\only<1,5>{$W$}\only<2>{$6/10$}\only<3>{$3/10$}\only<4>{$1/10$}};
       \node [block, right of=W] (d) {$d$};
       \draw [->] (e) -- node[name=x] {\only<1>{$x$}\only<2-4>{\emph{alfa}}} (W);
       \draw [->] (W) -- node[name=y] {\only<1>{$y$}\only<2>{\emph{alfa}}\only<3>{\emph{alma}}\only<4>{\emph{alvo}}} (d);
-      \node [left of=e, node distance=1.5cm] (i) {\only<1>{$i$}\only<2-4>{\alert{a}}};
-      \node [right of=d,  node distance=1.5cm] (j) {\only<1>{$j$}\only<2-3>{\alert{a}}\only<4>{\alert{b}}};
+      \node [left of=e, node distance=1.5cm] (i) {\only<1>{$i$}\only<2-4>{\alert{a}}\only<5>{\alert{b,\ldots,z}}};
+      \node [right of=d,  node distance=1.5cm] (j) {\only<1>{$j$}\only<2-3>{\alert{a}}\only<4>{\alert{b}}\only<5>{\alert{b,\ldots,z}}};
       \draw [draw,->] (i) -- (e);
       \draw [draw,->] (d) -- (j);
     \end{tikzpicture}
 
     \bigskip
 
-    Trouver $e$ et $d$ qui maximise la probabilité d'avoir $j=i$.
+    Trouver $e$ et $d$ qui maximise la probabilité d'avoir $j=i$\only<5>{\ldots\\
+      \bigskip
+    \ldots sur tout l'alphabet !}
   \end{center}
-  %Envoi de $k$ messages uniformes, trouver meilleur e/d pour maximiser la proba de succès (2 types de caractère: lettres VS nombres)
 \end{frame}
 
 \begin{frame}{Résolution \cite{BF18}}
