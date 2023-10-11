@@ -146,7 +146,7 @@
     \only<5>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.4,0.1) (Bob) {\tiny Rima};
       \node[ellipse callout, draw, callout absolute pointer={(9.4,0.5)}] at (9.4,2.1) (Alice) {\Large AL\alert{L}};}
     \only<6>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.5,0.1) (Bob) {\tiny Lascar};
-      \node[ellipse callout, draw, callout absolute pointer={(9.5,0.5)}] at (9.4,2.1) (Alice) {\Large ALL\alert{O}};}
+      \node[ellipse callout, draw, callout absolute pointer={(9.5,0.5)}] at (9.5,2.1) (Alice) {\Large ALL\alert{O}};}
   \end{tikzpicture}
   \end{center}
 \end{frame}
@@ -155,16 +155,16 @@
 \begin{frame}{Modélisation mathématique}
   \begin{center}
     \begin{tikzpicture}[auto, node distance=2cm,>=latex']
-      \node [bigblock] (W) {$W$};
-      \node [right of=W] (y) {\only<1-2>{$y$}\only<3>{\alert{$0$}}\only<4>{\alert{$1$}}};
-      \node [left of=W] (x) {\only<1-2>{$x$}\only<3-4>{\alert{$0$}}};
+      \node [bigblock] (W) {\only<1-2>{$W$}\only<3>{$6/10$}\only<4>{$3/10$}\only<5>{$1/10$}};
+      \node [right of=W] (y) {\only<1-2>{$y$}\only<3>{\emph{alfa}}\only<4>{\emph{alma}}\only<5>{\emph{alvo}}};
+      \node [left of=W] (x) {\only<1-2>{$x$}\only<3-5>{\emph{alfa}}};
       \draw [->] (x) -- (W);
       \draw [->] (W) -- (y);
     \end{tikzpicture}
 
     \pause
     \bigskip
-    Probabilité \only<2>{$W(y|x)$}\only<3>{\alert{$9/10$}}\only<4>{\alert{$1/10$}} d'avoir la sortie \only<2>{$y$}\only<3>{\alert{$0$}}\only<4>{\alert{$1$}} pour l'entrée \only<2>{$x$}\only<3-4>{\alert{$0$}}.
+    Probabilité \only<2>{$W(y|x)$}\only<3>{$6/10$}\only<4>{$3/10$}\only<5>{$1/10$} d'avoir la sortie \only<2>{$y$}\only<3>{\emph{alfa}}\only<4>{\emph{alma}}\only<5>{\emph{alvo}} pour l'entrée \only<2>{$x$}\only<3-5>{\emph{alfa}}.
   \end{center} 
 \end{frame}
 
@@ -172,19 +172,19 @@
   \begin{center}
     \begin{tikzpicture}[auto, node distance=2.5cm,>=latex']
       \node [block] (e) {$e$};
-      \node [bigblock, right of=e] (W) {$W$};
+      \node [bigblock, right of=e] (W) {\only<1>{$W$}\only<2>{$6/10$}\only<3>{$3/10$}\only<4>{$1/10$}};
       \node [block, right of=W] (d) {$d$};
-      \draw [->] (e) -- node[name=x] {$x$} (W);
-      \draw [->] (W) -- node[name=y] {$y$} (d);
-      \node [left of=e, node distance=1.5cm] (i) {$i$};
-      \node [right of=d,  node distance=1.5cm] (j) {$j$};
+      \draw [->] (e) -- node[name=x] {\only<1>{$x$}\only<2-4>{\emph{alfa}}} (W);
+      \draw [->] (W) -- node[name=y] {\only<1>{$y$}\only<2>{\emph{alfa}}\only<3>{\emph{alma}}\only<4>{\emph{alvo}}} (d);
+      \node [left of=e, node distance=1.5cm] (i) {\only<1>{$i$}\only<2-4>{\alert{a}}};
+      \node [right of=d,  node distance=1.5cm] (j) {\only<1>{$j$}\only<2-3>{\alert{a}}\only<4>{\alert{b}}};
       \draw [draw,->] (i) -- (e);
       \draw [draw,->] (d) -- (j);
     \end{tikzpicture}
 
     \bigskip
 
-    Trouver $e$ et $d$ tels que $j=i$.
+    Trouver $e$ et $d$ qui maximise la probabilité d'avoir $j=i$.
   \end{center}
   %Envoi de $k$ messages uniformes, trouver meilleur e/d pour maximiser la proba de succès (2 types de caractère: lettres VS nombres)
 \end{frame}

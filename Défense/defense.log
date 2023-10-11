@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  11 OCT 2023 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  11 OCT 2023 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2857,7 +2857,7 @@ File: rcloud.png Graphic file (type png)
 Package pdftex.def Info: rcloud.png  used on input line 152.
 (pdftex.def)             Requested size: 132.97781pt x 89.03732pt.
 
-Overfull \hbox (16.79697pt too wide) in paragraph at lines 152--152
+Overfull \hbox (19.64241pt too wide) in paragraph at lines 152--152
  [] 
  []
 
@@ -2892,12 +2892,20 @@ thkerncmss.
 
 ] [16
 
+] [17
+
+] [18
+
+] [19
+
+] [20
+
 ] (./defense.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [17
+)) [21
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@nav=\write6
@@ -2918,10 +2926,10 @@ Package rerunfilecheck Info: File `defense.out' has not changed.
 (rerunfilecheck)             Checksum: 2EB89E4E9F6F37DB0BE5257A7EB9A46C;94.
  ) 
 Here is how much of TeX's memory you used:
- 43818 strings out of 494821
- 1016579 string characters out of 6177891
+ 43824 strings out of 494821
+ 1016611 string characters out of 6177891
  1246518 words of memory out of 5000000
- 46371 multiletter control sequences out of 15000+600000
+ 46369 multiletter control sequences out of 15000+600000
  547098 words of font info for 64 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  74i,19n,128p,10378b,775s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2937,10 +2945,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on defense.pdf (17 pages, 522094 bytes).
+Output written on defense.pdf (21 pages, 528954 bytes).
 PDF statistics:
- 552 PDF objects out of 1000 (max. 8388607)
- 301 compressed objects within 4 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 355 compressed objects within 4 object streams
+ 46 named destinations out of 1000 (max. 500000)
  79 words of extra memory for PDF output out of 10000 (max. 10000000)
 
