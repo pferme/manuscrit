@@ -106,6 +106,7 @@
 
 
 \section{Introduction}
+\subsection{Le problème du codage de canal}
 \begin{frame}{Qu'est ce qu'un canal de communication ?}
   \pause
   \begin{center}
@@ -186,8 +187,8 @@
 
     Trouver $e$ et $d$ qui maximise la probabilité d'avoir $j=i$\only<5>{\ldots\\
       \bigskip
-      \ldots sur tout l'alphabet (noté $[k]$; ici $k=26$) ! Formellement:
-      \[ \underset{e,d}{\max} \ \frac{1}{k} \sum_{i,x,y} e(x|i)W(y|x)d(i|y) \]
+      \ldots sur tout l'alphabet (noté $[k]$; ici $k=26$) !
+      \[ \text{\underline{Formellement:} } \underset{e,d}{\max} \ \frac{1}{k} \sum_{i,x,y} e(x|i)W(y|x)d(i|y) \]
     }
   \end{center}
 \end{frame}
@@ -238,8 +239,30 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Le cantique des quantiques}
+\subsection{Les corrélations non-signalantes}
+\begin{frame}{La physique quantique\only<3>{\ldots et ses idées reçues}}
+  \begin{center}
+    \pause
+  \begin{tikzpicture}
+    %%% Tin can telephone %%%
+    \node at (0,0) (cat_ud) {\includegraphics[scale=0.1]{cat_upsidedown.png}};
+    \node at (5,0) (cat_ud) {\includegraphics[scale=0.1]{cat_downupside.png}};
+    \node[scale=0.5, align=center, ellipse callout, draw, fill=white, callout relative pointer={(0.7,-0.3)}] at (-0.1,0) (upside) {J'ai la tête\\ en bas.};
+    \node[scale=0.5, align=center, ellipse callout, draw, fill=white, callout relative pointer={(-0.7,0.3)}] at (5.1,0) (upside) {J'ai la tête\\ en haut.};
 
+    \only<2>{\node at (2.5,-3.5) (cat_q) {\includegraphics[scale=0.12]{cat_question_white.png}};}
+    \only<3>{\node at (2.5,-3.5) (cat_q) {\includegraphics[scale=0.12]{cat_question.png}};
+      \node[scale=0.5, align=center, ellipse callout, draw, fill=white, callout relative pointer={(0.6,-0.6)}] at (2.7,-2.4) (Notallowed) {Je n'ai rien\\ à faire là!};
+    }
+  \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Les origines}
+  \begin{itemize}
+
+  \item Comprendre la physique à l'échelle des atomes \includegraphics[scale=0.05]{atom.jpg}
+  \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Bibliography}
