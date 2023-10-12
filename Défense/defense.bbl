@@ -1,4 +1,4 @@
-\begin{thebibliography}{BF18}
+\begin{thebibliography}{BFGG20}
 
 \bibitem[BF18]{BF18}
 Siddharth Barman and Omar Fawzi.
@@ -6,5 +6,15 @@ Siddharth Barman and Omar Fawzi.
 \newblock {\em {IEEE} Trans. Inf. Theory}, 64(2):1038--1045, 2018.
 \newblock \href {https://doi.org/10.1109/TIT.2017.2696963}
   {\path{doi:10.1109/TIT.2017.2696963}}.
+
+\bibitem[BFGG20]{BFGG20}
+Siddharth Barman, Omar Fawzi, Suprovat Ghoshal, and Emirhan G{\"{u}}rpinar.
+\newblock Tight approximation bounds for maximum multi-coverage.
+\newblock In Daniel Bienstock and Giacomo Zambelli, editors, {\em Integer
+  Programming and Combinatorial Optimization - 21st International Conference,
+  {IPCO} 2020, London, UK, June 8-10, 2020, Proceedings}, volume 12125 of {\em
+  Lecture Notes in Computer Science}, pages 66--77. Springer, 2020.
+\newblock \href {https://doi.org/10.1007/978-3-030-45771-6\_6}
+  {\path{doi:10.1007/978-3-030-45771-6\_6}}.
 
 \end{thebibliography}

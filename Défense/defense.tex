@@ -174,8 +174,8 @@
       \node [block] (e) {$e$};
       \node [bigblock, right of=e] (W) {\only<1,5>{$W$}\only<2>{$6/10$}\only<3>{$3/10$}\only<4>{$1/10$}};
       \node [block, right of=W] (d) {$d$};
-      \draw [->] (e) -- node[name=x] {\only<1>{$x$}\only<2-4>{\emph{alfa}}} (W);
-      \draw [->] (W) -- node[name=y] {\only<1>{$y$}\only<2>{\emph{alfa}}\only<3>{\emph{alma}}\only<4>{\emph{alvo}}} (d);
+      \draw [->] (e) -- node[name=x] {\only<1,5>{$x$}\only<2-4>{\emph{alfa}}} (W);
+      \draw [->] (W) -- node[name=y] {\only<1,5>{$y$}\only<2>{\emph{alfa}}\only<3>{\emph{alma}}\only<4>{\emph{alvo}}} (d);
       \node [left of=e, node distance=1.5cm] (i) {\only<1>{$i$}\only<2-4>{\alert{a}}\only<5>{\alert{b,\ldots,z}}};
       \node [right of=d,  node distance=1.5cm] (j) {\only<1>{$j$}\only<2-3>{\alert{a}}\only<4>{\alert{b}}\only<5>{\alert{b,\ldots,z}}};
       \draw [draw,->] (i) -- (e);
@@ -186,14 +186,60 @@
 
     Trouver $e$ et $d$ qui maximise la probabilité d'avoir $j=i$\only<5>{\ldots\\
       \bigskip
-    \ldots sur tout l'alphabet !}
+      \ldots sur tout l'alphabet (noté $[k]$; ici $k=26$) ! Formellement:
+      \[ \underset{e,d}{\max} \ \frac{1}{k} \sum_{i,x,y} e(x|i)W(y|x)d(i|y) \]
+    }
   \end{center}
 \end{frame}
 
 \begin{frame}{Résolution \cite{BF18}}
-Problème difficile, impossible de trouver efficacement (ie. NP difficile) le meilleur
+  \begin{itemize}
+  \item \underline{Objectif:} méthode systématique (algorithme) pour trouver les meilleurs $e,d$ pour un $W$.
+    \pause
+  \item \underline{Problème:} impossible (\textrm{NP}-difficulté) de créer un algorithme efficace (temps polynomial) qui trouve ces $e,d$.
+    \bigskip
+    \pause
+  \item \underline{Solution:} plutôt que les meilleurs $e,d$, on se contente d'un choix de $e,d$ avec une valeur \emph{proche} des meilleurs.
+    
+    \pause
+    \bigskip
 
-Par contre, on peut trouver efficacement une $1-e^{-1} \simeq 0.63$ approx, ie. qui trouve une solution qui fait au moins $63\%$ aussi bien que le meilleur, et on ne peut pas faire mieux
+  \item \cite{BF18}: approximation qui garantit au moins $\simeq 63\%$ (coefficient $1-e^{-1}$) aussi bien que les meilleurs.
+  \item Impossible (\textrm{NP}-difficile) de faire mieux que $1-e^{-1}$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Décodage de liste}
+  \begin{center}
+    \begin{tikzpicture}[auto, node distance=2.5cm,>=latex']
+      \node [block] (e) {$e$};
+      \node [bigblock, right of=e] (W) {\only<1,3-6>{$W$}\only<2>{$1/10$}};
+      \node [block, right of=W] (d) {$d$};
+      \draw [->] (e) -- node[name=x] {\only<1,3-6>{$x$}\only<2>{\emph{alfa}}} (W);
+      \draw [->] (W) -- node[name=y] {\only<1,3-6>{$y$}\only<2>{\emph{alvo}}} (d);
+      \node [left of=e, node distance=1.5cm] (i) {\only<1,3-6>{$i$}\only<2>{\alert{a}}};
+      \node [right of=d,  node distance=2cm] (j) {\only<1>{$[j_1,j_2]$}\only<2>{\alert{[a,b]}}\only<3-6>{$[j_1,j_2,\ldots,j_{\ell}]$}};
+      \draw [draw,->] (i) -- (e);
+      \draw [draw,->] (d) -- (j);
+    \end{tikzpicture}
+
+    \bigskip
+    Trouver $e,d$ qui maximise la probabilité que \only<1-2>{$j_1$ ou $j_2$}\only<3-6>{$j_1,j_2,\ldots$ ou $j_{\ell}$} égal à $i$.
+  \end{center}
+  
+  \pause\pause\pause
+  
+  \begin{itemize}
+  \item \cite{BFGG20}: Algorithme d'approximation avec un facteur $1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$ (pour $\ell=2$, correspond à $\simeq 73\%$).
+    \pause
+  \item On va montrer que c'est \textrm{NP}-difficile de faire mieux.
+    \pause
+  \item On va étudier une généralisation, où la taille $\ell$ de la liste n'est pas fixée, mais vient avec une pénalité $\frac{\varphi(\ell)}{\ell}$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Le cantique des quantiques}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Bibliography}
