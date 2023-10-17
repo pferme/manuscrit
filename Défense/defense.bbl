@@ -1,3 +1,4 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{BFGG20}
 
 \bibitem[BF18]{BF18}
@@ -16,5 +17,29 @@ Siddharth Barman, Omar Fawzi, Suprovat Ghoshal, and Emirhan G{\"{u}}rpinar.
   Lecture Notes in Computer Science}, pages 66--77. Springer, 2020.
 \newblock \href {https://doi.org/10.1007/978-3-030-45771-6\_6}
   {\path{doi:10.1007/978-3-030-45771-6\_6}}.
+
+\bibitem[EPR35]{EPR35}
+A.~Einstein, B.~Podolsky, and N.~Rosen.
+\newblock Can quantum-mechanical description of physical reality be considered
+  complete?
+\newblock {\em Phys. Rev.}, 47:777--780, May 1935.
+\newblock \href {https://doi.org/10.1103/PhysRev.47.777}
+  {\path{doi:10.1103/PhysRev.47.777}}.
+
+\bibitem[YCL{\etalchar{+}}17]{Yin17}
+Juan Yin, Yuan Cao, Yu-Huai Li, Sheng-Kai Liao, Liang Zhang, Ji-Gang Ren,
+  Wen-Qi Cai, Wei-Yue Liu, Bo~Li, Hui Dai, Guang-Bing Li, Qi-Ming Lu, Yun-Hong
+  Gong, Yu~Xu, Shuang-Lin Li, Feng-Zhi Li, Ya-Yun Yin, Zi-Qing Jiang, Ming Li,
+  Jian-Jun Jia, Ge~Ren, Dong He, Yi-Lin Zhou, Xiao-Xiang Zhang, Na~Wang, Xiang
+  Chang, Zhen-Cai Zhu, Nai-Le Liu, Yu-Ao Chen, Chao-Yang Lu, Rong Shu,
+  Cheng-Zhi Peng, Jian-Yu Wang, and Jian-Wei Pan.
+\newblock Satellite-based entanglement distribution over 1200 kilometers.
+\newblock {\em Science}, 356(6343):1140--1144, 2017.
+\newblock URL: \url{https://www.science.org/doi/abs/10.1126/science.aan3211},
+  \href
+  {https://arxiv.org/abs/https://www.science.org/doi/pdf/10.1126/science.aan3211}
+  {\path{arXiv:https://www.science.org/doi/pdf/10.1126/science.aan3211}}, \href
+  {https://doi.org/10.1126/science.aan3211}
+  {\path{doi:10.1126/science.aan3211}}.
 
 \end{thebibliography}

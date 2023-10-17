@@ -27,7 +27,7 @@
 
 \usepackage{tikz}
 \usetikzlibrary{calc}
-\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{shapes,arrows,snakes}
 
 \tikzstyle{block} = [draw, fill=white, rectangle, 
   minimum height=2em, minimum width=3em]
@@ -258,11 +258,38 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Les origines}
+\begin{frame}{De quoi parle la physique quantique ?}
   \begin{itemize}
-
-  \item Comprendre la physique à l'échelle des atomes \includegraphics[scale=0.05]{atom.jpg}
+  \item Comprendre physique à l'\emph{échelle} des atomes -- \emph{un million de fois plus petit qu'un grain de sable !} (0,1nm)
+    \begin{center}
+      \begin{tikzpicture}
+        \node at (0,0) (atom1) {\includegraphics[scale=0.04]{atom.jpg}};
+        \node at (3,0) (atom2) {\includegraphics[scale=0.04]{atom.jpg}};
+        \only<3-4>{\draw[snake=coil, dotted, thick, red] (0,0) -- (3,0);}
+      \end{tikzpicture}
+    \end{center}
+    \pause
+  \item Phénomène spécifique à cette échelle...\pause \alert{l'intrication quantique :}
+    \pause
+    \\ \ 
+    \begin{center}
+      \alert{Deux particules \emph{corrélées} à très grande distance\\
+      \emph{Inexplicable} par physique non quantique !}
+    \end{center}
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Le paradoxe Einstein-Podolski-Rosen}
+  \begin{center}
+    \includegraphics[scale=0.3]{EPR.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Inégalités de Bell et Expérience d'Aspect}
+  QUESS ici
+\end{frame}
+
+\begin{frame}{Le jeu CHSH}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Bibliography}
