@@ -1,6 +1,21 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{BFGG20}
 
+\bibitem[ADR82]{ADG82}
+Alain Aspect, Jean Dalibard, and G\'erard Roger.
+\newblock Experimental test of {B}ell's inequalities using time-varying
+  analyzers.
+\newblock {\em Phys. Rev. Lett.}, 49:1804--1807, Dec 1982.
+\newblock \href {https://doi.org/10.1103/PhysRevLett.49.1804}
+  {\path{doi:10.1103/PhysRevLett.49.1804}}.
+
+\bibitem[Bel64]{Bell64}
+J.~S. Bell.
+\newblock On the {E}instein {P}odolsky {R}osen paradox.
+\newblock {\em Physics Physique Fizika}, 1:195--200, Nov 1964.
+\newblock \href {https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195}
+  {\path{doi:10.1103/PhysicsPhysiqueFizika.1.195}}.
+
 \bibitem[BF18]{BF18}
 Siddharth Barman and Omar Fawzi.
 \newblock Algorithmic aspects of optimal channel coding.
