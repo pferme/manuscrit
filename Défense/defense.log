@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  25 OCT 2023 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  25 OCT 2023 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3197,46 +3197,147 @@ Overfull \vbox (5.3955pt too high) detected at line 360
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 388.
+Package pdftex.def Info: Alice.png  used on input line 399.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 388.
+Package pdftex.def Info: Bob.jpg  used on input line 399.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [53
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 388.
+Package pdftex.def Info: Alice.png  used on input line 399.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 388.
+Package pdftex.def Info: Bob.jpg  used on input line 399.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [54
 
-] [55
+]
+File: Alice.png Graphic file (type png)
+<use Alice.png>
+Package pdftex.def Info: Alice.png  used on input line 399.
+(pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
+File: Bob.jpg Graphic file (type jpg)
+<use Bob.jpg>
+Package pdftex.def Info: Bob.jpg  used on input line 399.
+(pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
+ [55
 
-] [56
+]
+File: Alice.png Graphic file (type png)
+<use Alice.png>
+Package pdftex.def Info: Alice.png  used on input line 399.
+(pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
+File: Bob.jpg Graphic file (type jpg)
+<use Bob.jpg>
+Package pdftex.def Info: Bob.jpg  used on input line 399.
+(pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
+ [56
 
-] (./defense.bbl
+]
+File: Alice.png Graphic file (type png)
+<use Alice.png>
+Package pdftex.def Info: Alice.png  used on input line 399.
+(pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
+File: Bob.jpg Graphic file (type jpg)
+<use Bob.jpg>
+Package pdftex.def Info: Bob.jpg  used on input line 399.
+(pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
+ [57
+
+]
+File: Alice.png Graphic file (type png)
+<use Alice.png>
+Package pdftex.def Info: Alice.png  used on input line 399.
+(pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
+File: Bob.jpg Graphic file (type jpg)
+<use Bob.jpg>
+Package pdftex.def Info: Bob.jpg  used on input line 399.
+(pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
+ [58
+
+]
+File: Alice.png Graphic file (type png)
+<use Alice.png>
+Package pdftex.def Info: Alice.png  used on input line 399.
+(pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
+File: Bob.jpg Graphic file (type jpg)
+<use Bob.jpg>
+Package pdftex.def Info: Bob.jpg  used on input line 399.
+(pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
+ [59
+
+]
+File: Alice.png Graphic file (type png)
+<use Alice.png>
+Package pdftex.def Info: Alice.png  used on input line 399.
+(pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
+File: Bob.jpg Graphic file (type jpg)
+<use Bob.jpg>
+Package pdftex.def Info: Bob.jpg  used on input line 399.
+(pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
+ [60
+
+]
+File: Alice.png Graphic file (type png)
+<use Alice.png>
+Package pdftex.def Info: Alice.png  used on input line 399.
+(pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
+File: Bob.jpg Graphic file (type jpg)
+<use Bob.jpg>
+Package pdftex.def Info: Bob.jpg  used on input line 399.
+(pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
+ [61
+
+]
+File: Alice.png Graphic file (type png)
+<use Alice.png>
+Package pdftex.def Info: Alice.png  used on input line 399.
+(pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
+File: Bob.jpg Graphic file (type jpg)
+<use Bob.jpg>
+Package pdftex.def Info: Bob.jpg  used on input line 399.
+(pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
+ [62
+
+]
+File: Alice.png Graphic file (type png)
+<use Alice.png>
+Package pdftex.def Info: Alice.png  used on input line 399.
+(pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
+File: Bob.jpg Graphic file (type jpg)
+<use Bob.jpg>
+Package pdftex.def Info: Bob.jpg  used on input line 399.
+(pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
+ [63
+
+] [64
+
+] [65
+
+]
+(./defense.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [57
+))
+[66
 
- </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [58
-
-
-] [59
-
-
-] [60
+ </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+[67
 
 
-] [61
+] [68
+
+
+] [69
+
+
+] [70
 
 
 ]
@@ -3249,20 +3350,19 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 407.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 407.
-
-(./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 407.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 407.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 418.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 418.
+ (./defense.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 418.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 418.
 Package rerunfilecheck Info: File `defense.out' has not changed.
 (rerunfilecheck)             Checksum: 722618C754465A89C2DC076432B32525;261.
  ) 
 Here is how much of TeX's memory you used:
- 44628 strings out of 494821
- 1034336 string characters out of 6177891
- 1259554 words of memory out of 5000000
- 47049 multiletter control sequences out of 15000+600000
+ 44821 strings out of 494821
+ 1038415 string characters out of 6177891
+ 1260554 words of memory out of 5000000
+ 47224 multiletter control sequences out of 15000+600000
  564142 words of font info for 107 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  74i,19n,128p,10378b,1052s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3282,17 +3382,17 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.
-pfb>
-Output written on defense.pdf (61 pages, 7190202 bytes).
+/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on defense.pdf (70 pages, 7227977 bytes).
 PDF statistics:
- 2339 PDF objects out of 2487 (max. 8388607)
- 1839 compressed objects within 19 object streams
- 134 named destinations out of 1000 (max. 500000)
+ 2605 PDF objects out of 2984 (max. 8388607)
+ 2090 compressed objects within 21 object streams
+ 152 named destinations out of 1000 (max. 500000)
  140 words of extra memory for PDF output out of 10000 (max. 10000000)
 

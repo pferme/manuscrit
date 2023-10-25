@@ -359,9 +359,9 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Variables cachées et intrication quantique}
+\begin{frame}{Variables cachées, intrication quantique et non-signalante}
   \begin{center}
-    Que se passe t-il si Alice et Bob partagent\ldots\only<2>{des \emph{variables cachées} ?}\\\bigskip
+    Et si Alice et Bob partagent\ldots\only<2-4>{des \emph{variables cachées} ?}\only<5-7>{de \emph{l'intrication quantique} ?}\only<8->{des \emph{corrélations non-signalantes} ?}\\\bigskip
     \begin{tikzpicture}[auto, node distance=1.8cm,>=latex']
       \node [block] (A) {\includegraphics[scale=0.08]{Alice.png}};
       \node [above of=A] (x) {$x$};
@@ -380,10 +380,21 @@
       \node [below of=B] (b) {$\alert{b}$};
       \draw [->] (B) -- (b);
 
-      \only<2->{\node [circle, fill=white, draw=black] at (I) (Corr) {$\lambda$};
-        \draw [snake=coil,segment aspect=0] (A) -- (Corr);
-        \draw [snake=coil,segment aspect=0] (Corr) -- (B);}
-    \end{tikzpicture}
+      \only<2->{
+        \draw [snake=coil,segment aspect=0] (A) -- (B);
+        \node [circle, fill=white, draw=black] at (I) (Corr) {\only<2-4>{$\lambda$}\only<5-7>{$\varphi$}\only<8->{\textrm{NS}}};}
+      \only<4>{\node [starburst, fill=lightyellow, draw=lightred, line width=1pt] at (I) {\Large $3/4$};}
+      \only<7>{\node [starburst, fill=lightyellow, draw=lightred, line width=1pt] at (I) {\Large $85\%$};}
+      \only<11>{\node [starburst, fill=lightyellow, draw=lightred, line width=1pt, align=left] at (I) {Encore\\ mieux !};}
+    \end{tikzpicture}\\\bigskip
+    
+    \only<3-4>{\emph{Avant l'expérience}, s'accordent sur un $\lambda$ aléatoire.\\
+      Alice et Bob peuvent l'utiliser \emph{tous les deux} pour choisir $\alert{a}$ et $\alert{b}$.}
+    \only<6-7>{\textcolor{blue}{Toujours pas de communication !} Stratégie $P(\alert{ab}|xy)$ vérifie que :\\
+      $\alert{a}$ ne dépend pas de $y$ et $\alert{b}$ ne dépend pas de $x$.}
+    \only<9->{\emph{Toutes les stratégies $P(\alert{ab}|xy)$ \textcolor{blue}{sans communication}}, càd telles que :\\}
+    \only<9>{$\alert{a}$ ne dépend pas de $y$ et $\alert{b}$ ne dépend pas de $x$.}
+    \only<10->{$P(\alert{a}|xy)=P(\alert{a}|xy')$ et $P(\alert{b}|xy)=P(\alert{b}|x'y)$.}
   \end{center}
 \end{frame}
 
