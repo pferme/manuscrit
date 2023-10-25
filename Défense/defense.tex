@@ -66,6 +66,8 @@
 \DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
 
 \colorlet{darkgreen}{green!40!black}
+\colorlet{lightyellow}{yellow!40!white}
+\colorlet{lightred}{red!60!white}
 
 \usepackage{appendixnumberbeamer}
 \beamertemplatenavigationsymbolsempty
@@ -265,7 +267,7 @@
       \begin{tikzpicture}
         \node at (0,0) (atom1) {\includegraphics[scale=0.04]{atom.jpg}};
         \node at (3,0) (atom2) {\includegraphics[scale=0.04]{atom.jpg}};
-        \only<3-4>{\draw[snake=coil, dotted, thick, red] (0,0) -- (3,0);}
+        \only<3-4>{\draw[snake=coil, segment aspect=0, red] (0,0) -- (3,0);}
       \end{tikzpicture}
     \end{center}
     \pause
@@ -296,7 +298,7 @@
     \end{enumerate}
     \pause
   \item De manière inattendue, c'est \alert{le premier} qui décrit la réalité !
-  \item Communication plus rapide que la lumière ? \pause{\alert{\emph{Corrélations !}}}
+  \item Communication plus rapide que la lumière ? \pause{\alert{\emph{Non, corrélations !}}}
   \end{itemize}
 \end{frame}
 
@@ -325,12 +327,64 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Le jeu CHSH 1}
-  TODO
+\begin{frame}{Le jeu CHSH}
+  \begin{center}
+    \only<2->{On tire $x,y$ au hasard dans $\{0,1\}$, on les donne à Alice et Bob.\\}
+    \bigskip
+   \begin{tikzpicture}[auto, node distance=1.8cm,>=latex']
+      \node [block] (A) {\includegraphics[scale=0.08]{Alice.png}};
+      \only<2->{\node [above of=A] (x) {$x$};
+      \draw [->] (x) -- (A);}
+      \only<3->{\node [below of=A] (a) {$\alert{a}$};
+      \draw [->] (A) -- (a);}
+
+      \node [right of=A] (I) {};
+      \only<4->{\node [color=blue,above of=I,outer sep=0pt,circle,fill,inner sep=1pt] (Iabove) {};
+      \node [color=blue,below of=I,outer sep=0pt,circle,fill,inner sep=1pt] (Ibelow) {};
+      \draw [color=blue,dotted, thick] (Iabove) -- (Ibelow);}
+      
+      \node [block, right of=I] (B) {\includegraphics[scale=0.16]{Bob.jpg}};
+      \only<2->{\node [above of=B] (y) {$y$};
+      \draw [->] (y) -- (B);}
+      \only<3->{\node [below of=B] (b) {$\alert{b}$};
+      \draw [->] (B) -- (b);}
+
+      \only<7>{\node [starburst, fill=lightyellow, draw=lightred, line width=1pt] at (I) {\Large $3/4$};}
+   \end{tikzpicture}
+   \bigskip
+   \\
+   \only<3-4>{Alice et Bob choisissent $\alert{a}$ et $\alert{b}$ dans $\{0,1\}$\only<4->{, \textcolor{blue}{sans communiquer !}}\\\bigskip}
+   \only<5->{\underline{Objectif :} Si $x=y=1$, alors $\alert{a}\not=\alert{b}$ ; sinon $\alert{a}=\alert{b}$.\\\bigskip}
+   \only<6->{\large\emph{Quelle est la probabilité de succès de la meilleure stratégie ?}}
+  \end{center}
 \end{frame}
 
-\begin{frame}{Le jeu CHSH 2}
-  TODO
+\begin{frame}{Variables cachées et intrication quantique}
+  \begin{center}
+    Que se passe t-il si Alice et Bob partagent\ldots\only<2>{des \emph{variables cachées} ?}\\\bigskip
+    \begin{tikzpicture}[auto, node distance=1.8cm,>=latex']
+      \node [block] (A) {\includegraphics[scale=0.08]{Alice.png}};
+      \node [above of=A] (x) {$x$};
+      \draw [->] (x) -- (A);
+      \node [below of=A] (a) {$\alert{a}$};
+      \draw [->] (A) -- (a);
+
+      \node [right of=A] (I) {};
+      \node [color=blue,above of=I,outer sep=0pt,circle,fill,inner sep=1pt] (Iabove) {};
+      \node [color=blue,below of=I,outer sep=0pt,circle,fill,inner sep=1pt] (Ibelow) {};
+      \draw [color=blue,dotted, thick] (Iabove) -- (Ibelow);
+      
+      \node [block, right of=I] (B) {\includegraphics[scale=0.16]{Bob.jpg}};
+      \node [above of=B] (y) {$y$};
+      \draw [->] (y) -- (B);
+      \node [below of=B] (b) {$\alert{b}$};
+      \draw [->] (B) -- (b);
+
+      \only<2->{\node [circle, fill=white, draw=black] at (I) (Corr) {$\lambda$};
+        \draw [snake=coil,segment aspect=0] (A) -- (Corr);
+        \draw [snake=coil,segment aspect=0] (Corr) -- (B);}
+    \end{tikzpicture}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Assistance non-signalante et codage de canal}
