@@ -66,7 +66,6 @@
 \DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
 
 \colorlet{darkgreen}{green!40!black}
-\colorlet{lightyellow}{yellow!40!white}
 \colorlet{lightred}{red!60!white}
 
 \usepackage{appendixnumberbeamer}
@@ -349,7 +348,7 @@
       \only<3->{\node [below of=B] (b) {$\alert{b}$};
       \draw [->] (B) -- (b);}
 
-      \only<7>{\node [starburst, fill=lightyellow, draw=lightred, line width=1pt] at (I) {\Large $3/4$};}
+      \only<7>{\node [starburst, fill=white, draw=lightred, line width=1pt, text=red] at (I) {\Large $3/4$};}
    \end{tikzpicture}
    \bigskip
    \\
@@ -361,7 +360,7 @@
 
 \begin{frame}{Variables cachées, intrication quantique et non-signalante}
   \begin{center}
-    Et si Alice et Bob partagent\ldots\only<2-4>{des \emph{variables cachées} ?}\only<5-7>{de \emph{l'intrication quantique} ?}\only<8->{des \emph{corrélations non-signalantes} ?}\\\bigskip
+    Et si Alice et Bob partagent\ldots\only<2-4>{des \textcolor{blue}{\emph{variables cachées}} ?}\only<5-7>{de \textcolor{blue}{\emph{l'intrication quantique}} ?}\only<8->{des \textcolor{blue}{\emph{corrélations non-signalantes}} ?}\\\bigskip
     \begin{tikzpicture}[auto, node distance=1.8cm,>=latex']
       \node [block] (A) {\includegraphics[scale=0.08]{Alice.png}};
       \node [above of=A] (x) {$x$};
@@ -381,29 +380,104 @@
       \draw [->] (B) -- (b);
 
       \only<2->{
-        \draw [snake=coil,segment aspect=0] (A) -- (B);
-        \node [circle, fill=white, draw=black] at (I) (Corr) {\only<2-4>{$\lambda$}\only<5-7>{$\varphi$}\only<8->{\textrm{NS}}};}
-      \only<4>{\node [starburst, fill=lightyellow, draw=lightred, line width=1pt] at (I) {\Large $3/4$};}
-      \only<7>{\node [starburst, fill=lightyellow, draw=lightred, line width=1pt] at (I) {\Large $85\%$};}
-      \only<11>{\node [starburst, fill=lightyellow, draw=lightred, line width=1pt, align=left] at (I) {Encore\\ mieux !};}
+        \draw [snake=coil,segment aspect=0, draw=blue] (A) -- (B);
+        \node [circle, fill=white, draw=blue, text=blue] at (I) (Corr) {\only<2-4>{$\lambda$}\only<5-7>{$\varphi$}\only<8->{\textrm{NS}}};}
+      \only<4>{\node [starburst, fill=white, draw=lightred, line width=1pt, text=red] at (I) {\Large $3/4$};}
+      \only<7>{\node [starburst, fill=white, draw=lightred, line width=1pt, text=red] at (I) {\Large $85\%$};}
+      \only<11>{\node [starburst, fill=white, draw=lightred, line width=1pt, align=left, text=red] at (I) {Encore\\ mieux !};}
     \end{tikzpicture}\\\bigskip
     
-    \only<3-4>{\emph{Avant l'expérience}, s'accordent sur un $\lambda$ aléatoire.\\
+    \only<3-4>{\emph{Avant l'expérience}, s'accordent sur un \textcolor{blue}{$\lambda$} aléatoire.\\
       Alice et Bob peuvent l'utiliser \emph{tous les deux} pour choisir $\alert{a}$ et $\alert{b}$.}
-    \only<6-7>{\textcolor{blue}{Toujours pas de communication !} Stratégie $P(\alert{ab}|xy)$ vérifie que :\\
-      $\alert{a}$ ne dépend pas de $y$ et $\alert{b}$ ne dépend pas de $x$.}
-    \only<9->{\emph{Toutes les stratégies $P(\alert{ab}|xy)$ \textcolor{blue}{sans communication}}, càd telles que :\\}
-    \only<9>{$\alert{a}$ ne dépend pas de $y$ et $\alert{b}$ ne dépend pas de $x$.}
+    \only<6-7>{Toujours \textcolor{blue}{pas de communication} ! Stratégie $P(\alert{ab}\textcolor{blue}{\textbf{|}}xy)$ vérifie que :\\
+      $\alert{a}$ \textcolor{blue}{ne dépend pas de} $y$ et $\alert{b}$ \textcolor{blue}{ne dépend pas de} $x$.}
+    \only<9->{\emph{Toutes les stratégies $P(\alert{ab}\textcolor{blue}{\textbf{|}}xy)$ \textcolor{blue}{sans communication}}, càd telles que :\\}
+    \only<9>{$\alert{a}$ \textcolor{blue}{ne dépend pas de} $y$ et $\alert{b}$ \textcolor{blue}{ne dépend pas de} $x$.}
     \only<10->{$P(\alert{a}|xy)=P(\alert{a}|xy')$ et $P(\alert{b}|xy)=P(\alert{b}|x'y)$.}
   \end{center}
 \end{frame}
 
-\begin{frame}{Assistance non-signalante et codage de canal}
-  Exemple sur le canal usuel
+\begin{frame}{Assistance non-signalante pour le codage de canal}
+  \begin{center}
+    \begin{tikzpicture}[auto, node distance=1.6cm,>=latex']
+      \only<1>{\node [bigblock] (W) {$W$};
+        \node [left of=W] (x) {$x$};
+        \node [block,left of=x] (e) {$e$};
+        \node [left of=e] (i) {$i$};
+        \node [right of=W] (y) {$y$};
+        \node [block,right of=y] (d) {$d$};
+        \node [right of=d] (j) {$j$};
+        \draw [->] (i) -- (e);
+        \draw [->] (e) -- (x);
+        \draw [->] (x) -- (W);
+        \draw [->] (W) -- (y);
+        \draw [->] (y) -- (d);
+        \draw [->] (d) -- (j);}
+
+      \only<2->{\node [block] (A) {$e$};
+      \node [above of=A] (x) {$i$};
+      \draw [->] (x) -- (A);
+      \node [below of=A] (a) {\only<2>{$x$}\only<3->{$\alert{x}$}};
+      \draw [->] (A) -- (a);
+
+      \node [right of=A] (I) {};
+      
+      \node [block, right of=I] (B) {$d$};
+      \node [above of=B] (y) {$y$};
+      \draw [->] (y) -- (B);
+      \node [below of=B] (b) {\only<2>{$j$}\only<3->{$\alert{j}$}};
+      \draw [->] (B) -- (b);
+      
+      \node [dashed,right of=B] (Bright) {};
+      \node [dashed,bigblock,right of=Bright] (W) {$W$};
+      \draw [dashed,->] (a) to[out=-20,in=-90] (W);
+      \draw [dashed,->] (W) to[out=90,in=20] (y);}
+
+      
+      \only<3->{\node [color=blue,above of=I,outer sep=0pt,circle,fill,inner sep=1pt] (Iabove) {};
+      \node [color=blue,below of=I,outer sep=0pt,circle,fill,inner sep=1pt] (Ibelow) {};
+      \draw [color=blue,dotted, thick] (Iabove) -- (Ibelow);
+      \draw [snake=coil,segment aspect=0, draw=blue] (A) -- (B);
+      \node [circle, fill=white, draw=blue, text=blue] at (I) (Corr) {\textrm{NS}};}
+    \end{tikzpicture}\\
+    \only<2>{On peut considérer la stratégie encodage-décodage indépendamment de $W$ !}
+    \only<3>{La stratégie encodage-décodage est décrite par $P(\alert{xj}\textcolor{blue}{\textbf{|}}iy)$ :\\
+      Calcul de $e(\alert{x}|i)$ \textcolor{blue}{sans} $y$ ; corrélation \emph{\alert{globale}} inexplicable \emph{localement}.}
+    \only<4>{\underline{\cite{BF18} :}  meilleure communication (jusqu'à $58\%$ ($\frac{e^{-1}}{1-e^{-1}}$)), mais pas de changement de \emph{capacité} du canal.}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Canaux en réseaux}
-  et assistance NS
+    \begin{center}
+      \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+        \only<1>{\node [bigblock] (W) {$W$};
+          \node [right of=W] (y) {$y$};
+          \node [left of=W] (x) {$x$};
+          \draw [->] (x) -- (W);
+          \draw [->] (W) -- (y);
+          \node [below of=W] (txt) {Canal un-à-un};}
+
+        \only<2->{\node [bigblock] (Wa) {$W$};
+          \node [above right of=Wa] (y1) {$y_1$};
+          \node [below right of=Wa] (y2) {$y_2$};
+          \node [left of=Wa] (x) {$x$};
+          \draw [->] (x) -- (Wa);
+          \draw [->] (Wa) -- (y1);
+          \draw [->] (Wa) -- (y2);
+          \node [below of=Wa] (txta) {Canal de diffusion};
+
+          \node [right of=Wa] (pos1) {};
+          \node [right of=pos1] (pos2) {};
+          \node [bigblock, right of=pos2] (Wb) {$W$};
+          \node [right of=Wb] (y) {$y$};
+          \node [above left of=Wb] (x1) {$x_1$};
+          \node [below left of=Wb] (x2) {$x_2$};
+          \draw [->] (x1) -- (Wb);
+          \draw [->] (x2) -- (Wb);
+          \draw [->] (Wb) -- (y);
+          \node [below of=Wb] (txt) {Canal à accès multiple};}
+      \end{tikzpicture}
+    \end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
