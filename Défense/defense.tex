@@ -127,13 +127,13 @@
     %%% Left callouts %%%
     \only<1-2>{\node[ellipse callout, draw, callout relative pointer={(-0.3,-0.3)}] at (-0.1,0.1) (Alice) {\Large Allô!};}
     \only<3>{\node[ellipse callout, draw, callout relative pointer={(-0.3,-0.3)}] at (-0.1,2.1) (Alice) {\Large \alert{A}llô!};
-      \node[ellipse callout, draw, callout absolute pointer={(-0.1,1.5)}] at (-0.1,0.1) (Alice) {Alfa};}
+      \node[ellipse callout, draw, callout absolute pointer={(-0.1,1.5)}, text=blue] at (-0.1,0.1) (Alice) {Alfa};}
     \only<4>{\node[ellipse callout, draw, callout relative pointer={(-0.3,-0.3)}] at (-0.1,2.1) (Alice) {\Large A\alert{l}lô!};
-      \node[ellipse callout, draw, callout absolute pointer={(-0.1,1.5)}] at (-0.1,0.1) (Alice) {Lima};}
+      \node[ellipse callout, draw, callout absolute pointer={(-0.1,1.5)}, text=blue] at (-0.1,0.1) (Alice) {Lima};}
     \only<5>{\node[ellipse callout, draw, callout relative pointer={(-0.3,-0.3)}] at (-0.1,2.1) (Alice) {\Large Al\alert{l}ô!};
-      \node[ellipse callout, draw, callout absolute pointer={(-0.1,1.5)}] at (-0.1,0.1) (Alice) {Lima};}
+      \node[ellipse callout, draw, callout absolute pointer={(-0.1,1.5)}, text=blue] at (-0.1,0.1) (Alice) {Lima};}
     \only<6>{\node[ellipse callout, draw, callout relative pointer={(-0.3,-0.3)}] at (-0.1,2.1) (Alice) {\Large All\alert{ô}!};
-      \node[ellipse callout, draw, callout absolute pointer={(-0.1,1.5)}] at (-0.1,0.1) (Alice) {\small Oscar};}
+      \node[ellipse callout, draw, callout absolute pointer={(-0.1,1.5)}, text=blue] at (-0.1,0.1) (Alice) {\small Oscar};}
     %%% Cloud %%%
     \only<1>{\node at (4.6,1.5) (wcloud) {\includegraphics[scale=0.3]{rcloud_white.png}};}
     \only<2-6>{\node at (4.6,1.5) (cloud) {\includegraphics[scale=0.3]{rcloud.png}};}
@@ -141,13 +141,13 @@
     %%% Right callouts %%%
     \only<1>{\node[ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.7,0.1) (Bob) {\Large Allô!};}
     \only<2>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.7,0.1) (Bob) {\tiny Ah, l'eau!};}
-    \only<3>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.4,0.1) (Bob) {\tiny Alma};
+    \only<3>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}, text=blue] at (9.4,0.1) (Bob) {\tiny Alma};
       \node[ellipse callout, draw, callout absolute pointer={(9.4,0.5)}] at (9.4,2.1) (Alice) {\Large \alert{A}};}
-    \only<4>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.4,0.1) (Bob) {\tiny Lena};
+    \only<4>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}, text=blue] at (9.4,0.1) (Bob) {\tiny Lena};
       \node[ellipse callout, draw, callout absolute pointer={(9.4,0.5)}] at (9.4,2.1) (Alice) {\Large A\alert{L}};}
-    \only<5>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.4,0.1) (Bob) {\tiny Rima};
+    \only<5>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}, text=blue] at (9.4,0.1) (Bob) {\tiny Rima};
       \node[ellipse callout, draw, callout absolute pointer={(9.4,0.5)}] at (9.4,2.1) (Alice) {\Large AL\alert{L}};}
-    \only<6>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.5,0.1) (Bob) {\tiny Lascar};
+    \only<6>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}, text=blue] at (9.5,0.1) (Bob) {\tiny Lascar};
       \node[ellipse callout, draw, callout absolute pointer={(9.5,0.5)}] at (9.5,2.1) (Alice) {\Large ALL\alert{O}};}
   \end{tikzpicture}
   \end{center}
@@ -176,17 +176,17 @@
       \node [block] (e) {$e$};
       \node [bigblock, right of=e] (W) {\only<1,5>{$W$}\only<2>{$6/10$}\only<3>{$3/10$}\only<4>{$1/10$}};
       \node [block, right of=W] (d) {$d$};
-      \draw [->] (e) -- node[name=x] {\only<1,5>{$x$}\only<2-4>{\emph{alfa}}} (W);
-      \draw [->] (W) -- node[name=y] {\only<1,5>{$y$}\only<2>{\emph{alfa}}\only<3>{\emph{alma}}\only<4>{\emph{alvo}}} (d);
-      \node [left of=e, node distance=1.5cm] (i) {\only<1>{$i$}\only<2-4>{\alert{a}}\only<5>{\alert{b,\ldots,z}}};
-      \node [right of=d,  node distance=1.5cm] (j) {\only<1>{$j$}\only<2-3>{\alert{a}}\only<4>{\alert{b}}\only<5>{\alert{b,\ldots,z}}};
+      \draw [->] (e) -- node[name=x, text=blue] {\only<1,5>{$x$}\only<2-4>{\emph{alfa}}} (W);
+      \draw [->] (W) -- node[name=y, text=blue] {\only<1,5>{$y$}\only<2>{\emph{alfa}}\only<3>{\emph{alma}}\only<4>{\emph{alvo}}} (d);
+      \node [left of=e, node distance=1.5cm, text=red] (i) {\only<1>{$i$}\only<2-4>{a}\only<5>{a,\ldots,z}};
+      \node [right of=d,  node distance=1.5cm, text=red] (j) {\only<1>{$j$}\only<2-3>{a}\only<4>{b}\only<5>{a,\ldots,z}};
       \draw [draw,->] (i) -- (e);
       \draw [draw,->] (d) -- (j);
     \end{tikzpicture}
 
     \bigskip
 
-    Trouver $e$ et $d$ qui maximise la probabilité d'avoir $j=i$\only<5>{\ldots\\
+    Trouver $e$ et $d$ qui maximise la probabilité d'avoir \alert{$j=i$}\only<5>{\ldots\\
       \bigskip
       \ldots sur tout l'alphabet (noté $[k]$; ici $k=26$) !
       \[ \text{\underline{Formellement:} } \underset{e,d}{\max} \ \frac{1}{k} \sum_{i,x,y} e(x|i)W(y|x)d(i|y) \]
@@ -206,7 +206,7 @@
     \pause
     \bigskip
 
-  \item \cite{BF18}: approximation qui garantit au moins $\simeq 63\%$ (coefficient $1-e^{-1}$) aussi bien que les meilleurs.
+  \item \cite{BF18}: approximation qui garantit au moins $\simeq 63\%$ ($1-e^{-1}$) aussi bien que les meilleurs.
   \item Impossible (\textrm{NP}-difficile) de faire mieux que $1-e^{-1}$.
   \end{itemize}
 \end{frame}
@@ -217,8 +217,8 @@
       \node [block] (e) {$e$};
       \node [bigblock, right of=e] (W) {\only<1,3-6>{$W$}\only<2>{$1/10$}};
       \node [block, right of=W] (d) {$d$};
-      \draw [->] (e) -- node[name=x] {\only<1,3-6>{$x$}\only<2>{\emph{alfa}}} (W);
-      \draw [->] (W) -- node[name=y] {\only<1,3-6>{$y$}\only<2>{\emph{alvo}}} (d);
+      \draw [->] (e) -- node[name=x] {\only<1,3-6>{$x$}\only<2>{\textcolor{blue}{\emph{alfa}}}} (W);
+      \draw [->] (W) -- node[name=y] {\only<1,3-6>{$y$}\only<2>{\textcolor{blue}{\emph{alvo}}}} (d);
       \node [left of=e, node distance=1.5cm] (i) {\only<1,3-6>{$i$}\only<2>{\alert{a}}};
       \node [right of=d,  node distance=2cm] (j) {\only<1>{$[j_1,j_2]$}\only<2>{\alert{[a,b]}}\only<3-6>{$[j_1,j_2,\ldots,j_{\ell}]$}};
       \draw [draw,->] (i) -- (e);
@@ -266,11 +266,11 @@
       \begin{tikzpicture}
         \node at (0,0) (atom1) {\includegraphics[scale=0.04]{atom.jpg}};
         \node at (3,0) (atom2) {\includegraphics[scale=0.04]{atom.jpg}};
-        \only<3-4>{\draw[snake=coil, segment aspect=0, red] (0,0) -- (3,0);}
+        \only<3-4>{\draw[snake=coil, segment aspect=0, draw=blue] (0,0) -- (3,0);}
       \end{tikzpicture}
     \end{center}
     \pause
-  \item Phénomène spécifique à cette échelle...\pause \alert{l'intrication quantique :}
+  \item Phénomène spécifique à cette échelle...\pause \textcolor{blue}{l'intrication quantique :}
     \pause
     \\ \ 
     \begin{center}
@@ -297,7 +297,7 @@
     \end{enumerate}
     \pause
   \item De manière inattendue, c'est \alert{le premier} qui décrit la réalité !
-  \item Communication plus rapide que la lumière ? \pause{\alert{\emph{Non, corrélations !}}}
+  \item Communication plus rapide que la lumière ? \pause{\textcolor{blue}{\emph{Non, corrélations !}}}
   \end{itemize}
 \end{frame}
 
