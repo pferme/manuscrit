@@ -217,16 +217,16 @@
       \node [block] (e) {$e$};
       \node [bigblock, right of=e] (W) {\only<1,3-6>{$W$}\only<2>{$1/10$}};
       \node [block, right of=W] (d) {$d$};
-      \draw [->] (e) -- node[name=x] {\only<1,3-6>{$x$}\only<2>{\textcolor{blue}{\emph{alfa}}}} (W);
-      \draw [->] (W) -- node[name=y] {\only<1,3-6>{$y$}\only<2>{\textcolor{blue}{\emph{alvo}}}} (d);
-      \node [left of=e, node distance=1.5cm] (i) {\only<1,3-6>{$i$}\only<2>{\alert{a}}};
-      \node [right of=d,  node distance=2cm] (j) {\only<1>{$[j_1,j_2]$}\only<2>{\alert{[a,b]}}\only<3-6>{$[j_1,j_2,\ldots,j_{\ell}]$}};
+      \draw [->] (e) -- node[name=x] {\only<1,3-6>{\textcolor{blue}{$x$}}\only<2>{\textcolor{blue}{\emph{alfa}}}} (W);
+      \draw [->] (W) -- node[name=y] {\only<1,3-6>{\textcolor{blue}{$y$}}\only<2>{\textcolor{blue}{\emph{alvo}}}} (d);
+      \node [left of=e, node distance=1.5cm] (i) {\only<1,3-6>{\alert{$i$}}\only<2>{\alert{a}}};
+      \node [right of=d,  node distance=2cm] (j) {\only<1>{\alert{$[j_1,j_2]$}}\only<2>{\alert{[a,b]}}\only<3-6>{\alert{$[j_1,j_2,\ldots,j_{\ell}]$}}};
       \draw [draw,->] (i) -- (e);
       \draw [draw,->] (d) -- (j);
     \end{tikzpicture}
 
     \bigskip
-    Trouver $e,d$ qui maximise la probabilité que \only<1-2>{$j_1$ ou $j_2$}\only<3-6>{$j_1,j_2,\ldots$ ou $j_{\ell}$} égal à $i$.
+    Trouver $e,d$ qui maximise la probabilité que \only<1-2>{\alert{$j_1$ ou $j_2$}}\only<3-6>{\alert{$j_1,j_2,\ldots$ ou $j_{\ell}$}} égal à \alert{$i$}.
   \end{center}
   
   \pause\pause\pause
