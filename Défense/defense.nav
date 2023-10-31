@@ -37,19 +37,47 @@
 \headcommand {\beamer@framepages {68}{71}}
 \headcommand {\beamer@sectionpages {2}{71}}
 \headcommand {\beamer@subsectionpages {31}{71}}
-\headcommand {\sectionentry {2}{Bibliography}{72}{Bibliography}{0}}
+\headcommand {\sectionentry {2}{Generalized MaxCoverage}{72}{Generalized MaxCoverage}{0}}
 \headcommand {\slideentry {2}{0}{1}{72/72}{}{0}}
 \headcommand {\beamer@framepages {72}{72}}
-\headcommand {\slideentry {2}{0}{1}{72/73}{}{0}}
-\headcommand {\beamer@framepages {72}{73}}
-\headcommand {\slideentry {2}{0}{1}{72/74}{}{0}}
-\headcommand {\beamer@framepages {72}{74}}
-\headcommand {\slideentry {2}{0}{1}{72/75}{}{0}}
-\headcommand {\beamer@framepages {72}{75}}
-\headcommand {\slideentry {2}{0}{1}{72/76}{}{0}}
-\headcommand {\beamer@framepages {72}{76}}
-\headcommand {\beamer@partpages {1}{76}}
-\headcommand {\beamer@subsectionpages {72}{76}}
-\headcommand {\beamer@sectionpages {72}{76}}
-\headcommand {\beamer@documentpages {76}}
-\headcommand {\gdef \inserttotalframenumber {20}}
+\headcommand {\beamer@sectionpages {72}{72}}
+\headcommand {\beamer@subsectionpages {72}{72}}
+\headcommand {\sectionentry {3}{Multiple-access channels}{73}{Multiple-access channels}{0}}
+\headcommand {\slideentry {3}{0}{1}{73/73}{}{0}}
+\headcommand {\beamer@framepages {73}{73}}
+\headcommand {\beamer@sectionpages {73}{73}}
+\headcommand {\beamer@subsectionpages {73}{73}}
+\headcommand {\sectionentry {4}{Broadcast channels}{74}{Broadcast channels}{0}}
+\headcommand {\slideentry {4}{0}{1}{74/74}{}{0}}
+\headcommand {\beamer@framepages {74}{74}}
+\headcommand {\beamer@sectionpages {74}{74}}
+\headcommand {\beamer@subsectionpages {74}{74}}
+\headcommand {\sectionentry {5}{Conclusion}{75}{Conclusion}{0}}
+\headcommand {\slideentry {5}{0}{1}{75/75}{}{0}}
+\headcommand {\beamer@framepages {75}{75}}
+\headcommand {\gdef \insertmainframenumber {19}}
+\headcommand {\partentry {\translate {Appendix}}{1}}
+\headcommand {\beamer@partpages {1}{75}}
+\headcommand {\beamer@sectionpages {75}{75}}
+\headcommand {\beamer@subsectionpages {75}{75}}
+\headcommand {\beamer@appendixpages {76}}
+\headcommand {\beamer@sectionpages {76}{75}}
+\headcommand {\beamer@subsectionpages {76}{75}}
+\headcommand {\sectionentry {6}{Bibliography}{76}{Bibliography}{1}}
+\headcommand {\slideentry {6}{0}{1}{76/76}{}{1}}
+\headcommand {\beamer@framepages {76}{76}}
+\headcommand {\slideentry {6}{0}{1}{76/77}{}{1}}
+\headcommand {\beamer@framepages {76}{77}}
+\headcommand {\slideentry {6}{0}{1}{76/78}{}{1}}
+\headcommand {\beamer@framepages {76}{78}}
+\headcommand {\slideentry {6}{0}{1}{76/79}{}{1}}
+\headcommand {\beamer@framepages {76}{79}}
+\headcommand {\slideentry {6}{0}{1}{76/80}{}{1}}
+\headcommand {\beamer@framepages {76}{80}}
+\headcommand {\beamer@partpages {76}{80}}
+\headcommand {\beamer@subsectionpages {76}{80}}
+\headcommand {\beamer@sectionpages {76}{80}}
+\headcommand {\beamer@documentpages {80}}
+\headcommand {\gdef \inserttotalframenumber {5}}
+\headcommand {\gdef \inserttotalframenumber {19}}
+\headcommand {\gdef \appendixtotalframenumber {5}}

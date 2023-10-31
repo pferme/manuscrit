@@ -1,4 +1,8 @@
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
 \beamer@subsectionintoc {1}{1}{Le probl\IeC {\`e}me du codage de canal}{2}{0}{1}
 \beamer@subsectionintoc {1}{2}{Les corr\IeC {\'e}lations non-signalantes}{31}{0}{1}
-\beamer@sectionintoc {2}{Bibliography}{72}{0}{2}
+\beamer@sectionintoc {2}{Generalized MaxCoverage}{72}{0}{2}
+\beamer@sectionintoc {3}{Multiple-access channels}{73}{0}{3}
+\beamer@sectionintoc {4}{Broadcast channels}{74}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{75}{0}{5}
+\beamer@sectionintoc {6}{Bibliography}{76}{1}{6}

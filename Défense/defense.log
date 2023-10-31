@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  31 OCT 2023 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  31 OCT 2023 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2757,7 +2757,7 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 (./defense.nav) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<tin-can-telephone.jpg, id=100, 720.6925pt x 240.9pt>
+<tin-can-telephone.jpg, id=126, 720.6925pt x 240.9pt>
 File: tin-can-telephone.jpg Graphic file (type jpg)
 <use tin-can-telephone.jpg>
 Package pdftex.def Info: tin-can-telephone.jpg  used on input line 119.
@@ -2779,12 +2779,12 @@ Package pdftex.def Info: tin-can-telephone.jpg  used on input line 119.
  [4
 
 ]
-<long-tin-can-telephone.jpg, id=185, 1081.03876pt x 240.9pt>
+<long-tin-can-telephone.jpg, id=217, 1081.03876pt x 240.9pt>
 File: long-tin-can-telephone.jpg Graphic file (type jpg)
 <use long-tin-can-telephone.jpg>
 Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 154.
 (pdftex.def)             Requested size: 237.82925pt x 52.99815pt.
-<rcloud_white.png, id=186, 443.256pt x 296.7888pt>
+<rcloud_white.png, id=218, 443.256pt x 296.7888pt>
 File: rcloud_white.png Graphic file (type png)
 <use rcloud_white.png>
 Package pdftex.def Info: rcloud_white.png  used on input line 154.
@@ -2801,7 +2801,7 @@ File: long-tin-can-telephone.jpg Graphic file (type jpg)
 <use long-tin-can-telephone.jpg>
 Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 154.
 (pdftex.def)             Requested size: 237.82925pt x 52.99815pt.
-<rcloud.png, id=215, 443.256pt x 296.7888pt>
+<rcloud.png, id=249, 443.256pt x 296.7888pt>
 File: rcloud.png Graphic file (type png)
 <use rcloud.png>
 Package pdftex.def Info: rcloud.png  used on input line 154.
@@ -2936,7 +2936,7 @@ thkerncmss.
 ] [30
 
 ]
-<cat.png, id=952, 1188.44pt x 883.3pt>
+<cat.png, id=1037, 1188.44pt x 883.3pt>
 File: cat.png Graphic file (type png)
 <use cat.png>
 Package pdftex.def Info: cat.png  used on input line 260.
@@ -2956,7 +2956,7 @@ File: cat.png Graphic file (type png)
 <use cat.png>
 Package pdftex.def Info: cat.png  used on input line 260.
 (pdftex.def)             Requested size: 118.85095pt x 88.33517pt.
-<cat_question_white.png, id=984, 1004.75375pt x 678.535pt>
+<cat_question_white.png, id=1071, 1004.75375pt x 678.535pt>
 File: cat_question_white.png Graphic file (type png)
 <use cat_question_white.png>
 Package pdftex.def Info: cat_question_white.png  used on input line 260.
@@ -2976,7 +2976,7 @@ File: cat.png Graphic file (type png)
 <use cat.png>
 Package pdftex.def Info: cat.png  used on input line 260.
 (pdftex.def)             Requested size: 118.85095pt x 88.33517pt.
-<cat_question.png, id=1013, 1004.75375pt x 678.535pt>
+<cat_question.png, id=1102, 1004.75375pt x 678.535pt>
 File: cat_question.png Graphic file (type png)
 <use cat_question.png>
 Package pdftex.def Info: cat_question.png  used on input line 260.
@@ -2988,7 +2988,7 @@ Overfull \vbox (9.85768pt too high) detected at line 260
 [33
 
  <./cat_question.png>]
-<atom.jpg, id=1043, 1284.8pt x 1027.84pt>
+<atom.jpg, id=1133, 1284.8pt x 1027.84pt>
 File: atom.jpg Graphic file (type jpg)
 <use atom.jpg>
 Package pdftex.def Info: atom.jpg  used on input line 281.
@@ -3033,7 +3033,7 @@ Package pdftex.def Info: atom.jpg  used on input line 281.
  [37
 
 ]
-<EPR.jpg, id=1158, 493.845pt x 231.86626pt>
+<EPR.jpg, id=1257, 493.845pt x 231.86626pt>
 File: EPR.jpg Graphic file (type jpg)
 <use EPR.jpg>
 Package pdftex.def Info: EPR.jpg  used on input line 302.
@@ -3070,7 +3070,7 @@ Package pdftex.def Info: EPR.jpg  used on input line 302.
  [42
 
 ]
-<BellAspect.png, id=1306, 684.5575pt x 517.935pt>
+<BellAspect.png, id=1415, 684.5575pt x 517.935pt>
 File: BellAspect.png Graphic file (type png)
 <use BellAspect.png>
 Package pdftex.def Info: BellAspect.png  used on input line 327.
@@ -3107,12 +3107,12 @@ Overfull \hbox (45.77368pt too wide) in paragraph at lines 327--327
 [45
 
 ]
-<Alice.png, id=1404, 485.815pt x 668.4975pt>
+<Alice.png, id=1519, 485.815pt x 668.4975pt>
 File: Alice.png Graphic file (type png)
 <use Alice.png>
 Package pdftex.def Info: Alice.png  used on input line 359.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
-<Bob.jpg, id=1405, 250.9375pt x 334.24875pt>
+<Bob.jpg, id=1520, 250.9375pt x 334.24875pt>
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
 Package pdftex.def Info: Bob.jpg  used on input line 359.
@@ -3331,7 +3331,7 @@ Package pdftex.def Info: tin-can-telephone.jpg  used on input line 500.
  [68
 
 ]
-<radio.jpg, id=2064, 216.81pt x 142.131pt>
+<radio.jpg, id=2226, 216.81pt x 142.131pt>
 File: radio.jpg Graphic file (type jpg)
 <use radio.jpg>
 Package pdftex.def Info: radio.jpg  used on input line 500.
@@ -3340,12 +3340,12 @@ File: radio.jpg Graphic file (type jpg)
 <use radio.jpg>
 Package pdftex.def Info: radio.jpg  used on input line 500.
 (pdftex.def)             Requested size: 43.36122pt x 28.42569pt.
-<france_inter.png, id=2065, 3083.52pt x 3083.52pt>
+<france_inter.png, id=2227, 3083.52pt x 3083.52pt>
 File: france_inter.png Graphic file (type png)
 <use france_inter.png>
 Package pdftex.def Info: france_inter.png  used on input line 500.
 (pdftex.def)             Requested size: 36.98181pt x 36.98181pt.
-<signal.png, id=2066, 291.35622pt x 227.62204pt>
+<signal.png, id=2228, 291.35622pt x 227.62204pt>
 File: signal.png Graphic file (type png)
 <use signal.png>
 Package pdftex.def Info: signal.png  used on input line 500.
@@ -3354,12 +3354,12 @@ File: signal.png Graphic file (type png)
 <use signal.png>
 Package pdftex.def Info: signal.png  used on input line 500.
 (pdftex.def)             Requested size: 29.13731pt x 22.76353pt.
-<antenne.jpg, id=2067, 81.6651pt x 122.6181pt>
+<antenne.jpg, id=2229, 81.6651pt x 122.6181pt>
 File: antenne.jpg Graphic file (type jpg)
 <use antenne.jpg>
 Package pdftex.def Info: antenne.jpg  used on input line 500.
 (pdftex.def)             Requested size: 57.16516pt x 85.83206pt.
-<phone.jpg, id=2068, 1265.72874pt x 2327.69624pt>
+<phone.jpg, id=2230, 1265.72874pt x 2327.69624pt>
 File: phone.jpg Graphic file (type jpg)
 <use phone.jpg>
 Package pdftex.def Info: phone.jpg  used on input line 500.
@@ -3388,23 +3388,37 @@ Overfull \hbox (31.56369pt too wide) in paragraph at lines 500--500
 
 ] [71
 
-] (./defense.bbl
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
+] [72
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [72
-
- </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [73
-
+] [73
 
 ] [74
 
-
 ] [75
 
+]
 
-] [76
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\translate ' on input line 523.
+
+(./defense.bbl
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+))
+[76
+
+ </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+[77
+
+
+] [78
+
+
+] [79
+
+
+] [80
 
 
 ]
@@ -3417,20 +3431,19 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 511.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 511.
-
-(./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 511.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 511.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 533.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 533.
+ (./defense.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 533.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 533.
 Package rerunfilecheck Info: File `defense.out' has not changed.
-(rerunfilecheck)             Checksum: 722618C754465A89C2DC076432B32525;261.
+(rerunfilecheck)             Checksum: 03363F3D9F36E6A3EED8CBFBB3A2C7D2;525.
  ) 
 Here is how much of TeX's memory you used:
- 44991 strings out of 494821
- 1040863 string characters out of 6177891
+ 45040 strings out of 494821
+ 1041302 string characters out of 6177891
  1260554 words of memory out of 5000000
- 47370 multiletter control sequences out of 15000+600000
+ 47406 multiletter control sequences out of 15000+600000
  570595 words of font info for 115 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  74i,19n,128p,10378b,1054s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3459,10 +3472,10 @@ onts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on defense.pdf (76 pages, 5943653 bytes).
+Output written on defense.pdf (80 pages, 5960672 bytes).
 PDF statistics:
- 2797 PDF objects out of 2984 (max. 8388607)
- 2265 compressed objects within 23 object streams
- 164 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3012 PDF objects out of 3580 (max. 8388607)
+ 2467 compressed objects within 25 object streams
+ 177 named destinations out of 1000 (max. 500000)
+ 200 words of extra memory for PDF output out of 10000 (max. 10000000)
 
