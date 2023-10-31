@@ -246,8 +246,8 @@
     \pause
   \begin{tikzpicture}
     %%% Tin can telephone %%%
-    \node at (0,0) (cat_ud) {\includegraphics[scale=0.1]{cat_upsidedown.png}};
-    \node at (5,0) (cat_ud) {\includegraphics[scale=0.1]{cat_downupside.png}};
+    \node at (0,0) (cat_ud) {\includegraphics[scale=0.1]{cat.png}};
+    \node[rotate=180] at (5,0) (cat_ud) {\includegraphics[scale=0.1]{cat.png}};
     \node[scale=0.5, align=center, ellipse callout, draw, fill=white, callout relative pointer={(0.7,-0.3)}] at (-0.1,0) (upside) {J'ai la tête\\ en bas.};
     \node[scale=0.5, align=center, ellipse callout, draw, fill=white, callout relative pointer={(-0.7,0.3)}] at (5.1,0) (upside) {J'ai la tête\\ en haut.};
 
@@ -448,16 +448,31 @@
 \end{frame}
 
 \begin{frame}{Canaux en réseaux}
-    \begin{center}
+  \begin{center}
       \begin{tikzpicture}[auto, node distance=2cm,>=latex']
-        \only<1>{\node [bigblock] (W) {$W$};
-          \node [right of=W] (y) {$y$};
-          \node [left of=W] (x) {$x$};
-          \draw [->] (x) -- (W);
-          \draw [->] (W) -- (y);
-          \node [below of=W] (txt) {Canal un-à-un};}
+        \only<1>{\node (W) {\includegraphics[scale=0.3]{tin-can-telephone.jpg}};
+          %\node [right of=W] (y) {$y$};
+          %\node [left of=W] (x) {$x$};
+          %\draw [->] (x) -- (W);
+          %\draw [->] (W) -- (y);
+          \node [below of=W] (txt) {Ne modélise pas les situations à plus de deux parties};}
 
-        \only<2->{\node [bigblock] (Wa) {$W$};
+        \only<2>{\node [rotate=-90] (Wa) {\includegraphics[scale=0.04]{signal.png}};
+          \node [above right of=Wa] (y1) {\includegraphics[scale=0.2]{radio.jpg}};
+          \node [below right of=Wa] (y2) {\includegraphics[scale=0.2]{radio.jpg}};
+          \node [left of=Wa] (x) {\includegraphics[scale=0.01]{france_inter.png}};
+          \node [below of=Wa] (txtposa) {};
+          \node [below of=Wa] (txta) {Canal de diffusion};
+
+          \node [right of=Wa] (pos1) {};
+          \node [right of=pos1] (pos2) {};
+          \node [right of=pos2] (Wb) {};
+          \node [right of=Wb] (y) {};
+          \node [above left of=Wb] (x1) {};
+          \node [below left of=Wb] (x2) {};
+          \node [below of=Wb] (txt) {Canal à accès multiple};}
+
+        \only<3->{\node [bigblock] (Wa) {$W$};
           \node [above right of=Wa] (y1) {$y_1$};
           \node [below right of=Wa] (y2) {$y_2$};
           \node [left of=Wa] (x) {$x$};
