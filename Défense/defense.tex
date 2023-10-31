@@ -447,7 +447,7 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Canaux en réseaux}
+\begin{frame}{Canaux en réseau}
   \begin{center}
       \begin{tikzpicture}[auto, node distance=2cm,>=latex']
         \only<1>{\node (W) {\includegraphics[scale=0.3]{tin-can-telephone.jpg}};
@@ -455,22 +455,25 @@
           %\node [left of=W] (x) {$x$};
           %\draw [->] (x) -- (W);
           %\draw [->] (W) -- (y);
-          \node [below of=W] (txt) {Ne modélise pas les situations à plus de deux parties};}
+          \node [below of=W] (txt) {Ne modélise pas les situations à plus de deux parties !};}
 
-        \only<2>{\node [rotate=-90] (Wa) {\includegraphics[scale=0.04]{signal.png}};
+        \only<2>{\node (Wa) {};
           \node [above right of=Wa] (y1) {\includegraphics[scale=0.2]{radio.jpg}};
           \node [below right of=Wa] (y2) {\includegraphics[scale=0.2]{radio.jpg}};
-          \node [left of=Wa] (x) {\includegraphics[scale=0.01]{france_inter.png}};
-          \node [below of=Wa] (txtposa) {};
-          \node [below of=Wa] (txta) {Canal de diffusion};
+          \node [left of=Wa] (x) {\includegraphics[scale=0.012]{france_inter.png}};
+          \node [rotate=-70] (signal1a) at ($(x)!0.48!(y1)$) {\includegraphics[scale=0.1]{signal.png}};
+          \node [rotate=-110] (signal2a) at ($(x)!0.48!(y2)$) {\includegraphics[scale=0.1]{signal.png}};
+          \node [below of=signal2a] (txta) {Canal de diffusion};
 
           \node [right of=Wa] (pos1) {};
           \node [right of=pos1] (pos2) {};
           \node [right of=pos2] (Wb) {};
-          \node [right of=Wb] (y) {};
-          \node [above left of=Wb] (x1) {};
-          \node [below left of=Wb] (x2) {};
-          \node [below of=Wb] (txt) {Canal à accès multiple};}
+          \node [right of=Wb] (y) {\includegraphics[scale=0.7]{antenne.jpg}};
+          \node [above left of=Wb] (x1) {\includegraphics[scale=0.015]{phone.jpg}};
+          \node [below left of=Wb] (x2) {\includegraphics[scale=0.015]{phone.jpg}};
+          \node [rotate=-110] (signal1b) at ($(x1)!0.45!(y)$) {\includegraphics[scale=0.1]{signal.png}};
+          \node [rotate=-70] (signal2b) at ($(x2)!0.45!(y)$) {\includegraphics[scale=0.1]{signal.png}};
+          \node [below of=signal2b] (txt) {Canal à accès multiple};}
 
         \only<3->{\node [bigblock] (Wa) {$W$};
           \node [above right of=Wa] (y1) {$y_1$};
@@ -491,8 +494,9 @@
           \draw [->] (x2) -- (Wb);
           \draw [->] (Wb) -- (y);
           \node [below of=Wb] (txt) {Canal à accès multiple};}
-      \end{tikzpicture}
-    \end{center}
+      \end{tikzpicture}\\\bigskip
+      \only<4>{On va étudier l'influence des \textcolor{blue}{corrélations non-signalantes} sur la \alert{communication en réseau}.}
+  \end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

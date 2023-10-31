@@ -1,4 +1,4 @@
 \beamer@sectionintoc {1}{Introduction}{2}{0}{1}
 \beamer@subsectionintoc {1}{1}{Le probl\IeC {\`e}me du codage de canal}{2}{0}{1}
 \beamer@subsectionintoc {1}{2}{Les corr\IeC {\'e}lations non-signalantes}{31}{0}{1}
-\beamer@sectionintoc {2}{Bibliography}{71}{0}{2}
+\beamer@sectionintoc {2}{Bibliography}{72}{0}{2}
