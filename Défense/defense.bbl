@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{BFGG20}
+\begin{thebibliography}{DMMS20}
 
 \bibitem[ADR82]{ADG82}
 Alain Aspect, Jean Dalibard, and G\'erard Roger.
@@ -8,6 +8,13 @@ Alain Aspect, Jean Dalibard, and G\'erard Roger.
 \newblock {\em Phys. Rev. Lett.}, 49:1804--1807, Dec 1982.
 \newblock \href {https://doi.org/10.1103/PhysRevLett.49.1804}
   {\path{doi:10.1103/PhysRevLett.49.1804}}.
+
+\bibitem[Ahl73]{Ahlswede73}
+Rudolf Ahlswede.
+\newblock Multi-way communication channels.
+\newblock In {\em 2nd International Symposium on Information Theory,
+  Tsahkadsor, Armenia, USSR, September 2-8, 1971}, pages 23--52. Publishing
+  House of the Hungarian Academy of Science, 1973.
 
 \bibitem[Bel64]{Bell64}
 J.~S. Bell.
@@ -33,12 +40,14 @@ Siddharth Barman, Omar Fawzi, Suprovat Ghoshal, and Emirhan G{\"{u}}rpinar.
 \newblock \href {https://doi.org/10.1007/978-3-030-45771-6\_6}
   {\path{doi:10.1007/978-3-030-45771-6\_6}}.
 
-\bibitem[CHSH69]{CHSH69}
-John~F. Clauser, Michael~A. Horne, Abner Shimony, and Richard~A. Holt.
-\newblock Proposed experiment to test local hidden-variable theories.
-\newblock {\em Phys. Rev. Lett.}, 23:880--884, Oct 1969.
-\newblock \href {https://doi.org/10.1103/PhysRevLett.23.880}
-  {\path{doi:10.1103/PhysRevLett.23.880}}.
+\bibitem[DMMS20]{DMMS20}
+Szymon Dudycz, Pasin Manurangsi, Jan Marcinkowski, and Krzysztof Sornat.
+\newblock Tight approximation for proportional approval voting.
+\newblock In Christian Bessiere, editor, {\em Proceedings of the Twenty-Ninth
+  International Joint Conference on Artificial Intelligence, {IJCAI} 2020},
+  pages 276--282. ijcai.org, 2020.
+\newblock \href {https://doi.org/10.24963/ijcai.2020/39}
+  {\path{doi:10.24963/ijcai.2020/39}}.
 
 \bibitem[EPR35]{EPR35}
 A.~Einstein, B.~Podolsky, and N.~Rosen.
@@ -47,6 +56,43 @@ A.~Einstein, B.~Podolsky, and N.~Rosen.
 \newblock {\em Phys. Rev.}, 47:777--780, May 1935.
 \newblock \href {https://doi.org/10.1103/PhysRev.47.777}
   {\path{doi:10.1103/PhysRev.47.777}}.
+
+\bibitem[Fei98]{Feige98}
+Uriel Feige.
+\newblock A threshold of ln \emph{n} for approximating set cover.
+\newblock {\em J. {ACM}}, 45(4):634--652, 1998.
+\newblock \href {https://doi.org/10.1145/285055.285059}
+  {\path{doi:10.1145/285055.285059}}.
+
+\bibitem[Hoc97]{Hochbaum96}
+Dorit~S. Hochbaum.
+\newblock Approximation algorithms for {NP}-hard problems.
+\newblock {\em {SIGACT} News}, 28(2):40--52, 1997.
+\newblock \href {https://doi.org/10.1145/261342.571216}
+  {\path{doi:10.1145/261342.571216}}.
+
+\bibitem[Lia73]{Liao73}
+Henry~Herng{-}Jiunn Liao.
+\newblock Multiple access channels ({Ph.D. Thesis} abstr.).
+\newblock {\em {IEEE} Trans. Inf. Theory}, 19(2):253, 1973.
+\newblock \href {https://doi.org/10.1109/TIT.1973.1054960}
+  {\path{doi:10.1109/TIT.1973.1054960}}.
+
+\bibitem[M{\"{O}}05]{MO05}
+M.~Mattas and Patric R.~J. {\"{O}}sterg{\aa}rd.
+\newblock A new bound for the zero-error capacity region of the two-user binary
+  adder channel.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 51(9):3289--3291, 2005.
+\newblock \href {https://doi.org/10.1109/TIT.2005.853309}
+  {\path{doi:10.1109/TIT.2005.853309}}.
+
+\bibitem[SVW17]{SVW17}
+Maxim Sviridenko, Jan Vondr{\'{a}}k, and Justin Ward.
+\newblock Optimal approximation for submodular and supermodular optimization
+  with bounded curvature.
+\newblock {\em Math. Oper. Res.}, 42(4):1197--1218, 2017.
+\newblock \href {https://doi.org/10.1287/moor.2016.0842}
+  {\path{doi:10.1287/moor.2016.0842}}.
 
 \bibitem[YCL{\etalchar{+}}17]{Yin17}
 Juan Yin, Yuan Cao, Yu-Huai Li, Sheng-Kai Liao, Liang Zhang, Ji-Gang Ren,

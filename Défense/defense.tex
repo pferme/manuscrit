@@ -81,21 +81,11 @@
   \insertframenumber\,/\,\inserttotalframenumber}
 %%%%%%%%%
 
-
-
 \title{Approximation Algorithms for Channel Coding and Non-Signaling Correlations}
 \subtitle{\textit{Algorithmes d'approximation pour le problème du codage de canal et corrélations non-signalantes}}
 \author{Paul Fermé}
 \institute{ENS de Lyon}
 \date{29 novembre 2023}
-
-%\AtBeginSection[]
-%{
-%  \begin{frame}<beamer>
-%    \frametitle{Contents}
-%    \tableofcontents[currentsection]
-%  \end{frame}
-%}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -384,7 +374,7 @@
         \node [circle, fill=white, draw=blue, text=blue] at (I) (Corr) {\only<2-4>{$\lambda$}\only<5-7>{$\varphi$}\only<8->{\textrm{NS}}};}
       \only<4>{\node [starburst, fill=white, draw=lightred, line width=1pt, text=red] at (I) {\Large $3/4$};}
       \only<7>{\node [starburst, fill=white, draw=lightred, line width=1pt, text=red] at (I) {\Large $85\%$};}
-      \only<11>{\node [starburst, fill=white, draw=lightred, line width=1pt, align=left, text=red] at (I) {Encore\\ mieux !};}
+      \only<11>{\node [starburst, fill=white, draw=lightred, line width=1pt, align=left, text=red] at (I) {\Large $100\%$};}
     \end{tikzpicture}\\\bigskip
     
     \only<3-4>{\emph{Avant l'expérience}, s'accordent sur un \textcolor{blue}{$\lambda$} aléatoire.\\
@@ -500,17 +490,461 @@
 \end{frame}
 
 \section{Generalized MaxCoverage}
-\begin{frame}{TODO}
+\subsection{A tight approximation algorithm}
+\begin{frame}{The \textsc{MaxCoverage} problem}
+  \pause
+  \begin{columns}
+    \begin{column}{5cm}
+      \includegraphics<2,4->[scale=0.22]{MaxCovPlotNamed.png}%
+      \includegraphics<3>[scale=0.22]{MaxCovPlotNamed1.png}%      
+    \end{column}
+    \begin{column}{5cm}
+        \begin{align*}
+          \maxi && C(S) := \abs{\bigcup_{i \in S} T_i}\\
+          \st && \abs{S} = \only<2,4->{k} \only<3>{\alert{3}}
+        \end{align*}
+    \end{column}
+  \end{columns}
+  
+  \bigskip
+  \only<4->{
+  \begin{itemize}
+  \item NP-hard to approximate within ratio $1 - e^{-1} + \varepsilon$ \cite{Feige98}.
+  \item As $C$ \emph{submodular}, natural \emph{greedy} algorithm achieves approximation ratio $1 - e^{-1}$ \cite{Hochbaum96}.
+  \end{itemize}
+  }
+\end{frame}
+
+\begin{frame}{Generalized MaxCoverage}
+    \begin{columns}
+    \begin{column}{5cm}
+      \includegraphics<1>[scale=0.20]{MaxCovPlotNamed.png}%
+      \includegraphics<2>[scale=0.20]{MaxCovPlotNamed1.png}%
+      \includegraphics<3>[scale=0.20]{MaxCovPlotNamed2.png}%
+      \includegraphics<4>[scale=0.20]{MaxCovPlotNamed3.png}%
+
+      \[ C^{\varphi}(\only<1>{S}\only<2>{\{3,4,5\}}\only<3>{\{1,2,5\}}\only<4>{\{2,3,5\}})=\only<1>{\ldots}\only<2>{\alert{9}}\only<3>{\alert{12}}\only<4>{\alert{11}} \]
+    \end{column}
+    \begin{column}{7cm}
+        \begin{align*}
+          \maxi &&& C^{\varphi}(S) := \sum_{a \in [n]}
+          \only<1>{\alert{\varphi(\abs{S}_a)}}
+          \only<2>{\alert{\min\{\abs{S}_a,1\}}}
+          \only<3>{\alert{\abs{S}_a}}
+          \only<4>{\alert{\min\{\abs{S}_a,2\}}}\\
+          \st &&& \abs{S} = \only<1>{k} \only<2->{\alert{3}}\\
+          \text{with} &&& \abs{S}_a := \abs{\set{i \in S : a \in T_i}}
+        \end{align*}
+        \begin{center}
+        \begin{tikzpicture}[scale=0.8]
+          \draw[very thin,color=gray] (-0.1,-0.1) grid (3.1,3.1);
+          \draw[->] (-0.2,0) -- (3.4,0) node[right] {$x$}; 
+          \draw[->] (0,-0.2) -- (0,3.3) node[above] {$\varphi(x)$};
+          \draw (0,0) node[below left] {$0$};
+          \draw[color=red,thick] plot[domain=0:1,smooth] (\x,{\x});
+          \only<1>{\draw[color=red,thick] plot[domain=1:3.1,smooth] (\x,{1+ln(\x)});}
+          \only<2>{\draw[color=red,thick] plot[domain=1:3.1,smooth] (\x,{1});}
+          \only<3>{\draw[color=red,thick] plot[domain=1:3.1,smooth] (\x,{\x});}
+          \only<4>{\draw[color=red,thick] plot[domain=1:2,smooth] (\x,{\x});
+            \draw[color=red,thick] plot[domain=2:3.1,smooth] (\x,{2});}
+        \end{tikzpicture}
+        \end{center}
+    \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Link to Generalized List-decoding}
+  \begin{itemize}
+    \item TODO
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Our results}
+  \underline{$\varphi$-\textsc{MaxCoverage} problem:}
+    \begin{align*}
+      \maxi &&& C^{\varphi}(S) := \sum_{a \in [n]} w_a\varphi(\abs{S}_a)\\
+      \st &&& \abs{S} = k
+    \end{align*}
+
+  \pause
+  
+  \begin{theo}[Main Result]
+    There exists a polynomial-time approximation algorithm achieving the \emph{Poisson concavity ratio} of $\varphi$, defined by:
+    \[ \alpha_{\varphi} := \min_{x \in \mathbb{N}^*} \alpha_{\varphi}(x) \text{, with } \alpha_{\varphi}(x) := \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])}\ .\]
+    Furthermore for $\varphi(n) = o(n)$, it is \textrm{NP}-hard to approximate within a better ratio than $\alpha_\varphi + \varepsilon$.
+  \end{theo}
+\end{frame}
+
+\begin{frame}{Previous work}
+  \begin{itemize}
+  \item \cite{SVW17}: Generic algorithm for \emph{submodular} maximization using the \emph{curvature} $c$, ratio $1-ce^{-1}$.\\
+  $\Rightarrow$ We have shown that $\alpha_{\varphi} \geq 1-ce^{-1}$, $c$ curvature of $C^{\varphi}$.
+    \pause
+    \bigskip
+  \item \cite{BFGG20}: \underline{$\ell$-\textsc{MultiCoverage} problem:} $\varphi(j):=\min\{ j,\ell\}$, ratio $1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$, tight under UGC.\\
+  $\Rightarrow$ One can compute $\alpha_{\varphi} = \alpha_{\varphi}(\ell) = 1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$, tight if \textrm{P}$\not=$\textrm{NP}.
+    \pause
+    \bigskip
+  \item \cite{DMMS20}: For \emph{geometrically dominant} $\varphi$, ratio $\mathbb{E}[\varphi(\Poi(1))]$, tight if $\varphi(n) = o(n)$ and \textrm{P}$\not=$\textrm{NP}.\\
+  $\Rightarrow$ We have shown that if $\varphi$ is geometrically dominant, then $\alpha_\varphi=\alpha_\varphi(1)=\mathbb{E}[\varphi(\Poi(1))]$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Some particular cases}
+  \begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|l|l|l|}
+      \hline
+      $\varphi$-\textsc{MaxCoverage}  & $\varphi(j)$ & $\alpha_{\varphi}$ \\
+      \hline
+      \textsc{MaxCoverage} & $\min \{ j,1\}$ & $1 - e^{-1}$  \\
+      $\ell$-\textsc{MultiCoverage} & $\min\{ j,\ell\}$ & $1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$ \\
+       \textsc{PAV} & $\sum_{i=1}^j \frac{1}{i}$ & $\alpha_{\varphi}(1) \simeq 0.7965\ldots$\\
+      \textsc{PAV} capped at $3$ & $\sum_{i=1}^{\min\{j,3\}} \frac{1}{i}$ & $\alpha_{\varphi}(1) \simeq 0.7910\ldots$ \\
+      $p$-\textsc{VTA} & $\frac{1-(1-p)^j}{p}$ & $\frac{1 - e^{-p}}{p}$  \\
+      $0.1$-\textsc{VTA} & $\frac{1-(1-0.1)^j}{0.1}$ & $\frac{1 - e^{-0.1}}{0.1} \simeq 0.9516\ldots$ \\
+      $0.1$-\textsc{VTA} capped at $5$ & $\frac{1-(1-0.1)^{\min\{j,5\}}}{0.1}$ & $\alpha_{\varphi}(5) \simeq 0.8470\ldots$  \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Tight approximation ratios for particular choices of $\varphi$ in the $\varphi$-\textsc{MaxCoverage} problem.}
+  \label{figComp}
+\end{table}
+\end{frame}
+
+\begin{frame}{Proof Ideas: Algo}
+  TODO
+\end{frame}
+
+\begin{frame}{Proof Ideas: Hardness}
+  TODO
+\end{frame}
+
+\begin{frame}{Conclusion}
   TODO
 \end{frame}
 
 \section{Multiple-access channels}
-\begin{frame}{TODO}
+\subsection{An efficient algorithm for $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}
+\begin{frame}{The Multiple-Access Channel coding problem}
+  \begin{itemize}
+  \item \underline{Problem $\mathrm{S}(W,k_1,k_2)$:} send $k_1$ (resp. $k_2$) messages through sender 1 (resp. 2) with encoding procedure $e_1:[k_1] \rightarrow \mathcal{X}_1$ (resp. $e_2:[k_2] \rightarrow \mathcal{X}_2$) and decoding $d:\mathcal{Y} \rightarrow [k_1] \times [k_2]$.
+  \item \underline{Objective:} maximize \alert{probability of success}.
+
+    \only<1>{  \begin{center}
+  \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [input, name=i1] {};
+    \node [block, right of=i1,color=white] (e1) {$e_1$};
+    \node [bigblock, below right of=e1] (W) {$W$};
+    \node [block, below left of=W,color=white] (e2) {$e_2$};
+    \node [input, left of=e2, name=i2] {};
+        
+
+    \node [block, right of=W,color=white] (d) {$d$};
+
+    \draw [->] (e1) -- node[name=x1] {$x_1$} (W);
+    \draw [->] (e2) -- node[name=x2] {$x_2$} (W);
+    \draw [->] (W) -- node[name=y] {$y$} (d);
+    \node [output, right of=d] (j1j2) {};
+
+    \draw [draw,->,color=white] (i1) -- node {$i_1$} (e1);
+    \draw [draw,->,color=white] (i2) -- node {$i_2$} (e2);
+    \draw [draw,->,color=white] (d) -- node {$(j_1,j_2)$} (j1j2);
+  \end{tikzpicture}
+  \end{center}}
+    \only<2>{
+  \begin{center}
+  \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [input, name=i1] {};
+    \node [block, right of=i1] (e1) {$e_1$};
+    \node [bigblock, below right of=e1] (W) {$W$};
+    \node [block, below left of=W] (e2) {$e_2$};
+    \node [input, left of=e2, name=i2] {};
+        
+
+    \node [block, right of=W] (d) {$d$};
+
+    \draw [->] (e1) -- node[name=x1] {$x_1$} (W);
+    \draw [->] (e2) -- node[name=x2] {$x_2$} (W);
+    \draw [->] (W) -- node[name=y] {$y$} (d);
+    \node [output, right of=d] (j1j2) {};
+
+    \draw [draw,->] (i1) -- node {$i_1$} (e1);
+    \draw [draw,->] (i2) -- node {$i_2$} (e2);
+    \draw [draw,->] (d) -- node {$(j_1,j_2)$} (j1j2);
+  \end{tikzpicture}
+    \end{center}}
+    %\pause
+    %\pause
+    %\item \textit{\underline{Remark:} linked to one-shot capacity.}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{$\mathrm{S}(W,k_1,k_2)$ written as an optimization program}
+\begin{equation*}
+  \begin{aligned}
+    &&\underset{e_1,e_2,d}{\maxi} &&& \frac{1}{k_1k_2} \sum_{x_1,x_2,y,i_1,i_2} W(y|x_1x_2)e_1(x_1|i_1)e_2(x_2|i_2)d(i_1i_2|y)\\
+    &&\st &&& \sum_{x_1 \in \mathcal{X}_1} e_1(x_1|i_1) = 1, \forall i_1 \in [k_1]\\
+    &&&&&  \sum_{x_2 \in \mathcal{X}_2} e_2(x_2|i_2) = 1, \forall i_2 \in [k_2]\\
+    &&&&& \sum_{j_1 \in [k_1],j_2 \in [k_2]} d(j_1j_2|y) = 1, \forall y \in \mathcal{Y}\\
+    &&&&& e_1(x_1|i_1), e_2(x_2|i_2), d(j_1j_2|y) \geq 0
+  \end{aligned}
+\end{equation*}
+\pause
+\begin{itemize}
+\item Under hypothesis on random $k$-SAT formulas, $\mathrm{S}(W,k_1,k_2)$ cannot be approximated within constant ratio.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Capacity regions}
+    \begin{defi}[Capacity region \only<1-2>{$\mathcal{C}(W)$}\only<3>{$\mathcal{C}_0(W)$} of a MAC $W$]
+  \label{defi:capacity}
+  A rate pair $(R_1,R_2)$ is achievable\only<3>{\alert{ with zero-error}} if:
+  \only<1-2>{\[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+    $\mathcal{C}(W)$ is the set of all achievable rate pairs.}
+  \only<3>{\[ \alert{\exists n_0  \in \mathbb{N}^*, \forall n \geq n_0,} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \color{white}{\underset{n \rightarrow +\infty}{\lim}}  \]
+  $\mathcal{C}_0(W)$ is the set of all achievable rate pairs \alert{with zero-error}.}
+    \end{defi}
+
+    \pause
+    \bigskip
+
+    \only<1-2>{
+    \begin{theo}[\cite{Liao73,Ahlswede73}]
+      $\mathcal{C}(W)$ is the closure of all rate pairs $(R_1,R_2)$ such that:
+  \[ R_1 \leq I(X_1:Y|X_2)\ ,\ R_2 \leq I(X_2:Y|X_1)\ ,\ R_1+R_2 \leq I((X_1X_2):Y) \ ,\]
+  for inputs $(X_1,X_2) \in \mathcal{X}_1 \times \mathcal{X}_2$ following a product law $P_{X_1} \times P_{X_2}$, and $Y \in \mathcal{Y}$ the outcome of $W$.
+    \end{theo}}
+
+    \only<3>{
+      \begin{itemize}
+      \item No theorem characterizing $\mathcal{C}_0(W)$ so far.
+    \end{itemize}}
+\end{frame}
+
+\begin{frame}{The non-signaling assisted MAC coding problem}
+      \only<1>{
+  \begin{center}
+  \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [input, name=i1] {};
+    \node [block, right of=i1] (e1) {$e_1$};
+    \node [bigblock, below right of=e1] (W) {$W$};
+    \node [block, below left of=W] (e2) {$e_2$};
+    \node [input, left of=e2, name=i2] {};
+        
+
+    \node [block, right of=W] (d) {$d$};
+
+    \draw [->] (e1) -- node[name=x1] {$x_1$} (W);
+    \draw [->] (e2) -- node[name=x2] {$x_2$} (W);
+    \draw [->] (W) -- node[name=y] {$y$} (d);
+    \node [output, right of=d] (j1j2) {};
+
+    \draw [draw,->] (i1) -- node {$i_1$} (e1);
+    \draw [draw,->] (i2) -- node {$i_2$} (e2);
+    \draw [draw,->] (d) -- node {$(j_1,j_2)$} (j1j2);
+  \end{tikzpicture}
+  \end{center}
+      }
+      \only<2-3>{
+  \begin{center}
+  \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [input, name=i1] {};
+    \node [input, name=i2] {};
+    \node [Bigblock, below of=i2] (P) {\only<2>{$e_1\ \ \ \ \ \ e_2\ \ \ \ \ \ d$}\only<3>{\alert{$P(x_1x_2(j_1j_2)|i_1i_2y)$}}};
+
+    
+    \only<2>{\draw (P.120) -- (P.240);}\only<3>{\draw[dotted] (P.120) -- (P.240);}
+    \only<2>{\draw (P.60) -- (P.300);}\only<3>{\draw[dotted] (P.60) -- (P.300);}
+
+
+    \draw [<-] (P.130) -- node {$i_1$} +(0pt,1cm);
+    \draw [<-] (P.90) -- node {$i_2$} +(0pt,1cm);
+    \coordinate (ybis) at ($ (P.50) + (0pt,1.65cm) $);
+    \draw [<-] (P.50) -- (ybis);
+    \coordinate (x1) at ($ (P.230)+(0pt,-0.5cm) $);
+    \draw [-] (P.230) -- (x1);
+    \coordinate (x2) at ($ (P.270)+(0pt,-1cm) $);
+    \draw [-] (P.270) -- (x2);
+    \draw [->] (P.310) -- node {$(j_1,j_2)$} +(0pt,-1cm);
+
+    \node [left of=P] (A) {};
+    \node [bigblock, left of=A] (W) {$W$};
+    \coordinate (x1bis) at ($ (x1)+(-3.65cm,0pt) $);
+    \coordinate (x2bis) at ($ (x2)+(-3.65cm,0pt) $);
+    \draw [-] (x1) -- node {$x_1$} (x1bis);
+    \draw [-] (x2) -- node {$x_2$} (x2bis);
+    \draw [->] (x1bis) -- (W.234);
+    \draw [->] (x2bis) -- (W.303);
+    \coordinate (y) at ($ (W.north)+(0pt,2cm) $) ;
+    \draw (W.north) -- (y);
+    \draw (y) -- node {$y$} (ybis);
+  \end{tikzpicture}
+  \end{center}
+  }
+\end{frame}
+
+\begin{frame}{$\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ written as a \emph{linear} program}
+\begin{equation*}
+  \begin{aligned}
+    &&\underset{P}{\maxi} &&& \frac{1}{k_1k_2} \sum_{x_1,x_2,y,i_1,i_2} W(y|x_1x_2)\alert{P(x_1x_2(i_1i_2)|i_1i_2y)}\\
+    &&\st &&& \sum_{x_1} P(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{x_1} P(x_1x_2(j_1j_2)|i_1'i_2y)\\
+    &&&&& \sum_{x_2} P(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{x_2} P(x_1x_2(j_1j_2)|i_1i_2'y)\\
+    &&&&& \sum_{j_1j_2} P(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{j_1j_2} P(x_1x_2(j_1j_2)|i_1i_2y')\\
+    &&&&& \sum_{x_1,x_2,j_1,j_2} P(x_1x_2(j_1j_2)|i_1i_2y) = 1\\
+    &&&&& P(x_1x_2(j_1j_2)|i_1i_2y) \geq 0
+  \end{aligned}
+\end{equation*}
+\end{frame}
+
+\begin{frame}{Non-signaling assisted capacity regions}
+    \begin{defi}[Capacity region \only<1>{$\mathcal{C}^{\mathrm{NS}}(W)$}\only<2-3>{$\mathcal{C}^{\mathrm{NS}}_0(W)$} of a MAC $W$]
+  \label{defi:capacity}
+  $(R_1,R_2)$ achievable with\only<2-3>{\alert{ zero-error} and} non-signaling assistance if:
+  \only<1>{\[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
+    $\mathcal{C}^{\mathrm{NS}}(W)$ is the set of all achievable rate pairs with non-signaling assistance.}
+  \only<2-3>{\[ \alert{\exists n_0  \in \mathbb{N}^*, \forall n \geq n_0,} \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \color{white}{\underset{n \rightarrow +\infty}{\lim}}  \]
+  $\mathcal{C}^{\mathrm{NS}}_0(W)$ is the set of all achievable rate pairs with \alert{zero-error} and non-signaling assistance.}
+    \end{defi}
+    \pause
+    \pause
+    \begin{prop}[Lower bounds on $\mathcal{C}^{\mathrm{NS}}_0(W)$]
+      For any MAC $W$ and integers $k_1,k_2,n$:
+      \begin{equation*}
+        \begin{aligned}
+          \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2) = 1 \implies \left(\frac{\log_2(k_1)}{n},\frac{\log_2(k_2)}{n}\right) &\in \mathcal{C}^{\mathrm{NS}}_0(W) \ .
+        \end{aligned}
+      \end{equation*}
+    \end{prop}
+\end{frame}
+
+\begin{frame}{Symmetrization and application to the Binary Adder Channel}
+  \begin{theo}[Symmetrization]
+    $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ is the solution of a linear program of size bounded by $O\left(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1}\right)$: it can be computed in time $\text{poly}(n)$.
+  \end{theo}
+  
+  \pause
+  \underline{Application to $W_{\text{BAC}} : (x_1,x_2) \mapsto x_1+x_2$:}
+  \begin{center}
+      \begin{tikzpicture}[scale=0.75]
+        \begin{axis}[
+          xmin = 0, xmax = 1.05,
+          ymin = 0, ymax = 1.05,
+          xtick distance = 0.25,
+          ytick distance = 0.25,
+          grid = both,
+          width = 0.6\textwidth,
+          height = 0.6\textwidth,
+          legend cell align = {left},
+          legend pos = outer north east,
+          ylabel=$R_2$,
+          xlabel=$R_1$,
+          ]
+          \addplot[
+          domain = 0.25:0.33,
+          darkgray,
+          densely dashed,
+        ] {(1 + -(2*\x)*ln(2*\x)/ln(2))-(1-2*\x)*ln(1-2*\x)/ln(2))/2};
+          \draw[
+            domain=0.25:0.33,
+            variable=\y,
+            darkgray,
+            densely dashed
+          ] plot({(1 + -(2*\y)*ln(2*\y)/ln(2))-(1-2*\y)*ln(1-2*\y)/ln(2))/2},\y);
+        \addplot[
+          darkgray,
+          densely dashed,
+        ]  coordinates {(0,1) (0.25,1)};
+        \addplot[
+          darkgray,
+          densely dashed,
+        ]  coordinates {(1,0) (1,0.25)}; 
+        \addplot[
+          thick,
+          dashed,
+          black,
+        ] coordinates {(0,1) (0.5,1) (1,0.5) (1,0)};
+        \addplot[
+          densely dashed,
+          darkgray,
+          mark = star,
+        ] coordinates {(0.33, 0.962409352487) (0.43425,0.86873) (0.59749375012,0.720321349148) (0.720321349148,0.59749375012) (0.86873,0.43425) (0.962409352487,0.33)};
+        \only<3->{\addplot[
+          domain = 0:1,
+          brown,
+          mark = triangle,
+        ] table[x=R1,y=R2,col sep=comma] {Data_BAC/ZEBorder2.csv};}
+         \only<4->{\addplot[
+          domain = 0:1,
+          red,
+          mark = o,
+        ] table[x=R1,y=R2,col sep=comma] {Data_BAC/ZEBorder3.csv};}
+         \only<5>{\addplot[
+          domain = 0:1,
+          blue,
+          mark = .,
+        ] table[x=R1,y=R2,col sep=comma] {Data_BAC/ZEBorder7.csv};}
+
+         \legend{,,,Classical CR, Best ZE Lower Bounds, \only<3->{NS ZE CR  for $2$ copies}, \only<4->{NS ZE CR  for $3$ copies}, \only<5->{NS ZE CR for $7$ copies}}
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\subsection{Relaxed non-signaling assisted capacity region}
+\begin{frame}{Result}
+  TODO
+\end{frame}
+
+\begin{frame}{Proof idea: outer bound}
+  TODO
+\end{frame}
+
+\begin{frame}{Proof idea: achievability}
+  TODO
+\end{frame}
+
+\begin{frame}{Conclusion}
   TODO
 \end{frame}
 
 \section{Broadcast channels}
+\subsection{Approximation algorithm for deterministic broadcast channel coding}
 \begin{frame}{TODO}
+  TODO
+\end{frame}
+
+\begin{frame}{TODO}
+  TODO
+\end{frame}
+
+\begin{frame}{TODO}
+  TODO
+\end{frame}
+
+\begin{frame}{TODO}
+  TODO
+\end{frame}
+
+\begin{frame}{TODO}
+  TODO
+\end{frame}
+
+\subsection{Hardness of approximation for broadcast channel coding}
+\begin{frame}{TODO}
+  TODO
+\end{frame}
+
+\begin{frame}{TODO}
+  TODO
+\end{frame}
+
+\begin{frame}{TODO}
+  TODO
+\end{frame}
+
+\begin{frame}{Conclusion}
   TODO
 \end{frame}
 
