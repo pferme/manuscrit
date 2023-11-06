@@ -623,15 +623,37 @@
 \end{frame}
 
 \begin{frame}{Proof ideas: approximation algorithm}
-  TODO
+  \begin{itemize}
+  \item \emph{Relax and round} strategy with \emph{pipage rounding}~\cite{AS04, Vondrak07}.
+    \bigskip
+    \pause
+  \item Linear relaxation using piecewise linear extention of $\varphi$ on $\mathbb{R}^+$.
+  \item $C^{\varphi}$ submodular: pipage rounding on its multilinear extension. Finds in polynomial time an integral solution $x^{\text{int}}$ such that $C^{\varphi}(x^{\text{int}}) \geq \mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]$ given the optimal fractional solution $x^*$.
+  \item Approximation guarantee theorem links previous expectation to the maximum value of the relaxed program.
+  \end{itemize}
+
+  \pause
+  \begin{align*}
+    \hspace*{-0.7cm} C^{\varphi}(x^{\text{int}}) \underset{\text{Rounding}}{\overset{\text{Pipage}}{\geq}} \mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]  \overset{\text{AGT}}{\geq} \alpha_{\varphi} \max_x  C^{\varphi}(x) \underset{\text{Relax}}{\geq} \alpha_{\varphi} \max_{\abs{S} = k} C^{\varphi}(S)\ .
+  \end{align*}
 \end{frame}
 
 \begin{frame}{Proof ideas: hardness of approximation}
-  TODO
+  \begin{itemize}
+  \item Generalization of \emph{partitioning system} by Feige~\cite{Feige98}.
+    \bigskip
+    \pause
+  \item With $C^{\varphi}(\mathcal{Q}) := \sum_{a \in [n]} \varphi(\abs{\set{P \in \mathcal{Q} : a \in P}})$ and $\abs{P_{i,j}} = \frac{nx_{\varphi}}{h}$:
+    \begin{center}
+      \includegraphics[scale=0.3]{PartSyst.png}
+    \end{center}
+    \pause
+    \item Reduction from Gap-Label-Cover~\cite{Feige98} using this structure.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Conclusion}
-  TODO
+  TODO at the end
 \end{frame}
 
 \section{Multiple-access channels}
@@ -915,7 +937,7 @@
 \end{frame}
 
 \begin{frame}{Conclusion}
-  TODO
+  TODO at the end
 \end{frame}
 
 \section{Broadcast channels}
@@ -954,12 +976,12 @@
 \end{frame}
 
 \begin{frame}{Conclusion}
-  TODO
+  TODO at the end
 \end{frame}
 
 \section{Conclusion}
 \begin{frame}{TODO}
-  TODO
+  TODO at the end
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

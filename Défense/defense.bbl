@@ -16,6 +16,14 @@ Rudolf Ahlswede.
   Tsahkadsor, Armenia, USSR, September 2-8, 1971}, pages 23--52. Publishing
   House of the Hungarian Academy of Science, 1973.
 
+\bibitem[AS04]{AS04}
+Alexander~A. Ageev and Maxim Sviridenko.
+\newblock Pipage rounding: {A} new method of constructing algorithms with
+  proven performance guarantee.
+\newblock {\em J. Comb. Optim.}, 8(3):307--328, 2004.
+\newblock \href {https://doi.org/10.1023/B:JOCO.0000038913.96607.c2}
+  {\path{doi:10.1023/B:JOCO.0000038913.96607.c2}}.
+
 \bibitem[Bel64]{Bell64}
 J.~S. Bell.
 \newblock On the {E}instein {P}odolsky {R}osen paradox.
@@ -78,14 +86,6 @@ Henry~Herng{-}Jiunn Liao.
 \newblock \href {https://doi.org/10.1109/TIT.1973.1054960}
   {\path{doi:10.1109/TIT.1973.1054960}}.
 
-\bibitem[M{\"{O}}05]{MO05}
-M.~Mattas and Patric R.~J. {\"{O}}sterg{\aa}rd.
-\newblock A new bound for the zero-error capacity region of the two-user binary
-  adder channel.
-\newblock {\em {IEEE} Trans. Inf. Theory}, 51(9):3289--3291, 2005.
-\newblock \href {https://doi.org/10.1109/TIT.2005.853309}
-  {\path{doi:10.1109/TIT.2005.853309}}.
-
 \bibitem[SVW17]{SVW17}
 Maxim Sviridenko, Jan Vondr{\'{a}}k, and Justin Ward.
 \newblock Optimal approximation for submodular and supermodular optimization
@@ -93,6 +93,14 @@ Maxim Sviridenko, Jan Vondr{\'{a}}k, and Justin Ward.
 \newblock {\em Math. Oper. Res.}, 42(4):1197--1218, 2017.
 \newblock \href {https://doi.org/10.1287/moor.2016.0842}
   {\path{doi:10.1287/moor.2016.0842}}.
+
+\bibitem[Von07]{Vondrak07}
+Jan Vondr{\'a}k.
+\newblock Submodularity in {C}ombinatorial {O}ptimization.
+\newblock {\em Univerzita Karlova, Matematicko-{F}yzik{\'a}ln{\'\i} {F}akulta},
+  2007.
+\newblock URL:
+  \url{https://dspace.cuni.cz/bitstream/handle/20.500.11956/13738/140038775.pdf}.
 
 \bibitem[YCL{\etalchar{+}}17]{Yin17}
 Juan Yin, Yuan Cao, Yu-Huai Li, Sheng-Kai Liao, Liang Zhang, Ji-Gang Ren,
