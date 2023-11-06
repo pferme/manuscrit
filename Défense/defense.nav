@@ -44,108 +44,108 @@
 \headcommand {\beamer@framepages {72}{75}}
 \headcommand {\slideentry {2}{1}{2}{76/79}{A tight approximation algorithm}{0}}
 \headcommand {\beamer@framepages {76}{79}}
-\headcommand {\slideentry {2}{1}{3}{80/80}{A tight approximation algorithm}{0}}
-\headcommand {\beamer@framepages {80}{80}}
-\headcommand {\slideentry {2}{1}{4}{81/82}{A tight approximation algorithm}{0}}
-\headcommand {\beamer@framepages {81}{82}}
-\headcommand {\slideentry {2}{1}{5}{83/85}{A tight approximation algorithm}{0}}
-\headcommand {\beamer@framepages {83}{85}}
-\headcommand {\slideentry {2}{1}{6}{86/86}{A tight approximation algorithm}{0}}
-\headcommand {\beamer@framepages {86}{86}}
-\headcommand {\slideentry {2}{1}{7}{87/87}{A tight approximation algorithm}{0}}
+\headcommand {\slideentry {2}{1}{3}{80/81}{A tight approximation algorithm}{0}}
+\headcommand {\beamer@framepages {80}{81}}
+\headcommand {\slideentry {2}{1}{4}{82/83}{A tight approximation algorithm}{0}}
+\headcommand {\beamer@framepages {82}{83}}
+\headcommand {\slideentry {2}{1}{5}{84/86}{A tight approximation algorithm}{0}}
+\headcommand {\beamer@framepages {84}{86}}
+\headcommand {\slideentry {2}{1}{6}{87/87}{A tight approximation algorithm}{0}}
 \headcommand {\beamer@framepages {87}{87}}
-\headcommand {\slideentry {2}{1}{8}{88/88}{A tight approximation algorithm}{0}}
+\headcommand {\slideentry {2}{1}{7}{88/88}{A tight approximation algorithm}{0}}
 \headcommand {\beamer@framepages {88}{88}}
-\headcommand {\slideentry {2}{1}{9}{89/89}{A tight approximation algorithm}{0}}
+\headcommand {\slideentry {2}{1}{8}{89/89}{A tight approximation algorithm}{0}}
 \headcommand {\beamer@framepages {89}{89}}
-\headcommand {\beamer@sectionpages {72}{89}}
-\headcommand {\beamer@subsectionpages {72}{89}}
-\headcommand {\sectionentry {3}{Multiple-access channels}{90}{Multiple-access channels}{0}}
-\headcommand {\beamer@subsectionpages {90}{89}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{90}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}}
-\headcommand {\slideentry {3}{1}{1}{90/91}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
-\headcommand {\beamer@framepages {90}{91}}
-\headcommand {\slideentry {3}{1}{2}{92/93}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
-\headcommand {\beamer@framepages {92}{93}}
-\headcommand {\slideentry {3}{1}{3}{94/96}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
-\headcommand {\beamer@framepages {94}{96}}
-\headcommand {\slideentry {3}{1}{4}{97/99}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
-\headcommand {\beamer@framepages {97}{99}}
-\headcommand {\slideentry {3}{1}{5}{100/100}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
-\headcommand {\beamer@framepages {100}{100}}
-\headcommand {\slideentry {3}{1}{6}{101/103}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
-\headcommand {\beamer@framepages {101}{103}}
-\headcommand {\slideentry {3}{1}{7}{104/108}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
-\headcommand {\beamer@framepages {104}{108}}
-\headcommand {\beamer@subsectionpages {90}{108}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{109}{Relaxed non-signaling assisted capacity region}}
-\headcommand {\slideentry {3}{2}{1}{109/109}{Relaxed non-signaling assisted capacity region}{0}}
-\headcommand {\beamer@framepages {109}{109}}
-\headcommand {\slideentry {3}{2}{2}{110/110}{Relaxed non-signaling assisted capacity region}{0}}
+\headcommand {\slideentry {2}{1}{9}{90/90}{A tight approximation algorithm}{0}}
+\headcommand {\beamer@framepages {90}{90}}
+\headcommand {\beamer@sectionpages {72}{90}}
+\headcommand {\beamer@subsectionpages {72}{90}}
+\headcommand {\sectionentry {3}{Multiple-access channels}{91}{Multiple-access channels}{0}}
+\headcommand {\beamer@subsectionpages {91}{90}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{91}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}}
+\headcommand {\slideentry {3}{1}{1}{91/92}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
+\headcommand {\beamer@framepages {91}{92}}
+\headcommand {\slideentry {3}{1}{2}{93/94}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
+\headcommand {\beamer@framepages {93}{94}}
+\headcommand {\slideentry {3}{1}{3}{95/97}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
+\headcommand {\beamer@framepages {95}{97}}
+\headcommand {\slideentry {3}{1}{4}{98/100}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
+\headcommand {\beamer@framepages {98}{100}}
+\headcommand {\slideentry {3}{1}{5}{101/101}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
+\headcommand {\beamer@framepages {101}{101}}
+\headcommand {\slideentry {3}{1}{6}{102/104}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
+\headcommand {\beamer@framepages {102}{104}}
+\headcommand {\slideentry {3}{1}{7}{105/109}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{0}}
+\headcommand {\beamer@framepages {105}{109}}
+\headcommand {\beamer@subsectionpages {91}{109}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{110}{Relaxed non-signaling assisted capacity region}}
+\headcommand {\slideentry {3}{2}{1}{110/110}{Relaxed non-signaling assisted capacity region}{0}}
 \headcommand {\beamer@framepages {110}{110}}
-\headcommand {\slideentry {3}{2}{3}{111/111}{Relaxed non-signaling assisted capacity region}{0}}
+\headcommand {\slideentry {3}{2}{2}{111/111}{Relaxed non-signaling assisted capacity region}{0}}
 \headcommand {\beamer@framepages {111}{111}}
-\headcommand {\slideentry {3}{2}{4}{112/112}{Relaxed non-signaling assisted capacity region}{0}}
+\headcommand {\slideentry {3}{2}{3}{112/112}{Relaxed non-signaling assisted capacity region}{0}}
 \headcommand {\beamer@framepages {112}{112}}
-\headcommand {\beamer@sectionpages {90}{112}}
-\headcommand {\beamer@subsectionpages {109}{112}}
-\headcommand {\sectionentry {4}{Broadcast channels}{113}{Broadcast channels}{0}}
-\headcommand {\beamer@subsectionpages {113}{112}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{113}{Approximation algorithm for deterministic broadcast channel coding}}
-\headcommand {\slideentry {4}{1}{1}{113/113}{Approximation algorithm for deterministic broadcast channel coding}{0}}
+\headcommand {\slideentry {3}{2}{4}{113/113}{Relaxed non-signaling assisted capacity region}{0}}
 \headcommand {\beamer@framepages {113}{113}}
-\headcommand {\slideentry {4}{1}{2}{114/114}{Approximation algorithm for deterministic broadcast channel coding}{0}}
+\headcommand {\beamer@sectionpages {91}{113}}
+\headcommand {\beamer@subsectionpages {110}{113}}
+\headcommand {\sectionentry {4}{Broadcast channels}{114}{Broadcast channels}{0}}
+\headcommand {\beamer@subsectionpages {114}{113}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{114}{Approximation algorithm for deterministic broadcast channel coding}}
+\headcommand {\slideentry {4}{1}{1}{114/114}{Approximation algorithm for deterministic broadcast channel coding}{0}}
 \headcommand {\beamer@framepages {114}{114}}
-\headcommand {\slideentry {4}{1}{3}{115/115}{Approximation algorithm for deterministic broadcast channel coding}{0}}
+\headcommand {\slideentry {4}{1}{2}{115/115}{Approximation algorithm for deterministic broadcast channel coding}{0}}
 \headcommand {\beamer@framepages {115}{115}}
-\headcommand {\slideentry {4}{1}{4}{116/116}{Approximation algorithm for deterministic broadcast channel coding}{0}}
+\headcommand {\slideentry {4}{1}{3}{116/116}{Approximation algorithm for deterministic broadcast channel coding}{0}}
 \headcommand {\beamer@framepages {116}{116}}
-\headcommand {\slideentry {4}{1}{5}{117/117}{Approximation algorithm for deterministic broadcast channel coding}{0}}
+\headcommand {\slideentry {4}{1}{4}{117/117}{Approximation algorithm for deterministic broadcast channel coding}{0}}
 \headcommand {\beamer@framepages {117}{117}}
-\headcommand {\beamer@subsectionpages {113}{117}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{118}{Hardness of approximation for broadcast channel coding}}
-\headcommand {\slideentry {4}{2}{1}{118/118}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\slideentry {4}{1}{5}{118/118}{Approximation algorithm for deterministic broadcast channel coding}{0}}
 \headcommand {\beamer@framepages {118}{118}}
-\headcommand {\slideentry {4}{2}{2}{119/119}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\beamer@subsectionpages {114}{118}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{119}{Hardness of approximation for broadcast channel coding}}
+\headcommand {\slideentry {4}{2}{1}{119/119}{Hardness of approximation for broadcast channel coding}{0}}
 \headcommand {\beamer@framepages {119}{119}}
-\headcommand {\slideentry {4}{2}{3}{120/120}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\slideentry {4}{2}{2}{120/120}{Hardness of approximation for broadcast channel coding}{0}}
 \headcommand {\beamer@framepages {120}{120}}
-\headcommand {\slideentry {4}{2}{4}{121/121}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\slideentry {4}{2}{3}{121/121}{Hardness of approximation for broadcast channel coding}{0}}
 \headcommand {\beamer@framepages {121}{121}}
-\headcommand {\beamer@sectionpages {113}{121}}
-\headcommand {\beamer@subsectionpages {118}{121}}
-\headcommand {\sectionentry {5}{Conclusion}{122}{Conclusion}{0}}
-\headcommand {\slideentry {5}{0}{1}{122/122}{}{0}}
+\headcommand {\slideentry {4}{2}{4}{122/122}{Hardness of approximation for broadcast channel coding}{0}}
 \headcommand {\beamer@framepages {122}{122}}
+\headcommand {\beamer@sectionpages {114}{122}}
+\headcommand {\beamer@subsectionpages {119}{122}}
+\headcommand {\sectionentry {5}{Conclusion}{123}{Conclusion}{0}}
+\headcommand {\slideentry {5}{0}{1}{123/123}{}{0}}
+\headcommand {\beamer@framepages {123}{123}}
 \headcommand {\gdef \insertmainframenumber {45}}
 \headcommand {\partentry {\translate {Appendix}}{1}}
-\headcommand {\beamer@partpages {1}{122}}
-\headcommand {\beamer@sectionpages {122}{122}}
-\headcommand {\beamer@subsectionpages {122}{122}}
-\headcommand {\beamer@appendixpages {123}}
-\headcommand {\beamer@sectionpages {123}{122}}
-\headcommand {\beamer@subsectionpages {123}{122}}
-\headcommand {\sectionentry {6}{Bibliography}{123}{Bibliography}{1}}
-\headcommand {\slideentry {6}{0}{1}{123/123}{}{1}}
-\headcommand {\beamer@framepages {123}{123}}
-\headcommand {\slideentry {6}{0}{1}{123/124}{}{1}}
-\headcommand {\beamer@framepages {123}{124}}
-\headcommand {\slideentry {6}{0}{1}{123/125}{}{1}}
-\headcommand {\beamer@framepages {123}{125}}
-\headcommand {\slideentry {6}{0}{1}{123/126}{}{1}}
-\headcommand {\beamer@framepages {123}{126}}
-\headcommand {\slideentry {6}{0}{1}{123/127}{}{1}}
-\headcommand {\beamer@framepages {123}{127}}
-\headcommand {\slideentry {6}{0}{1}{123/128}{}{1}}
-\headcommand {\beamer@framepages {123}{128}}
-\headcommand {\slideentry {6}{0}{1}{123/129}{}{1}}
-\headcommand {\beamer@framepages {123}{129}}
-\headcommand {\slideentry {6}{0}{1}{123/130}{}{1}}
-\headcommand {\beamer@framepages {123}{130}}
-\headcommand {\beamer@partpages {123}{130}}
-\headcommand {\beamer@subsectionpages {123}{130}}
-\headcommand {\beamer@sectionpages {123}{130}}
-\headcommand {\beamer@documentpages {130}}
+\headcommand {\beamer@partpages {1}{123}}
+\headcommand {\beamer@sectionpages {123}{123}}
+\headcommand {\beamer@subsectionpages {123}{123}}
+\headcommand {\beamer@appendixpages {124}}
+\headcommand {\beamer@sectionpages {124}{123}}
+\headcommand {\beamer@subsectionpages {124}{123}}
+\headcommand {\sectionentry {6}{Bibliography}{124}{Bibliography}{1}}
+\headcommand {\slideentry {6}{0}{1}{124/124}{}{1}}
+\headcommand {\beamer@framepages {124}{124}}
+\headcommand {\slideentry {6}{0}{1}{124/125}{}{1}}
+\headcommand {\beamer@framepages {124}{125}}
+\headcommand {\slideentry {6}{0}{1}{124/126}{}{1}}
+\headcommand {\beamer@framepages {124}{126}}
+\headcommand {\slideentry {6}{0}{1}{124/127}{}{1}}
+\headcommand {\beamer@framepages {124}{127}}
+\headcommand {\slideentry {6}{0}{1}{124/128}{}{1}}
+\headcommand {\beamer@framepages {124}{128}}
+\headcommand {\slideentry {6}{0}{1}{124/129}{}{1}}
+\headcommand {\beamer@framepages {124}{129}}
+\headcommand {\slideentry {6}{0}{1}{124/130}{}{1}}
+\headcommand {\beamer@framepages {124}{130}}
+\headcommand {\slideentry {6}{0}{1}{124/131}{}{1}}
+\headcommand {\beamer@framepages {124}{131}}
+\headcommand {\beamer@partpages {124}{131}}
+\headcommand {\beamer@subsectionpages {124}{131}}
+\headcommand {\beamer@sectionpages {124}{131}}
+\headcommand {\beamer@documentpages {131}}
 \headcommand {\gdef \inserttotalframenumber {8}}
 \headcommand {\gdef \inserttotalframenumber {45}}
 \headcommand {\gdef \appendixtotalframenumber {8}}

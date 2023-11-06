@@ -555,7 +555,16 @@
 
 \begin{frame}{Link to Generalized List-decoding}
   \begin{itemize}
-    \item TODO
+  \item For regular sets $T_x \subseteq \mathcal{Y}$ (ie. $\forall x, \abs{T_x}=t$):
+    \[ W(y|x) := \begin{cases}
+      \frac{1}{t} & \text{if } y \in T_x\ ,\\
+      0 & \text{otherwise}\ .
+    \end{cases}\]
+  \item Success probability of size-$k$ code $S \subseteq \mathcal{X}$ is $\frac{1}{kt}\sum_{y \in \mathcal{Y}} \varphi(\abs{S}_y)$ for $\varphi$-list-decoding.
+    \bigskip
+    \pause
+  \item Up to constant factor $\frac{1}{kt}$, same value as for $\varphi$-\textsc{MaxCoverage}: tight approximation follows for that class of channels.
+  \item Open to extends approximation algorithm to all channels.
   \end{itemize}
 \end{frame}
 
@@ -572,7 +581,7 @@
   \begin{theo}[Main Result]
     There exists a polynomial-time approximation algorithm achieving the \emph{Poisson concavity ratio} of $\varphi$, defined by:
     \[ \alpha_{\varphi} := \min_{x \in \mathbb{N}^*} \alpha_{\varphi}(x) \text{, with } \alpha_{\varphi}(x) := \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])}\ .\]
-    Furthermore for $\varphi(n) = o(n)$, it is \textrm{NP}-hard to approximate within a better ratio than $\alpha_\varphi + \varepsilon$.
+    For $\varphi(n) = o(n)$, it is \textrm{NP}-hard to approximate within a better ratio than $\alpha_\varphi + \varepsilon$, even restricted to unit weights and regular sets.
   \end{theo}
 \end{frame}
 
@@ -613,11 +622,11 @@
 \end{table}
 \end{frame}
 
-\begin{frame}{Proof Ideas: Algo}
+\begin{frame}{Proof ideas: approximation algorithm}
   TODO
 \end{frame}
 
-\begin{frame}{Proof Ideas: Hardness}
+\begin{frame}{Proof Ideas: hardness of approximation}
   TODO
 \end{frame}
 
@@ -627,7 +636,7 @@
 
 \section{Multiple-access channels}
 \subsection{An efficient algorithm for $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}
-\begin{frame}{The Multiple-Access Channel coding problem}
+\begin{frame}{The multiple-access channel coding problem}
   \begin{itemize}
   \item \underline{Problem $\mathrm{S}(W,k_1,k_2)$:} send $k_1$ (resp. $k_2$) messages through sender 1 (resp. 2) with encoding procedure $e_1:[k_1] \rightarrow \mathcal{X}_1$ (resp. $e_2:[k_2] \rightarrow \mathcal{X}_2$) and decoding $d:\mathcal{Y} \rightarrow [k_1] \times [k_2]$.
   \item \underline{Objective:} maximize \alert{probability of success}.
@@ -897,11 +906,11 @@
   TODO
 \end{frame}
 
-\begin{frame}{Proof idea: outer bound}
+\begin{frame}{Proof ideas: outer bound}
   TODO
 \end{frame}
 
-\begin{frame}{Proof idea: achievability}
+\begin{frame}{Proof ideas: achievability}
   TODO
 \end{frame}
 

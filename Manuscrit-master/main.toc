@@ -40,12 +40,12 @@
 \contentsline {subsubsection}{\numberline {3.2.2.1}Completeness}{31}{subsubsection.3.2.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2.2}Soundness}{31}{subsubsection.3.2.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Further Hardness Under Gap-ETH}{34}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Applications}{34}{section.3.3}
+\contentsline {section}{\numberline {3.3}Applications}{35}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Generalized List-Decoding}{35}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Multiwinner Elections}{36}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Resource Allocation in Multi-Agent Systems}{37}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Vehicle-Target Assignment}{37}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Welfare Maximization for $\varphi $-Coverage}{40}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.4}Vehicle-Target Assignment}{38}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Welfare Maximization for $\varphi $-Coverage}{39}{subsection.3.3.5}
 \contentsline {section}{\numberline {3.4}Conclusion}{40}{section.3.4}
 \contentsline {section}{\numberline {3.5}Appendix}{42}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}General Properties}{42}{subsection.3.5.1}

@@ -15,7 +15,7 @@ Here $\Poi(x)$ denotes a Poisson-distributed random variable with parameter $x$.
 Our main result is that the $\varphi$-\textsc{MaxCoverage} problem admits an efficient $\alpha_\varphi$-approximation algorithm, when $\varphi$ is normalized nondecreasing concave, and this approximation guarantee is tight when $\varphi$ grows sublinearly. Formally,  
 
 \begin{theorem}
-For any normalized nondecreasing concave function $\varphi$, there exists a $\alpha_\varphi$-approximation algorithm for the $\varphi$-\textsc{MaxCoverage} problem running in polynomial time. Furthermore, for $\varphi(n) = o(n)$, it is \textrm{NP}-hard to approximate the $\varphi$-\textsc{MaxCoverage} problem within a factor better than $\alpha_\varphi + \varepsilon$, for any constant $\varepsilon >0$.
+For any normalized nondecreasing concave function $\varphi$, there exists a $\alpha_\varphi$-approximation algorithm for the $\varphi$-\textsc{MaxCoverage} problem running in polynomial time. Furthermore, for $\varphi(n) = o(n)$, it is \textrm{NP}-hard to approximate the $\varphi$-\textsc{MaxCoverage} problem within a factor better than $\alpha_\varphi + \varepsilon$, for any constant $\varepsilon >0$, even restricted to instances with unit weights and regular subsets.
 \label{theo:main}
 \end{theorem}
 
@@ -160,12 +160,12 @@ We note that in order to establish Theorem~\ref{theo:AlgoCard}, the cardinality 
 \section{Hardness of Approximation for $\varphi$-\textsc{MaxCoverage}}
 \addcontentsline{tof}{section}{\protect\numberline{\thesection} Difficulté d'approximation pour $\varphi$-\textsc{MaxCoverage}}
 \label{section:Hardness}
-In this section, we establish an inapproximability result for the $\varphi$-\textsc{MaxCoverage} problem with unit weights under cardinality constraints. Throughout this section, we use $\Gamma$ to denote the universe of elements and, hence, an instance of the $\varphi$-\textsc{MaxCoverage} problem consists of $\Gamma$, along with a collection of subsets $\mathcal{F} = \set{F_i \subseteq \Gamma}_{i=1}^m$  and an integer $k$. Recall that the objective of this problem is to find a size-$k$ subset $S \subseteq [m]$ that maximizes $C^{\varphi}(S) = \sum_{a \in \Gamma}\varphi(\abs{S}_a)$.
+In this section, we establish an inapproximability result for the $\varphi$-\textsc{MaxCoverage} problem with unit weights and regular subsets under cardinality constraints. Throughout this section, we use $\Gamma$ to denote the universe of elements and, hence, an instance of the $\varphi$-\textsc{MaxCoverage} problem consists of $\Gamma$, along with a collection of regular subsets $\mathcal{F} = \set{F_i \subseteq \Gamma}_{i=1}^m$ (i.e. $\forall i \in [m], \abs{F_i}=t$ for some $t$) and an integer $k$. Recall that the objective of this problem is to find a size-$k$ subset $S \subseteq [m]$ that maximizes $C^{\varphi}(S) = \sum_{a \in \Gamma}\varphi(\abs{S}_a)$.
 
 We establish the following theorem in this section:
 
 \begin{theorem}
- It is \textrm{NP}-hard to approximate the $\varphi$-\textsc{MaxCoverage} problem for $\varphi(n) = o(n)$ within a factor greater that $\alpha_{\varphi} + \varepsilon$ for any $\varepsilon > 0$.
+ It is \textrm{NP}-hard to approximate the $\varphi$-\textsc{MaxCoverage} problem for $\varphi(n) = o(n)$ within a factor greater that $\alpha_{\varphi} + \varepsilon$ for any $\varepsilon > 0$, even restricted to instances with unit weights and regular subsets.
   \label{theo:Hardness}
 \end{theorem}
 
@@ -243,7 +243,7 @@ Then, given an instance  $\mathcal{G} = (V,E,[L],[R], \Sigma, \set{\pi_{e,v}}_{e
     \item $n$ a large enough integer to have the existence of $([n],h,R,\varphi,\eta)$-partitioning systems using Proposition~\ref{prop:Partitioning}. Note that the size of these partitioning systems is independent of the size of the instance $\mathcal{G}$ and that we can construct such a partitioning system in constant time (with relation to the size of the instance $\mathcal{G}$) thanks to Proposition~\ref{prop:Partitioning}.
     \item $\Gamma = [n] \times E$,
     \item $k =\abs{V}$,
-    \item Consider a  $([n],h,R,\varphi,\eta)$-partitioning system, and call $\mathcal{P} =\set{\mathcal{P}_1,\ldots,\mathcal{P}_R}$ the corresponding set of collections. Define sets $T_{\beta}^{e,v_j} := P_{\pi_{e,v_j}(\beta),j} \times \set{e}$ where ${e = (v_1,\ldots,v_h)} \in E, j \in [h], \beta \in [L]$. Then, take $F^v_{\beta} := \bigsqcup_{e \in E:v \in e} T^{e,v}_{\beta}$ as cover sets and $\mathcal{F} := \set{F^v_{\beta}, v \in V, \beta \in [L]}$.
+    \item Consider a  $([n],h,R,\varphi,\eta)$-partitioning system, and call $\mathcal{P} =\set{\mathcal{P}_1,\ldots,\mathcal{P}_R}$ the corresponding set of collections. Define sets $T_{\beta}^{e,v_j} := P_{\pi_{e,v_j}(\beta),j} \times \set{e}$ where ${e = (v_1,\ldots,v_h)} \in E, j \in [h], \beta \in [L]$. Then, take $F^v_{\beta} := \bigsqcup_{e \in E:v \in e} T^{e,v}_{\beta}$ as cover sets and $\mathcal{F} := \set{F^v_{\beta}, v \in V, \beta \in [L]}$. Note that $\abs{F^v_{\beta}} = \sum_{e \in E:v \in e} \abs{T^{e,v}_{\beta}} = \sum_{e \in E:v \in e} \abs{P_{\pi_{e,v_j}(\beta),j}} = \abs{\{e \in E:v \in e\}} \cdot \frac{x_{\varphi}n}{h}$ which does not depend on $v$ as the hypergraph $(V,E)$ is regular. Therefore, those subsets are indeed regular.
   \end{itemize}
 
 We will now prove that if we are in a YES instance, we have that there exists $\mathcal{T}$ of size $k$ such that $C^{\varphi}(\mathcal{T}) \geq \varphi(x_{\varphi})\abs{\Gamma}$ (completeness). Moreover, if we are in a NO instance, then we have that for all $\mathcal{T}$ of size $k = \abs{V}$, $C^{\varphi}(\mathcal{T}) \leq (\alpha_{\varphi} + \varepsilon)\varphi(x_{\varphi})\abs{\Gamma}$ (soundness). Establishing these two properties would conclude the proof. 
@@ -443,7 +443,7 @@ Specifically, consider a setting with $n$ resources, $k$ agents, and a function 
 While $\varphi$-\textsc{Resource Allocation} does not directly reduce to $\varphi$-\textsc{MaxCoverage}, the next theorem shows that it corresponds to maximizing $\varphi$-coverage functions subject to a matroid constraint. Hence, invoking our result from Section~\ref{sec:matroid}, we obtain a tight $\alpha_\varphi$-approximation for $\varphi$-\textsc{Resource Allocation} (see Appendix~\ref{app:HardnessMA} for the proof):
 
 \begin{theorem}
-For any normalized nondecreasing concave function $\varphi$, there exists a $\alpha_\varphi$-approximation algorithm for $\varphi$-\textsc{Resource Allocation} running in polynomial time. Furthermore, for $\varphi(n) = o(n)$, it is \textrm{NP}-hard to approximate $\varphi$-\textsc{Resource Allocation} within a factor better than $\alpha_\varphi + \varepsilon$, for any constant $\varepsilon >0$.
+For any normalized nondecreasing concave function $\varphi$, there exists a $\alpha_\varphi$-approximation algorithm for $\varphi$-\textsc{Resource Allocation} running in polynomial time. Furthermore, for $\varphi(n) = o(n)$, it is \textrm{NP}-hard to approximate $\varphi$-\textsc{Resource Allocation} within a factor better than $\alpha_\varphi + \varepsilon$, for any constant $\varepsilon >0$, even restricted to instances with unit weights and regular subsets.
   \label{theo:HardnessMA}
 \end{theorem}
 
