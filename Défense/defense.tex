@@ -563,8 +563,8 @@
   \item Success probability of size-$k$ code $S \subseteq \mathcal{X}$ is $\frac{1}{kt}\sum_{y \in \mathcal{Y}} \varphi(\abs{S}_y)$ for $\varphi$-list-decoding.
     \bigskip
     \pause
-  \item Up to constant factor $\frac{1}{kt}$, same value as for $\varphi$-\textsc{MaxCoverage}: tight approximation follows for that class of channels.
-  \item Open to extends approximation algorithm to all channels.
+  \item Up to constant factor $\frac{1}{kt}$, same value as for $\varphi$-\textsc{MaxCoverage}: tight approximation will follow for that class of channels.
+  \item Open to extend approximation algorithm to all channels.
   \end{itemize}
 \end{frame}
 
@@ -581,7 +581,7 @@
   \begin{theo}[Main Result]
     There exists a polynomial-time approximation algorithm achieving the \emph{Poisson concavity ratio} of $\varphi$, defined by:
     \[ \alpha_{\varphi} := \min_{x \in \mathbb{N}^*} \alpha_{\varphi}(x) \text{, with } \alpha_{\varphi}(x) := \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])}\ .\]
-    For $\varphi(n) = o(n)$, it is \textrm{NP}-hard to approximate within a better ratio than $\alpha_\varphi + \varepsilon$, even restricted to unit weights and regular sets.
+    For $\varphi(n) = o(n)$, it is \textrm{NP}-hard to approximate within a better ratio than $\alpha_\varphi + \varepsilon$, even restricted to unit weights and regular subsets.
   \end{theo}
 \end{frame}
 
@@ -626,7 +626,7 @@
   TODO
 \end{frame}
 
-\begin{frame}{Proof Ideas: hardness of approximation}
+\begin{frame}{Proof ideas: hardness of approximation}
   TODO
 \end{frame}
 
