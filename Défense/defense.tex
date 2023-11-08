@@ -28,6 +28,7 @@
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usetikzlibrary{shapes,arrows,snakes}
+\usetikzlibrary{spy}
 
 \tikzstyle{block} = [draw, fill=white, rectangle, 
   minimum height=2em, minimum width=3em]
@@ -490,7 +491,7 @@
 \end{frame}
 
 \section{Generalized MaxCoverage}
-\subsection{A tight approximation algorithm}
+\subsection{Presentation of the problem}
 \begin{frame}{The \textsc{MaxCoverage} problem}
   \pause
   \begin{columns}
@@ -568,7 +569,7 @@
   \end{itemize}
 \end{frame}
 
-
+\subsection{A tight approximation algorithm}
 \begin{frame}{Our results}
   \underline{$\varphi$-\textsc{MaxCoverage} problem:}
     \begin{align*}
@@ -733,9 +734,9 @@
   \label{defi:capacity}
   A rate pair $(R_1,R_2)$ is achievable\only<3>{\alert{ with zero-error}} if:
   \only<1-2>{\[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-    $\mathcal{C}(W)$ is the set of all achievable rate pairs.}
+    $\mathcal{C}(W)$ is the the closure of the set of all achievable rate pairs.}
   \only<3>{\[ \alert{\exists n_0  \in \mathbb{N}^*, \forall n \geq n_0,} \mathrm{S}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \color{white}{\underset{n \rightarrow +\infty}{\lim}}  \]
-  $\mathcal{C}_0(W)$ is the set of all achievable rate pairs \alert{with zero-error}.}
+  $\mathcal{C}_0(W)$ is the closure of set of all achievable rate pairs \alert{with zero-error}.}
     \end{defi}
 
     \pause
@@ -743,8 +744,8 @@
 
     \only<1-2>{
     \begin{theo}[\cite{Liao73,Ahlswede73}]
-      $\mathcal{C}(W)$ is the closure of all rate pairs $(R_1,R_2)$ such that:
-  \[ R_1 \leq I(X_1:Y|X_2)\ ,\ R_2 \leq I(X_2:Y|X_1)\ ,\ R_1+R_2 \leq I((X_1X_2):Y) \ ,\]
+      $\mathcal{C}(W)$ is the closure of the convex hull of rate pairs $(R_1,R_2)$ s.t.:
+  \[ R_1 < I(X_1:Y|X_2)\ ,\ R_2 < I(X_2:Y|X_1)\ ,\ R_1+R_2 < I((X_1X_2):Y) \ ,\]
   for inputs $(X_1,X_2) \in \mathcal{X}_1 \times \mathcal{X}_2$ following a product law $P_{X_1} \times P_{X_2}$, and $Y \in \mathcal{Y}$ the outcome of $W$.
     \end{theo}}
 
@@ -817,7 +818,7 @@
 \end{frame}
 
 \begin{frame}{$\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ written as a \emph{linear} program}
-\begin{equation*}
+\only<1>{\begin{equation*}
   \begin{aligned}
     &&\underset{P}{\maxi} &&& \frac{1}{k_1k_2} \sum_{x_1,x_2,y,i_1,i_2} W(y|x_1x_2)\alert{P(x_1x_2(i_1i_2)|i_1i_2y)}\\
     &&\st &&& \sum_{x_1} P(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{x_1} P(x_1x_2(j_1j_2)|i_1'i_2y)\\
@@ -826,7 +827,17 @@
     &&&&& \sum_{x_1,x_2,j_1,j_2} P(x_1x_2(j_1j_2)|i_1i_2y) = 1\\
     &&&&& P(x_1x_2(j_1j_2)|i_1i_2y) \geq 0
   \end{aligned}
-\end{equation*}
+\end{equation*}}
+\only<2>{\begin{equation*}
+  \begin{aligned}
+    &&\underset{r,r^1,r^2,p}{\maxi} &&& \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y}\\
+    &&\st &&& \sum_{x_1,x_2} r_{x_1,x_2,y} = 1\\
+    &&&&& \sum_{x_1} r^1_{x_1,x_2,y} = k_1 \sum_{x_1} r_{x_1,x_2,y}, \sum_{x_2} r^2_{x_1,x_2,y} = k_2 \sum_{x_2} r_{x_1,x_2,y}\\
+    &&&&& \sum_{x_1} p_{x_1,x_2} = k_1 \sum_{x_1} r^2_{x_1,x_2,y},  \sum_{x_2} p_{x_1,x_2} = k_2 \sum_{x_2} r^1_{x_1,x_2,y}\\
+    &&&&& 0 \leq r_{x_1,x_2,y} \leq r^1_{x_1,x_2,y},r^2_{x_1,x_2,y} \leq p_{x_1,x_2}\\
+    &&&&& p_{x_1,x_2} -  r^1_{x_1,x_2,y} - r^2_{x_1,x_2,y} + r_{x_1,x_2,y} \geq 0
+  \end{aligned}
+  \end{equation*}}
 \end{frame}
 
 \begin{frame}{Non-signaling assisted capacity regions}
@@ -834,19 +845,15 @@
   \label{defi:capacity}
   $(R_1,R_2)$ achievable with\only<2-3>{\alert{ zero-error} and} non-signaling assistance if:
   \only<1>{\[ \underset{n \rightarrow +\infty}{\lim} \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \]
-    $\mathcal{C}^{\mathrm{NS}}(W)$ is the set of all achievable rate pairs with non-signaling assistance.}
+    $\mathcal{C}^{\mathrm{NS}}(W)$ is the closure of the set of all achievable rate pairs with non-signaling assistance.}
   \only<2-3>{\[ \alert{\exists n_0  \in \mathbb{N}^*, \forall n \geq n_0,} \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},\ceil{2^{R_1n}},\ceil{2^{R_2n}}) = 1 \ . \color{white}{\underset{n \rightarrow +\infty}{\lim}}  \]
-  $\mathcal{C}^{\mathrm{NS}}_0(W)$ is the set of all achievable rate pairs with \alert{zero-error} and non-signaling assistance.}
+  $\mathcal{C}^{\mathrm{NS}}_0(W)$ is the closure of the set of all achievable rate pairs with \alert{zero-error} and non-signaling assistance.}
     \end{defi}
     \pause
     \pause
-    \begin{prop}[Lower bounds on $\mathcal{C}^{\mathrm{NS}}_0(W)$]
-      For any MAC $W$ and integers $k_1,k_2,n$:
-      \begin{equation*}
-        \begin{aligned}
-          \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2) = 1 \implies \left(\frac{\log_2(k_1)}{n},\frac{\log_2(k_2)}{n}\right) &\in \mathcal{C}^{\mathrm{NS}}_0(W) \ .
-        \end{aligned}
-      \end{equation*}
+    \begin{prop}[Inner bounds]
+      We have $\mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W) \subseteq \mathcal{C}_0^{\mathrm{NS}}(W) \subseteq \mathcal{C}^{\mathrm{NS}}(W)$, where:
+      \[ \mathcal{C}_{0,\leq n}^{\mathrm{NS}}(W)  := \left\{ \left(\frac{\log(k_1)}{n},\frac{\log(k_2)}{n}\right) : \mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)=1 \right\}\ . \]
     \end{prop}
 \end{frame}
 
@@ -917,15 +924,29 @@
           mark = .,
         ] table[x=R1,y=R2,col sep=comma] {Data_BAC/ZEBorder7.csv};}
 
-         \legend{,,,Classical CR, Best ZE Lower Bounds, \only<3->{NS ZE CR  for $2$ copies}, \only<4->{NS ZE CR  for $3$ copies}, \only<5->{NS ZE CR for $7$ copies}}
+         \legend{,,,$\mathcal{C}(W_{\text{BAC}})$, Inner Bounds on $\mathcal{C}_0(W_{\text{BAC}})$, \only<3->{$\mathcal{C}_{0,\leq 2}^{\mathrm{NS}}(W_{\text{BAC}})$}, \only<4->{$\mathcal{C}_{0,\leq 3}^{\mathrm{NS}}(W_{\text{BAC}})$}, \only<5->{$\mathcal{C}_{0,\leq 7}^{\mathrm{NS}}(W_{\text{BAC}})$}}
         \end{axis}
       \end{tikzpicture}
     \end{center}
 \end{frame}
 
 \subsection{Relaxed non-signaling assisted capacity region}
-\begin{frame}{Result}
-  TODO
+\begin{frame}{Relaxed non-signaling capacity region characterization}
+  \begin{itemize}
+  \item Relaxed notion of non-signaling success probability $\mathrm{S}^{\overline{\mathrm{NS}}}$.
+  \item Remove constraints concerning $r^1,r^2$ in $\mathrm{S}^{\mathrm{NS}}$ linear program.
+    \pause
+    \bigskip
+  \item Defines capacity region $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ as before.
+    \pause
+    \bigskip
+      \begin{theorem}[Characterization of $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$]
+        \label{theo:CharaNSrelaxed}
+        $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ is the closure of the convex hull of rate pairs $(R_1,R_2)$ s.t.:
+        \[ R_1 < I(X_1:Y|X_2)\ ,\ R_2 < I(X_2:Y|X_1)\ ,\ R_1+R_2 < I((X_1,X_2):Y) \ ,\]
+        for $(X_1,X_2)$ following \alert{any law $P_{X_1X_2}$ on $\mathcal{X}_1 \times \mathcal{X}_2$}, and $Y \in \mathcal{Y}$ the outcome of $W$ on inputs $X_1,X_2$.
+  \end{theorem}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Proof ideas: outer bound}
@@ -936,16 +957,78 @@
   TODO
 \end{frame}
 
+\begin{frame}{Application to the binary adder channel}
+  \begin{center}
+    \begin{tikzpicture}[scale=1, spy using outlines={circle, magnification=4, size=2cm, connect spies}]
+      \begin{axis}[
+          xmin = 0, xmax = 1.05,
+          ymin = 0, ymax = 1.05,
+          xtick distance = 0.25,
+          ytick distance = 0.25,
+          grid = both,
+          width = 0.6\textwidth,
+          height = 0.6\textwidth,
+          legend cell align = {left},
+          legend pos = outer north east,
+          ylabel=$R_2$,
+          xlabel=$R_1$,
+        ]
+        \addplot[
+          thick,
+          dotted,
+          darkgray,
+        ] coordinates {(0.6666667,0.9182958) (0.9182958,0.6666667)};
+        \addplot[
+          thick,
+          dotted,
+          darkgray,
+        ] coordinates {(1,0.5) (1,0)};
+        \addplot[
+          thick,
+          dotted,
+          darkgray,
+          domain = 0.5:0.6666667,
+        ] {-(\x)*ln(\x)/ln(2)-(1-\x)*ln(1-\x)/ln(2)};
+        \draw[
+          thick,
+          dotted,
+          darkgray,
+          domain = 0.47:0.6666667,
+          variable=\y] plot({-(\y)*ln(\y)/ln(2)-(1-\y)*ln(1-\y)/ln(2)},\y);
+        \addplot[
+          thick,
+          dashed,
+          black,
+        ] coordinates {(0,1) (0.5,1) (1,0.5) (1,0)};
+        \addplot[
+          thick,
+          dotted,
+          darkgray,
+        ] coordinates {(0,1) (0.5,1)};{(0.6666667,0.9182958) (0.9182958,0.6666667)} {(1,0.5) (1,0)};
+        \only<2->{\addplot[
+          domain = 0:1,
+          blue,
+        ] table[x=R1,y=R2,col sep=comma] {Data_BAC/ZEBorder7.csv};
+        \addplot[
+          domain = 0:1,
+          red,
+        ] table[x=R1,y=R2,col sep=comma] {Data_BAC_relaxed/ZEBorderINEQ7.csv};}
+        \coordinate (spypoint) at (0.77,0.77);
+        \coordinate (magnifyglass) at (0.375,0.375);        
+        \legend{,,,$\mathcal{C}(W_{\text{BAC}})$, $\mathcal{C}^{\overline{\mathrm{NS}}}(W_{\text{BAC}})\ \ $, \only<2->{$\mathcal{C}_{0,\leq 7}^{\mathrm{NS}}(W_{\text{BAC}})$}, \only<2->{$\mathcal{C}_{0,\leq 7}^{\overline{\mathrm{NS}}}(W_{\text{BAC}})$}}
+      \end{axis}
+
+      \only<3>{\spy on (spypoint) in node [fill=white] at (magnifyglass);}
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
 \begin{frame}{Conclusion}
   TODO at the end
 \end{frame}
 
 \section{Broadcast channels}
 \subsection{Approximation algorithm for deterministic broadcast channel coding}
-\begin{frame}{TODO}
-  TODO
-\end{frame}
-
 \begin{frame}{TODO}
   TODO
 \end{frame}

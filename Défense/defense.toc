@@ -2,12 +2,13 @@
 \beamer@subsectionintoc {1}{1}{Le probl\IeC {\`e}me du codage de canal}{2}{0}{1}
 \beamer@subsectionintoc {1}{2}{Les corr\IeC {\'e}lations non-signalantes}{31}{0}{1}
 \beamer@sectionintoc {2}{Generalized MaxCoverage}{72}{0}{2}
-\beamer@subsectionintoc {2}{1}{A tight approximation algorithm}{72}{0}{2}
+\beamer@subsectionintoc {2}{1}{Presentation of the problem}{72}{0}{2}
+\beamer@subsectionintoc {2}{2}{A tight approximation algorithm}{82}{0}{2}
 \beamer@sectionintoc {3}{Multiple-access channels}{95}{0}{3}
 \beamer@subsectionintoc {3}{1}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}{95}{0}{3}
-\beamer@subsectionintoc {3}{2}{Relaxed non-signaling assisted capacity region}{114}{0}{3}
-\beamer@sectionintoc {4}{Broadcast channels}{118}{0}{4}
-\beamer@subsectionintoc {4}{1}{Approximation algorithm for deterministic broadcast channel coding}{118}{0}{4}
-\beamer@subsectionintoc {4}{2}{Hardness of approximation for broadcast channel coding}{123}{0}{4}
-\beamer@sectionintoc {5}{Conclusion}{127}{0}{5}
-\beamer@sectionintoc {6}{Bibliography}{128}{1}{6}
+\beamer@subsectionintoc {3}{2}{Relaxed non-signaling assisted capacity region}{115}{0}{3}
+\beamer@sectionintoc {4}{Broadcast channels}{124}{0}{4}
+\beamer@subsectionintoc {4}{1}{Approximation algorithm for deterministic broadcast channel coding}{124}{0}{4}
+\beamer@subsectionintoc {4}{2}{Hardness of approximation for broadcast channel coding}{128}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{132}{0}{5}
+\beamer@sectionintoc {6}{Bibliography}{133}{1}{6}
