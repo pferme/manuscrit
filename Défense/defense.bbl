@@ -86,6 +86,21 @@ Henry~Herng{-}Jiunn Liao.
 \newblock \href {https://doi.org/10.1109/TIT.1973.1054960}
   {\path{doi:10.1109/TIT.1973.1054960}}.
 
+\bibitem[Mat12]{Matthews12}
+William Matthews.
+\newblock A linear program for the finite block length converse of
+  {Polyanskiy-Poor-Verd{\'{u}}} via nonsignaling codes.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 58(12):7036--7044, 2012.
+\newblock \href {https://doi.org/10.1109/TIT.2012.2210695}
+  {\path{doi:10.1109/TIT.2012.2210695}}.
+
+\bibitem[PPV10]{PPV10}
+Yury Polyanskiy, H.~Vincent Poor, and Sergio Verd{\'{u}}.
+\newblock Channel coding rate in the finite blocklength regime.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 56(5):2307--2359, 2010.
+\newblock \href {https://doi.org/10.1109/TIT.2010.2043769}
+  {\path{doi:10.1109/TIT.2010.2043769}}.
+
 \bibitem[SVW17]{SVW17}
 Maxim Sviridenko, Jan Vondr{\'{a}}k, and Justin Ward.
 \newblock Optimal approximation for submodular and supermodular optimization
