@@ -32,6 +32,8 @@
 
 \tikzstyle{block} = [draw, fill=white, rectangle, 
   minimum height=2em, minimum width=3em]
+\tikzstyle{blueblock} = [draw=blue, fill=white, rectangle, 
+  minimum height=2em, minimum width=3em]
 \tikzstyle{bigblock} = [draw, fill=white, rectangle, 
   minimum height=3em, minimum width=4em]
 \tikzstyle{Bigblock} = [draw, fill=white, rectangle, 
@@ -66,7 +68,7 @@
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
 
-\colorlet{darkgreen}{green!40!black}
+\colorlet{darkgreen}{green!50!black}
 \colorlet{lightred}{red!60!white}
 
 \usepackage{appendixnumberbeamer}
@@ -625,17 +627,20 @@
 
 \begin{frame}{Proof ideas: approximation algorithm}
   \begin{itemize}
-  \item \emph{Relax and round} strategy with \emph{pipage rounding}~\cite{AS04, Vondrak07}.
+  \item \emph{Relax and round} strategy with \emph{pipage rounding}~\cite{AS04, Vondrak07}.\pause
     \bigskip
-    \pause
-  \item Linear relaxation using piecewise linear extention of $\varphi$ on $\mathbb{R}^+$.
-  \item $C^{\varphi}$ submodular: pipage rounding on its multilinear extension. Finds in polynomial time an integral solution $x^{\text{int}}$ such that $C^{\varphi}(x^{\text{int}}) \geq \mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]$ given the optimal fractional solution $x^*$.
-  \item Approximation guarantee theorem links previous expectation to the maximum value of the relaxed program.
+  \item \textcolor{blue}{Linear relaxation} using piecewise linear extention of $\varphi$ on $\mathbb{R}^+$.
+    \bigskip
+  \item \alert{Pipage rounding} on multilinear extension of submodular $C^{\varphi}$.
+  \item Given optimal fractional solution $x^*$, finds efficiently integral solution $x^{\text{int}}$ such that $C^{\varphi}(x^{\text{int}}) \geq \mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]$.
+    \bigskip
+
+  \item \textcolor{darkgreen}{AGT} links previous expectation to relaxed program.
   \end{itemize}
 
   \pause
   \begin{align*}
-    \hspace*{-0.7cm} C^{\varphi}(x^{\text{int}}) \underset{\text{Rounding}}{\overset{\text{Pipage}}{\geq}} \mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]  \overset{\text{AGT}}{\geq} \alpha_{\varphi} \max_x  C^{\varphi}(x) \underset{\text{Relax}}{\geq} \alpha_{\varphi} \max_{\abs{S} = k} C^{\varphi}(S)\ .
+    \hspace*{-0.7cm} C^{\varphi}(x^{\text{int}}) \underset{\alert{\text{Rounding}}}{\overset{\alert{\text{Pipage}}}{\geq}} \mathbb{E}_{X \sim \Ber(x^*)}[C^{\varphi}(X)]  \overset{\textcolor{darkgreen}{\text{AGT}}}{\geq} \alpha_{\varphi} \max_x  C^{\varphi}(x) \underset{\textcolor{blue}{\text{Relax}}}{\geq} \alpha_{\varphi} \max_{\abs{S} = k} C^{\varphi}(S)\ .
   \end{align*}
 \end{frame}
 
@@ -661,8 +666,8 @@
 \subsection{An efficient algorithm for $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ and Lower Bounds}
 \begin{frame}{The multiple-access channel coding problem}
   \begin{itemize}
-  \item \underline{Problem $\mathrm{S}(W,k_1,k_2)$:} send $k_1$ (resp. $k_2$) messages through sender 1 (resp. 2) with encoding procedure $e_1:[k_1] \rightarrow \mathcal{X}_1$ (resp. $e_2:[k_2] \rightarrow \mathcal{X}_2$) and decoding $d:\mathcal{Y} \rightarrow [k_1] \times [k_2]$.
-  \item \underline{Objective:} maximize \alert{probability of success}.
+  \item \underline{Problem $\mathrm{S}(W,k_1,k_2)$:} send $k_1$ and $k_2$ messages through channel $W$ with best encoders $\textcolor{blue}{e_1}:[k_1] \rightarrow \mathcal{X}_1$, $\textcolor{blue}{e_2}:[k_2] \rightarrow \mathcal{X}_2$ and best decoder $\textcolor{blue}{d}:\mathcal{Y} \rightarrow [k_1] \times [k_2]$.
+  \item \underline{Objective:} maximize \alert{success probability}.
 
     \only<1>{  \begin{center}
   \begin{tikzpicture}[auto, node distance=2cm,>=latex']
@@ -689,13 +694,13 @@
   \begin{center}
   \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [input, name=i1] {};
-    \node [block, right of=i1] (e1) {$e_1$};
+    \node [blueblock, right of=i1] (e1) {$\textcolor{blue}{e_1}$};
     \node [bigblock, below right of=e1] (W) {$W$};
-    \node [block, below left of=W] (e2) {$e_2$};
+    \node [blueblock, below left of=W] (e2) {$\textcolor{blue}{e_2}$};
     \node [input, left of=e2, name=i2] {};
         
 
-    \node [block, right of=W] (d) {$d$};
+    \node [blueblock, right of=W] (d) {$\textcolor{blue}{d}$};
 
     \draw [->] (e1) -- node[name=x1] {$x_1$} (W);
     \draw [->] (e2) -- node[name=x2] {$x_2$} (W);
@@ -707,9 +712,6 @@
     \draw [draw,->] (d) -- node {$(j_1,j_2)$} (j1j2);
   \end{tikzpicture}
     \end{center}}
-    %\pause
-    %\pause
-    %\item \textit{\underline{Remark:} linked to one-shot capacity.}
   \end{itemize}
 \end{frame}
 
@@ -784,7 +786,7 @@
   \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [input, name=i1] {};
     \node [input, name=i2] {};
-    \node [Bigblock, below of=i2] (P) {\only<2>{$e_1\ \ \ \ \ \ e_2\ \ \ \ \ \ d$}\only<3>{\alert{$P(x_1x_2(j_1j_2)|i_1i_2y)$}}};
+    \node [Bigblock, below of=i2] (P) {\only<2>{$e_1\ \ \ \ \ \ e_2\ \ \ \ \ \ d$}\only<3>{\textcolor{blue}{$P(x_1x_2(j_1j_2)|i_1i_2y)$}}};
 
     
     \only<2>{\draw (P.120) -- (P.240);}\only<3>{\draw[dotted] (P.120) -- (P.240);}
@@ -820,7 +822,7 @@
 \begin{frame}{$\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ written as a \emph{linear} program}
 \only<1>{\begin{equation*}
   \begin{aligned}
-    &&\underset{P}{\maxi} &&& \frac{1}{k_1k_2} \sum_{x_1,x_2,y,i_1,i_2} W(y|x_1x_2)\alert{P(x_1x_2(i_1i_2)|i_1i_2y)}\\
+    &&\underset{\textcolor{blue}{P}}{\maxi} &&& \frac{1}{k_1k_2} \sum_{x_1,x_2,y,i_1,i_2} W(y|x_1x_2)\textcolor{blue}{P(x_1x_2(i_1i_2)|i_1i_2y)}\\
     &&\st &&& \sum_{x_1} P(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{x_1} P(x_1x_2(j_1j_2)|i_1'i_2y)\\
     &&&&& \sum_{x_2} P(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{x_2} P(x_1x_2(j_1j_2)|i_1i_2'y)\\
     &&&&& \sum_{j_1j_2} P(x_1x_2(j_1j_2)|i_1i_2y) = \sum_{j_1j_2} P(x_1x_2(j_1j_2)|i_1i_2y')\\
@@ -857,7 +859,7 @@
     \end{prop}
 \end{frame}
 
-\begin{frame}{Symmetrization and application to the Binary Adder Channel}
+\begin{frame}{Symmetrization and application to the binary adder channel}
   \begin{theo}[Symmetrization]
     $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ is the solution of a linear program of size bounded by $O\left(n^{|\mathcal{X}_1|\cdot|\mathcal{X}_2 |\cdot|\mathcal{Y}|-1}\right)$: it can be computed in time $\text{poly}(n)$.
   \end{theo}
@@ -1062,32 +1064,75 @@
 
 \section{Broadcast channels}
 \subsection{Approximation algorithm for deterministic broadcast channel coding}
-\begin{frame}{TODO}
+\begin{frame}{The broadcast channel coding problem}
+    \begin{itemize}
+  \item \underline{Problem $\mathrm{S}(W,k_1,k_2)$:} send $k_1$ and $k_2$ messages through channel $W$ with best encoder $\textcolor{blue}{e}:[k_1] \times [k_2] \rightarrow \mathcal{X}$ and best decoders $\textcolor{blue}{d_1}:\mathcal{Y}_1 \rightarrow [k_1], \textcolor{blue}{d_2}:\mathcal{Y}_2 \rightarrow [k_2]$.
+  \item \underline{Objective:} maximize \alert{joint success probability}.
+
+    \only<1>{  \begin{center}
+  \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [input, name=i1i2] {};
+    \node [block, right of=i1i2, color=white] (e) {$e$};
+    \node [bigblock, right of=e] (W) {$W$};
+    \node [block, above right of=W, color=white] (d1) {$d_1$};
+    \node [block, below right of=W, color=white] (d2) {$d_2$};
+
+    \draw [->] (e) -- node[name=x] {$x$} (W);
+    \draw [->] (W) -- node[name=y1] {$y_1$} (d1);
+    \draw [->] (W) -- node[name=y2] {$y_2$} (d2);
+    \node [output, right of=d1] (j1) {};
+    \node [output, right of=d2] (j2) {};
+
+    \draw [draw,->, color=white] (i1i2) -- node {$(i_1,i_2)$} (e);
+    \draw [draw,->, color=white] (d1) -- node {$j_1$} (j1);
+    \draw [draw,->, color=white] (d2) -- node {$j_2$} (j2);
+  \end{tikzpicture}
+  \end{center}}
+    \only<2>{
+  \begin{center}
+  \begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [input, name=i1i2] {};
+    \node [blueblock, right of=i1i2] (e) {$\textcolor{blue}{e}$};
+    \node [bigblock, right of=e] (W) {$W$};
+    \node [blueblock, above right of=W] (d1) {$\textcolor{blue}{d_1}$};
+    \node [blueblock, below right of=W] (d2) {$\textcolor{blue}{d_2}$};
+
+    \draw [->] (e) -- node[name=x] {$x$} (W);
+    \draw [->] (W) -- node[name=y1] {$y_1$} (d1);
+    \draw [->] (W) -- node[name=y2] {$y_2$} (d2);
+    \node [output, right of=d1] (j1) {};
+    \node [output, right of=d2] (j2) {};
+
+    \draw [draw,->] (i1i2) -- node {$(i_1,i_2)$} (e);
+    \draw [draw,->] (d1) -- node {$j_1$} (j1);
+    \draw [draw,->] (d2) -- node {$j_2$} (j2);
+  \end{tikzpicture}
+    \end{center}}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Main result}
   TODO
 \end{frame}
 
-\begin{frame}{TODO}
+\begin{frame}{Proof ideas: approximation}
   TODO
 \end{frame}
 
-\begin{frame}{TODO}
-  TODO
-\end{frame}
-
-\begin{frame}{TODO}
+\begin{frame}{Proof ideas: non-signaling assisted capacity region}
   TODO
 \end{frame}
 
 \subsection{Hardness of approximation for broadcast channel coding}
-\begin{frame}{TODO}
+\begin{frame}{Main result}
   TODO
 \end{frame}
 
-\begin{frame}{TODO}
+\begin{frame}{Social welfare reformulation}
   TODO
 \end{frame}
 
-\begin{frame}{TODO}
+\begin{frame}{Proof ideas: value query hardness}
   TODO
 \end{frame}
 
