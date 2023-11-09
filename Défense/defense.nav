@@ -98,60 +98,60 @@
 \headcommand {\beamer@subsectionentry {0}{4}{1}{129}{Approximation algorithm for deterministic broadcast channel coding}}
 \headcommand {\slideentry {4}{1}{1}{129/130}{Approximation algorithm for deterministic broadcast channel coding}{0}}
 \headcommand {\beamer@framepages {129}{130}}
-\headcommand {\slideentry {4}{1}{2}{131/131}{Approximation algorithm for deterministic broadcast channel coding}{0}}
-\headcommand {\beamer@framepages {131}{131}}
-\headcommand {\slideentry {4}{1}{3}{132/132}{Approximation algorithm for deterministic broadcast channel coding}{0}}
-\headcommand {\beamer@framepages {132}{132}}
-\headcommand {\slideentry {4}{1}{4}{133/133}{Approximation algorithm for deterministic broadcast channel coding}{0}}
-\headcommand {\beamer@framepages {133}{133}}
-\headcommand {\beamer@subsectionpages {129}{133}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{134}{Hardness of approximation for broadcast channel coding}}
-\headcommand {\slideentry {4}{2}{1}{134/134}{Hardness of approximation for broadcast channel coding}{0}}
-\headcommand {\beamer@framepages {134}{134}}
-\headcommand {\slideentry {4}{2}{2}{135/135}{Hardness of approximation for broadcast channel coding}{0}}
-\headcommand {\beamer@framepages {135}{135}}
-\headcommand {\slideentry {4}{2}{3}{136/136}{Hardness of approximation for broadcast channel coding}{0}}
-\headcommand {\beamer@framepages {136}{136}}
-\headcommand {\slideentry {4}{2}{4}{137/137}{Hardness of approximation for broadcast channel coding}{0}}
-\headcommand {\beamer@framepages {137}{137}}
-\headcommand {\beamer@sectionpages {129}{137}}
-\headcommand {\beamer@subsectionpages {134}{137}}
-\headcommand {\sectionentry {5}{Conclusion}{138}{Conclusion}{0}}
-\headcommand {\slideentry {5}{0}{1}{138/138}{}{0}}
-\headcommand {\beamer@framepages {138}{138}}
+\headcommand {\slideentry {4}{1}{2}{131/132}{Approximation algorithm for deterministic broadcast channel coding}{0}}
+\headcommand {\beamer@framepages {131}{132}}
+\headcommand {\slideentry {4}{1}{3}{133/138}{Approximation algorithm for deterministic broadcast channel coding}{0}}
+\headcommand {\beamer@framepages {133}{138}}
+\headcommand {\slideentry {4}{1}{4}{139/139}{Approximation algorithm for deterministic broadcast channel coding}{0}}
+\headcommand {\beamer@framepages {139}{139}}
+\headcommand {\beamer@subsectionpages {129}{139}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{140}{Hardness of approximation for broadcast channel coding}}
+\headcommand {\slideentry {4}{2}{1}{140/140}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\beamer@framepages {140}{140}}
+\headcommand {\slideentry {4}{2}{2}{141/141}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\beamer@framepages {141}{141}}
+\headcommand {\slideentry {4}{2}{3}{142/142}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\beamer@framepages {142}{142}}
+\headcommand {\slideentry {4}{2}{4}{143/143}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\beamer@framepages {143}{143}}
+\headcommand {\beamer@sectionpages {129}{143}}
+\headcommand {\beamer@subsectionpages {140}{143}}
+\headcommand {\sectionentry {5}{Conclusion}{144}{Conclusion}{0}}
+\headcommand {\slideentry {5}{0}{1}{144/144}{}{0}}
+\headcommand {\beamer@framepages {144}{144}}
 \headcommand {\gdef \insertmainframenumber {45}}
 \headcommand {\partentry {\translate {Appendix}}{1}}
-\headcommand {\beamer@partpages {1}{138}}
-\headcommand {\beamer@sectionpages {138}{138}}
-\headcommand {\beamer@subsectionpages {138}{138}}
-\headcommand {\beamer@appendixpages {139}}
-\headcommand {\beamer@sectionpages {139}{138}}
-\headcommand {\beamer@subsectionpages {139}{138}}
-\headcommand {\sectionentry {6}{Bibliography}{139}{Bibliography}{1}}
-\headcommand {\slideentry {6}{0}{1}{139/139}{}{1}}
-\headcommand {\beamer@framepages {139}{139}}
-\headcommand {\slideentry {6}{0}{1}{139/140}{}{1}}
-\headcommand {\beamer@framepages {139}{140}}
-\headcommand {\slideentry {6}{0}{1}{139/141}{}{1}}
-\headcommand {\beamer@framepages {139}{141}}
-\headcommand {\slideentry {6}{0}{1}{139/142}{}{1}}
-\headcommand {\beamer@framepages {139}{142}}
-\headcommand {\slideentry {6}{0}{1}{139/143}{}{1}}
-\headcommand {\beamer@framepages {139}{143}}
-\headcommand {\slideentry {6}{0}{1}{139/144}{}{1}}
-\headcommand {\beamer@framepages {139}{144}}
-\headcommand {\slideentry {6}{0}{1}{139/145}{}{1}}
-\headcommand {\beamer@framepages {139}{145}}
-\headcommand {\slideentry {6}{0}{1}{139/146}{}{1}}
-\headcommand {\beamer@framepages {139}{146}}
-\headcommand {\slideentry {6}{0}{1}{139/147}{}{1}}
-\headcommand {\beamer@framepages {139}{147}}
-\headcommand {\slideentry {6}{0}{1}{139/148}{}{1}}
-\headcommand {\beamer@framepages {139}{148}}
-\headcommand {\beamer@partpages {139}{148}}
-\headcommand {\beamer@subsectionpages {139}{148}}
-\headcommand {\beamer@sectionpages {139}{148}}
-\headcommand {\beamer@documentpages {148}}
+\headcommand {\beamer@partpages {1}{144}}
+\headcommand {\beamer@sectionpages {144}{144}}
+\headcommand {\beamer@subsectionpages {144}{144}}
+\headcommand {\beamer@appendixpages {145}}
+\headcommand {\beamer@sectionpages {145}{144}}
+\headcommand {\beamer@subsectionpages {145}{144}}
+\headcommand {\sectionentry {6}{Bibliography}{145}{Bibliography}{1}}
+\headcommand {\slideentry {6}{0}{1}{145/145}{}{1}}
+\headcommand {\beamer@framepages {145}{145}}
+\headcommand {\slideentry {6}{0}{1}{145/146}{}{1}}
+\headcommand {\beamer@framepages {145}{146}}
+\headcommand {\slideentry {6}{0}{1}{145/147}{}{1}}
+\headcommand {\beamer@framepages {145}{147}}
+\headcommand {\slideentry {6}{0}{1}{145/148}{}{1}}
+\headcommand {\beamer@framepages {145}{148}}
+\headcommand {\slideentry {6}{0}{1}{145/149}{}{1}}
+\headcommand {\beamer@framepages {145}{149}}
+\headcommand {\slideentry {6}{0}{1}{145/150}{}{1}}
+\headcommand {\beamer@framepages {145}{150}}
+\headcommand {\slideentry {6}{0}{1}{145/151}{}{1}}
+\headcommand {\beamer@framepages {145}{151}}
+\headcommand {\slideentry {6}{0}{1}{145/152}{}{1}}
+\headcommand {\beamer@framepages {145}{152}}
+\headcommand {\slideentry {6}{0}{1}{145/153}{}{1}}
+\headcommand {\beamer@framepages {145}{153}}
+\headcommand {\slideentry {6}{0}{1}{145/154}{}{1}}
+\headcommand {\beamer@framepages {145}{154}}
+\headcommand {\beamer@partpages {145}{154}}
+\headcommand {\beamer@subsectionpages {145}{154}}
+\headcommand {\beamer@sectionpages {145}{154}}
+\headcommand {\beamer@documentpages {154}}
 \headcommand {\gdef \inserttotalframenumber {10}}
 \headcommand {\gdef \inserttotalframenumber {45}}
 \headcommand {\gdef \appendixtotalframenumber {10}}

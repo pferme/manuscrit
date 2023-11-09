@@ -29,6 +29,7 @@
 \usetikzlibrary{calc}
 \usetikzlibrary{shapes,arrows,snakes}
 \usetikzlibrary{spy}
+\usetikzlibrary{fit,positioning}
 
 \tikzstyle{block} = [draw, fill=white, rectangle, 
   minimum height=2em, minimum width=3em]
@@ -1112,20 +1113,99 @@
 \end{frame}
 
 \begin{frame}{Main result}
-  TODO
+  \begin{itemize}
+    \item Focus on \alert{deterministic} channels, i.e. $W(y|x_1x_2) \in \{0,1\}$:
+  \begin{theorem} 
+  There exists a polynomial-time $(1-e^{-1})^2$-approximation algorithm for the deterministic broadcast channel coding problem. Furthermore, it is \textrm{NP}-hard to solve exactly.
+  \end{theorem}
+  \pause
+  \bigskip
+\item Link with \textcolor{blue}{non-signaling} assisted capacity region:
+  \begin{corollary}
+  For any deterministic broadcast channel $W$, $\mathcal{C}^{\mathrm{NS}}(W)=\mathcal{C}(W)$.
+  \end{corollary}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Proof ideas: approximation}
-  TODO
+  \begin{columns}
+    \begin{column}{6cm}
+      \begin{itemize}
+      \item Bipartite graph formulation.
+      \item Partition in $k_1,k_2$ parts.
+      \item Maximize $\#$edges of quotient.
+      \end{itemize}
+    \end{column}
+    \begin{column}{4cm}
+      \begin{center}
+        \begin{tikzpicture}[scale=0.9]
+          \node[draw,circle] (a) at (0,0) {$a$};
+          \node[draw,circle] (b) at (0,-1) {$b$};
+          \node[draw,circle] (c) at (0,-2) {$c$};
+          \node[draw,circle] (d) at (0,-3) {$d$};
+
+          \node[draw,circle] (x) at (2,-0.5) {$1$};
+          \node[draw,circle] (y) at (2,-1.5) {$2$};
+          \node[draw,circle] (z) at (2,-2.5) {$3$};
+
+          \only<1-2>{\draw (b)--(x)--(d);
+            \draw (c)--(y)--(d);
+            \draw (a)--(z)--(c);}
+
+          \only<3->{\draw[dotted] (b)--(x)--(d);
+            \draw[dotted] (c)--(y)--(d);
+            \draw[dotted] (a)--(z)--(c);}
+
+          \only<3>{\draw[thick] (c)--(z)--(a);
+            \draw[thick] (b)--(x);
+            \draw[thick] (c)--(y);}
+
+          \only<2->{\node[draw, blue, rectangle, rounded corners, fit=(a) (b), inner sep = 0.5mm] (ab) {};
+            \node[draw, red, rectangle, rounded corners, fit=(c) (d), inner sep = 0.5mm] (cd) {};
+            \node[draw, darkgreen, rectangle, rounded corners, fit=(x) (y), inner sep = 0.5mm] (xy) {};
+            \node[draw, circle, fit=(z), inner sep = -0.5mm] (zz) {};}
+          
+          \only<4->{\draw[thick] (ab)--(xy)--(cd)--(zz)--(ab);}
+          
+        \end{tikzpicture}
+      \end{center}
+    \end{column}
+  \end{columns}
+  \pause\pause\pause\pause
+  \begin{itemize}
+  \item Hardness
+    \pause
+    \bigskip
+  \item Algo idea
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Proof ideas: non-signaling assisted capacity region}
-  TODO
+  \begin{itemize}
+  \item Link non-signaling value to relaxation of graph problem
+  \item Leads to following result using similar approximation ideas:
+    \begin{theorem}
+      \label{theo:NSdet}
+      If $W$ deterministic, $\ell_1 \leq k_1$ and $\ell_2 \leq k_2$, then $\mathrm{S}(W,\ell_1,\ell_2) \geq$
+      \begin{align*}
+        \left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)
+      \end{align*}
+    \end{theorem}
+  \item Theorem follows.
+  \end{itemize}
 \end{frame}
 
 \subsection{Hardness of approximation for broadcast channel coding}
 \begin{frame}{Main result}
-  TODO
+  \begin{definition}[Equivalent formulation of \textsc{BCC}]
+  Given a channel $W$ and integers $k_1$ and $k_2$, the broadcast channel coding problem, which we call \textsc{BCC}, entails maximizing:
+  \[ \frac{1}{k_1k_2}\sum_{i_1,i_2} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}, y_2 \in \mathcal{P}_1^{i_2}} W(y_1y_2|x) \ , \]
+  over all partitions $\mathcal{P}_1$ of $\mathcal{Y}_1$ in $k_1$ parts and $\mathcal{P}_2$ of $\mathcal{Y}_2$ in $k_2$ parts.
+\end{definition}
+
+  \begin{theorem}
+  In the value query model, for any fixed $\varepsilon > 0$, a $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm for the broadcast channel coding problem on $W,k_1,k_2$, restricted to the case of $|\mathcal{Y}_2| = k_2$ and $m = |\mathcal{Y}_1| = k_1^2$, requires exponentially many value queries to $f_W^1$.
+  \end{theorem}
 \end{frame}
 
 \begin{frame}{Social welfare reformulation}
