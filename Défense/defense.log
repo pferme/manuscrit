@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  9 NOV 2023 15:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  9 NOV 2023 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3758,25 +3758,25 @@ Overfull \hbox (2.94707pt too wide) detected at line 953
 [117
 
 ]
-Overfull \hbox (28.69576pt too wide) detected at line 977
+Overfull \hbox (21.41133pt too wide) detected at line 977
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
-cmss/m/n/10.95 ) := []  \OML/cmm/m/it/10.95 :
+cmss/m/n/10.95 ) := []
  []
 
 [118
 
 ]
-Overfull \hbox (28.69576pt too wide) detected at line 977
+Overfull \hbox (21.41133pt too wide) detected at line 977
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
-cmss/m/n/10.95 ) := []  \OML/cmm/m/it/10.95 :
+cmss/m/n/10.95 ) := []
  []
 
 [119
 
 ]
-Overfull \hbox (28.69576pt too wide) detected at line 977
+Overfull \hbox (21.41133pt too wide) detected at line 977
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
-cmss/m/n/10.95 ) := []  \OML/cmm/m/it/10.95 :
+cmss/m/n/10.95 ) := []
  []
 
 [120
@@ -4133,7 +4133,7 @@ y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on defense.pdf (156 pages, 8556015 bytes).
+Output written on defense.pdf (156 pages, 8556259 bytes).
 PDF statistics:
  9452 PDF objects out of 10688 (max. 8388607)
  8609 compressed objects within 87 object streams
