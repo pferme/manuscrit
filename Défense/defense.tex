@@ -1127,7 +1127,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Proof ideas: approximation}
+\begin{frame}{Proof ideas: approximation algorithm and \textrm{NP}-hardness}
   \begin{columns}
     \begin{column}{6cm}
       \begin{itemize}
@@ -1148,6 +1148,11 @@
           \node[draw,circle] (y) at (2,-1.5) {$2$};
           \node[draw,circle] (z) at (2,-2.5) {$3$};
 
+          
+          \only<1>{\node[draw, white, rectangle, rounded corners, fit=(a) (b), inner sep = 0.5mm] (ab) {};
+            \node[draw, white, rectangle, rounded corners, fit=(c) (d), inner sep = 0.5mm] (cd) {};
+            \node[draw, white, rectangle, rounded corners, fit=(x) (y), inner sep = 0.5mm] (xy) {};
+            \node[draw, white, circle, fit=(z), inner sep = -0.5mm] (zz) {};}
           \only<1-2>{\draw (b)--(x)--(d);
             \draw (c)--(y)--(d);
             \draw (a)--(z)--(c);}
@@ -1171,19 +1176,25 @@
       \end{center}
     \end{column}
   \end{columns}
-  \pause\pause\pause\pause
+  \pause\pause\pause\pause\bigskip
   \begin{itemize}
-  \item Hardness of approximation: particular case of \textsc{HittingSet} when $k_2=2$.
+  \item \textrm{NP}-hard since equivalent to \textsc{SetSplitting} when $k_1=2$.
     \pause
     \bigskip
-  \item Algo idea
+  \item Approximation algorithm:
+    \begin{enumerate}
+    \item Select $\mathcal{P}_1$ uniformly at random.
+    \item Submodular welfare problem to find $\mathcal{P}_2$.
+    \end{enumerate}
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Proof ideas: non-signaling assisted capacity region}
   \begin{itemize}
-  \item Link non-signaling value to relaxation of graph problem
-  \item Leads to following result using similar approximation ideas:
+
+  \item Link $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ to the approximated algorithm value.
+    \pause
+    \bigskip
     \begin{theorem}
       \label{theo:NSdet}
       If $W$ deterministic, $\ell_1 \leq k_1$ and $\ell_2 \leq k_2$, then $\mathrm{S}(W,\ell_1,\ell_2) \geq$
@@ -1191,26 +1202,30 @@
         \left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)
       \end{align*}
     \end{theorem}
-  \item Theorem follows.
+    \pause
+    \bigskip
+  \item Equality of capacity regions follows with $k_b=2^{nR_b},\ell_b=\frac{2^{nR_b}}{n}$.
   \end{itemize}
 \end{frame}
 
 \subsection{Hardness of approximation for broadcast channel coding}
-\begin{frame}{Main result}
-  \begin{definition}[Equivalent formulation of \textsc{BCC}]
+
+\begin{frame}{Social welfare reformulation}
+    \begin{definition}[Equivalent formulation of \textsc{BCC}]
   Given a channel $W$ and integers $k_1$ and $k_2$, the broadcast channel coding problem, which we call \textsc{BCC}, entails maximizing:
   \[ \frac{1}{k_1k_2}\sum_{i_1,i_2} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}, y_2 \in \mathcal{P}_1^{i_2}} W(y_1y_2|x) \ , \]
   over all partitions $\mathcal{P}_1$ of $\mathcal{Y}_1$ in $k_1$ parts and $\mathcal{P}_2$ of $\mathcal{Y}_2$ in $k_2$ parts.
 \end{definition}
 
+  SW TODO
+\end{frame}
+
+\begin{frame}{Main result}
   \begin{theorem}
   In the value query model, for any fixed $\varepsilon > 0$, a $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm for the broadcast channel coding problem on $W,k_1,k_2$, restricted to the case of $|\mathcal{Y}_2| = k_2$ and $m = |\mathcal{Y}_1| = k_1^2$, requires exponentially many value queries to $f_W^1$.
   \end{theorem}
 \end{frame}
 
-\begin{frame}{Social welfare reformulation}
-  TODO
-\end{frame}
 
 \begin{frame}{Proof ideas: value query hardness}
   TODO

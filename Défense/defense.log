@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  9 NOV 2023 14:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  9 NOV 2023 15:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3991,19 +3991,25 @@ PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
 ] [138
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1196
+Overfull \hbox (23.76434pt too wide) detected at line 1209
 []
  []
 
 [139
 
 ]
-Overfull \vbox (6.43376pt too high) detected at line 1209
+Overfull \hbox (23.76434pt too wide) detected at line 1209
+[]
  []
 
 [140
 
-] [141
+]
+Overfull \hbox (23.76434pt too wide) detected at line 1209
+[]
+ []
+
+[141
 
 ] [142
 
@@ -4011,26 +4017,24 @@ Overfull \vbox (6.43376pt too high) detected at line 1209
 
 ] [144
 
+] [145
+
+] [146
+
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1229.
+(hyperref)                removing `\translate ' on input line 1244.
 
 (./defense.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
-[145
+[147
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
-[146
-
-
-] [147
-
-
-] [148
+[148
 
 
 ] [149
@@ -4051,6 +4055,12 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ] [154
 
 
+] [155
+
+
+] [156
+
+
 ]
 \tf@nav=\write6
 \openout6 = `defense.nav'.
@@ -4061,14 +4071,14 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1239.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1239.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1254.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1254.
  (./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1239.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1239.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1254.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1254.
 
 Package rerunfilecheck Info: File `defense.out' has not changed.
-(rerunfilecheck)             Checksum: AFCE64F6B37BA4D2D5DB0D3F9386BCE4;1117.
+(rerunfilecheck)             Checksum: B4B4118CE5862F352F2798084A4C0323;1117.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -4078,14 +4088,15 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 46421 strings out of 494821
- 1070147 string characters out of 6177891
+ 46425 strings out of 494821
+ 1070189 string characters out of 6177891
  1363475 words of memory out of 5000000
  48586 multiletter control sequences out of 15000+600000
  581069 words of font info for 135 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  74i,21n,128p,10378b,2298s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600p
+k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0700.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1440.600p
@@ -4122,10 +4133,10 @@ y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on defense.pdf (154 pages, 8543591 bytes).
+Output written on defense.pdf (156 pages, 8555899 bytes).
 PDF statistics:
- 9327 PDF objects out of 10688 (max. 8388607)
- 8495 compressed objects within 85 object streams
- 344 named destinations out of 1000 (max. 500000)
+ 9452 PDF objects out of 10688 (max. 8388607)
+ 8609 compressed objects within 87 object streams
+ 348 named destinations out of 1000 (max. 500000)
  273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
