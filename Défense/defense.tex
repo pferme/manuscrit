@@ -1114,7 +1114,7 @@
 
 \begin{frame}{Main result}
   \begin{itemize}
-    \item Focus on \alert{deterministic} channels, i.e. $W(y|x_1x_2) \in \{0,1\}$:
+    \item Focus on \alert{deterministic} channels, i.e. $W(y_1y_2|x) \in \{0,1\}$:
   \begin{theorem} 
   There exists a polynomial-time $(1-e^{-1})^2$-approximation algorithm for the deterministic broadcast channel coding problem. Furthermore, it is \textrm{NP}-hard to solve exactly.
   \end{theorem}
@@ -1130,6 +1130,9 @@
 \begin{frame}{Proof ideas: approximation algorithm and \textrm{NP}-hardness}
   \begin{columns}
     \begin{column}{6cm}
+      \begin{center}
+        \underline{\textsc{DensestQuotientGraph}:}
+      \end{center}
       \begin{itemize}
       \item Bipartite graph formulation.
       \item Partition in $k_1,k_2$ parts.
@@ -1192,9 +1195,12 @@
 \begin{frame}{Proof ideas: non-signaling assisted capacity region}
   \begin{itemize}
 
-  \item Link $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)$ to the approximated algorithm value.
+  \item Through neat upper bound $f(G_W)$ on \textsc{DensestQuotientGraph}:
+    \begin{enumerate}
+    \item Approximated algorithm value $\mathrm{S}(W,\ell_1,\ell_2) \geq C_{\text{approx}} \cdot f(G_W)$.
+    \item The non-signaling value satisfies $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq f(G_W)$.
+    \end{enumerate}
     \pause
-    \bigskip
     \begin{theorem}
       \label{theo:NSdet}
       If $W$ deterministic, $\ell_1 \leq k_1$ and $\ell_2 \leq k_2$, then $\mathrm{S}(W,\ell_1,\ell_2) \geq$
@@ -1203,7 +1209,6 @@
       \end{align*}
     \end{theorem}
     \pause
-    \bigskip
   \item Equality of capacity regions follows with $k_b=2^{nR_b},\ell_b=\frac{2^{nR_b}}{n}$.
   \end{itemize}
 \end{frame}

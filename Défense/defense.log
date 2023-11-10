@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  9 NOV 2023 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  10 NOV 2023 10:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3991,21 +3991,21 @@ PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
 ] [138
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1209
+Overfull \hbox (23.76434pt too wide) detected at line 1214
 []
  []
 
 [139
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1209
+Overfull \hbox (23.76434pt too wide) detected at line 1214
 []
  []
 
 [140
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1209
+Overfull \hbox (23.76434pt too wide) detected at line 1214
 []
  []
 
@@ -4024,7 +4024,7 @@ Overfull \hbox (23.76434pt too wide) detected at line 1209
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1244.
+(hyperref)                removing `\translate ' on input line 1249.
 
 (./defense.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
@@ -4071,11 +4071,11 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1254.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1254.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1259.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1259.
  (./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1254.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1254.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1259.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1259.
 
 Package rerunfilecheck Info: File `defense.out' has not changed.
 (rerunfilecheck)             Checksum: B4B4118CE5862F352F2798084A4C0323;1117.
@@ -4096,6 +4096,7 @@ Here is how much of TeX's memory you used:
  59 hyphenation exceptions out of 8191
  74i,21n,128p,10378b,2298s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600p
+k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0700.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600p
@@ -4133,10 +4134,10 @@ y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on defense.pdf (156 pages, 8555991 bytes).
+Output written on defense.pdf (156 pages, 8560045 bytes).
 PDF statistics:
- 9452 PDF objects out of 10688 (max. 8388607)
- 8609 compressed objects within 87 object streams
+ 9464 PDF objects out of 10688 (max. 8388607)
+ 8613 compressed objects within 87 object streams
  348 named destinations out of 1000 (max. 500000)
  273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
