@@ -1216,24 +1216,60 @@
 \subsection{Hardness of approximation for broadcast channel coding}
 
 \begin{frame}{Social welfare reformulation}
-    \begin{definition}[Equivalent formulation of \textsc{BCC}]
-  Given a channel $W$ and integers $k_1$ and $k_2$, the broadcast channel coding problem, which we call \textsc{BCC}, entails maximizing:
-  \[ \frac{1}{k_1k_2}\sum_{i_1,i_2} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}, y_2 \in \mathcal{P}_1^{i_2}} W(y_1y_2|x) \ , \]
-  over all partitions $\mathcal{P}_1$ of $\mathcal{Y}_1$ in $k_1$ parts and $\mathcal{P}_2$ of $\mathcal{Y}_2$ in $k_2$ parts.
-\end{definition}
+  \begin{itemize}
+  \item \underline{General broadcast channel coding problem (\textsc{BCC}):}
+    \[ \underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} \  \frac{1}{k_1k_2}\sum_{i_1,i_2} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}, y_2 \in \mathcal{P}_1^{i_2}} W(y_1y_2|x) \ .\]
 
-  SW TODO
+    \pause
+    
+  \item \underline{Social welfare problem:} $\underset{\mathcal{P}}{\maxi} \ \sum_{i=1}^k v_i\left(\mathcal{P}^i\right)$.
+
+    \pause
+
+  \item Restriction to $k_2=|\mathcal{Y}_2|$, then BCC objective function is:
+    \[ \frac{1}{k_1}\sum_{i_1=1}^{k_1} f_W^1(\mathcal{P}_1^{i_1}) \text{ with } f_W^1(S_1) := \frac{1}{|\mathcal{Y}_2|}\sum_{y_2} \max_x \sum_{y_1 \in S_1} W(y_1y_2|x)\ .\]
+
+    \pause
+
+  \item $f_W^1$ fractionally sub-additive (XOS).
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Main result}
+  \begin{itemize}
+  \item \underline{Value query model:} instance access only through calls to $f_W^1$.
+  \end{itemize}
+
+  \pause
+  
   \begin{theorem}
-  In the value query model, for any fixed $\varepsilon > 0$, a $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm for the broadcast channel coding problem on $W,k_1,k_2$, restricted to the case of $|\mathcal{Y}_2| = k_2$ and $m = |\mathcal{Y}_1| = k_1^2$, requires exponentially many value queries to $f_W^1$.
+  In the value query model, for $\varepsilon > 0$, a $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm for the broadcast channel coding problem on $W,k_1,k_2$, restricted to the case of $|\mathcal{Y}_2| = k_2$ and $m = |\mathcal{Y}_1| = k_1^2$, requires exponentially many value queries to $f_W^1$.
   \end{theorem}
+
+  \pause
+  \bigskip
+  
+  \begin{itemize}
+  \item Generalization of hardness for XOS valuations~\cite{MSV08}.
+  \item $\Omega\left(\frac{1}{m^{\frac{1}{2}}}\right)$-approximation algorithm for XOS valuations~\cite{DS06}.
+  \end{itemize}
 \end{frame}
 
 
 \begin{frame}{Proof ideas: value query hardness}
-  TODO
+  \begin{itemize}
+  \item Construct channels $W$ and $W'$ that cannot be distinguished with better than exponentially small probability.
+    \pause
+    \bigskip
+  \item Choose uniformly at random (unknown) equi-partition $\alert{T_1,\ldots,T_{k_1}}$ of $\mathcal{Y}_1 := [k_1^2]$.
+    \pause
+    \[ f_W^1(S) \propto \max\left\{ m^{2\delta}, m^{-(\frac{1}{2}-\delta)}|S|, |\alert{T_1} \cap S|,\ldots,|\alert{T_{k_1}} \cap S|\right\} \]
+    \[ f_{W'}^1(S) \propto \max\left\{ m^{2\delta}, m^{-(\frac{1}{2}-\delta)}|S|\right\} \]
+    \pause
+  \item Cases depending on $|S|$ versus $ m^{\frac{1}{2}+\delta}$.
+  \item $f_W^1(S)$ and $f_{W'}^1(S)$ different iff $\exists j \in [k_1], |\alert{T_j} \cap S|$ not too small.
+  \item Exponentially small probability thanks to Chernoff-Hoeffding.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Conclusion}

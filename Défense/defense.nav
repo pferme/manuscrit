@@ -106,52 +106,54 @@
 \headcommand {\beamer@framepages {139}{141}}
 \headcommand {\beamer@subsectionpages {129}{141}}
 \headcommand {\beamer@subsectionentry {0}{4}{2}{142}{Hardness of approximation for broadcast channel coding}}
-\headcommand {\slideentry {4}{2}{1}{142/142}{Hardness of approximation for broadcast channel coding}{0}}
-\headcommand {\beamer@framepages {142}{142}}
-\headcommand {\slideentry {4}{2}{2}{143/143}{Hardness of approximation for broadcast channel coding}{0}}
-\headcommand {\beamer@framepages {143}{143}}
-\headcommand {\slideentry {4}{2}{3}{144/144}{Hardness of approximation for broadcast channel coding}{0}}
-\headcommand {\beamer@framepages {144}{144}}
-\headcommand {\slideentry {4}{2}{4}{145/145}{Hardness of approximation for broadcast channel coding}{0}}
-\headcommand {\beamer@framepages {145}{145}}
-\headcommand {\beamer@sectionpages {129}{145}}
-\headcommand {\beamer@subsectionpages {142}{145}}
-\headcommand {\sectionentry {5}{Conclusion}{146}{Conclusion}{0}}
-\headcommand {\slideentry {5}{0}{1}{146/146}{}{0}}
-\headcommand {\beamer@framepages {146}{146}}
+\headcommand {\slideentry {4}{2}{1}{142/145}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\beamer@framepages {142}{145}}
+\headcommand {\slideentry {4}{2}{2}{146/148}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\beamer@framepages {146}{148}}
+\headcommand {\slideentry {4}{2}{3}{149/152}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\beamer@framepages {149}{152}}
+\headcommand {\slideentry {4}{2}{4}{153/153}{Hardness of approximation for broadcast channel coding}{0}}
+\headcommand {\beamer@framepages {153}{153}}
+\headcommand {\beamer@sectionpages {129}{153}}
+\headcommand {\beamer@subsectionpages {142}{153}}
+\headcommand {\sectionentry {5}{Conclusion}{154}{Conclusion}{0}}
+\headcommand {\slideentry {5}{0}{1}{154/154}{}{0}}
+\headcommand {\beamer@framepages {154}{154}}
 \headcommand {\gdef \insertmainframenumber {45}}
 \headcommand {\partentry {\translate {Appendix}}{1}}
-\headcommand {\beamer@partpages {1}{146}}
-\headcommand {\beamer@sectionpages {146}{146}}
-\headcommand {\beamer@subsectionpages {146}{146}}
-\headcommand {\beamer@appendixpages {147}}
-\headcommand {\beamer@sectionpages {147}{146}}
-\headcommand {\beamer@subsectionpages {147}{146}}
-\headcommand {\sectionentry {6}{Bibliography}{147}{Bibliography}{1}}
-\headcommand {\slideentry {6}{0}{1}{147/147}{}{1}}
-\headcommand {\beamer@framepages {147}{147}}
-\headcommand {\slideentry {6}{0}{1}{147/148}{}{1}}
-\headcommand {\beamer@framepages {147}{148}}
-\headcommand {\slideentry {6}{0}{1}{147/149}{}{1}}
-\headcommand {\beamer@framepages {147}{149}}
-\headcommand {\slideentry {6}{0}{1}{147/150}{}{1}}
-\headcommand {\beamer@framepages {147}{150}}
-\headcommand {\slideentry {6}{0}{1}{147/151}{}{1}}
-\headcommand {\beamer@framepages {147}{151}}
-\headcommand {\slideentry {6}{0}{1}{147/152}{}{1}}
-\headcommand {\beamer@framepages {147}{152}}
-\headcommand {\slideentry {6}{0}{1}{147/153}{}{1}}
-\headcommand {\beamer@framepages {147}{153}}
-\headcommand {\slideentry {6}{0}{1}{147/154}{}{1}}
-\headcommand {\beamer@framepages {147}{154}}
-\headcommand {\slideentry {6}{0}{1}{147/155}{}{1}}
-\headcommand {\beamer@framepages {147}{155}}
-\headcommand {\slideentry {6}{0}{1}{147/156}{}{1}}
-\headcommand {\beamer@framepages {147}{156}}
-\headcommand {\beamer@partpages {147}{156}}
-\headcommand {\beamer@subsectionpages {147}{156}}
-\headcommand {\beamer@sectionpages {147}{156}}
-\headcommand {\beamer@documentpages {156}}
-\headcommand {\gdef \inserttotalframenumber {10}}
+\headcommand {\beamer@partpages {1}{154}}
+\headcommand {\beamer@sectionpages {154}{154}}
+\headcommand {\beamer@subsectionpages {154}{154}}
+\headcommand {\beamer@appendixpages {155}}
+\headcommand {\beamer@sectionpages {155}{154}}
+\headcommand {\beamer@subsectionpages {155}{154}}
+\headcommand {\sectionentry {6}{Bibliography}{155}{Bibliography}{1}}
+\headcommand {\slideentry {6}{0}{1}{155/155}{}{1}}
+\headcommand {\beamer@framepages {155}{155}}
+\headcommand {\slideentry {6}{0}{1}{155/156}{}{1}}
+\headcommand {\beamer@framepages {155}{156}}
+\headcommand {\slideentry {6}{0}{1}{155/157}{}{1}}
+\headcommand {\beamer@framepages {155}{157}}
+\headcommand {\slideentry {6}{0}{1}{155/158}{}{1}}
+\headcommand {\beamer@framepages {155}{158}}
+\headcommand {\slideentry {6}{0}{1}{155/159}{}{1}}
+\headcommand {\beamer@framepages {155}{159}}
+\headcommand {\slideentry {6}{0}{1}{155/160}{}{1}}
+\headcommand {\beamer@framepages {155}{160}}
+\headcommand {\slideentry {6}{0}{1}{155/161}{}{1}}
+\headcommand {\beamer@framepages {155}{161}}
+\headcommand {\slideentry {6}{0}{1}{155/162}{}{1}}
+\headcommand {\beamer@framepages {155}{162}}
+\headcommand {\slideentry {6}{0}{1}{155/163}{}{1}}
+\headcommand {\beamer@framepages {155}{163}}
+\headcommand {\slideentry {6}{0}{1}{155/164}{}{1}}
+\headcommand {\beamer@framepages {155}{164}}
+\headcommand {\slideentry {6}{0}{1}{155/165}{}{1}}
+\headcommand {\beamer@framepages {155}{165}}
+\headcommand {\beamer@partpages {155}{165}}
+\headcommand {\beamer@subsectionpages {155}{165}}
+\headcommand {\beamer@sectionpages {155}{165}}
+\headcommand {\beamer@documentpages {165}}
+\headcommand {\gdef \inserttotalframenumber {11}}
 \headcommand {\gdef \inserttotalframenumber {45}}
-\headcommand {\gdef \appendixtotalframenumber {10}}
+\headcommand {\gdef \appendixtotalframenumber {11}}

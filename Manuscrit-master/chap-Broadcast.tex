@@ -963,10 +963,10 @@ Let us now state the value query hardness of approximation of the broadcast chan
     \end{aligned}
     \end{equation}
 
-    Thus, $v(S)$ is different from $v'(S)$ if and only if $\exists j \in k_1, |T_j \cap S| > m^{2\delta}$. But, we have:
+    Thus, $v(S)$ is different from $v'(S)$ if and only if $\exists j \in [k_1], |T_j \cap S| > m^{2\delta}$. But, we have:
     \begin{equation}
       \begin{aligned}
-        &\mathbb{P}\left(\exists j \in k_1, |T_j \cap S| > m^{2\delta}\right) \leq \sum_{j \in [k_1]} \mathbb{P}\left(|T_j \cap S| > m^{2\delta}\right) \text{ by union bound}\\
+        &\mathbb{P}\left(\exists j \in [k_1], |T_j \cap S| > m^{2\delta}\right) \leq \sum_{j \in [k_1]} \mathbb{P}\left(|T_j \cap S| > m^{2\delta}\right) \text{ by union bound}\\
         &=\sum_{j \in [k_1]} \mathbb{P}\left(\sum_{i \in S}X_j^i > m^{2\delta}\right)
         =\sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{m^{2\delta}}{[S|}-1}{p}\right)p \right)\\
         &\leq \sum_{j \in [k_1]} \mathbb{P}\left(\frac{1}{|S|}\sum_{i \in S}X_j^i > \left(1 + \frac{\frac{m^{2\delta}}{|S|}}{p}\right)p \right)\\
