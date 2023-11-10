@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  10 NOV 2023 13:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  10 NOV 2023 13:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4136,9 +4136,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 1295.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1295.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1295.
 
-Package rerunfilecheck Info: File `defense.out' has not changed.
-(rerunfilecheck)             Checksum: B4B4118CE5862F352F2798084A4C0323;1117.
 
+
+Package rerunfilecheck Warning: File `defense.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `defense.out':
+(rerunfilecheck)             Before: B4B4118CE5862F352F2798084A4C0323;1117
+(rerunfilecheck)             After:  C6CC25A3CF03E60429EC6BF5EB338DBA;1117.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -4193,7 +4199,7 @@ y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on defense.pdf (165 pages, 8595669 bytes).
+Output written on defense.pdf (165 pages, 8595699 bytes).
 PDF statistics:
  9961 PDF objects out of 10688 (max. 8388607)
  9095 compressed objects within 91 object streams
