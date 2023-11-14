@@ -489,7 +489,7 @@
           \draw [->] (Wb) -- (y);
           \node [below of=Wb] (txt) {Canal à accès multiple};}
       \end{tikzpicture}\\\bigskip
-      \only<4>{On va étudier l'influence des \textcolor{blue}{corrélations non-signalantes} sur la \alert{communication en réseau}.}
+      \only<4>{On va étudier le problème du codage du canal et l'influence des \textcolor{blue}{corrélations non-signalantes} sur la \alert{communication en réseau}.}
   \end{center}
 \end{frame}
 
@@ -1306,13 +1306,24 @@
 
 \section{Conclusion}
 \subsection{Conclusion}
-\begin{frame}{The NS advantage hardness equivalence}
+\begin{frame}{At the frontier of algorithmic and information theories}
   \begin{itemize}
-  \item Global sum up (higher level)
-  \item Critical link complexity hardness and non-signaling advantage \cite{JNVWY20}
+  \item Algorithmic aspects of channel coding : $\varphi$-list-decoding, multiple-access and broadcast channels.
+  \item Non-signaling capacity regions of network channels.
+    \pause
     \bigskip
-  \item THE END
+  \item There is a \emph{strong link} between:
+    \begin{enumerate}
+    \item Hardness of approximation of a channel coding problem up to any constant.
+    \item Non-signaling advantage for its capacity region.
+    \end{enumerate}
+  \item As with $\mathrm{MIP}^*=\mathrm{RE}$~\cite{JNVWY20}, fruitful point of view to address problems from both topics.
   \end{itemize}
+  \pause
+  \bigskip
+  \begin{center}
+    \huge{\emph{Thank you!}}
+  \end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

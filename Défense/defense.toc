@@ -12,4 +12,4 @@
 \beamer@subsectionintoc {4}{2}{Hardness of approximation for broadcast channel coding}{146}{0}{4}
 \beamer@sectionintoc {5}{Conclusion}{160}{0}{5}
 \beamer@subsectionintoc {5}{1}{Conclusion}{160}{0}{5}
-\beamer@sectionintoc {6}{Bibliography}{161}{1}{6}
+\beamer@sectionintoc {6}{Bibliography}{163}{1}{6}
