@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  10 NOV 2023 14:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  14 NOV 2023 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2772,7 +2772,7 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 (./defense.nav) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<tin-can-telephone.jpg, id=228, 720.6925pt x 240.9pt>
+<tin-can-telephone.jpg, id=232, 720.6925pt x 240.9pt>
 File: tin-can-telephone.jpg Graphic file (type jpg)
 <use tin-can-telephone.jpg>
 Package pdftex.def Info: tin-can-telephone.jpg  used on input line 113.
@@ -2794,12 +2794,12 @@ Package pdftex.def Info: tin-can-telephone.jpg  used on input line 113.
  [4
 
 ]
-<long-tin-can-telephone.jpg, id=398, 1081.03876pt x 240.9pt>
+<long-tin-can-telephone.jpg, id=402, 1081.03876pt x 240.9pt>
 File: long-tin-can-telephone.jpg Graphic file (type jpg)
 <use long-tin-can-telephone.jpg>
 Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 148.
 (pdftex.def)             Requested size: 237.82925pt x 52.99815pt.
-<rcloud_white.png, id=399, 443.256pt x 296.7888pt>
+<rcloud_white.png, id=403, 443.256pt x 296.7888pt>
 File: rcloud_white.png Graphic file (type png)
 <use rcloud_white.png>
 Package pdftex.def Info: rcloud_white.png  used on input line 148.
@@ -2816,7 +2816,7 @@ File: long-tin-can-telephone.jpg Graphic file (type jpg)
 <use long-tin-can-telephone.jpg>
 Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 148.
 (pdftex.def)             Requested size: 237.82925pt x 52.99815pt.
-<rcloud.png, id=457, 443.256pt x 296.7888pt>
+<rcloud.png, id=461, 443.256pt x 296.7888pt>
 File: rcloud.png Graphic file (type png)
 <use rcloud.png>
 Package pdftex.def Info: rcloud.png  used on input line 148.
@@ -2951,7 +2951,7 @@ thkerncmss.
 ] [30
 
 ]
-<cat.png, id=1900, 1188.44pt x 883.3pt>
+<cat.png, id=1904, 1188.44pt x 883.3pt>
 File: cat.png Graphic file (type png)
 <use cat.png>
 Package pdftex.def Info: cat.png  used on input line 254.
@@ -2971,7 +2971,7 @@ File: cat.png Graphic file (type png)
 <use cat.png>
 Package pdftex.def Info: cat.png  used on input line 254.
 (pdftex.def)             Requested size: 118.85095pt x 88.33517pt.
-<cat_question_white.png, id=1961, 1004.75375pt x 678.535pt>
+<cat_question_white.png, id=1965, 1004.75375pt x 678.535pt>
 File: cat_question_white.png Graphic file (type png)
 <use cat_question_white.png>
 Package pdftex.def Info: cat_question_white.png  used on input line 254.
@@ -2991,7 +2991,7 @@ File: cat.png Graphic file (type png)
 <use cat.png>
 Package pdftex.def Info: cat.png  used on input line 254.
 (pdftex.def)             Requested size: 118.85095pt x 88.33517pt.
-<cat_question.png, id=2019, 1004.75375pt x 678.535pt>
+<cat_question.png, id=2023, 1004.75375pt x 678.535pt>
 File: cat_question.png Graphic file (type png)
 <use cat_question.png>
 Package pdftex.def Info: cat_question.png  used on input line 254.
@@ -3003,7 +3003,7 @@ Overfull \vbox (9.85768pt too high) detected at line 254
 [33
 
  <./cat_question.png>]
-<atom.jpg, id=2076, 1284.8pt x 1027.84pt>
+<atom.jpg, id=2080, 1284.8pt x 1027.84pt>
 File: atom.jpg Graphic file (type jpg)
 <use atom.jpg>
 Package pdftex.def Info: atom.jpg  used on input line 275.
@@ -3048,7 +3048,7 @@ Package pdftex.def Info: atom.jpg  used on input line 275.
  [37
 
 ]
-<EPR.jpg, id=2304, 493.845pt x 231.86626pt>
+<EPR.jpg, id=2308, 493.845pt x 231.86626pt>
 File: EPR.jpg Graphic file (type jpg)
 <use EPR.jpg>
 Package pdftex.def Info: EPR.jpg  used on input line 296.
@@ -3085,7 +3085,7 @@ Package pdftex.def Info: EPR.jpg  used on input line 296.
  [42
 
 ]
-<BellAspect.png, id=2594, 684.5575pt x 517.935pt>
+<BellAspect.png, id=2598, 684.5575pt x 517.935pt>
 File: BellAspect.png Graphic file (type png)
 <use BellAspect.png>
 Package pdftex.def Info: BellAspect.png  used on input line 321.
@@ -3122,12 +3122,12 @@ Overfull \hbox (45.77368pt too wide) in paragraph at lines 321--321
 [45
 
 ]
-<Alice.png, id=2777, 485.815pt x 668.4975pt>
+<Alice.png, id=2781, 485.815pt x 668.4975pt>
 File: Alice.png Graphic file (type png)
 <use Alice.png>
 Package pdftex.def Info: Alice.png  used on input line 353.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
-<Bob.jpg, id=2778, 250.9375pt x 334.24875pt>
+<Bob.jpg, id=2782, 250.9375pt x 334.24875pt>
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
 Package pdftex.def Info: Bob.jpg  used on input line 353.
@@ -3346,7 +3346,7 @@ Package pdftex.def Info: tin-can-telephone.jpg  used on input line 494.
  [68
 
 ]
-<radio.jpg, id=4088, 216.81pt x 142.131pt>
+<radio.jpg, id=4092, 216.81pt x 142.131pt>
 File: radio.jpg Graphic file (type jpg)
 <use radio.jpg>
 Package pdftex.def Info: radio.jpg  used on input line 494.
@@ -3355,12 +3355,12 @@ File: radio.jpg Graphic file (type jpg)
 <use radio.jpg>
 Package pdftex.def Info: radio.jpg  used on input line 494.
 (pdftex.def)             Requested size: 43.36122pt x 28.42569pt.
-<france_inter.png, id=4089, 3083.52pt x 3083.52pt>
+<france_inter.png, id=4093, 3083.52pt x 3083.52pt>
 File: france_inter.png Graphic file (type png)
 <use france_inter.png>
 Package pdftex.def Info: france_inter.png  used on input line 494.
 (pdftex.def)             Requested size: 36.98181pt x 36.98181pt.
-<signal.png, id=4090, 291.35622pt x 227.62204pt>
+<signal.png, id=4094, 291.35622pt x 227.62204pt>
 File: signal.png Graphic file (type png)
 <use signal.png>
 Package pdftex.def Info: signal.png  used on input line 494.
@@ -3369,12 +3369,12 @@ File: signal.png Graphic file (type png)
 <use signal.png>
 Package pdftex.def Info: signal.png  used on input line 494.
 (pdftex.def)             Requested size: 29.13731pt x 22.76353pt.
-<antenne.jpg, id=4091, 81.6651pt x 122.6181pt>
+<antenne.jpg, id=4095, 81.6651pt x 122.6181pt>
 File: antenne.jpg Graphic file (type jpg)
 <use antenne.jpg>
 Package pdftex.def Info: antenne.jpg  used on input line 494.
 (pdftex.def)             Requested size: 57.16516pt x 85.83206pt.
-<phone.jpg, id=4092, 1265.72874pt x 2327.69624pt>
+<phone.jpg, id=4096, 1265.72874pt x 2327.69624pt>
 File: phone.jpg Graphic file (type jpg)
 <use phone.jpg>
 Package pdftex.def Info: phone.jpg  used on input line 494.
@@ -3411,7 +3411,7 @@ LaTeX Font Warning: Font shape `T1/cmss/m/sc' undefined
 [72
 
 ]
-<MaxCovPlotNamed.png, id=4320, 701.7417pt x 596.9502pt>
+<MaxCovPlotNamed.png, id=4324, 701.7417pt x 596.9502pt>
 File: MaxCovPlotNamed.png Graphic file (type png)
 <use MaxCovPlotNamed.png>
 Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 520.
@@ -3424,7 +3424,7 @@ Overfull \hbox (12.11987pt too wide) in paragraph at lines 520--520
 [73
 
  <./MaxCovPlotNamed.png>]
-<MaxCovPlotNamed1.png, id=4379, 701.7417pt x 596.9502pt>
+<MaxCovPlotNamed1.png, id=4383, 701.7417pt x 596.9502pt>
 File: MaxCovPlotNamed1.png Graphic file (type png)
 <use MaxCovPlotNamed1.png>
 Package pdftex.def Info: MaxCovPlotNamed1.png  used on input line 520.
@@ -3471,7 +3471,7 @@ Overfull \vbox (2.055pt too high) detected at line 558
 [77
 
 ]
-<MaxCovPlotNamed2.png, id=4611, 701.7417pt x 596.9502pt>
+<MaxCovPlotNamed2.png, id=4615, 701.7417pt x 596.9502pt>
 File: MaxCovPlotNamed2.png Graphic file (type png)
 <use MaxCovPlotNamed2.png>
 Package pdftex.def Info: MaxCovPlotNamed2.png  used on input line 558.
@@ -3483,7 +3483,7 @@ Overfull \vbox (2.055pt too high) detected at line 558
 [78
 
  <./MaxCovPlotNamed2.png>]
-<MaxCovPlotNamed3.png, id=4669, 701.7417pt x 596.9502pt>
+<MaxCovPlotNamed3.png, id=4673, 701.7417pt x 596.9502pt>
 File: MaxCovPlotNamed3.png Graphic file (type png)
 <use MaxCovPlotNamed3.png>
 Package pdftex.def Info: MaxCovPlotNamed3.png  used on input line 558.
@@ -3540,7 +3540,7 @@ Overfull \hbox (26.26743pt too wide) detected at line 646
 [90
 
 ]
-<PartSyst.png, id=5369, 844.8363pt x 445.1832pt>
+<PartSyst.png, id=5373, 844.8363pt x 445.1832pt>
 File: PartSyst.png Graphic file (type png)
 <use PartSyst.png>
 Package pdftex.def Info: PartSyst.png  used on input line 660.
@@ -3575,172 +3575,140 @@ Overfull \vbox (2.47307pt too high) detected at line 660
 
 ] [94
 
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 667.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 667.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 667.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\otimes' on input line 667.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 667.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 667.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 667.
-
-[95
+] [95
 
 ] [96
 
 ]
-Overfull \vbox (3.8168pt too high) detected at line 733
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 676.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 676.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 676.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\otimes' on input line 676.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 676.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 676.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 676.
 
 [97
 
-]
-Overfull \vbox (3.8168pt too high) detected at line 733
- []
-
-[98
+] [98
 
 ]
-Overfull \vbox (2.37242pt too high) detected at line 759
+Overfull \vbox (3.8168pt too high) detected at line 742
  []
 
 [99
 
 ]
-Overfull \vbox (2.37242pt too high) detected at line 759
+Overfull \vbox (3.8168pt too high) detected at line 742
  []
 
 [100
 
-] [101
+]
+Overfull \vbox (2.37242pt too high) detected at line 768
+ []
 
-] [102
+[101
+
+]
+Overfull \vbox (2.37242pt too high) detected at line 768
+ []
+
+[102
 
 ] [103
 
 ] [104
 
+] [105
+
+] [106
+
 ]
-Overfull \vbox (2.5604pt too high) detected at line 844
+Overfull \vbox (2.5604pt too high) detected at line 853
  []
 
-[105
+[107
 
 ]
-Overfull \hbox (6.36992pt too wide) detected at line 844
+Overfull \hbox (6.36992pt too wide) detected at line 853
 [][]
  []
 
-[106
+[108
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{defi:capacit
 y}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.861 \end{frame}
-                  [107
+l.870 \end{frame}
+                  [109
 
-] [108
+] [110
 
-] [109
-
-]
-Overfull \vbox (10.7385pt too high) detected at line 934
- []
-
-[110
+] [111
 
 ]
-Overfull \vbox (10.7385pt too high) detected at line 934
- []
-
-[111
-
-]
-PGFPlots: reading {Data_BAC/ZEBorder2.csv}
-
-Overfull \vbox (10.7385pt too high) detected at line 934
+Overfull \vbox (10.7385pt too high) detected at line 943
  []
 
 [112
 
 ]
-PGFPlots: reading {Data_BAC/ZEBorder2.csv}
-PGFPlots: reading {Data_BAC/ZEBorder3.csv}
-
-Overfull \vbox (10.7385pt too high) detected at line 934
+Overfull \vbox (10.7385pt too high) detected at line 943
  []
 
 [113
 
 ]
 PGFPlots: reading {Data_BAC/ZEBorder2.csv}
-PGFPlots: reading {Data_BAC/ZEBorder3.csv}
-PGFPlots: reading {Data_BAC/ZEBorder7.csv}
 
-Overfull \vbox (10.7385pt too high) detected at line 934
+Overfull \vbox (10.7385pt too high) detected at line 943
  []
 
 [114
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 953
-\OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
-0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
- : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
-.95 X[]\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.9
-5 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/10.95 I\OT1/cmss/m/n/10.95 (
-\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95 : \OT1/mathkerncmss/m/sl/1
-0.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 
-) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.95 R[] \OT1/cmss/m/n/10.95 +
- \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/
-10.95 I\OT1/cmss/m/n/10.95 ((\OT1/mathkerncmss/m/sl/10.95 X[]\OML/cmm/m/it/10.9
-5 ; \OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 ) : \OT1/mathkerncmss/m
-/sl/10.95 Y\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;
+PGFPlots: reading {Data_BAC/ZEBorder2.csv}
+PGFPlots: reading {Data_BAC/ZEBorder3.csv}
+
+Overfull \vbox (10.7385pt too high) detected at line 943
  []
 
 [115
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 953
-\OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
-0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
- : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
-.95 X[]\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.9
-5 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/10.95 I\OT1/cmss/m/n/10.95 (
-\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95 : \OT1/mathkerncmss/m/sl/1
-0.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 
-) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.95 R[] \OT1/cmss/m/n/10.95 +
- \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/
-10.95 I\OT1/cmss/m/n/10.95 ((\OT1/mathkerncmss/m/sl/10.95 X[]\OML/cmm/m/it/10.9
-5 ; \OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 ) : \OT1/mathkerncmss/m
-/sl/10.95 Y\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;
+PGFPlots: reading {Data_BAC/ZEBorder2.csv}
+PGFPlots: reading {Data_BAC/ZEBorder3.csv}
+PGFPlots: reading {Data_BAC/ZEBorder7.csv}
+
+Overfull \vbox (10.7385pt too high) detected at line 943
  []
 
 [116
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 953
+Overfull \hbox (2.94707pt too wide) detected at line 962
 \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
 0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
  : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
@@ -3758,94 +3726,72 @@ Overfull \hbox (2.94707pt too wide) detected at line 953
 [117
 
 ]
-Overfull \hbox (21.41133pt too wide) detected at line 977
-\OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
-cmss/m/n/10.95 ) := []
+Overfull \hbox (2.94707pt too wide) detected at line 962
+\OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
+0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
+ : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
+.95 X[]\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.9
+5 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/10.95 I\OT1/cmss/m/n/10.95 (
+\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95 : \OT1/mathkerncmss/m/sl/1
+0.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 
+) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.95 R[] \OT1/cmss/m/n/10.95 +
+ \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/
+10.95 I\OT1/cmss/m/n/10.95 ((\OT1/mathkerncmss/m/sl/10.95 X[]\OML/cmm/m/it/10.9
+5 ; \OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 ) : \OT1/mathkerncmss/m
+/sl/10.95 Y\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;
  []
 
 [118
 
 ]
-Overfull \hbox (21.41133pt too wide) detected at line 977
-\OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
-cmss/m/n/10.95 ) := []
+Overfull \hbox (2.94707pt too wide) detected at line 962
+\OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
+0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
+ : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
+.95 X[]\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.9
+5 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/10.95 I\OT1/cmss/m/n/10.95 (
+\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95 : \OT1/mathkerncmss/m/sl/1
+0.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 
+) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.95 R[] \OT1/cmss/m/n/10.95 +
+ \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/
+10.95 I\OT1/cmss/m/n/10.95 ((\OT1/mathkerncmss/m/sl/10.95 X[]\OML/cmm/m/it/10.9
+5 ; \OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 ) : \OT1/mathkerncmss/m
+/sl/10.95 Y\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;
  []
 
 [119
 
 ]
-Overfull \hbox (21.41133pt too wide) detected at line 977
+Overfull \hbox (21.41133pt too wide) detected at line 986
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
 cmss/m/n/10.95 ) := []
  []
 
 [120
 
-] [121
+]
+Overfull \hbox (21.41133pt too wide) detected at line 986
+\OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
+cmss/m/n/10.95 ) := []
+ []
 
-] [122
+[121
+
+]
+Overfull \hbox (21.41133pt too wide) detected at line 986
+\OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
+cmss/m/n/10.95 ) := []
+ []
+
+[122
 
 ] [123
 
 ] [124
 
-]
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
- [125
+] [125
+
+] [126
 
 ]
 Missing character: There is no ( in font nullfont!
@@ -3903,84 +3849,138 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ; in font nullfont!
-PGFPlots: reading {Data_BAC/ZEBorder7.csv}
-PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
- [126
-
-]
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-PGFPlots: reading {Data_BAC/ZEBorder7.csv}
-PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
  [127
 
-] [128
+]
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {Data_BAC/ZEBorder7.csv}
+PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
+ [128
 
-] [129
+]
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {Data_BAC/ZEBorder7.csv}
+PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
+ [129
 
 ] [130
 
 ] [131
 
-]
-[132
+] [132
 
 ] [133
 
-] [134
+]
+[134
 
 ] [135
 
@@ -3990,65 +3990,37 @@ PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
 
 ] [138
 
+] [139
+
+] [140
+
+] [141
+
+] [142
+
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1214
+Overfull \hbox (23.76434pt too wide) detected at line 1232
 []
- []
-
-[139
-
-]
-Overfull \hbox (23.76434pt too wide) detected at line 1214
-[]
- []
-
-[140
-
-]
-Overfull \hbox (23.76434pt too wide) detected at line 1214
-[]
- []
-
-[141
-
-]
-Overfull \hbox (1.14346pt too wide) detected at line 1236
-[] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
-P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
-\OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
-erncmss/m/sl/10.95 W\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 y[]y[]\OM
-S/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 x\OT1/cmss/m/n/10.95 ) \OML/cmm/
-m/it/10.95 :
- []
-
-[142
-
-]
-Overfull \hbox (1.14346pt too wide) detected at line 1236
-[] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
-P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
-\OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
-erncmss/m/sl/10.95 W\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 y[]y[]\OM
-S/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 x\OT1/cmss/m/n/10.95 ) \OML/cmm/
-m/it/10.95 :
  []
 
 [143
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1236
-[] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
-P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
-\OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
-erncmss/m/sl/10.95 W\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 y[]y[]\OM
-S/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 x\OT1/cmss/m/n/10.95 ) \OML/cmm/
-m/it/10.95 :
+Overfull \hbox (23.76434pt too wide) detected at line 1232
+[]
  []
 
 [144
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1236
+Overfull \hbox (23.76434pt too wide) detected at line 1232
+[]
+ []
+
+[145
+
+]
+Overfull \hbox (1.14346pt too wide) detected at line 1254
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4057,15 +4029,43 @@ S/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 x\OT1/cmss/m/n/10.95 ) \OML/cmm/
 m/it/10.95 :
  []
 
-[145
+[146
 
-] [146
+]
+Overfull \hbox (1.14346pt too wide) detected at line 1254
+[] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
+P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
+\OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
+erncmss/m/sl/10.95 W\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 y[]y[]\OM
+S/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 x\OT1/cmss/m/n/10.95 ) \OML/cmm/
+m/it/10.95 :
+ []
 
-] [147
+[147
 
-] [148
+]
+Overfull \hbox (1.14346pt too wide) detected at line 1254
+[] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
+P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
+\OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
+erncmss/m/sl/10.95 W\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 y[]y[]\OM
+S/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 x\OT1/cmss/m/n/10.95 ) \OML/cmm/
+m/it/10.95 :
+ []
 
-] [149
+[148
+
+]
+Overfull \hbox (1.14346pt too wide) detected at line 1254
+[] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
+P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
+\OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
+erncmss/m/sl/10.95 W\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 y[]y[]\OM
+S/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 x\OT1/cmss/m/n/10.95 ) \OML/cmm/
+m/it/10.95 :
+ []
+
+[149
 
 ] [150
 
@@ -4077,38 +4077,32 @@ m/it/10.95 :
 
 ] [154
 
+] [155
+
+] [156
+
+] [157
+
+] [158
+
+] [159
+
+] [160
+
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1285.
+(hyperref)                removing `\translate ' on input line 1319.
 
 (./defense.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
-[155
+[161
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
-[156
-
-
-] [157
-
-
-] [158
-
-
-] [159
-
-
-] [160
-
-
-] [161
-
-
-] [162
+[162
 
 
 ] [163
@@ -4118,6 +4112,27 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 
 
 ] [165
+
+
+] [166
+
+
+] [167
+
+
+] [168
+
+
+] [169
+
+
+] [170
+
+
+] [171
+
+
+] [172
 
 
 ]
@@ -4130,14 +4145,15 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1295.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1295.
- (./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1295.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1295.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1329.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1329.
+
+(./defense.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1329.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1329.
 
 Package rerunfilecheck Info: File `defense.out' has not changed.
-(rerunfilecheck)             Checksum: C6CC25A3CF03E60429EC6BF5EB338DBA;1117.
+(rerunfilecheck)             Checksum: 08E4F61BB5656E84E9E340DD9ED51533;1179.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -4147,10 +4163,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 46448 strings out of 494821
- 1070415 string characters out of 6177891
- 1363564 words of memory out of 5000000
- 48589 multiletter control sequences out of 15000+600000
+ 46471 strings out of 494821
+ 1070676 string characters out of 6177891
+ 1363700 words of memory out of 5000000
+ 48596 multiletter control sequences out of 15000+600000
  581069 words of font info for 135 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  74i,21n,128p,10378b,2298s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -4193,10 +4209,10 @@ y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on defense.pdf (165 pages, 8595793 bytes).
+Output written on defense.pdf (172 pages, 8622237 bytes).
 PDF statistics:
- 9961 PDF objects out of 10688 (max. 8388607)
- 9095 compressed objects within 91 object streams
- 368 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 10356 PDF objects out of 10688 (max. 8388607)
+ 9474 compressed objects within 95 object streams
+ 384 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 

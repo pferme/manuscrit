@@ -583,7 +583,7 @@
   \pause
   
   \begin{theo}[Main Result]
-    There exists a polynomial-time approximation algorithm achieving the \emph{Poisson concavity ratio} of $\varphi$, defined by:
+    There exists a polynomial-time approximation algorithm achieving the \emph{Poisson concavity ratio} of nondecreasing concave $\varphi$, defined by:
     \[ \alpha_{\varphi} := \min_{x \in \mathbb{N}^*} \alpha_{\varphi}(x) \text{, with } \alpha_{\varphi}(x) := \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])}\ .\]
     For $\varphi(n) = o(n)$, it is \textrm{NP}-hard to approximate within a better ratio than $\alpha_\varphi + \varepsilon$, even restricted to unit weights and regular subsets.
   \end{theo}
@@ -659,8 +659,17 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Conclusion}
-  TODO at the end
+\begin{frame}{Chapter summary}
+  \begin{itemize}
+  \item Tight $\left(\alpha_{\varphi}:= \min_{x \in \mathbb{N^*}} \frac{\mathbb{E}[\varphi(\Poi(x))]}{\varphi(\mathbb{E}[\Poi(x)])}\right)$-approximation algorithm for $\varphi$-\textsc{MaxCoverage}, for nondecreasing concave sublinear $\varphi$.
+    \pause
+  \item Implies tight $\alpha_{\varphi}$-approximation algorithm for $\varphi$-list-decoding, restricted to the class of regular channels.
+    \pause
+    \bigskip
+  \item Extend $\alpha_{\varphi}$-approximation for all channels?
+  \item \textrm{NP}-hardness for $\varphi(n)\not=o(n)$?
+  \item Combinatorial algorithms?
+  \end{itemize}
 \end{frame}
 
 \section{Multiple-access channels}
@@ -1059,8 +1068,17 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Conclusion}
-  TODO at the end
+\begin{frame}{Chapter summary}
+  \begin{itemize}
+  \item Efficient algorithm computing $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$.
+  \item Applied to BAC, sum-rate of $\frac{\log_2(72)}{4} \simeq 1.5425$ achievable, versus classical maximum sum-rate of $\frac{3}{2}$.
+    \pause
+  \item Characterization of $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ as classical characterization by  \cite{Liao73,Ahlswede73} without product constraint.
+    \pause
+    \bigskip
+  \item Does $\mathcal{C}^{\mathrm{NS}}(W)=\mathcal{C}^{\overline{\mathrm{NS}}}(W)$?
+  \item Does quantum entanglement improves BAC capacity?
+  \end{itemize}
 \end{frame}
 
 \section{Broadcast channels}
@@ -1272,13 +1290,29 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Conclusion}
-  TODO at the end
+\begin{frame}{Chapter summary}
+  \begin{itemize}
+  \item $(1-e^{-1})^2$-approximation algorithm for deterministic broadcast channel coding.
+  \item Implies $\mathcal{C}^{\mathrm{NS}}(W)=\mathcal{C}(W)$ for deterministic channels.
+    \pause
+  \item No polynomial-time $\Omega\left(\frac{1}{\sqrt{m}}\right)$-approximation algorithm for general problem under value query model.
+    \pause
+    \bigskip
+  \item \textrm{NP}-hardness of approximation for general problem?
+  \item Constant-factor approximation algorithms for semi-deterministic/degraded channels?
+  \item Does $\mathcal{C}^{\mathrm{NS}}(W)=\mathcal{C}(W)$ for those channels? All channels?
+  \end{itemize}
 \end{frame}
 
 \section{Conclusion}
-\begin{frame}{TODO}
-  TODO at the end
+\subsection{Conclusion}
+\begin{frame}{The NS advantage hardness equivalence}
+  \begin{itemize}
+  \item Global sum up (higher level)
+  \item Critical link complexity hardness and non-signaling advantage \cite{JNVWY20}
+    \bigskip
+  \item THE END
+  \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
