@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  14 NOV 2023 15:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  15 NOV 2023 15:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2775,70 +2775,79 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.15}).
 <tin-can-telephone.jpg, id=233, 720.6925pt x 240.9pt>
 File: tin-can-telephone.jpg Graphic file (type jpg)
 <use tin-can-telephone.jpg>
-Package pdftex.def Info: tin-can-telephone.jpg  used on input line 113.
+Package pdftex.def Info: tin-can-telephone.jpg  used on input line 110.
 (pdftex.def)             Requested size: 302.68878pt x 101.17729pt.
  [2
 
  <./tin-can-telephone.jpg>]
 File: tin-can-telephone.jpg Graphic file (type jpg)
 <use tin-can-telephone.jpg>
-Package pdftex.def Info: tin-can-telephone.jpg  used on input line 113.
+Package pdftex.def Info: tin-can-telephone.jpg  used on input line 110.
 (pdftex.def)             Requested size: 302.68878pt x 101.17729pt.
  [3
 
 ]
-File: tin-can-telephone.jpg Graphic file (type jpg)
-<use tin-can-telephone.jpg>
-Package pdftex.def Info: tin-can-telephone.jpg  used on input line 113.
-(pdftex.def)             Requested size: 302.68878pt x 101.17729pt.
- [4
-
-]
-<long-tin-can-telephone.jpg, id=403, 1081.03876pt x 240.9pt>
+<long-tin-can-telephone.jpg, id=347, 1081.03876pt x 240.9pt>
 File: long-tin-can-telephone.jpg Graphic file (type jpg)
 <use long-tin-can-telephone.jpg>
-Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 148.
+Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 145.
 (pdftex.def)             Requested size: 237.82925pt x 52.99815pt.
-<rcloud_white.png, id=404, 443.256pt x 296.7888pt>
+<rcloud_white.png, id=348, 443.256pt x 296.7888pt>
 File: rcloud_white.png Graphic file (type png)
 <use rcloud_white.png>
-Package pdftex.def Info: rcloud_white.png  used on input line 148.
+Package pdftex.def Info: rcloud_white.png  used on input line 145.
 (pdftex.def)             Requested size: 132.97781pt x 89.03732pt.
 
-Overfull \hbox (20.29547pt too wide) in paragraph at lines 148--148
+Overfull \hbox (20.29547pt too wide) in paragraph at lines 145--145
+ [] 
+ []
+
+[4
+
+ <./long-tin-can-telephone.jpg> <./rcloud_white.png (PNG copy)>]
+File: long-tin-can-telephone.jpg Graphic file (type jpg)
+<use long-tin-can-telephone.jpg>
+Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 145.
+(pdftex.def)             Requested size: 237.82925pt x 52.99815pt.
+<rcloud.png, id=405, 443.256pt x 296.7888pt>
+File: rcloud.png Graphic file (type png)
+<use rcloud.png>
+Package pdftex.def Info: rcloud.png  used on input line 145.
+(pdftex.def)             Requested size: 132.97781pt x 89.03732pt.
+
+Overfull \hbox (21.47058pt too wide) in paragraph at lines 145--145
  [] 
  []
 
 [5
 
- <./long-tin-can-telephone.jpg> <./rcloud_white.png (PNG copy)>]
+ <./rcloud.png>]
 File: long-tin-can-telephone.jpg Graphic file (type jpg)
 <use long-tin-can-telephone.jpg>
-Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 148.
+Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 145.
 (pdftex.def)             Requested size: 237.82925pt x 52.99815pt.
-<rcloud.png, id=462, 443.256pt x 296.7888pt>
 File: rcloud.png Graphic file (type png)
 <use rcloud.png>
-Package pdftex.def Info: rcloud.png  used on input line 148.
+Package pdftex.def Info: rcloud.png  used on input line 145.
 (pdftex.def)             Requested size: 132.97781pt x 89.03732pt.
 
-Overfull \hbox (21.47058pt too wide) in paragraph at lines 148--148
+Overfull \hbox (3.56311pt too wide) in paragraph at lines 145--145
  [] 
  []
 
 [6
 
- <./rcloud.png>]
+]
 File: long-tin-can-telephone.jpg Graphic file (type jpg)
 <use long-tin-can-telephone.jpg>
-Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 148.
+Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 145.
 (pdftex.def)             Requested size: 237.82925pt x 52.99815pt.
 File: rcloud.png Graphic file (type png)
 <use rcloud.png>
-Package pdftex.def Info: rcloud.png  used on input line 148.
+Package pdftex.def Info: rcloud.png  used on input line 145.
 (pdftex.def)             Requested size: 132.97781pt x 89.03732pt.
 
-Overfull \hbox (3.56311pt too wide) in paragraph at lines 148--148
+Overfull \hbox (4.41896pt too wide) in paragraph at lines 145--145
  [] 
  []
 
@@ -2847,14 +2856,14 @@ Overfull \hbox (3.56311pt too wide) in paragraph at lines 148--148
 ]
 File: long-tin-can-telephone.jpg Graphic file (type jpg)
 <use long-tin-can-telephone.jpg>
-Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 148.
+Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 145.
 (pdftex.def)             Requested size: 237.82925pt x 52.99815pt.
 File: rcloud.png Graphic file (type png)
 <use rcloud.png>
-Package pdftex.def Info: rcloud.png  used on input line 148.
+Package pdftex.def Info: rcloud.png  used on input line 145.
 (pdftex.def)             Requested size: 132.97781pt x 89.03732pt.
 
-Overfull \hbox (4.41896pt too wide) in paragraph at lines 148--148
+Overfull \hbox (9.663pt too wide) in paragraph at lines 145--145
  [] 
  []
 
@@ -2863,53 +2872,39 @@ Overfull \hbox (4.41896pt too wide) in paragraph at lines 148--148
 ]
 File: long-tin-can-telephone.jpg Graphic file (type jpg)
 <use long-tin-can-telephone.jpg>
-Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 148.
+Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 145.
 (pdftex.def)             Requested size: 237.82925pt x 52.99815pt.
 File: rcloud.png Graphic file (type png)
 <use rcloud.png>
-Package pdftex.def Info: rcloud.png  used on input line 148.
+Package pdftex.def Info: rcloud.png  used on input line 145.
 (pdftex.def)             Requested size: 132.97781pt x 89.03732pt.
 
-Overfull \hbox (9.663pt too wide) in paragraph at lines 148--148
+Overfull \hbox (19.64241pt too wide) in paragraph at lines 145--145
  [] 
  []
 
 [9
 
 ]
-File: long-tin-can-telephone.jpg Graphic file (type jpg)
-<use long-tin-can-telephone.jpg>
-Package pdftex.def Info: long-tin-can-telephone.jpg  used on input line 148.
-(pdftex.def)             Requested size: 237.82925pt x 52.99815pt.
-File: rcloud.png Graphic file (type png)
-<use rcloud.png>
-Package pdftex.def Info: rcloud.png  used on input line 148.
-(pdftex.def)             Requested size: 132.97781pt x 89.03732pt.
-
-Overfull \hbox (19.64241pt too wide) in paragraph at lines 148--148
- [] 
- []
-
-[10
-
-]
-LaTeX Font Info:    Try loading font information for U+msa on input line 165.
+LaTeX Font Info:    Try loading font information for U+msa on input line 162.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 165.
+LaTeX Font Info:    Try loading font information for U+msb on input line 162.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 165.
+line 162.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-[11
+[10
+
+] [11
 
 ] [12
 
@@ -2937,10 +2932,10 @@ thkerncmss.
 
 ] [24
 
-] [25
-
 ]
-[26
+[25
+
+] [26
 
 ] [27
 
@@ -2948,247 +2943,260 @@ thkerncmss.
 
 ] [29
 
-] [30
-
 ]
-<cat.png, id=1905, 1188.44pt x 883.3pt>
+<cat.png, id=1850, 1188.44pt x 883.3pt>
 File: cat.png Graphic file (type png)
 <use cat.png>
-Package pdftex.def Info: cat.png  used on input line 254.
+Package pdftex.def Info: cat.png  used on input line 251.
 (pdftex.def)             Requested size: 118.85095pt x 88.33517pt.
 File: cat.png Graphic file (type png)
 <use cat.png>
-Package pdftex.def Info: cat.png  used on input line 254.
+Package pdftex.def Info: cat.png  used on input line 251.
 (pdftex.def)             Requested size: 118.85095pt x 88.33517pt.
- [31
+ [30
 
  <./cat.png>]
 File: cat.png Graphic file (type png)
 <use cat.png>
-Package pdftex.def Info: cat.png  used on input line 254.
+Package pdftex.def Info: cat.png  used on input line 251.
 (pdftex.def)             Requested size: 118.85095pt x 88.33517pt.
 File: cat.png Graphic file (type png)
 <use cat.png>
-Package pdftex.def Info: cat.png  used on input line 254.
+Package pdftex.def Info: cat.png  used on input line 251.
 (pdftex.def)             Requested size: 118.85095pt x 88.33517pt.
-<cat_question_white.png, id=1966, 1004.75375pt x 678.535pt>
+<cat_question_white.png, id=1910, 1004.75375pt x 678.535pt>
 File: cat_question_white.png Graphic file (type png)
 <use cat_question_white.png>
-Package pdftex.def Info: cat_question_white.png  used on input line 254.
+Package pdftex.def Info: cat_question_white.png  used on input line 251.
 (pdftex.def)             Requested size: 120.56525pt x 81.42068pt.
 
-Overfull \vbox (9.85768pt too high) detected at line 254
+Overfull \vbox (9.85768pt too high) detected at line 251
  []
 
-[32
+[31
 
  <./cat_question_white.png (PNG copy)>]
 File: cat.png Graphic file (type png)
 <use cat.png>
-Package pdftex.def Info: cat.png  used on input line 254.
+Package pdftex.def Info: cat.png  used on input line 251.
 (pdftex.def)             Requested size: 118.85095pt x 88.33517pt.
 File: cat.png Graphic file (type png)
 <use cat.png>
-Package pdftex.def Info: cat.png  used on input line 254.
+Package pdftex.def Info: cat.png  used on input line 251.
 (pdftex.def)             Requested size: 118.85095pt x 88.33517pt.
-<cat_question.png, id=2024, 1004.75375pt x 678.535pt>
+<cat_question.png, id=1968, 1004.75375pt x 678.535pt>
 File: cat_question.png Graphic file (type png)
 <use cat_question.png>
-Package pdftex.def Info: cat_question.png  used on input line 254.
+Package pdftex.def Info: cat_question.png  used on input line 251.
 (pdftex.def)             Requested size: 120.56525pt x 81.42068pt.
 
-Overfull \vbox (9.85768pt too high) detected at line 254
+Overfull \vbox (9.85768pt too high) detected at line 251
  []
 
-[33
+[32
 
  <./cat_question.png>]
-<atom.jpg, id=2081, 1284.8pt x 1027.84pt>
+<atom.jpg, id=2027, 1284.8pt x 1027.84pt>
 File: atom.jpg Graphic file (type jpg)
 <use atom.jpg>
-Package pdftex.def Info: atom.jpg  used on input line 275.
+Package pdftex.def Info: atom.jpg  used on input line 272.
 (pdftex.def)             Requested size: 51.38324pt x 41.1066pt.
 File: atom.jpg Graphic file (type jpg)
 <use atom.jpg>
-Package pdftex.def Info: atom.jpg  used on input line 275.
+Package pdftex.def Info: atom.jpg  used on input line 272.
 (pdftex.def)             Requested size: 51.38324pt x 41.1066pt.
- [34
+ [33
 
  <./atom.jpg>]
 File: atom.jpg Graphic file (type jpg)
 <use atom.jpg>
-Package pdftex.def Info: atom.jpg  used on input line 275.
+Package pdftex.def Info: atom.jpg  used on input line 272.
 (pdftex.def)             Requested size: 51.38324pt x 41.1066pt.
 File: atom.jpg Graphic file (type jpg)
 <use atom.jpg>
-Package pdftex.def Info: atom.jpg  used on input line 275.
+Package pdftex.def Info: atom.jpg  used on input line 272.
+(pdftex.def)             Requested size: 51.38324pt x 41.1066pt.
+ [34
+
+]
+File: atom.jpg Graphic file (type jpg)
+<use atom.jpg>
+Package pdftex.def Info: atom.jpg  used on input line 272.
+(pdftex.def)             Requested size: 51.38324pt x 41.1066pt.
+File: atom.jpg Graphic file (type jpg)
+<use atom.jpg>
+Package pdftex.def Info: atom.jpg  used on input line 272.
 (pdftex.def)             Requested size: 51.38324pt x 41.1066pt.
  [35
 
 ]
 File: atom.jpg Graphic file (type jpg)
 <use atom.jpg>
-Package pdftex.def Info: atom.jpg  used on input line 275.
+Package pdftex.def Info: atom.jpg  used on input line 272.
 (pdftex.def)             Requested size: 51.38324pt x 41.1066pt.
 File: atom.jpg Graphic file (type jpg)
 <use atom.jpg>
-Package pdftex.def Info: atom.jpg  used on input line 275.
+Package pdftex.def Info: atom.jpg  used on input line 272.
 (pdftex.def)             Requested size: 51.38324pt x 41.1066pt.
  [36
 
 ]
-File: atom.jpg Graphic file (type jpg)
-<use atom.jpg>
-Package pdftex.def Info: atom.jpg  used on input line 275.
-(pdftex.def)             Requested size: 51.38324pt x 41.1066pt.
-File: atom.jpg Graphic file (type jpg)
-<use atom.jpg>
-Package pdftex.def Info: atom.jpg  used on input line 275.
-(pdftex.def)             Requested size: 51.38324pt x 41.1066pt.
- [37
-
-]
-<EPR.jpg, id=2309, 493.845pt x 231.86626pt>
+<EPR.jpg, id=2254, 493.845pt x 231.86626pt>
 File: EPR.jpg Graphic file (type jpg)
 <use EPR.jpg>
-Package pdftex.def Info: EPR.jpg  used on input line 296.
+Package pdftex.def Info: EPR.jpg  used on input line 293.
 (pdftex.def)             Requested size: 148.15463pt x 69.56041pt.
- [38
+ [37
 
  <./EPR.jpg>]
 File: EPR.jpg Graphic file (type jpg)
 <use EPR.jpg>
-Package pdftex.def Info: EPR.jpg  used on input line 296.
+Package pdftex.def Info: EPR.jpg  used on input line 293.
 (pdftex.def)             Requested size: 148.15463pt x 69.56041pt.
 
-[39
+[38
 
 ]
 File: EPR.jpg Graphic file (type jpg)
 <use EPR.jpg>
-Package pdftex.def Info: EPR.jpg  used on input line 296.
+Package pdftex.def Info: EPR.jpg  used on input line 293.
+(pdftex.def)             Requested size: 148.15463pt x 69.56041pt.
+ [39
+
+]
+File: EPR.jpg Graphic file (type jpg)
+<use EPR.jpg>
+Package pdftex.def Info: EPR.jpg  used on input line 293.
 (pdftex.def)             Requested size: 148.15463pt x 69.56041pt.
  [40
 
 ]
 File: EPR.jpg Graphic file (type jpg)
 <use EPR.jpg>
-Package pdftex.def Info: EPR.jpg  used on input line 296.
+Package pdftex.def Info: EPR.jpg  used on input line 293.
 (pdftex.def)             Requested size: 148.15463pt x 69.56041pt.
  [41
 
 ]
-File: EPR.jpg Graphic file (type jpg)
-<use EPR.jpg>
-Package pdftex.def Info: EPR.jpg  used on input line 296.
-(pdftex.def)             Requested size: 148.15463pt x 69.56041pt.
- [42
-
-]
-<BellAspect.png, id=2599, 684.5575pt x 517.935pt>
+<BellAspect.png, id=2545, 684.5575pt x 517.935pt>
 File: BellAspect.png Graphic file (type png)
 <use BellAspect.png>
-Package pdftex.def Info: BellAspect.png  used on input line 321.
+Package pdftex.def Info: BellAspect.png  used on input line 318.
 (pdftex.def)             Requested size: 102.67918pt x 77.68689pt.
 
-Overfull \hbox (45.77368pt too wide) in paragraph at lines 321--321
+Overfull \hbox (45.77368pt too wide) in paragraph at lines 318--318
+[][]  
+ []
+
+[42
+
+ <./BellAspect.png>]
+File: BellAspect.png Graphic file (type png)
+<use BellAspect.png>
+Package pdftex.def Info: BellAspect.png  used on input line 318.
+(pdftex.def)             Requested size: 102.67918pt x 77.68689pt.
+
+Overfull \hbox (45.77368pt too wide) in paragraph at lines 318--318
 [][]  
  []
 
 [43
 
- <./BellAspect.png>]
+]
 File: BellAspect.png Graphic file (type png)
 <use BellAspect.png>
-Package pdftex.def Info: BellAspect.png  used on input line 321.
+Package pdftex.def Info: BellAspect.png  used on input line 318.
 (pdftex.def)             Requested size: 102.67918pt x 77.68689pt.
 
-Overfull \hbox (45.77368pt too wide) in paragraph at lines 321--321
+Overfull \hbox (45.77368pt too wide) in paragraph at lines 318--318
 [][]  
  []
 
 [44
 
 ]
-File: BellAspect.png Graphic file (type png)
-<use BellAspect.png>
-Package pdftex.def Info: BellAspect.png  used on input line 321.
-(pdftex.def)             Requested size: 102.67918pt x 77.68689pt.
-
-Overfull \hbox (45.77368pt too wide) in paragraph at lines 321--321
-[][]  
- []
-
-[45
-
-]
-<Alice.png, id=2782, 485.815pt x 668.4975pt>
+<Alice.png, id=2727, 485.815pt x 668.4975pt>
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 353.
+Package pdftex.def Info: Alice.png  used on input line 350.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
-<Bob.jpg, id=2783, 250.9375pt x 334.24875pt>
+<Bob.jpg, id=2728, 250.9375pt x 334.24875pt>
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 353.
+Package pdftex.def Info: Bob.jpg  used on input line 350.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
- [46
+ [45
 
  <./Alice.png> <./Bob.jpg>]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 353.
+Package pdftex.def Info: Alice.png  used on input line 350.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 353.
+Package pdftex.def Info: Bob.jpg  used on input line 350.
+(pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
+ [46
+
+]
+File: Alice.png Graphic file (type png)
+<use Alice.png>
+Package pdftex.def Info: Alice.png  used on input line 350.
+(pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
+File: Bob.jpg Graphic file (type jpg)
+<use Bob.jpg>
+Package pdftex.def Info: Bob.jpg  used on input line 350.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [47
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 353.
+Package pdftex.def Info: Alice.png  used on input line 350.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 353.
+Package pdftex.def Info: Bob.jpg  used on input line 350.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [48
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 353.
+Package pdftex.def Info: Alice.png  used on input line 350.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 353.
+Package pdftex.def Info: Bob.jpg  used on input line 350.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [49
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 353.
+Package pdftex.def Info: Alice.png  used on input line 350.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 353.
+Package pdftex.def Info: Bob.jpg  used on input line 350.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
- [50
+
+Overfull \vbox (5.3955pt too high) detected at line 350
+ []
+
+[50
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 353.
+Package pdftex.def Info: Alice.png  used on input line 350.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 353.
+Package pdftex.def Info: Bob.jpg  used on input line 350.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
 
-Overfull \vbox (5.3955pt too high) detected at line 353
+Overfull \vbox (5.3955pt too high) detected at line 350
  []
 
 [51
@@ -3196,319 +3204,306 @@ Overfull \vbox (5.3955pt too high) detected at line 353
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 353.
+Package pdftex.def Info: Alice.png  used on input line 389.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 353.
+Package pdftex.def Info: Bob.jpg  used on input line 389.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
-
-Overfull \vbox (5.3955pt too high) detected at line 353
- []
-
-[52
+ [52
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 392.
+Package pdftex.def Info: Alice.png  used on input line 389.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 392.
+Package pdftex.def Info: Bob.jpg  used on input line 389.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [53
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 392.
+Package pdftex.def Info: Alice.png  used on input line 389.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 392.
+Package pdftex.def Info: Bob.jpg  used on input line 389.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [54
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 392.
+Package pdftex.def Info: Alice.png  used on input line 389.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 392.
+Package pdftex.def Info: Bob.jpg  used on input line 389.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [55
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 392.
+Package pdftex.def Info: Alice.png  used on input line 389.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 392.
+Package pdftex.def Info: Bob.jpg  used on input line 389.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [56
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 392.
+Package pdftex.def Info: Alice.png  used on input line 389.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 392.
+Package pdftex.def Info: Bob.jpg  used on input line 389.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [57
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 392.
+Package pdftex.def Info: Alice.png  used on input line 389.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 392.
+Package pdftex.def Info: Bob.jpg  used on input line 389.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [58
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 392.
+Package pdftex.def Info: Alice.png  used on input line 389.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 392.
+Package pdftex.def Info: Bob.jpg  used on input line 389.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [59
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 392.
+Package pdftex.def Info: Alice.png  used on input line 389.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 392.
+Package pdftex.def Info: Bob.jpg  used on input line 389.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [60
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 392.
+Package pdftex.def Info: Alice.png  used on input line 389.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 392.
+Package pdftex.def Info: Bob.jpg  used on input line 389.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [61
 
 ]
 File: Alice.png Graphic file (type png)
 <use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 392.
+Package pdftex.def Info: Alice.png  used on input line 389.
 (pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
 File: Bob.jpg Graphic file (type jpg)
 <use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 392.
+Package pdftex.def Info: Bob.jpg  used on input line 389.
 (pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
  [62
 
-]
-File: Alice.png Graphic file (type png)
-<use Alice.png>
-Package pdftex.def Info: Alice.png  used on input line 392.
-(pdftex.def)             Requested size: 38.86598pt x 53.48088pt.
-File: Bob.jpg Graphic file (type jpg)
-<use Bob.jpg>
-Package pdftex.def Info: Bob.jpg  used on input line 392.
-(pdftex.def)             Requested size: 40.15082pt x 53.48088pt.
- [63
+] [63
 
 ] [64
 
 ] [65
 
-] [66
-
 ]
-[67
+[66
 
 ]
 File: tin-can-telephone.jpg Graphic file (type jpg)
 <use tin-can-telephone.jpg>
-Package pdftex.def Info: tin-can-telephone.jpg  used on input line 494.
+Package pdftex.def Info: tin-can-telephone.jpg  used on input line 491.
 (pdftex.def)             Requested size: 216.20941pt x 72.27055pt.
- [68
+ [67
 
 ]
-<radio.jpg, id=4093, 216.81pt x 142.131pt>
+<radio.jpg, id=4037, 216.81pt x 142.131pt>
 File: radio.jpg Graphic file (type jpg)
 <use radio.jpg>
-Package pdftex.def Info: radio.jpg  used on input line 494.
+Package pdftex.def Info: radio.jpg  used on input line 491.
 (pdftex.def)             Requested size: 43.36122pt x 28.42569pt.
 File: radio.jpg Graphic file (type jpg)
 <use radio.jpg>
-Package pdftex.def Info: radio.jpg  used on input line 494.
+Package pdftex.def Info: radio.jpg  used on input line 491.
 (pdftex.def)             Requested size: 43.36122pt x 28.42569pt.
-<france_inter.png, id=4094, 3083.52pt x 3083.52pt>
+<france_inter.png, id=4038, 3083.52pt x 3083.52pt>
 File: france_inter.png Graphic file (type png)
 <use france_inter.png>
-Package pdftex.def Info: france_inter.png  used on input line 494.
+Package pdftex.def Info: france_inter.png  used on input line 491.
 (pdftex.def)             Requested size: 36.98181pt x 36.98181pt.
-<signal.png, id=4095, 291.35622pt x 227.62204pt>
+<signal.png, id=4039, 291.35622pt x 227.62204pt>
 File: signal.png Graphic file (type png)
 <use signal.png>
-Package pdftex.def Info: signal.png  used on input line 494.
+Package pdftex.def Info: signal.png  used on input line 491.
 (pdftex.def)             Requested size: 29.13731pt x 22.76353pt.
 File: signal.png Graphic file (type png)
 <use signal.png>
-Package pdftex.def Info: signal.png  used on input line 494.
+Package pdftex.def Info: signal.png  used on input line 491.
 (pdftex.def)             Requested size: 29.13731pt x 22.76353pt.
-<antenne.jpg, id=4096, 81.6651pt x 122.6181pt>
+<antenne.jpg, id=4040, 81.6651pt x 122.6181pt>
 File: antenne.jpg Graphic file (type jpg)
 <use antenne.jpg>
-Package pdftex.def Info: antenne.jpg  used on input line 494.
+Package pdftex.def Info: antenne.jpg  used on input line 491.
 (pdftex.def)             Requested size: 57.16516pt x 85.83206pt.
-<phone.jpg, id=4097, 1265.72874pt x 2327.69624pt>
+<phone.jpg, id=4041, 1265.72874pt x 2327.69624pt>
 File: phone.jpg Graphic file (type jpg)
 <use phone.jpg>
-Package pdftex.def Info: phone.jpg  used on input line 494.
+Package pdftex.def Info: phone.jpg  used on input line 491.
 (pdftex.def)             Requested size: 18.9851pt x 34.91393pt.
 File: phone.jpg Graphic file (type jpg)
 <use phone.jpg>
-Package pdftex.def Info: phone.jpg  used on input line 494.
+Package pdftex.def Info: phone.jpg  used on input line 491.
 (pdftex.def)             Requested size: 18.9851pt x 34.91393pt.
 File: signal.png Graphic file (type png)
 <use signal.png>
-Package pdftex.def Info: signal.png  used on input line 494.
+Package pdftex.def Info: signal.png  used on input line 491.
 (pdftex.def)             Requested size: 29.13731pt x 22.76353pt.
 File: signal.png Graphic file (type png)
 <use signal.png>
-Package pdftex.def Info: signal.png  used on input line 494.
+Package pdftex.def Info: signal.png  used on input line 491.
 (pdftex.def)             Requested size: 29.13731pt x 22.76353pt.
 
-Overfull \hbox (31.56369pt too wide) in paragraph at lines 494--494
+Overfull \hbox (31.56369pt too wide) in paragraph at lines 491--491
  [] 
  []
 
-[69
+[68
 
  <./radio.jpg> <./france_inter.png> <./signal.png> <./antenne.jpg> <./phone.jpg
->] [70
+>] [69
 
-] [71
+] [70
 
 ]
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' undefined
-(Font)              using `T1/cmss/m/n' instead on input line 520.
+(Font)              using `T1/cmss/m/n' instead on input line 517.
+
+[71
+
+]
+<MaxCovPlotNamed.png, id=4270, 701.7417pt x 596.9502pt>
+File: MaxCovPlotNamed.png Graphic file (type png)
+<use MaxCovPlotNamed.png>
+Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 517.
+(pdftex.def)             Requested size: 154.38365pt x 131.32945pt.
+
+Overfull \hbox (12.11987pt too wide) in paragraph at lines 517--517
+[][]  
+ []
 
 [72
 
-]
-<MaxCovPlotNamed.png, id=4325, 701.7417pt x 596.9502pt>
-File: MaxCovPlotNamed.png Graphic file (type png)
-<use MaxCovPlotNamed.png>
-Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 520.
+ <./MaxCovPlotNamed.png>]
+<MaxCovPlotNamed1.png, id=4329, 701.7417pt x 596.9502pt>
+File: MaxCovPlotNamed1.png Graphic file (type png)
+<use MaxCovPlotNamed1.png>
+Package pdftex.def Info: MaxCovPlotNamed1.png  used on input line 517.
 (pdftex.def)             Requested size: 154.38365pt x 131.32945pt.
 
-Overfull \hbox (12.11987pt too wide) in paragraph at lines 520--520
+Overfull \hbox (12.11987pt too wide) in paragraph at lines 517--517
 [][]  
  []
 
 [73
 
- <./MaxCovPlotNamed.png>]
-<MaxCovPlotNamed1.png, id=4384, 701.7417pt x 596.9502pt>
-File: MaxCovPlotNamed1.png Graphic file (type png)
-<use MaxCovPlotNamed1.png>
-Package pdftex.def Info: MaxCovPlotNamed1.png  used on input line 520.
+ <./MaxCovPlotNamed1.png>]
+File: MaxCovPlotNamed.png Graphic file (type png)
+<use MaxCovPlotNamed.png>
+Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 517.
 (pdftex.def)             Requested size: 154.38365pt x 131.32945pt.
 
-Overfull \hbox (12.11987pt too wide) in paragraph at lines 520--520
+Overfull \hbox (12.11987pt too wide) in paragraph at lines 517--517
 [][]  
  []
 
 [74
 
- <./MaxCovPlotNamed1.png>]
+]
 File: MaxCovPlotNamed.png Graphic file (type png)
 <use MaxCovPlotNamed.png>
-Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 520.
-(pdftex.def)             Requested size: 154.38365pt x 131.32945pt.
+Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 555.
+(pdftex.def)             Requested size: 140.34586pt x 119.38792pt.
 
-Overfull \hbox (12.11987pt too wide) in paragraph at lines 520--520
-[][]  
+Overfull \vbox (2.055pt too high) detected at line 555
  []
 
 [75
 
 ]
-File: MaxCovPlotNamed.png Graphic file (type png)
-<use MaxCovPlotNamed.png>
-Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 558.
+File: MaxCovPlotNamed1.png Graphic file (type png)
+<use MaxCovPlotNamed1.png>
+Package pdftex.def Info: MaxCovPlotNamed1.png  used on input line 555.
 (pdftex.def)             Requested size: 140.34586pt x 119.38792pt.
 
-Overfull \vbox (2.055pt too high) detected at line 558
+Overfull \vbox (2.055pt too high) detected at line 555
  []
 
 [76
 
 ]
-File: MaxCovPlotNamed1.png Graphic file (type png)
-<use MaxCovPlotNamed1.png>
-Package pdftex.def Info: MaxCovPlotNamed1.png  used on input line 558.
+<MaxCovPlotNamed2.png, id=4561, 701.7417pt x 596.9502pt>
+File: MaxCovPlotNamed2.png Graphic file (type png)
+<use MaxCovPlotNamed2.png>
+Package pdftex.def Info: MaxCovPlotNamed2.png  used on input line 555.
 (pdftex.def)             Requested size: 140.34586pt x 119.38792pt.
 
-Overfull \vbox (2.055pt too high) detected at line 558
+Overfull \vbox (2.055pt too high) detected at line 555
  []
 
 [77
 
-]
-<MaxCovPlotNamed2.png, id=4616, 701.7417pt x 596.9502pt>
-File: MaxCovPlotNamed2.png Graphic file (type png)
-<use MaxCovPlotNamed2.png>
-Package pdftex.def Info: MaxCovPlotNamed2.png  used on input line 558.
+ <./MaxCovPlotNamed2.png>]
+<MaxCovPlotNamed3.png, id=4620, 701.7417pt x 596.9502pt>
+File: MaxCovPlotNamed3.png Graphic file (type png)
+<use MaxCovPlotNamed3.png>
+Package pdftex.def Info: MaxCovPlotNamed3.png  used on input line 555.
 (pdftex.def)             Requested size: 140.34586pt x 119.38792pt.
 
-Overfull \vbox (2.055pt too high) detected at line 558
+Overfull \vbox (2.055pt too high) detected at line 555
  []
 
 [78
 
- <./MaxCovPlotNamed2.png>]
-<MaxCovPlotNamed3.png, id=4674, 701.7417pt x 596.9502pt>
-File: MaxCovPlotNamed3.png Graphic file (type png)
-<use MaxCovPlotNamed3.png>
-Package pdftex.def Info: MaxCovPlotNamed3.png  used on input line 558.
-(pdftex.def)             Requested size: 140.34586pt x 119.38792pt.
+ <./MaxCovPlotNamed3.png>] [79
 
-Overfull \vbox (2.055pt too high) detected at line 558
- []
-
-[79
-
- <./MaxCovPlotNamed3.png>] [80
-
-] [81
+] [80
 
 ]
-Overfull \vbox (2.613pt too high) detected at line 590
+Overfull \vbox (2.613pt too high) detected at line 587
+ []
+
+[81
+
+]
+Overfull \vbox (2.613pt too high) detected at line 587
  []
 
 [82
 
-]
-Overfull \vbox (2.613pt too high) detected at line 590
- []
-
-[83
+] [83
 
 ] [84
 
@@ -3516,125 +3511,125 @@ Overfull \vbox (2.613pt too high) detected at line 590
 
 ] [86
 
-] [87
+]
+Overfull \hbox (26.26743pt too wide) detected at line 643
+[]
+ []
+
+[87
 
 ]
-Overfull \hbox (26.26743pt too wide) detected at line 646
+Overfull \hbox (26.26743pt too wide) detected at line 643
 []
  []
 
 [88
 
 ]
-Overfull \hbox (26.26743pt too wide) detected at line 646
+Overfull \hbox (26.26743pt too wide) detected at line 643
 []
  []
 
 [89
 
 ]
-Overfull \hbox (26.26743pt too wide) detected at line 646
-[]
+<PartSyst.png, id=5321, 844.8363pt x 445.1832pt>
+File: PartSyst.png Graphic file (type png)
+<use PartSyst.png>
+Package pdftex.def Info: PartSyst.png  used on input line 657.
+(pdftex.def)             Requested size: 253.45285pt x 133.55598pt.
+
+Overfull \vbox (2.47307pt too high) detected at line 657
  []
 
 [90
 
-]
-<PartSyst.png, id=5374, 844.8363pt x 445.1832pt>
+ <./PartSyst.png>]
 File: PartSyst.png Graphic file (type png)
 <use PartSyst.png>
-Package pdftex.def Info: PartSyst.png  used on input line 660.
+Package pdftex.def Info: PartSyst.png  used on input line 657.
 (pdftex.def)             Requested size: 253.45285pt x 133.55598pt.
 
-Overfull \vbox (2.47307pt too high) detected at line 660
+Overfull \vbox (2.47307pt too high) detected at line 657
  []
 
 [91
 
- <./PartSyst.png>]
+]
 File: PartSyst.png Graphic file (type png)
 <use PartSyst.png>
-Package pdftex.def Info: PartSyst.png  used on input line 660.
+Package pdftex.def Info: PartSyst.png  used on input line 657.
 (pdftex.def)             Requested size: 253.45285pt x 133.55598pt.
 
-Overfull \vbox (2.47307pt too high) detected at line 660
+Overfull \vbox (2.47307pt too high) detected at line 657
  []
 
 [92
 
-]
-File: PartSyst.png Graphic file (type png)
-<use PartSyst.png>
-Package pdftex.def Info: PartSyst.png  used on input line 660.
-(pdftex.def)             Requested size: 253.45285pt x 133.55598pt.
-
-Overfull \vbox (2.47307pt too high) detected at line 660
- []
-
-[93
+] [93
 
 ] [94
 
 ] [95
 
-] [96
-
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 676.
+(hyperref)                removing `math shift' on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 676.
+(hyperref)                removing `superscript' on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 676.
+(hyperref)                removing `superscript' on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\otimes' on input line 676.
+(hyperref)                removing `\otimes' on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 676.
+(hyperref)                removing `subscript' on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 676.
+(hyperref)                removing `subscript' on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 676.
+(hyperref)                removing `math shift' on input line 673.
 
-[97
+[96
 
-] [98
+] [97
 
 ]
-Overfull \vbox (3.8168pt too high) detected at line 742
+Overfull \vbox (3.8168pt too high) detected at line 739
+ []
+
+[98
+
+]
+Overfull \vbox (3.8168pt too high) detected at line 739
  []
 
 [99
 
 ]
-Overfull \vbox (3.8168pt too high) detected at line 742
+Overfull \vbox (2.37242pt too high) detected at line 765
  []
 
 [100
 
 ]
-Overfull \vbox (2.37242pt too high) detected at line 768
+Overfull \vbox (2.37242pt too high) detected at line 765
  []
 
 [101
 
-]
-Overfull \vbox (2.37242pt too high) detected at line 768
- []
-
-[102
+] [102
 
 ] [103
 
@@ -3642,48 +3637,55 @@ Overfull \vbox (2.37242pt too high) detected at line 768
 
 ] [105
 
-] [106
-
 ]
-Overfull \vbox (2.5604pt too high) detected at line 853
+Overfull \vbox (2.5604pt too high) detected at line 850
  []
 
-[107
+[106
 
 ]
-Overfull \hbox (6.36992pt too wide) detected at line 853
+Overfull \hbox (6.36992pt too wide) detected at line 850
 [][]
  []
 
-[108
+[107
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{defi:capacit
 y}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.870 \end{frame}
-                  [109
+l.867 \end{frame}
+                  [108
+
+] [109
 
 ] [110
 
-] [111
+]
+Overfull \vbox (10.7385pt too high) detected at line 940
+ []
+
+[111
 
 ]
-Overfull \vbox (10.7385pt too high) detected at line 943
+Overfull \vbox (10.7385pt too high) detected at line 940
  []
 
 [112
 
 ]
-Overfull \vbox (10.7385pt too high) detected at line 943
+PGFPlots: reading {Data_BAC/ZEBorder2.csv}
+
+Overfull \vbox (10.7385pt too high) detected at line 940
  []
 
 [113
 
 ]
 PGFPlots: reading {Data_BAC/ZEBorder2.csv}
+PGFPlots: reading {Data_BAC/ZEBorder3.csv}
 
-Overfull \vbox (10.7385pt too high) detected at line 943
+Overfull \vbox (10.7385pt too high) detected at line 940
  []
 
 [114
@@ -3691,24 +3693,33 @@ Overfull \vbox (10.7385pt too high) detected at line 943
 ]
 PGFPlots: reading {Data_BAC/ZEBorder2.csv}
 PGFPlots: reading {Data_BAC/ZEBorder3.csv}
+PGFPlots: reading {Data_BAC/ZEBorder7.csv}
 
-Overfull \vbox (10.7385pt too high) detected at line 943
+Overfull \vbox (10.7385pt too high) detected at line 940
  []
 
 [115
 
 ]
-PGFPlots: reading {Data_BAC/ZEBorder2.csv}
-PGFPlots: reading {Data_BAC/ZEBorder3.csv}
-PGFPlots: reading {Data_BAC/ZEBorder7.csv}
-
-Overfull \vbox (10.7385pt too high) detected at line 943
+Overfull \hbox (2.94707pt too wide) detected at line 959
+\OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
+0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
+ : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
+.95 X[]\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.9
+5 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/10.95 I\OT1/cmss/m/n/10.95 (
+\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95 : \OT1/mathkerncmss/m/sl/1
+0.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 
+) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.95 R[] \OT1/cmss/m/n/10.95 +
+ \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/
+10.95 I\OT1/cmss/m/n/10.95 ((\OT1/mathkerncmss/m/sl/10.95 X[]\OML/cmm/m/it/10.9
+5 ; \OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 ) : \OT1/mathkerncmss/m
+/sl/10.95 Y\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;
  []
 
 [116
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 962
+Overfull \hbox (2.94707pt too wide) detected at line 959
 \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
 0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
  : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
@@ -3726,7 +3737,7 @@ Overfull \hbox (2.94707pt too wide) detected at line 962
 [117
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 962
+Overfull \hbox (2.94707pt too wide) detected at line 959
 \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
 0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
  : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
@@ -3744,25 +3755,15 @@ Overfull \hbox (2.94707pt too wide) detected at line 962
 [118
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 962
-\OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
-0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
- : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
-.95 X[]\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.9
-5 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/10.95 I\OT1/cmss/m/n/10.95 (
-\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95 : \OT1/mathkerncmss/m/sl/1
-0.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 
-) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.95 R[] \OT1/cmss/m/n/10.95 +
- \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/
-10.95 I\OT1/cmss/m/n/10.95 ((\OT1/mathkerncmss/m/sl/10.95 X[]\OML/cmm/m/it/10.9
-5 ; \OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 ) : \OT1/mathkerncmss/m
-/sl/10.95 Y\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;
+Overfull \hbox (21.41133pt too wide) detected at line 983
+\OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
+cmss/m/n/10.95 ) := []
  []
 
 [119
 
 ]
-Overfull \hbox (21.41133pt too wide) detected at line 986
+Overfull \hbox (21.41133pt too wide) detected at line 983
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
 cmss/m/n/10.95 ) := []
  []
@@ -3770,28 +3771,20 @@ cmss/m/n/10.95 ) := []
 [120
 
 ]
-Overfull \hbox (21.41133pt too wide) detected at line 986
+Overfull \hbox (21.41133pt too wide) detected at line 983
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
 cmss/m/n/10.95 ) := []
  []
 
 [121
 
-]
-Overfull \hbox (21.41133pt too wide) detected at line 986
-\OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
-cmss/m/n/10.95 ) := []
- []
-
-[122
+] [122
 
 ] [123
 
 ] [124
 
 ] [125
-
-] [126
 
 ]
 Missing character: There is no ( in font nullfont!
@@ -3849,6 +3842,66 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ; in font nullfont!
+ [126
+
+]
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {Data_BAC/ZEBorder7.csv}
+PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
  [127
 
 ]
@@ -3911,65 +3964,7 @@ PGFPlots: reading {Data_BAC/ZEBorder7.csv}
 PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
  [128
 
-]
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-PGFPlots: reading {Data_BAC/ZEBorder7.csv}
-PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
- [129
+] [129
 
 ] [130
 
@@ -3977,10 +3972,10 @@ PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
 
 ] [132
 
-] [133
-
 ]
-[134
+[133
+
+] [134
 
 ] [135
 
@@ -3996,31 +3991,41 @@ PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
 
 ] [141
 
-] [142
+]
+Overfull \hbox (23.76434pt too wide) detected at line 1229
+[]
+ []
+
+[142
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1232
+Overfull \hbox (23.76434pt too wide) detected at line 1229
 []
  []
 
 [143
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1232
+Overfull \hbox (23.76434pt too wide) detected at line 1229
 []
  []
 
 [144
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1232
-[]
+Overfull \hbox (1.14346pt too wide) detected at line 1251
+[] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
+P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
+\OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
+erncmss/m/sl/10.95 W\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 y[]y[]\OM
+S/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 x\OT1/cmss/m/n/10.95 ) \OML/cmm/
+m/it/10.95 :
  []
 
 [145
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1254
+Overfull \hbox (1.14346pt too wide) detected at line 1251
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4032,7 +4037,7 @@ m/it/10.95 :
 [146
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1254
+Overfull \hbox (1.14346pt too wide) detected at line 1251
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4044,7 +4049,7 @@ m/it/10.95 :
 [147
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1254
+Overfull \hbox (1.14346pt too wide) detected at line 1251
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4055,17 +4060,7 @@ m/it/10.95 :
 
 [148
 
-]
-Overfull \hbox (1.14346pt too wide) detected at line 1254
-[] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
-P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
-\OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
-erncmss/m/sl/10.95 W\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 y[]y[]\OM
-S/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 x\OT1/cmss/m/n/10.95 ) \OML/cmm/
-m/it/10.95 :
- []
-
-[149
+] [149
 
 ] [150
 
@@ -4087,27 +4082,28 @@ m/it/10.95 :
 
 ] [159
 
-] [160
-
 ]
-[161
+[160
 
-] [162
+] [161
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1330.
+(hyperref)                removing `\translate ' on input line 1327.
 
 (./defense.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
-[163
+[162
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
-[164
+[163
+
+
+] [164
 
 
 ] [165
@@ -4137,9 +4133,6 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ] [173
 
 
-] [174
-
-
 ]
 \tf@nav=\write6
 \openout6 = `defense.nav'.
@@ -4150,16 +4143,22 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1340.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1340.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1337.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1337.
 
 (./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1340.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1340.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1337.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1337.
 
-Package rerunfilecheck Info: File `defense.out' has not changed.
-(rerunfilecheck)             Checksum: 08E4F61BB5656E84E9E340DD9ED51533;1179.
 
+
+Package rerunfilecheck Warning: File `defense.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `defense.out':
+(rerunfilecheck)             Before: 08E4F61BB5656E84E9E340DD9ED51533;1179
+(rerunfilecheck)             After:  AFD5807837168819EE920353A2A8E137;1179.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -4168,57 +4167,84 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 46479 strings out of 494821
- 1070769 string characters out of 6177891
- 1364700 words of memory out of 5000000
+ 46486 strings out of 494821
+ 1070885 string characters out of 6177891
+ 1364698 words of memory out of 5000000
  48598 multiletter control sequences out of 15000+600000
  582669 words of font info for 137 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  74i,21n,128p,10378b,2298s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi2074.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0700.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1440.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0500.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0500.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1200.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecso1095.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1095.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1200.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1000.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1000.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1095.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1095.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1440.600p
-k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0600.600p
-k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on defense.pdf (174 pages, 8634357 bytes).
+pdfTeX warning (dest): name{Navigation174} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.5.1.160} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.4.2.146} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.4.1.133} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.3.2.117} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.3.1.97} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.2.2.82} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.2.1.72} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.1.2.31} has been referenced but does not e
+xist, replaced by a fixed one
+
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi2074.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0700.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1440.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0500.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0500.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1200.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecso1095.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1095.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1200.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1000.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1000.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0800.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1095.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1095.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1440.600pk>
+ </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecss0600.600pk>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on defense.pdf (173 pages, 8631686 bytes).
 PDF statistics:
- 10491 PDF objects out of 10688 (max. 8388607)
- 9591 compressed objects within 96 object streams
- 388 named destinations out of 1000 (max. 500000)
+ 10445 PDF objects out of 10688 (max. 8388607)
+ 9546 compressed objects within 96 object streams
+ 395 named destinations out of 1000 (max. 500000)
  281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
