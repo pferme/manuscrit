@@ -15,7 +15,7 @@
               };
               \only<3->{\draw[red] (M-1-2.north west) rectangle (M-1-5.south east);
                 \draw[red] (M-4-2.north west) rectangle (M-4-5.south east);}
-              \only<2-3>{\node[below of=M-4-5,text=white] (white) {$C^{\varphi}((P_{i,j(i)})_{i \in T}) \simeq n \mathbb{E}\left[\varphi\left(h\Bin\left(\frac{x_{\varphi}}{h}\right)\right)\right] \simeq n \mathbb{E}\left[\varphi\left(\Poi(x_{\varphi})\right)\right]$};}
+              \only<1-3>{\node[below of=M-4-5,text=white] (white) {$C^{\varphi}((P_{i,j(i)})_{i \in T}) \simeq n \mathbb{E}\left[\varphi\left(h\Bin\left(\frac{x_{\varphi}}{h}\right)\right)\right] \simeq n \mathbb{E}\left[\varphi\left(\Poi(x_{\varphi})\right)\right]$};}
               \only<4->{
                 \draw[blue] (M-1-5) circle (10pt);
                 \draw[blue] (M-2-2) circle (10pt);

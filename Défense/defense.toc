@@ -3,13 +3,13 @@
 \beamer@subsectionintoc {1}{2}{Les corr\IeC {\'e}lations non-signalantes}{30}{0}{1}
 \beamer@sectionintoc {2}{Generalized MaxCoverage}{71}{0}{2}
 \beamer@subsectionintoc {2}{1}{Presentation of the problem}{71}{0}{2}
-\beamer@subsectionintoc {2}{2}{A tight approximation algorithm for $\varphi $-\textsc {MaxCoverage}}{82}{0}{2}
-\beamer@sectionintoc {3}{Multiple-access channels}{99}{0}{3}
-\beamer@subsectionintoc {3}{1}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and lower bounds}{99}{0}{3}
-\beamer@subsectionintoc {3}{2}{Relaxed non-signaling assisted capacity region}{119}{0}{3}
-\beamer@sectionintoc {4}{Broadcast channels}{135}{0}{4}
-\beamer@subsectionintoc {4}{1}{Approximation algorithm for deterministic broadcast channel coding}{135}{0}{4}
-\beamer@subsectionintoc {4}{2}{Hardness of approximation for broadcast channel coding}{148}{0}{4}
-\beamer@sectionintoc {5}{Conclusion}{162}{0}{5}
-\beamer@subsectionintoc {5}{1}{Conclusion}{162}{0}{5}
-\beamer@sectionintoc {6}{Bibliography}{165}{1}{6}
+\beamer@subsectionintoc {2}{2}{A tight approximation algorithm for $\varphi $-\textsc {MaxCoverage}}{81}{0}{2}
+\beamer@sectionintoc {3}{Multiple-access channels}{98}{0}{3}
+\beamer@subsectionintoc {3}{1}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and lower bounds}{98}{0}{3}
+\beamer@subsectionintoc {3}{2}{Relaxed non-signaling assisted capacity region}{118}{0}{3}
+\beamer@sectionintoc {4}{Broadcast channels}{134}{0}{4}
+\beamer@subsectionintoc {4}{1}{Approximation algorithm for deterministic broadcast channel coding}{134}{0}{4}
+\beamer@subsectionintoc {4}{2}{Hardness of approximation for broadcast channel coding}{147}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{161}{0}{5}
+\beamer@subsectionintoc {5}{1}{Conclusion}{161}{0}{5}
+\beamer@sectionintoc {6}{Bibliography}{164}{1}{6}
