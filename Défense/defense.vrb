@@ -1,0 +1,30 @@
+\frametitle{Proof ideas: hardness of approximation}
+\begin{itemize}
+  \item Generalization of \emph{partitioning system} by Feige~\cite{Feige98}.
+    \bigskip
+    \pause
+  \item With $C^{\varphi}(\mathcal{Q}) := \sum_{a \in [n]} \varphi(\abs{\set{P \in \mathcal{Q} : a \in P}})$ and $\abs{P_{i,j}} = \frac{nx_{\varphi}}{h}$:
+    \begin{center}
+      %\includegraphics[scale=0.3]{PartSyst.png}
+    \begin{tikzpicture}
+      \matrix[matrix of math nodes] (M)
+              {
+                \underline{\mathcal{P}_1:} & P_{1,1} & P_{1,2} & \ldots & P_{1,h} & |[red]| \only<2>{\textcolor{white}{C^{\varphi}(\mathcal{P}_1) = n\varphi(x_{\varphi})}}\only<3->{C^{\varphi}(\mathcal{P}_1) = n\varphi(x_{\varphi})}\\
+                \underline{\mathcal{P}_2:} &  P_{2,1} & P_{2,2} & \ldots & P_{2,h} & \\
+                \vdots & \vdots & \vdots & \ddots & \vdots & \\
+                \underline{\mathcal{P}_R:} & P_{R,1} & P_{R,2} & \ldots & P_{R,h} & |[red]| \only<2>{\textcolor{white}{C^{\varphi}(\mathcal{P}_R) = n\varphi(x_{\varphi})}}\only<3->{C^{\varphi}(\mathcal{P}_R) = n\varphi(x_{\varphi})}\\
+              };
+              \only<3->{\draw[red] (M-1-2.north west) rectangle (M-1-5.south east);
+                \draw[red] (M-4-2.north west) rectangle (M-4-5.south east);}
+              \only<2-3>{\node[below of=M-4-5,text=white] (white) {$C^{\varphi}((P_{i,j(i)})_{i \in T}) \simeq n \mathbb{E}\left[\varphi\left(h\Bin\left(\frac{x_{\varphi}}{h}\right)\right)\right] \simeq n \mathbb{E}\left[\varphi\left(\Poi(x_{\varphi})\right)\right]$};}
+              \only<4->{
+                \draw[blue] (M-1-5) circle (10pt);
+                \draw[blue] (M-2-2) circle (10pt);
+                \draw[blue] (M-3-4) circle (10pt);
+                \draw[blue] (M-4-3) circle (10pt);
+                \node[below of=M-4-5,text=blue] (blue) {$C^{\varphi}((P_{i,j(i)})_{i \in T}) \simeq n \mathbb{E}\left[\varphi\left(\Bin\left(h,\frac{x_{\varphi}}{h}\right)\right)\right] \simeq n \mathbb{E}\left[\varphi\left(\Poi(x_{\varphi})\right)\right]$};}
+    \end{tikzpicture}
+    \end{center}
+    \pause\pause\pause
+    \item Reduction from Gap-Label-Cover~\cite{Feige98} using this structure.
+  \end{itemize}

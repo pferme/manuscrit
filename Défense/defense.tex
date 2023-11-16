@@ -30,6 +30,7 @@
 \usetikzlibrary{shapes,arrows,snakes}
 \usetikzlibrary{spy}
 \usetikzlibrary{fit,positioning}
+\usetikzlibrary{matrix}
 
 \tikzstyle{block} = [draw, fill=white, rectangle, 
   minimum height=2em, minimum width=3em]
@@ -555,23 +556,25 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Link to Generalized List-decoding}
+\begin{frame}{Application to generalized list-decoding}
   \begin{itemize}
-  \item For regular sets $T_x \subseteq \mathcal{Y}$ (ie. $\forall x, \abs{T_x}=t$):
+  \item \underline{$\varphi$-list-decoding:} list-decoding with variable list size and probability $\frac{\varphi(\ell)}{\ell}$ of decoding successfully a list of size $\ell$.
+    \pause
+    \bigskip
+  \item For regular sets $T_x \subseteq \mathcal{Y}$ (ie. $\forall x, \abs{T_x}=t$), define:
     \[ W(y|x) := \begin{cases}
       \frac{1}{t} & \text{if } y \in T_x\ ,\\
       0 & \text{otherwise}\ .
     \end{cases}\]
-  \item Success probability of size-$k$ code $S \subseteq \mathcal{X}$ is $\frac{1}{kt}\sum_{y \in \mathcal{Y}} \varphi(\abs{S}_y)$ for $\varphi$-list-decoding.
+  \item Success probability of code $S \subseteq \mathcal{X}$ is $\frac{1}{t|S|}\sum_{y \in \mathcal{Y}} \varphi(\abs{S}_y)$.
     \bigskip
     \pause
-  \item Up to constant factor $\frac{1}{kt}$, same value as for $\varphi$-\textsc{MaxCoverage}: tight approximation will follow for that class of channels.
-  \item Open to extend approximation algorithm to all channels.
+  \item Up to constant factor, same value as for $\varphi$-\textsc{MaxCoverage}!
   \end{itemize}
 \end{frame}
 
-\subsection{A tight approximation algorithm}
-\begin{frame}{Our results}
+\subsection{A tight approximation algorithm for $\varphi$-\textsc{MaxCoverage}}
+\begin{frame}{A tight approximation algorithm for $\varphi$-\textsc{MaxCoverage}}
   \underline{$\varphi$-\textsc{MaxCoverage} problem:}
     \begin{align*}
       \maxi &&& C^{\varphi}(S) := \sum_{a \in [n]} w_a\varphi(\abs{S}_a)\\
@@ -643,16 +646,33 @@
   \end{align*}
 \end{frame}
 
-\begin{frame}{Proof ideas: hardness of approximation}
+\begin{frame}[fragile]{Proof ideas: hardness of approximation}
   \begin{itemize}
   \item Generalization of \emph{partitioning system} by Feige~\cite{Feige98}.
     \bigskip
     \pause
   \item With $C^{\varphi}(\mathcal{Q}) := \sum_{a \in [n]} \varphi(\abs{\set{P \in \mathcal{Q} : a \in P}})$ and $\abs{P_{i,j}} = \frac{nx_{\varphi}}{h}$:
     \begin{center}
-      \includegraphics[scale=0.3]{PartSyst.png}
-    \end{center}
-    \pause
+    \begin{tikzpicture}
+      \matrix[matrix of math nodes] (M)
+              {
+                \underline{\mathcal{P}_1:} & P_{1,1} & P_{1,2} & \ldots & P_{1,h} & |[red]| \only<2>{\textcolor{white}{C^{\varphi}(\mathcal{P}_1) = n\varphi(x_{\varphi})}}\only<3->{C^{\varphi}(\mathcal{P}_1) = n\varphi(x_{\varphi})}\\
+                \underline{\mathcal{P}_2:} &  P_{2,1} & P_{2,2} & \ldots & P_{2,h} & \\
+                \vdots & \vdots & \vdots & \ddots & \vdots & \\
+                \underline{\mathcal{P}_R:} & P_{R,1} & P_{R,2} & \ldots & P_{R,h} & |[red]| \only<2>{\textcolor{white}{C^{\varphi}(\mathcal{P}_R) = n\varphi(x_{\varphi})}}\only<3->{C^{\varphi}(\mathcal{P}_R) = n\varphi(x_{\varphi})}\\
+              };
+              \only<3->{\draw[red] (M-1-2.north west) rectangle (M-1-5.south east);
+                \draw[red] (M-4-2.north west) rectangle (M-4-5.south east);}
+              \only<2-3>{\node[below of=M-4-5,text=white] (white) {$C^{\varphi}((P_{i,j(i)})_{i \in T}) \simeq n \mathbb{E}\left[\varphi\left(h\Bin\left(\frac{x_{\varphi}}{h}\right)\right)\right] \simeq n \mathbb{E}\left[\varphi\left(\Poi(x_{\varphi})\right)\right]$};}
+              \only<4->{
+                \draw[blue] (M-1-5) circle (10pt);
+                \draw[blue] (M-2-2) circle (10pt);
+                \draw[blue] (M-3-4) circle (10pt);
+                \draw[blue] (M-4-3) circle (10pt);
+                \node[below of=M-4-5,text=blue] (blue) {$C^{\varphi}((P_{i,j(i)})_{i \in T}) \simeq n \mathbb{E}\left[\varphi\left(\Bin\left(h,\frac{x_{\varphi}}{h}\right)\right)\right] \simeq n \mathbb{E}\left[\varphi\left(\Poi(x_{\varphi})\right)\right]$};}
+    \end{tikzpicture}
+    \end{center}  
+    \pause\pause\pause
     \item Reduction from Gap-Label-Cover~\cite{Feige98} using this structure.
   \end{itemize}
 \end{frame}
