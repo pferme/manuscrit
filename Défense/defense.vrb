@@ -5,7 +5,6 @@
     \pause
   \item With $C^{\varphi}(\mathcal{Q}) := \sum_{a \in [n]} \varphi(\abs{\set{P \in \mathcal{Q} : a \in P}})$ and $\abs{P_{i,j}} = \frac{nx_{\varphi}}{h}$:
     \begin{center}
-      %\includegraphics[scale=0.3]{PartSyst.png}
     \begin{tikzpicture}
       \matrix[matrix of math nodes] (M)
               {

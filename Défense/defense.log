@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  16 NOV 2023 15:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  16 NOV 2023 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3574,56 +3574,56 @@ Overfull \hbox (26.26743pt too wide) detected at line 647
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 695.
+(hyperref)                removing `math shift' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 695.
+(hyperref)                removing `superscript' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 695.
+(hyperref)                removing `superscript' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\otimes' on input line 695.
+(hyperref)                removing `\otimes' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 695.
+(hyperref)                removing `subscript' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 695.
+(hyperref)                removing `subscript' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 695.
+(hyperref)                removing `math shift' on input line 694.
 
 [99
 
 ] [100
 
 ]
-Overfull \vbox (3.8168pt too high) detected at line 761
+Overfull \vbox (3.8168pt too high) detected at line 760
  []
 
 [101
 
 ]
-Overfull \vbox (3.8168pt too high) detected at line 761
+Overfull \vbox (3.8168pt too high) detected at line 760
  []
 
 [102
 
 ]
-Overfull \vbox (2.37242pt too high) detected at line 787
+Overfull \vbox (2.37242pt too high) detected at line 786
  []
 
 [103
 
 ]
-Overfull \vbox (2.37242pt too high) detected at line 787
+Overfull \vbox (2.37242pt too high) detected at line 786
  []
 
 [104
@@ -3637,13 +3637,13 @@ Overfull \vbox (2.37242pt too high) detected at line 787
 ] [108
 
 ]
-Overfull \vbox (2.5604pt too high) detected at line 872
+Overfull \vbox (2.5604pt too high) detected at line 871
  []
 
 [109
 
 ]
-Overfull \hbox (6.36992pt too wide) detected at line 872
+Overfull \hbox (6.36992pt too wide) detected at line 871
 [][]
  []
 
@@ -3653,7 +3653,7 @@ Overfull \hbox (6.36992pt too wide) detected at line 872
 y}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.889 \end{frame}
+l.888 \end{frame}
                   [111
 
 ] [112
@@ -3661,13 +3661,13 @@ l.889 \end{frame}
 ] [113
 
 ]
-Overfull \vbox (10.7385pt too high) detected at line 962
+Overfull \vbox (10.7385pt too high) detected at line 961
  []
 
 [114
 
 ]
-Overfull \vbox (10.7385pt too high) detected at line 962
+Overfull \vbox (10.7385pt too high) detected at line 961
  []
 
 [115
@@ -3675,7 +3675,7 @@ Overfull \vbox (10.7385pt too high) detected at line 962
 ]
 PGFPlots: reading {Data_BAC/ZEBorder2.csv}
 
-Overfull \vbox (10.7385pt too high) detected at line 962
+Overfull \vbox (10.7385pt too high) detected at line 961
  []
 
 [116
@@ -3684,7 +3684,7 @@ Overfull \vbox (10.7385pt too high) detected at line 962
 PGFPlots: reading {Data_BAC/ZEBorder2.csv}
 PGFPlots: reading {Data_BAC/ZEBorder3.csv}
 
-Overfull \vbox (10.7385pt too high) detected at line 962
+Overfull \vbox (10.7385pt too high) detected at line 961
  []
 
 [117
@@ -3694,13 +3694,13 @@ PGFPlots: reading {Data_BAC/ZEBorder2.csv}
 PGFPlots: reading {Data_BAC/ZEBorder3.csv}
 PGFPlots: reading {Data_BAC/ZEBorder7.csv}
 
-Overfull \vbox (10.7385pt too high) detected at line 962
+Overfull \vbox (10.7385pt too high) detected at line 961
  []
 
 [118
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 981
+Overfull \hbox (2.94707pt too wide) detected at line 980
 \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
 0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
  : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
@@ -3718,7 +3718,7 @@ Overfull \hbox (2.94707pt too wide) detected at line 981
 [119
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 981
+Overfull \hbox (2.94707pt too wide) detected at line 980
 \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
 0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
  : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
@@ -3736,7 +3736,7 @@ Overfull \hbox (2.94707pt too wide) detected at line 981
 [120
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 981
+Overfull \hbox (2.94707pt too wide) detected at line 980
 \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
 0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
  : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
@@ -3754,7 +3754,7 @@ Overfull \hbox (2.94707pt too wide) detected at line 981
 [121
 
 ]
-Overfull \hbox (21.41133pt too wide) detected at line 1005
+Overfull \hbox (21.41133pt too wide) detected at line 1004
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
 cmss/m/n/10.95 ) := []
  []
@@ -3762,7 +3762,7 @@ cmss/m/n/10.95 ) := []
 [122
 
 ]
-Overfull \hbox (21.41133pt too wide) detected at line 1005
+Overfull \hbox (21.41133pt too wide) detected at line 1004
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
 cmss/m/n/10.95 ) := []
  []
@@ -3770,7 +3770,7 @@ cmss/m/n/10.95 ) := []
 [123
 
 ]
-Overfull \hbox (21.41133pt too wide) detected at line 1005
+Overfull \hbox (21.41133pt too wide) detected at line 1004
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
 cmss/m/n/10.95 ) := []
  []
@@ -3991,28 +3991,28 @@ PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
 ] [144
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1251
+Overfull \hbox (23.76434pt too wide) detected at line 1250
 []
  []
 
 [145
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1251
+Overfull \hbox (23.76434pt too wide) detected at line 1250
 []
  []
 
 [146
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1251
+Overfull \hbox (23.76434pt too wide) detected at line 1250
 []
  []
 
 [147
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1273
+Overfull \hbox (1.14346pt too wide) detected at line 1272
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4024,7 +4024,7 @@ m/it/10.95 :
 [148
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1273
+Overfull \hbox (1.14346pt too wide) detected at line 1272
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4036,7 +4036,7 @@ m/it/10.95 :
 [149
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1273
+Overfull \hbox (1.14346pt too wide) detected at line 1272
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4048,7 +4048,7 @@ m/it/10.95 :
 [150
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1273
+Overfull \hbox (1.14346pt too wide) detected at line 1272
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4089,7 +4089,7 @@ m/it/10.95 :
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1349.
+(hyperref)                removing `\translate ' on input line 1348.
 
 (./defense.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
@@ -4142,12 +4142,12 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1359.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1359.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1358.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1358.
 
 (./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1359.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1359.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1358.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1358.
 
 Package rerunfilecheck Info: File `defense.out' has not changed.
 (rerunfilecheck)             Checksum: 7CFFFCD345CA0328271B3A867439A1EC;1196.
@@ -4207,7 +4207,7 @@ y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on defense.pdf (176 pages, 8158214 bytes).
+Output written on defense.pdf (176 pages, 8158346 bytes).
 PDF statistics:
  10609 PDF objects out of 10688 (max. 8388607)
  9707 compressed objects within 98 object streams
