@@ -325,7 +325,7 @@
       \node [block] (A) {\includegraphics[scale=0.08]{Alice.png}};
       \only<2->{\node [above of=A] (x) {$x$};
       \draw [->] (x) -- (A);}
-      \only<3->{\node [below of=A] (a) {$\alert{a}$};
+      \only<3->{\node [below of=A] (a) {\only<3-6>{$\alert{a}$}\only<7>{\textcolor{darkgreen}{$\mathcal{A}(x)=0$}}};
       \draw [->] (A) -- (a);}
 
       \node [right of=A] (I) {};
@@ -336,10 +336,10 @@
       \node [block, right of=I] (B) {\includegraphics[scale=0.16]{Bob.jpg}};
       \only<2->{\node [above of=B] (y) {$y$};
       \draw [->] (y) -- (B);}
-      \only<3->{\node [below of=B] (b) {$\alert{b}$};
+      \only<3->{\node [below of=B] (b) {\only<3-6>{$\alert{b}$}\only<7>{\textcolor{darkgreen}{$\mathcal{B}(y)=0$}}};
       \draw [->] (B) -- (b);}
 
-      \only<7>{\node [starburst, fill=white, draw=lightred, line width=1pt, text=red] at (I) {\Large $3/4$};}
+      \only<7>{\node [starburst, fill=white, draw=darkgreen, line width=1pt, text=darkgreen] at (I) {\Large $3/4$};}
    \end{tikzpicture}
    \bigskip
    \\
@@ -373,18 +373,19 @@
       \only<2->{
         \draw [snake=coil,segment aspect=0, draw=blue] (A) -- (B);
         \node [circle, fill=white, draw=blue, text=blue] at (I) (Corr) {\only<2-4>{$\lambda$}\only<5-7>{$\varphi$}\only<8->{\textrm{NS}}};}
-      \only<4>{\node [starburst, fill=white, draw=lightred, line width=1pt, text=red] at (I) {\Large $3/4$};}
-      \only<7>{\node [starburst, fill=white, draw=lightred, line width=1pt, text=red] at (I) {\Large $85\%$};}
-      \only<11>{\node [starburst, fill=white, draw=lightred, line width=1pt, align=left, text=red] at (I) {\Large $100\%$};}
+      \only<4>{\node [starburst, fill=white, draw=darkgreen, line width=1pt, text=darkgreen] at (I) {\Large $3/4$};}
+      \only<7>{\node [starburst, fill=white, draw=darkgreen, line width=1pt, text=darkgreen] at (I) {\Large $85\%$};}
+      \only<11>{\node [starburst, fill=white, draw=darkgreen, line width=1pt, align=left, text=darkgreen] at (I) {\Large $100\%$};}
     \end{tikzpicture}\\\bigskip
     
     \only<3-4>{\emph{Avant l'expérience}, s'accordent sur un \textcolor{blue}{$\lambda$} aléatoire.\\
       Alice et Bob peuvent l'utiliser \emph{tous les deux} pour choisir $\alert{a}$ et $\alert{b}$.}
     \only<6-7>{Toujours \textcolor{blue}{pas de communication} ! Stratégie $P(\alert{ab}\textcolor{blue}{\textbf{|}}xy)$ vérifie que :\\
       $\alert{a}$ \textcolor{blue}{ne dépend pas de} $y$ et $\alert{b}$ \textcolor{blue}{ne dépend pas de} $x$.}
-    \only<9->{\emph{Toutes les stratégies $P(\alert{ab}\textcolor{blue}{\textbf{|}}xy)$ \textcolor{blue}{sans communication}}, càd telles que :\\}
+    \only<9-10>{\emph{Toutes les stratégies $P(\alert{ab}\textcolor{blue}{\textbf{|}}xy)$ \textcolor{blue}{sans communication}}, càd telles que :\\}
     \only<9>{$\alert{a}$ \textcolor{blue}{ne dépend pas de} $y$ et $\alert{b}$ \textcolor{blue}{ne dépend pas de} $x$.}
-    \only<10->{$P(\alert{a}|xy)=P(\alert{a}|xy')$ et $P(\alert{b}|xy)=P(\alert{b}|x'y)$.}
+    \only<10>{$P(\alert{a}|xy)=P(\alert{a}|xy')$ et $P(\alert{b}|xy)=P(\alert{b}|x'y)$.}
+    \only<11->{\textcolor{darkgreen}{$P(ab|xy) = \frac{1}{2}$ si $a,b,x,y$ satisfont l'objectif, $P(ab|xy) = 0$ sinon.}}
   \end{center}
 \end{frame}
 
