@@ -5,7 +5,7 @@
 \beamer@subsectionintoc {2}{1}{Presentation of the problem}{71}{0}{2}
 \beamer@subsectionintoc {2}{2}{A tight approximation algorithm for $\varphi $-\textsc {MaxCoverage}}{81}{0}{2}
 \beamer@sectionintoc {3}{Multiple-access channels}{98}{0}{3}
-\beamer@subsectionintoc {3}{1}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and lower bounds}{98}{0}{3}
+\beamer@subsectionintoc {3}{1}{An efficient algorithm for $\mathrm {S}^{\mathrm {NS}}(W^{\otimes n},k_1,k_2)$ and inner bounds}{98}{0}{3}
 \beamer@subsectionintoc {3}{2}{Relaxed non-signaling assisted capacity region}{118}{0}{3}
 \beamer@sectionintoc {4}{Broadcast channels}{134}{0}{4}
 \beamer@subsectionintoc {4}{1}{Approximation algorithm for deterministic broadcast channel coding}{134}{0}{4}
