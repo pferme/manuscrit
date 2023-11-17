@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  17 NOV 2023 12:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  17 NOV 2023 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3338,7 +3338,7 @@ Package pdftex.def Info: Bob.jpg  used on input line 391.
 ]
 File: tin-can-telephone.jpg Graphic file (type jpg)
 <use tin-can-telephone.jpg>
-Package pdftex.def Info: tin-can-telephone.jpg  used on input line 493.
+Package pdftex.def Info: tin-can-telephone.jpg  used on input line 492.
 (pdftex.def)             Requested size: 216.20941pt x 72.27055pt.
  [67
 
@@ -3346,50 +3346,50 @@ Package pdftex.def Info: tin-can-telephone.jpg  used on input line 493.
 <radio.jpg, id=4036, 216.81pt x 142.131pt>
 File: radio.jpg Graphic file (type jpg)
 <use radio.jpg>
-Package pdftex.def Info: radio.jpg  used on input line 493.
+Package pdftex.def Info: radio.jpg  used on input line 492.
 (pdftex.def)             Requested size: 43.36122pt x 28.42569pt.
 File: radio.jpg Graphic file (type jpg)
 <use radio.jpg>
-Package pdftex.def Info: radio.jpg  used on input line 493.
+Package pdftex.def Info: radio.jpg  used on input line 492.
 (pdftex.def)             Requested size: 43.36122pt x 28.42569pt.
 <france_inter.png, id=4037, 3083.52pt x 3083.52pt>
 File: france_inter.png Graphic file (type png)
 <use france_inter.png>
-Package pdftex.def Info: france_inter.png  used on input line 493.
+Package pdftex.def Info: france_inter.png  used on input line 492.
 (pdftex.def)             Requested size: 36.98181pt x 36.98181pt.
 <signal.png, id=4038, 291.35622pt x 227.62204pt>
 File: signal.png Graphic file (type png)
 <use signal.png>
-Package pdftex.def Info: signal.png  used on input line 493.
+Package pdftex.def Info: signal.png  used on input line 492.
 (pdftex.def)             Requested size: 29.13731pt x 22.76353pt.
 File: signal.png Graphic file (type png)
 <use signal.png>
-Package pdftex.def Info: signal.png  used on input line 493.
+Package pdftex.def Info: signal.png  used on input line 492.
 (pdftex.def)             Requested size: 29.13731pt x 22.76353pt.
 <antenne.jpg, id=4039, 81.6651pt x 122.6181pt>
 File: antenne.jpg Graphic file (type jpg)
 <use antenne.jpg>
-Package pdftex.def Info: antenne.jpg  used on input line 493.
+Package pdftex.def Info: antenne.jpg  used on input line 492.
 (pdftex.def)             Requested size: 57.16516pt x 85.83206pt.
 <phone.jpg, id=4040, 1265.72874pt x 2327.69624pt>
 File: phone.jpg Graphic file (type jpg)
 <use phone.jpg>
-Package pdftex.def Info: phone.jpg  used on input line 493.
+Package pdftex.def Info: phone.jpg  used on input line 492.
 (pdftex.def)             Requested size: 18.9851pt x 34.91393pt.
 File: phone.jpg Graphic file (type jpg)
 <use phone.jpg>
-Package pdftex.def Info: phone.jpg  used on input line 493.
+Package pdftex.def Info: phone.jpg  used on input line 492.
 (pdftex.def)             Requested size: 18.9851pt x 34.91393pt.
 File: signal.png Graphic file (type png)
 <use signal.png>
-Package pdftex.def Info: signal.png  used on input line 493.
+Package pdftex.def Info: signal.png  used on input line 492.
 (pdftex.def)             Requested size: 29.13731pt x 22.76353pt.
 File: signal.png Graphic file (type png)
 <use signal.png>
-Package pdftex.def Info: signal.png  used on input line 493.
+Package pdftex.def Info: signal.png  used on input line 492.
 (pdftex.def)             Requested size: 29.13731pt x 22.76353pt.
 
-Overfull \hbox (31.56369pt too wide) in paragraph at lines 493--493
+Overfull \hbox (31.56369pt too wide) in paragraph at lines 492--492
  [] 
  []
 
@@ -3404,16 +3404,16 @@ Overfull \hbox (31.56369pt too wide) in paragraph at lines 493--493
 <MaxCovPlotNamed.png, id=4212, 701.7417pt x 596.9502pt>
 File: MaxCovPlotNamed.png Graphic file (type png)
 <use MaxCovPlotNamed.png>
-Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 518.
+Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 517.
 (pdftex.def)             Requested size: 154.38365pt x 131.32945pt.
 
-Overfull \hbox (12.11987pt too wide) in paragraph at lines 518--518
+Overfull \hbox (12.11987pt too wide) in paragraph at lines 517--517
 [][]  
  []
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' undefined
-(Font)              using `T1/cmss/m/n' instead on input line 518.
+(Font)              using `T1/cmss/m/n' instead on input line 517.
 
 [71
 
@@ -3421,10 +3421,10 @@ LaTeX Font Warning: Font shape `T1/cmss/m/sc' undefined
 <MaxCovPlotNamed1.png, id=4274, 701.7417pt x 596.9502pt>
 File: MaxCovPlotNamed1.png Graphic file (type png)
 <use MaxCovPlotNamed1.png>
-Package pdftex.def Info: MaxCovPlotNamed1.png  used on input line 518.
+Package pdftex.def Info: MaxCovPlotNamed1.png  used on input line 517.
 (pdftex.def)             Requested size: 154.38365pt x 131.32945pt.
 
-Overfull \hbox (12.11987pt too wide) in paragraph at lines 518--518
+Overfull \hbox (12.11987pt too wide) in paragraph at lines 517--517
 [][]  
  []
 
@@ -3433,10 +3433,10 @@ Overfull \hbox (12.11987pt too wide) in paragraph at lines 518--518
  <./MaxCovPlotNamed1.png>]
 File: MaxCovPlotNamed.png Graphic file (type png)
 <use MaxCovPlotNamed.png>
-Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 518.
+Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 517.
 (pdftex.def)             Requested size: 154.38365pt x 131.32945pt.
 
-Overfull \hbox (12.11987pt too wide) in paragraph at lines 518--518
+Overfull \hbox (12.11987pt too wide) in paragraph at lines 517--517
 [][]  
  []
 
@@ -3445,10 +3445,10 @@ Overfull \hbox (12.11987pt too wide) in paragraph at lines 518--518
 ]
 File: MaxCovPlotNamed.png Graphic file (type png)
 <use MaxCovPlotNamed.png>
-Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 556.
+Package pdftex.def Info: MaxCovPlotNamed.png  used on input line 555.
 (pdftex.def)             Requested size: 140.34586pt x 119.38792pt.
 
-Overfull \vbox (2.055pt too high) detected at line 556
+Overfull \vbox (2.055pt too high) detected at line 555
  []
 
 [74
@@ -3456,10 +3456,10 @@ Overfull \vbox (2.055pt too high) detected at line 556
 ]
 File: MaxCovPlotNamed1.png Graphic file (type png)
 <use MaxCovPlotNamed1.png>
-Package pdftex.def Info: MaxCovPlotNamed1.png  used on input line 556.
+Package pdftex.def Info: MaxCovPlotNamed1.png  used on input line 555.
 (pdftex.def)             Requested size: 140.34586pt x 119.38792pt.
 
-Overfull \vbox (2.055pt too high) detected at line 556
+Overfull \vbox (2.055pt too high) detected at line 555
  []
 
 [75
@@ -3468,10 +3468,10 @@ Overfull \vbox (2.055pt too high) detected at line 556
 <MaxCovPlotNamed2.png, id=4506, 701.7417pt x 596.9502pt>
 File: MaxCovPlotNamed2.png Graphic file (type png)
 <use MaxCovPlotNamed2.png>
-Package pdftex.def Info: MaxCovPlotNamed2.png  used on input line 556.
+Package pdftex.def Info: MaxCovPlotNamed2.png  used on input line 555.
 (pdftex.def)             Requested size: 140.34586pt x 119.38792pt.
 
-Overfull \vbox (2.055pt too high) detected at line 556
+Overfull \vbox (2.055pt too high) detected at line 555
  []
 
 [76
@@ -3480,10 +3480,10 @@ Overfull \vbox (2.055pt too high) detected at line 556
 <MaxCovPlotNamed3.png, id=4565, 701.7417pt x 596.9502pt>
 File: MaxCovPlotNamed3.png Graphic file (type png)
 <use MaxCovPlotNamed3.png>
-Package pdftex.def Info: MaxCovPlotNamed3.png  used on input line 556.
+Package pdftex.def Info: MaxCovPlotNamed3.png  used on input line 555.
 (pdftex.def)             Requested size: 140.34586pt x 119.38792pt.
 
-Overfull \vbox (2.055pt too high) detected at line 556
+Overfull \vbox (2.055pt too high) detected at line 555
  []
 
 [77
@@ -3497,24 +3497,24 @@ Overfull \vbox (2.055pt too high) detected at line 556
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 575.
+(hyperref)                removing `math shift' on input line 574.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 575.
+(hyperref)                removing `\varphi' on input line 574.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 575.
+(hyperref)                removing `math shift' on input line 574.
 
 
-Overfull \vbox (2.613pt too high) detected at line 590
+Overfull \vbox (2.613pt too high) detected at line 589
  []
 
 [81
 
 ]
-Overfull \vbox (2.613pt too high) detected at line 590
+Overfull \vbox (2.613pt too high) detected at line 589
  []
 
 [82
@@ -3528,21 +3528,21 @@ Overfull \vbox (2.613pt too high) detected at line 590
 ] [86
 
 ]
-Overfull \hbox (26.26743pt too wide) detected at line 646
+Overfull \hbox (26.26743pt too wide) detected at line 645
 []
  []
 
 [87
 
 ]
-Overfull \hbox (26.26743pt too wide) detected at line 646
+Overfull \hbox (26.26743pt too wide) detected at line 645
 []
  []
 
 [88
 
 ]
-Overfull \hbox (26.26743pt too wide) detected at line 646
+Overfull \hbox (26.26743pt too wide) detected at line 645
 []
  []
 
@@ -3571,56 +3571,56 @@ Overfull \hbox (26.26743pt too wide) detected at line 646
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 693.
+(hyperref)                removing `math shift' on input line 692.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 693.
+(hyperref)                removing `superscript' on input line 692.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 693.
+(hyperref)                removing `superscript' on input line 692.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\otimes' on input line 693.
+(hyperref)                removing `\otimes' on input line 692.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 693.
+(hyperref)                removing `subscript' on input line 692.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 693.
+(hyperref)                removing `subscript' on input line 692.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 693.
+(hyperref)                removing `math shift' on input line 692.
 
 [98
 
 ] [99
 
 ]
-Overfull \vbox (3.8168pt too high) detected at line 759
+Overfull \vbox (3.8168pt too high) detected at line 758
  []
 
 [100
 
 ]
-Overfull \vbox (3.8168pt too high) detected at line 759
+Overfull \vbox (3.8168pt too high) detected at line 758
  []
 
 [101
 
 ]
-Overfull \vbox (2.37242pt too high) detected at line 785
+Overfull \vbox (2.37242pt too high) detected at line 784
  []
 
 [102
 
 ]
-Overfull \vbox (2.37242pt too high) detected at line 785
+Overfull \vbox (2.37242pt too high) detected at line 784
  []
 
 [103
@@ -3634,13 +3634,13 @@ Overfull \vbox (2.37242pt too high) detected at line 785
 ] [107
 
 ]
-Overfull \vbox (2.5604pt too high) detected at line 870
+Overfull \vbox (2.5604pt too high) detected at line 869
  []
 
 [108
 
 ]
-Overfull \hbox (6.36992pt too wide) detected at line 870
+Overfull \hbox (6.36992pt too wide) detected at line 869
 [][]
  []
 
@@ -3650,7 +3650,7 @@ Overfull \hbox (6.36992pt too wide) detected at line 870
 y}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.887 \end{frame}
+l.886 \end{frame}
                   [110
 
 ] [111
@@ -3658,13 +3658,13 @@ l.887 \end{frame}
 ] [112
 
 ]
-Overfull \vbox (10.7385pt too high) detected at line 960
+Overfull \vbox (10.7385pt too high) detected at line 959
  []
 
 [113
 
 ]
-Overfull \vbox (10.7385pt too high) detected at line 960
+Overfull \vbox (10.7385pt too high) detected at line 959
  []
 
 [114
@@ -3672,7 +3672,7 @@ Overfull \vbox (10.7385pt too high) detected at line 960
 ]
 PGFPlots: reading {Data_BAC/ZEBorder2.csv}
 
-Overfull \vbox (10.7385pt too high) detected at line 960
+Overfull \vbox (10.7385pt too high) detected at line 959
  []
 
 [115
@@ -3681,7 +3681,7 @@ Overfull \vbox (10.7385pt too high) detected at line 960
 PGFPlots: reading {Data_BAC/ZEBorder2.csv}
 PGFPlots: reading {Data_BAC/ZEBorder3.csv}
 
-Overfull \vbox (10.7385pt too high) detected at line 960
+Overfull \vbox (10.7385pt too high) detected at line 959
  []
 
 [116
@@ -3691,13 +3691,13 @@ PGFPlots: reading {Data_BAC/ZEBorder2.csv}
 PGFPlots: reading {Data_BAC/ZEBorder3.csv}
 PGFPlots: reading {Data_BAC/ZEBorder7.csv}
 
-Overfull \vbox (10.7385pt too high) detected at line 960
+Overfull \vbox (10.7385pt too high) detected at line 959
  []
 
 [117
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 979
+Overfull \hbox (2.94707pt too wide) detected at line 978
 \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
 0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
  : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
@@ -3715,7 +3715,7 @@ Overfull \hbox (2.94707pt too wide) detected at line 979
 [118
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 979
+Overfull \hbox (2.94707pt too wide) detected at line 978
 \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
 0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
  : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
@@ -3733,7 +3733,7 @@ Overfull \hbox (2.94707pt too wide) detected at line 979
 [119
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 979
+Overfull \hbox (2.94707pt too wide) detected at line 978
 \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
 0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
  : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
@@ -3751,7 +3751,7 @@ Overfull \hbox (2.94707pt too wide) detected at line 979
 [120
 
 ]
-Overfull \hbox (21.41133pt too wide) detected at line 1003
+Overfull \hbox (21.41133pt too wide) detected at line 1002
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
 cmss/m/n/10.95 ) := []
  []
@@ -3759,7 +3759,7 @@ cmss/m/n/10.95 ) := []
 [121
 
 ]
-Overfull \hbox (21.41133pt too wide) detected at line 1003
+Overfull \hbox (21.41133pt too wide) detected at line 1002
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
 cmss/m/n/10.95 ) := []
  []
@@ -3767,7 +3767,7 @@ cmss/m/n/10.95 ) := []
 [122
 
 ]
-Overfull \hbox (21.41133pt too wide) detected at line 1003
+Overfull \hbox (21.41133pt too wide) detected at line 1002
 \OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
 cmss/m/n/10.95 ) := []
  []
@@ -3988,28 +3988,28 @@ PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
 ] [143
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1249
+Overfull \hbox (23.76434pt too wide) detected at line 1248
 []
  []
 
 [144
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1249
+Overfull \hbox (23.76434pt too wide) detected at line 1248
 []
  []
 
 [145
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1249
+Overfull \hbox (23.76434pt too wide) detected at line 1248
 []
  []
 
 [146
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1271
+Overfull \hbox (1.14346pt too wide) detected at line 1270
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4021,7 +4021,7 @@ m/it/10.95 :
 [147
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1271
+Overfull \hbox (1.14346pt too wide) detected at line 1270
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4033,7 +4033,7 @@ m/it/10.95 :
 [148
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1271
+Overfull \hbox (1.14346pt too wide) detected at line 1270
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4045,7 +4045,7 @@ m/it/10.95 :
 [149
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1271
+Overfull \hbox (1.14346pt too wide) detected at line 1270
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4086,7 +4086,7 @@ m/it/10.95 :
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1347.
+(hyperref)                removing `\translate ' on input line 1346.
 
 (./defense.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
@@ -4139,22 +4139,16 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1357.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1357.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1356.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1356.
 
 (./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1357.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1357.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1356.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1356.
 
+Package rerunfilecheck Info: File `defense.out' has not changed.
+(rerunfilecheck)             Checksum: D61545F3F7380B211717562C36ABD52C;1196.
 
-
-Package rerunfilecheck Warning: File `defense.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `defense.out':
-(rerunfilecheck)             Before: 591584538CA5763A518C8E3E611D4621;1196
-(rerunfilecheck)             After:  D61545F3F7380B211717562C36ABD52C;1196.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -4165,7 +4159,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  46752 strings out of 494821
  1076471 string characters out of 6177891
- 1369644 words of memory out of 5000000
+ 1370644 words of memory out of 5000000
  48856 multiletter control sequences out of 15000+600000
  582669 words of font info for 137 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -4210,7 +4204,7 @@ y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on defense.pdf (175 pages, 8154786 bytes).
+Output written on defense.pdf (175 pages, 8154522 bytes).
 PDF statistics:
  10554 PDF objects out of 10688 (max. 8388607)
  9655 compressed objects within 97 object streams
