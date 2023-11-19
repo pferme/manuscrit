@@ -132,7 +132,7 @@
 
     %%% Right callouts %%%
     \only<1>{\node[ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.7,0.1) (Bob) {\Large Allô!};}
-    \only<2>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.7,0.1) (Bob) {\tiny Ah, l'eau!};}
+    \only<2>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}] at (9.7,0.1) (Bob) {\tiny À l'eau!};}
     \only<3>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}, text=blue] at (9.4,0.1) (Bob) {\tiny Alma};
       \node[ellipse callout, draw, callout absolute pointer={(9.4,0.5)}] at (9.4,2.1) (Alice) {\Large \alert{A}};}
     \only<4>{\node[dashed, ellipse callout, draw, callout relative pointer={(-0.2,0)}, text=blue] at (9.4,0.1) (Bob) {\tiny Lena};
@@ -150,15 +150,15 @@
   \begin{center}
     \begin{tikzpicture}[auto, node distance=2cm,>=latex']
       \node [bigblock] (W) {\only<1-2>{$W$}\only<3>{$6/10$}\only<4>{$3/10$}\only<5>{$1/10$}};
-      \node [right of=W] (y) {\only<1-2>{$y$}\only<3>{\emph{alfa}}\only<4>{\emph{alma}}\only<5>{\emph{alvo}}};
-      \node [left of=W] (x) {\only<1-2>{$x$}\only<3-5>{\emph{alfa}}};
+      \node [right of=W] (y) {\textcolor{blue}{\only<1-2>{$y$}\only<3>{\emph{alfa}}\only<4>{\emph{alma}}\only<5>{\emph{alvo}}}};
+      \node [left of=W] (x) {\textcolor{blue}{\only<1-2>{$x$}\only<3-5>{\emph{alfa}}}};
       \draw [->] (x) -- (W);
       \draw [->] (W) -- (y);
     \end{tikzpicture}
 
     \pause
     \bigskip
-    Probabilité \only<2>{$W(y|x)$}\only<3>{$6/10$}\only<4>{$3/10$}\only<5>{$1/10$} d'avoir la sortie \only<2>{$y$}\only<3>{\emph{alfa}}\only<4>{\emph{alma}}\only<5>{\emph{alvo}} pour l'entrée \only<2>{$x$}\only<3-5>{\emph{alfa}}
+    Probabilité \only<2>{$W(y|x)$}\only<3>{$6/10$}\only<4>{$3/10$}\only<5>{$1/10$} d'avoir la sortie \textcolor{blue}{\only<2>{$y$}\only<3>{\emph{alfa}}\only<4>{\emph{alma}}\only<5>{\emph{alvo}}} pour l'entrée \textcolor{blue}{\only<2>{$x$}\only<3-5>{\emph{alfa}}}
   \end{center} 
 \end{frame}
 
@@ -178,7 +178,7 @@
 
     \bigskip
 
-    Trouver $e$ et $d$ qui maximise la probabilité d'avoir \alert{$j=i$}\only<5>{\ldots\\
+    Trouver $e,d$ qui maximise la probabilité d'avoir \alert{$j=i$}\only<5>{\ldots\\
       \bigskip
       \ldots sur tout l'alphabet (noté $[k]$; ici $k=26$) !
       \[ \text{\underline{Formellement:} } \underset{e,d}{\max} \ \frac{1}{k} \sum_{i,x,y} e(x|i)W(y|x)d(i|y) \]
@@ -218,7 +218,7 @@
     \end{tikzpicture}
 
     \bigskip
-    Trouver $e,d$ qui maximise la probabilité que \only<1-2>{\alert{$j_1$ ou $j_2$}}\only<3-6>{\alert{$j_1,j_2,\ldots$ ou $j_{\ell}$}} égal à \alert{$i$}.
+    Trouver $e,d$ qui maximise la probabilité que \only<1-2>{\alert{$j_1$ ou $j_2$}}\only<3-6>{\alert{$j_1,j_2,\ldots$ ou $j_{\ell}$}} $=$ \alert{$i$}.
   \end{center}
   
   \pause\pause\pause
@@ -275,10 +275,10 @@
 \begin{frame}{Le paradoxe Einstein-Podolski-Rosen}
 
   \begin{itemize}
-  \item \underline{Années 1920 :} naissance de la physique quantique
+  \item \underline{Années 1920:} naissance de la physique quantique
     \pause
     \bigskip
-  \item \underline{Paradoxe EPR~\cite{EPR35} :} deux particules intriquées à distance
+  \item \underline{Paradoxe EPR~\cite{EPR35}:} deux particules intriquées à distance
     \begin{center}
       \includegraphics[scale=0.3]{EPR.jpg}
     \end{center}
@@ -295,7 +295,7 @@
 
 \begin{frame}{Inégalités de Bell et expérience d'Aspect}
   \begin{itemize}
-  \item \underline{Inégalités de Bell~\cite{Bell64} :} expérience distinguant corrélations :\begin{enumerate}
+  \item \underline{Inégalités de Bell~\cite{Bell64}:} expérience distinguant corrélations :\begin{enumerate}
     \item causées par de l'intrication quantique
     \item provenant de variables cachées
   \end{enumerate}
@@ -307,14 +307,14 @@
     \end{column}
     \begin{column}{6cm}
       \begin{itemize}
-      \item \underline{Expérience d'Aspect~\cite{ADG82} :} réalisation pratique de cette expérience.
+      \item \underline{Expérience d'Aspect~\cite{ADG82}:} réalisation pratique de cette expérience
       \end{itemize}
     \end{column}
     \end{columns}
     \pause
     \bigskip
     \begin{itemize}
-  \item \underline{Expérience QUESS~\cite{Yin17} :} intrication entre particules à 1200 km de distance
+  \item \underline{Expérience QUESS~\cite{Yin17}:} intrication entre particules à 1200 km de distance
   \end{itemize}
 \end{frame}
 
@@ -326,7 +326,7 @@
       \node [block] (A) {\includegraphics[scale=0.08]{Alice.png}};
       \only<2->{\node [above of=A] (x) {$x$};
       \draw [->] (x) -- (A);}
-      \only<3->{\node [below of=A] (a) {\only<3-6>{$\alert{a}$}\only<7>{\textcolor{darkgreen}{$\mathcal{A}(x)=0$}}};
+      \only<3->{\node [below of=A] (a) {\only<3-6>{$\alert{a}$}\only<7->{\textcolor{darkgreen}{$\mathcal{A}(x)=0$}}};
       \draw [->] (A) -- (a);}
 
       \node [right of=A] (I) {};
@@ -337,10 +337,10 @@
       \node [block, right of=I] (B) {\includegraphics[scale=0.16]{Bob.jpg}};
       \only<2->{\node [above of=B] (y) {$y$};
       \draw [->] (y) -- (B);}
-      \only<3->{\node [below of=B] (b) {\only<3-6>{$\alert{b}$}\only<7>{\textcolor{darkgreen}{$\mathcal{B}(y)=0$}}};
+      \only<3->{\node [below of=B] (b) {\only<3-6>{$\alert{b}$}\only<7->{\textcolor{darkgreen}{$\mathcal{B}(y)=0$}}};
       \draw [->] (B) -- (b);}
 
-      \only<7>{\node [starburst, fill=white, draw=darkgreen, line width=1pt, text=darkgreen] at (I) {\Large $3/4$};}
+      \only<7->{\node [starburst, fill=white, draw=darkgreen, line width=1pt, text=darkgreen] at (I) {\Large \only<7>{$3/4$}\only<8>{$75\%$}};}
    \end{tikzpicture}
    \bigskip
    \\
@@ -374,7 +374,7 @@
       \only<2->{
         \draw [snake=coil,segment aspect=0, draw=blue] (A) -- (B);
         \node [circle, fill=white, draw=blue, text=blue] at (I) (Corr) {\only<2-4>{$\lambda$}\only<5-7>{$\varphi$}\only<8->{\textrm{NS}}};}
-      \only<4>{\node [starburst, fill=white, draw=darkgreen, line width=1pt, text=darkgreen] at (I) {\Large $3/4$};}
+      \only<4>{\node [starburst, fill=white, draw=darkgreen, line width=1pt, text=darkgreen] at (I) {\Large $75\%$};}
       \only<7>{\node [starburst, fill=white, draw=darkgreen, line width=1pt, text=darkgreen] at (I) {\Large $85\%$};}
       \only<11>{\node [starburst, fill=white, draw=darkgreen, line width=1pt, align=left, text=darkgreen] at (I) {\Large $100\%$};}
     \end{tikzpicture}\\\bigskip
@@ -392,7 +392,7 @@
 
 \begin{frame}{Assistance non-signalante pour le codage de canal}
   \begin{center}
-    \begin{tikzpicture}[auto, node distance=1.6cm,>=latex']
+    \begin{tikzpicture}[auto, node distance=1.8cm,>=latex']
       \only<1>{\node [bigblock] (W) {$W$};
         \node [left of=W] (x) {$x$};
         \node [block,left of=x] (e) {$e$};
@@ -407,7 +407,7 @@
         \draw [->] (y) -- (d);
         \draw [->] (d) -- (j);}
 
-      \only<2->{\node [block] (A) {$e$};
+      \only<2->{\node [block] (A) {\only<2>{$e$}\only<3->{\includegraphics[scale=0.08]{Alice.png}}};
       \node [above of=A] (x) {$i$};
       \draw [->] (x) -- (A);
       \node [below of=A] (a) {\only<2>{$x$}\only<3->{$\alert{x}$}};
@@ -415,27 +415,29 @@
 
       \node [right of=A] (I) {};
       
-      \node [block, right of=I] (B) {$d$};
+      \node [block, right of=I] (B) {\only<2>{$d$}\only<3->{\includegraphics[scale=0.16]{Bob.jpg}}};
       \node [above of=B] (y) {$y$};
       \draw [->] (y) -- (B);
       \node [below of=B] (b) {\only<2>{$j$}\only<3->{$\alert{j}$}};
       \draw [->] (B) -- (b);
-      
-      \node [dashed,right of=B] (Bright) {};
-      \node [dashed,bigblock,right of=Bright] (W) {$W$};
-      \draw [dashed,->] (a) to[out=-20,in=-90] (W);
-      \draw [dashed,->] (W) to[out=90,in=20] (y);}
 
+      \only<2->{\node [right of=B] (Bright) {};
+      \node [bigblock,right of=Bright] (W) {$W$};
+      \draw [->] (a) to[out=-20,in=-90] (W);
+      \draw [->] (W) to[out=90,in=20] (y);}}
       
-      \only<3->{\node [color=blue,above of=I,outer sep=0pt,circle,fill,inner sep=1pt] (Iabove) {};
+      %\only<4->{\node [dashed,right of=B] (Bright) {};
+      %\node [dashed,bigblock,right of=Bright] (W) {$W$};
+      %\draw [dashed,->] (a) to[out=-20,in=-90] (W);
+      %\draw [dashed,->] (W) to[out=90,in=20] (y);}}
+      
+      \only<4->{\node [color=blue,above of=I,outer sep=0pt,circle,fill,inner sep=1pt] (Iabove) {};
       \node [color=blue,below of=I,outer sep=0pt,circle,fill,inner sep=1pt] (Ibelow) {};
-      \draw [color=blue,dotted, thick] (Iabove) -- (Ibelow);
-      \draw [snake=coil,segment aspect=0, draw=blue] (A) -- (B);
-      \node [circle, fill=white, draw=blue, text=blue] at (I) (Corr) {\textrm{NS}};}
+      \draw [color=blue,dotted, thick] (Iabove) -- (Ibelow);}
+      \only<5->{\draw [snake=coil,segment aspect=0, draw=blue] (A) -- (B);
+        \node [circle, fill=white, draw=blue, text=blue] at (I) (Corr) {\textrm{NS}};}
     \end{tikzpicture}\\
-    \only<2>{On peut considérer la stratégie encodage-décodage indépendamment de $W$ !}
-    \only<3>{La stratégie encodage-décodage est décrite par $P(\alert{xj}\textcolor{blue}{\textbf{|}}iy)$.}
-    \only<4>{\underline{\cite{BF18} :}  meilleure communication (jusqu'à $58\%$ ! ($\frac{e^{-1}}{1-e^{-1}}$)).}
+    \only<5->{\underline{\cite{BF18} :}  meilleure communication (jusqu'à $58\%$ ! ($\frac{e^{-1}}{1-e^{-1}}$)).}
   \end{center}
 \end{frame}
 
