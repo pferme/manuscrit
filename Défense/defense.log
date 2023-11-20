@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  20 NOV 2023 16:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  20 NOV 2023 17:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3682,28 +3682,27 @@ Overfull \vbox (2.37242pt too high) detected at line 790
 ] [109
 
 ]
-Overfull \vbox (2.5604pt too high) detected at line 875
+Overfull \vbox (1.5604pt too high) detected at line 875
  []
 
 [110
-
-]
-Overfull \hbox (6.36992pt too wide) detected at line 875
-[][]
- []
-
-[111
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{defi:capacit
 y}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.892 \end{frame}
-                  [112
+                  [111
+
+] [112
 
 ] [113
 
-] [114
+]
+Overfull \vbox (10.7385pt too high) detected at line 965
+ []
+
+[114
 
 ]
 Overfull \vbox (10.7385pt too high) detected at line 965
@@ -3712,6 +3711,8 @@ Overfull \vbox (10.7385pt too high) detected at line 965
 [115
 
 ]
+PGFPlots: reading {Data_BAC/ZEBorder2.csv}
+
 Overfull \vbox (10.7385pt too high) detected at line 965
  []
 
@@ -3719,6 +3720,7 @@ Overfull \vbox (10.7385pt too high) detected at line 965
 
 ]
 PGFPlots: reading {Data_BAC/ZEBorder2.csv}
+PGFPlots: reading {Data_BAC/ZEBorder3.csv}
 
 Overfull \vbox (10.7385pt too high) detected at line 965
  []
@@ -3728,6 +3730,7 @@ Overfull \vbox (10.7385pt too high) detected at line 965
 ]
 PGFPlots: reading {Data_BAC/ZEBorder2.csv}
 PGFPlots: reading {Data_BAC/ZEBorder3.csv}
+PGFPlots: reading {Data_BAC/ZEBorder7.csv}
 
 Overfull \vbox (10.7385pt too high) detected at line 965
  []
@@ -3735,11 +3738,19 @@ Overfull \vbox (10.7385pt too high) detected at line 965
 [118
 
 ]
-PGFPlots: reading {Data_BAC/ZEBorder2.csv}
-PGFPlots: reading {Data_BAC/ZEBorder3.csv}
-PGFPlots: reading {Data_BAC/ZEBorder7.csv}
-
-Overfull \vbox (10.7385pt too high) detected at line 965
+Overfull \hbox (2.94707pt too wide) detected at line 984
+\OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
+0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
+ : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
+.95 X[]\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.9
+5 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/10.95 I\OT1/cmss/m/n/10.95 (
+\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95 : \OT1/mathkerncmss/m/sl/1
+0.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 
+) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.95 R[] \OT1/cmss/m/n/10.95 +
+ \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/
+10.95 I\OT1/cmss/m/n/10.95 ((\OT1/mathkerncmss/m/sl/10.95 X[]\OML/cmm/m/it/10.9
+5 ; \OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 ) : \OT1/mathkerncmss/m
+/sl/10.95 Y\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;
  []
 
 [119
@@ -3781,19 +3792,9 @@ Overfull \hbox (2.94707pt too wide) detected at line 984
 [121
 
 ]
-Overfull \hbox (2.94707pt too wide) detected at line 984
-\OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/1
-0.95 I\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95
- : \OT1/mathkerncmss/m/sl/10.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10
-.95 X[]\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.9
-5 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/10.95 I\OT1/cmss/m/n/10.95 (
-\OT1/mathkerncmss/m/sl/10.95 X[] \OT1/cmss/m/n/10.95 : \OT1/mathkerncmss/m/sl/1
-0.95 Y\OMS/cmsy/m/n/10.95 j\OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 
-) \OML/cmm/m/it/10.95 ;  \OT1/mathkerncmss/m/sl/10.95 R[] \OT1/cmss/m/n/10.95 +
- \OT1/mathkerncmss/m/sl/10.95 R[] \OML/cmm/m/it/10.95 < \OT1/mathkerncmss/m/sl/
-10.95 I\OT1/cmss/m/n/10.95 ((\OT1/mathkerncmss/m/sl/10.95 X[]\OML/cmm/m/it/10.9
-5 ; \OT1/mathkerncmss/m/sl/10.95 X[]\OT1/cmss/m/n/10.95 ) : \OT1/mathkerncmss/m
-/sl/10.95 Y\OT1/cmss/m/n/10.95 ) \OML/cmm/m/it/10.95 ;
+Overfull \hbox (21.41133pt too wide) detected at line 1008
+\OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
+cmss/m/n/10.95 ) := []
  []
 
 [122
@@ -3814,21 +3815,13 @@ cmss/m/n/10.95 ) := []
 
 [124
 
-]
-Overfull \hbox (21.41133pt too wide) detected at line 1008
-\OMS/cmsy/m/n/10.95 T[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 X\OT1/
-cmss/m/n/10.95 ) := []
- []
-
-[125
+] [125
 
 ] [126
 
 ] [127
 
 ] [128
-
-] [129
 
 ]
 Missing character: There is no ( in font nullfont!
@@ -3886,6 +3879,66 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ; in font nullfont!
+ [129
+
+]
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {Data_BAC/ZEBorder7.csv}
+PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
  [130
 
 ]
@@ -3948,65 +4001,7 @@ PGFPlots: reading {Data_BAC/ZEBorder7.csv}
 PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
  [131
 
-]
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no 9 in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no 8 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-PGFPlots: reading {Data_BAC/ZEBorder7.csv}
-PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
- [132
+] [132
 
 ] [133
 
@@ -4014,10 +4009,10 @@ PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
 
 ] [135
 
-] [136
-
 ]
-[137
+[136
+
+] [137
 
 ] [138
 
@@ -4035,29 +4030,15 @@ PGFPlots: reading {Data_BAC_relaxed/ZEBorderINEQ7.csv}
 
 ] [145
 
-]
-Overfull \hbox (23.76434pt too wide) detected at line 1254
-[]
- []
+] [146
 
-[146
+] [147
 
 ]
-Overfull \hbox (23.76434pt too wide) detected at line 1254
-[]
- []
-
-[147
-
-]
-Overfull \hbox (23.76434pt too wide) detected at line 1254
-[]
- []
-
 [148
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1276
+Overfull \hbox (1.14346pt too wide) detected at line 1278
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4069,7 +4050,7 @@ m/it/10.95 :
 [149
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1276
+Overfull \hbox (1.14346pt too wide) detected at line 1278
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4081,7 +4062,7 @@ m/it/10.95 :
 [150
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1276
+Overfull \hbox (1.14346pt too wide) detected at line 1278
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4093,7 +4074,7 @@ m/it/10.95 :
 [151
 
 ]
-Overfull \hbox (1.14346pt too wide) detected at line 1276
+Overfull \hbox (1.14346pt too wide) detected at line 1278
 [] [] \OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 
 P[]\OT1/cmss/m/n/10.95 )[]\OT1/mathkerncmss/m/sl/10.95 f[]\OT1/cmss/m/n/10.95 (
 \OT1/mathkerncmss/m/sl/10.95 S[]\OT1/cmss/m/n/10.95 ) := [] [] [] [] \OT1/mathk
@@ -4134,7 +4115,7 @@ m/it/10.95 :
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 1352.
+(hyperref)                removing `\translate ' on input line 1354.
 
 (./defense.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
@@ -4187,15 +4168,15 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \tf@snm=\write8
 \openout8 = `defense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1362.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1362.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1364.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1364.
 
 (./defense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1362.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1362.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1364.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1364.
 
 Package rerunfilecheck Info: File `defense.out' has not changed.
-(rerunfilecheck)             Checksum: FC70F3D40D047FEBFDB672249499F7AC;1197.
+(rerunfilecheck)             Checksum: 75EDB92CCD1B653B666C7E121B3540CC;1197.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -4207,7 +4188,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  46756 strings out of 494821
  1076515 string characters out of 6177891
- 1370673 words of memory out of 5000000
+ 1369673 words of memory out of 5000000
  48856 multiletter control sequences out of 15000+600000
  582669 words of font info for 137 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -4215,6 +4196,7 @@ Here is how much of TeX's memory you used:
  </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi2074.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600p
+k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi0800.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600p
 k> </home/paul/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsi1440.600p
@@ -4253,10 +4235,10 @@ share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on defense.pdf (177 pages, 8170355 bytes).
+Output written on defense.pdf (177 pages, 8170825 bytes).
 PDF statistics:
- 10676 PDF objects out of 10688 (max. 8388607)
- 9769 compressed objects within 98 object streams
+ 10683 PDF objects out of 10688 (max. 8388607)
+ 9773 compressed objects within 98 object streams
  394 named destinations out of 1000 (max. 500000)
  276 words of extra memory for PDF output out of 10000 (max. 10000000)
 

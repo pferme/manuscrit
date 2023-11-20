@@ -862,16 +862,16 @@
     &&&&& P(x_1x_2(j_1j_2)|i_1i_2y) \geq 0
   \end{aligned}
 \end{equation*}}
-\only<2>{\begin{equation*}
-  \begin{aligned}
-    &&\underset{r,r^1,r^2,p}{\maxi} &&& \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y}\\
-    &&\st &&& \sum_{x_1,x_2} r_{x_1,x_2,y} = 1\\
-    &&&&& \sum_{x_1} r^1_{x_1,x_2,y} = k_1 \sum_{x_1} r_{x_1,x_2,y}, \sum_{x_2} r^2_{x_1,x_2,y} = k_2 \sum_{x_2} r_{x_1,x_2,y}\\
-    &&&&& \sum_{x_1} p_{x_1,x_2} = k_1 \sum_{x_1} r^2_{x_1,x_2,y},  \sum_{x_2} p_{x_1,x_2} = k_2 \sum_{x_2} r^1_{x_1,x_2,y}\\
-    &&&&& 0 \leq r_{x_1,x_2,y} \leq r^1_{x_1,x_2,y},r^2_{x_1,x_2,y} \leq p_{x_1,x_2}\\
-    &&&&& p_{x_1,x_2} -  r^1_{x_1,x_2,y} - r^2_{x_1,x_2,y} + r_{x_1,x_2,y} \geq 0
-  \end{aligned}
-  \end{equation*}}
+%\only<2>{\begin{equation*}
+%  \begin{aligned}
+%    &&\underset{r,r^1,r^2,p}{\maxi} &&& \frac{1}{k_1k_2} \sum_{x_1,x_2,y} W(y|x_1x_2)r_{x_1,x_2,y}\\
+%    &&\st &&& \sum_{x_1,x_2} r_{x_1,x_2,y} = 1\\
+%    &&&&& \sum_{x_1} r^1_{x_1,x_2,y} = k_1 \sum_{x_1} r_{x_1,x_2,y}, \sum_{x_2} r^2_{x_1,x_2,y} = k_2 \sum_{x_2} r_{x_1,x_2,y}\\
+%    &&&&& \sum_{x_1} p_{x_1,x_2} = k_1 \sum_{x_1} r^2_{x_1,x_2,y},  \sum_{x_2} p_{x_1,x_2} = k_2 \sum_{x_2} r^1_{x_1,x_2,y}\\
+%    &&&&& 0 \leq r_{x_1,x_2,y} \leq r^1_{x_1,x_2,y},r^2_{x_1,x_2,y} \leq p_{x_1,x_2}\\
+%    &&&&& p_{x_1,x_2} -  r^1_{x_1,x_2,y} - r^2_{x_1,x_2,y} + r_{x_1,x_2,y} \geq 0
+%  \end{aligned}
+%  \end{equation*}}
 \end{frame}
 
 \begin{frame}{Non-signaling assisted capacity regions}
@@ -968,7 +968,7 @@
 \begin{frame}{Relaxed non-signaling capacity region characterization}
   \begin{itemize}
   \item Relaxed notion of non-signaling success probability $\mathrm{S}^{\overline{\mathrm{NS}}}$.
-  \item Remove constraints concerning $r^1,r^2$ in $\mathrm{S}^{\mathrm{NS}}$ linear program.
+  %\item Remove constraints concerning $r^1,r^2$ in $\mathrm{S}^{\mathrm{NS}}$ linear program.
     \pause
     \bigskip
   \item Defines capacity region $\mathcal{C}^{\overline{\mathrm{NS}}}(W)$ as before.
@@ -1235,20 +1235,22 @@
 \begin{frame}{Proof ideas: non-signaling assisted capacity region}
   \begin{itemize}
 
-  \item Through neat upper bound $f(G_W)$ on \textsc{DensestQuotientGraph}:
+  \item \underline{Approximation algorithm:}
     \begin{enumerate}
-    \item Approximated algorithm value $\mathrm{S}(W,\ell_1,\ell_2) \geq C_{\text{approx}} \cdot f(G_W)$.
-    \item The non-signaling value satisfies $\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2) \leq f(G_W)$.
+    \item Upper bound $f(G_W) \geq \mathrm{S}\only<2->{^{\textcolor{blue}{\mathrm{NS}}}}(W,k_1,k_2)$.
+    \item Finds solution with value at least $\alert{C_{\text{apx}}} \cdot f(G_W)$.
+    \item Implies $\mathrm{S}(W,k_1,k_2) \geq \alert{C_{\text{apx}}} \cdot f(G_W)\only<2->{ \geq \alert{C_{\text{apx}}} \cdot  \mathrm{S}^{\textcolor{blue}{\mathrm{NS}}}(W,k_1,k_2)}$.
     \end{enumerate}
+    \pause
     \pause
     \begin{theorem}
       \label{theo:NSdet}
-      If $W$ deterministic, $\ell_1 \leq k_1$ and $\ell_2 \leq k_2$, then $\mathrm{S}(W,\ell_1,\ell_2) \geq$
-      \begin{align*}
-        \left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)\mathrm{S}^{\mathrm{NS}}(W,k_1,k_2)
-      \end{align*}
+      If $W$ deterministic, $\ell_1 \leq k_1$ and $\ell_2 \leq k_2$, then:
+      \[ \mathrm{S}(W,\ell_1,\ell_2) \geq \alert{C_{\text{apx}}} \cdot  \mathrm{S}^{\textcolor{blue}{\mathrm{NS}}}(W,k_1,k_2) \ , \]
+        with $\alert{C_{\text{apx}}} := \left(1 - \frac{k_1^{k_1}e^{-k_1}}{k_1!}\right)\left(1-\left(1-\frac{1}{\ell_1}\right)^{k_1}\right)\left(1-\left(1-\frac{1}{\ell_2}\right)^{k_2}\right)$
     \end{theorem}
     \pause
+    \bigskip
   \item Equality of capacity regions follows with $k_b=2^{nR_b},\ell_b=\frac{2^{nR_b}}{n}$.
   \end{itemize}
 \end{frame}
