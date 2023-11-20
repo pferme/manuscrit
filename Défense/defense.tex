@@ -561,12 +561,16 @@
   \item \underline{$\varphi$-list-decoding:} list-decoding with variable list size and probability $\frac{\varphi(\ell)}{\ell}$ of decoding successfully a list of size $\ell$.
     \pause
     \bigskip
-  \item For regular sets $T_x \subseteq \mathcal{Y}$ (ie. $\forall x, \abs{T_x}=t$), define:
+  \item \underline{Link to $\varphi$-\textsc{MaxCoverage}:}
+    \begin{enumerate}
+    \item Consider instance with regular sets $T_x \subseteq \mathcal{Y}$ (ie. $\forall x, \abs{T_x}=t$).
+    \item Define regular channels as:
     \[ W(y|x) := \begin{cases}
       \frac{1}{t} & \text{if } y \in T_x\ ,\\
       0 & \text{otherwise}\ .
     \end{cases}\]
   \item Success probability of code $S \subseteq \mathcal{X}$ is $\frac{1}{t|S|}\sum_{y \in \mathcal{Y}} \varphi(\abs{S}_y)$.
+    \end{enumerate}
     \bigskip
     \pause
   \item Up to constant factor, same value as for $\varphi$-\textsc{MaxCoverage}!
