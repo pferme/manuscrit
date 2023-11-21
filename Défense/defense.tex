@@ -262,7 +262,7 @@
       \end{tikzpicture}
     \end{center}
     \pause
-  \item Phénomène spécifique à cette échelle...\pause \textcolor{blue}{l'intrication quantique :}
+  \item Phénomène à cette échelle...\pause \textcolor{blue}{l'intrication quantique :}
     \pause
     \\ \ 
     \begin{center}
@@ -594,20 +594,20 @@
   \end{theo}
 \end{frame}
 
-\begin{frame}{Previous work}
-  \begin{itemize}
-  \item \cite{SVW17}: Generic algorithm for \emph{submodular} maximization using the \emph{curvature} $c$, ratio $1-ce^{-1}$.\\
-  $\Rightarrow$ We have shown that $\alpha_{\varphi} \geq 1-ce^{-1}$, $c$ curvature of $C^{\varphi}$.
-    \pause
-    \bigskip
-  \item \cite{BFGG20}: $\varphi(j):=\min\{ j,\ell\}$, ratio $1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$, tight if UGC.\\
-  $\Rightarrow$ One can compute $\alpha_{\varphi} = \alpha_{\varphi}(\ell) = 1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$, tight if \textrm{P}$\not=$\textrm{NP}.
-    \pause
-    \bigskip
-  \item \cite{DMMS20}: For \emph{geometrically dominant} $\varphi$, ratio $\mathbb{E}[\varphi(\Poi(1))]$, tight if $\varphi(n) = o(n)$ and \textrm{P}$\not=$\textrm{NP}.\\
-  $\Rightarrow$ For such $\varphi$, we have $\alpha_\varphi=\alpha_\varphi(1)=\mathbb{E}[\varphi(\Poi(1))]$.
-  \end{itemize}
-\end{frame}
+%\begin{frame}{Previous work}
+%  \begin{itemize}
+%  \item \cite{SVW17}: Generic algorithm for \emph{submodular} maximization using the \emph{curvature} $c$, ratio $1-ce^{-1}$.\\
+%  $\Rightarrow$ We have shown that $\alpha_{\varphi} \geq 1-ce^{-1}$, $c$ curvature of $C^{\varphi}$.
+%    \pause
+%    \bigskip
+%  \item \cite{BFGG20}: $\varphi(j):=\min\{ j,\ell\}$, ratio $1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$, tight if UGC.\\
+%  $\Rightarrow$ One can compute $\alpha_{\varphi} = \alpha_{\varphi}(\ell) = 1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$, tight if \textrm{P}$\not=$\textrm{NP}.
+%    \pause
+%    \bigskip
+%  \item \cite{DMMS20}: For \emph{geometrically dominant} $\varphi$, ratio $\mathbb{E}[\varphi(\Poi(1))]$, tight if $\varphi(n) = o(n)$ and \textrm{P}$\not=$\textrm{NP}.\\
+%  $\Rightarrow$ For such $\varphi$, we have $\alpha_\varphi=\alpha_\varphi(1)=\mathbb{E}[\varphi(\Poi(1))]$.
+%  \end{itemize}
+%\end{frame}
 
 \begin{frame}{Some particular cases}
   \begin{table}[!h]
@@ -983,43 +983,47 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Proof ideas: achievability}
-  \begin{itemize}
-  \item Construction based on typical sets:
-    \[  \mathcal{T}^n_{\varepsilon}(X) := \left\{x^n : \left|\frac{|\{i : x_i=x\}|}{n} - P_{X}(x)\right|\leq \varepsilon P_{X}(x) \text{ for all } x \in \mathcal{X}\right\}\]
-    \pause
-  \item Definition of $p$ and $r$, with $0 < \varepsilon' < \varepsilon$:
-    \[ p_{x_1^n,x_2^n} := \begin{cases}
-      C \cdot P_{X_1^nX_2^n}(x_1^n,x_2^n) & \text{ if }  (x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2) \ , \\
-    0 & \text{ otherwise} \ .
-  \end{cases}
-  \]
-  and:
-  \[ r_{x_1^n,x_2^n,y^n} := \begin{cases}
-    p_{x_1^n,x_2^n} & \text{ if } (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y) \ ,\\
-    0 & \text{ otherwise} \ .
-  \end{cases}
-    \]
+%\begin{frame}{Proof ideas: achievability}
+%  \begin{itemize}
+%  \item Construction based on typical sets:
+%    \[  \mathcal{T}^n_{\varepsilon}(X) := \left\{x^n : \left|\frac{|\{i : x_i=x\}|}{n} - P_{X}(x)\right|\leq \varepsilon P_{X}(x) \text{ for all } x \in \mathcal{X}\right\}\]
+%    \pause
+%  \item Definition of $p$ and $r$, with $0 < \varepsilon' < \varepsilon$:
+%    \[ p_{x_1^n,x_2^n} := \begin{cases}
+%      C \cdot P_{X_1^nX_2^n}(x_1^n,x_2^n) & \text{ if }  (x_1^n,x_2^n) \in \mathcal{T}^n_{\varepsilon}(X_1,X_2) \ , \\
+%    0 & \text{ otherwise} \ .
+%  \end{cases}
+%  \]
+%  and:
+%  \[ r_{x_1^n,x_2^n,y^n} := \begin{cases}
+%    p_{x_1^n,x_2^n} & \text{ if } (x_1^n,x_2^n,y^n) \in \mathcal{T}^n_{\varepsilon'}(X_1,X_2,Y) \ ,\\
+%    0 & \text{ otherwise} \ .
+%  \end{cases}
+%    \]
+%
+%        \pause
+%        \bigskip
+%  \item Asymptotically, thanks to typicality, constraints are satisfied.
+%  \end{itemize}
+%\end{frame}
 
-        \pause
-        \bigskip
-  \item Asymptotically, thanks to typicality, constraints are satisfied.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Proof ideas: outer bound}
+\begin{frame}{Proof ideas}
   \begin{itemize}
-  \item Generalize ideas by \cite{Matthews12,PPV10}. On first constraint:
+  \item \underline{Achievability:} typical sets construction.
     \pause
     \bigskip
-  \item Hypothesis testing between $W$ and $P_{Y|X_2}$ gives:
-    \[ \beta_{1-\varepsilon}\left(P_{X_1X_2Y},P_{X_1X_2} \times P_{Y|X_2}\right) \leq \frac{1}{k_1} = 2^{-nR_1} \ .\]
+  \item \underline{Outer bound:} generalize ideas by \cite{Matthews12,PPV10}:
     \pause
-  \item Link with mutual information:
-    \[ \frac{1}{\log\left(\left(\beta_{1-\varepsilon}\left(P_{X_1X_2Y},P_{X_1X_2} \times P_{X_2}\right)\right)\right)} \leq \frac{I(X_1:Y|X_2) + h(\varepsilon)}{1-\varepsilon} \ .\]
-    \pause
-  \item Additivity of the outer bound:
-    \[ I(X_1^n:Y^n|X_2^n) \leq \sum_{i=1}^n I(X_{1,i}:Y_i|X_{2,i}) \ .\]
+    \begin{enumerate}
+    \item Hypothesis testing between $W$ and $P_{Y|X_2}$ gives:
+      \[ \beta_{1-\varepsilon}\left(P_{X_1X_2Y},P_{X_1X_2} \times P_{Y|X_2}\right) \leq \frac{1}{k_1} = 2^{-nR_1} \ .\]
+      \pause
+    \item Link with mutual information:
+      \[ \frac{1}{\log\left(\left(\beta_{1-\varepsilon}\left(P_{X_1X_2Y},P_{X_1X_2} \times P_{X_2}\right)\right)\right)} \leq \frac{I(X_1:Y|X_2) + h(\varepsilon)}{1-\varepsilon} \ .\]
+      \pause
+    \item Additivity of the outer bound:
+      \[ I(X_1^n:Y^n|X_2^n) \leq \sum_{i=1}^n I(X_{1,i}:Y_i|X_{2,i}) \ .\]
+    \end{enumerate}
   \end{itemize}
 \end{frame}
 
@@ -1257,7 +1261,7 @@
 
 \subsection{Hardness of approximation for broadcast channel coding}
 
-\begin{frame}{Social welfare reformulation}
+\begin{frame}{Social welfare reformulation and value query hardness}
   \begin{itemize}
   \item \underline{General broadcast channel coding problem (\textsc{BCC}):}
     \[ \underset{\mathcal{P}_1,\mathcal{P}_2}{\maxi} \  \frac{1}{k_1k_2}\sum_{i_1,i_2} \max_x \sum_{y_1 \in \mathcal{P}_1^{i_1}, y_2 \in \mathcal{P}_1^{i_2}} W(y_1y_2|x) \ .\]
@@ -1268,51 +1272,54 @@
 
     \pause
 
-  \item Restriction to $k_2=|\mathcal{Y}_2|$, then BCC objective function is:
+  \item \underline{Reformulation:} take $k_2=|\mathcal{Y}_2|$, then BCC objective is:
     \[ \frac{1}{k_1}\sum_{i_1=1}^{k_1} f_W^1(\mathcal{P}_1^{i_1}) \text{ with } f_W^1(S_1) := \frac{1}{|\mathcal{Y}_2|}\sum_{y_2} \max_x \sum_{y_1 \in S_1} W(y_1y_2|x)\ .\]
 
     \pause
 
-  \item $f_W^1$ fractionally sub-additive (XOS).
+    \begin{theorem}[Value query hardness]
+      Any $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation for BCC requires exponentially value queries to $f_W^1$, with $m$ the size of the output of $W$ and $\varepsilon > 0$.
+    \end{theorem}
+  %\item $f_W^1$ fractionally sub-additive (XOS).
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Main result}
-  \begin{itemize}
-  \item \underline{Value query model:} instance access only through calls to $f_W^1$.
-  \end{itemize}
-
-  \pause
+%\begin{frame}{Main result}
+%  \begin{itemize}
+%  \item \underline{Value query model:} instance access only through calls to $f_W^1$.
+%  \end{itemize}
+%
+%  \pause
   
-  \begin{theorem}
-  In the value query model, for $\varepsilon > 0$, a $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm for the broadcast channel coding problem on $W,k_1,k_2$, restricted to the case of $|\mathcal{Y}_2| = k_2$ and $m = |\mathcal{Y}_1| = k_1^2$, requires exponentially many value queries to $f_W^1$.
-  \end{theorem}
+%  \begin{theorem}
+%  In the value query model, for $\varepsilon > 0$, a $\Omega\left(\frac{1}{m^{\frac{1}{2}-\varepsilon}}\right)$-approximation algorithm for the broadcast channel coding problem on $W,k_1,k_2$, restricted to the case of $|\mathcal{Y}_2| = k_2$ and $m = |\mathcal{Y}_1| = k_1^2$, requires exponentially many value queries to $f_W^1$.
+%  \end{theorem}
 
-  \pause
-  \bigskip
+%  \pause
+%  \bigskip
   
-  \begin{itemize}
-  \item Generalization of hardness for XOS valuations~\cite{MSV08}.
-  \item $\Omega\left(\frac{1}{m^{\frac{1}{2}}}\right)$-approximation algorithm for XOS valuations~\cite{DS06}.
-  \end{itemize}
-\end{frame}
+%  \begin{itemize}
+%  \item Generalization of hardness for XOS valuations~\cite{MSV08}.
+%  \item $\Omega\left(\frac{1}{m^{\frac{1}{2}}}\right)$-approximation algorithm for XOS valuations~\cite{DS06}.
+%  \end{itemize}
+%\end{frame}
 
 
-\begin{frame}{Proof ideas: value query hardness}
-  \begin{itemize}
-  \item Construct channels $W$ and $W'$ that cannot be distinguished with better than exponentially small probability.
-    \pause
-    \bigskip
-  \item Choose uniformly at random (unknown) equi-partition $\alert{T_1,\ldots,T_{k_1}}$ of $\mathcal{Y}_1 := [m]$ with $m:=k_1^2$.
-    \pause
-    \[ f_W^1(S) \propto \max\left\{ m^{2\delta}, m^{-(\frac{1}{2}-\delta)}|S|, |\alert{T_1} \cap S|,\ldots,|\alert{T_{k_1}} \cap S|\right\} \]
-    \[ f_{W'}^1(S) \propto \max\left\{ m^{2\delta}, m^{-(\frac{1}{2}-\delta)}|S|\right\} \]
-    \pause
-  \item Cases depending on $|S|$ versus $ m^{\frac{1}{2}+\delta}$.
-  \item $f_W^1(S)$ and $f_{W'}^1(S)$ different iff $\exists j \in [k_1], |\alert{T_j} \cap S|$ not too small.
-  \item Exponentially small probability thanks to Chernoff-Hoeffding.
-  \end{itemize}
-\end{frame}
+%\begin{frame}{Proof ideas: value query hardness}
+%  \begin{itemize}
+%  \item Construct channels $W$ and $W'$ that cannot be distinguished with better than exponentially small probability.
+%    \pause
+%    \bigskip
+%  \item Choose uniformly at random (unknown) equi-partition $\alert{T_1,\ldots,T_{k_1}}$ of $\mathcal{Y}_1 := [m]$ with $m:=k_1^2$.
+%    \pause
+%    \[ f_W^1(S) \propto \max\left\{ m^{2\delta}, m^{-(\frac{1}{2}-\delta)}|S|, |\alert{T_1} \cap S|,\ldots,|\alert{T_{k_1}} \cap S|\right\} \]
+%    \[ f_{W'}^1(S) \propto \max\left\{ m^{2\delta}, m^{-(\frac{1}{2}-\delta)}|S|\right\} \]
+%    \pause
+%  \item Cases depending on $|S|$ versus $ m^{\frac{1}{2}+\delta}$.
+%  \item $f_W^1(S)$ and $f_{W'}^1(S)$ different iff $\exists j \in [k_1], |\alert{T_j} \cap S|$ not too small.
+%  \item Exponentially small probability thanks to Chernoff-Hoeffding.
+%  \end{itemize}
+%\end{frame}
 
 \begin{frame}{Chapter summary}
   \begin{itemize}
