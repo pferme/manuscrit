@@ -618,11 +618,11 @@
       \hline
       \textsc{MaxCoverage} & $\min \{ j,1\}$ & $1 - e^{-1}$  \\
       $\ell$-\textsc{MultiCoverage} & $\min\{ j,\ell\}$ & $1-\frac{\ell^{\ell}e^{-\ell}}{\ell!}$ \\
-       \textsc{PAV} & $\sum_{i=1}^j \frac{1}{i}$ & $\alpha_{\varphi}(1) \simeq 0.7965\ldots$\\
-      \textsc{PAV} capped at $3$ & $\sum_{i=1}^{\min\{j,3\}} \frac{1}{i}$ & $\alpha_{\varphi}(1) \simeq 0.7910\ldots$ \\
-      $p$-\textsc{VTA} & $\frac{1-(1-p)^j}{p}$ & $\frac{1 - e^{-p}}{p}$  \\
-      $0.1$-\textsc{VTA} & $\frac{1-(1-0.1)^j}{0.1}$ & $\frac{1 - e^{-0.1}}{0.1} \simeq 0.9516\ldots$ \\
-      $0.1$-\textsc{VTA} capped at $5$ & $\frac{1-(1-0.1)^{\min\{j,5\}}}{0.1}$ & $\alpha_{\varphi}(5) \simeq 0.8470\ldots$  \\
+       \textsc{Proportional Approval Voting} & $\sum_{i=1}^j \frac{1}{i}$ & $\alpha_{\varphi}(1) \simeq 0.7965\ldots$\\
+      %\textsc{PAV} capped at $3$ & $\sum_{i=1}^{\min\{j,3\}} \frac{1}{i}$ & $\alpha_{\varphi}(1) \simeq 0.7910\ldots$ \\
+      $p$-\textsc{Vehicle-Target Assignment} & $\frac{1-(1-p)^j}{p}$ & $\frac{1 - e^{-p}}{p}$  \\
+      %$0.1$-\textsc{VTA} & $\frac{1-(1-0.1)^j}{0.1}$ & $\frac{1 - e^{-0.1}}{0.1} \simeq 0.9516\ldots$ \\
+      %$0.1$-\textsc{VTA} capped at $5$ & $\frac{1-(1-0.1)^{\min\{j,5\}}}{0.1}$ & $\alpha_{\varphi}(5) \simeq 0.8470\ldots$  \\
       \hline
     \end{tabular}
   \end{center}
@@ -698,7 +698,7 @@
 \subsection{An efficient algorithm for $\mathrm{S}^{\mathrm{NS}}(W^{\otimes n},k_1,k_2)$ and inner bounds}
 \begin{frame}{The multiple-access channel coding problem}
   \begin{itemize}
-  \item \underline{Problem $\mathrm{S}(W,k_1,k_2)$:} send $k_1$ and $k_2$ messages through channel $W$ with best encoders $\textcolor{blue}{e_1}:[k_1] \rightarrow \mathcal{X}_1$, $\textcolor{blue}{e_2}:[k_2] \rightarrow \mathcal{X}_2$ and best decoder $\textcolor{blue}{d}:\mathcal{Y} \rightarrow [k_1] \times [k_2]$.
+  \item \underline{Problem $\mathrm{S}(W,k_1,k_2)$:} send $k_1$ and $k_2$ messages through $W$ with best $\textcolor{blue}{e_1}:[k_1] \rightarrow \mathcal{X}_1$, $\textcolor{blue}{e_2}:[k_2] \rightarrow \mathcal{X}_2$, $\textcolor{blue}{d}:\mathcal{Y} \rightarrow [k_1] \times [k_2]$.
   \item \underline{Objective:} maximize \alert{success probability}.
 
     \only<1>{  \begin{center}
@@ -722,7 +722,7 @@
     \draw [draw,->,color=white] (d) -- node {$(j_1,j_2)$} (j1j2);
   \end{tikzpicture}
   \end{center}}
-    \only<2>{
+    \only<2->{
   \begin{center}
   \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [input, name=i1] {};
@@ -744,6 +744,10 @@
     \draw [draw,->] (d) -- node {$(j_1,j_2)$} (j1j2);
   \end{tikzpicture}
     \end{center}}
+    \pause
+    \pause
+
+  \item \underline{Binary Adder Channel (BAC):} $W_{\text{BAC}} : (x_1,x_2) \mapsto x_1+x_2$
   \end{itemize}
 \end{frame}
 
@@ -1111,7 +1115,7 @@
 \subsection{Approximation algorithm for deterministic broadcast channel coding}
 \begin{frame}{The broadcast channel coding problem}
     \begin{itemize}
-  \item \underline{Problem $\mathrm{S}(W,k_1,k_2)$:} send $k_1$ and $k_2$ messages through channel $W$ with best encoder $\textcolor{blue}{e}:[k_1] \times [k_2] \rightarrow \mathcal{X}$ and best decoders $\textcolor{blue}{d_1}:\mathcal{Y}_1 \rightarrow [k_1], \textcolor{blue}{d_2}:\mathcal{Y}_2 \rightarrow [k_2]$.
+  \item \underline{Problem $\mathrm{S}(W,k_1,k_2)$:} send $k_1$ and $k_2$ messages through $W$ with best $\textcolor{blue}{e}:[k_1] \times [k_2] \rightarrow \mathcal{X}$, $\textcolor{blue}{d_1}:\mathcal{Y}_1 \rightarrow [k_1], \textcolor{blue}{d_2}:\mathcal{Y}_2 \rightarrow [k_2]$.
   \item \underline{Objective:} maximize \alert{joint success probability}.
 
     \only<1>{  \begin{center}

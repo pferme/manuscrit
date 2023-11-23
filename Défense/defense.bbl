@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{DMMS20}
+\begin{thebibliography}{BFGG20}
 
 \bibitem[ADR82]{ADG82}
 Alain Aspect, Jean Dalibard, and G\'erard Roger.
@@ -48,24 +48,6 @@ Siddharth Barman, Omar Fawzi, Suprovat Ghoshal, and Emirhan G{\"{u}}rpinar.
 \newblock \href {https://doi.org/10.1007/978-3-030-45771-6\_6}
   {\path{doi:10.1007/978-3-030-45771-6\_6}}.
 
-\bibitem[DMMS20]{DMMS20}
-Szymon Dudycz, Pasin Manurangsi, Jan Marcinkowski, and Krzysztof Sornat.
-\newblock Tight approximation for proportional approval voting.
-\newblock In Christian Bessiere, editor, {\em Proceedings of the Twenty-Ninth
-  International Joint Conference on Artificial Intelligence, {IJCAI} 2020},
-  pages 276--282. ijcai.org, 2020.
-\newblock \href {https://doi.org/10.24963/ijcai.2020/39}
-  {\path{doi:10.24963/ijcai.2020/39}}.
-
-\bibitem[DS06]{DS06}
-Shahar Dobzinski and Michael Schapira.
-\newblock An improved approximation algorithm for combinatorial auctions with
-  submodular bidders.
-\newblock In {\em Proceedings of the Seventeenth Annual {ACM-SIAM} Symposium on
-  Discrete Algorithms, {SODA} 2006, Miami, Florida, USA, January 22-26, 2006},
-  pages 1064--1073. {ACM} Press, 2006.
-\newblock URL: \url{http://dl.acm.org/citation.cfm?id=1109557.1109675}.
-
 \bibitem[EPR35]{EPR35}
 A.~Einstein, B.~Podolsky, and N.~Rosen.
 \newblock Can quantum-mechanical description of physical reality be considered
@@ -110,30 +92,12 @@ William Matthews.
 \newblock \href {https://doi.org/10.1109/TIT.2012.2210695}
   {\path{doi:10.1109/TIT.2012.2210695}}.
 
-\bibitem[MSV08]{MSV08}
-Vahab~S. Mirrokni, Michael Schapira, and Jan Vondr{\'{a}}k.
-\newblock Tight information-theoretic lower bounds for welfare maximization in
-  combinatorial auctions.
-\newblock In Lance Fortnow, John Riedl, and Tuomas Sandholm, editors, {\em
-  Proceedings 9th {ACM} Conference on Electronic Commerce (EC-2008), Chicago,
-  IL, USA, June 8-12, 2008}, pages 70--77. {ACM}, 2008.
-\newblock \href {https://doi.org/10.1145/1386790.1386805}
-  {\path{doi:10.1145/1386790.1386805}}.
-
 \bibitem[PPV10]{PPV10}
 Yury Polyanskiy, H.~Vincent Poor, and Sergio Verd{\'{u}}.
 \newblock Channel coding rate in the finite blocklength regime.
 \newblock {\em {IEEE} Trans. Inf. Theory}, 56(5):2307--2359, 2010.
 \newblock \href {https://doi.org/10.1109/TIT.2010.2043769}
   {\path{doi:10.1109/TIT.2010.2043769}}.
-
-\bibitem[SVW17]{SVW17}
-Maxim Sviridenko, Jan Vondr{\'{a}}k, and Justin Ward.
-\newblock Optimal approximation for submodular and supermodular optimization
-  with bounded curvature.
-\newblock {\em Math. Oper. Res.}, 42(4):1197--1218, 2017.
-\newblock \href {https://doi.org/10.1287/moor.2016.0842}
-  {\path{doi:10.1287/moor.2016.0842}}.
 
 \bibitem[Von07]{Vondrak07}
 Jan Vondr{\'a}k.
@@ -152,11 +116,7 @@ Juan Yin, Yuan Cao, Yu-Huai Li, Sheng-Kai Liao, Liang Zhang, Ji-Gang Ren,
   Cheng-Zhi Peng, Jian-Yu Wang, and Jian-Wei Pan.
 \newblock Satellite-based entanglement distribution over 1200 kilometers.
 \newblock {\em Science}, 356(6343):1140--1144, 2017.
-\newblock URL: \url{https://www.science.org/doi/abs/10.1126/science.aan3211},
-  \href
-  {https://arxiv.org/abs/https://www.science.org/doi/pdf/10.1126/science.aan3211}
-  {\path{arXiv:https://www.science.org/doi/pdf/10.1126/science.aan3211}}, \href
-  {https://doi.org/10.1126/science.aan3211}
+\newblock \href {https://doi.org/10.1126/science.aan3211}
   {\path{doi:10.1126/science.aan3211}}.
 
 \end{thebibliography}
