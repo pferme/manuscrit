@@ -411,7 +411,7 @@ as $L'_y$ contains the $\ell$ largest elements of $L_y$ according to the weight 
 \[ \frac{\varphi(|L_y'|)}{|L_y'|}\sum_{x \in L'_y}\mathbbm{1}_{x \in S}W(y|x) \geq \frac{\varphi(|L_y|)}{|L_y|} \sum_{x \in L_y}\mathbbm{1}_{x \in S}W(y|x) \ ,\]
 thus replacing $L_y$ by $L_y'$ does not decrease the objective value. This concludes the equivalence of the $\ell$-list-decoding problem with the $\varphi$-list-decoding with $\varphi(j) = \min(j,\ell)$.
 
-When the channel is of the form $W(y|x) = \frac{1}{t}$ for $y \in T_x$ with $\abs{T_x}=t$ and $W(y|x) = 0$ elsewhere, the success probability of the $\varphi$-list-decoding problem for a code $S\subseteq \mathcal{X}$ can be written as $\frac{1}{kt}\sum_{y \in \mathcal{Y}}\varphi(\abs{S}_y)$, with $\abs{S}_y = \abs{\set{x \in S : y \in T_x}}$, which is a particular instance of the $\varphi$-\textsc{MaxCoverage} problem. Indeed, for a fixed code $S$, the objective value becomes:
+When the channel is of the form $W(y|x) = \frac{1}{t}$ for $y \in T_x$ with $\abs{T_x}=t$ and $W(y|x) = 0$ elsewhere, the success probability of the $\varphi$-list-decoding problem for a code $S\subseteq \mathcal{X}$ can be written as $\frac{1}{kt}\sum_{y \in \mathcal{Y}}\varphi(\abs{S_y})$, with $S_y := \set{x \in S : y \in T_x}$, which is a particular instance of the $\varphi$-\textsc{MaxCoverage} problem. Indeed, for a fixed code $S$, the objective value becomes:
 \begin{equation}
   \begin{aligned}
     \frac{1}{k}\sum_{y \in \mathcal{Y}} \max_{L_y \subseteq \mathcal{X}} \frac{\varphi(|L_y|)}{|L_y|} \sum_{x \in L_y}\mathbbm{1}_{x \in S}W(y|x) &= \frac{1}{kt}\sum_{y \in \mathcal{Y}}\max_{L_y \subseteq \mathcal{X}}\frac{\varphi(\abs{L_y})}{\abs{L_y}}\sum_{x \in L_y}\mathbbm{1}_{x \in S}\mathbbm{1}_{y \in T_x}\\
