@@ -25,5 +25,5 @@
     \end{tikzpicture}
     \end{center}
     \pause\pause\pause
-    \item Reduction from Gap-Label-Cover~\cite{Feige98} using this structure.
+    \item Reduction from Gap-Label-Cover using this structure.
   \end{itemize}
