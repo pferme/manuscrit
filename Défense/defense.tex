@@ -31,6 +31,7 @@
 \usetikzlibrary{spy}
 \usetikzlibrary{fit,positioning}
 \usetikzlibrary{matrix}
+\usetikzlibrary{decorations.pathreplacing,angles,quotes}
 
 \tikzstyle{block} = [draw, fill=white, rectangle, 
   minimum height=2em, minimum width=3em]
@@ -1200,7 +1201,11 @@
           \node[draw,circle] (y) at (2,-1.5) {$2$};
           \node[draw,circle] (z) at (2,-2.5) {$3$};
 
-          
+          \node (Y1) at (-1,-1.5) {$\mathcal{Y}_1$};
+          \node (Y2) at (3,-1.5) {$\mathcal{Y}_2$};
+          \node (X) at (1,0) {$\mathcal{X}$};
+          \draw[decoration={brace,mirror,raise=15pt},decorate]  (0,0) -- (0,-3);
+          \draw[decoration={brace,mirror,raise=15pt},decorate]  (2,-2.5) -- (2,-0.5);         
           \only<1>{\node[draw, white, rectangle, rounded corners, fit=(a) (b), inner sep = 0.5mm] (ab) {};
             \node[draw, white, rectangle, rounded corners, fit=(c) (d), inner sep = 0.5mm] (cd) {};
             \node[draw, white, rectangle, rounded corners, fit=(x) (y), inner sep = 0.5mm] (xy) {};
@@ -1246,10 +1251,11 @@
 
   \item \underline{Approximation algorithm:}
     \begin{enumerate}
-    \item Upper bound $f(G_W) \geq \mathrm{S}\only<2->{^{\textcolor{blue}{\mathrm{NS}}}}(W,k_1,k_2)$.
-    \item Finds solution with value at least $\alert{C_{\text{apx}}} \cdot f(G_W)$.
-    \item Implies $\mathrm{S}(W,k_1,k_2) \geq \alert{C_{\text{apx}}} \cdot f(G_W)\only<2->{ \geq \alert{C_{\text{apx}}} \cdot  \mathrm{S}^{\textcolor{blue}{\mathrm{NS}}}(W,k_1,k_2)}$.
+    \item Upper bound $f(G_W) \geq \mathrm{S}\only<3->{^{\textcolor{blue}{\mathrm{NS}}}}(W,k_1,k_2)$.
+    \item Finds solution with value at least $\alert{C_{\text{apx}}} \cdot f(G_W)$
     \end{enumerate}
+    \pause
+  \item Implies $\mathrm{S}(W,k_1,k_2) \geq \alert{C_{\text{apx}}} \cdot f(G_W)\only<3->{ \geq \alert{C_{\text{apx}}} \cdot  \mathrm{S}^{\textcolor{blue}{\mathrm{NS}}}(W,k_1,k_2)}$.
     \pause
     \pause
     \begin{theorem}
